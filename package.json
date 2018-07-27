@@ -4,7 +4,7 @@
   "description": "React frontend for AP Content Specification Explorer",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --emitDeclarationOnly && webpack"
+    "build": "webpack"
   },
   "dependencies": {
     "@types/react": "^16.4.7",
@@ -25,7 +25,8 @@
     "html-webpack-plugin": "^4.0.0-alpha",
     "typescript": "^2.9.1",
     "webpack": "^4.16.3",
-    "webpack-command": "^0.4.1"
+    "webpack-command": "^0.4.1",
+    "webpack-serve": "^2.0.2"
   },
   "repository": {
     "type": "git",
