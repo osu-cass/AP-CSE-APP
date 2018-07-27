@@ -4,7 +4,8 @@
   "description": "React frontend for AP Content Specification Explorer",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix 'src/**/*.tsx' 'src/**/*.ts'"
   },
   "husky": {
     "hooks": {
@@ -36,12 +37,15 @@
     "@babel/preset-typescript": "^7.0.0-beta.49",
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
+    "@osu-cass/tslint-config": "^1.1.2",
     "babel-loader": "^8.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^4.0.0-alpha",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
-    "typescript": "^2.9.1",
+    "tslint": "^5.11.0",
+    "tslint-language-service": "^0.9.9",
+    "typescript": "^2.9.2",
     "webpack": "^4.16.3",
     "webpack-command": "^0.4.1",
     "webpack-serve": "^2.0.2"
