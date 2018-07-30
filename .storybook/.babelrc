@@ -3,5 +3,8 @@
     "@babel/env",
     "@babel/typescript",
     "@babel/react"
+  ],
+  "plugins": [
+    "styled-jsx/babel"
   ]
 }
