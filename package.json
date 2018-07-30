@@ -18,15 +18,15 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "tslint --fix",
-      "prettier --write",
+      "prettier --single-quote --print-width 100 --write",
       "git add"
     ],
     "src/**/*.{js,json}": [
-      "prettier --write",
+      "prettier --single-quote --print-width 100 --write",
       "git add"
     ],
     "**/*.{yaml,yml,md}": [
-      "prettier --write",
+      "prettier --single-quote --print-width 100 --write",
       "git add"
     ]
   },
