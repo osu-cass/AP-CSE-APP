@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig",
+  "include": ["../src", "../typings"],
+  "exclude": ["node_modules", "**/__tests__/*", "**/*.spec.tsx"],
+  "typeRoots": ["../node_modules/@types", "../typings"],
+} 
