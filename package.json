@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "dev": "webpack-serve",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,json}'",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix 'src/**/*.tsx' 'src/**/*.ts'"
@@ -33,7 +34,9 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "styled-jsx": "^2.2.7"
+    "styled-jsx": "^2.2.7",
+    "typeface-pt-sans-caption": "0.0.54",
+    "typeface-pt-serif": "0.0.54"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.49",
@@ -61,10 +64,14 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^4.0.0-alpha",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "prettier": "^1.4.0-beta",
+    "style-loader": "^0.21.0",
     "tslint": "^5.11.0",
     "tslint-language-service": "^0.9.9",
     "typescript": "^2.9.2",
