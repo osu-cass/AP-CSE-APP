@@ -3,6 +3,9 @@ import { addDecorator } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 import { checkA11y } from '@storybook/addon-a11y';
 
+import 'typeface-pt-serif/index.css'
+import 'typeface-pt-sans-caption/index.css'
+
 addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 addDecorator(checkA11y)
 
