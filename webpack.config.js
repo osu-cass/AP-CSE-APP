@@ -12,14 +12,33 @@ module.exports = {
         filename: 'app.bundle.[hash].js'
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.js', '.json', '.css']
     },
     module: {
-        rules: [{
-            test: /\.(tsx?)|(js)$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-        }],
+        rules: [
+            {
+                test: /\.(tsx?)|(js)$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.css$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpg|jpeg|woff2?|ttf)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'assets/',
+                        publicPath: 'assets/'
+                    }
+                }
+            }
+        ],
     },
     plugins: [
       new CleanWebpackPlugin(['dist']),
