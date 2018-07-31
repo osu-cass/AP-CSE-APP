@@ -26,7 +26,7 @@
       "prettier --single-quote --print-width 100 --write",
       "git add"
     ],
-    "**/*.{yaml,yml,md}": [
+    "**/*.{md}": [
       "prettier --single-quote --print-width 100 --write",
       "git add"
     ]
