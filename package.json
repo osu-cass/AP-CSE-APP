@@ -31,6 +31,34 @@
       "git add"
     ]
   },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "output": "reports/jest/results.xml"
+        }
+      ]
+    ],
+    "testMatch": [
+      "**/*.spec.+(ts)"
+    ]
+  },
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -54,6 +82,8 @@
     "@storybook/addon-centered": "^3.4.8",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/react": "^4.0.0-alpha.14",
+    "@types/faker": "^4.1.2",
+    "@types/jest": "^23.3.1",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
     "@types/storybook__addon-a11y": "^3.3.0",
@@ -64,14 +94,19 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.19",
+    "coveralls": "^3.0.2",
     "css-loader": "^1.0.0",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^4.0.0-alpha",
     "husky": "^1.0.0-rc.13",
+    "jest": "^23.4.2",
+    "jest-junit": "^5.1.0",
     "lint-staged": "^7.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "prettier": "^1.4.0-beta",
     "style-loader": "^0.21.0",
+    "ts-jest": "^23.1.0",
     "tslint": "^5.11.0",
     "tslint-language-service": "^0.9.9",
     "typescript": "^2.9.2",
