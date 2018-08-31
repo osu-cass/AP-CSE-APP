@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "test": "jest --coverage",
+    "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-serve",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,json}'",
