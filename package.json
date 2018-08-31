@@ -9,7 +9,7 @@
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-serve",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,json}'",
+    "format": "prettier --single-quote --print-width 100 --write 'src/**/*.{ts,tsx,js,json}'",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix 'src/**/*.tsx' 'src/**/*.ts'"
   },
   "husky": {
