@@ -32,14 +32,21 @@
     ]
   },
   "jest": {
-    "testEnvironment": "node",
+    "setupFiles": [
+      "./.storybook/jestSetup.js"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
+      "js",
+      "json"
     ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
     "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
+      "^.+\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.(js)$": "babel-jest"
     },
     "globals": {
       "ts-jest": {
@@ -56,7 +63,7 @@
       ]
     ],
     "testMatch": [
-      "**/*.spec.+(ts)"
+      "**/*.spec.+(tsx|ts|js)"
     ]
   },
   "dependencies": {
