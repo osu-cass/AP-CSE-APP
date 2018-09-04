@@ -27,10 +27,12 @@ exports[`Storyshots SearchBar component SearchBar 1`] = `
       className="search-bar"
     >
       <input
+        aria-label="Search"
         className="field"
         type="search"
       />
       <button
+        aria-label="Submit"
         className="button"
         type="submit"
       >
