@@ -4,8 +4,8 @@ import { Colors } from '../../constants';
 
 export const SearchBar = (): JSX.Element => (
   <div className="search-bar">
-    <input className="field" type="search" />
-    <button className="button" type="submit">
+    <input aria-label="Search" className="field" type="search" />
+    <button aria-label="Submit" className="button" type="submit">
       <Search color={Colors.sbWhite} size={16} />
     </button>
     <style jsx>{`

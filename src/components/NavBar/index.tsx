@@ -14,7 +14,7 @@ export interface NavBarProps {
   mainContentId: string;
 }
 
-export const Logo = (): JSX.Element =>
+export const Logo = (): JSX.Element => (
   <div className="nav-titleGroup-item">
     <a
       rel="noopener noreferrer"
@@ -25,18 +25,19 @@ export const Logo = (): JSX.Element =>
       <img alt="Smarter Balanced Logo" src={sbLogo} />
     </a>
     <style jsx>{`
-            .nav-titleGroup {
-                display: flex;
-                flex-flow: row;
-                align-items: center;
-                flex-grow: 1;
-            }
-            img {
-                width: 183px;
-                padding-right: ${Styles.paddingUnit};
-            }
-        `}</style>
-  </div>;
+      .nav-titleGroup {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        flex-grow: 1;
+      }
+      img {
+        width: 183px;
+        padding-right: ${Styles.paddingUnit};
+      }
+    `}</style>
+  </div>
+);
 
 export const NavBar = (props: NavBarProps): JSX.Element => {
   const IconAttributes: IconProps = {
@@ -47,58 +48,61 @@ export const NavBar = (props: NavBarProps): JSX.Element => {
   const menu = <Menu {...IconAttributes} />;
 
   return (
-    <header role="navigation">
-      <nav className="nav-container" role="navigation">
-        <div className="nav-content">
-          <div className="left-content">
-            <Logo />
-            <MainMenu />
-          </div>
-          <div className="right-content">
-            <span><SearchBar /></span>
-            <span><SbNavLink url={'placeholder'} content={help} /></span>
-            <span><SbNavLink url={'placeholder'} content={menu} /></span>
-          </div>
+    <header>
+      <nav className="nav-container">
+        <div className="left-content">
+          <Logo />
+          <MainMenu />
+        </div>
+        <div className="right-content">
+          <span>
+            <SearchBar />
+          </span>
+          <span>
+            <SbNavLink url={'placeholder'} content={help} />
+          </span>
+          <span>
+            <SbNavLink url={'placeholder'} content={menu} />
+          </span>
         </div>
       </nav>
       <style jsx>{`
-                h1, h2, h3 {
-                    color: ${Colors.sbGray};
-                    letter-spacing: ${Styles.sbLetterSpacing};
-                    margin: 0 ${Styles.paddingUnit}/2;
-                }
+        h1,
+        h2,
+        h3 {
+          color: ${Colors.sbGray};
+          letter-spacing: ${Styles.sbLetterSpacing};
+          margin: 0 ${Styles.paddingUnit} / 2;
+        }
 
-                img {
-                    border-right: 1px solid ${Colors.sbGray};
-                    padding-right: ${Styles.paddingUnit};
-                    width: 183px;
-                }
+        img {
+          border-right: 1px solid ${Colors.sbGray};
+          padding-right: ${Styles.paddingUnit};
+          width: 183px;
+        }
 
-                .nav-container {
-                    background-color: ${Colors.sbGrayLighter};
-                    border-color: ${Colors.sbGrayLighter};
-                    border-radius: 0px;
-                    box-shadow: ${Styles.shadow};
-                    padding: ${Styles.paddingUnit}/2;
-                }
+        .nav-container {
+          background-color: ${Colors.sbGrayLighter};
+          border-color: ${Colors.sbGrayLighter};
+          border-radius: 0px;
+          box-shadow: ${Styles.shadow};
+          display: flex;
+          justify-content: space-between;
+          padding: ${Styles.paddingUnit} / 2;
+        }
 
-                .nav-content {
-                    display: flex;
-                    justify-content: space-between;
-                }
+        .right-content * {
+          margin: 0 0.5em;
+        }
 
-                .right-content * {
-                    margin: 0 0.5em;
-                }
-
-                .left-content,
-                .right-content {
-                    align-items: center;
-                    display: flex;
-                    flex-flow: row;
-                    justify-content: space-between;
-                }
-            `}</style>
+        .left-content,
+        .right-content {
+          align-items: center;
+          display: flex;
+          flex-flow: row;
+          justify-content: space-between;
+        }
+      `}</style>
     </header>
   );
 };
