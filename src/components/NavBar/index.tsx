@@ -6,7 +6,7 @@ import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';
 
 /*tslint:disable: no-require-imports no-var-requires */
-const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png');
+const sbLogo: string = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png');
 
 export interface NavBarProps {
   links?: SbNavlinkProps[];
