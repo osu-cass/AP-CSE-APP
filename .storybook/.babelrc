@@ -6,5 +6,10 @@
   ],
   "plugins": [
     "styled-jsx/babel"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["require-context-hook"]
+    }
+  }
 }
