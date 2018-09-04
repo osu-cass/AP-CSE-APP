@@ -5,4 +5,4 @@ import { HelloWorld } from './components/HelloWorld';
 import 'typeface-pt-serif/index.css';
 import 'typeface-pt-sans-caption/index.css';
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<HelloWorld name="Hello, World" />, document.getElementById('app'));
