@@ -1,0 +1,523 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots NavBar component NavBar 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <header
+      role="navigation"
+    >
+      <nav
+        className="nav-container"
+        role="navigation"
+      >
+        <div
+          className="nav-content"
+        >
+          <div
+            className="left-content"
+          >
+            <div
+              className="nav-titleGroup-item"
+            >
+              <a
+                href="http://www.smarterbalanced.org/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Smarter Balanced Home"
+              >
+                <img
+                  alt="Smarter Balanced Logo"
+                  src="test-file-stub"
+                />
+              </a>
+              <style
+                jsx={true}
+              >
+                
+            .nav-titleGroup {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                flex-grow: 1;
+            }
+            img {
+                width: 183px;
+                padding-right: 20px;
+            }
+        
+              </style>
+            </div>
+            <div
+              className="main-menu"
+            >
+              <a>
+                <div>
+                  <svg
+                    fill="none"
+                    height={40}
+                    stroke="#63666A"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={40}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    />
+                    <polyline
+                      points="9 22 9 12 15 12 15 22"
+                    />
+                  </svg>
+                  <p>
+                    Home
+                  </p>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        color: #63666A;
+        float: right;
+        margin: 0 10px;
+      }
+      div {
+          align-items: center;
+          display: flex;
+          float: left;
+          justify-content: flex-end;
+      }
+    
+                  </style>
+                </div>
+                <style
+                  jsx={true}
+                >
+                  
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                </style>
+              </a>
+              <a>
+                <div>
+                  <svg
+                    fill="none"
+                    height={40}
+                    stroke="#63666A"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={40}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="8"
+                    />
+                    <line
+                      x1="21"
+                      x2="16.65"
+                      y1="21"
+                      y2="16.65"
+                    />
+                  </svg>
+                  <p>
+                    Search
+                  </p>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        color: #63666A;
+        float: right;
+        margin: 0 10px;
+      }
+      div {
+          align-items: center;
+          display: flex;
+          float: left;
+          justify-content: flex-end;
+      }
+    
+                  </style>
+                </div>
+                <style
+                  jsx={true}
+                >
+                  
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                </style>
+              </a>
+              <a>
+                <div>
+                  <svg
+                    fill="none"
+                    height={40}
+                    stroke="#63666A"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={40}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="3"
+                    />
+                  </svg>
+                  <p>
+                    Explore
+                  </p>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        color: #63666A;
+        float: right;
+        margin: 0 10px;
+      }
+      div {
+          align-items: center;
+          display: flex;
+          float: left;
+          justify-content: flex-end;
+      }
+    
+                  </style>
+                </div>
+                <style
+                  jsx={true}
+                >
+                  
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                </style>
+              </a>
+              <a>
+                <div>
+                  <svg
+                    fill="none"
+                    height={40}
+                    stroke="#63666A"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={40}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      height="7"
+                      width="7"
+                      x="3"
+                      y="3"
+                    />
+                    <rect
+                      height="7"
+                      width="7"
+                      x="14"
+                      y="3"
+                    />
+                    <rect
+                      height="7"
+                      width="7"
+                      x="14"
+                      y="14"
+                    />
+                    <rect
+                      height="7"
+                      width="7"
+                      x="3"
+                      y="14"
+                    />
+                  </svg>
+                  <p>
+                    Apps
+                  </p>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        color: #63666A;
+        float: right;
+        margin: 0 10px;
+      }
+      div {
+          align-items: center;
+          display: flex;
+          float: left;
+          justify-content: flex-end;
+      }
+    
+                  </style>
+                </div>
+                <style
+                  jsx={true}
+                >
+                  
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                </style>
+              </a>
+              <style
+                jsx={true}
+              >
+                
+                  .main-menu {
+                      display: flex;
+                      flex-wrap: nowrap;
+                  }
+              
+              </style>
+            </div>
+          </div>
+          <div
+            className="right-content"
+          >
+            <span>
+              <div
+                className="search-bar"
+              >
+                <input
+                  className="field"
+                  onClick={[Function]}
+                  type="search"
+                />
+                <button
+                  className="button"
+                  type="submit"
+                >
+                  <svg
+                    fill="none"
+                    height={16}
+                    stroke="#ffffff"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="8"
+                    />
+                    <line
+                      x1="21"
+                      x2="16.65"
+                      y1="21"
+                      y2="16.65"
+                    />
+                  </svg>
+                </button>
+                <style
+                  jsx={true}
+                >
+                  
+              .search-bar {
+                  display: flex;
+                  min-height: 2em;
+                  position: relative;
+              }
+              .button {
+                  align-items: center;
+                  background-color: #63666A;
+                  border-radius: 0 5px 5px 0;
+                  border-style: none;
+                  display: flex;
+                  height: auto;
+                  justify-content: center;
+                  min-height: 2em;
+                  position: relative;
+              }
+              .field {
+                  border-color: #63666A;
+                  border-radius: 5px 0 0 5px;
+                  border-style: solid;
+                  color: #63666A;
+                  height: auto;
+                  min-height: 2em;
+                  padding: 0 0.5em;
+              }
+          
+                </style>
+              </div>
+            </span>
+            <span>
+              <a>
+                <svg
+                  fill="none"
+                  height={40}
+                  stroke="#63666A"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width={40}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <path
+                    d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                  />
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="17"
+                    y2="17"
+                  />
+                </svg>
+                <style
+                  jsx={true}
+                >
+                  
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                </style>
+              </a>
+            </span>
+            <span>
+              <a>
+                <svg
+                  fill="none"
+                  height={40}
+                  stroke="#63666A"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width={40}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="3"
+                    x2="21"
+                    y1="12"
+                    y2="12"
+                  />
+                  <line
+                    x1="3"
+                    x2="21"
+                    y1="6"
+                    y2="6"
+                  />
+                  <line
+                    x1="3"
+                    x2="21"
+                    y1="18"
+                    y2="18"
+                  />
+                </svg>
+                <style
+                  jsx={true}
+                >
+                  
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                </style>
+              </a>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <style
+        jsx={true}
+      >
+        
+                h1, h2, h3 {
+                    color: #63666A;
+                    letter-spacing: -.02em;
+                    margin: 0 20px/2;
+                }
+
+                img {
+                    border-right: 1px solid #63666A;
+                    padding-right: 20px;
+                    width: 183px;
+                }
+
+                .nav-container {
+                    background-color: #ebebeb;
+                    border-color: #ebebeb;
+                    border-radius: 0px;
+                    box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
+                    padding: 20px/2;
+                }
+
+                .nav-content {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .right-content * {
+                    margin: 0 0.5em;
+                }
+
+                .left-content,
+                .right-content {
+                    align-items: center;
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: space-between;
+                }
+            
+      </style>
+    </header>
+  </div>
+</div>
+`;
