@@ -33,7 +33,7 @@ exports[`Storyshots HelloWorld component Renders a capitalized name 1`] = `
         
       h1 {
         color: gray;
-        font-family: "PT Sans Caption"
+        font-family: 'PT Sans Caption';
       }
     
       </style>
@@ -75,7 +75,7 @@ exports[`Storyshots HelloWorld component Renders a lowercased name 1`] = `
         
       h1 {
         color: gray;
-        font-family: "PT Sans Caption"
+        font-family: 'PT Sans Caption';
       }
     
       </style>
