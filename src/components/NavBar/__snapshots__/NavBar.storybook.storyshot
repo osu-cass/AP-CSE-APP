@@ -324,7 +324,6 @@ exports[`Storyshots NavBar component NavBar 1`] = `
               >
                 <input
                   className="field"
-                  onClick={[Function]}
                   type="search"
                 />
                 <button
