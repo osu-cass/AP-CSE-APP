@@ -358,32 +358,32 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                   jsx={true}
                 >
                   
-              .search-bar {
-                  display: flex;
-                  min-height: 2em;
-                  position: relative;
-              }
-              .button {
-                  align-items: center;
-                  background-color: #63666A;
-                  border-radius: 0 5px 5px 0;
-                  border-style: none;
-                  display: flex;
-                  height: auto;
-                  justify-content: center;
-                  min-height: 2em;
-                  position: relative;
-              }
-              .field {
-                  border-color: #63666A;
-                  border-radius: 5px 0 0 5px;
-                  border-style: solid;
-                  color: #63666A;
-                  height: auto;
-                  min-height: 2em;
-                  padding: 0 0.5em;
-              }
-          
+      .search-bar {
+        display: flex;
+        min-height: 2em;
+        position: relative;
+      }
+      .button {
+        align-items: center;
+        background-color: #63666A;
+        border-radius: 0 5px 5px 0;
+        border-style: none;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        min-height: 2em;
+        position: relative;
+      }
+      .field {
+        border-color: #63666A;
+        border-radius: 5px 0 0 5px;
+        border-style: solid;
+        color: #63666A;
+        height: auto;
+        min-height: 2em;
+        padding: 0 0.5em;
+      }
+    
                 </style>
               </div>
             </span>
