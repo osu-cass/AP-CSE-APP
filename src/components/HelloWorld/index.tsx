@@ -9,13 +9,14 @@ interface HelloWorldProps {
   caps?: Boolean;
 }
 
-export const HelloWorld = ({ name, caps }: HelloWorldProps) =>
+export const HelloWorld = ({ name, caps }: HelloWorldProps) => (
   <div>
     <h1>{caps ? capitalize(name) : name}</h1>
     <style jsx>{`
       h1 {
         color: gray;
-        font-family: "PT Sans Caption"
+        font-family: 'PT Sans Caption';
       }
     `}</style>
-  </div>;
+  </div>
+);
