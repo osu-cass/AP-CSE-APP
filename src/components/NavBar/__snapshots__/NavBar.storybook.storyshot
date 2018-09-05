@@ -97,10 +97,10 @@ exports[`Storyshots NavBar component NavBar 1`] = `
         margin: 0 10px;
       }
       div {
-          align-items: center;
-          display: flex;
-          float: left;
-          justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        float: left;
+        justify-content: flex-end;
       }
     
                 </style>
@@ -109,11 +109,11 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                 jsx={true}
               >
                 
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        
+        a {
+          display: flex;
+          align-items: center;
+        }
+      
               </style>
             </a>
             <a>
@@ -154,10 +154,10 @@ exports[`Storyshots NavBar component NavBar 1`] = `
         margin: 0 10px;
       }
       div {
-          align-items: center;
-          display: flex;
-          float: left;
-          justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        float: left;
+        justify-content: flex-end;
       }
     
                 </style>
@@ -166,11 +166,11 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                 jsx={true}
               >
                 
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        
+        a {
+          display: flex;
+          align-items: center;
+        }
+      
               </style>
             </a>
             <a>
@@ -208,10 +208,10 @@ exports[`Storyshots NavBar component NavBar 1`] = `
         margin: 0 10px;
       }
       div {
-          align-items: center;
-          display: flex;
-          float: left;
-          justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        float: left;
+        justify-content: flex-end;
       }
     
                 </style>
@@ -220,11 +220,11 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                 jsx={true}
               >
                 
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        
+        a {
+          display: flex;
+          align-items: center;
+        }
+      
               </style>
             </a>
             <a>
@@ -278,10 +278,10 @@ exports[`Storyshots NavBar component NavBar 1`] = `
         margin: 0 10px;
       }
       div {
-          align-items: center;
-          display: flex;
-          float: left;
-          justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        float: left;
+        justify-content: flex-end;
       }
     
                 </style>
@@ -290,22 +290,22 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                 jsx={true}
               >
                 
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        
+        a {
+          display: flex;
+          align-items: center;
+        }
+      
               </style>
             </a>
             <style
               jsx={true}
             >
               
-                  .main-menu {
-                      display: flex;
-                      flex-wrap: nowrap;
-                  }
-              
+        .main-menu {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+      
             </style>
           </div>
         </div>
@@ -415,11 +415,11 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                 jsx={true}
               >
                 
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        
+        a {
+          display: flex;
+          align-items: center;
+        }
+      
               </style>
             </a>
           </span>
@@ -459,11 +459,11 @@ exports[`Storyshots NavBar component NavBar 1`] = `
                 jsx={true}
               >
                 
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        
+        a {
+          display: flex;
+          align-items: center;
+        }
+      
               </style>
             </a>
           </span>

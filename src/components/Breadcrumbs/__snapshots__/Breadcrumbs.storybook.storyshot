@@ -4,7 +4,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
 <div
   style={
     Object {
-      "backgroundImage": "linear-gradient(90deg, #006298, #66a1c1)",
+      "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
     }
   }
 >
@@ -242,7 +242,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
 <div
   style={
     Object {
-      "backgroundImage": "linear-gradient(90deg, #006298, #66a1c1)",
+      "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
     }
   }
 >
@@ -316,7 +316,7 @@ exports[`Storyshots Breadcrumbs component Renders a breadcrumb with subject data
 <div
   style={
     Object {
-      "backgroundImage": "linear-gradient(90deg, #006298, #66a1c1)",
+      "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
     }
   }
 >
