@@ -44,7 +44,8 @@
       "json"
     ],
     "moduleNameMapper": {
-      "\\.(css|less)$": "identity-obj-proxy"
+      "\\.(css|less)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     },
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest",
@@ -69,8 +70,13 @@
     ]
   },
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
+    "@types/react-router": "^4.0.30",
+    "@types/react-router-dom": "^4.3.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-feather": "^1.1.1",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "styled-jsx": "^2.2.7",
     "typeface-pt-sans-caption": "0.0.54",
