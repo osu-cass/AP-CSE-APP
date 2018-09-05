@@ -10,11 +10,11 @@ export const SbNavLink = ({ url, content }: SbNavlinkProps) => {
     <a>
       {content}
       <style jsx>{`
-                a {
-                    display: flex;
-                    align-items: center;
-                }
-        `}</style>
+        a {
+          display: flex;
+          align-items: center;
+        }
+      `}</style>
     </a>
   );
 };
