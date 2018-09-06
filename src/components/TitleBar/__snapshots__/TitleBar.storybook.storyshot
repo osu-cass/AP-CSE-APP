@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TitleBar component Renders a Title Bar with a title only 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+        }
+      }
+    >
+      <div>
+        <ul>
+          <li
+            className="title"
+          >
+            <span>
+              English Language Arts Specification: Grade 3 Claim 1
+            </span>
+          </li>
+          <li
+            className="desc"
+          />
+          <li
+            className="download"
+          />
+        </ul>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        min-height: 100px;
+        padding: 20px;
+      }
+      div ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style-type: none;
+      }
+      div ul li {
+        padding-top: 10px;
+      }
+      .title {
+        width: 300px;
+        color: white;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .desc {
+        width: 500px;
+        color: #ebebeb;
+        font-size: 14px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        width: 24px;
+        text-align: right;
+      }
+    
+        </style>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+        }
+      }
+    >
+      <div>
+        <ul>
+          <li
+            className="title"
+          >
+            <span>
+              English Language Arts Specification: Grade 3 Claim 1
+            </span>
+          </li>
+          <li
+            className="desc"
+          >
+            <span>
+              Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+            </span>
+          </li>
+          <li
+            className="download"
+          >
+            <a
+              aria-label="Download"
+              download="test-file-name"
+              href="test/url"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                />
+                <polyline
+                  points="7 10 12 15 17 10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="15"
+                  y2="3"
+                />
+              </svg>
+              <style
+                jsx={true}
+              >
+                
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #ebebeb;
+      }
+    
+              </style>
+            </a>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        min-height: 100px;
+        padding: 20px;
+      }
+      div ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style-type: none;
+      }
+      div ul li {
+        padding-top: 10px;
+      }
+      .title {
+        width: 300px;
+        color: white;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .desc {
+        width: 500px;
+        color: #ebebeb;
+        font-size: 14px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        width: 24px;
+        text-align: right;
+      }
+    
+        </style>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TitleBar component Renders a download button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+        }
+      }
+    >
+      <a
+        aria-label="Download"
+        download="test-file-name"
+        href="test/url"
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+          />
+          <polyline
+            points="7 10 12 15 17 10"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="15"
+            y2="3"
+          />
+        </svg>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #ebebeb;
+      }
+    
+        </style>
+      </a>
+    </div>
+  </div>
+</div>
+`;
