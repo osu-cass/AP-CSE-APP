@@ -2,3 +2,7 @@ node_modules
 dist
 coverage
 reports
+
+# IntelliJ Idea
+.idea/
+*.iml

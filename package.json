@@ -9,7 +9,7 @@
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-serve",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,json}'",
+    "format": "prettier --single-quote --print-width 100 --write 'src/**/*.{ts,tsx,js,json}'",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix 'src/**/*.tsx' 'src/**/*.ts'"
   },
   "husky": {
@@ -44,7 +44,8 @@
       "json"
     ],
     "moduleNameMapper": {
-      "\\.(css|less)$": "identity-obj-proxy"
+      "\\.(css|less)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     },
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest",
@@ -69,8 +70,14 @@
     ]
   },
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
+    "@types/react-router": "^4.0.30",
+    "@types/react-router-dom": "^4.3.0",
+    "polyfill": "^0.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-feather": "^1.1.1",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "styled-jsx": "^2.2.7",
     "typeface-pt-sans-caption": "0.0.54",
@@ -87,8 +94,8 @@
     "@commitlint/cli": "^7.1.1",
     "@commitlint/config-conventional": "^7.1.1",
     "@osu-cass/tslint-config": "^2.0.0",
-    "@storybook/addon-a11y": "^4.0.0-alpha.18",
-    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-a11y": "^4.0.0-alpha.20",
+    "@storybook/addon-actions": "^4.0.0-alpha.20",
     "@storybook/addon-centered": "^3.4.10",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-storyshots": "^4.0.0-alpha.18",
@@ -97,10 +104,8 @@
     "@types/jest": "^23.3.1",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
-    "@types/storybook__addon-a11y": "^3.3.1",
-    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/react-router-dom": "^4.3.0",
     "@types/storybook__addon-centered": "^3.3.1",
-    "@types/storybook__addon-storyshots": "^3.4.3",
     "@types/storybook__react": "^3.0.9",
     "@types/styled-jsx": "^2.2.5",
     "babel-core": "^7.0.0-bridge.0",

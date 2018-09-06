@@ -11,6 +11,7 @@ _describe changes here_
 
 - [ ] Wrote/updated tests for introduced changes
 - [ ] Added new stories for created/modified components (if applicable)
+- [ ] Checked Storybook for Accessibility issues (if applicable)
 - [ ] ~~Updated Postman library for created/modified routes (if applicable)~~
 - [ ] Verified that there are no issues in CircleCI
 - [ ] Assigned yourself to the PR
@@ -25,3 +26,4 @@ _describe changes here_
 - [ ] Verified that stories were written/modified (if applicable)
 - [ ] ~~Verified that Postman was updated (if applicable)~~
 - [ ] Checked out the branch and tested changes locally
+- [ ] Run storybook and checked that there are no accessibility issues
