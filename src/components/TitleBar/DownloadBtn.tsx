@@ -30,6 +30,9 @@ export const DownloadBtn = ({ url, filename }: DownloadBtnProps) => (
       a {
         color: ${Colors.sbGrayLighter};
       }
+      a:hover {
+        color: ${Colors.sbGray};
+      }
     `}</style>
   </a>
 );

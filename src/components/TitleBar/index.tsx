@@ -8,8 +8,10 @@ import { Colors } from '../../constants';
  * @interface TitleBarProps
  */
 export interface TitleBarProps {
-  title: string;
-  desc?: string;
+  claimTitle?: string;
+  claimDesc?: string;
+  targetTitle?: string;
+  targetDesc?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
 
@@ -22,18 +24,40 @@ export interface TitleBarProps {
  * @param {string | undefined} desc
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
-export const TitleBar = ({ title, desc, downloadBtnProps }: TitleBarProps) => (
+export const TitleBar = ({
+  claimTitle,
+  claimDesc,
+  targetTitle,
+  targetDesc,
+  downloadBtnProps
+}: TitleBarProps) => (
   <div>
     <ul>
-      <li className="title">
-        <span>{title}</span>
-      </li>
-      <li className="desc">{desc && <span>{desc}</span>}</li>
-      <li className="download">
-        {downloadBtnProps && (
+      {claimTitle && (
+        <li className="title">
+          <span>{claimTitle}</span>
+        </li>
+      )}
+      {claimDesc && (
+        <li className="desc">
+          <span>{claimDesc}</span>
+        </li>
+      )}
+      {targetTitle && (
+        <li className="title">
+          <span>{targetTitle}</span>
+        </li>
+      )}
+      {targetDesc && (
+        <li className="desc">
+          <span>{targetDesc}</span>
+        </li>
+      )}
+      {downloadBtnProps && (
+        <li className="download">
           <DownloadBtn url={downloadBtnProps.url} filename={downloadBtnProps.filename} />
-        )}
-      </li>
+        </li>
+      )}
     </ul>
     <style jsx>{`
       * {
@@ -41,34 +65,38 @@ export const TitleBar = ({ title, desc, downloadBtnProps }: TitleBarProps) => (
         padding: 0;
       }
       div {
-        min-height: 100px;
+        // min-height: 100px;
         padding: 20px;
       }
       div ul {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch;
         list-style-type: none;
       }
       div ul li {
-        padding-top: 10px;
+        min-height: 30px;
       }
       .title {
-        width: 300px;
+        width: 20%;
+        min-width: 50px;
         color: white;
         font-size: 20px;
         font-weight: 800;
+        text-align: center;
       }
       .desc {
-        width: 500px;
+        width: 75%;
+        min-width: 50px;
+        padding-bottom: 15px;
         color: ${Colors.sbGrayLighter};
         font-size: 14px;
         font-weight: 100;
         text-align: left;
       }
       .download {
-        width: 24px;
-        text-align: right;
+        margin-left: auto;
+        margin-top: auto;
       }
     `}</style>
   </div>
