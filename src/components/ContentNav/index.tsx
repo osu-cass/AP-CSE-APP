@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Colors, Styles } from '../../constants';
 
 export interface SubItem {
   active?: boolean;
@@ -44,30 +45,90 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
 
       return newItem;
     });
-    /*
-    return items.map(({name, subItems}: Item, i: number) => {
-      let subs: JSX.Element | undefined;
-
-      if (subItems) subs = <ul>{this.constructSubItems(subItems)}</ul>;
-
-      return (
-        <li key={`item-${i}`}>
-          <p>{ name }</p>
-          {subs}
-        </li>
-      );
-    });*/
   }
 
-  renderItems(items: Item[]) {
+  subItemClicked(event: React.MouseEvent<HTMLLIElement>, name: string) {
+    event.stopPropagation();
+    const newItems: Item[] = this.state.items.map((item: Item) => {
+      if (item.subItems) {
+        item.subItems = item.subItems.map((subItem: SubItem) => {
+          const isActive = subItem.name === name;
+
+          return { ...subItem, active: isActive };
+        });
+      }
+
+      return { ...item, active: false };
+    });
+
+    this.setState({
+      items: newItems
+    });
+  }
+
+  itemClicked(name: string) {
+    const newItems: Item[] = this.state.items.map((item: Item) => {
+      const isActive = item.name === name;
+      let newSubItems: SubItem[] | undefined;
+      if (item.subItems) {
+        newSubItems = item.subItems.map((subItem: SubItem) => ({ ...subItem, active: false }));
+      }
+
+      return { ...item, subItems: newSubItems, active: isActive };
+    });
+
+    this.setState({
+      items: newItems
+    });
+  }
+
+  expand(event: React.MouseEvent<HTMLParagraphElement>, name: string) {
+    event.stopPropagation();
+    const newItems: Item[] = this.state.items.map((item: Item) => {
+      const isExpanded = item.name === name ? !item.expanded : item.expanded;
+
+      return { ...item, expanded: isExpanded };
+    });
+
+    this.setState({
+      items: newItems
+    });
+  }
+
+  renderItems(items: Item[]): JSX.Element[] {
     return items.map(({ name, subItems, expanded, active }: Item) => {
       let subs: JSX.Element | undefined;
 
-      if (subItems) subs = <ul>{this.renderSubItems(subItems, name)}</ul>;
+      if (subItems) {
+        subs = (
+          <ul className={`sub-list ${expanded ? 'expanded' : 'collapsed'}`}>
+            {this.renderSubItems(subItems, name)}
+            <style jsx>{`
+              .collapsed {
+                height: 0;
+                overflow: hidden;
+              }
+              .expanded {
+                height: auto;
+              }
+            `}</style>
+          </ul>
+        );
+      }
 
       return (
-        <li key={name}>
-          <p>{name}</p>
+        <li key={name} onClick={() => this.itemClicked(name)} role="menuitem">
+          <p>
+            {name} {active ? ':)' : ''}
+          </p>
+          <p
+            onClick={e => {
+              this.expand(e, name);
+            }}
+            role="button"
+          >
+            >
+          </p>
           {subs}
         </li>
       );
@@ -75,7 +136,17 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   }
 
   renderSubItems(subItems: SubItem[], parentName: string): JSX.Element[] {
-    return subItems.map(subItem => <li key={`${parentName}-${subItem.name}`}>{subItem.name}</li>);
+    return subItems.map(subItem => (
+      <li
+        onClick={e => {
+          this.subItemClicked(e, subItem.name);
+        }}
+        key={`${parentName}-${subItem.name}`}
+        role="menuitem"
+      >
+        {subItem.name} {subItem.active ? ':)' : ''}
+      </li>
+    ));
   }
 
   render() {
