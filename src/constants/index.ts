@@ -14,3 +14,7 @@ export enum Styles {
   fontLarger = '18px',
   sbLetterSpacing = '-.02em'
 }
+
+export const blueGradientBgImg = {
+  backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
+};
