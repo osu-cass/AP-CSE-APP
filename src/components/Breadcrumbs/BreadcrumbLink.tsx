@@ -10,6 +10,7 @@ import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
 export interface BreadcrumbLinkProps {
   link: string;
   value: SubjectType | GradeType | ClaimType | string;
+  label: string;
 }
 
 const style = {
@@ -24,11 +25,12 @@ const style = {
  * @function {BreadcrumbLink}
  * @param {string} link
  * @param {SubjectType | GradeType | ClaimType | string} value
+ * @param {string} label
  */
-export const BreadcrumbLink = ({ link, value }: BreadcrumbLinkProps) => (
+export const BreadcrumbLink = ({ link, value, label }: BreadcrumbLinkProps) => (
   <li>
-    <Link className="link" style={style} to={link}>
-      {value}
+    <Link style={style} to={link}>
+      <span aria-label={label}>{value}</span>
     </Link>
     <style jsx>{`
       * {

@@ -9,7 +9,8 @@ import { Colors } from '../../constants';
 
 const subjectLinkMock: BreadcrumbLinkProps = {
   link: 'ela',
-  value: SubjectType.ELA
+  value: SubjectType.ELA,
+  label: 'Subject'
 };
 
 const emptyMock: BreadcrumbsProps = {};
@@ -29,7 +30,13 @@ storiesOf('Breadcrumbs component', module)
   .addDecorator(story => <BrowserRouter>{story()}</BrowserRouter>)
   .add('Renders a breadcrumb with subject data', () => (
     <div style={background}>
-      <BreadcrumbLink link={subjectLinkMock.link} value={subjectLinkMock.value} />
+      <ul>
+        <BreadcrumbLink
+          link={subjectLinkMock.link}
+          value={subjectLinkMock.value}
+          label={subjectLinkMock.label}
+        />
+      </ul>
     </div>
   ))
   .add('Renders Breadcrumbs without Data', () => (
