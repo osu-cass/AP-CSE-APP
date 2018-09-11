@@ -7,6 +7,7 @@ const isDev = process.env.NODE_ENV !== 'production'
 module.exports = {
     mode: isDev ? 'development' : 'production',
     entry: './src/index.tsx',
+    devtool: "cheap-module-eval-source-map",
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.bundle.[hash].js'
