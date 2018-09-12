@@ -1,0 +1,1284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots MainContent component Renders a main content with target data 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "white",
+          "border": "1px solid #63666A",
+          "maxWidth": "800px",
+          "minHeight": "500px",
+        }
+      }
+    >
+      <div
+        className="container"
+      >
+        <section>
+          <header>
+            <h1>
+              Clarification
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <p>
+            Targeted vocabulary words and phrases should be important to the text and worth assessing. The targeted vocabulary words and phrases should be **one to two** grade levels above testing grade. If the targeted word/phrase is used in a context that is different from what a student would normally encounter, it may be on grade level (e.g., state, factor). Answer choices need to be **on or below** grade level.
+
+The vocabulary focus of this target is on determining meaning of tier 2 words based on context. Items focusing on antonyms and synonyms, Greek or Latin roots, affixes, and the use of resources should be limited. For a list of academic/tier 2 words, see Page 70 in the item specifications.
+
+All items should require students to cite specific textual evidence to support conclusions drawn from the text(s).
+            <style
+              jsx={true}
+            >
+              
+      padding-left: 0.5em;
+    
+            </style>
+          </p>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Standards
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <ul>
+            <li>
+              <span>
+                E.G3.C1RL.T3.L.3.4
+              </span>
+              <span>
+                Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on *grade 3 reading and content*, choosing flexibly from a range of strategies.
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T1.RL.3.1
+              </span>
+              <span>
+                Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers.
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T3.RL.3.4
+              </span>
+              <span>
+                Determine the meaning of words and phrases as they are used in a text, distinguishing literal from non-literal language.
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T3.L.3.4a
+              </span>
+              <span>
+                Use sentence-level context as a clue to the meaning of a word or phrase.
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T3.L.3.4b
+              </span>
+              <span>
+                Determine the meaning of the new word formed when a known affix is added to a known word (e.g., *agreeable/disagreeable, comfortable/uncomfortable, care/careless, heat/preheat*).
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T3.L.3.4c
+              </span>
+              <span>
+                Use a known root word as a clue to the meaning of an unknown word with the same root (e.g.,* company, companion*).
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T3.L.3.4d
+              </span>
+              <span>
+                Use glossaries or beginning dictionaries, both print and digital, to determine or clarify the precise meaning of key words and phrases.
+              </span>
+            </li>
+            <li>
+              <span>
+                E.G3.C1RL.T3.L.3.5c
+              </span>
+              <span>
+                Distinguish shades of meaning among related words that describe states of mind or degrees of certainty (e.g., *knew, believed, suspected, heard, wondered*).
+              </span>
+            </li>
+            <style
+              jsx={true}
+            >
+              
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0.5em;
+      }
+    
+            </style>
+          </ul>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Stimuli Passage/Text Complexity
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <section>
+            <header>
+              <h2>
+                Passage
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              Each text must include one or more words that are at grades 3–5 reading level, OR words that have nuanced meanings, OR words that have multiple meanings and used differently in the text. Emphasis is placed on academic/tier 2 words. The target words must be important to the text and worthwhile assessing. The text must have clearly evident context that provides unambiguous support for the meaning of the targeted word or phrase.
+
+Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Text Complexity
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              Clarification for Dual-Text Stimuli:
+
+When a dual-text stimulus contains one literary and one informational text, the literary text (text #1) is the primary focus, and the set of items must include items from the literary stimulus as well as items written across both texts. The informational text (text #2) **must only** be used as a foundational/background piece for the literary text, and no items can be written for **only** the informational text. If both texts are literary, items may be written to either or both texts. The title of the text should be included in the stem when more than one text is used.
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Accessibility Concerns
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <p>
+            string
+            <style
+              jsx={true}
+            >
+              
+      padding-left: 0.5em;
+    
+            </style>
+          </p>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Evidence Required
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <ol>
+            <li>
+              The student will determine the meaning of a word or phrase based on its context in a literary text.
+            </li>
+            <li>
+              The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+            </li>
+            <li>
+              The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+            </li>
+            <li>
+              The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+            </li>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </ol>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Task Model 1
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <section>
+            <header>
+              <h2>
+                Task Description
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              The **item stem** will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.
+
+**Formatting note:** in excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+
+The **answer choices** will present four options of similar structure using vocabulary on or below grade level. The correct answer will be a clearly discernible and correct meaning of the word or phrase. The **distractors** will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
+
+**Distractors** will reflect common student errors. 
+
+**Rationales** should state the justification for the type of plausible distractor.
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Target Evidence Statements
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ol>
+              <li>
+                The student will determine the meaning of a word or phrase based on its context in a literary text.
+              </li>
+              <li>
+                The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+              </li>
+              <li>
+                The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <li>
+                The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ol>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Appropriate Stems
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ul>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What is the meaning of the [word/phrase] [*targeted word*/“targeted phrase”]?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** mean?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which [word(s)/phrase] **best** state(s) the meaning of [*targeted word*/“targeted phrase”]?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the use of the [word/phrase] [*targeted word*/“targeted phrase”] show the reader?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+The [word/phrase] [*targeted word*/“targeted phrase”] has more than one meaning. What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** tell the reader about [provide an idea/event/character/story element/etc.] in the passage?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word* underlined]
+ A(n) [antonym/synonym] is a word that means the [opposite/same or nearly the same] of another word. What is the [antonym/synonym] of [*targeted word*]?
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ Pick the [word/phrase] that **best** defines [*targeted word*/“targeted phrase”] as it is used in the sentence(s).
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ What does the author tell the reader with the use of the [word/phrase] [*targeted word*/“targeted phrase”]?
+
+-   Read the dictionary entry.
+[*(part of speech)* **1.** [provide definition]; **2.** [provide definition]]
+ Which [word/phrase] **best** matches the dictionary entry?
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word* underlined]
+What does the [root/affix] in the word [*targeted word*] mean?
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the [word/phrase] [*targeted word*/“targeted phrase”] **mostly** mean? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the use of the [word/phrase] [*targeted word*/“targeted phrase”] show the reader? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+The [word/phrase] [*targeted word*/“targeted phrase”] has more than one meaning. What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** tell the reader about [provide an idea/event/character/story element/etc.] in the passage? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the author tell the reader with the use of [*targeted word*/“targeted phrase”]? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)] from the passage.
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ How does the author’s use of the [word/phrase] [*targeted word*/“targeted phrase”] in the passage help the reader understand [provide concept/idea]? Pick **two** choices.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the dictionary entry.
+[*(part of speech)* **1.** [provide definition]
+Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that **most closely** matches the definition of that word.
+[excerpted selectable text]
+
+-   The author uses a word that means [provide definition of academic word] in the text. Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that **best** shows that [idea/meaning].
+[excerpted selectable text]
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Appropriate Stems for Dual-Text Stimuli Only
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ul>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)] from [title text #2].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which sentence from [title text #1] has a [word/phrase] that means the same thing as [*targeted word*/“targeted phrase”] from [text #2]?
+
+-   First, read the [sentence(s)/line(s)] from [title text #1].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Now read the [sentence(s)/line(s)] from [title text #2].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text #1] and [*targeted word*/“targeted phrase” text #2] as it is used in **both** passages?  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the sentence(s) from [title text \\#2].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Which sentence from [title text \\#1] has a [word/phrase] that means the same thing as [*targeted word*/“targeted phrase”]? Pick **two** choices.
+
+-   First, read the sentence(s) from [title text \\#1].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Now read the sentence(s) from [title text \\#2].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\#1] and [*targeted word*/”targeted phrase” text \\#2] as they are used in **both** passages? Pick **two** choices.  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)] from [title text \\#2].
+[Directly quoted sentence(s)/line(s) from text, with *targeted word/phrase* underlined]
+Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] from [title text \\#1] that means the same thing as [*targeted word*/“targeted phrase”].
+[excerpted selectable text from text \\#1]
+
+-   Read the sentence(s) from [title text \\#1].
+[Directly quoted sentence or line from text, with *targeted [word/phrase]* underlined]
+Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\#2] that means the same thing as [*targeted word*/“targeted phrase”].
+[excerpted selectable text from text \\#2]  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Scoring Rules
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              Correct response: 1 point; Incorrect response: 0 points
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Task Model 2
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <section>
+            <header>
+              <h2>
+                Task Description
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              The **item stem** will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.  The item stem will prompt the student to choose two answers.   
+
+**Formatting note:** In excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+
+The **answer choices** will present five or six options of similar structure using vocabulary on or below grade level. Of the options, there will be two correct answers. The correct answers will be a clearly discernible and correct meaning of the word or phrase. The **distractors** will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
+
+**Distractors** will reflect common student errors. 
+
+**Rationales** should state the justification for the type of plausible distractor.
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Target Evidence Statements
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ol>
+              <li>
+                The student will determine the meaning of a word or phrase based on its context in a literary text.
+              </li>
+              <li>
+                The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+              </li>
+              <li>
+                The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <li>
+                The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ol>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Appropriate Stems
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ul>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What is the meaning of the [word/phrase] [*targeted word*/“targeted phrase”]?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** mean?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which [word(s)/phrase] **best** state(s) the meaning of [*targeted word*/“targeted phrase”]?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the use of the [word/phrase] [*targeted word*/“targeted phrase”] show the reader?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+The [word/phrase] [*targeted word*/“targeted phrase”] has more than one meaning. What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** tell the reader about [provide an idea/event/character/story element/etc.] in the passage?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word* underlined]
+ A(n) [antonym/synonym] is a word that means the [opposite/same or nearly the same] of another word. What is the [antonym/synonym] of [*targeted word*]?
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ Pick the [word/phrase] that **best** defines [*targeted word*/“targeted phrase”] as it is used in the sentence(s).
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ What does the author tell the reader with the use of the [word/phrase] [*targeted word*/“targeted phrase”]?
+
+-   Read the dictionary entry.
+[*(part of speech)* **1.** [provide definition]; **2.** [provide definition]]
+ Which [word/phrase] **best** matches the dictionary entry?
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word* underlined]
+What does the [root/affix] in the word [*targeted word*] mean?
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the [word/phrase] [*targeted word*/“targeted phrase”] **mostly** mean? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the use of the [word/phrase] [*targeted word*/“targeted phrase”] show the reader? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+The [word/phrase] [*targeted word*/“targeted phrase”] has more than one meaning. What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** tell the reader about [provide an idea/event/character/story element/etc.] in the passage? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the author tell the reader with the use of [*targeted word*/“targeted phrase”]? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)] from the passage.
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ How does the author’s use of the [word/phrase] [*targeted word*/“targeted phrase”] in the passage help the reader understand [provide concept/idea]? Pick **two** choices.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the dictionary entry.
+[*(part of speech)* **1.** [provide definition]
+Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that **most closely** matches the definition of that word.
+[excerpted selectable text]
+
+-   The author uses a word that means [provide definition of academic word] in the text. Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that **best** shows that [idea/meaning].
+[excerpted selectable text]
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Appropriate Stems for Dual-Text Stimuli Only
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ul>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)] from [title text #2].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which sentence from [title text #1] has a [word/phrase] that means the same thing as [*targeted word*/“targeted phrase”] from [text #2]?
+
+-   First, read the [sentence(s)/line(s)] from [title text #1].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Now read the [sentence(s)/line(s)] from [title text #2].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text #1] and [*targeted word*/“targeted phrase” text #2] as it is used in **both** passages?  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the sentence(s) from [title text \\#2].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Which sentence from [title text \\#1] has a [word/phrase] that means the same thing as [*targeted word*/“targeted phrase”]? Pick **two** choices.
+
+-   First, read the sentence(s) from [title text \\#1].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Now read the sentence(s) from [title text \\#2].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\#1] and [*targeted word*/”targeted phrase” text \\#2] as they are used in **both** passages? Pick **two** choices.  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)] from [title text \\#2].
+[Directly quoted sentence(s)/line(s) from text, with *targeted word/phrase* underlined]
+Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] from [title text \\#1] that means the same thing as [*targeted word*/“targeted phrase”].
+[excerpted selectable text from text \\#1]
+
+-   Read the sentence(s) from [title text \\#1].
+[Directly quoted sentence or line from text, with *targeted [word/phrase]* underlined]
+Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\#2] that means the same thing as [*targeted word*/“targeted phrase”].
+[excerpted selectable text from text \\#2]  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Scoring Rules
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              All responses correct: 1 point; Any other response combination: 0 points
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Task Model 3
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <section>
+            <header>
+              <h2>
+                Task Description
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              The **item stem** will require students to select the word(s)/phrase(s) from sentence(s), set(s) of sentences, line(s), or paragraph(s) that best match a given dictionary entry or paraphrased definition. 
+
+**Formatting note:** When excerpts are used, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+
+The **answer choices** will be five to eight selectable and underlined words or phrases from an excerpted selection of text. The excerpted text will be whole, continuous, and consecutive sections taken directly from the text. There will be only one correct response. The distractors will be selectable words or phrases on or below grade level and plausible to students who 1) do not read the text closely, 2) do not understand the definition, concept, or idea presented, or 3) use context for the wrong meaning of the target word/phrase.
+
+**NOTE:** If there are too many defensible options (check every possibility), do not use this item type; use Multiple Choice (Task Model 1) or Multiple Select (Task Model 2).
+
+**Distractors** will reflect common student errors. 
+
+**Rationales** should state the justification for the type of plausible distractor.
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Target Evidence Statements
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ol>
+              <li>
+                The student will determine the meaning of a word or phrase based on its context in a literary text.
+              </li>
+              <li>
+                The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+              </li>
+              <li>
+                The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <li>
+                The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ol>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Appropriate Stems
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ul>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What is the meaning of the [word/phrase] [*targeted word*/“targeted phrase”]?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** mean?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which [word(s)/phrase] **best** state(s) the meaning of [*targeted word*/“targeted phrase”]?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the use of the [word/phrase] [*targeted word*/“targeted phrase”] show the reader?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+The [word/phrase] [*targeted word*/“targeted phrase”] has more than one meaning. What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** tell the reader about [provide an idea/event/character/story element/etc.] in the passage?
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word* underlined]
+ A(n) [antonym/synonym] is a word that means the [opposite/same or nearly the same] of another word. What is the [antonym/synonym] of [*targeted word*]?
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ Pick the [word/phrase] that **best** defines [*targeted word*/“targeted phrase”] as it is used in the sentence(s).
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ What does the author tell the reader with the use of the [word/phrase] [*targeted word*/“targeted phrase”]?
+
+-   Read the dictionary entry.
+[*(part of speech)* **1.** [provide definition]; **2.** [provide definition]]
+ Which [word/phrase] **best** matches the dictionary entry?
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word* underlined]
+What does the [root/affix] in the word [*targeted word*] mean?
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the [word/phrase] [*targeted word*/“targeted phrase”] **mostly** mean? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the use of the [word/phrase] [*targeted word*/“targeted phrase”] show the reader? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+The [word/phrase] [*targeted word*/“targeted phrase”] has more than one meaning. What does the [word/phrase] [*targeted word*/“targeted phrase”] **most likely** tell the reader about [provide an idea/event/character/story element/etc.] in the passage? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)].
+ [Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+What does the author tell the reader with the use of [*targeted word*/“targeted phrase”]? Pick **two** choices.
+
+-   Read the [sentence(s)/line(s)] from the passage.
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+ How does the author’s use of the [word/phrase] [*targeted word*/“targeted phrase”] in the passage help the reader understand [provide concept/idea]? Pick **two** choices.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the dictionary entry.
+[*(part of speech)* **1.** [provide definition]
+Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that **most closely** matches the definition of that word.
+[excerpted selectable text]
+
+-   The author uses a word that means [provide definition of academic word] in the text. Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that **best** shows that [idea/meaning].
+[excerpted selectable text]
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Appropriate Stems for Dual-Text Stimuli Only
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <ul>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)] from [title text #2].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which sentence from [title text #1] has a [word/phrase] that means the same thing as [*targeted word*/“targeted phrase”] from [text #2]?
+
+-   First, read the [sentence(s)/line(s)] from [title text #1].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Now read the [sentence(s)/line(s)] from [title text #2].
+[Directly quoted sentence(s) or line(s) from passage, with *targeted word/phrase* underlined]
+Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text #1] and [*targeted word*/“targeted phrase” text #2] as it is used in **both** passages?  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the sentence(s) from [title text \\#2].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Which sentence from [title text \\#1] has a [word/phrase] that means the same thing as [*targeted word*/“targeted phrase”]? Pick **two** choices.
+
+-   First, read the sentence(s) from [title text \\#1].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Now read the sentence(s) from [title text \\#2].
+[Directly quoted sentence(s) from passage, with *targeted word/phrase* underlined]
+Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\#1] and [*targeted word*/”targeted phrase” text \\#2] as they are used in **both** passages? Pick **two** choices.  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <li>
+                *(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+
+-   Read the [sentence(s)/line(s)] from [title text \\#2].
+[Directly quoted sentence(s)/line(s) from text, with *targeted word/phrase* underlined]
+Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] from [title text \\#1] that means the same thing as [*targeted word*/“targeted phrase”].
+[excerpted selectable text from text \\#1]
+
+-   Read the sentence(s) from [title text \\#1].
+[Directly quoted sentence or line from text, with *targeted [word/phrase]* underlined]
+Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\#2] that means the same thing as [*targeted word*/“targeted phrase”].
+[excerpted selectable text from text \\#2]  
+**NOTE:** This stem is only used with two literary passages.
+              </li>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Scoring Rules
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              Correct response: 1 point; Incorrect response: 0 points
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <section>
+            <header>
+              <h2>
+                Format Example
+              </h2>
+              <style
+                jsx={true}
+              >
+                
+              </style>
+            </header>
+            <p>
+              **Format Example:**
+
+**The Format Example includes a sample of hot text from a grade 11 item and is included to provide guidance regarding *formatting purposes only*.**
+
+**Note:** Selectable text is a whole, continuous section of text.
+
+__________________________________________________________________________
+First, read the dictionary entry. 
+
+(v) gather together or acquire an increasing number or quantity of; heap up
+
+Click on the *underlined* word in the paragraph that most closely matches the definition provided.
+
+The snow on the side of the road was really starting to [*accumulate*]. The grass was now a pure, [*sparkling*] white carpet. The fire hydrants and tree branches were three inches taller, and the road was now a river of ice and water. Ashley told me not to worry because the highway would be dry as we slowly [*negotiated*] the narrow on-ramp to the interstate. I couldn’t help but smile as I read the sign: I-95 South. Was she taking me somewhere special for our winter holiday, maybe to visit Aunt Glenda in Delaware? I haven’t seen her in years, and I used to love visiting for family cook-outs. Aunt Glenda always made us feel welcome, and she had the cutest dogs named Tebow and Spikes that loved to play fetch with us. I wasn’t quite sure what our [*destination*] was, but I had to quickly admit that it wasn’t my first [*suspicion*] as I read the sign that said, “Thank You for Visiting Delaware, Come Back Soon!” and then just as quickly, “Welcome to Maryland, Buckle-Up and Please Drive Safely.” Now I was completely [*stumped*] as to which mysterious locale my sister was [*whisking*] us off to.
+              <style
+                jsx={true}
+              >
+                
+      padding-left: 0.5em;
+    
+              </style>
+            </p>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </section>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Depth of Knowledge
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <p>
+            <span>
+              DOK1
+              <style
+                jsx={true}
+              >
+                
+          span + span:before {
+            content: ', ';
+          }
+        
+              </style>
+            </span>
+            <span>
+              DOK2
+              <style
+                jsx={true}
+              >
+                
+          span + span:before {
+            content: ', ';
+          }
+        
+              </style>
+            </span>
+            <style
+              jsx={true}
+            >
+              
+      padding-left: 0.5em;
+    
+            </style>
+          </p>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <section>
+          <header>
+            <h1>
+              Allowable Item Types
+            </h1>
+            <style
+              jsx={true}
+            >
+              
+            </style>
+          </header>
+          <style
+            jsx={true}
+          >
+            
+          </style>
+        </section>
+        <style
+          jsx={true}
+        >
+          
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        div {
+          max-width: 100%;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          padding: 1em;
+          max-width: 100%;
+        }
+      
+        </style>
+      </div>
+    </div>
+  </div>
+</div>
+`;
