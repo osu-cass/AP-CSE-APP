@@ -3,3 +3,7 @@ dist
 coverage
 reports
 settings.json
+
+# IntelliJ Idea	
+.idea/	
+*.iml
