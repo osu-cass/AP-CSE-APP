@@ -2,6 +2,7 @@ import React from 'react';
 import { TaskModel } from './TaskModel';
 import { NonBulletList, NumberList } from './List';
 import { MainHeader, SubHeader } from './Header';
+import { Content } from './ParseContent';
 
 export interface Standard {
   stdCode: string;
@@ -53,13 +54,21 @@ export interface MainContentProps {
 }
 
 export interface ContentProps {
-  children: JSX.Element[] | JSX.Element | string | (JSX.Element | undefined)[];
+  children:
+    | void
+    | string
+    | JSX.Element
+    | JSX.Element[]
+    | (JSX.Element | undefined)[]
+    | (JSX.Element | undefined);
 }
 
 export const Section = ({ children }: ContentProps) => (
   <section>
     {children}
-    <style jsx>{``}</style>
+    <style jsx>{`
+      padding-left: 0.5em;
+    `}</style>
   </section>
 );
 
@@ -79,10 +88,12 @@ export const RenderListItems = (items: string[]) =>
 
 const RenderStandards = (standards: Standard[]) =>
   standards.map((standard, index) => {
+    const code = standard.stdCode;
+    const desc = Content(standard.stdDesc);
+
     return (
       <li key={index}>
-        <span>{standard.stdCode}</span>
-        <span>{standard.stdDesc}</span>
+        <strong>{code}</strong> {desc}
       </li>
     );
   });
@@ -94,11 +105,15 @@ const RenderTaskModels = (
   scoringRules: string[]
 ) =>
   taskModels.map((taskModel, index) => {
+    const startIndex = index * 2;
+    const endIndex = startIndex + 2;
+    const targetStems = stems.slice(startIndex, endIndex);
+
     return (
       <TaskModel
         key={index}
         task={taskModel}
-        stems={stems}
+        stems={targetStems}
         evidences={evidence}
         scoringRule={scoringRules[index]}
       />
@@ -120,11 +135,16 @@ const RenderDOKs = (doks: DOK[]) =>
   });
 
 export const MainContent = ({ target }: MainContentProps) => {
+  const clarification = Content(target.clarification);
+  const stimPassage = Content(target.stimInfo);
+  const stimTextComplexity = Content(target.dualText);
+  const accessibility = Content(target.accessibility);
+
   return (
     <div className="container">
       <Section>
         <MainHeader>Clarification</MainHeader>
-        <Passage>{target.clarification}</Passage>
+        <Passage>{clarification}</Passage>
       </Section>
 
       <Section>
@@ -136,17 +156,17 @@ export const MainContent = ({ target }: MainContentProps) => {
         <MainHeader>Stimuli Passage/Text Complexity</MainHeader>
         <Section>
           <SubHeader>Passage</SubHeader>
-          <Passage>{target.stimInfo}</Passage>
+          <Passage>{stimPassage}</Passage>
         </Section>
         <Section>
           <SubHeader>Text Complexity</SubHeader>
-          <Passage>{target.dualText}</Passage>
+          <Passage>{stimTextComplexity}</Passage>
         </Section>
       </Section>
 
       <Section>
         <MainHeader>Accessibility Concerns</MainHeader>
-        <Passage>{target.accessibility}</Passage>
+        <Passage>{accessibility}</Passage>
       </Section>
 
       <Section>
@@ -154,7 +174,9 @@ export const MainContent = ({ target }: MainContentProps) => {
         <NumberList>{RenderListItems(target.evidence)}</NumberList>
       </Section>
 
-      {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics)}
+      <Section>
+        {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics)}
+      </Section>
 
       <Section>
         <MainHeader>Depth of Knowledge</MainHeader>

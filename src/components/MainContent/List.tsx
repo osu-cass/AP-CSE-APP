@@ -8,8 +8,6 @@ export const NonBulletList = ({ children }: ContentProps) => (
       * {
         margin: 0;
         padding: 0;
-      }
-      ul {
         list-style-type: none;
         padding-left: 0.5em;
       }
@@ -17,16 +15,14 @@ export const NonBulletList = ({ children }: ContentProps) => (
   </ul>
 );
 
-export const BulletList = ({ children }: ContentProps) => (
-  <ul>
-    {children}
-    <style jsx>{``}</style>
-  </ul>
-);
-
 export const NumberList = ({ children }: ContentProps) => (
   <ol>
     {children}
-    <style jsx>{``}</style>
+    <style jsx>{`
+      * {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    `}</style>
   </ol>
 );
