@@ -2,7 +2,8 @@ node_modules
 dist
 coverage
 reports
+settings.json
 
-# IntelliJ Idea
-.idea/
+# IntelliJ Idea	
+.idea/	
 *.iml
