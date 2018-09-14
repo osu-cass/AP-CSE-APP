@@ -36,7 +36,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       <div
         className="container"
       >
-        <section>
+        <div
+          name="clarification"
+        >
           <header>
             <h1>
               Clarification
@@ -91,8 +93,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="standards"
+        >
           <header>
             <h1>
               Standards
@@ -220,8 +224,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="stimuli"
+        >
           <header>
             <h1>
               Stimuli Passage/Text Complexity
@@ -232,7 +238,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               
             </style>
           </header>
-          <section>
+          <div
+            name="stimuli-passage"
+          >
             <header>
               <h2>
                 Passage
@@ -271,8 +279,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
             </style>
-          </section>
-          <section>
+          </div>
+          <div
+            name="stimuli-complexity"
+          >
             <header>
               <h2>
                 Text Complexity
@@ -319,7 +329,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
             </style>
-          </section>
+          </div>
           <style
             jsx={true}
           >
@@ -327,8 +337,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="accessibility"
+        >
           <header>
             <h1>
               Accessibility Concerns
@@ -359,8 +371,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="evidence"
+        >
           <header>
             <h1>
               Evidence Required
@@ -402,8 +416,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="tasks"
+        >
           <div>
             <header>
               <h1>
@@ -415,7 +431,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
               </style>
             </header>
-            <section>
+            <div
+              name="taskModel1-desc"
+            >
               <header>
                 <h2>
                   Task Description
@@ -502,8 +520,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel1-evidence"
+            >
               <header>
                 <h2>
                   Target Evidence Statements
@@ -545,8 +565,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel1-appropriateStems"
+            >
               <header>
                 <h2>
                   Appropriate Stems
@@ -844,8 +866,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel1-appropriateStemsDualText"
+            >
               <header>
                 <h2>
                   Appropriate Stems for Dual-Text Stimuli Only
@@ -955,8 +979,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel1-scoringRules"
+            >
               <header>
                 <h2>
                   Scoring Rules
@@ -984,7 +1010,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
+            </div>
           </div>
           <div>
             <header>
@@ -997,7 +1023,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
               </style>
             </header>
-            <section>
+            <div
+              name="taskModel2-desc"
+            >
               <header>
                 <h2>
                   Task Description
@@ -1084,8 +1112,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel2-evidence"
+            >
               <header>
                 <h2>
                   Target Evidence Statements
@@ -1127,8 +1157,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel2-appropriateStems"
+            >
               <header>
                 <h2>
                   Appropriate Stems
@@ -1310,8 +1342,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel2-appropriateStemsDualText"
+            >
               <header>
                 <h2>
                   Appropriate Stems for Dual-Text Stimuli Only
@@ -1429,8 +1463,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel2-scoringRules"
+            >
               <header>
                 <h2>
                   Scoring Rules
@@ -1458,7 +1494,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
+            </div>
           </div>
           <div>
             <header>
@@ -1471,7 +1507,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
               </style>
             </header>
-            <section>
+            <div
+              name="taskModel3-desc"
+            >
               <header>
                 <h2>
                   Task Description
@@ -1566,8 +1604,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel3-evidence"
+            >
               <header>
                 <h2>
                   Target Evidence Statements
@@ -1609,8 +1649,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel3-appropriateStems"
+            >
               <header>
                 <h2>
                   Appropriate Stems
@@ -1696,8 +1738,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel3-appropriateStemsDualText"
+            >
               <header>
                 <h2>
                   Appropriate Stems for Dual-Text Stimuli Only
@@ -1799,8 +1843,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel3-scoringRules"
+            >
               <header>
                 <h2>
                   Scoring Rules
@@ -1828,8 +1874,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
-            <section>
+            </div>
+            <div
+              name="taskModel3-formatExample"
+            >
               <header>
                 <h2>
                   Format Example
@@ -1960,7 +2008,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
               </style>
-            </section>
+            </div>
           </div>
           <style
             jsx={true}
@@ -1969,8 +2017,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="dok"
+        >
           <header>
             <h1>
               Depth of Knowledge
@@ -2021,8 +2071,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
-        <section>
+        </div>
+        <div
+          name="allowableItemTypes"
+        >
           <header>
             <h1>
               Allowable Item Types
@@ -2040,7 +2092,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       padding-left: 0.5em;
     
           </style>
-        </section>
+        </div>
         <style
           jsx={true}
         >
