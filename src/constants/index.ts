@@ -16,3 +16,7 @@ export enum Styles {
   sbSans = 'PT Sans Caption',
   sbSerif = 'PT Serif'
 }
+
+export const blueGradientBgImg = {
+  backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
+};
