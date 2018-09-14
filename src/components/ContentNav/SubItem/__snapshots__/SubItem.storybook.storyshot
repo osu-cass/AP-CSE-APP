@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ContentNav/SubItem SubItem 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <li
+      className=""
+      onClick={[Function]}
+      role="menuitem"
+    >
+      <p>
+        Task Descriptions
+      </p>
+      <style
+        jsx={true}
+      >
+        
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          box-sizing: border-box;
+          border-left: 3px solid #ffffff;
+          display: flex;
+          align-items: center;
+          color: #0085AD;
+          font-size: 16px;
+          font-weight: normal;
+          text-indent: 1em;
+          height: 3em;
+        }
+        li :first-child {
+          border-top: 1px solid #000;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          box-sizing: border-box;
+          border-left: 3px solid #0085AD;
+          font-weight: bold;
+        }
+        :not(.active) {
+          background-color: #ffffff;
+        }
+      
+      </style>
+    </li>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ContentNav/SubItem SubItem Active 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <li
+      className="active"
+      onClick={[Function]}
+      role="menuitem"
+    >
+      <p>
+        Task Descriptions
+      </p>
+      <style
+        jsx={true}
+      >
+        
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          box-sizing: border-box;
+          border-left: 3px solid #ffffff;
+          display: flex;
+          align-items: center;
+          color: #0085AD;
+          font-size: 16px;
+          font-weight: normal;
+          text-indent: 1em;
+          height: 3em;
+        }
+        li :first-child {
+          border-top: 1px solid #000;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          box-sizing: border-box;
+          border-left: 3px solid #0085AD;
+          font-weight: bold;
+        }
+        :not(.active) {
+          background-color: #ffffff;
+        }
+      
+      </style>
+    </li>
+  </div>
+</div>
+`;

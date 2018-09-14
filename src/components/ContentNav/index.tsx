@@ -121,20 +121,17 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
                 expand={this.expand}
                 key={name}
               >
-                {subItems && (
-                  <ul className={`sub-list ${expanded ? 'expanded' : ''}`}>
-                    {subItems.map(subItem => {
-                      return (
-                        <SubItem
-                          name={subItem.name}
-                          active={subItem.active}
-                          activate={this.subItemClicked}
-                          key={`${name}-${subItem.name}`}
-                        />
-                      );
-                    })}
-                  </ul>
-                )}
+                {subItems &&
+                  subItems.map(subItem => {
+                    return (
+                      <SubItem
+                        name={subItem.name}
+                        active={subItem.active}
+                        activate={this.subItemClicked}
+                        key={`${name}-${subItem.name}`}
+                      />
+                    );
+                  })}
               </Item>
             );
           })}
@@ -149,18 +146,6 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             border-width: 0 1px 1px 0;
             border-style: solid;
             width: auto;
-          }
-          .sub-list {
-            border: none;
-            width: 100%;
-          }
-          .sub-list .expanded {
-            height: auto;
-          }
-          .sub-list :not(.expanded) {
-            display: none;
-            height: 0;
-            overflow: hidden;
           }
         `}</style>
       </React.Fragment>
