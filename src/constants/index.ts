@@ -12,7 +12,9 @@ export enum Styles {
   shadow = '0 0.15em 0.35em 0 rgba(0,0,0,0.135)',
   paddingUnit = '20px',
   fontLarger = '18px',
-  sbLetterSpacing = '-.02em'
+  sbLetterSpacing = '-.02em',
+  sbSans = 'PT Sans Caption',
+  sbSerif = 'PT Serif'
 }
 
 export const blueGradientBgImg = {
