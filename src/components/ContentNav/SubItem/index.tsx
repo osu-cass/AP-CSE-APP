@@ -40,7 +40,7 @@ export const SubItem = ({ name, active, activate }: SubItemProps) => {
           border-left: 3px solid ${Colors.sbWhite};
           display: flex;
           align-items: center;
-          color: ${Colors.sbBlueLighter};
+          color: ${Colors.sbBlue};
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -54,7 +54,7 @@ export const SubItem = ({ name, active, activate }: SubItemProps) => {
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid ${Colors.sbBlueLighter};
+          border-left: 3px solid ${Colors.sbBlue};
           font-weight: bold;
         }
         :not(.active) {
