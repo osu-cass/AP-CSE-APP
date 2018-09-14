@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ContentNav Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <ul
+      className="list"
+      role="menu"
+    >
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Clarifications
+            <div
+              className="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Standards
+            <div
+              className="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Stimuli/Text Complexity
+            <div
+              className="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Accessibility Concerns
+            <div
+              className="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Evidence Required
+            <div
+              className="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Task Model 1
+            <div
+              className="chevron"
+            >
+              <svg
+                fill="none"
+                height="24"
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="6 9 12 15 18 9"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        >
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
+          >
+            <p>
+              Task Descriptions
+            </p>
+            <style
+              jsx={true}
+            >
+              
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          box-sizing: border-box;
+          border-left: 3px solid #ffffff;
+          display: flex;
+          align-items: center;
+          color: #0085AD;
+          font-size: 16px;
+          font-weight: normal;
+          text-indent: 1em;
+          height: 3em;
+        }
+        li :first-child {
+          border-top: 1px solid #000;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          box-sizing: border-box;
+          border-left: 3px solid #0085AD;
+          font-weight: bold;
+        }
+        :not(.active) {
+          background-color: #ffffff;
+        }
+      
+            </style>
+          </li>
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
+          >
+            <p>
+              Target Evidence Statement
+            </p>
+            <style
+              jsx={true}
+            >
+              
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          box-sizing: border-box;
+          border-left: 3px solid #ffffff;
+          display: flex;
+          align-items: center;
+          color: #0085AD;
+          font-size: 16px;
+          font-weight: normal;
+          text-indent: 1em;
+          height: 3em;
+        }
+        li :first-child {
+          border-top: 1px solid #000;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          box-sizing: border-box;
+          border-left: 3px solid #0085AD;
+          font-weight: bold;
+        }
+        :not(.active) {
+          background-color: #ffffff;
+        }
+      
+            </style>
+          </li>
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
+          >
+            <p>
+              Appropriate Stems
+            </p>
+            <style
+              jsx={true}
+            >
+              
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          box-sizing: border-box;
+          border-left: 3px solid #ffffff;
+          display: flex;
+          align-items: center;
+          color: #0085AD;
+          font-size: 16px;
+          font-weight: normal;
+          text-indent: 1em;
+          height: 3em;
+        }
+        li :first-child {
+          border-top: 1px solid #000;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          box-sizing: border-box;
+          border-left: 3px solid #0085AD;
+          font-weight: bold;
+        }
+        :not(.active) {
+          background-color: #ffffff;
+        }
+      
+            </style>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+      <li
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <div
+          className=""
+        >
+          <div
+            className="item-content"
+          >
+            Scoring Rules
+            <div
+              className="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          font-size: 20px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: 0 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(2em / 1.4142135623730951 + 5px);
+          width: calc(2em / 1.4142135623730951 + 5px);
+          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>
+    </ul>
+    <style
+      jsx={true}
+    >
+      
+          * {
+            font-family: 'PT Sans Caption';
+          }
+          ul {
+            list-style-type: none;
+            padding-left: 0;
+            border-width: 0 1px 1px 0;
+            border-style: solid;
+            width: auto;
+          }
+        
+    </style>
+  </div>
+</div>
+`;

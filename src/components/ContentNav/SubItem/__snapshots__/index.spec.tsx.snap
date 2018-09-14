@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubItem should be active 1`] = `
+<Component
+  active={true}
+  name="Test Name"
+>
+  <li
+    className="active"
+    onClick={[Function]}
+    role="menuitem"
+  >
+    <p>
+      Test Name
+    </p>
+    <style
+      jsx={true}
+    >
+      
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          box-sizing: border-box;
+          border-left: 3px solid #ffffff;
+          display: flex;
+          align-items: center;
+          color: #0085AD;
+          font-size: 16px;
+          font-weight: normal;
+          text-indent: 1em;
+          height: 3em;
+        }
+        li :first-child {
+          border-top: 1px solid #000;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          box-sizing: border-box;
+          border-left: 3px solid #0085AD;
+          font-weight: bold;
+        }
+        :not(.active) {
+          background-color: #ffffff;
+        }
+      
+    </style>
+  </li>
+</Component>
+`;

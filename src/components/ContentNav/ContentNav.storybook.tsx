@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
 import { ContentNav } from '.';
-import { ItemProps } from './Item';
-import { SubItemProps } from './SubItem';
+import { Item, ItemProps } from './Item';
+import { SubItem, SubItemProps } from './SubItem';
 
 const subMock1: SubItemProps = { name: 'sdgasdfasdf' };
 const subMock2: SubItemProps = { name: 'helasd' };
@@ -43,6 +43,6 @@ const mock: ItemProps[] = [
   }
 ];
 
-storiesOf('ContentNav component', module)
+storiesOf('ContentNav', module)
   .addDecorator(centered)
-  .add('ContentNav', () => <ContentNav items={mock} />);
+  .add('Default', () => <ContentNav items={mock} />);
