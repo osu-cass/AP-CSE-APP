@@ -191,7 +191,7 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -205,7 +205,7 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
@@ -364,7 +364,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -378,7 +378,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
@@ -407,7 +407,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -421,7 +421,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
@@ -580,7 +580,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -594,7 +594,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
@@ -623,7 +623,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -637,7 +637,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
@@ -908,7 +908,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -922,7 +922,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
@@ -1081,7 +1081,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #0085AD;
+          color: #006298;
           font-size: 16px;
           font-weight: normal;
           text-indent: 1em;
@@ -1095,7 +1095,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
         }
         .active {
           box-sizing: border-box;
-          border-left: 3px solid #0085AD;
+          border-left: 3px solid #006298;
           font-weight: bold;
         }
         :not(.active) {
