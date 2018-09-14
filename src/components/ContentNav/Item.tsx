@@ -15,6 +15,32 @@ export interface ItemProps extends SubItemProps {
   children?: JSX.Element[] | JSX.Element;
 }
 
+export interface ChevronProps {
+  expanded?: boolean;
+  expand?: (e: React.MouseEvent<SVGElement>, n: string) => void;
+  itemName: string;
+}
+
+export const Chevron = ({ expanded, expand, itemName }: ChevronProps) => {
+  if (expanded) {
+    return (
+      <ChevronUp
+        onClick={e => {
+          if (expand) expand(e, itemName);
+        }}
+      />
+    );
+  }
+
+  return (
+    <ChevronDown
+      onClick={e => {
+        if (expand) expand(e, itemName);
+      }}
+    />
+  );
+};
+
 /**
  * Renders a single item within a content navigator.
  * @export
@@ -27,21 +53,6 @@ export interface ItemProps extends SubItemProps {
  * @param {JSX.Element[]<LeftMouse> | JSX.Element} [children]
  */
 export const Item = ({ name, active, activate, expanded, expand, children }: ItemProps) => {
-  const down = (
-    <ChevronDown
-      onClick={e => {
-        if (expand) expand(e, name);
-      }}
-    />
-  );
-  const up = (
-    <ChevronUp
-      onClick={e => {
-        if (expand) expand(e, name);
-      }}
-    />
-  );
-
   return (
     <li
       key={name}
@@ -53,7 +64,9 @@ export const Item = ({ name, active, activate, expanded, expand, children }: Ite
       <div className={active ? 'active' : ''}>
         <div className="item-content">
           {name}
-          <div className="chevron">{children && (expanded ? up : down)}</div>
+          <div className="chevron">
+            {children && <Chevron expanded={expanded} expand={expand} itemName={name} />}
+          </div>
         </div>
       </div>
       {children}

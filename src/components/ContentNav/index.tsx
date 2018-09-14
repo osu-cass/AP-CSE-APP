@@ -109,7 +109,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   render() {
     return (
       <React.Fragment>
-        <ul role="menu">
+        <ul className="list" role="menu">
           {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => {
             return (
               <Item
