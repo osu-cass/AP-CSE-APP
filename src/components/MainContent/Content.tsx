@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentProps } from './index';
+import { ContentProps } from './Components';
 
 const SplitByNewLine = (text: string) => {
   return text.split('\r\n');

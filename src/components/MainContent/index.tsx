@@ -1,8 +1,7 @@
 import React from 'react';
 import { TaskModel } from './TaskModel';
-import { NonBulletList, NumberList } from './List';
-import { MainHeader, SubHeader } from './Header';
-import { Content } from './ParseContent';
+import { Content } from './Content';
+import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
 export interface Standard {
   stdCode: string;
@@ -53,34 +52,6 @@ export interface MainContentProps {
   target: Target;
 }
 
-export interface ContentProps {
-  children:
-    | void
-    | string
-    | JSX.Element
-    | JSX.Element[]
-    | (JSX.Element | undefined)[]
-    | (JSX.Element | undefined);
-}
-
-export const Section = ({ children }: ContentProps) => (
-  <section>
-    {children}
-    <style jsx>{`
-      padding-left: 0.5em;
-    `}</style>
-  </section>
-);
-
-export const Passage = ({ children }: ContentProps) => (
-  <p>
-    {children}
-    <style jsx>{`
-      padding-left: 0.5em;
-    `}</style>
-  </p>
-);
-
 export const RenderListItems = (items: string[]) =>
   items.map((item, index) => {
     return <li key={index}>{item}</li>;
@@ -116,6 +87,7 @@ const RenderTaskModels = (
         stems={targetStems}
         evidences={evidence}
         scoringRule={scoringRules[index]}
+        index={index + 1}
       />
     );
   });
@@ -142,48 +114,48 @@ export const MainContent = ({ target }: MainContentProps) => {
 
   return (
     <div className="container">
-      <Section>
+      <Section name={'clarification'}>
         <MainHeader>Clarification</MainHeader>
         <Passage>{clarification}</Passage>
       </Section>
 
-      <Section>
+      <Section name={'standards'}>
         <MainHeader>Standards</MainHeader>
         <NonBulletList>{RenderStandards(target.standards)}</NonBulletList>
       </Section>
 
-      <Section>
+      <Section name={'stimuli'}>
         <MainHeader>Stimuli Passage/Text Complexity</MainHeader>
-        <Section>
+        <Section name={'stimuli-passage'}>
           <SubHeader>Passage</SubHeader>
           <Passage>{stimPassage}</Passage>
         </Section>
-        <Section>
+        <Section name={'stimuli-complexity'}>
           <SubHeader>Text Complexity</SubHeader>
           <Passage>{stimTextComplexity}</Passage>
         </Section>
       </Section>
 
-      <Section>
+      <Section name={'accessibility'}>
         <MainHeader>Accessibility Concerns</MainHeader>
         <Passage>{accessibility}</Passage>
       </Section>
 
-      <Section>
+      <Section name={'evidence'}>
         <MainHeader>Evidence Required</MainHeader>
         <NumberList>{RenderListItems(target.evidence)}</NumberList>
       </Section>
 
-      <Section>
+      <Section name={'tasks'}>
         {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics)}
       </Section>
 
-      <Section>
+      <Section name={'dok'}>
         <MainHeader>Depth of Knowledge</MainHeader>
         <Passage>{RenderDOKs(target.DOK)}</Passage>
       </Section>
 
-      <Section>
+      <Section name={'allowableItemTypes'}>
         <MainHeader>Allowable Item Types</MainHeader>
       </Section>
 
