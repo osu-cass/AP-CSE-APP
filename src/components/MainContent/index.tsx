@@ -57,9 +57,39 @@ export const RenderListItems = (items: string[]) =>
     return <li key={index}>{item}</li>;
   });
 
+const ShortenStandardCode = (code: string) => {
+  const parts = code.split('.');
+  if (parts.length !== 7) return code;
+
+  return `${parts[4]}-${parts[6]}`;
+};
+
+const ColorStandardCode = (code: string) => {
+  const found = code.match('^.*[0-9]$');
+  if (found) {
+    return (
+      <span>
+        {code}
+        <style jsx>{`
+          color: red;
+        `}</style>
+      </span>
+    );
+  }
+
+  return code;
+};
+
+const SortStandards = (a: Standard, b: Standard) => {
+  if (ShortenStandardCode(a.stdCode) < ShortenStandardCode(b.stdCode)) return -1;
+  if (ShortenStandardCode(a.stdCode) > b.stdCode) return 1;
+
+  return 0;
+};
+
 const RenderStandards = (standards: Standard[]) =>
   standards.map((standard, index) => {
-    const code = standard.stdCode;
+    const code = ColorStandardCode(ShortenStandardCode(standard.stdCode));
     const desc = Content(standard.stdDesc);
 
     return (
@@ -111,6 +141,8 @@ export const MainContent = ({ target }: MainContentProps) => {
   const stimPassage = Content(target.stimInfo);
   const stimTextComplexity = Content(target.dualText);
   const accessibility = Content(target.accessibility);
+
+  target.standards.sort(SortStandards);
 
   return (
     <div className="container">
