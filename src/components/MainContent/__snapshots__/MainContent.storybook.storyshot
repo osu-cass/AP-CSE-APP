@@ -110,7 +110,16 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           <ul>
             <li>
               <strong>
-                E.G3.C1RL.T3.L.3.4
+                <span>
+                  L-4
+                  <style
+                    jsx={true}
+                  >
+                    
+          color: red;
+        
+                  </style>
+                </span>
               </strong>
                
               <span>
@@ -124,27 +133,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
             </li>
             <li>
               <strong>
-                E.G3.C1RL.T1.RL.3.1
-              </strong>
-               
-              <span>
-                Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers.
-                <br />
-              </span>
-            </li>
-            <li>
-              <strong>
-                E.G3.C1RL.T3.RL.3.4
-              </strong>
-               
-              <span>
-                Determine the meaning of words and phrases as they are used in a text, distinguishing literal from non-literal language.
-                <br />
-              </span>
-            </li>
-            <li>
-              <strong>
-                E.G3.C1RL.T3.L.3.4a
+                L-4a
               </strong>
                
               <span>
@@ -154,7 +143,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
             </li>
             <li>
               <strong>
-                E.G3.C1RL.T3.L.3.4b
+                L-4b
               </strong>
                
               <span>
@@ -168,7 +157,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
             </li>
             <li>
               <strong>
-                E.G3.C1RL.T3.L.3.4c
+                L-4c
               </strong>
                
               <span>
@@ -182,7 +171,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
             </li>
             <li>
               <strong>
-                E.G3.C1RL.T3.L.3.4d
+                L-4d
               </strong>
                
               <span>
@@ -192,7 +181,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
             </li>
             <li>
               <strong>
-                E.G3.C1RL.T3.L.3.5c
+                L-5c
               </strong>
                
               <span>
@@ -201,6 +190,44 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   knew, believed, suspected, heard, wondered
                 </i>
                 ).
+                <br />
+              </span>
+            </li>
+            <li>
+              <strong>
+                <span>
+                  RL-1
+                  <style
+                    jsx={true}
+                  >
+                    
+          color: red;
+        
+                  </style>
+                </span>
+              </strong>
+               
+              <span>
+                Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers.
+                <br />
+              </span>
+            </li>
+            <li>
+              <strong>
+                <span>
+                  RL-4
+                  <style
+                    jsx={true}
+                  >
+                    
+          color: red;
+        
+                  </style>
+                </span>
+              </strong>
+               
+              <span>
+                Determine the meaning of words and phrases as they are used in a text, distinguishing literal from non-literal language.
                 <br />
               </span>
             </li>
