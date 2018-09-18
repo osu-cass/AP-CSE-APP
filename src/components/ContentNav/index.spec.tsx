@@ -1,43 +1,11 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
+import toJson from 'enzyme-to-json';
+
 import { ContentNav } from './index';
 import { Item, Chevron, ItemProps } from './Item';
 import { SubItem } from './SubItem';
-
-const mock: ItemProps[] = [
-  {
-    name: 'Clarifications'
-  },
-  {
-    name: 'Standards'
-  },
-  {
-    name: 'Stimuli/Text Complexity'
-  },
-  {
-    name: 'Accessibility Concerns'
-  },
-  {
-    name: 'Evidence Required'
-  },
-  {
-    name: 'Task Model 1',
-    subItems: [
-      {
-        name: 'Task Descriptions'
-      },
-      {
-        name: 'Target Evidence Statement'
-      },
-      {
-        name: 'Appropriate Stems'
-      }
-    ]
-  },
-  {
-    name: 'Scoring Rules'
-  }
-];
+import { mock } from './__mocks__';
 
 interface TestParams {
   firstItemActive: boolean;
@@ -197,10 +165,10 @@ describe('Chevron', () => {
     const chevronUp = mount(<Chevron expanded={true} itemName={'test name'} />);
 
     chevronDown.simulate('click');
-    expect(chevronDown).toMatchSnapshot();
+    expect(toJson(chevronDown)).toMatchSnapshot();
 
     chevronUp.simulate('click');
-    expect(chevronUp).toMatchSnapshot();
+    expect(toJson(chevronUp)).toMatchSnapshot();
 
     chevronDown.unmount();
     chevronUp.unmount();
