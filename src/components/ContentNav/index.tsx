@@ -137,9 +137,6 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
           })}
         </ul>
         <style jsx>{`
-          * {
-            font-family: 'PT Sans Caption';
-          }
           ul {
             list-style-type: none;
             padding-left: 0;
