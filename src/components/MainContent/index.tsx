@@ -1,6 +1,6 @@
 import React from 'react';
 import { TaskModel } from './TaskModel';
-import { Content } from './Content';
+import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
 export interface Standard {
@@ -52,26 +52,28 @@ export interface MainContentProps {
   target: Target;
 }
 
-export const RenderListItems = (items: string[]) =>
+export const renderListItems = (items: string[]) =>
   items.map((item, index) => {
     return <li key={index}>{item}</li>;
   });
 
-const ShortenStandardCode = (code: string) => {
+const shortenStandardCode = (code: string) => {
   const parts = code.split('.');
   if (parts.length !== 7) return code;
 
   return `${parts[4]}-${parts[6]}`;
 };
 
-const ColorStandardCode = (code: string) => {
+const colorStandardCode = (code: string) => {
   const found = code.match('^.*[0-9]$');
   if (found) {
     return (
       <span>
         {code}
         <style jsx>{`
-          color: red;
+          span {
+            color: red;
+          }
         `}</style>
       </span>
     );
@@ -80,17 +82,17 @@ const ColorStandardCode = (code: string) => {
   return code;
 };
 
-const SortStandards = (a: Standard, b: Standard) => {
-  if (ShortenStandardCode(a.stdCode) < ShortenStandardCode(b.stdCode)) return -1;
-  if (ShortenStandardCode(a.stdCode) > b.stdCode) return 1;
+const sortStandards = (a: Standard, b: Standard) => {
+  if (shortenStandardCode(a.stdCode) < shortenStandardCode(b.stdCode)) return -1;
+  if (shortenStandardCode(a.stdCode) > b.stdCode) return 1;
 
   return 0;
 };
 
 const RenderStandards = (standards: Standard[]) =>
   standards.map((standard, index) => {
-    const code = ColorStandardCode(ShortenStandardCode(standard.stdCode));
-    const desc = Content(standard.stdDesc);
+    const code = colorStandardCode(shortenStandardCode(standard.stdCode));
+    const desc = parseContent(standard.stdDesc);
 
     return (
       <li key={index}>
@@ -137,58 +139,58 @@ const RenderDOKs = (doks: DOK[]) =>
   });
 
 export const MainContent = ({ target }: MainContentProps) => {
-  const clarification = Content(target.clarification);
-  const stimPassage = Content(target.stimInfo);
-  const stimTextComplexity = Content(target.dualText);
-  const accessibility = Content(target.accessibility);
+  const clarification = parseContent(target.clarification);
+  const stimPassage = parseContent(target.stimInfo);
+  const stimTextComplexity = parseContent(target.dualText);
+  const accessibility = parseContent(target.accessibility);
 
-  target.standards.sort(SortStandards);
+  target.standards.sort(sortStandards);
 
   return (
     <div className="container">
-      <Section name={'clarification'}>
-        <MainHeader>Clarification</MainHeader>
+      <Section name="clarification">
+        <MainHeader text="Clarification" />
         <Passage>{clarification}</Passage>
       </Section>
 
-      <Section name={'standards'}>
-        <MainHeader>Standards</MainHeader>
+      <Section name="standards">
+        <MainHeader text="Standards" />
         <NonBulletList>{RenderStandards(target.standards)}</NonBulletList>
       </Section>
 
-      <Section name={'stimuli'}>
-        <MainHeader>Stimuli Passage/Text Complexity</MainHeader>
-        <Section name={'stimuli-passage'}>
-          <SubHeader>Passage</SubHeader>
+      <Section name="stimuli">
+        <MainHeader text="Stimuli Passage/Text Complexity" />
+        <Section name="stimuli-passage">
+          <SubHeader text="Passage" />
           <Passage>{stimPassage}</Passage>
         </Section>
-        <Section name={'stimuli-complexity'}>
-          <SubHeader>Text Complexity</SubHeader>
+        <Section name="stimuli-complexity">
+          <SubHeader text="Text Complexity" />
           <Passage>{stimTextComplexity}</Passage>
         </Section>
       </Section>
 
-      <Section name={'accessibility'}>
-        <MainHeader>Accessibility Concerns</MainHeader>
+      <Section name="accessibility">
+        <MainHeader text="Accessibility Concerns" />
         <Passage>{accessibility}</Passage>
       </Section>
 
-      <Section name={'evidence'}>
-        <MainHeader>Evidence Required</MainHeader>
-        <NumberList>{RenderListItems(target.evidence)}</NumberList>
+      <Section name="evidence">
+        <MainHeader text="Evidence Required" />
+        <NumberList>{renderListItems(target.evidence)}</NumberList>
       </Section>
 
-      <Section name={'tasks'}>
+      <Section name="tasks">
         {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics)}
       </Section>
 
-      <Section name={'dok'}>
-        <MainHeader>Depth of Knowledge</MainHeader>
+      <Section name="dok">
+        <MainHeader text="Depth of Knowledge" />
         <Passage>{RenderDOKs(target.DOK)}</Passage>
       </Section>
 
-      <Section name={'allowableItemTypes'}>
-        <MainHeader>Allowable Item Types</MainHeader>
+      <Section name="allowableItemTypes">
+        <MainHeader text="Allowable Item Types" />
       </Section>
 
       <style jsx>{`

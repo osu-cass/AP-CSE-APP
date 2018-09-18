@@ -1,6 +1,10 @@
 import React from 'react';
 import { Element } from 'react-scroll/modules';
 
+export interface HeaderProps {
+  text: string;
+}
+
 export interface ContentProps {
   children:
     | void
@@ -17,23 +21,23 @@ export interface SectionProps extends ContentProps {
 
 export const Section = ({ name, children }: SectionProps) => (
   <Element name={name}>
-    {children}
+    <div>{children}</div>
     <style jsx>{`
-      padding-left: 0.5em;
+      div {
+        padding-left: 0.5em;
+      }
     `}</style>
   </Element>
 );
 
-export const MainHeader = ({ children }: ContentProps) => (
+export const MainHeader = ({ text }: HeaderProps) => (
   <header>
-    <h1>{children}</h1>
-    <style jsx>{``}</style>
+    <h1>{text}</h1>
   </header>
 );
-export const SubHeader = ({ children }: ContentProps) => (
+export const SubHeader = ({ text }: HeaderProps) => (
   <header>
-    <h2>{children}</h2>
-    <style jsx>{``}</style>
+    <h2>{text}</h2>
   </header>
 );
 
@@ -41,7 +45,7 @@ export const NonBulletList = ({ children }: ContentProps) => (
   <ul>
     {children}
     <style jsx>{`
-      * {
+      ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
@@ -55,7 +59,7 @@ export const NumberList = ({ children }: ContentProps) => (
   <ol>
     {children}
     <style jsx>{`
-      * {
+      ol {
         margin: 0;
         padding-left: 1.5em;
       }
@@ -67,7 +71,9 @@ export const Passage = ({ children }: ContentProps) => (
   <p>
     {children}
     <style jsx>{`
-      padding-left: 0.5em;
+      p {
+        padding-left: 0.5em;
+      }
     `}</style>
   </p>
 );

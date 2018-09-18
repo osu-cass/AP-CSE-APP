@@ -1,6 +1,6 @@
 import React from 'react';
-import { RenderListItems, Stem, Task } from './index';
-import { Content } from './Content';
+import { renderListItems, Stem, Task } from './index';
+import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
 interface TaskModelProps {
@@ -11,69 +11,69 @@ interface TaskModelProps {
   index: number;
 }
 
+const renderStemsBy = (target: string, stems: Stem[]) =>
+  stems.filter(stem => stem.shortStem === target).map((stem, index) => {
+    const desc = parseContent(stem.stemDesc);
+
+    return <li key={index}>{desc}</li>;
+  });
+
+const renderAppropriateStems = (stems: Stem[]) => renderStemsBy('Appropriate Stems', stems);
+
+const renderDualTextOnlyStems = (stems: Stem[]) =>
+  renderStemsBy('Appropriate Stems for Dual-Text Stimuli', stems);
+
+const renderFormatExample = (example: string, sectionName: string) => {
+  let elements: JSX.Element | undefined;
+
+  // If example data has 'NA' or 'Examples', ignore them temporarily.
+  // If API changes how to present none for example, this block should change.
+  if (example === 'NA') return;
+  if (example === 'Examples') return;
+
+  elements = (
+    <Section name={sectionName}>
+      <SubHeader text={'Format Example'} />
+      <Passage>{parseContent(example)}</Passage>
+    </Section>
+  );
+
+  return elements;
+};
+
 export const TaskModel = ({ task, stems, evidences, scoringRule, index }: TaskModelProps) => {
   const taskPrefix = `taskModel${index}`;
-  const desc = Content(task.taskDesc);
-
-  const RenderStemsBy = (target: string, stems: Stem[]) =>
-    stems.filter(stem => stem.shortStem === target).map((stem, index) => {
-      const desc = Content(stem.stemDesc);
-
-      return <li key={index}>{desc}</li>;
-    });
-
-  const RenderAppropriateStems = (stems: Stem[]) => RenderStemsBy('Appropriate Stems', stems);
-
-  const RenderDualTextOnlyStems = (stems: Stem[]) =>
-    RenderStemsBy('Appropriate Stems for Dual-Text Stimuli', stems);
-
-  const RenderFormatExample = (example: string, sectionName: string) => {
-    let elements: JSX.Element | undefined;
-
-    if (example === 'NA') return;
-    if (example === 'Examples') return;
-
-    const parsedExample = Content(example);
-
-    elements = (
-      <Section name={sectionName}>
-        <SubHeader>Format Example</SubHeader>
-        <Passage>{parsedExample}</Passage>
-      </Section>
-    );
-
-    return elements;
-  };
+  const desc = parseContent(task.taskDesc);
 
   return (
     <div>
-      <MainHeader>{task.taskName}</MainHeader>
+      <MainHeader text={task.taskName} />
       <Section name={`${taskPrefix}-desc`}>
-        <SubHeader>Task Description</SubHeader>
+        <SubHeader text={'Task Description'} />
         <Passage>{desc}</Passage>
       </Section>
 
       <Section name={`${taskPrefix}-evidence`}>
-        <SubHeader>Target Evidence Statements</SubHeader>
-        <NumberList>{RenderListItems(evidences)}</NumberList>
+        <SubHeader text={'Target Evidence Statements'} />
+        <NumberList>{renderListItems(evidences)}</NumberList>
       </Section>
 
       <Section name={`${taskPrefix}-appropriateStems`}>
-        <SubHeader>Appropriate Stems</SubHeader>
-        <NonBulletList>{RenderAppropriateStems(stems)}</NonBulletList>
+        <SubHeader text={'Appropriate Stems'} />
+        <NonBulletList>{renderAppropriateStems(stems)}</NonBulletList>
       </Section>
 
       <Section name={`${taskPrefix}-appropriateStemsDualText`}>
-        <SubHeader>Appropriate Stems for Dual-Text Stimuli Only</SubHeader>
-        <NonBulletList>{RenderDualTextOnlyStems(stems)}</NonBulletList>
+        <SubHeader text={'Appropriate Stems for Dual-Text Stimuli Only'} />
+        <NonBulletList>{renderDualTextOnlyStems(stems)}</NonBulletList>
       </Section>
 
       <Section name={`${taskPrefix}-scoringRules`}>
-        <SubHeader>Scoring Rules</SubHeader>
+        <SubHeader text={'Scoring Rules'} />
         <Passage>{scoringRule}</Passage>
       </Section>
 
-      {RenderFormatExample(task.examples, `${taskPrefix}-formatExample`)}
+      {renderFormatExample(task.examples, `${taskPrefix}-formatExample`)}
     </div>
   );
 };
