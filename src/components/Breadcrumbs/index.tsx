@@ -3,6 +3,7 @@ import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
 import { SubjectType, GradeType, ClaimType } from './BreadcrumbModel';
 import { BreadcrumbLink } from './BreadcrumbLink';
+import { Styles, Colors } from '../../constants';
 
 /**
  * Properties for Breadcrumbs
@@ -64,16 +65,21 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
         padding: 0;
       }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: ${Styles.targetContentWidth};
+        font-family: ${Styles.sbSans};
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;
