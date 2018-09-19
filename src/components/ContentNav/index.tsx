@@ -143,7 +143,8 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
           ul {
             list-style-type: none;
             padding-left: 0;
-            border-width: 0 1px 1px 0;
+            margin: 0;
+            border-width: 0 0 0 0;
             border-style: solid;
             width: auto;
           }

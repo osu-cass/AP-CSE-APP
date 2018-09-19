@@ -41,7 +41,7 @@ export const SubItem = ({ name, active, activate }: SubItemProps) => {
           display: flex;
           align-items: center;
           color: ${Colors.sbBlue};
-          font-size: 16px;
+          font-size: ${Styles.fontLarger};
           font-weight: normal;
           text-indent: 1em;
           height: 3em;
