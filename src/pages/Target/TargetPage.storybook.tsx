@@ -31,14 +31,3 @@ const targetPageProps: TargetPageProps = {
 storiesOf('Target Page', module)
   .addDecorator(centered)
   .add('Renders a Target Page', () => <TargetPage />);
-/*
-    <div style={style}>
-      <TitleBar
-        claimTitle={claimOnlyMock.claimTitle}
-        claimDesc={claimOnlyMock.claimDesc}
-        targetTitle={claimOnlyMock.targetTitle}
-        targetDesc={claimOnlyMock.targetDesc}
-        downloadBtnProps={claimOnlyMock.downloadBtnProps}
-      />
-    </div>
-    */

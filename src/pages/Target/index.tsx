@@ -7,12 +7,20 @@ import { SubItem, SubItemProps } from '../../components/ContentNav/SubItem';
 import { Item, ItemProps } from '../../components/ContentNav/Item';
 import { DownloadBtn, DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
 import { Breadcrumbs, BreadcrumbsProps } from '../../components/Breadcrumbs';
-import { blueGradientBgImg } from '../../constants';
+import { Styles, blueGradientBgImg } from '../../constants';
 import { ClaimType, GradeType, SubjectType } from '../../components/Breadcrumbs/BreadcrumbModel';
+import { SbNavLink, SbNavlinkProps } from '../../components/SbNavLink';
+import { HelpCircle } from 'react-feather';
+import { AdditionalMaterials } from '../../components/AdditionalMaterials';
 
 export interface TargetPageProps {
   titleBarProps: TitleBarProps;
 }
+
+export interface AdditionalMaterialsProps {
+  links: SbNavlinkProps[];
+}
+
 const style = {
   ...blueGradientBgImg
 };
@@ -80,31 +88,38 @@ const mock: ItemProps[] = [
   }
 ];
 
-export const ContentFrame = () => {
-  return (
-    <div className="frame">
+export const ContentFrame: React.SFC = (): JSX.Element => (
+  <div className="frame">
+    <div className="content-nav">
       <ContentNav items={mock} />
-      <div className="content-placeholder">
-        <p> nathan sucks </p>
-      </div>
-      <style jsx>{`
-        .content-placeholder {
-          width: 400px;
-          height: 400px;
-          border-bottom: 1px solid black;
-        }
-        .frame {
-          display: flex;
-          justify-content: center;
-        }
-      `}</style>
     </div>
-  );
-};
+    <div className="content-placeholder">
+      <p> nathan sucks </p>
+    </div>
+    <style jsx>{`
+      .content-placeholder {
+        border-left: 1px solid black;
+      }
+      .content-nav {
+        width: 35%;
+      }
+      .frame {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: ${Styles.targetContentWidth};
+        max-width: ${Styles.targetContentWidth};
+        height: 550px;
+        max-height: 550px;
+        border-bottom: 1px solid black;
+      }
+    `}</style>
+  </div>
+);
 
-export const TargetPage = () => {
-  return (
-    <>
+export const TargetPage: React.SFC = (): JSX.Element => (
+  <>
+    <div className="content">
       <div style={style}>
         <Breadcrumbs
           subject={allBreadcrumbDataMock.subject}
@@ -121,12 +136,16 @@ export const TargetPage = () => {
         />
       </div>
       <ContentFrame />
+      <AdditionalMaterials />
       <style jsx>{`
-        * {
-          margin: 0;
-          padding: 0;
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 10px;
         }
       `}</style>
-    </>
-  );
-};
+    </div>
+  </>
+);
