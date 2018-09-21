@@ -5,8 +5,8 @@ import centered from '@storybook/addon-centered';
 import { ContentNav } from '.';
 import { Item, ItemProps } from './Item';
 import { SubItem, SubItemProps } from './SubItem';
-import { mock } from './__mocks__';
+import { itemMock } from './__mocks__';
 
 storiesOf('ContentNav', module)
   .addDecorator(centered)
-  .add('Default', () => <ContentNav items={mock} />);
+  .add('Default', () => <ContentNav items={itemMock} />);

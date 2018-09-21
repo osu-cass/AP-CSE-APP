@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import { ContentNav } from './index';
 import { Item, Chevron, ItemProps } from './Item';
 import { SubItem } from './SubItem';
-import { mock } from './__mocks__';
+import { itemMock } from './__mocks__';
 
 interface TestParams {
   firstItemActive: boolean;
@@ -109,7 +109,7 @@ const itemCollapsed = produceState({
 describe('ContentNav', () => {
   let contentNav: ReactWrapper;
   beforeEach(() => {
-    contentNav = mount(<ContentNav items={mock} />);
+    contentNav = mount(<ContentNav items={itemMock} />);
   });
   afterEach(() => {
     contentNav.unmount();
