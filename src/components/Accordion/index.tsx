@@ -7,6 +7,7 @@ export interface IAccordionProps {
   content?: React.ReactNode;
   titleStyle?: React.CSSProperties;
   expanded?: boolean;
+  indentBody?: boolean;
 }
 
 export interface IAccordionState {
@@ -32,10 +33,14 @@ export class Accordion extends React.Component<IAccordionProps, IAccordionState>
 
   render() {
     const { expanded } = this.state;
-    const { children, content, title, titleStyle } = this.props;
+    const { children, content, title, titleStyle, indentBody } = this.props;
     let contents: React.ReactNode;
     if (expanded) {
-      contents = children || content;
+      contents = indentBody ? (
+        <div style={{ marginLeft: '1em' }}>{children || content}</div>
+      ) : (
+        children || content
+      );
     }
 
     const style = {
@@ -58,6 +63,7 @@ export class Accordion extends React.Component<IAccordionProps, IAccordionState>
           {title}
         </div>
         {contents}
+        <style jsx>{``}</style>
       </div>
     );
   }

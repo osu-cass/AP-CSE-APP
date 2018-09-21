@@ -11,6 +11,11 @@ storiesOf('Accordion', module)
       This is the body
     </Accordion>
   ))
+  .add('Indented body', () => (
+    <Accordion title="This is the title" indentBody>
+      This body is indented
+    </Accordion>
+  ))
   .add('Styled title', () => (
     <Accordion title="This is the title" titleStyle={{ color: 'red' }}>
       This is the body
