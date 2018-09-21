@@ -5,7 +5,8 @@ import { faAngleRight, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 export interface IAccordionProps {
   title: string;
   content?: React.ReactNode;
-  titleStyle?: React.CSSProperties;
+  titleClass?: string;
+  containerClass?: string;
   expanded?: boolean;
   indentBody?: boolean;
 }
@@ -33,7 +34,7 @@ export class Accordion extends React.Component<IAccordionProps, IAccordionState>
 
   render() {
     const { expanded } = this.state;
-    const { children, content, title, titleStyle, indentBody } = this.props;
+    const { children, content, title, titleClass, containerClass, indentBody } = this.props;
     let contents: React.ReactNode;
     if (expanded) {
       contents = indentBody ? (
@@ -43,27 +44,30 @@ export class Accordion extends React.Component<IAccordionProps, IAccordionState>
       );
     }
 
-    const style = {
-      cursor: 'pointer',
-      ...titleStyle
-    };
-
     return (
-      <div>
+      <div className={containerClass}>
         <div
-          style={style}
+          className={`title ${titleClass}`}
           onClick={this.toggleExpanded}
           role="button"
           tabIndex={0}
           onKeyPress={this.handleEnterPress}
         >
-          <span style={{ display: 'inline-block', width: '1em' }}>
+          <span className="expanded-icon">
             <FontAwesomeIcon icon={expanded ? faAngleDown : faAngleRight} />
           </span>
           {title}
         </div>
         {contents}
-        <style jsx>{``}</style>
+        <style jsx>{`
+          .expanded-icon {
+            display: inline-block;
+            width: 1em;
+          }
+          .title {
+            cursor: pointer;
+          }
+        `}</style>
       </div>
     );
   }
