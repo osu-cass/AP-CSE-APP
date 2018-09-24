@@ -63,6 +63,7 @@ export class Accordion extends React.Component<IAccordionProps, IAccordionState>
           .expanded-icon {
             display: inline-block;
             width: 1em;
+            color: gray;
           }
           .title {
             cursor: pointer;
