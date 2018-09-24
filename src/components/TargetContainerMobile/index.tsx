@@ -19,6 +19,48 @@ export const TargetContainerMobile: React.SFC<ITarget> = (props: ITarget) => {
     </Accordion>
   ));
 
+  const taskModelsJsx = props.taskModels.map((task, idx) => {
+    let desc: ReactNode;
+    let stim: ReactNode;
+    let examples: ReactNode;
+
+    if (task.taskDesc && task.taskDesc !== 'NA') {
+      desc = (
+        <Accordion title="Task Description" indentBody titleClass="accordion-content">
+          <div className="accordion-content">{task.taskDesc}</div>
+        </Accordion>
+      );
+    }
+    if (task.stimulus && task.stimulus !== 'NA') {
+      stim = (
+        <Accordion title="Stimulus" indentBody titleClass="accordion-content">
+          <div className="accordion-content">{task.stimulus}</div>
+        </Accordion>
+      );
+    }
+    if (task.examples && task.examples !== 'NA') {
+      examples = (
+        <Accordion title="Examples" indentBody titleClass="accordion-content">
+          <div className="accordion-content">{task.examples}</div>
+        </Accordion>
+      );
+    }
+
+    return (
+      <Accordion
+        key={idx}
+        title={task.taskName}
+        titleClass="accordion-title-l1"
+        containerClass="accordion-container-l1"
+        indentBody
+      >
+        {desc}
+        {stim}
+        {examples}
+      </Accordion>
+    );
+  });
+
   return (
     <div>
       <Accordion
@@ -43,6 +85,7 @@ export const TargetContainerMobile: React.SFC<ITarget> = (props: ITarget) => {
           {listify(props.evidence, true)}
         </Accordion>
       </Accordion>
+      {taskModelsJsx}
 
       <style jsx global>{`
         .accordion-title-l1 {
