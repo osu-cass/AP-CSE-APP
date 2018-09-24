@@ -17,9 +17,30 @@ storiesOf('Accordion', module)
     </Accordion>
   ))
   .add('Styled title', () => (
-    <Accordion title="This is the title" titleStyle={{ color: 'red' }}>
-      This is the body
-    </Accordion>
+    <div>
+      <Accordion title="This is the title" titleClass="accordion-red-title">
+        This is the body
+      </Accordion>
+      <style jsx global>{`
+        .accordion-red-title {
+          color: red;
+        }
+      `}</style>
+    </div>
+  ))
+  .add('Styled container', () => (
+    <div>
+      <Accordion title="This is the title" containerClass="accordion-border">
+        This is the body
+      </Accordion>
+      <style jsx global>{`
+        .accordion-border {
+          border: 1px solid gray;
+          border-radius: 10px;
+          padding: 10px;
+        }
+      `}</style>
+    </div>
   ))
   .add('JSX in body', () => (
     <Accordion title="This is the title">
