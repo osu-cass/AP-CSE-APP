@@ -4,6 +4,8 @@ import { mockData } from './__mocks__';
 import { TargetContainerMobile } from '.';
 import { MobileDecorator } from '../MobileDecorator';
 
-storiesOf('Target Container (mobile)', module)
-  .addDecorator(MobileDecorator)
-  .add('SearchBar', () => <TargetContainerMobile {...mockData.target[0]} />);
+const story = storiesOf('Target Container (mobile)', module).addDecorator(MobileDecorator);
+
+mockData.target.forEach((t, i) =>
+  story.add(`Target ${i + 1}`, () => <TargetContainerMobile {...t} />)
+);
