@@ -72,7 +72,7 @@ const colorStandardCode = (code: string) => {
         {code}
         <style jsx>{`
           span {
-            color: red;
+            color: #d00;
           }
         `}</style>
       </span>

@@ -114,7 +114,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     >
                       
           span {
-            color: red;
+            color: #d00;
           }
         
                     </style>
@@ -201,7 +201,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     >
                       
           span {
-            color: red;
+            color: #d00;
           }
         
                     </style>
@@ -222,7 +222,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     >
                       
           span {
-            color: red;
+            color: #d00;
           }
         
                     </style>
