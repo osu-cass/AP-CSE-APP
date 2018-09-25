@@ -5,5 +5,5 @@ reports
 settings.json
 
 # IntelliJ Idea	
-.idea/	
+.idea/
 *.iml
