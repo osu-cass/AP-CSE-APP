@@ -21,7 +21,7 @@ export const NewLine = ({ children }: ContentProps) => (
 
 const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
 
-const parseSingle = (text: string, underlined: boolean) => {
+const parseSingleAsterisk = (text: string, underlined: boolean) => {
   const parts = text.split('*');
 
   return parts.map((part, index) => {
@@ -36,11 +36,11 @@ const parseSingle = (text: string, underlined: boolean) => {
   });
 };
 
-const parseDoubleAsterisk = (text: string, underlined: boolean) => {
+const parseDoubleAsterisks = (text: string, underlined: boolean) => {
   const parts = text.split('**');
 
   return parts.map((part, index) => {
-    const parsedLine = parseSingle(part, underlined);
+    const parsedLine = parseSingleAsterisk(part, underlined);
     if (index % 2 === 1) {
       return <strong key={index}>{parsedLine}</strong>;
     }
@@ -60,6 +60,6 @@ export const parseContent = (text: string) => {
   }
 
   return lines.map((line, index) => {
-    return <NewLine key={index}>{parseDoubleAsterisk(line, underlined)}</NewLine>;
+    return <NewLine key={index}>{parseDoubleAsterisks(line, underlined)}</NewLine>;
   });
 };
