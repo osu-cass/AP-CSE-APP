@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scroll from 'react-scroll';
 import { Colors, Styles } from '../../constants';
 import { SbNavLink } from '../SbNavLink';
 import { Item, ItemProps } from './Item';
@@ -78,6 +79,13 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   };
 
   itemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
+    Scroll.scroller.scrollTo(name.toLowerCase(), {
+      duration: 150,
+      delay: 0,
+      smooth: true,
+      containerId: 'content-frame',
+      offset: -225
+    });
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
       let newSubItems: SubItemProps[] | undefined;

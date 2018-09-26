@@ -22,6 +22,8 @@ export interface SubItemProps {
  * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
  */
 export const SubItem = ({ name, active, activate }: SubItemProps) => {
+  const subName = name.split('-')[1];
+
   return (
     <li
       className={`${active ? 'active' : ''}`}
@@ -30,7 +32,7 @@ export const SubItem = ({ name, active, activate }: SubItemProps) => {
       }}
       role="menuitem"
     >
-      <p>{name}</p>
+      <p>{subName}</p>
       <style jsx>{`
         * {
           font-family: ${Styles.sbSans};
