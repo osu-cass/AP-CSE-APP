@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { NavBar } from '../../components/NavBar';
 import { TitleBar, TitleBarProps } from '../../components/TitleBar';
@@ -12,6 +12,11 @@ import { ClaimType, GradeType, SubjectType } from '../../components/Breadcrumbs/
 import { SbNavLink, SbNavlinkProps } from '../../components/SbNavLink';
 import { HelpCircle } from 'react-feather';
 import { AdditionalMaterials } from '../../components/AdditionalMaterials';
+import { MainContent, MainContentProps, Target} from '../../components/MainContent';
+// import { targetMock } from '../../components/MainContent/__mocks__/target';
+import { ELAG3TargetMock } from '../../../mock_api_data/E.G3.PT.ts';
+// const targetMock = JSON.parse('../../../mock_api_data/E.G3.PT.json');
+
 
 export interface TargetPageProps {
   titleBarProps: TitleBarProps;
@@ -55,7 +60,7 @@ const subMock1: SubItemProps = { name: 'sdgasdfasdf' };
 const subMock2: SubItemProps = { name: 'helasd' };
 const mock: ItemProps[] = [
   {
-    name: 'Clarifications'
+    name: 'Clarification'
   },
   {
     name: 'Standards'
@@ -88,20 +93,109 @@ const mock: ItemProps[] = [
   }
 ];
 
-export const ContentFrame: React.SFC = (): JSX.Element => (
-  <div className="frame">
-    <div className="content-nav">
-      <ContentNav items={mock} />
-    </div>
-    <div className="content-placeholder">
-      <p> nathan sucks </p>
-    </div>
-    <style jsx>{`
-      .content-placeholder {
+const targetLayout = {
+  items: [
+    {
+      name: 'Clarification',
+      key: 'clarification',
+    },
+    {
+      name: 'Standards',
+      key: 'standards',
+    },
+    {
+      name: 'Stimuli/Text Complexity',
+      key: 'stimInfo',
+    },
+    {
+      name: 'Accessibility Concerns',
+      key: 'accessibility',
+    },
+    {
+      name: 'Evidence Required',
+      key: 'evidence',
+    },
+    {
+      name: 'Tasks',
+      key: 'taskModels',
+    },
+    {
+      name: 'Depth of Knowledge',
+      key: 'DOK',
+    }
+  ]
+};
+
+export interface ContentFrameProps {
+  targetJson: JSON;
+}
+
+export interface ContentFrameState {
+  contentJson: Target;
+  navJson: ItemProps[];
+}
+
+export class ContentFrame extends Component<ContentFrameProps, ContentFrameState> {
+  constructor(props: ContentFrameProps) {
+    super(props);
+    this.state = {
+      contentJson: this.parseJsonToContent(),
+      navJson: this.parseJsonToNav()
+    };
+  }
+
+  parseJsonToContent(): Target {
+
+   return this.props.targetJson['target'][0];
+  }
+
+  parseJsonToNav(): ItemProps[] {
+    const items: ItemProps[] = [];
+    for( const a in targetLayout.items) {
+     const name = targetLayout.items[a]['name'];
+     const key = targetLayout.items[a]['key'];
+      if (key == 'taskModels') {
+        this.props.targetJson['target'][0]['taskModels'].forEach((tm) => {
+          const item: ItemProps = {name: tm['taskName']};
+          item.subItems = [];
+          for( const t in tm ) {
+            if( t != 'taskName') {
+              item.subItems.push({name: t});
+            }
+          }
+        items.push(item);
+        });
+      } else {
+        items.push({name});
+      }
+    }
+
+    return items;
+  }
+
+  render() {
+    console.log(ELAG3TargetMock.target[0]);
+    return(
+      <div className="frame">
+      <div className="content-nav">
+      <ContentNav items={this.state.navJson} />
+      </div>
+      <div className="content-frame" id="content-frame">
+      <MainContent target={this.state.contentJson}/>
+      </div>
+      <style jsx>{`
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+      .content-frame {
+        overflow-y: scroll;
         border-left: 1px solid black;
+        width: 75%;
       }
       .content-nav {
-        width: 35%;
+        width: 25%;
       }
       .frame {
         display: flex;
@@ -114,8 +208,10 @@ export const ContentFrame: React.SFC = (): JSX.Element => (
         border-bottom: 1px solid black;
       }
     `}</style>
-  </div>
-);
+      </div>
+    );
+  }
+}
 
 export const TargetPage: React.SFC = (): JSX.Element => (
   <>
@@ -135,7 +231,7 @@ export const TargetPage: React.SFC = (): JSX.Element => (
           downloadBtnProps={targetPageProps.titleBarProps.downloadBtnProps}
         />
       </div>
-      <ContentFrame />
+      <ContentFrame targetJson={ELAG3TargetMock}/>
       <AdditionalMaterials />
       <style jsx>{`
         .content {
