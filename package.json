@@ -71,7 +71,6 @@
   },
   "dependencies": {
     "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
-    "@storybook/addon-viewport": "^3.4.11",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-feather": "^1.1.1",
@@ -98,6 +97,7 @@
     "@storybook/addon-centered": "^3.4.10",
     "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-storyshots": "^4.0.0-alpha.18",
+    "@storybook/addon-viewport": "^3.4.11",
     "@storybook/react": "^4.0.0-alpha.20",
     "@types/enzyme": "^3.1.14",
     "@types/faker": "^4.1.3",
