@@ -1,11 +1,11 @@
 import React from 'react';
-import { Colors } from '../../constants';
+import { Colors, Styles } from '../../constants';
 import { SbNavLink } from '../SbNavLink';
 import { Home, Search, Eye, Grid } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 export interface MenuItemProps {
   name: string;
-  icon: JSX.Element;
 }
 
 export interface IconProps {
@@ -13,42 +13,63 @@ export interface IconProps {
   color: string;
 }
 
-export const MenuItem = ({ icon, name }: MenuItemProps): JSX.Element => (
+export const IconStyle: IconProps = {
+  size: 35,
+  color: Colors.sbGray
+};
+
+export const MenuItem: React.SFC<MenuItemProps> = props => (
   <div>
-    {icon}
-    <p>{name}</p>
+    {props.children}
+    <p>{props.name}</p>
     <style jsx>{`
       p {
         color: ${Colors.sbGray};
-        float: right;
-        margin: 0 10px;
+        margin-left: 5px;
       }
       div {
         align-items: center;
         display: flex;
-        float: left;
         justify-content: flex-end;
+        margin-right: ${Styles.paddingUnit};
+      }
+
+      @media (max-width: 950px) {
+        p {
+          display: none;
+        }
       }
     `}</style>
   </div>
 );
 
 export const MainMenu = (): JSX.Element => {
-  const IconAttributes: IconProps = {
-    size: 40,
-    color: Colors.sbGray
+  const noUnderline: React.CSSProperties = {
+    textDecoration: 'none'
   };
-  const home = <MenuItem icon={<Home {...IconAttributes} />} name="Home" />;
-  const search = <MenuItem icon={<Search {...IconAttributes} />} name="Search" />;
-  const explore = <MenuItem icon={<Eye {...IconAttributes} />} name="Explore" />;
-  const apps = <MenuItem icon={<Grid {...IconAttributes} />} name="Apps" />;
 
   return (
     <div className="main-menu">
-      <SbNavLink url={'placeholder'} content={home} />
-      <SbNavLink url={'placeholder'} content={search} />
-      <SbNavLink url={'placeholder'} content={explore} />
-      <SbNavLink url={'placeholder'} content={apps} />
+      <Link to="placeholder" style={noUnderline}>
+        <MenuItem name="Home">
+          <Home {...IconStyle} />
+        </MenuItem>
+      </Link>
+      <Link to="placeholder" style={noUnderline}>
+        <MenuItem name="Search">
+          <Search {...IconStyle} />
+        </MenuItem>
+      </Link>
+      <Link to="placeholder" style={noUnderline}>
+        <MenuItem name="Explore">
+          <Eye {...IconStyle} />
+        </MenuItem>
+      </Link>
+      <Link to="placeholder" style={noUnderline}>
+        <MenuItem name="Apps">
+          <Grid {...IconStyle} />
+        </MenuItem>
+      </Link>
       <style jsx>{`
         .main-menu {
           display: flex;

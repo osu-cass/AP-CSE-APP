@@ -1,12 +1,14 @@
 import React from 'react';
 import { Colors, Styles } from '../../constants';
-import { MainMenu, IconProps } from './MainMenu';
+import { MainMenu, IconProps, IconStyle } from './MainMenu';
 import { SbNavLink, SbNavlinkProps } from '../SbNavLink';
 import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';
+import MediaQuery from 'react-responsive';
+import { Link } from 'react-router-dom';
 
 /*tslint:disable: no-require-imports no-var-requires */
-const sbLogo: string = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
+const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
 
 export interface NavBarProps {
   links?: SbNavlinkProps[];
@@ -14,56 +16,75 @@ export interface NavBarProps {
   mainContentId: string;
 }
 
-export const Logo = (): JSX.Element => (
-  <div className="nav-titleGroup-item">
-    <a
-      rel="noopener noreferrer"
-      target="_blank"
-      href="http://www.smarterbalanced.org/"
-      title="Smarter Balanced Home"
-    >
-      <img alt="Smarter Balanced Logo" src={sbLogo} />
-    </a>
+export const HeaderLogo: React.SFC = () => (
+  <a href={'https://www.smarterbalanced.org/'}>
+    <img alt="Smarter Balanced logo" src={sbLogo} className="sb-logo" />
     <style jsx>{`
-      .nav-titleGroup {
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        flex-grow: 1;
+      .sb-logo {
+        width: 128px;
+        padding: 3px ${Styles.paddingUnit} 3px 3px;
       }
-      img {
-        width: 183px;
-        padding-right: ${Styles.paddingUnit};
+
+      @media (max-width: 500px) {
+        .sb-logo {
+          width: 100px;
+        }
       }
     `}</style>
-  </div>
+  </a>
 );
 
-export const NavBar = (props: NavBarProps): JSX.Element => {
-  const IconAttributes: IconProps = {
-    size: 40,
-    color: Colors.sbGray
+// (
+//   <div className="nav-titleGroup-item">
+//     <a
+//       rel="noopener noreferrer"
+//       target="_blank"
+//       href="http://www.smarterbalanced.org/"
+//       title="Smarter Balanced Home"
+//     >
+//       <img alt="Smarter Balanced Logo" src={sbLogo} />
+//     </a>
+//     <style jsx>{`
+//       .nav-titleGroup {
+//         display: flex;
+//         flex-flow: row;
+//         align-items: center;
+//         flex-grow: 1;
+//       }
+//       img {
+//         width: 183px;
+//         padding-right: ${Styles.paddingUnit};
+//       }
+//     `}</style>
+//   </div>
+// );
+
+export const NavBar: React.SFC<NavBarProps> = props => {
+  const noUnderline: React.CSSProperties = {
+    textDecoration: 'none'
   };
-  const help = <HelpCircle {...IconAttributes} />;
-  const menu = <Menu {...IconAttributes} />;
 
   return (
     <header>
       <nav className="nav-container">
         <div className="left-content">
-          <Logo />
-          <MainMenu />
+          <HeaderLogo />
+          <MediaQuery minWidth={715}>
+            <MainMenu />
+          </MediaQuery>
         </div>
         <div className="right-content">
-          <span>
+          <span className="right-spacing">
             <SearchBar />
           </span>
-          <span>
-            <SbNavLink url={'placeholder'} content={help} />
+          <span className="right-spacing">
+            <Link to="placeholder" style={noUnderline}>
+              <HelpCircle {...IconStyle} />
+            </Link>
           </span>
-          <span>
-            <SbNavLink url={'placeholder'} content={menu} />
-          </span>
+          <Link to="placeholder" style={noUnderline}>
+            <Menu {...IconStyle} />
+          </Link>
         </div>
       </nav>
       <style jsx>{`
@@ -83,16 +104,14 @@ export const NavBar = (props: NavBarProps): JSX.Element => {
 
         .nav-container {
           background-color: ${Colors.sbGrayLighter};
-          border-color: ${Colors.sbGrayLighter};
-          border-radius: 0px;
           box-shadow: ${Styles.shadow};
           display: flex;
           justify-content: space-between;
           padding: ${Styles.paddingUnit} / 2;
         }
 
-        .right-content * {
-          margin: 0 0.5em;
+        .right-spacing {
+          margin-right: ${Styles.paddingUnit};
         }
 
         .left-content,
