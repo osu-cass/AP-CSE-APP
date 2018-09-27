@@ -5,9 +5,11 @@ import { withConsole } from '@storybook/addon-console';
 
 import 'typeface-pt-serif/index.css'
 import 'typeface-pt-sans-caption/index.css'
+import { StyleDecorator } from './StyleDecorator';
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 addDecorator(checkA11y)
+addDecorator(StyleDecorator);
 
 function loadStories() {
   const req = require.context('../src', true, /\.storybook\.tsx$/)
