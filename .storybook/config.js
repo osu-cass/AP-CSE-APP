@@ -3,16 +3,16 @@ import { addDecorator } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withConsole } from '@storybook/addon-console';
 
-import 'typeface-pt-serif/index.css'
-import 'typeface-pt-sans-caption/index.css'
+import 'typeface-pt-serif/index.css';
+import 'typeface-pt-sans-caption/index.css';
 
-addDecorator((storyFn, context) => withConsole()(storyFn)(context))
-addDecorator(checkA11y)
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+addDecorator(checkA11y);
 
 function loadStories() {
-  const req = require.context('../src', true, /\.storybook\.tsx$/)
+  const req = require.context('../src', true, /\.storybook?(.+)\.tsx$/);
 
-  req.keys().forEach(file => req(file))
+  req.keys().forEach(file => req(file));
   // You can require as many stories as you need.
 }
 
