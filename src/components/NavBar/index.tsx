@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
 
 export interface NavBarProps {
-  links?: SbNavlinkProps[];
   siteName: string;
   mainContentId: string;
 }
@@ -34,31 +33,6 @@ export const HeaderLogo: React.SFC = () => (
   </a>
 );
 
-// (
-//   <div className="nav-titleGroup-item">
-//     <a
-//       rel="noopener noreferrer"
-//       target="_blank"
-//       href="http://www.smarterbalanced.org/"
-//       title="Smarter Balanced Home"
-//     >
-//       <img alt="Smarter Balanced Logo" src={sbLogo} />
-//     </a>
-//     <style jsx>{`
-//       .nav-titleGroup {
-//         display: flex;
-//         flex-flow: row;
-//         align-items: center;
-//         flex-grow: 1;
-//       }
-//       img {
-//         width: 183px;
-//         padding-right: ${Styles.paddingUnit};
-//       }
-//     `}</style>
-//   </div>
-// );
-
 export const NavBar: React.SFC<NavBarProps> = props => {
   const noUnderline: React.CSSProperties = {
     textDecoration: 'none'
@@ -74,7 +48,7 @@ export const NavBar: React.SFC<NavBarProps> = props => {
           </MediaQuery>
         </div>
         <div className="right-content">
-          <span className="right-spacing">
+          <span className="right-spacing grow-search">
             <SearchBar />
           </span>
           <span className="right-spacing">
@@ -82,9 +56,11 @@ export const NavBar: React.SFC<NavBarProps> = props => {
               <HelpCircle {...IconStyle} />
             </Link>
           </span>
-          <Link to="placeholder" style={noUnderline}>
-            <Menu {...IconStyle} />
-          </Link>
+          <MediaQuery minWidth={715}>
+            <Link to="placeholder" style={noUnderline}>
+              <Menu {...IconStyle} />
+            </Link>
+          </MediaQuery>
         </div>
       </nav>
       <style jsx>{`
@@ -106,8 +82,8 @@ export const NavBar: React.SFC<NavBarProps> = props => {
           background-color: ${Colors.sbGrayLighter};
           box-shadow: ${Styles.shadow};
           display: flex;
-          justify-content: space-between;
           padding: ${Styles.paddingUnit} / 2;
+          width: 100%;
         }
 
         .right-spacing {
@@ -118,8 +94,19 @@ export const NavBar: React.SFC<NavBarProps> = props => {
         .right-content {
           align-items: center;
           display: flex;
-          flex-flow: row;
-          justify-content: space-between;
+          justify-content: flex-end;
+        }
+        .right-content {
+          flex-grow: 1;
+        }
+
+        @media (max-width: 500px) {
+          .grow-search {
+            flex-grow: 1;
+          }
+          .right-spacing {
+            margin-right: 10px;
+          }
         }
       `}</style>
     </header>
