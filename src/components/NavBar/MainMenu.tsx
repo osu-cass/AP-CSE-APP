@@ -18,6 +18,11 @@ export const IconStyle: IconProps = {
   color: Colors.sbGray
 };
 
+export const MobileIconStyle: IconProps = {
+  size: 25,
+  color: Colors.sbGray
+};
+
 export const MenuItem: React.SFC<MenuItemProps> = props => (
   <div>
     {props.children}
