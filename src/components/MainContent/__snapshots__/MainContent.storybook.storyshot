@@ -36,9 +36,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       <div
         className="container"
       >
-        <div
-          name="clarification"
-        >
+        <div>
           <div>
             <header>
               <h1>
@@ -95,9 +93,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div
-          name="standards"
-        >
+        <div>
           <div>
             <header>
               <h1>
@@ -114,7 +110,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     >
                       
           span {
-            color: red;
+            color: #e00;
           }
         
                     </style>
@@ -201,7 +197,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     >
                       
           span {
-            color: red;
+            color: #e00;
           }
         
                     </style>
@@ -222,7 +218,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     >
                       
           span {
-            color: red;
+            color: #e00;
           }
         
                     </style>
@@ -258,9 +254,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div
-          name="stimuli"
-        >
+        <div>
           <div>
             <header>
               <h1>
@@ -310,9 +304,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
               </style>
             </div>
-            <div
-              name="stimuli-complexity"
-            >
+            <div>
               <div>
                 <header>
                   <h2>
@@ -372,9 +364,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div
-          name="accessibility"
-        >
+        <div>
           <div>
             <header>
               <h1>
@@ -407,9 +397,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div
-          name="evidence"
-        >
+        <div>
           <div>
             <header>
               <h1>
@@ -452,617 +440,206 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           </style>
         </div>
         <div
-          name="tasks"
+          name="Task Model 1"
         >
           <div>
-            <div>
-              <header>
-                <h1>
-                  Task Model 1
-                </h1>
-              </header>
-              <div
-                name="taskModel1-desc"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Task Description
-                    </h2>
-                  </header>
-                  <p>
-                    <span>
-                      The 
-                      <strong>
-                        item stem
-                      </strong>
-                       will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Formatting note:
-                      </strong>
-                       in excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      The 
-                      <strong>
-                        answer choices
-                      </strong>
-                       will present four options of similar structure using vocabulary on or below grade level. The correct answer will be a clearly discernible and correct meaning of the word or phrase. The 
-                      <strong>
-                        distractors
-                      </strong>
-                       will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Distractors
-                      </strong>
-                       will reflect common student errors. 
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Rationales
-                      </strong>
-                       should state the justification for the type of plausible distractor.
-                      <br />
-                    </span>
-                    <style
-                      jsx={true}
-                    >
-                      
+            <header>
+              <h1>
+                Task Model 1
+              </h1>
+            </header>
+            <div
+              name="Task Model 1-Task Description"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Task Description
+                  </h2>
+                </header>
+                <p>
+                  <span>
+                    The 
+                    <strong>
+                      item stem
+                    </strong>
+                     will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Formatting note:
+                    </strong>
+                     in excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    The 
+                    <strong>
+                      answer choices
+                    </strong>
+                     will present four options of similar structure using vocabulary on or below grade level. The correct answer will be a clearly discernible and correct meaning of the word or phrase. The 
+                    <strong>
+                      distractors
+                    </strong>
+                     will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Distractors
+                    </strong>
+                     will reflect common student errors. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Rationales
+                    </strong>
+                     should state the justification for the type of plausible distractor.
+                    <br />
+                  </span>
+                  <style
+                    jsx={true}
+                  >
+                    
       p {
         padding-left: 0.5em;
       }
     
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
       div {
         padding-left: 0.5em;
       }
     
-                </style>
-              </div>
-              <div
-                name="taskModel1-evidence"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Target Evidence Statements
-                    </h2>
-                  </header>
-                  <ol>
-                    <li>
-                      The student will determine the meaning of a word or phrase based on its context in a literary text.
-                    </li>
-                    <li>
-                      The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                    </li>
-                    <li>
-                      The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <li>
-                      The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
+              </style>
+            </div>
+            <div
+              name="Task Model 1-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li>
+                    The student will determine the meaning of a word or phrase based on its context in a literary text.
+                  </li>
+                  <li>
+                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+                  </li>
+                  <li>
+                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <li>
+                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
       ol {
         margin: 0;
         padding-left: 1.5em;
       }
     
-                    </style>
-                  </ol>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
+                  </style>
+                </ol>
               </div>
-              <div
-                name="taskModel1-appropriateStems"
+              <style
+                jsx={true}
               >
-                <div>
-                  <header>
-                    <h2>
-                      Appropriate Stems
-                    </h2>
-                  </header>
-                  <ul>
-                    <li>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What is the meaning of the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”]?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What does the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] 
-                        <strong>
-                          most likely
-                        </strong>
-                         mean?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Which [word(s)/phrase] 
-                        <strong>
-                          best
-                        </strong>
-                         state(s) the meaning of [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”]?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What does the use of the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] show the reader?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        The [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] has more than one meaning. What does the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] 
-                        <strong>
-                          most likely
-                        </strong>
-                         tell the reader about [provide an idea/event/character/story element/etc.] in the passage?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                         A(n) [antonym/synonym] is a word that means the [opposite/same or nearly the same] of another word. What is the [antonym/synonym] of [
-                        <u>
-                          targeted word
-                        </u>
-                        ]?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                         [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                         Pick the [word/phrase] that 
-                        <strong>
-                          best
-                        </strong>
-                         defines [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] as it is used in the sentence(s).
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                         [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                         What does the author tell the reader with the use of the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”]?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the dictionary entry.
-                        <br />
-                      </span>
-                      <span>
-                        [
-                        <u>
-                          (part of speech)
-                        </u>
-                         
-                        <strong>
-                          1.
-                        </strong>
-                         [provide definition]; 
-                        <strong>
-                          2.
-                        </strong>
-                         [provide definition]]
-                        <br />
-                      </span>
-                      <span>
-                         Which [word/phrase] 
-                        <strong>
-                          best
-                        </strong>
-                         matches the dictionary entry?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                         [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What does the [root/affix] in the word [
-                        <u>
-                          targeted word
-                        </u>
-                        ] mean?
-                        <br />
-                      </span>
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </ul>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+                
       div {
         padding-left: 0.5em;
       }
     
-                </style>
-              </div>
-              <div
-                name="taskModel1-appropriateStemsDualText"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Appropriate Stems for Dual-Text Stimuli Only
-                    </h2>
-                  </header>
-                  <ul>
-                    <li>
-                      <span>
-                        • Read the [sentence(s)/line(s)] from [title text #2].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Which sentence from [title text #1] has a [word/phrase] that means the same thing as [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] from [text #2]?
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • First, read the [sentence(s)/line(s)] from [title text #1].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Now read the [sentence(s)/line(s)] from [title text #2].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Which [word/phrase] 
-                        <strong>
-                          best
-                        </strong>
-                         matches the meaning of [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase” text #1] and [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase” text #2] as it is used in 
-                        <strong>
-                          both
-                        </strong>
-                         passages?  
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <strong>
-                          NOTE:
-                        </strong>
-                         This stem is only used with two literary passages.
-                        <br />
-                      </span>
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </ul>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
-              <div
-                name="taskModel1-scoringRules"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Scoring Rules
-                    </h2>
-                  </header>
-                  <p>
-                    Correct response: 1 point; Incorrect response: 0 points
-                    <style
-                      jsx={true}
-                    >
-                      
-      p {
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
+              </style>
             </div>
-            <div>
-              <header>
-                <h1>
-                  Task Model 2
-                </h1>
-              </header>
-              <div
-                name="taskModel2-desc"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Task Description
-                    </h2>
-                  </header>
-                  <p>
+            <div
+              name="Task Model 1-Appropriate Stems"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems
+                  </h2>
+                </header>
+                <ul>
+                  <li>
                     <span>
-                      The 
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What is the meaning of the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”]?
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What does the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] 
                       <strong>
-                        item stem
+                        most likely
                       </strong>
-                       will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.  The item stem will prompt the student to choose two answers.   
+                       mean?
                       <br />
                     </span>
                     <span>
@@ -1070,11 +647,27 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                       <br />
                     </span>
                     <span>
-                      
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Which [word(s)/phrase] 
                       <strong>
-                        Formatting note:
+                        best
                       </strong>
-                       In excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+                       state(s) the meaning of [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”]?
                       <br />
                     </span>
                     <span>
@@ -1082,15 +675,107 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                       <br />
                     </span>
                     <span>
-                      The 
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What does the use of the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] show the reader?
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      The [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] has more than one meaning. What does the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] 
                       <strong>
-                        answer choices
+                        most likely
                       </strong>
-                       will present five or six options of similar structure using vocabulary on or below grade level. Of the options, there will be two correct answers. The correct answers will be a clearly discernible and correct meaning of the word or phrase. The 
+                       tell the reader about [provide an idea/event/character/story element/etc.] in the passage?
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                       A(n) [antonym/synonym] is a word that means the [opposite/same or nearly the same] of another word. What is the [antonym/synonym] of [
+                      <u>
+                        targeted word
+                      </u>
+                      ]?
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                       [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                       Pick the [word/phrase] that 
                       <strong>
-                        distractors
+                        best
                       </strong>
-                       will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
+                       defines [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] as it is used in the sentence(s).
                       <br />
                     </span>
                     <span>
@@ -1098,254 +783,86 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                       <br />
                     </span>
                     <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                       [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                       What does the author tell the reader with the use of the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”]?
+                      <br />
+                    </span>
+                    <span>
                       
+                      <br />
+                    </span>
+                    <span>
+                      • Read the dictionary entry.
+                      <br />
+                    </span>
+                    <span>
+                      [
+                      <u>
+                        (part of speech)
+                      </u>
+                       
                       <strong>
-                        Distractors
+                        1.
                       </strong>
-                       will reflect common student errors. 
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
+                       [provide definition]; 
                       <strong>
-                        Rationales
+                        2.
                       </strong>
-                       should state the justification for the type of plausible distractor.
+                       [provide definition]]
                       <br />
                     </span>
-                    <style
-                      jsx={true}
-                    >
+                    <span>
+                       Which [word/phrase] 
+                      <strong>
+                        best
+                      </strong>
+                       matches the dictionary entry?
+                      <br />
+                    </span>
+                    <span>
                       
-      p {
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
-              <div
-                name="taskModel2-evidence"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Target Evidence Statements
-                    </h2>
-                  </header>
-                  <ol>
-                    <li>
-                      The student will determine the meaning of a word or phrase based on its context in a literary text.
-                    </li>
-                    <li>
-                      The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                    </li>
-                    <li>
-                      The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <li>
-                      The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ol {
-        margin: 0;
-        padding-left: 1.5em;
-      }
-    
-                    </style>
-                  </ol>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
-              <div
-                name="taskModel2-appropriateStems"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Appropriate Stems
-                    </h2>
-                  </header>
-                  <ul>
-                    <li>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What does the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] 
-                        <strong>
-                          mostly
-                        </strong>
-                         mean? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What does the use of the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] show the reader? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        The [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] has more than one meaning. What does the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] 
-                        <strong>
-                          most likely
-                        </strong>
-                         tell the reader about [provide an idea/event/character/story element/etc.] in the passage? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)].
-                        <br />
-                      </span>
-                      <span>
-                         [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        What does the author tell the reader with the use of [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”]? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the [sentence(s)/line(s)] from the passage.
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) or line(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                         How does the author’s use of the [word/phrase] [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”] in the passage help the reader understand [provide concept/idea]? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.
-                        <br />
-                      </span>
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                       [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What does the [root/affix] in the word [
+                      <u>
+                        targeted word
+                      </u>
+                      ] mean?
+                      <br />
+                    </span>
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
       ul {
         margin: 0;
         padding: 0;
@@ -1353,222 +870,96 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         padding-left: 0.5em;
       }
     
-                    </style>
-                  </ul>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
+                  </style>
+                </ul>
               </div>
-              <div
-                name="taskModel2-appropriateStemsDualText"
+              <style
+                jsx={true}
               >
-                <div>
-                  <header>
-                    <h2>
-                      Appropriate Stems for Dual-Text Stimuli Only
-                    </h2>
-                  </header>
-                  <ul>
-                    <li>
-                      <span>
-                        • Read the sentence(s) from [title text \\#2].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Which sentence from [title text \\#1] has a [word/phrase] that means the same thing as [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”]? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • First, read the sentence(s) from [title text \\#1].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Now read the sentence(s) from [title text \\#2].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s) from passage, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Which [word/phrase] 
-                        <strong>
-                          best
-                        </strong>
-                         matches the meaning of [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase” text \\#1] and [
-                        <u>
-                          targeted word
-                        </u>
-                        /”targeted phrase” text \\#2] as they are used in 
-                        <strong>
-                          both
-                        </strong>
-                         passages? Pick 
-                        <strong>
-                          two
-                        </strong>
-                         choices.  
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <strong>
-                          NOTE:
-                        </strong>
-                         This stem is only used with two literary passages.
-                        <br />
-                      </span>
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </ul>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+                
       div {
         padding-left: 0.5em;
       }
     
-                </style>
-              </div>
-              <div
-                name="taskModel2-scoringRules"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Scoring Rules
-                    </h2>
-                  </header>
-                  <p>
-                    All responses correct: 1 point; Any other response combination: 0 points
-                    <style
-                      jsx={true}
-                    >
-                      
-      p {
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
+              </style>
             </div>
-            <div>
-              <header>
-                <h1>
-                  Task Model 3
-                </h1>
-              </header>
-              <div
-                name="taskModel3-desc"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Task Description
-                    </h2>
-                  </header>
-                  <p>
+            <div
+              name="Task Model 1-Appropriate Stems for Dual-Text Stimuli Only"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems for Dual-Text Stimuli Only
+                  </h2>
+                </header>
+                <ul>
+                  <li>
                     <span>
-                      The 
+                      • Read the [sentence(s)/line(s)] from [title text #2].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Which sentence from [title text #1] has a [word/phrase] that means the same thing as [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] from [text #2]?
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • First, read the [sentence(s)/line(s)] from [title text #1].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Now read the [sentence(s)/line(s)] from [title text #2].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Which [word/phrase] 
                       <strong>
-                        item stem
+                        best
                       </strong>
-                       will require students to select the word(s)/phrase(s) from sentence(s), set(s) of sentences, line(s), or paragraph(s) that best match a given dictionary entry or paraphrased definition. 
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
+                       matches the meaning of [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase” text #1] and [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase” text #2] as it is used in 
                       <strong>
-                        Formatting note:
+                        both
                       </strong>
-                       When excerpts are used, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      The 
-                      <strong>
-                        answer choices
-                      </strong>
-                       will be five to eight selectable and underlined words or phrases from an excerpted selection of text. The excerpted text will be whole, continuous, and consecutive sections taken directly from the text. There will be only one correct response. The distractors will be selectable words or phrases on or below grade level and plausible to students who 1) do not read the text closely, 2) do not understand the definition, concept, or idea presented, or 3) use context for the wrong meaning of the target word/phrase.
-                      <br />
-                    </span>
-                    <span>
-                      
+                       passages?  
                       <br />
                     </span>
                     <span>
@@ -1576,166 +967,14 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                       <strong>
                         NOTE:
                       </strong>
-                       If there are too many defensible options (check every possibility), do not use this item type; use Multiple Choice (Task Model 1) or Multiple Select (Task Model 2).
+                       This stem is only used with two literary passages.
                       <br />
                     </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Distractors
-                      </strong>
-                       will reflect common student errors. 
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Rationales
-                      </strong>
-                       should state the justification for the type of plausible distractor.
-                      <br />
-                    </span>
-                    <style
-                      jsx={true}
-                    >
-                      
-      p {
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
-              <div
-                name="taskModel3-evidence"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Target Evidence Statements
-                    </h2>
-                  </header>
-                  <ol>
-                    <li>
-                      The student will determine the meaning of a word or phrase based on its context in a literary text.
-                    </li>
-                    <li>
-                      The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                    </li>
-                    <li>
-                      The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <li>
-                      The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ol {
-        margin: 0;
-        padding-left: 1.5em;
-      }
-    
-                    </style>
-                  </ol>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
-              <div
-                name="taskModel3-appropriateStems"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Appropriate Stems
-                    </h2>
-                  </header>
-                  <ul>
-                    <li>
-                      <span>
-                        • Read the dictionary entry.
-                        <br />
-                      </span>
-                      <span>
-                        [
-                        <u>
-                          (part of speech)
-                        </u>
-                         
-                        <strong>
-                          1.
-                        </strong>
-                         [provide definition]
-                        <br />
-                      </span>
-                      <span>
-                        Click on the 
-                        <u>
-                          underlined
-                        </u>
-                         [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that 
-                        <strong>
-                          most closely
-                        </strong>
-                         matches the definition of that word.
-                        <br />
-                      </span>
-                      <span>
-                        [excerpted selectable text]
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • The author uses a word that means [provide definition of academic word] in the text. Click on the 
-                        <u>
-                          underlined
-                        </u>
-                         [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that 
-                        <strong>
-                          best
-                        </strong>
-                         shows that [idea/meaning].
-                        <br />
-                      </span>
-                      <span>
-                        [excerpted selectable text]
-                        <br />
-                      </span>
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
       ul {
         margin: 0;
         padding: 0;
@@ -1743,290 +982,50 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         padding-left: 0.5em;
       }
     
-                    </style>
-                  </ul>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+                  </style>
+                </ul>
+              </div>
+              <style
+                jsx={true}
+              >
+                
       div {
         padding-left: 0.5em;
       }
     
-                </style>
-              </div>
-              <div
-                name="taskModel3-appropriateStemsDualText"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Appropriate Stems for Dual-Text Stimuli Only
-                    </h2>
-                  </header>
-                  <ul>
-                    <li>
-                      <span>
-                        • Read the [sentence(s)/line(s)] from [title text \\#2].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence(s)/line(s) from text, with 
-                        <u>
-                          targeted word/phrase
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Click on the 
-                        <u>
-                          underlined
-                        </u>
-                         [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] from [title text \\#1] that means the same thing as [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”].
-                        <br />
-                      </span>
-                      <span>
-                        [excerpted selectable text from text \\#1]
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <br />
-                      </span>
-                      <span>
-                        • Read the sentence(s) from [title text \\#1].
-                        <br />
-                      </span>
-                      <span>
-                        [Directly quoted sentence or line from text, with 
-                        <u>
-                          targeted [word/phrase]
-                        </u>
-                         underlined]
-                        <br />
-                      </span>
-                      <span>
-                        Click on the 
-                        <u>
-                          underlined
-                        </u>
-                         [word/phrase] in the [sentences/paragraph] from [title text \\#2] that means the same thing as [
-                        <u>
-                          targeted word
-                        </u>
-                        /“targeted phrase”].
-                        <br />
-                      </span>
-                      <span>
-                        [excerpted selectable text from text \\#2]  
-                        <br />
-                      </span>
-                      <span>
-                        
-                        <strong>
-                          NOTE:
-                        </strong>
-                         This stem is only used with two literary passages.
-                        <br />
-                      </span>
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </ul>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
-              </div>
-              <div
-                name="taskModel3-scoringRules"
-              >
-                <div>
-                  <header>
-                    <h2>
-                      Scoring Rules
-                    </h2>
-                  </header>
-                  <p>
-                    Correct response: 1 point; Incorrect response: 0 points
-                    <style
-                      jsx={true}
-                    >
-                      
+              </style>
+            </div>
+            <div
+              name="Task Model 1-Scoring Rules"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Scoring Rules
+                  </h2>
+                </header>
+                <p>
+                  Correct response: 1 point; Incorrect response: 0 points
+                  <style
+                    jsx={true}
+                  >
+                    
       p {
         padding-left: 0.5em;
       }
     
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
-      }
-    
-                </style>
+                  </style>
+                </p>
               </div>
-              <div
-                name="taskModel3-formatExample"
+              <style
+                jsx={true}
               >
-                <div>
-                  <header>
-                    <h2>
-                      Format Example
-                    </h2>
-                  </header>
-                  <p>
-                    <span>
-                      
-                      <strong>
-                        Format Example:
-                      </strong>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        The Format Example includes a sample of hot text from a grade 11 item and is included to provide guidance regarding 
-                        <i>
-                          formatting purposes only
-                        </i>
-                        .
-                      </strong>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Note:
-                      </strong>
-                       Selectable text is a whole, continuous section of text.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      __________________________________________________________________________
-                      <br />
-                    </span>
-                    <span>
-                      First, read the dictionary entry. 
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      (v) gather together or acquire an increasing number or quantity of; heap up
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      Click on the 
-                      <i>
-                        underlined
-                      </i>
-                       word in the paragraph that most closely matches the definition provided.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      The snow on the side of the road was really starting to [
-                      <i>
-                        accumulate
-                      </i>
-                      ]. The grass was now a pure, [
-                      <i>
-                        sparkling
-                      </i>
-                      ] white carpet. The fire hydrants and tree branches were three inches taller, and the road was now a river of ice and water. Ashley told me not to worry because the highway would be dry as we slowly [
-                      <i>
-                        negotiated
-                      </i>
-                      ] the narrow on-ramp to the interstate. I couldn’t help but smile as I read the sign: I-95 South. Was she taking me somewhere special for our winter holiday, maybe to visit Aunt Glenda in Delaware? I haven’t seen her in years, and I used to love visiting for family cook-outs. Aunt Glenda always made us feel welcome, and she had the cutest dogs named Tebow and Spikes that loved to play fetch with us. I wasn’t quite sure what our [
-                      <i>
-                        destination
-                      </i>
-                      ] was, but I had to quickly admit that it wasn’t my first [
-                      <i>
-                        suspicion
-                      </i>
-                      ] as I read the sign that said, “Thank You for Visiting Delaware, Come Back Soon!” and then just as quickly, “Welcome to Maryland, Buckle-Up and Please Drive Safely.” Now I was completely [
-                      <i>
-                        stumped
-                      </i>
-                      ] as to which mysterious locale my sister was [
-                      <i>
-                        whisking
-                      </i>
-                      ] us off to.
-                      <br />
-                    </span>
-                    <style
-                      jsx={true}
-                    >
-                      
-      p {
-        padding-left: 0.5em;
-      }
-    
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+                
       div {
         padding-left: 0.5em;
       }
     
-                </style>
-              </div>
+              </style>
             </div>
           </div>
           <style
@@ -2040,8 +1039,1019 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           </style>
         </div>
         <div
-          name="dok"
+          name="Task Model 2"
         >
+          <div>
+            <header>
+              <h1>
+                Task Model 2
+              </h1>
+            </header>
+            <div
+              name="Task Model 2-Task Description"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Task Description
+                  </h2>
+                </header>
+                <p>
+                  <span>
+                    The 
+                    <strong>
+                      item stem
+                    </strong>
+                     will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.  The item stem will prompt the student to choose two answers.   
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Formatting note:
+                    </strong>
+                     In excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    The 
+                    <strong>
+                      answer choices
+                    </strong>
+                     will present five or six options of similar structure using vocabulary on or below grade level. Of the options, there will be two correct answers. The correct answers will be a clearly discernible and correct meaning of the word or phrase. The 
+                    <strong>
+                      distractors
+                    </strong>
+                     will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Distractors
+                    </strong>
+                     will reflect common student errors. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Rationales
+                    </strong>
+                     should state the justification for the type of plausible distractor.
+                    <br />
+                  </span>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 2-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li>
+                    The student will determine the meaning of a word or phrase based on its context in a literary text.
+                  </li>
+                  <li>
+                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+                  </li>
+                  <li>
+                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <li>
+                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    
+                  </style>
+                </ol>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 2-Appropriate Stems"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems
+                  </h2>
+                </header>
+                <ul>
+                  <li>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What does the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] 
+                      <strong>
+                        mostly
+                      </strong>
+                       mean? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What does the use of the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] show the reader? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      The [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] has more than one meaning. What does the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] 
+                      <strong>
+                        most likely
+                      </strong>
+                       tell the reader about [provide an idea/event/character/story element/etc.] in the passage? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)].
+                      <br />
+                    </span>
+                    <span>
+                       [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      What does the author tell the reader with the use of [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”]? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the [sentence(s)/line(s)] from the passage.
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) or line(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                       How does the author’s use of the [word/phrase] [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”] in the passage help the reader understand [provide concept/idea]? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.
+                      <br />
+                    </span>
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </ul>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 2-Appropriate Stems for Dual-Text Stimuli Only"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems for Dual-Text Stimuli Only
+                  </h2>
+                </header>
+                <ul>
+                  <li>
+                    <span>
+                      • Read the sentence(s) from [title text \\#2].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Which sentence from [title text \\#1] has a [word/phrase] that means the same thing as [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”]? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • First, read the sentence(s) from [title text \\#1].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Now read the sentence(s) from [title text \\#2].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s) from passage, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Which [word/phrase] 
+                      <strong>
+                        best
+                      </strong>
+                       matches the meaning of [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase” text \\#1] and [
+                      <u>
+                        targeted word
+                      </u>
+                      /”targeted phrase” text \\#2] as they are used in 
+                      <strong>
+                        both
+                      </strong>
+                       passages? Pick 
+                      <strong>
+                        two
+                      </strong>
+                       choices.  
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <strong>
+                        NOTE:
+                      </strong>
+                       This stem is only used with two literary passages.
+                      <br />
+                    </span>
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </ul>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 2-Scoring Rules"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Scoring Rules
+                  </h2>
+                </header>
+                <p>
+                  All responses correct: 1 point; Any other response combination: 0 points
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+          </div>
+          <style
+            jsx={true}
+          >
+            
+      div {
+        padding-left: 0.5em;
+      }
+    
+          </style>
+        </div>
+        <div
+          name="Task Model 3"
+        >
+          <div>
+            <header>
+              <h1>
+                Task Model 3
+              </h1>
+            </header>
+            <div
+              name="Task Model 3-Task Description"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Task Description
+                  </h2>
+                </header>
+                <p>
+                  <span>
+                    The 
+                    <strong>
+                      item stem
+                    </strong>
+                     will require students to select the word(s)/phrase(s) from sentence(s), set(s) of sentences, line(s), or paragraph(s) that best match a given dictionary entry or paraphrased definition. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Formatting note:
+                    </strong>
+                     When excerpts are used, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    The 
+                    <strong>
+                      answer choices
+                    </strong>
+                     will be five to eight selectable and underlined words or phrases from an excerpted selection of text. The excerpted text will be whole, continuous, and consecutive sections taken directly from the text. There will be only one correct response. The distractors will be selectable words or phrases on or below grade level and plausible to students who 1) do not read the text closely, 2) do not understand the definition, concept, or idea presented, or 3) use context for the wrong meaning of the target word/phrase.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      NOTE:
+                    </strong>
+                     If there are too many defensible options (check every possibility), do not use this item type; use Multiple Choice (Task Model 1) or Multiple Select (Task Model 2).
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Distractors
+                    </strong>
+                     will reflect common student errors. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Rationales
+                    </strong>
+                     should state the justification for the type of plausible distractor.
+                    <br />
+                  </span>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li>
+                    The student will determine the meaning of a word or phrase based on its context in a literary text.
+                  </li>
+                  <li>
+                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+                  </li>
+                  <li>
+                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <li>
+                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    
+                  </style>
+                </ol>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Appropriate Stems"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems
+                  </h2>
+                </header>
+                <ul>
+                  <li>
+                    <span>
+                      • Read the dictionary entry.
+                      <br />
+                    </span>
+                    <span>
+                      [
+                      <u>
+                        (part of speech)
+                      </u>
+                       
+                      <strong>
+                        1.
+                      </strong>
+                       [provide definition]
+                      <br />
+                    </span>
+                    <span>
+                      Click on the 
+                      <u>
+                        underlined
+                      </u>
+                       [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that 
+                      <strong>
+                        most closely
+                      </strong>
+                       matches the definition of that word.
+                      <br />
+                    </span>
+                    <span>
+                      [excerpted selectable text]
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • The author uses a word that means [provide definition of academic word] in the text. Click on the 
+                      <u>
+                        underlined
+                      </u>
+                       [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] that 
+                      <strong>
+                        best
+                      </strong>
+                       shows that [idea/meaning].
+                      <br />
+                    </span>
+                    <span>
+                      [excerpted selectable text]
+                      <br />
+                    </span>
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </ul>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Appropriate Stems for Dual-Text Stimuli Only"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems for Dual-Text Stimuli Only
+                  </h2>
+                </header>
+                <ul>
+                  <li>
+                    <span>
+                      • Read the [sentence(s)/line(s)] from [title text \\#2].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence(s)/line(s) from text, with 
+                      <u>
+                        targeted word/phrase
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Click on the 
+                      <u>
+                        underlined
+                      </u>
+                       [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] from [title text \\#1] that means the same thing as [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”].
+                      <br />
+                    </span>
+                    <span>
+                      [excerpted selectable text from text \\#1]
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <br />
+                    </span>
+                    <span>
+                      • Read the sentence(s) from [title text \\#1].
+                      <br />
+                    </span>
+                    <span>
+                      [Directly quoted sentence or line from text, with 
+                      <u>
+                        targeted [word/phrase]
+                      </u>
+                       underlined]
+                      <br />
+                    </span>
+                    <span>
+                      Click on the 
+                      <u>
+                        underlined
+                      </u>
+                       [word/phrase] in the [sentences/paragraph] from [title text \\#2] that means the same thing as [
+                      <u>
+                        targeted word
+                      </u>
+                      /“targeted phrase”].
+                      <br />
+                    </span>
+                    <span>
+                      [excerpted selectable text from text \\#2]  
+                      <br />
+                    </span>
+                    <span>
+                      
+                      <strong>
+                        NOTE:
+                      </strong>
+                       This stem is only used with two literary passages.
+                      <br />
+                    </span>
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </ul>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Scoring Rules"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Scoring Rules
+                  </h2>
+                </header>
+                <p>
+                  Correct response: 1 point; Incorrect response: 0 points
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="taskModel3-formatExample"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Format Example
+                  </h2>
+                </header>
+                <p>
+                  <span>
+                    
+                    <strong>
+                      Format Example:
+                    </strong>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      The Format Example includes a sample of hot text from a grade 11 item and is included to provide guidance regarding 
+                      <i>
+                        formatting purposes only
+                      </i>
+                      .
+                    </strong>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Note:
+                    </strong>
+                     Selectable text is a whole, continuous section of text.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    __________________________________________________________________________
+                    <br />
+                  </span>
+                  <span>
+                    First, read the dictionary entry. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    (v) gather together or acquire an increasing number or quantity of; heap up
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    Click on the 
+                    <i>
+                      underlined
+                    </i>
+                     word in the paragraph that most closely matches the definition provided.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    The snow on the side of the road was really starting to [
+                    <i>
+                      accumulate
+                    </i>
+                    ]. The grass was now a pure, [
+                    <i>
+                      sparkling
+                    </i>
+                    ] white carpet. The fire hydrants and tree branches were three inches taller, and the road was now a river of ice and water. Ashley told me not to worry because the highway would be dry as we slowly [
+                    <i>
+                      negotiated
+                    </i>
+                    ] the narrow on-ramp to the interstate. I couldn’t help but smile as I read the sign: I-95 South. Was she taking me somewhere special for our winter holiday, maybe to visit Aunt Glenda in Delaware? I haven’t seen her in years, and I used to love visiting for family cook-outs. Aunt Glenda always made us feel welcome, and she had the cutest dogs named Tebow and Spikes that loved to play fetch with us. I wasn’t quite sure what our [
+                    <i>
+                      destination
+                    </i>
+                    ] was, but I had to quickly admit that it wasn’t my first [
+                    <i>
+                      suspicion
+                    </i>
+                    ] as I read the sign that said, “Thank You for Visiting Delaware, Come Back Soon!” and then just as quickly, “Welcome to Maryland, Buckle-Up and Please Drive Safely.” Now I was completely [
+                    <i>
+                      stumped
+                    </i>
+                    ] as to which mysterious locale my sister was [
+                    <i>
+                      whisking
+                    </i>
+                    ] us off to.
+                    <br />
+                  </span>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+          </div>
+          <style
+            jsx={true}
+          >
+            
+      div {
+        padding-left: 0.5em;
+      }
+    
+          </style>
+        </div>
+        <div>
           <div>
             <header>
               <h1>
@@ -2114,6 +2124,103 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
+        <header>
+          <h1>
+            Stimuli Passage/Text Complexity
+          </h1>
+        </header>
+        <div
+          name="stimuli-passage"
+        >
+          <div>
+            <header>
+              <h2>
+                Passage
+              </h2>
+            </header>
+            <p>
+              <span>
+                Each text must include one or more words that are at grades 3–5 reading level, OR words that have nuanced meanings, OR words that have multiple meanings and used differently in the text. Emphasis is placed on academic/tier 2 words. The target words must be important to the text and worthwhile assessing. The text must have clearly evident context that provides unambiguous support for the meaning of the targeted word or phrase.
+                <br />
+              </span>
+              <span>
+                
+                <br />
+              </span>
+              <span>
+                Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.
+                <br />
+              </span>
+              <style
+                jsx={true}
+              >
+                
+      p {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </p>
+          </div>
+          <style
+            jsx={true}
+          >
+            
+      div {
+        padding-left: 0.5em;
+      }
+    
+          </style>
+        </div>
+        <div>
+          <div>
+            <header>
+              <h2>
+                Text Complexity
+              </h2>
+            </header>
+            <p>
+              <span>
+                Clarification for Dual-Text Stimuli:
+                <br />
+              </span>
+              <span>
+                
+                <br />
+              </span>
+              <span>
+                When a dual-text stimulus contains one literary and one informational text, the literary text (text #1) is the primary focus, and the set of items must include items from the literary stimulus as well as items written across both texts. The informational text (text #2) 
+                <strong>
+                  must only
+                </strong>
+                 be used as a foundational/background piece for the literary text, and no items can be written for 
+                <strong>
+                  only
+                </strong>
+                 the informational text. If both texts are literary, items may be written to either or both texts. The title of the text should be included in the stem when more than one text is used.
+                <br />
+              </span>
+              <style
+                jsx={true}
+              >
+                
+      p {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </p>
+          </div>
+          <style
+            jsx={true}
+          >
+            
+      div {
+        padding-left: 0.5em;
+      }
+    
+          </style>
+        </div>
         <style
           jsx={true}
         >
@@ -2131,6 +2238,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           flex-wrap: wrap;
           padding: 1em;
           max-width: 100%;
+        }
+        .test {
+          min-height: 30px;
         }
       
         </style>

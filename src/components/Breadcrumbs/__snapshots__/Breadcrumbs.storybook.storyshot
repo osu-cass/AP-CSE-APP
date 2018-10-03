@@ -44,182 +44,6 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           </span>
         </a>
       </li>
-      <li>
-        <a
-          href="/ELA"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
-            }
-          }
-        >
-          <span
-            aria-label="Subject"
-          >
-            ELA
-          </span>
-        </a>
-        <style
-          jsx={true}
-        >
-          
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        height: 35px;
-        overflow: hidden;
-      }
-      li:before {
-        content: '';
-        height: 32px;
-        width: 32px;
-        right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
-        transform: rotate(45deg);
-      }
-    
-        </style>
-      </li>
-      <li>
-        <a
-          href="/ELA/8"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
-            }
-          }
-        >
-          <span
-            aria-label="Grade"
-          >
-            8
-          </span>
-        </a>
-        <style
-          jsx={true}
-        >
-          
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        height: 35px;
-        overflow: hidden;
-      }
-      li:before {
-        content: '';
-        height: 32px;
-        width: 32px;
-        right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
-        transform: rotate(45deg);
-      }
-    
-        </style>
-      </li>
-      <li>
-        <a
-          href="/ELA/8/4"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
-            }
-          }
-        >
-          <span
-            aria-label="Claim"
-          >
-            4
-          </span>
-        </a>
-        <style
-          jsx={true}
-        >
-          
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        height: 35px;
-        overflow: hidden;
-      }
-      li:before {
-        content: '';
-        height: 32px;
-        width: 32px;
-        right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
-        transform: rotate(45deg);
-      }
-    
-        </style>
-      </li>
-      <li>
-        <a
-          href="/ELA/8/4/Target 1"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
-            }
-          }
-        >
-          <span
-            aria-label="Target"
-          >
-            Target 1
-          </span>
-        </a>
-        <style
-          jsx={true}
-        >
-          
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        height: 35px;
-        overflow: hidden;
-      }
-      li:before {
-        content: '';
-        height: 32px;
-        width: 32px;
-        right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
-        transform: rotate(45deg);
-      }
-    
-        </style>
-      </li>
     </ul>
     <style
       jsx={true}
@@ -230,16 +54,21 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         padding: 0;
       }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: 75%;
+        font-family: PT Sans Caption;
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;
@@ -308,16 +137,21 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
         padding: 0;
       }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: 75%;
+        font-family: PT Sans Caption;
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;
@@ -355,9 +189,7 @@ exports[`Storyshots Breadcrumbs component Renders a breadcrumb with subject data
       >
         <span
           aria-label="Subject"
-        >
-          ELA
-        </span>
+        />
       </a>
       <style
         jsx={true}
@@ -378,8 +210,8 @@ exports[`Storyshots Breadcrumbs component Renders a breadcrumb with subject data
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     
