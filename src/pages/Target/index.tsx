@@ -12,10 +12,8 @@ import { ClaimType, GradeType, SubjectType } from '../../components/Breadcrumbs/
 import { SbNavLink, SbNavlinkProps } from '../../components/SbNavLink';
 import { HelpCircle } from 'react-feather';
 import { AdditionalMaterials } from '../../components/AdditionalMaterials';
-import { MainContent, MainContentProps, Target} from '../../components/MainContent';
-// import { targetMock } from '../../components/MainContent/__mocks__/target';
+import { MainContent, MainContentProps, Target, TargetLayout, SubLayout} from '../../components/MainContent';
 import { ELAG3TargetMock } from '../../../mock_api_data/E.G3.PT.ts';
-// const targetMock = JSON.parse('../../../mock_api_data/E.G3.PT.json');
 
 
 export interface TargetPageProps {
@@ -39,23 +37,7 @@ const claimOnlyMock: TitleBarProps = {
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: downloadBtnMock
 };
-const allDataMock: TitleBarProps = {
-  ...claimOnlyMock,
-  targetTitle: 'Target 1',
-  targetDesc:
-    'Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.'
-};
 
-const allBreadcrumbDataMock: BreadcrumbsProps = {
-  subject: SubjectType.ELA,
-  grade: GradeType.Eight,
-  claim: ClaimType.Four,
-  target: 'Target 1'
-};
-
-const targetPageProps: TargetPageProps = {
-  titleBarProps: allDataMock
-};
 const subMock1: SubItemProps = { name: 'sdgasdfasdf' };
 const subMock2: SubItemProps = { name: 'helasd' };
 const mock: ItemProps[] = [
@@ -93,37 +75,21 @@ const mock: ItemProps[] = [
   }
 ];
 
-const targetLayout = {
-  items: [
-    {
-      name: 'Clarification',
-      key: 'clarification',
-    },
-    {
-      name: 'Standards',
-      key: 'standards',
-    },
-    {
-      name: 'Stimuli/Text Complexity',
-      key: 'stimInfo',
-    },
-    {
-      name: 'Accessibility Concerns',
-      key: 'accessibility',
-    },
-    {
-      name: 'Evidence Required',
-      key: 'evidence',
-    },
-    {
-      name: 'Tasks',
-      key: 'taskModels',
-    },
-    {
-      name: 'Depth of Knowledge',
-      key: 'DOK',
-    }
-  ]
+const targetLayout: TargetLayout = {
+  clarification: 'Clarification',
+  standards: 'Standards',
+  stimInfo: 'Stimuli/Text Complexity',
+  accessibility: 'Accessibility Concerns',
+  evidence: 'Evidence Required',
+  taskModels: 'Task Model ',
+  DOK: 'Depth of Knowledge',
+};
+
+const subItemLayout: SubLayout = {
+  taskDesc: 'Task Description',
+  evidence: 'Target Evidence Statements',
+  stem: 'Appropriate Stems',
+  rubrics: 'Scoring Rules',
 };
 
 export interface ContentFrameProps {
@@ -151,37 +117,36 @@ export class ContentFrame extends Component<ContentFrameProps, ContentFrameState
 
   parseJsonToNav(): ItemProps[] {
     const items: ItemProps[] = [];
-    for( const a in targetLayout.items) {
-     const name = targetLayout.items[a]['name'];
-     const key = targetLayout.items[a]['key'];
-      if (key == 'taskModels') {
-        this.props.targetJson['target'][0]['taskModels'].forEach((tm) => {
+    // for( const a of targetLayout.k) {
+    Object.keys(targetLayout).forEach((a: string) => {
+     const name:string = targetLayout[a];
+      if (a === 'taskModels') {
+        this.props.targetJson['target'][0]['taskModels'].forEach((tm: JSON) => {
           const item: ItemProps = {name: tm['taskName']};
           item.subItems = [];
-          for( const t in tm ) {
-            if( t != 'taskName') {
-              item.subItems.push({name: t});
-            }
-          }
+            Object.keys(subItemLayout).forEach((t: string) => {
+              if (tm[t] != 'NA') {
+                item.subItems.push({name: `${item.name}-${subItemLayout[t]}`});
+              }
+          });
         items.push(item);
         });
       } else {
         items.push({name});
       }
-    }
+    });
 
     return items;
   }
 
   render() {
-    console.log(ELAG3TargetMock.target[0]);
     return(
       <div className="frame">
       <div className="content-nav">
       <ContentNav items={this.state.navJson} />
       </div>
       <div className="content-frame" id="content-frame">
-      <MainContent target={this.state.contentJson}/>
+      <MainContent target={this.state.contentJson} names={targetLayout}/>
       </div>
       <style jsx>{`
       .container {
@@ -191,11 +156,14 @@ export class ContentFrame extends Component<ContentFrameProps, ContentFrameState
       }
       .content-frame {
         overflow-y: scroll;
-        border-left: 1px solid black;
         width: 75%;
       }
       .content-nav {
+        overflow-y: scroll;
         width: 25%;
+      }
+      .content-nav::-webkit-scrollbar {
+        display: none;
       }
       .frame {
         display: flex;
@@ -213,35 +181,63 @@ export class ContentFrame extends Component<ContentFrameProps, ContentFrameState
   }
 }
 
-export const TargetPage: React.SFC = (): JSX.Element => (
-  <>
-    <div className="content">
-      <div style={style}>
-        <Breadcrumbs
-          subject={allBreadcrumbDataMock.subject}
-          grade={allBreadcrumbDataMock.grade}
-          claim={allBreadcrumbDataMock.claim}
-          target={allBreadcrumbDataMock.target}
-        />
-        <TitleBar
-          claimTitle={targetPageProps.titleBarProps.claimTitle}
-          claimDesc={targetPageProps.titleBarProps.claimDesc}
-          targetTitle={targetPageProps.titleBarProps.targetTitle}
-          targetDesc={targetPageProps.titleBarProps.targetDesc}
-          downloadBtnProps={targetPageProps.titleBarProps.downloadBtnProps}
-        />
+const parseBreadCrumbData = (target:JSON): BreadcrumbsProps => {
+  const fields: string[] = target['shortCode'].split('.');
+
+  return ({
+    subject: SubjectType[fields[0]],
+    grade: GradeType[fields[1]],
+    claim: ClaimType[fields[2].slice(0,2)],
+    target: fields[3]
+  });
+};
+
+const parseTitleBarData = (claim:JSON): TitleBarProps => {
+  const fields: string[] = claim['shortCode'].split('.');
+
+  return ({
+    claimTitle: claim['claimNumber'],
+    claimDesc: 'Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.',
+    downloadBtnProps: downloadBtnMock,
+    targetTitle: fields[3],
+    targetDesc: claim['target'][0]['description']
+  });
+};
+
+export const TargetPage: React.SFC = (): JSX.Element => {
+  const breadCrumbProps: BreadcrumbsProps = parseBreadCrumbData(ELAG3TargetMock['target'][0]);
+  const titleBarProps: TitleBarProps = parseTitleBarData(ELAG3TargetMock);
+
+  return (
+    <>
+      <div className="content">
+        <div style={style}>
+          <Breadcrumbs
+            subject={breadCrumbProps.subject}
+            grade={breadCrumbProps.grade}
+            claim={breadCrumbProps.claim}
+            target={breadCrumbProps.target}
+          />
+          <TitleBar
+            claimTitle={titleBarProps.claimTitle}
+            claimDesc={titleBarProps.claimDesc}
+            targetTitle={titleBarProps.targetTitle}
+            targetDesc={titleBarProps.targetDesc}
+            downloadBtnProps={titleBarProps.downloadBtnProps}
+          />
+        </div>
+        <ContentFrame targetJson={ELAG3TargetMock}/>
+        <AdditionalMaterials />
+        <style jsx>{`
+          .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+          }
+        `}</style>
       </div>
-      <ContentFrame targetJson={ELAG3TargetMock}/>
-      <AdditionalMaterials />
-      <style jsx>{`
-        .content {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding-bottom: 10px;
-        }
-      `}</style>
-    </div>
-  </>
-);
+    </>
+  );
+};
