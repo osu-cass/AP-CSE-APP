@@ -59,6 +59,13 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
 
   subItemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
     event.stopPropagation();
+    Scroll.scroller.scrollTo(name, {
+      duration: 0,
+      delay: 0,
+      smooth: false,
+      containerId: 'content-frame',
+      offset: -225
+    });
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
       if (item.subItems) {
@@ -79,10 +86,10 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   };
 
   itemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    Scroll.scroller.scrollTo(name.toLowerCase(), {
-      duration: 150,
+    Scroll.scroller.scrollTo(name, {
+      duration: 0,
       delay: 0,
-      smooth: true,
+      smooth: false,
       containerId: 'content-frame',
       offset: -225
     });
@@ -117,33 +124,36 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   render() {
     return (
       <React.Fragment>
-        <ul className="list" role="menu">
-          {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => {
-            return (
-              <Item
-                name={name}
-                subItems={subItems}
-                expanded={expanded}
-                active={active}
-                activate={this.itemClicked}
-                expand={this.expand}
-                key={name}
-              >
-                {subItems &&
-                  subItems.map(subItem => {
-                    return (
-                      <SubItem
-                        name={subItem.name}
-                        active={subItem.active}
-                        activate={this.subItemClicked}
-                        key={`${name}-${subItem.name}`}
-                      />
-                    );
-                  })}
-              </Item>
-            );
-          })}
-        </ul>
+        <div className="outer">
+          <ul className="list" role="menu">
+            {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => {
+              return (
+                <Item
+                  name={name}
+                  subItems={subItems}
+                  expanded={expanded}
+                  active={active}
+                  activate={this.itemClicked}
+                  expand={this.expand}
+                  key={name}
+                >
+                  {subItems &&
+                    subItems.map(subItem => {
+                      return (
+                        <SubItem
+                          name={subItem.name}
+                          active={subItem.active}
+                          activate={this.subItemClicked}
+                          key={`${name}-${subItem.name}`}
+                        />
+                      );
+                    })}
+                </Item>
+              );
+            })}
+          </ul>
+          <div className="buffer" />
+        </div>
         <style jsx>{`
           * {
             font-family: 'PT Sans Caption';
@@ -152,9 +162,19 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             list-style-type: none;
             padding-left: 0;
             margin: 0;
-            border-width: 0 0 0 0;
+            border-width: 0 1px 0 0;
+            border-color: #000;
             border-style: solid;
             width: auto;
+          }
+          .outer {
+            display: flex;
+            border-width: 0 0 0 0;
+            border-color: #000;
+            border-style: solid;
+          }
+          .buffer {
+            min-width: 27px;
           }
         `}</style>
       </React.Fragment>
