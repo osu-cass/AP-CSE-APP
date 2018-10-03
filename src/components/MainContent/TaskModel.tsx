@@ -3,12 +3,13 @@ import { renderListItems, Stem, Task } from './index';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
-interface TaskModelProps {
+export interface TaskModelProps {
   task: Task;
   stems: Stem[];
   evidences: string[];
   scoringRule: string;
   index: number;
+  name: string;
 }
 
 const renderStemsBy = (target: string, stems: Stem[]) =>
@@ -41,39 +42,39 @@ const renderFormatExample = (example: string, sectionName: string) => {
   return elements;
 };
 
-export const TaskModel = ({ task, stems, evidences, scoringRule, index }: TaskModelProps) => {
+export const TaskModel = ({ task, stems, evidences, scoringRule, index, name }: TaskModelProps) => {
   const taskPrefix = `taskModel${index}`;
   const desc = parseContent(task.taskDesc);
 
   return (
-    <div>
+    <Section name={task.taskName}>
       <MainHeader text={task.taskName} />
-      <Section name={`${taskPrefix}-desc`}>
+      <Section name={`${task.taskName}-Task Description`}>
         <SubHeader text={'Task Description'} />
         <Passage>{desc}</Passage>
       </Section>
 
-      <Section name={`${taskPrefix}-evidence`}>
+      <Section name={`${task.taskName}-Target Evidence Statements`}>
         <SubHeader text={'Target Evidence Statements'} />
         <NumberList>{renderListItems(evidences)}</NumberList>
       </Section>
 
-      <Section name={`${taskPrefix}-appropriateStems`}>
+      <Section name={`${task.taskName}-Appropriate Stems`}>
         <SubHeader text={'Appropriate Stems'} />
         <NonBulletList>{renderAppropriateStems(stems)}</NonBulletList>
       </Section>
 
-      <Section name={`${taskPrefix}-appropriateStemsDualText`}>
+      <Section name={`${task.taskName}-Appropriate Stems for Dual-Text Stimuli Only`}>
         <SubHeader text={'Appropriate Stems for Dual-Text Stimuli Only'} />
         <NonBulletList>{renderDualTextOnlyStems(stems)}</NonBulletList>
       </Section>
 
-      <Section name={`${taskPrefix}-scoringRules`}>
+      <Section name={`${task.taskName}-Scoring Rules`}>
         <SubHeader text={'Scoring Rules'} />
         <Passage>{scoringRule}</Passage>
       </Section>
 
       {renderFormatExample(task.examples, `${taskPrefix}-formatExample`)}
-    </div>
+    </Section>
   );
 };

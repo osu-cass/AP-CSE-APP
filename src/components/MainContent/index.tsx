@@ -2,6 +2,24 @@ import React from 'react';
 import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
+import { ItemProps } from '../ContentNav/Item';
+
+export interface TargetLayout {
+  clarification: string;
+  standards: string;
+  stimInfo: string;
+  accessibility: string;
+  evidence: string;
+  taskModels: string;
+  DOK: string;
+}
+
+export interface SubLayout {
+  taskDesc: string;
+  evidence: string;
+  stem: string;
+  rubrics: string;
+}
 
 export interface Standard {
   stdCode: string;
@@ -50,6 +68,7 @@ export interface Target {
 
 export interface MainContentProps {
   target: Target;
+  names: TargetLayout;
 }
 
 export const renderListItems = (items: string[]) =>
@@ -72,7 +91,7 @@ const colorStandardCode = (code: string) => {
         {code}
         <style jsx>{`
           span {
-            color: red;
+            color: #e00;
           }
         `}</style>
       </span>
@@ -105,7 +124,8 @@ const RenderTaskModels = (
   taskModels: Task[],
   stems: Stem[],
   evidence: string[],
-  scoringRules: string[]
+  scoringRules: string[],
+  name: string
 ) =>
   taskModels.map((taskModel, index) => {
     const startIndex = index * 2;
@@ -120,6 +140,7 @@ const RenderTaskModels = (
         evidences={evidence}
         scoringRule={scoringRules[index]}
         index={index + 1}
+        name={name}
       />
     );
   });
@@ -138,7 +159,7 @@ const RenderDOKs = (doks: DOK[]) =>
     );
   });
 
-export const MainContent = ({ target }: MainContentProps) => {
+export const MainContent = ({ target, names }: MainContentProps) => {
   const clarification = parseContent(target.clarification);
   const stimPassage = parseContent(target.stimInfo);
   const stimTextComplexity = parseContent(target.dualText);
@@ -148,43 +169,47 @@ export const MainContent = ({ target }: MainContentProps) => {
 
   return (
     <div className="container">
-      <Section name="clarification">
+      <Section name={names.clarification}>
         <MainHeader text="Clarification" />
         <Passage>{clarification}</Passage>
       </Section>
 
-      <Section name="standards">
+      <Section name={names.standards}>
         <MainHeader text="Standards" />
         <NonBulletList>{RenderStandards(target.standards)}</NonBulletList>
       </Section>
 
-      <Section name="stimuli">
+      <Section name={names.stimInfo}>
         <MainHeader text="Stimuli Passage/Text Complexity" />
         <Section name="stimuli-passage">
           <SubHeader text="Passage" />
           <Passage>{stimPassage}</Passage>
         </Section>
-        <Section name="stimuli-complexity">
+        <Section name="stimuli-textcomplexity">
           <SubHeader text="Text Complexity" />
           <Passage>{stimTextComplexity}</Passage>
         </Section>
       </Section>
 
-      <Section name="accessibility">
+      <Section name={names.accessibility}>
         <MainHeader text="Accessibility Concerns" />
         <Passage>{accessibility}</Passage>
       </Section>
 
-      <Section name="evidence">
+      <Section name={names.evidence}>
         <MainHeader text="Evidence Required" />
         <NumberList>{renderListItems(target.evidence)}</NumberList>
       </Section>
 
-      <Section name="tasks">
-        {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics)}
-      </Section>
+      {RenderTaskModels(
+        target.taskModels,
+        target.stem,
+        target.evidence,
+        target.rubrics,
+        names.taskModels
+      )}
 
-      <Section name="dok">
+      <Section name={names.DOK}>
         <MainHeader text="Depth of Knowledge" />
         <Passage>{RenderDOKs(target.DOK)}</Passage>
       </Section>
@@ -193,6 +218,15 @@ export const MainContent = ({ target }: MainContentProps) => {
         <MainHeader text="Allowable Item Types" />
       </Section>
 
+      <MainHeader text="Stimuli Passage/Text Complexity" />
+      <Section name="stimuli-passage">
+        <SubHeader text="Passage" />
+        <Passage>{stimPassage}</Passage>
+      </Section>
+      <Section name="stimuli-textcomplexity">
+        <SubHeader text="Text Complexity" />
+        <Passage>{stimTextComplexity}</Passage>
+      </Section>
       <style jsx>{`
         * {
           margin: 0;
@@ -207,6 +241,9 @@ export const MainContent = ({ target }: MainContentProps) => {
           flex-wrap: wrap;
           padding: 1em;
           max-width: 100%;
+        }
+        .test {
+          min-height: 30px;
         }
       `}</style>
     </div>

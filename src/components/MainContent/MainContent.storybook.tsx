@@ -17,6 +17,6 @@ storiesOf('MainContent component', module)
   .addDecorator(centered)
   .add('Renders a main content with target data', () => (
     <div style={style}>
-      <MainContent target={targetMock} />
+      <MainContent target={targetMock} names={[]} />
     </div>
   ));
