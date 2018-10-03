@@ -125,7 +125,7 @@ export class ContentFrame extends Component<ContentFrameProps, ContentFrameState
           const item: ItemProps = {name: tm['taskName']};
           item.subItems = [];
             Object.keys(subItemLayout).forEach((t: string) => {
-              if (tm[t] != 'NA') {
+              if (tm[t] !== 'NA') {
                 item.subItems.push({name: `${item.name}-${subItemLayout[t]}`});
               }
           });

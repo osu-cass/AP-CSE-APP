@@ -15,7 +15,7 @@ export enum Styles {
   sbLetterSpacing = '-.02em',
   sbSans = 'PT Sans Caption',
   sbSerif = 'PT Serif',
-  targetContentWidth = '60%'
+  targetContentWidth = '75%'
 }
 
 export const blueGradientBgImg = {
