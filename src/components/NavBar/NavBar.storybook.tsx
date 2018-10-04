@@ -1,9 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
 import { NavBar } from '.';
-import { RouterDecorator } from '../../RouterDecorator';
+import { RouterDecorator } from '../../__decorators__/';
+import { MobileNavBar } from './mobile';
 
-storiesOf('NavBar component', module)
+storiesOf('NavBar', module)
   .addDecorator(RouterDecorator)
   .add('NavBar', () => <NavBar siteName={'test'} mainContentId={'main'} />);
+
+storiesOf('NavBar/Mobile', module)
+  .addDecorator(RouterDecorator)
+  .add('Default', () => <MobileNavBar />);
