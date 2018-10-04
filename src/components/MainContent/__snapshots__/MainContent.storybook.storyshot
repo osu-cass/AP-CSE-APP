@@ -304,7 +304,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
               </style>
             </div>
-            <div>
+            <div
+              name="stimuli-complexity"
+            >
               <div>
                 <header>
                   <h2>
@@ -2124,103 +2126,6 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <header>
-          <h1>
-            Stimuli Passage/Text Complexity
-          </h1>
-        </header>
-        <div
-          name="stimuli-passage"
-        >
-          <div>
-            <header>
-              <h2>
-                Passage
-              </h2>
-            </header>
-            <p>
-              <span>
-                Each text must include one or more words that are at grades 3–5 reading level, OR words that have nuanced meanings, OR words that have multiple meanings and used differently in the text. Emphasis is placed on academic/tier 2 words. The target words must be important to the text and worthwhile assessing. The text must have clearly evident context that provides unambiguous support for the meaning of the targeted word or phrase.
-                <br />
-              </span>
-              <span>
-                
-                <br />
-              </span>
-              <span>
-                Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.
-                <br />
-              </span>
-              <style
-                jsx={true}
-              >
-                
-      p {
-        padding-left: 0.5em;
-      }
-    
-              </style>
-            </p>
-          </div>
-          <style
-            jsx={true}
-          >
-            
-      div {
-        padding-left: 0.5em;
-      }
-    
-          </style>
-        </div>
-        <div>
-          <div>
-            <header>
-              <h2>
-                Text Complexity
-              </h2>
-            </header>
-            <p>
-              <span>
-                Clarification for Dual-Text Stimuli:
-                <br />
-              </span>
-              <span>
-                
-                <br />
-              </span>
-              <span>
-                When a dual-text stimulus contains one literary and one informational text, the literary text (text #1) is the primary focus, and the set of items must include items from the literary stimulus as well as items written across both texts. The informational text (text #2) 
-                <strong>
-                  must only
-                </strong>
-                 be used as a foundational/background piece for the literary text, and no items can be written for 
-                <strong>
-                  only
-                </strong>
-                 the informational text. If both texts are literary, items may be written to either or both texts. The title of the text should be included in the stem when more than one text is used.
-                <br />
-              </span>
-              <style
-                jsx={true}
-              >
-                
-      p {
-        padding-left: 0.5em;
-      }
-    
-              </style>
-            </p>
-          </div>
-          <style
-            jsx={true}
-          >
-            
-      div {
-        padding-left: 0.5em;
-      }
-    
-          </style>
-        </div>
         <style
           jsx={true}
         >
@@ -2238,9 +2143,6 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           flex-wrap: wrap;
           padding: 1em;
           max-width: 100%;
-        }
-        .test {
-          min-height: 30px;
         }
       
         </style>

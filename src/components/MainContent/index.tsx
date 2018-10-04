@@ -185,7 +185,7 @@ export const MainContent = ({ target, names }: MainContentProps) => {
           <SubHeader text="Passage" />
           <Passage>{stimPassage}</Passage>
         </Section>
-        <Section name="stimuli-textcomplexity">
+        <Section name="stimuli-complexity">
           <SubHeader text="Text Complexity" />
           <Passage>{stimTextComplexity}</Passage>
         </Section>
@@ -218,15 +218,6 @@ export const MainContent = ({ target, names }: MainContentProps) => {
         <MainHeader text="Allowable Item Types" />
       </Section>
 
-      <MainHeader text="Stimuli Passage/Text Complexity" />
-      <Section name="stimuli-passage">
-        <SubHeader text="Passage" />
-        <Passage>{stimPassage}</Passage>
-      </Section>
-      <Section name="stimuli-textcomplexity">
-        <SubHeader text="Text Complexity" />
-        <Passage>{stimTextComplexity}</Passage>
-      </Section>
       <style jsx>{`
         * {
           margin: 0;
@@ -241,9 +232,6 @@ export const MainContent = ({ target, names }: MainContentProps) => {
           flex-wrap: wrap;
           padding: 1em;
           max-width: 100%;
-        }
-        .test {
-          min-height: 30px;
         }
       `}</style>
     </div>

@@ -44,6 +44,182 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           </span>
         </a>
       </li>
+      <li>
+        <a
+          href="/ELA"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <span
+            aria-label="Subject"
+          >
+            ELA
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+      }
+      li:before {
+        content: '';
+        height: 32px;
+        width: 32px;
+        right: 20px;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
+        transform: rotate(45deg);
+      }
+    
+        </style>
+      </li>
+      <li>
+        <a
+          href="/ELA/Grade 8"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <span
+            aria-label="Grade"
+          >
+            Grade 8
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+      }
+      li:before {
+        content: '';
+        height: 32px;
+        width: 32px;
+        right: 20px;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
+        transform: rotate(45deg);
+      }
+    
+        </style>
+      </li>
+      <li>
+        <a
+          href="/ELA/Grade 8/Claim 4"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <span
+            aria-label="Claim"
+          >
+            Claim 4
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+      }
+      li:before {
+        content: '';
+        height: 32px;
+        width: 32px;
+        right: 20px;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
+        transform: rotate(45deg);
+      }
+    
+        </style>
+      </li>
+      <li>
+        <a
+          href="/ELA/Grade 8/Claim 4/Target 1"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <span
+            aria-label="Target"
+          >
+            Target 1
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+      }
+      li:before {
+        content: '';
+        height: 32px;
+        width: 32px;
+        right: 20px;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
+        transform: rotate(45deg);
+      }
+    
+        </style>
+      </li>
     </ul>
     <style
       jsx={true}
@@ -189,7 +365,9 @@ exports[`Storyshots Breadcrumbs component Renders a breadcrumb with subject data
       >
         <span
           aria-label="Subject"
-        />
+        >
+          ELA
+        </span>
       </a>
       <style
         jsx={true}

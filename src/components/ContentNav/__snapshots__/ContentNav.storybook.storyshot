@@ -496,9 +496,7 @@ exports[`Storyshots ContentNav Default 1`] = `
               onClick={[Function]}
               role="menuitem"
             >
-              <p>
-                Task Descriptions
-              </p>
+              <p />
               <style
                 jsx={true}
               >
@@ -539,9 +537,7 @@ exports[`Storyshots ContentNav Default 1`] = `
               onClick={[Function]}
               role="menuitem"
             >
-              <p>
-                Target Evidence Statement
-              </p>
+              <p />
               <style
                 jsx={true}
               >
@@ -582,9 +578,7 @@ exports[`Storyshots ContentNav Default 1`] = `
               onClick={[Function]}
               role="menuitem"
             >
-              <p>
-                Appropriate Stems
-              </p>
+              <p />
               <style
                 jsx={true}
               >
