@@ -20,3 +20,18 @@ export enum Styles {
 export const blueGradientBgImg = {
   backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
 };
+
+export interface IconProps {
+  size: number;
+  color: string;
+}
+
+export const iconStyle: IconProps = {
+  size: 35,
+  color: Colors.sbGray
+};
+
+export const mobileIconStyle: IconProps = {
+  size: 25,
+  color: Colors.sbGray
+};

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Colors, Styles } from '../../constants';
-import { MainMenu, IconProps, IconStyle } from './MainMenu';
-import { SbNavLink, SbNavlinkProps } from '../SbNavLink';
+import { Colors, Styles, iconStyle } from '../../constants';
+import { MainMenu } from './MainMenu';
 import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';
 import MediaQuery from 'react-responsive';
@@ -9,11 +8,6 @@ import { Link } from 'react-router-dom';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
-
-export interface NavBarProps {
-  siteName: string;
-  mainContentId: string;
-}
 
 export const HeaderLogo: React.SFC = () => (
   <a href="https://www.smarterbalanced.org/">
@@ -33,16 +27,16 @@ export const HeaderLogo: React.SFC = () => (
   </a>
 );
 
-export const NavBar: React.SFC<NavBarProps> = props => {
+export const NavBar: React.SFC = () => {
   const noUnderline: React.CSSProperties = {
     textDecoration: 'none'
   };
 
   return (
     <header>
-      <nav className="nav-container">
+      <HeaderLogo />
+      <nav>
         <div className="left-content">
-          <HeaderLogo />
           <MediaQuery minWidth={715}>
             <MainMenu />
           </MediaQuery>
@@ -53,37 +47,27 @@ export const NavBar: React.SFC<NavBarProps> = props => {
           </span>
           <span className="right-spacing">
             <Link to="placeholder" style={noUnderline}>
-              <HelpCircle {...IconStyle} />
+              <HelpCircle {...iconStyle} />
             </Link>
           </span>
           <MediaQuery minWidth={715}>
             <Link to="placeholder" style={noUnderline}>
-              <Menu {...IconStyle} />
+              <Menu {...iconStyle} />
             </Link>
           </MediaQuery>
         </div>
       </nav>
       <style jsx>{`
-        h1,
-        h2,
-        h3 {
-          color: ${Colors.sbGray};
-          letter-spacing: ${Styles.sbLetterSpacing};
-          margin: 0 ${Styles.paddingUnit} / 2;
-        }
-
-        img {
-          border-right: 1px solid ${Colors.sbGray};
-          padding-right: ${Styles.paddingUnit};
-          width: 183px;
-        }
-
-        .nav-container {
-          background-color: ${Colors.sbGrayLighter};
-          box-shadow: ${Styles.shadow};
+        header {
           display: flex;
           padding: ${Styles.paddingUnit} / 2;
-          width: 100%;
+          background-color: ${Colors.sbGrayLighter};
+          box-shadow: ${Styles.shadow};
+        }
+
+        nav {
+          display: flex;
+          flex-grow: 1;
         }
 
         .right-spacing {

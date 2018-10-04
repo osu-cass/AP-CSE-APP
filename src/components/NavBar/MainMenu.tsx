@@ -1,6 +1,5 @@
 import React from 'react';
-import { Colors, Styles } from '../../constants';
-import { SbNavLink } from '../SbNavLink';
+import { Colors, Styles, iconStyle } from '../../constants';
 import { Home, Search, Eye, Grid } from 'react-feather';
 import { Link } from 'react-router-dom';
 
@@ -8,25 +7,10 @@ export interface MenuItemProps {
   name: string;
 }
 
-export interface IconProps {
-  size: number;
-  color: string;
-}
-
-export const IconStyle: IconProps = {
-  size: 35,
-  color: Colors.sbGray
-};
-
-export const MobileIconStyle: IconProps = {
-  size: 25,
-  color: Colors.sbGray
-};
-
-export const MenuItem: React.SFC<MenuItemProps> = props => (
+export const MenuItem: React.SFC<MenuItemProps> = ({ children, name }) => (
   <div>
-    {props.children}
-    <p>{props.name}</p>
+    {children}
+    <p>{name}</p>
     <style jsx>{`
       p {
         color: ${Colors.sbGray};
@@ -48,7 +32,7 @@ export const MenuItem: React.SFC<MenuItemProps> = props => (
   </div>
 );
 
-export const MainMenu = (): JSX.Element => {
+export const MainMenu: React.SFC = () => {
   const noUnderline: React.CSSProperties = {
     textDecoration: 'none'
   };
@@ -57,22 +41,22 @@ export const MainMenu = (): JSX.Element => {
     <div className="main-menu">
       <Link to="placeholder" style={noUnderline}>
         <MenuItem name="Home">
-          <Home {...IconStyle} />
+          <Home {...iconStyle} />
         </MenuItem>
       </Link>
       <Link to="placeholder" style={noUnderline}>
         <MenuItem name="Search">
-          <Search {...IconStyle} />
+          <Search {...iconStyle} />
         </MenuItem>
       </Link>
       <Link to="placeholder" style={noUnderline}>
         <MenuItem name="Explore">
-          <Eye {...IconStyle} />
+          <Eye {...iconStyle} />
         </MenuItem>
       </Link>
       <Link to="placeholder" style={noUnderline}>
         <MenuItem name="Apps">
-          <Grid {...IconStyle} />
+          <Grid {...iconStyle} />
         </MenuItem>
       </Link>
       <style jsx>{`

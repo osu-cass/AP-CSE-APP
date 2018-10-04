@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Home, Search, Eye, Grid } from 'react-feather';
-import { MobileIconStyle } from '../NavBar/MainMenu';
-import { Colors } from '../../constants';
+import { Colors, mobileIconStyle } from '../../constants';
 
 const noUnderline: React.CSSProperties = {
   textDecoration: 'none',
@@ -13,31 +12,31 @@ export const MobileNavBar: React.SFC = () => (
   <nav>
     <Link to="placeholder" style={noUnderline}>
       <div>
-        <Home {...MobileIconStyle} />
+        <Home {...mobileIconStyle} />
         Home
       </div>
     </Link>
     <Link to="placeholder" style={noUnderline}>
       <div>
-        <Search {...MobileIconStyle} />
+        <Search {...mobileIconStyle} />
         Search
       </div>
     </Link>
     <Link to="placeholder" style={noUnderline}>
       <div>
-        <Eye {...MobileIconStyle} />
+        <Eye {...mobileIconStyle} />
         Explore
       </div>
     </Link>
     <Link to="placeholder" style={noUnderline}>
       <div>
-        <Grid {...MobileIconStyle} />
+        <Grid {...mobileIconStyle} />
         Menu
       </div>
     </Link>
     <Link to="placeholder" style={noUnderline}>
       <div>
-        <Menu {...MobileIconStyle} />
+        <Menu {...mobileIconStyle} />
         Menu
       </div>
     </Link>
