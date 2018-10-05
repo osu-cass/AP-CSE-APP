@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { PDFViewer } from '@react-pdf/renderer';
 
-import { CustomDocument } from './';
+import { CustomDocument } from '.';
 
 const iframeStyle = {
   width: 'calc(100vw - 20px)',
