@@ -1,4 +1,8 @@
 {
   "public": true,
-  "type": "static"
+  "type": "static",
+  "rewrites": [
+    { "source": "storybook/**", "destination": "storybook/index.html" },
+    { "source": "**", "destination": "dist/index.html" }
+  ]
 }
