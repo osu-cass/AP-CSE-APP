@@ -1,0 +1,11 @@
+__mocks__/
+.circleci/
+.github/
+.vscode/
+node_modules/
+reports/
+.prettierignore
+.prettierrc
+commitlint.config.js
+LICENSE
+README.md
