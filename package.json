@@ -67,6 +67,10 @@
     ],
     "testMatch": [
       "**/*.spec.+(tsx|ts|js)"
+    ],
+    "collectCoverageFrom": [
+      "src/components/**/*.tsx",
+      "!**/*.storybook.skip.tsx"
     ]
   },
   "dependencies": {
