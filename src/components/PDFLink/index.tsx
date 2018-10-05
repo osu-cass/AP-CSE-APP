@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Loader } from 'react-feather';
+import { Download } from 'react-feather';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
 import { Loading } from '../Loading';
@@ -28,10 +28,13 @@ export const DownloadIcon = () => (
   </div>
 );
 
+export const render = ({ loading }: PDFDownloadLinkRenderProps) =>
+  loading ? <Loading /> : <DownloadIcon />;
+
 export const PDFLink = () => (
   <div>
     <PDFDownloadLink document={CustomDocument} fileName="somename.pdf">
-      {({ loading }: PDFDownloadLinkRenderProps) => (loading ? <Loading /> : <DownloadIcon />)}
+      {render}
     </PDFDownloadLink>
   </div>
 );
