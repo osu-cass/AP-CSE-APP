@@ -30,6 +30,11 @@ const style = {
 
 storiesOf('TitleBar component', module)
   .addDecorator(centered)
+  .add('Renders a Title Bar with header only', () => (
+    <div style={style}>
+      <TitleBar claimTitle={claimOnlyMock.claimTitle} />
+    </div>
+  ))
   .add('Renders a download button', () => (
     <div style={style}>
       <DownloadBtn url={downloadBtnMock.url} filename={downloadBtnMock.filename} />
