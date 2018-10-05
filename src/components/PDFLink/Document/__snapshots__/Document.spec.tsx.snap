@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomDocument renders an ELA target 1`] = `
+<DOCUMENT>
+  <PAGE>
+    <TEXT>
+      Hello, World
+    </TEXT>
+  </PAGE>
+</DOCUMENT>
+`;
