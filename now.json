@@ -3,8 +3,8 @@
   "type": "static",
   "static": {
     "rewrites": [
-      { "source": "storybook/**", "destination": "storybook/index.html" },
-      { "source": "**", "destination": "dist/index.html" }
+      { "source": "storybook/**", "destination": "/storybook/index.html" },
+      { "source": "app/**", "destination": "/app/index.html" }
     ]
   }
 }
