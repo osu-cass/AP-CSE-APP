@@ -3,11 +3,11 @@ FROM node:latest
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm i
+RUN npm ci
 
 COPY . .
 
-RUN npm run build -- --output-path=public/dist
+RUN npm run build -- --output-path=public/app
 RUN npm run build-storybook
 
 RUN mv ./public /
