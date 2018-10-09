@@ -9,26 +9,34 @@ jobs:
     <<: *node
     steps:
       - checkout
-      - run: npm ci
+      - run:
+          name: Install dependencies
+          command: npm ci
       - persist_to_workspace:
           root: ~/repo
           paths:
             - node_modules
-      - run: npm run build
+      - run:
+          name: Build application
+          command: npm run build
   lint:
     <<: *node
     steps:
       - checkout
       - attach_workspace:
           at: ~/repo
-      - run: npm run lint
+      - run:
+          name: Run TSLint
+          command: npm run lint
   test:
     <<: *node
     steps:
       - checkout
       - attach_workspace:
           at: ~/repo
-      - run: npm run test-ci
+      - run:
+          name: Run Jest
+          command: npm run test-ci
 workflows:
   version: 2
   build_and_test:
