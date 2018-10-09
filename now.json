@@ -3,8 +3,8 @@
   "type": "static",
   "static": {
     "rewrites": [
-      { "source": "storybook/**", "destination": "/storybook/index.html" },
-      { "source": "storybook/iframe.html", "destination": "/storybook/iframe.html" },
+      { "source": "storybook/**/!(iframe.html)", "destination": "/storybook/index.html" },
+      { "source": "storybook/**/iframe.html", "destination": "/storybook/iframe.html" },
       { "source": "app/**", "destination": "/app/index.html" }
     ]
   }
