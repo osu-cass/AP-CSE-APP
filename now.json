@@ -1,11 +1,4 @@
 {
   "public": true,
-  "type": "static",
-  "static": {
-    "rewrites": [
-      { "source": "storybook/**/!(iframe.html)", "destination": "/storybook/index.html" },
-      { "source": "storybook/**/iframe.html", "destination": "/storybook/iframe.html" },
-      { "source": "app/**", "destination": "/app/index.html" }
-    ]
-  }
+  "type": "static"
 }
