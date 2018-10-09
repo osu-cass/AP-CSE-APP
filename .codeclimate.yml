@@ -1,0 +1,11 @@
+plugins:
+  tslint:
+    enabled: true
+    config: tslint.json
+  fixme:
+    enabled: true
+    config:
+      strings:
+        - FIXME
+        - TODO
+        - TO DO
