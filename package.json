@@ -7,8 +7,9 @@
     "build": "webpack",
     "test": "jest --coverage",
     "test-ci": "jest --coverage --runInBand",
-    "dev": "webpack-serve",
+    "dev": "webpack-dev-server",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o public/storybook",
     "format": "prettier --single-quote --print-width 100 --write src/**/*.{ts,tsx,js,json}",
     "lint": "tslint -c ./tslint.json -p ./tsconfig.json --fix"
   },
@@ -135,8 +136,8 @@
     "tslint": "^5.11.0",
     "typescript": "^3.0.3",
     "webpack": "^4.17.1",
-    "webpack-command": "^0.4.1",
-    "webpack-serve": "^2.0.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "repository": {
     "type": "git",
