@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
   AdvancedFilterCategoryModel,
   AdvancedFilter,
   FilterOptionModel,
   FilterType
 } from '@osu-cass/sb-components';
-import { CSEFilterOptions, CSEFilterModel, createFilters, updateFilters } from './FilterHelper';
+import {
+  CSEFilterOptions,
+  CSEFilterParams,
+  createFilters,
+  sanitizeParams,
+  paramsFromFilter
+} from './FilterHelper';
 
 export interface FilterProps {
-  filterOptions: CSEFilterOptions;
-  filter: CSEFilterModel;
-  onUpdate: (filter: CSEFilterModel) => void;
+  options: CSEFilterOptions;
+  params: CSEFilterParams;
+  onUpdate: (filter: CSEFilterParams) => void;
 }
 
 export interface CSEAdvancedFilterModels {
@@ -20,39 +26,45 @@ export interface CSEAdvancedFilterModels {
   targetFilter: AdvancedFilterCategoryModel;
 }
 
-export class Filter extends React.Component<FilterProps, CSEAdvancedFilterModels> {
-  constructor(props: FilterProps) {
-    super(props);
+export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
+  const cleanParams = sanitizeParams(params, options);
+  const { gradeFilter, subjectFilter, claimFilter, targetFilter } = createFilters(
+    options,
+    cleanParams
+  );
 
-    const filters = createFilters(props.filterOptions);
-    updateFilters(filters, props.filterOptions, props.filter);
-  }
-
-  onUpdate = (filterType: FilterType, data?: FilterOptionModel) => {
-    
+  const callback = (filterType: FilterType, data?: FilterOptionModel) => {
+    let newParams = paramsFromFilter(cleanParams, filterType, data);
+    newParams = sanitizeParams(newParams, options);
+    onUpdate(newParams);
   };
 
-  render() {
-    const { gradeFilter, subjectFilter, claimFilter, targetFilter } = this.state;
-    return (
-      <div>
-        <AdvancedFilter
-          {...gradeFilter}
-          onFilterOptionSelect={data => this.onUpdate(FilterType.Grade, data)}
-        />
-        <AdvancedFilter
-          {...subjectFilter}
-          onFilterOptionSelect={data => this.onUpdate(FilterType.Subject, data)}
-        />
-        <AdvancedFilter
-          {...claimFilter}
-          onFilterOptionSelect={data => this.onUpdate(FilterType.Claim, data)}
-        />
-        <AdvancedFilter
-          {...targetFilter}
-          onFilterOptionSelect={data => this.onUpdate(FilterType.Target, data)}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <AdvancedFilter
+        {...gradeFilter}
+        onFilterOptionSelect={data => {
+          callback(FilterType.Grade, data);
+        }}
+      />
+      <AdvancedFilter
+        {...subjectFilter}
+        onFilterOptionSelect={data => {
+          callback(FilterType.Subject, data);
+        }}
+      />
+      <AdvancedFilter
+        {...claimFilter}
+        onFilterOptionSelect={data => {
+          callback(FilterType.Claim, data);
+        }}
+      />
+      <AdvancedFilter
+        {...targetFilter}
+        onFilterOptionSelect={data => {
+          callback(FilterType.Target, data);
+        }}
+      />
+    </Fragment>
+  );
+};
