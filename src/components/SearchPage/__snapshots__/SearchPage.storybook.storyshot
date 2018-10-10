@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots SearchPage component SearchPage 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      <div
+        style={
+          Object {
+            "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+            "maxWidth": "1024px",
+          }
+        }
+      >
+        <div>
+          <ul>
+            <li
+              className="title"
+            >
+              <span>
+                Find Targets
+              </span>
+            </li>
+          </ul>
+          <style
+            jsx={true}
+          >
+            
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        // min-height: 100px;
+        padding: 20px;
+      }
+      div ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        list-style-type: none;
+      }
+      div ul li {
+        min-height: 30px;
+      }
+      .title {
+        width: 20%;
+        min-width: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+      }
+      .desc {
+        width: 75%;
+        min-width: 50px;
+        padding-bottom: 15px;
+        color: #ebebeb;
+        font-size: 14px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        margin-left: auto;
+        margin-top: auto;
+      }
+    
+          </style>
+        </div>
+      </div>
+      <div
+        className="search-bar"
+      >
+        <input
+          aria-label="Search"
+          className="field"
+          type="search"
+        />
+        <button
+          aria-label="Submit"
+          className="button"
+          type="submit"
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </button>
+        <style
+          jsx={true}
+        >
+          
+      .search-bar {
+        display: flex;
+        min-height: 2em;
+        position: relative;
+      }
+      .button {
+        align-items: center;
+        background-color: #63666A;
+        border-radius: 0 5px 5px 0;
+        border-style: none;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        min-height: 2em;
+        position: relative;
+      }
+      .field {
+        border-color: #63666A;
+        border-radius: 5px 0 0 5px;
+        border-style: solid;
+        color: #63666A;
+        height: auto;
+        min-height: 2em;
+        padding: 0 0.5em;
+      }
+    
+        </style>
+      </div>
+      <div>
+        This is a placeholder for the filter component
+      </div>
+      <ul
+        className="list"
+        role="menu"
+      >
+        <div
+          style={
+            Object {
+              "fontFamily": "PT Sans Caption",
+              "maxWidth": "1024px",
+            }
+          }
+        >
+          <div>
+            <a
+              href=""
+              style={
+                Object {
+                  "color": "#005A93",
+                  "fontSize": "1.5em",
+                }
+              }
+            >
+              Donec aliquet, risus sed auctor sagittis
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "marginLeft": "1.5em",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "color": "#AAAAAA",
+                }
+              }
+            >
+              Lorem
+               &gt; 
+              Ipsum
+               &gt; 
+              Dolor
+            </div>
+            <div>
+              Curabitur gravida pretium metus, in malesuada nunc fringilla quis. Phasellus tincidunt, ligula ut commodo varius, mi nunc luctus mauris, sed dapibus dui mauris ac tortor. Praesent tincidunt id leo et feugiat. Etiam ut risus libero. Nullam tincidunt suscipit sem ac vestibulum. Donec at tortor ac metus pharetra blandit ut a diam. Nullam id tortor eu ligula malesuada feugiat. Etiam quis erat pharetra, eleifend risus sit amet, tempus nunc. Nunc commodo tincidunt nunc, viverra accumsan urna suscipit ut. Sed a porttitor quam. Morbi gravida dignissim nulla, at commodo felis ultrices quis.
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div
+          style={
+            Object {
+              "fontFamily": "PT Sans Caption",
+              "maxWidth": "1024px",
+            }
+          }
+        >
+          <div>
+            <a
+              href=""
+              style={
+                Object {
+                  "color": "#005A93",
+                  "fontSize": "1.5em",
+                }
+              }
+            >
+              Vitae suscipit lacus commodo sed
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "marginLeft": "1.5em",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "color": "#AAAAAA",
+                }
+              }
+            >
+              Integer
+               &gt; 
+              Elementum
+               &gt; 
+              Acru
+            </div>
+            <div>
+              Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tempus tellus ut tempus luctus. Nullam nec nunc mi. Duis volutpat ultricies aliquet. Aliquam commodo efficitur odio, ut vehicula quam aliquet sed. Ut at ligula sit amet arcu varius rhoncus. Curabitur accumsan sit amet magna eget efficitur. Pellentesque eleifend ipsum sed nibh pellentesque finibus. Donec ut mauris luctus, congue ante ac, cursus libero. Curabitur dolor ligula, aliquam vel ex eu, ornare tincidunt turpis. Quisque id ornare felis. Phasellus quis molestie ante. In eleifend posuere orci sagittis scelerisque.
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div
+          style={
+            Object {
+              "fontFamily": "PT Sans Caption",
+              "maxWidth": "1024px",
+            }
+          }
+        >
+          <div>
+            <a
+              href=""
+              style={
+                Object {
+                  "color": "#005A93",
+                  "fontSize": "1.5em",
+                }
+              }
+            >
+              Quis libero cursus
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "marginLeft": "1.5em",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "color": "#AAAAAA",
+                }
+              }
+            >
+              Duis
+               &gt; 
+              Pretium
+               &gt; 
+              Nisl
+            </div>
+            <div>
+              Sed ut orci eget orci imperdiet bibendum. Aliquam rhoncus, justo a ullamcorper elementum, urna dolor commodo ligula, efficitur sollicitudin arcu tellus nec tellus. Aenean pharetra, urna et imperdiet auctor, velit tellus iaculis eros, nec laoreet elit dui quis mauris. Quisque dictum ligula eget gravida porttitor. Aliquam rhoncus turpis id pharetra congue. Pellentesque non tristique diam. Nam feugiat euismod nibh in lobortis. Morbi facilisis diam est, ac pharetra est pellentesque vitae. Aliquam erat volutpat.
+            </div>
+          </div>
+          <hr />
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
