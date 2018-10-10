@@ -1,5 +1,6 @@
 # AP_ContentSpecificationExplorer
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/4edea55abd7592d015c4/maintainability)](https://codeclimate.com/github/osu-cass/AP-CSE-APP/maintainability)
 [![CircleCI](https://circleci.com/gh/osu-cass/AP-CSE-APP.svg?style=svg)](https://circleci.com/gh/osu-cass/AP-CSE-APP)
 [![Coverage Status](https://coveralls.io/repos/github/osu-cass/AP-CSE-APP/badge.svg?branch=dev)](https://coveralls.io/github/osu-cass/AP-CSE-APP?branch=dev)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
@@ -44,3 +45,5 @@ npm run dev
 ```
 
 Once again, any code changes should automatically be loaded without needing to refresh.
+
+> > > > > > > 2d30fc8d678a2e62fd402ad179f83e289a929be1
