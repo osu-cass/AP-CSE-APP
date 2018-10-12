@@ -1,7 +1,11 @@
 import React from 'react';
 import { HelpCircle } from 'react-feather';
 import { Styles } from '../../constants';
-import { SbNavLink } from '../SbNavLink';
+import { SbNavLink, SbNavlinkProps } from '../SbNavLink';
+
+export interface AdditionalMaterialsProps {
+  links: SbNavlinkProps[];
+}
 
 export const AdditionalMaterials = (): JSX.Element => {
   const sampleItemsContent = 'Sample Items, Scoring Guides and Rubrics';
