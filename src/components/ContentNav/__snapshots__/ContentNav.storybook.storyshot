@@ -785,7 +785,7 @@ exports[`Storyshots ContentNav Default 1`] = `
             border-width: 0 1px 0 0;
             border-color: #000;
             border-style: solid;
-            width: auto;
+            width: 100%;
           }
           .outer {
             display: flex;

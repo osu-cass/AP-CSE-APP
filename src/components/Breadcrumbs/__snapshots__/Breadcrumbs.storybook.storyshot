@@ -242,7 +242,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         align-items: center;
         list-style-type: none;
         overflow: auto;
-        width: 75%;
+        width: 85%;
         font-family: PT Sans Caption;
         border-bottom: 1px solid #66a1c1;
       }
@@ -325,7 +325,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
         align-items: center;
         list-style-type: none;
         overflow: auto;
-        width: 75%;
+        width: 85%;
         font-family: PT Sans Caption;
         border-bottom: 1px solid #66a1c1;
       }

@@ -36,7 +36,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       <div
         className="container"
       >
-        <div>
+        <div
+          name="Clarification"
+        >
           <div>
             <header>
               <h1>
@@ -93,7 +95,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div>
+        <div
+          name="Standards"
+        >
           <div>
             <header>
               <h1>
@@ -254,7 +258,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div>
+        <div
+          name="Stimuli/Text Complexity"
+        >
           <div>
             <header>
               <h1>
@@ -366,7 +372,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div>
+        <div
+          name="Accessibility Concerns"
+        >
           <div>
             <header>
               <h1>
@@ -399,7 +407,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div>
+        <div
+          name="Evidence Required"
+        >
           <div>
             <header>
               <h1>
@@ -2053,7 +2063,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
     
           </style>
         </div>
-        <div>
+        <div
+          name="Depth of Knowledge"
+        >
           <div>
             <header>
               <h1>
@@ -2141,7 +2153,6 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          padding: 1em;
           max-width: 100%;
         }
       
