@@ -1,0 +1,8 @@
+plugins:
+  fixme:
+    enabled: true
+    config:
+      strings:
+        - FIXME
+        - TODO
+        - TO DO
