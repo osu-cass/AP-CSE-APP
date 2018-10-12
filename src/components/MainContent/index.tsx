@@ -2,9 +2,9 @@ import React from 'react';
 import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
-import { ItemProps } from '../ContentNav/Item';
 
 export interface TargetLayout {
+  [key: string]: string;
   clarification: string;
   standards: string;
   stimInfo: string;
@@ -15,6 +15,7 @@ export interface TargetLayout {
 }
 
 export interface SubLayout {
+  [key: string]: string;
   taskDesc: string;
   evidence: string;
   stem: string;
@@ -22,35 +23,53 @@ export interface SubLayout {
 }
 
 export interface Standard {
+  [key: string]: string;
   stdCode: string;
   stdDesc: string;
 }
 
 export interface DOK {
+  [key: string]: string;
   dokCode: string;
   dokDesc: string;
   dokShort: string;
 }
 
 export interface Stem {
+  [key: string]: string;
   stemDesc: string;
   shortStem: string;
 }
 
 export interface Task {
+  [key: string]: string;
   taskName: string;
   taskDesc: string;
   examples: string;
   stimulus: string;
 }
 
+export interface Claim {
+  [key: string]: string | number | Target[];
+  _id: string;
+  title: string;
+  claimNumber: string;
+  grades: number;
+  subject: string;
+  description: string;
+  shortCode: string;
+  domain: string;
+  target: Target[];
+}
+
 export interface Target {
+  [key: string]: string | string[] | Standard[] | DOK[] | Stem[] | Task[] | undefined;
   title: string;
   shortCode: string;
   description: string;
   standards: Standard[];
   DOK: DOK[];
-  targetType: string;
+  targetType?: string;
   clarification: string;
   heading: string;
   evidence: string[];
@@ -64,6 +83,10 @@ export interface Target {
   stem: Stem[];
   taskModels: Task[];
   rubrics: string[];
+}
+
+export interface TaskModel {
+  [key: string]: string;
 }
 
 export interface MainContentProps {
@@ -230,7 +253,6 @@ export const MainContent = ({ target, names }: MainContentProps) => {
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          padding: 1em;
           max-width: 100%;
         }
       `}</style>
