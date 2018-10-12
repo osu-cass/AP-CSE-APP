@@ -43,15 +43,13 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       const isActive = item.name === this.props.activeElement;
       let newItem = { ...item, active: isActive };
       let subItemIsActive = false;
-      if (item.subItems) {
-        newItem.subItems = item.subItems.map(subItem => {
-          subItemIsActive = `${item.name}-${subItem.name}` === this.props.activeElement;
+      newItem.subItems = item.subItems.map(subItem => {
+        subItemIsActive = `${item.name}-${subItem.name}` === this.props.activeElement;
 
-          return { ...subItem, active: subItemIsActive };
-        });
+        return { ...subItem, active: subItemIsActive };
+      });
 
-        newItem = { ...newItem, expanded: subItemIsActive };
-      }
+      newItem = { ...newItem, expanded: subItemIsActive };
 
       return newItem;
     });
@@ -64,18 +62,16 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       delay: 0,
       smooth: false,
       containerId: 'content-frame',
-      offset: -225
+      offset: -250
     });
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
-      if (item.subItems) {
-        item.subItems = item.subItems.map((subItem: SubItemProps) => {
-          const isActive = subItem.name === name;
-          isItemActive = !isItemActive ? isActive : true;
+      item.subItems = item.subItems.map((subItem: SubItemProps) => {
+        const isActive = subItem.name === name;
+        isItemActive = !isItemActive ? isActive : true;
 
-          return { ...subItem, active: isActive };
-        });
-      }
+        return { ...subItem, active: isActive };
+      });
 
       return { ...item, active: isItemActive };
     });
@@ -95,8 +91,8 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
-      let newSubItems: SubItemProps[] | undefined;
-      if (item.subItems) {
+      let newSubItems: SubItemProps[] = [];
+      if (item.subItems.length > 0) {
         newSubItems = item.subItems.map((subItem: SubItemProps) => ({ ...subItem, active: false }));
       }
 
@@ -137,7 +133,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
                   expand={this.expand}
                   key={name}
                 >
-                  {subItems &&
+                  {subItems.length > 0 &&
                     subItems.map(subItem => {
                       return (
                         <SubItem
@@ -165,7 +161,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             border-width: 0 1px 0 0;
             border-color: #000;
             border-style: solid;
-            width: auto;
+            width: 100%;
           }
           .outer {
             display: flex;

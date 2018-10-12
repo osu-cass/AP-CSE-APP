@@ -10,9 +10,9 @@ import { SubItemProps } from '../SubItem';
  */
 export interface ItemProps extends SubItemProps {
   expanded?: boolean;
-  subItems?: SubItemProps[];
+  subItems: SubItemProps[];
   expand?: (e: React.MouseEvent<SVGElement>, n: string) => void;
-  children?: JSX.Element[] | JSX.Element;
+  children?: JSX.Element[] | JSX.Element | boolean;
 }
 
 export interface ChevronProps {
