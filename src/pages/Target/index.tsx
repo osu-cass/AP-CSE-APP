@@ -34,7 +34,7 @@ const downloadBtnMock: DownloadBtnProps = {
   filename: 'test-file-name'
 };
 
-const targetLayout: TargetLayout = {
+export const targetLayout: TargetLayout = {
   clarification: 'Clarification',
   standards: 'Standards',
   stimInfo: 'Stimuli/Text Complexity',
@@ -44,54 +44,73 @@ const targetLayout: TargetLayout = {
   DOK: 'Depth of Knowledge'
 };
 
-const subItemLayout: SubLayout = {
+export const subItemLayout: SubLayout = {
   taskDesc: 'Task Description',
   evidence: 'Target Evidence Statements',
   stem: 'Appropriate Stems',
   rubrics: 'Scoring Rules'
 };
 
-export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
-  const parseSubItem = (taskModel: TaskModel): ItemProps => {
-    const item: ItemProps = { name: taskModel.taskName, subItems: [] };
-    Object.keys(subItemLayout).forEach((subItemName: string) => {
-      item.subItems.push({ name: `${item.name}-${subItemLayout[subItemName]}` });
-    });
+export const parseSubItem = (taskModel: TaskModel): ItemProps => {
+  const item: ItemProps = { name: taskModel.taskName, subItems: [] };
+  Object.keys(subItemLayout).forEach((subItemName: string) => {
+    item.subItems.push({ name: `${item.name}-${subItemLayout[subItemName]}` });
+  });
 
-    return item;
-  };
+  return item;
+};
 
-  const parseItem = (targetItem: string): ItemProps[] => {
-    const name: string = targetLayout[targetItem];
-    let items: ItemProps[] = [];
-    if (targetItem === 'taskModels') {
-      const taskModels: ItemProps[] = [];
-      if (target.taskModels.length > 0) {
-        target.taskModels.forEach((taskModel: TaskModel) => {
-          taskModels.push(parseSubItem(taskModel));
-        });
-      }
-      items = taskModels;
-    } else {
-      items = [{ name, subItems: [] }];
+export const parseItem = (targetItem: string, target: Target): ItemProps[] => {
+  const name: string = targetLayout[targetItem];
+  let items: ItemProps[] = [];
+  if (targetItem === 'taskModels') {
+    const itemTaskModels: ItemProps[] = [];
+    if (target.taskModels.length > 0) {
+      target.taskModels.forEach((taskModel: TaskModel) => {
+        itemTaskModels.push(parseSubItem(taskModel));
+      });
     }
+    items = itemTaskModels;
+  } else {
+    items = [{ name, subItems: [] }];
+  }
 
-    return items;
+  return items;
+};
+
+export const parseNavProps = (target: Target): ItemProps[] => {
+  let items: ItemProps[] = [];
+  Object.keys(targetLayout).forEach((targetItem: string) => {
+    items = items.concat(parseItem(targetItem, target));
+  });
+
+  return items;
+};
+
+export const parseBreadCrumbData = (claim: Claim): BreadcrumbsProps => {
+  return {
+    subject: claim.subject,
+    grade: `Grade ${claim.grades}`,
+    claim: claim.domain,
+    target: 'Placeholder Title'
   };
+};
 
-  const parseNavProps = (): ItemProps[] => {
-    let items: ItemProps[] = [];
-    Object.keys(targetLayout).forEach((targetItem: string) => {
-      items = items.concat(parseItem(targetItem));
-    });
-
-    return items;
+export const parseTitleBarData = (claim: Claim): TitleBarProps => {
+  return {
+    claimTitle: claim.domain,
+    claimDesc: claim.description,
+    downloadBtnProps: downloadBtnMock,
+    targetTitle: 'Placeholder Title',
+    targetDesc: claim['target'][0]['description']
   };
+};
 
+export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
   return (
     <div className="frame">
       <div className="content-nav">
-        <ContentNav items={parseNavProps()} />
+        <ContentNav items={parseNavProps(target)} />
       </div>
       <div className="content-frame" id="content-frame">
         <MainContent target={target} names={targetLayout} />
@@ -122,25 +141,6 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
       `}</style>
     </div>
   );
-};
-
-export const parseBreadCrumbData = (claim: Claim): BreadcrumbsProps => {
-  return {
-    subject: claim.subject,
-    grade: `Grade ${claim.grades}`,
-    claim: claim.domain,
-    target: 'Placeholder Title'
-  };
-};
-
-export const parseTitleBarData = (claim: Claim): TitleBarProps => {
-  return {
-    claimTitle: claim.domain,
-    claimDesc: claim.description,
-    downloadBtnProps: downloadBtnMock,
-    targetTitle: 'Placeholder Title',
-    targetDesc: claim['target'][0]['description']
-  };
 };
 
 export const TargetPage = ({ url }: TargetPageProps): JSX.Element => {

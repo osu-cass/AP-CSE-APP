@@ -1,12 +1,25 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import toJson from 'enzyme-to-json';
 
 import { ELAG3ClaimMock } from '../../../mock_api_data/E.G3.C1';
-import { TargetPage, parseBreadCrumbData, parseTitleBarData } from './index';
-import { BreadcrumbsProps } from '../../components/Breadcrumbs';
-import { TitleBarProps } from '../../components/TitleBar';
+import {
+  TargetPage,
+  parseBreadCrumbData,
+  parseTitleBarData,
+  parseSubItem,
+  parseItem,
+  parseNavProps
+} from './index';
+import {
+  parsedSubItemMock,
+  parsedTitleBarDataMock,
+  parsedBreadCrumbDataMock,
+  parsedRegularItemMock,
+  parsedItemWithSubsMock,
+  parsedNavPropsMock
+} from './__mocks__';
+import { Target } from '../../components/MainContent';
 
 describe('Target Page', () => {
   let targetPage: ReactWrapper;
@@ -22,29 +35,42 @@ describe('Target Page', () => {
   });
 
   it('parses breadcrumb data from a claim', () => {
-    const breadCrumbData: BreadcrumbsProps = {
-      subject: 'English Language Arts',
-      grade: 'Grade 3',
-      claim: 'Literary Texts',
-      target: 'Placeholder Title'
-    };
     const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock);
 
-    expect(parsedBreadCrumbData).toEqual(breadCrumbData);
+    expect(parsedBreadCrumbData).toEqual(parsedBreadCrumbDataMock);
   });
 
   it('parses title bar data from a claim', () => {
-    const titleBarData: TitleBarProps = {
-      claimTitle: 'Literary Texts',
-      claimDesc:
-        'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
-      downloadBtnProps: { url: 'test/url', filename: 'test-file-name' },
-      targetTitle: 'Placeholder Title',
-      targetDesc:
-        'Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.'
-    };
     const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock);
 
-    expect(parsedTitleBarData).toEqual(titleBarData);
+    expect(parsedTitleBarData).toEqual(parsedTitleBarDataMock);
+  });
+
+  it('parses a subItem', () => {
+    const target: Target = ELAG3ClaimMock.target[0];
+    const parsedSubItem = parseSubItem(target.taskModels[0]);
+
+    expect(parsedSubItem).toEqual(parsedSubItemMock);
+  });
+
+  it('parses a regular item', () => {
+    const target: Target = ELAG3ClaimMock.target[0];
+
+    const parsedItems = parseItem('evidence', target);
+    expect(parsedItems).toEqual(parsedRegularItemMock);
+  });
+
+  it('parses an item with subItems', () => {
+    const target: Target = ELAG3ClaimMock.target[0];
+
+    const parsedItems = parseItem('taskModels', target);
+    expect(parsedItems).toEqual(parsedItemWithSubsMock);
+  });
+
+  it('parses data for the ContentNav', () => {
+    const target: Target = ELAG3ClaimMock.target[0];
+
+    const parsedNavProps = parseNavProps(target);
+    expect(parsedNavProps).toEqual(parsedNavPropsMock);
   });
 });
