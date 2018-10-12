@@ -1,6 +1,6 @@
 import React from 'react';
-import { CSEFilterParams } from './FilterHelper';
-import { Filter } from './Filter';
+import { CSEFilterParams } from '../Filter/FilterHelper';
+import { Filter } from '../Filter/Filter';
 import { filterOptions } from './__mocks__';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
@@ -23,7 +23,9 @@ class FilterTest extends React.Component<CSEFilterParams, CSEFilterParams> {
       <div>
         Filter Object:
         <code>{JSON.stringify(this.state)}</code>
-        <Filter options={filterOptions} params={this.state} onUpdate={this.updateState} />
+        <div style={{ display: 'flex' }}>
+          <Filter options={filterOptions} params={this.state} onUpdate={this.updateState} />
+        </div>
       </div>
     );
   }

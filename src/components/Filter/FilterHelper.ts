@@ -5,7 +5,7 @@ import {
   FilterType,
   FilterOptionModel
 } from '@osu-cass/sb-components';
-import { CSEAdvancedFilterModels } from './Filter';
+import { CSEAdvancedFilterModels } from '../Filter/Filter';
 
 /**
  * We're using this instead of ClaimModel from sb-components because
