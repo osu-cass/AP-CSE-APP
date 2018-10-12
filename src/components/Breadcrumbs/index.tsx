@@ -1,7 +1,6 @@
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { SubjectType, GradeType, ClaimType } from './BreadcrumbModel';
 import { BreadcrumbLink } from './BreadcrumbLink';
 import { Styles, Colors } from '../../constants';
 
@@ -11,9 +10,9 @@ import { Styles, Colors } from '../../constants';
  * @interface BreadcrumbsProps
  */
 export interface BreadcrumbsProps {
-  subject?: SubjectType;
-  grade?: GradeType;
-  claim?: ClaimType;
+  subject?: string;
+  grade?: string;
+  claim?: string;
   target?: string;
 }
 
