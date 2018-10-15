@@ -28,8 +28,10 @@ export const HeaderLogo: React.SFC = () => (
 );
 
 export const NavBar: React.SFC = () => {
-  const noUnderline: React.CSSProperties = {
-    textDecoration: 'none'
+  const linkStyle: React.CSSProperties = {
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center'
   };
 
   return (
@@ -46,12 +48,12 @@ export const NavBar: React.SFC = () => {
             <SearchBar />
           </span>
           <span className="right-spacing">
-            <Link to="placeholder" style={noUnderline}>
+            <Link to="placeholder" style={linkStyle}>
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
           <MediaQuery minWidth={SizeBreaks.mobile}>
-            <Link to="placeholder" style={noUnderline}>
+            <Link to="placeholder" style={linkStyle}>
               <Menu {...iconStyle} />
             </Link>
           </MediaQuery>

@@ -127,6 +127,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
             onClick={[Function]}
             style={
               Object {
+                "alignItems": "center",
+                "display": "flex",
                 "textDecoration": "none",
               }
             }
