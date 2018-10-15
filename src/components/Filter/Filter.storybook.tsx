@@ -34,4 +34,14 @@ class FilterTest extends React.Component<CSEFilterParams, CSEFilterParams> {
 storiesOf('Filter', module)
   .addDecorator(centered)
   .add('default', () => <FilterTest grades={[]} />)
-  .add('selected grade', () => <FilterTest grades={['ms']} />);
+  .add('selected grade', () => <FilterTest grades={['ms']} />)
+  .add('selected subject', () => <FilterTest grades={[]} subject="math" />)
+  .add('selected subject, claim', () => <FilterTest grades={[]} subject="math" claim="m1" />)
+  .add('selected subject, claim, target', () => (
+    <FilterTest grades={[]} subject="math" claim="m1" target="pf" />
+  ))
+  .add('selected grades, subject, claim, target', () => (
+    <FilterTest grades={['ms', 'hs']} subject="math" claim="m1" target="pf" />
+  ))
+  .add('invalid', () => <FilterTest grades={['ms']} claim="m1" target="pf" />)
+  .add('invalid 2', () => <FilterTest grades={['ms']} subject="math" target="pf" />);
