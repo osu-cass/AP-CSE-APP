@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Filter default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      Filter Object:
+      <code>
+        {"grades":[]}
+      </code>
+      <div
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <div
+          className="filter-selection"
+          id="grade-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Elementary
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <button
+              className="btn btn-primary active"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+            >
+              All
+            </button>
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Math
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filter selected grade 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      Filter Object:
+      <code>
+        {"grades":["ms"]}
+      </code>
+      <div
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <div
+          className="filter-selection"
+          id="grade-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Elementary
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <button
+              className="btn btn-primary active"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+            >
+              All
+            </button>
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Math
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

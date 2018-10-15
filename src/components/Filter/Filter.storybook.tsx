@@ -1,6 +1,6 @@
 import React from 'react';
-import { CSEFilterParams } from '../Filter/FilterHelper';
-import { Filter } from '../Filter/Filter';
+import { CSEFilterParams } from './FilterHelper';
+import { Filter } from './';
 import { filterOptions } from './__mocks__';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
