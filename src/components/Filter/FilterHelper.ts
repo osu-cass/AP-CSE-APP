@@ -1,106 +1,107 @@
 import {
-  SubjectModel,
-  SearchBaseModel,
   AdvancedFilterCategoryModel,
   FilterType,
   FilterOptionModel
 } from '@osu-cass/sb-components';
 import { CSEAdvancedFilterModels } from './';
-
-/**
- * We're using this instead of ClaimModel from sb-components because
- * ClaimModel has targetCodes of type number[] | undefined
- *
- * @interface CSEClaimModel
- * @extends {SearchBaseModel}
- */
-export interface CSEClaimModel extends SearchBaseModel {
-  targetCodes?: string[];
-}
-
-export interface CSEFilterOptions {
-  grades: SearchBaseModel[];
-  subjects: SubjectModel[];
-  claims: CSEClaimModel[];
-  targets: SearchBaseModel[];
-}
-
-export interface CSEFilterParams {
-  grades: string[];
-  subject?: string;
-  claim?: string;
-  target?: string;
-}
+import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 
 export function createFilters(
-  filterOptions: CSEFilterOptions,
-  appliedParams: CSEFilterParams
+  options: CSEFilterOptions,
+  params: CSEFilterParams
 ): CSEAdvancedFilterModels {
-  const gradeFilter: AdvancedFilterCategoryModel = {
+  return {
+    gradeFilter: createGradeFilter(options, params),
+    subjectFilter: createSubjectFilter(options, params),
+    claimFilter: createClaimFilter(options, params),
+    targetFilter: createTargetFilter(options, params)
+  };
+}
+
+function createGradeFilter(
+  options: CSEFilterOptions,
+  params: CSEFilterParams
+): AdvancedFilterCategoryModel {
+  return {
     isMultiSelect: true,
     displayAllButton: false,
     disabled: false,
     label: 'Grade',
     code: FilterType.Grade,
-    filterOptions: filterOptions.grades.map(g => ({
+    filterOptions: options.grades.map(g => ({
       key: g.code,
       label: g.label,
-      isSelected: appliedParams.grades.indexOf(g.code) !== -1,
+      isSelected: params.grades.indexOf(g.code) !== -1,
       filterType: FilterType.Grade
     }))
   };
+}
 
-  const subjectFilter: AdvancedFilterCategoryModel = {
+function createSubjectFilter(
+  options: CSEFilterOptions,
+  params: CSEFilterParams
+): AdvancedFilterCategoryModel {
+  return {
     isMultiSelect: false,
     displayAllButton: true,
     disabled: false,
     label: 'Subject',
     code: FilterType.Subject,
-    filterOptions: filterOptions.subjects.map(s => ({
+    filterOptions: options.subjects.map(s => ({
       key: s.code,
       label: s.label,
-      isSelected: appliedParams.subject === s.code,
+      isSelected: params.subject === s.code,
       filterType: FilterType.Subject
     }))
   };
+}
 
-  const selectedSub = find(filterOptions.subjects, s => s.code === appliedParams.subject);
+function createClaimFilter(
+  options: CSEFilterOptions,
+  params: CSEFilterParams
+): AdvancedFilterCategoryModel {
+  const selectedSub = find(options.subjects, s => s.code === params.subject);
   const visibleClaimCodes = selectedSub ? selectedSub.claimCodes : undefined;
-  const claimFilter: AdvancedFilterCategoryModel = {
+
+  return {
     isMultiSelect: false,
     displayAllButton: true,
     disabled: !visibleClaimCodes,
     label: 'Claim',
     code: FilterType.Claim,
-    filterOptions: (visibleClaimCodes ? filterOptions.claims : [])
+    filterOptions: (visibleClaimCodes ? options.claims : [])
       .filter(c => (visibleClaimCodes || []).indexOf(c.code) !== -1)
       .map(c => ({
         label: c.label,
         key: c.code,
-        isSelected: appliedParams.claim === c.code,
+        isSelected: params.claim === c.code,
         filterType: FilterType.Claim
       }))
   };
+}
 
-  const selectedClaim = find(filterOptions.claims, c => c.code === appliedParams.claim);
+function createTargetFilter(
+  options: CSEFilterOptions,
+  params: CSEFilterParams
+): AdvancedFilterCategoryModel {
+  const selectedClaim = find(options.claims, c => c.code === params.claim);
   const visibleTargetCodes = selectedClaim ? selectedClaim.targetCodes : undefined;
-  const targetFilter: AdvancedFilterCategoryModel = {
+
+  return {
     isMultiSelect: false,
     displayAllButton: true,
     disabled: !visibleTargetCodes,
     label: 'Target',
     code: FilterType.Target,
-    filterOptions: (visibleTargetCodes ? filterOptions.targets : [])
+    filterOptions: (visibleTargetCodes ? options.targets : [])
       .filter(t => (visibleTargetCodes || []).indexOf(t.code) !== -1)
       .map(t => ({
         label: t.label,
         key: t.code,
-        isSelected: appliedParams.target === t.code,
+        isSelected: params.target === t.code,
         filterType: FilterType.Target
       }))
   };
-
-  return { gradeFilter, subjectFilter, claimFilter, targetFilter };
 }
 
 export function sanitizeParams(
