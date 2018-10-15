@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles, iconStyle } from '../../constants';
+import { Colors, Styles, iconStyle, mediaQueries } from '../../constants';
 import { Home, Search, Eye, Grid } from 'react-feather';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ export const MenuItem: React.SFC<MenuItemProps> = ({ children, name }) => (
         margin-right: ${Styles.paddingUnit};
       }
 
-      @media (max-width: 950px) {
+      @media ${mediaQueries.tabletAndMobile} {
         p {
           display: none;
         }

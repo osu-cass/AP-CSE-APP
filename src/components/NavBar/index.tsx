@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles, iconStyle } from '../../constants';
+import { Colors, Styles, iconStyle, mediaQueries, SizeBreaks } from '../../constants';
 import { MainMenu } from './MainMenu';
 import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';
@@ -18,7 +18,7 @@ export const HeaderLogo: React.SFC = () => (
         padding: 3px ${Styles.paddingUnit} 3px 3px;
       }
 
-      @media (max-width: 500px) {
+      @media ${mediaQueries.tabletAndMobile} {
         .sb-logo {
           width: 100px;
         }
@@ -37,7 +37,7 @@ export const NavBar: React.SFC = () => {
       <HeaderLogo />
       <nav>
         <div className="left-content">
-          <MediaQuery minWidth={715}>
+          <MediaQuery minWidth={SizeBreaks.mobile}>
             <MainMenu />
           </MediaQuery>
         </div>
@@ -50,7 +50,7 @@ export const NavBar: React.SFC = () => {
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
-          <MediaQuery minWidth={715}>
+          <MediaQuery minWidth={SizeBreaks.mobile}>
             <Link to="placeholder" style={noUnderline}>
               <Menu {...iconStyle} />
             </Link>
@@ -84,7 +84,7 @@ export const NavBar: React.SFC = () => {
           flex-grow: 1;
         }
 
-        @media (max-width: 500px) {
+        @media ${mediaQueries.tabletAndMobile} {
           .grow-search {
             flex-grow: 1;
           }

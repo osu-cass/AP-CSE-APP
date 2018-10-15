@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'react-feather';
-import { Colors } from '../../constants';
+import { Colors, mediaQueries } from '../../constants';
 
 export const SearchBar = (): JSX.Element => (
   <div className="search-bar">
@@ -33,7 +33,7 @@ export const SearchBar = (): JSX.Element => (
         padding: 0 0.5em;
         flex-grow: 1;
       }
-      @media (max-width: 500px) {
+      @media ${mediaQueries.tabletAndMobile} {
         .field {
           width: 0; //needed so browser will shrink it past default size
         }
