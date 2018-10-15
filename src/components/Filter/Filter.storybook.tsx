@@ -1,5 +1,5 @@
 import React from 'react';
-import { CSEFilterParams } from './FilterHelper';
+import { CSEFilterParams } from '../../models/filter';
 import { Filter } from './';
 import { filterOptions } from './__mocks__';
 import { storiesOf } from '@storybook/react';

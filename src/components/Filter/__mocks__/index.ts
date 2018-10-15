@@ -1,4 +1,4 @@
-import { CSEFilterOptions } from '../FilterHelper';
+import { CSEFilterOptions } from '../../../models/filter';
 
 export const filterOptions: CSEFilterOptions = {
   grades: [

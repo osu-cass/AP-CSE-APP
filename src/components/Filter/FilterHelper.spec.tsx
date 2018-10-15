@@ -1,7 +1,6 @@
 import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
 import { filterOptions } from './__mocks__';
 import { FilterType, AdvancedFilterCategoryModel } from '@osu-cass/sb-components';
-import { Filter } from 'react-feather';
 
 describe('FilterHelper.createFilters', () => {
   it('grade no params', () => {

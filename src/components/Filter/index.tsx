@@ -5,13 +5,8 @@ import {
   FilterOptionModel,
   FilterType
 } from '@osu-cass/sb-components';
-import {
-  CSEFilterOptions,
-  CSEFilterParams,
-  createFilters,
-  sanitizeParams,
-  paramsFromFilter
-} from './FilterHelper';
+import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
+import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 
 export interface FilterProps {
   options: CSEFilterOptions;
