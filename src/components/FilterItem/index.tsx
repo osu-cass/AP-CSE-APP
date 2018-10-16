@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export interface FilterItemProps {
   subject: string;
@@ -9,37 +10,40 @@ export interface FilterItemProps {
   targetLink: string;
 }
 
-const style = {
-  maxWidth: '1024px',
-  fontFamily: 'PT Sans Caption'
-};
-
 const linkStyle = {
   color: '#005A93',
   fontSize: '1.5em'
 };
 
-const breadcrumbStyle = {
-  color: '#AAAAAA'
-};
-
-const indentedStyle = {
-  marginLeft: '1.5em'
-};
-
-export const FilterItem = (props: FilterItemProps): JSX.Element => (
-  <div style={style}>
+export const FilterItem: React.SFC<FilterItemProps> = ({
+  targetLink,
+  targetName,
+  subject,
+  grade,
+  claim,
+  targetBodyText
+}) => (
+  <div>
     <div>
-      <a style={linkStyle} href={props.targetLink}>
-        {props.targetName}
-      </a>
+      <Link style={linkStyle} to={targetLink}>
+        {targetName}
+      </Link>
     </div>
-    <div style={indentedStyle}>
-      <div style={breadcrumbStyle}>
-        {props.subject} &gt; {props.grade} &gt; {props.claim}
+    <div className="indented">
+      <div className="breadcrumb">
+        {subject} &gt; {grade} &gt; {claim}
       </div>
-      <div>{props.targetBodyText}</div>
+      <div>{targetBodyText}</div>
     </div>
     <hr />
+    <style jsx>{`
+      .breadcrumb {
+        color: #aaa;
+      }
+
+      .indented {
+        margin-left: 1.5em;
+      }
+    `}</style>
   </div>
 );
