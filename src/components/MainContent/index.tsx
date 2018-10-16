@@ -92,6 +92,7 @@ export interface TaskModel {
 export interface MainContentProps {
   target: Target;
   names: TargetLayout;
+  subNames: SubLayout;
 }
 
 export const renderListItems = (items: string[]) =>
@@ -148,7 +149,7 @@ const RenderTaskModels = (
   stems: Stem[],
   evidence: string[],
   scoringRules: string[],
-  name: string
+  names: SubLayout
 ) =>
   taskModels.map((taskModel, index) => {
     const startIndex = index * 2;
@@ -163,7 +164,7 @@ const RenderTaskModels = (
         evidences={evidence}
         scoringRule={scoringRules[index]}
         index={index + 1}
-        name={name}
+        names={names}
       />
     );
   });
@@ -182,7 +183,7 @@ const RenderDOKs = (doks: DOK[]) =>
     );
   });
 
-export const MainContent = ({ target, names }: MainContentProps) => {
+export const MainContent = ({ target, names, subNames }: MainContentProps) => {
   const clarification = parseContent(target.clarification);
   const stimPassage = parseContent(target.stimInfo);
   const stimTextComplexity = parseContent(target.dualText);
@@ -193,7 +194,7 @@ export const MainContent = ({ target, names }: MainContentProps) => {
   return (
     <div className="container">
       <Section name={names.clarification}>
-        <MainHeader text="Clarification" />
+        <MainHeader text={names.clarification} />
         <Passage>{clarification}</Passage>
       </Section>
 
@@ -203,7 +204,7 @@ export const MainContent = ({ target, names }: MainContentProps) => {
       </Section>
 
       <Section name={names.stimInfo}>
-        <MainHeader text="Stimuli Passage/Text Complexity" />
+        <MainHeader text={names.stimInfo} />
         <Section name="stimuli-passage">
           <SubHeader text="Passage" />
           <Passage>{stimPassage}</Passage>
@@ -215,25 +216,19 @@ export const MainContent = ({ target, names }: MainContentProps) => {
       </Section>
 
       <Section name={names.accessibility}>
-        <MainHeader text="Accessibility Concerns" />
+        <MainHeader text={names.accessibility} />
         <Passage>{accessibility}</Passage>
       </Section>
 
       <Section name={names.evidence}>
-        <MainHeader text="Evidence Required" />
+        <MainHeader text={names.evidence} />
         <NumberList>{renderListItems(target.evidence)}</NumberList>
       </Section>
 
-      {RenderTaskModels(
-        target.taskModels,
-        target.stem,
-        target.evidence,
-        target.rubrics,
-        names.taskModels
-      )}
+      {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics, subNames)}
 
       <Section name={names.DOK}>
-        <MainHeader text="Depth of Knowledge" />
+        <MainHeader text={names.DOK} />
         <Passage>{RenderDOKs(target.DOK)}</Passage>
       </Section>
 

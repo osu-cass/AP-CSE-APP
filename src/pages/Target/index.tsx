@@ -102,7 +102,7 @@ export const parseTitleBarData = (claim: Claim): TitleBarProps => {
     claimDesc: claim.description,
     downloadBtnProps: downloadBtnMock,
     targetTitle: 'Placeholder Title',
-    targetDesc: claim['target'][0]['description']
+    targetDesc: claim.target[0].description
   };
 };
 
@@ -113,7 +113,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
         <ContentNav items={parseNavProps(target)} />
       </div>
       <div className="content-frame" id="content-frame">
-        <MainContent target={target} names={targetLayout} />
+        <MainContent target={target} names={targetLayout} subNames={subItemLayout} />
       </div>
       <div className="additional-materials">
         <AdditionalMaterials />

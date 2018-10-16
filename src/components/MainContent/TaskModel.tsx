@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderListItems, Stem, Task } from './index';
+import { renderListItems, Stem, Task, SubLayout } from './index';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
@@ -9,7 +9,7 @@ export interface TaskModelProps {
   evidences: string[];
   scoringRule: string;
   index: number;
-  name: string;
+  names: SubLayout;
 }
 
 const renderStemsBy = (target: string, stems: Stem[]) =>
@@ -42,25 +42,32 @@ const renderFormatExample = (example: string, sectionName: string) => {
   return elements;
 };
 
-export const TaskModel = ({ task, stems, evidences, scoringRule, index, name }: TaskModelProps) => {
+export const TaskModel = ({
+  task,
+  stems,
+  evidences,
+  scoringRule,
+  index,
+  names
+}: TaskModelProps) => {
   const taskPrefix = `taskModel${index}`;
   const desc = parseContent(task.taskDesc);
 
   return (
     <Section name={task.taskName}>
       <MainHeader text={task.taskName} />
-      <Section name={`${task.taskName}-Task Description`}>
-        <SubHeader text={'Task Description'} />
+      <Section name={`${task.taskName}-${names.taskDesc}`}>
+        <SubHeader text={names.taskDesc} />
         <Passage>{desc}</Passage>
       </Section>
 
-      <Section name={`${task.taskName}-Target Evidence Statements`}>
-        <SubHeader text={'Target Evidence Statements'} />
+      <Section name={`${task.taskName}-${names.evidence}`}>
+        <SubHeader text={names.evidence} />
         <NumberList>{renderListItems(evidences)}</NumberList>
       </Section>
 
-      <Section name={`${task.taskName}-Appropriate Stems`}>
-        <SubHeader text={'Appropriate Stems'} />
+      <Section name={`${task.taskName}-${names.stem}`}>
+        <SubHeader text={names.stem} />
         <NonBulletList>{renderAppropriateStems(stems)}</NonBulletList>
       </Section>
 
@@ -69,8 +76,8 @@ export const TaskModel = ({ task, stems, evidences, scoringRule, index, name }: 
         <NonBulletList>{renderDualTextOnlyStems(stems)}</NonBulletList>
       </Section>
 
-      <Section name={`${task.taskName}-Scoring Rules`}>
-        <SubHeader text={'Scoring Rules'} />
+      <Section name={`${task.taskName}-${names.rubrics}`}>
+        <SubHeader text={names.rubrics} />
         <Passage>{scoringRule}</Passage>
       </Section>
 
