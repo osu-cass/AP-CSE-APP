@@ -1,15 +1,12 @@
 import React from 'react';
-import { Search } from 'react-feather';
-import { Colors, blueGradientBgImg } from '../../constants';
 import { SearchBar } from '../SearchBar';
-import { TitleBar } from '../TitleBar';
 import { FilterItemList } from '../FilterItemList';
 import { Filter } from '../Filter';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { FilterItemProps } from '../FilterItem';
+import { GenericPage } from '../GenericPage';
 
 export interface SearchPageProps {
-  pageTitle: string;
   filterOptions: CSEFilterOptions;
   searchApi: (search: string) => FilterItemProps[];
 }
@@ -18,11 +15,6 @@ export interface SearchPageState {
   filterParams: CSEFilterParams;
   results: FilterItemProps[];
 }
-
-const style = {
-  ...blueGradientBgImg,
-  maxWidth: '1024px'
-};
 
 /**
  * Search page react component. Handles text searching and filtering
@@ -46,20 +38,28 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   };
 
   render() {
-    const { pageTitle, filterOptions } = this.props;
+    const { filterOptions } = this.props;
     const { filterParams, results } = this.state;
 
     return (
-      <div>
-        <div style={style}>
-          <TitleBar claimTitle={pageTitle} />
-        </div>
+      <GenericPage claimTitle="Find Targets">
         <SearchBar />
-        <div>
+        <div className="filter">
           <Filter options={filterOptions} params={filterParams} onUpdate={this.updateFilter} />
         </div>
         <FilterItemList allItems={results} />
-      </div>
+        <style jsx>{`
+          .filter {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          :global(.filter-selection) {
+            flex-grow: 0;
+            flex-basis: 200px;
+          }
+        `}</style>
+      </GenericPage>
     );
   }
 }

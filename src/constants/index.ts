@@ -14,9 +14,12 @@ export enum Styles {
   fontLarger = '18px',
   sbLetterSpacing = '-.02em',
   sbSans = 'PT Sans Caption',
-  sbSerif = 'PT Serif'
+  sbSerif = 'PT Serif',
+  maxPageWidth = '1024px'
 }
 
+export const blueGradient = `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`;
+
 export const blueGradientBgImg = {
-  backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
+  backgroundImage: blueGradient
 };
