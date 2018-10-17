@@ -326,6 +326,97 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
 </div>
 `;
 
+exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+          "maxWidth": "1024px",
+        }
+      }
+    >
+      <div>
+        <ul>
+          <li
+            className="title"
+          >
+            <span>
+              Claim 1
+            </span>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        // min-height: 100px;
+        padding: 20px;
+      }
+      div ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        list-style-type: none;
+      }
+      div ul li {
+        min-height: 30px;
+      }
+      .title {
+        width: 20%;
+        min-width: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+      }
+      .desc {
+        width: 75%;
+        min-width: 50px;
+        padding-bottom: 15px;
+        color: #ebebeb;
+        font-size: 14px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        margin-left: auto;
+        margin-top: auto;
+      }
+    
+        </style>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots TitleBar component Renders a download button 1`] = `
 <div
   style={
