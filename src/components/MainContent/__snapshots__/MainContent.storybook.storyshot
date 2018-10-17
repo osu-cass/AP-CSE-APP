@@ -264,7 +264,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           <div>
             <header>
               <h1>
-                Stimuli Passage/Text Complexity
+                Stimuli/Text Complexity
               </h1>
             </header>
             <div

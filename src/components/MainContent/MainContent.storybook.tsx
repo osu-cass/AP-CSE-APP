@@ -5,7 +5,7 @@ import centered from '@storybook/addon-centered';
 import { Colors } from '../../constants';
 import { MainContent } from './index';
 import { targetMock } from './__mocks__/target';
-import { targetLayout } from '../../pages/Target';
+import { targetLayout, subItemLayout } from '../../pages/Target';
 
 const style = {
   maxWidth: '800px',
@@ -18,6 +18,6 @@ storiesOf('MainContent component', module)
   .addDecorator(centered)
   .add('Renders a main content with target data', () => (
     <div style={style}>
-      <MainContent target={targetMock} names={targetLayout} />
+      <MainContent target={targetMock} names={targetLayout} subNames={subItemLayout} />
     </div>
   ));

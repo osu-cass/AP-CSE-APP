@@ -1046,7 +1046,7 @@ exports[`Storyshots Target Page Renders a nothing 1`] = `
               <div>
                 <header>
                   <h1>
-                    Stimuli Passage/Text Complexity
+                    Stimuli/Text Complexity
                   </h1>
                 </header>
                 <div
@@ -3401,7 +3401,7 @@ exports[`Storyshots Target Page Renders a target 1`] = `
               <div>
                 <header>
                   <h1>
-                    Stimuli Passage/Text Complexity
+                    Stimuli/Text Complexity
                   </h1>
                 </header>
                 <div

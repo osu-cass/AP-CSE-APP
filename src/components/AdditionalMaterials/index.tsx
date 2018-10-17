@@ -7,7 +7,7 @@ export interface AdditionalMaterialsProps {
   links: SbNavlinkProps[];
 }
 
-export const AdditionalMaterials = (): JSX.Element => {
+export const AdditionalMaterials: React.SFC = (): JSX.Element => {
   const sampleItemsContent = 'Sample Items, Scoring Guides and Rubrics';
   const annotatedContent = 'Annotated Student Work';
   const digitalLibraryContent = 'Digital Library Resources';
