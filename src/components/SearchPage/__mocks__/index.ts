@@ -35,7 +35,6 @@ export const filterItems: FilterItemProps[] = [
 // cSpell:disable
 export const searchPageMockProps: SearchPageProps = {
   filterOptions,
-  pageTitle: 'Find Targets',
-  searchApi: () => filterItems
+  searchApi: async () => filterItems
 };
 // cSpell:enable

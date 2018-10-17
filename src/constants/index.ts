@@ -5,7 +5,8 @@ export enum Colors {
   sbGray = '#63666A',
   sbGrayDarker = '#313335',
   sbGrayLighter = '#ebebeb',
-  sbGreenLighter = '#43b02a'
+  sbGreenLighter = '#43b02a',
+  sbError = '#8B0000'
 }
 
 export enum Styles {
