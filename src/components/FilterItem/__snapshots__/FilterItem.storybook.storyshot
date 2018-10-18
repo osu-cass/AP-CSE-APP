@@ -23,17 +23,11 @@ exports[`Storyshots FilterItem component FilterItem 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "fontFamily": "PT Sans Caption",
-          "maxWidth": "1024px",
-        }
-      }
-    >
+    <div>
       <div>
         <a
-          href=""
+          href="/"
+          onClick={[Function]}
           style={
             Object {
               "color": "#005A93",
@@ -41,34 +35,39 @@ exports[`Storyshots FilterItem component FilterItem 1`] = `
             }
           }
         >
-          Lorem ipsum
+          Donec aliquet, risus sed auctor sagittis
         </a>
       </div>
       <div
-        style={
-          Object {
-            "marginLeft": "1.5em",
-          }
-        }
+        className="indented"
       >
         <div
-          style={
-            Object {
-              "color": "#AAAAAA",
-            }
-          }
+          className="breadcrumb"
         >
-          enim
+          Lorem
            &gt; 
-          ad
+          Ipsum
            &gt; 
-          minim
+          Dolor
         </div>
         <div>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Curabitur gravida pretium metus, in malesuada nunc fringilla quis. Phasellus tincidunt, ligula ut commodo varius, mi nunc luctus mauris, sed dapibus dui mauris ac tortor. Praesent tincidunt id leo et feugiat. Etiam ut risus libero. Nullam tincidunt suscipit sem ac vestibulum. Donec at tortor ac metus pharetra blandit ut a diam. Nullam id tortor eu ligula malesuada feugiat. Etiam quis erat pharetra, eleifend risus sit amet, tempus nunc. Nunc commodo tincidunt nunc, viverra accumsan urna suscipit ut. Sed a porttitor quam. Morbi gravida dignissim nulla, at commodo felis ultrices quis.
         </div>
       </div>
       <hr />
+      <style
+        jsx={true}
+      >
+        
+      .breadcrumb {
+        color: #aaa;
+      }
+
+      .indented {
+        margin-left: 1.5em;
+      }
+    
+      </style>
     </div>
   </div>
 </div>
