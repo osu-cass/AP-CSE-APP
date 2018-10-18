@@ -44,6 +44,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
           aria-label="Search"
           className="field"
           type="search"
+          value={this.state.text}
           onChange={this.onTextUpdated}
           onKeyPress={this.onEnterPressed}
         />
