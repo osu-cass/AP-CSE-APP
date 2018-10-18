@@ -6,7 +6,7 @@ import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { FilterItemProps } from '../FilterItem';
 import { GenericPage } from '../GenericPage';
 import { Colors, Styles } from '../../constants';
-import css from 'styled-jsx/css';
+import { FilterContianer } from '../FilterContainer';
 
 export interface SearchPageProps {
   filterOptions: CSEFilterOptions;
@@ -24,27 +24,6 @@ enum ResultsState {
   error,
   fetched
 }
-
-const style = css`
-  .filter {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .error,
-  .message {
-    text-align: center;
-  }
-
-  .error {
-    color: ${Colors.sbError};
-  }
-
-  :global(.filter-selection) {
-    flex-grow: 0;
-    flex-basis: 200px;
-  }
-`;
 
 /**
  * Search page react component. Handles text searching and filtering
@@ -88,14 +67,23 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         return (
           <div className="message">
             Start by searching for a target
-            <style jsx>{style}</style>
+            <style jsx>{`
+              .message {
+                text-align: center;
+              }
+            `}</style>
           </div>
         );
       case ResultsState.error:
         return (
           <div className="error">
             Error fetching results from the server
-            <style jsx>{style}</style>
+            <style jsx>{`
+              .error {
+                color: ${Colors.sbError};
+                text-align: center;
+              }
+            `}</style>
           </div>
         );
       case ResultsState.fetched:
@@ -103,7 +91,11 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
           return (
             <div className="message">
               No results matched your query
-              <style jsx>{style}</style>
+              <style jsx>{`
+                .message {
+                  text-align: center;
+                }
+              `}</style>
             </div>
           );
         }
@@ -112,11 +104,23 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
     return (
       <Fragment>
-        <div className="filter">
-          <Filter options={filterOptions} params={filterParams} onUpdate={this.updateFilter} />
-        </div>
+        <FilterContianer>
+          <div className="filter">
+            <Filter options={filterOptions} params={filterParams} onUpdate={this.updateFilter} />
+          </div>
+        </FilterContianer>
         <FilterItemList allItems={results} />
-        <style jsx>{style}</style>
+        <style jsx>{`
+          .filter {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          :global(.filter-selection) {
+            flex-grow: 0;
+            flex-basis: 200px;
+          }
+        `}</style>
       </Fragment>
     );
   }

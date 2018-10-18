@@ -138,155 +138,29 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
       </style>
     </div>
     <div
-      className="filter"
+      className="content-container"
     >
       <div
-        className="filter-selection"
-        id="grade-filter"
+        className="message"
       >
-        <div
-          className="filter-container-header"
+        Start by searching for a target
+        <style
+          jsx={true}
         >
-          <label>
-            <div
-              className="tool-tip-links"
-              tabIndex={0}
-            >
-              <span
-                className="tool-tip-hoverable"
-              >
-                <span
-                  className="tooltip-label"
-                  info-label="true"
-                >
-                  Grade
-                </span>
-                 
-              </span>
-              <div
-                className="tool-tip-details"
-              />
-            </div>
-          </label>
-        </div>
-        <div
-          className="nested-btn-group btn-group-sm toggle-group vertical"
-          data-toggle="buttons"
-        >
-          <div
-            className="btn-group filter-btn-group"
-          >
-            <button
-              className="btn btn-primary "
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-            >
-              Elementary
-            </button>
-            <button
-              className="btn btn-primary "
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-            >
-              Middle School
-            </button>
-            <button
-              className="btn btn-primary "
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-            >
-              High School
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="filter-selection"
-        id="subject-filter"
-      >
-        <div
-          className="filter-container-header"
-        >
-          <label>
-            <div
-              className="tool-tip-links"
-              tabIndex={0}
-            >
-              <span
-                className="tool-tip-hoverable"
-              >
-                <span
-                  className="tooltip-label"
-                  info-label="true"
-                >
-                  Subject
-                </span>
-                 
-              </span>
-              <div
-                className="tool-tip-details"
-              />
-            </div>
-          </label>
-        </div>
-        <div
-          className="nested-btn-group btn-group-sm toggle-group vertical"
-          data-toggle="buttons"
-        >
-          <button
-            className="btn btn-primary active"
-            disabled={false}
-            onClick={[Function]}
-            role="button"
-          >
-            All
-          </button>
-          <div
-            className="btn-group filter-btn-group"
-          >
-            <button
-              className="btn btn-primary "
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-            >
-              Math
-            </button>
-            <button
-              className="btn btn-primary "
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-            >
-              English
-            </button>
-          </div>
-        </div>
+          
+              .message {
+                text-align: center;
+              }
+            
+        </style>
       </div>
     </div>
-    <ul
-      className="list"
-      role="menu"
-    />
     <style
       jsx={true}
     >
       
-          .filter {
-            display: flex;
-            flex-wrap: wrap;
-          }
-
-          .error {
-            color: #8B0000;
-          }
-
-          :global(.filter-selection) {
-            flex-grow: 0;
-            flex-basis: 200px;
+          .content-container {
+            margin: 20px 0;
           }
         
     </style>
