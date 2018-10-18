@@ -1,3 +1,5 @@
+import '@babel/polyfill';
+
 import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
