@@ -22,7 +22,7 @@ export class FilterItemList extends Component<FilterItemListProps, FilterItemLis
   }
 
   render() {
-    const listItems = this.props.allItems.map(t => <FilterItem {...t} />);
+    const listItems = this.props.allItems.map((t, i) => <FilterItem key={i} {...t} />);
 
     return (
       <React.Fragment>
