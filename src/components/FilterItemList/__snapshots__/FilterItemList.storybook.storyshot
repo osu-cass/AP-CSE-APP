@@ -27,17 +27,11 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       className="list"
       role="menu"
     >
-      <div
-        style={
-          Object {
-            "fontFamily": "PT Sans Caption",
-            "maxWidth": "1024px",
-          }
-        }
-      >
+      <div>
         <div>
           <a
-            href=""
+            href="/"
+            onClick={[Function]}
             style={
               Object {
                 "color": "#005A93",
@@ -49,18 +43,10 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
           </a>
         </div>
         <div
-          style={
-            Object {
-              "marginLeft": "1.5em",
-            }
-          }
+          className="indented"
         >
           <div
-            style={
-              Object {
-                "color": "#AAAAAA",
-              }
-            }
+            className="breadcrumb"
           >
             Lorem
              &gt; 
@@ -73,18 +59,25 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
           </div>
         </div>
         <hr />
+        <style
+          jsx={true}
+        >
+          
+      .breadcrumb {
+        color: #aaa;
+      }
+
+      .indented {
+        margin-left: 1.5em;
+      }
+    
+        </style>
       </div>
-      <div
-        style={
-          Object {
-            "fontFamily": "PT Sans Caption",
-            "maxWidth": "1024px",
-          }
-        }
-      >
+      <div>
         <div>
           <a
-            href=""
+            href="/"
+            onClick={[Function]}
             style={
               Object {
                 "color": "#005A93",
@@ -96,18 +89,10 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
           </a>
         </div>
         <div
-          style={
-            Object {
-              "marginLeft": "1.5em",
-            }
-          }
+          className="indented"
         >
           <div
-            style={
-              Object {
-                "color": "#AAAAAA",
-              }
-            }
+            className="breadcrumb"
           >
             Integer
              &gt; 
@@ -120,18 +105,25 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
           </div>
         </div>
         <hr />
+        <style
+          jsx={true}
+        >
+          
+      .breadcrumb {
+        color: #aaa;
+      }
+
+      .indented {
+        margin-left: 1.5em;
+      }
+    
+        </style>
       </div>
-      <div
-        style={
-          Object {
-            "fontFamily": "PT Sans Caption",
-            "maxWidth": "1024px",
-          }
-        }
-      >
+      <div>
         <div>
           <a
-            href=""
+            href="/"
+            onClick={[Function]}
             style={
               Object {
                 "color": "#005A93",
@@ -143,18 +135,10 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
           </a>
         </div>
         <div
-          style={
-            Object {
-              "marginLeft": "1.5em",
-            }
-          }
+          className="indented"
         >
           <div
-            style={
-              Object {
-                "color": "#AAAAAA",
-              }
-            }
+            className="breadcrumb"
           >
             Duis
              &gt; 
@@ -167,6 +151,19 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
           </div>
         </div>
         <hr />
+        <style
+          jsx={true}
+        >
+          
+      .breadcrumb {
+        color: #aaa;
+      }
+
+      .indented {
+        margin-left: 1.5em;
+      }
+    
+        </style>
       </div>
     </ul>
   </div>
