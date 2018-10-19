@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
 
-import { ELAG3ClaimMock } from '../../../mock_api_data/E.G3.C1';
+import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 import {
   TargetPage,
   parseBreadCrumbData,

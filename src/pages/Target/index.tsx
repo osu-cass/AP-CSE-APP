@@ -15,11 +15,20 @@ import {
   SubLayout,
   TaskModel
 } from '../../components/MainContent';
-import { ELAG3ClaimMock } from '../../../mock_api_data/E.G3.C1';
+// import { ELAG3ClaimSmallMock } from '../../../mock_api_data/E.G3.C1';
 import { targetMock } from './__mocks__';
 
 export interface TargetPageProps {
   url: string;
+}
+
+export interface TargetPageState {
+  url: string;
+  contentLoaded: boolean;
+  claim?: Claim;
+  target?: Target;
+  breadCrumbProps: BreadcrumbsProps;
+  titleBarProps: TitleBarProps;
 }
 
 export interface ContentFrameProps {
@@ -143,47 +152,97 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
   );
 };
 
-export const TargetPage = ({ url }: TargetPageProps): JSX.Element => {
+/**
+ * Renders the page for viewing a single target.
+ * @export
+ * @class {TargetPage}
+ * @param {TargetPageProps} item
+ */
+export class TargetPage extends Component<TargetPageProps, TargetPageState> {
   /*
    * This here content is waiting to be replaced with functionality
    * to make requests to the API.
    */
-  const claim = ELAG3ClaimMock;
-  let target: Target;
-  target = url === 'blank' ? targetMock : claim.target[0];
 
-  const breadCrumbProps: BreadcrumbsProps = parseBreadCrumbData(claim);
-  const titleBarProps: TitleBarProps = parseTitleBarData(claim);
+  constructor(props: TargetPageProps) {
+    super(props);
+    this.state = {
+      url: '',
+      contentLoaded: false,
+      breadCrumbProps: {subject: '', grade: '', claim: '', target: ''},
+      titleBarProps: {}
+    };
+  }
 
-  return (
-    <>
-      <div className="content">
-        <div style={style}>
-          <Breadcrumbs
-            subject={breadCrumbProps.subject}
-            grade={breadCrumbProps.grade}
-            claim={breadCrumbProps.claim}
-            target={breadCrumbProps.target}
-          />
-          <TitleBar
-            claimTitle={titleBarProps.claimTitle}
-            claimDesc={titleBarProps.claimDesc}
-            targetTitle={titleBarProps.targetTitle}
-            targetDesc={titleBarProps.targetDesc}
-            downloadBtnProps={titleBarProps.downloadBtnProps}
-          />
+  componentWillMount() {
+    this.loadData().then((data) => {
+      if (data !== undefined) {
+        this.setState({
+          url: '',
+          claim: data,
+          target: this.props.url === 'blank' ? targetMock : data.target[0],
+          contentLoaded: true,
+          breadCrumbProps: parseBreadCrumbData(data),
+          titleBarProps: parseTitleBarData(data)
+        });
+      }
+    }).catch(()=> {
+      Error('hello');
+    });
+  }
+
+   loadData() {
+    let data: Claim | undefined;
+    let promise = Promise.resolve();
+    promise = promise.then( () => {
+      return import('../../../mock_api_data/E.G3.C1').then(
+        rawData => {
+          data = rawData.default as unknown as Claim;
+        }
+      );
+    });
+
+    return promise.then(() => {
+      return data;
+    });
+  }
+
+  render() {
+    const { subject, grade, claim, target } = this.state.breadCrumbProps;
+    const { claimTitle, claimDesc, targetTitle, targetDesc, downloadBtnProps } = this.state.titleBarProps;
+
+    return (this.state.target === undefined ?
+      <div>Loading data...</div>
+    :
+      <>
+        <div className="content">
+          <div style={style}>
+            <Breadcrumbs
+              subject={subject}
+              grade={grade}
+              claim={claim}
+              target={target}
+              />
+            <TitleBar
+              claimTitle={claimTitle}
+              claimDesc={claimDesc}
+              targetTitle={targetTitle}
+              targetDesc={targetDesc}
+              downloadBtnProps={downloadBtnProps}
+              />
+          </div>
+          <ContentFrame target={this.state.target} />
+          <style jsx>{`
+            .content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              max-height: calc(100vh - 64px);
+            }
+          `}</style>
         </div>
-        <ContentFrame target={target} />
-        <style jsx>{`
-          .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            max-height: calc(100vh - 64px);
-          }
-        `}</style>
-      </div>
-    </>
-  );
-};
+      </>
+    );
+  }
+}
