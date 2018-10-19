@@ -7,7 +7,7 @@ import { withConsole } from '@storybook/addon-console';
 
 import 'typeface-pt-serif/index.css'
 import 'typeface-pt-sans-caption/index.css'
-import '../node_modules/@osu-cass/sb-components/lib/Assets/Styles/bundle.less'
+//import '../node_modules/@osu-cass/sb-components/lib/Assets/Styles/bundle.less'
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 addDecorator(checkA11y)

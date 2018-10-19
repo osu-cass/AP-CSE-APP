@@ -23,9 +23,7 @@ class FilterTest extends React.Component<CSEFilterParams, CSEFilterParams> {
       <div>
         Filter Object:
         <code>{JSON.stringify(this.state)}</code>
-        <div style={{ display: 'flex' }}>
-          <Filter options={filterOptions} params={this.state} onUpdate={this.updateState} />
-        </div>
+        <Filter options={filterOptions} params={this.state} onUpdate={this.updateState} />
       </div>
     );
   }

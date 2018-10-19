@@ -74,6 +74,7 @@ exports[`Storyshots FilterContianer default 1`] = `
             background-color: #eee;
             border-top: 1px solid #63666A;
             border-bottom: 1px solid #63666A;
+            padding: 20px;
           }
           .chevron {
             color: gray;
@@ -167,6 +168,7 @@ exports[`Storyshots FilterContianer expanded 1`] = `
             background-color: #eee;
             border-top: 1px solid #63666A;
             border-bottom: 1px solid #63666A;
+            padding: 20px;
           }
           .chevron {
             color: gray;

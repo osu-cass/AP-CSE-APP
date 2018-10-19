@@ -1,6 +1,6 @@
 import React, { KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Filter } from 'react-feather';
-import { Colors } from '../../constants';
+import { Colors, Styles } from '../../constants';
 
 export interface FilterContianerProps {
   expanded?: boolean;
@@ -58,6 +58,7 @@ export class FilterContianer extends React.Component<FilterContianerProps, Filte
             background-color: #eee;
             border-top: 1px solid ${Colors.sbGray};
             border-bottom: 1px solid ${Colors.sbGray};
+            padding: ${Styles.paddingUnit};
           }
           .chevron {
             color: gray;

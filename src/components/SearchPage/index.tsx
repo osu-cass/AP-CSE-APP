@@ -105,22 +105,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     return (
       <Fragment>
         <FilterContianer>
-          <div className="filter">
-            <Filter options={filterOptions} params={filterParams} onUpdate={this.updateFilter} />
-          </div>
+          <Filter options={filterOptions} params={filterParams} onUpdate={this.updateFilter} />
         </FilterContianer>
         <FilterItemList allItems={results} />
-        <style jsx>{`
-          .filter {
-            display: flex;
-            flex-wrap: wrap;
-          }
-
-          :global(.filter-selection) {
-            flex-grow: 0;
-            flex-basis: 200px;
-          }
-        `}</style>
       </Fragment>
     );
   }

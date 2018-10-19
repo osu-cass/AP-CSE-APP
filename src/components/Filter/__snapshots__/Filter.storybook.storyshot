@@ -29,11 +29,7 @@ exports[`Storyshots Filter default 1`] = `
         {"grades":[]}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -162,6 +158,71 @@ exports[`Storyshots Filter default 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -196,11 +257,7 @@ exports[`Storyshots Filter invalid 1`] = `
         {"grades":["ms"],"claim":"m1","target":"pf"}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -329,6 +386,71 @@ exports[`Storyshots Filter invalid 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -363,11 +485,7 @@ exports[`Storyshots Filter invalid 2 1`] = `
         {"grades":["ms"],"subject":"math","target":"pf"}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -559,6 +677,71 @@ exports[`Storyshots Filter invalid 2 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -593,11 +776,7 @@ exports[`Storyshots Filter selected grade 1`] = `
         {"grades":["ms"]}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -726,6 +905,71 @@ exports[`Storyshots Filter selected grade 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -760,11 +1004,7 @@ exports[`Storyshots Filter selected grades, subject, claim, target 1`] = `
         {"grades":["ms","hs"],"subject":"math","claim":"m1","target":"pf"}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -1019,6 +1259,71 @@ exports[`Storyshots Filter selected grades, subject, claim, target 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -1053,11 +1358,7 @@ exports[`Storyshots Filter selected subject 1`] = `
         {"grades":[],"subject":"math"}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -1249,6 +1550,71 @@ exports[`Storyshots Filter selected subject 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -1283,11 +1649,7 @@ exports[`Storyshots Filter selected subject, claim 1`] = `
         {"grades":[],"subject":"math","claim":"m1"}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -1542,6 +1904,71 @@ exports[`Storyshots Filter selected subject, claim 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
@@ -1576,11 +2003,7 @@ exports[`Storyshots Filter selected subject, claim, target 1`] = `
         {"grades":[],"subject":"math","claim":"m1","target":"pf"}
       </code>
       <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
+        className="filter"
       >
         <div
           className="filter-selection"
@@ -1835,6 +2258,71 @@ exports[`Storyshots Filter selected subject, claim, target 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+  .filter-selection {
+    margin-right: 20px;
+  }
+
+  .tooltip-label {
+    font-weight: bold;
+  }
+
+  .btn {
+    border: 1px solid #63666A;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 7px;
+    margin: 2px 0;
+  }
+
+  .btn.active {
+    background-image: linear-gradient(90deg, #006298, #0085AD);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .nested-btn-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: 4px;
+    margin-left: 4px;
+  }
+
+      </style>
     </div>
   </div>
 </div>
