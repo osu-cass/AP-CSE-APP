@@ -15,7 +15,6 @@ import {
   SubLayout,
   TaskModel
 } from '../../components/MainContent';
-// import { ELAG3ClaimSmallMock } from '../../../mock_api_data/E.G3.C1';
 import { targetMock } from './__mocks__';
 
 export interface TargetPageProps {
@@ -169,37 +168,38 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.state = {
       url: '',
       contentLoaded: false,
-      breadCrumbProps: {subject: '', grade: '', claim: '', target: ''},
+      breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
   }
 
   componentWillMount() {
-    this.loadData().then((data) => {
-      if (data !== undefined) {
-        this.setState({
-          url: '',
-          claim: data,
-          target: this.props.url === 'blank' ? targetMock : data.target[0],
-          contentLoaded: true,
-          breadCrumbProps: parseBreadCrumbData(data),
-          titleBarProps: parseTitleBarData(data)
-        });
-      }
-    }).catch(()=> {
-      Error('hello');
-    });
+    this.loadData()
+      .then(data => {
+        if (data !== undefined) {
+          this.setState({
+            url: '',
+            claim: data,
+            target: this.props.url === 'blank' ? targetMock : data.target[0],
+            contentLoaded: true,
+            breadCrumbProps: parseBreadCrumbData(data),
+            titleBarProps: parseTitleBarData(data)
+          });
+        }
+      })
+      .catch(() => {
+        Error('hello');
+      });
   }
 
-   loadData() {
+  /*tslint:disable: promise-function-async */
+  loadData() {
     let data: Claim | undefined;
     let promise = Promise.resolve();
-    promise = promise.then( () => {
-      return import('../../../mock_api_data/E.G3.C1').then(
-        rawData => {
-          data = rawData.default as unknown as Claim;
-        }
-      );
+    promise = promise.then(() => {
+      return import('../../../mock_api_data/E.G3.C1').then(rawData => {
+        data = (rawData.default as unknown) as Claim;
+      });
     });
 
     return promise.then(() => {
@@ -209,27 +209,28 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   render() {
     const { subject, grade, claim, target } = this.state.breadCrumbProps;
-    const { claimTitle, claimDesc, targetTitle, targetDesc, downloadBtnProps } = this.state.titleBarProps;
+    const {
+      claimTitle,
+      claimDesc,
+      targetTitle,
+      targetDesc,
+      downloadBtnProps
+    } = this.state.titleBarProps;
 
-    return (this.state.target === undefined ?
+    return this.state.target === undefined ? (
       <div>Loading data...</div>
-    :
+    ) : (
       <>
         <div className="content">
           <div style={style}>
-            <Breadcrumbs
-              subject={subject}
-              grade={grade}
-              claim={claim}
-              target={target}
-              />
+            <Breadcrumbs subject={subject} grade={grade} claim={claim} target={target} />
             <TitleBar
               claimTitle={claimTitle}
               claimDesc={claimDesc}
               targetTitle={targetTitle}
               targetDesc={targetDesc}
               downloadBtnProps={downloadBtnProps}
-              />
+            />
           </div>
           <ContentFrame target={this.state.target} />
           <style jsx>{`
