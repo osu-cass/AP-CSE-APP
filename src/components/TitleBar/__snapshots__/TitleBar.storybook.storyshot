@@ -330,47 +330,54 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
     <div
       style={
         Object {
-          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "maxWidth": "1024px",
+          "margin": "auto",
+          "maxHeight": "100%",
         }
       }
     >
-      <div>
-        <ul>
-          <li
-            className="title"
+      <div
+        style={
+          Object {
+            "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+            "maxWidth": "1024px",
+          }
+        }
+      >
+        <div>
+          <ul>
+            <li
+              className="title"
+            >
+              <span>
+                Claim 1
+              </span>
+            </li>
+          </ul>
+          <style
+            jsx={true}
           >
-            <span>
-              Claim 1
-            </span>
-          </li>
-        </ul>
-        <style
-          jsx={true}
-        >
-          
+            
       * {
         margin: 0;
         padding: 0;
@@ -410,7 +417,8 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         margin-top: auto;
       }
     
-        </style>
+          </style>
+        </div>
       </div>
     </div>
   </div>
