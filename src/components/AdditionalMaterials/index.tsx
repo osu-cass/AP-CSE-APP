@@ -7,10 +7,13 @@ export interface AdditionalMaterialsProps {
   links: SbNavlinkProps[];
 }
 
+enum Content {
+  sampleItemsContent = 'Sample Items, Scoring Guides and Rubrics',
+  annotatedContent = 'Annotated Student Work',
+  digitalLibraryContent = 'Digital Library Resources'
+}
+
 export const AdditionalMaterials: React.SFC = (): JSX.Element => {
-  const sampleItemsContent = 'Sample Items, Scoring Guides and Rubrics';
-  const annotatedContent = 'Annotated Student Work';
-  const digitalLibraryContent = 'Digital Library Resources';
   const buildContent = (content: string): JSX.Element => (
     <div>
       <HelpCircle />
@@ -31,9 +34,9 @@ export const AdditionalMaterials: React.SFC = (): JSX.Element => {
 
   return (
     <div>
-      <SbNavLink url={''} content={buildContent(sampleItemsContent)} />
-      <SbNavLink url={''} content={buildContent(annotatedContent)} />
-      <SbNavLink url={''} content={buildContent(digitalLibraryContent)} />
+      <SbNavLink url={''} content={buildContent(Content.sampleItemsContent)} />
+      <SbNavLink url={''} content={buildContent(Content.annotatedContent)} />
+      <SbNavLink url={''} content={buildContent(Content.digitalLibraryContent)} />
     </div>
   );
 };
