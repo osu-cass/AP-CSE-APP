@@ -16,10 +16,6 @@ export interface BreadcrumbsProps {
   target?: string;
 }
 
-const style = {
-  color: 'white'
-};
-
 /**
  * Renders breadcrumbs starting with a home button. It renders the only props that exist
  * @export
@@ -33,9 +29,9 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
   <div>
     <ul>
       <li>
-        <Link style={style} to="/">
+        <Link to="/">
           <span aria-label="Home">
-            <Home />
+            <Home color={Colors.sbWhite} />
           </span>
         </Link>
       </li>
@@ -62,6 +58,9 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
       * {
         margin: 0;
         padding: 0;
+      }
+      a {
+        color: white;
       }
       div {
         display: flex;

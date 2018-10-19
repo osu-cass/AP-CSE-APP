@@ -27,7 +27,11 @@ const style = {
  * @param {SubjectType | GradeType | ClaimType | string} value
  * @param {string} label
  */
-export const BreadcrumbLink = ({ link, value, label }: BreadcrumbLinkProps) => (
+export const BreadcrumbLink: React.SFC<BreadcrumbLinkProps> = ({
+  link,
+  value,
+  label
+}): JSX.Element => (
   <li>
     <Link style={style} to={link}>
       <span aria-label={label}>{value}</span>
