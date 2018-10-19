@@ -25,21 +25,16 @@ const renderDualTextOnlyStems = (stems: Stem[]) =>
   renderStemsBy('Appropriate Stems for Dual-Text Stimuli', stems);
 
 const renderFormatExample = (example: string, sectionName: string) => {
-  let elements: JSX.Element | undefined;
-
   // If example data has 'NA' or 'Examples', ignore them temporarily.
   // If API changes how to present none for example, this block should change.
-  if (example === 'NA') return;
-  if (example === 'Examples') return;
-
-  elements = (
-    <Section name={sectionName}>
-      <SubHeader text={'Format Example'} />
-      <Passage>{parseContent(example)}</Passage>
-    </Section>
-  );
-
-  return elements;
+  if (example !== 'NA' && example !== 'Examples') {
+    return (
+      <Section name={sectionName}>
+        <SubHeader text={'Format Example'} />
+        <Passage>{parseContent(example)}</Passage>
+      </Section>
+    );
+  }
 };
 
 export const TaskModel = ({

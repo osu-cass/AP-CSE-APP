@@ -183,7 +183,7 @@ const RenderDOKs = (doks: DOK[]) =>
     );
   });
 
-export const MainContent = ({ target, names, subNames }: MainContentProps) => {
+export const MainContent: React.SFC<MainContentProps> = ({ target, names, subNames }) => {
   const clarification = parseContent(target.clarification);
   const stimPassage = parseContent(target.stimInfo);
   const stimTextComplexity = parseContent(target.dualText);
