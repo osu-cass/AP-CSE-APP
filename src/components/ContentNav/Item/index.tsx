@@ -21,7 +21,7 @@ export interface ChevronProps {
   itemName: string;
 }
 
-export const Chevron = ({ expanded, expand, itemName }: ChevronProps) => {
+export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName }) => {
   if (expanded) {
     return (
       <ChevronUp

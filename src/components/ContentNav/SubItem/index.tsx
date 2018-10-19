@@ -21,7 +21,7 @@ export interface SubItemProps {
  * @param {boolean} [active]
  * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
  */
-export const SubItem = ({ name, active, activate }: SubItemProps) => {
+export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => {
   const subName = name.split('-')[1];
 
   return (

@@ -55,15 +55,19 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   }
 
-  subItemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    event.stopPropagation();
+  scrollPageTo = (name: string, scrollOffset: number) => {
     Scroll.scroller.scrollTo(name, {
       duration: 0,
       delay: 0,
       smooth: false,
       containerId: 'content-frame',
-      offset: -250
+      offset: scrollOffset
     });
+  };
+
+  subItemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
+    event.stopPropagation();
+    this.scrollPageTo(name, -250);
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
       item.subItems = item.subItems.map((subItem: SubItemProps) => {
@@ -82,13 +86,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   };
 
   itemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    Scroll.scroller.scrollTo(name, {
-      duration: 0,
-      delay: 0,
-      smooth: false,
-      containerId: 'content-frame',
-      offset: -225
-    });
+    this.scrollPageTo(name, -225);
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
       let newSubItems: SubItemProps[] = [];
@@ -117,6 +115,23 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   };
 
+  renderSubItems = (subItems: SubItemProps[]) => {
+    if (subItems.length > 0) {
+      return subItems.map((subItem: SubItemProps) => {
+        return (
+          <SubItem
+            name={subItem.name}
+            active={subItem.active}
+            activate={this.subItemClicked}
+            key={`${name}-${subItem.name}`}
+          />
+        );
+      });
+    }
+
+    return false;
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -133,17 +148,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
                   expand={this.expand}
                   key={name}
                 >
-                  {subItems.length > 0 &&
-                    subItems.map(subItem => {
-                      return (
-                        <SubItem
-                          name={subItem.name}
-                          active={subItem.active}
-                          activate={this.subItemClicked}
-                          key={`${name}-${subItem.name}`}
-                        />
-                      );
-                    })}
+                  {this.renderSubItems(subItems)}
                 </Item>
               );
             })}
