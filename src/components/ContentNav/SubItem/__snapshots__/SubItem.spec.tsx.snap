@@ -10,9 +10,7 @@ exports[`SubItem should be active 1`] = `
     onClick={[Function]}
     role="menuitem"
   >
-    <p>
-      Test Name
-    </p>
+    <p />
     <style
       jsx={true}
     >

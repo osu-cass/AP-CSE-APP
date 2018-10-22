@@ -493,6 +493,7 @@ exports[`Storyshots NavBar component NavBar 1`] = `
           border-radius: 0px;
           box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
           display: flex;
+          font-family: PT Sans Caption;
           justify-content: space-between;
           padding: 20px / 2;
         }
