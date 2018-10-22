@@ -1,13 +1,15 @@
 import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
 import { filterOptions } from './__mocks__';
-import { FilterType, AdvancedFilterCategoryModel } from '@osu-cass/sb-components';
+import {
+  FilterType,
+  AdvancedFilterCategoryModel,
+  FilterOptionModel
+} from '@osu-cass/sb-components';
 
-describe('FilterHelper.createFilters', () => {
-  it('grade no params', () => {
-    const params = { grades: [] };
-    const result = createFilters(filterOptions, params);
-
-    const expectation: AdvancedFilterCategoryModel = {
+describe('FilterHelper.createFilters for grade', () => {
+  let expectation: AdvancedFilterCategoryModel;
+  beforeEach(() => {
+    expectation = {
       isMultiSelect: true,
       displayAllButton: false,
       disabled: false,
@@ -20,6 +22,12 @@ describe('FilterHelper.createFilters', () => {
         filterType: FilterType.Grade
       }))
     };
+  });
+
+  it('grade no params', () => {
+    const params = { grades: [] };
+    const result = createFilters(filterOptions, params);
+
     expect(result.gradeFilter).toEqual(expectation);
   });
 
