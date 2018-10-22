@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Colors, Styles } from '../../../constants';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { SubItemProps } from '../SubItem';
@@ -12,7 +12,6 @@ export interface ItemProps extends SubItemProps {
   expanded?: boolean;
   subItems: SubItemProps[];
   expand?: (e: React.MouseEvent<SVGElement>, n: string) => void;
-  children?: JSX.Element[] | JSX.Element | boolean;
 }
 
 export interface ChevronProps {
@@ -52,7 +51,14 @@ export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName })
  * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
  * @param {JSX.Element[]<LeftMouse> | JSX.Element} [children]
  */
-export const Item = ({ name, active, activate, expanded, expand, children }: ItemProps) => {
+export const Item: React.SFC<ItemProps> = ({
+  name,
+  active,
+  activate,
+  expanded,
+  expand,
+  children
+}) => {
   // const itemHeight = '0.75em';
   const itemHeight = '3em';
   const sideLength = `calc(${itemHeight} / ${Math.SQRT2} + 3px)`;
