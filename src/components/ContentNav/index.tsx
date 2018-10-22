@@ -137,21 +137,19 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       <React.Fragment>
         <div className="outer">
           <ul className="list" role="menu">
-            {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => {
-              return (
-                <Item
-                  name={name}
-                  subItems={subItems}
-                  expanded={expanded}
-                  active={active}
-                  activate={this.itemClicked}
-                  expand={this.expand}
-                  key={name}
-                >
-                  {this.renderSubItems(subItems)}
-                </Item>
-              );
-            })}
+            {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
+              <Item
+                name={name}
+                subItems={subItems}
+                expanded={expanded}
+                active={active}
+                activate={this.itemClicked}
+                expand={this.expand}
+                key={name}
+              >
+                {this.renderSubItems(subItems)}
+              </Item>
+            ))}
           </ul>
           <div className="buffer" />
         </div>
