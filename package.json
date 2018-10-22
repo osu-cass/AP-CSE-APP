@@ -72,6 +72,7 @@
   },
   "dependencies": {
     "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
+    "promise-polyfill": "^8.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-feather": "^1.1.1",
@@ -80,7 +81,8 @@
     "react-scroll": "^1.7.10",
     "styled-jsx": "^3.0.2",
     "typeface-pt-sans-caption": "0.0.54",
-    "typeface-pt-serif": "0.0.54"
+    "typeface-pt-serif": "0.0.54",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
