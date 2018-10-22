@@ -87,6 +87,7 @@ export const NavBar = (props: NavBarProps): JSX.Element => {
           border-radius: 0px;
           box-shadow: ${Styles.shadow};
           display: flex;
+          font-family: ${Styles.sbSans};
           justify-content: space-between;
           padding: ${Styles.paddingUnit} / 2;
         }
