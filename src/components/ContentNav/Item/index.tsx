@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Colors, Styles } from '../../../constants';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { SubItemProps } from '../SubItem';
@@ -10,9 +10,8 @@ import { SubItemProps } from '../SubItem';
  */
 export interface ItemProps extends SubItemProps {
   expanded?: boolean;
-  subItems?: SubItemProps[];
+  subItems: SubItemProps[];
   expand?: (e: React.MouseEvent<SVGElement>, n: string) => void;
-  children?: JSX.Element[] | JSX.Element;
 }
 
 export interface ChevronProps {
@@ -21,7 +20,7 @@ export interface ChevronProps {
   itemName: string;
 }
 
-export const Chevron = ({ expanded, expand, itemName }: ChevronProps) => {
+export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName }) => {
   if (expanded) {
     return (
       <ChevronUp
@@ -52,7 +51,18 @@ export const Chevron = ({ expanded, expand, itemName }: ChevronProps) => {
  * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
  * @param {JSX.Element[]<LeftMouse> | JSX.Element} [children]
  */
-export const Item = ({ name, active, activate, expanded, expand, children }: ItemProps) => {
+export const Item: React.SFC<ItemProps> = ({
+  name,
+  active,
+  activate,
+  expanded,
+  expand,
+  children
+}) => {
+  // const itemHeight = '0.75em';
+  const itemHeight = '3em';
+  const sideLength = `calc(${itemHeight} / ${Math.SQRT2} + 3px)`;
+
   return (
     <li
       key={name}
@@ -79,8 +89,8 @@ export const Item = ({ name, active, activate, expanded, expand, children }: Ite
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: ${Styles.fontLarger};
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -109,22 +119,22 @@ export const Item = ({ name, active, activate, expanded, expand, children }: Ite
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / ${Math.SQRT2} + 5px);
-          width: calc(2em / ${Math.SQRT2} + 5px);
-          right: calc(-1 * calc(calc(2em / ${Math.SQRT2}) / 2) - 3px);
-          top: calc(calc(2em / ${Math.SQRT2}) / 2 - 8px);
+          height: ${sideLength};
+          width: ${sideLength};
+          right: calc(-1 * calc(calc(${itemHeight} / ${Math.SQRT2}) / 2) - 3px);
+          top: calc(calc(${itemHeight} / ${Math.SQRT2}) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: ${Colors.sbWhite};

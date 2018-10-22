@@ -1,54 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ContentNav Default 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="outer"
-    >
-      <ul
-        className="list"
-        role="menu"
+exports[`Item should be active 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Unknown
+    active={true}
+    name="Test Name"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "active": true,
+      "name": "Test Name",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <li
+        role="menuitem"
       >
-        <li
-          onClick={[Function]}
-          role="menuitem"
+        <div
+          class="active"
         >
           <div
-            className=""
+            class="item-content"
+          >
+            Test Name
+            <div
+              class="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          class="sub-list "
+        />
+        <style>
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>,
+      "key": "Test Name",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="active"
           >
             <div
               className="item-content"
             >
-              Clarifications
+              Test Name
               <div
                 className="chevron"
               />
             </div>
-          </div>
+          </div>,
           <ul
             className="sub-list "
-          />
+          />,
           <style
             jsx={true}
           >
@@ -113,512 +190,419 @@ exports[`Storyshots ContentNav Default 1`] = `
           transform: rotate(45deg);
         }
       
-          </style>
-        </li>
-        <li
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <div
-            className=""
+          </style>,
+        ],
+        "onClick": [Function],
+        "role": "menuitem",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="active"
           >
             <div
+              class="item-content"
+            >
+              Test Name
+              <div
+                class="chevron"
+              />
+            </div>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
               className="item-content"
             >
-              Standards
+              Test Name
               <div
                 className="chevron"
               />
-            </div>
-          </div>
-          <ul
-            className="sub-list "
-          />
-          <style
-            jsx={true}
-          >
-            
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
-          text-indent: 0.25em;
-          z-index: 0;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
-          width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 1em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-        }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
-        }
-      
-          </style>
-        </li>
-        <li
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <div
-            className=""
-          >
-            <div
-              className="item-content"
-            >
-              Stimuli/Text Complexity
-              <div
-                className="chevron"
-              />
-            </div>
-          </div>
-          <ul
-            className="sub-list "
-          />
-          <style
-            jsx={true}
-          >
-            
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
-          text-indent: 0.25em;
-          z-index: 0;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
-          width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 1em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-        }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
-        }
-      
-          </style>
-        </li>
-        <li
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <div
-            className=""
-          >
-            <div
-              className="item-content"
-            >
-              Accessibility Concerns
-              <div
-                className="chevron"
-              />
-            </div>
-          </div>
-          <ul
-            className="sub-list "
-          />
-          <style
-            jsx={true}
-          >
-            
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
-          text-indent: 0.25em;
-          z-index: 0;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
-          width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 1em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-        }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
-        }
-      
-          </style>
-        </li>
-        <li
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <div
-            className=""
-          >
-            <div
-              className="item-content"
-            >
-              Evidence Required
-              <div
-                className="chevron"
-              />
-            </div>
-          </div>
-          <ul
-            className="sub-list "
-          />
-          <style
-            jsx={true}
-          >
-            
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
-          text-indent: 0.25em;
-          z-index: 0;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
-          width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 1em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-        }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
-        }
-      
-          </style>
-        </li>
-        <li
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <div
-            className=""
-          >
-            <div
-              className="item-content"
-            >
-              Task Model 1
-              <div
-                className="chevron"
+            </div>,
+            "className": "active",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <div
+                class="item-content"
               >
-                <svg
-                  fill="none"
-                  height="24"
-                  onClick={[Function]}
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="6 9 12 15 18 9"
-                  />
-                </svg>
+                Test Name
+                <div
+                  class="chevron"
+                />
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Test Name",
+                  <div
+                    className="chevron"
+                  />,
+                ],
+                "className": "item-content",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Test Name",
+                Object {
+                  "instance": <div
+                    class="chevron"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "chevron",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <ul
+            class="sub-list "
+          />,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "sub-list ",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": <style>
+            
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+          </style>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+            "jsx": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+          ],
+          "type": "style",
+        },
+      ],
+      "type": "li",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "active": true,
+        "name": "Test Name",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <li
+          role="menuitem"
+        >
+          <div
+            class="active"
+          >
+            <div
+              class="item-content"
+            >
+              Test Name
+              <div
+                class="chevron"
+              />
+            </div>
+          </div>
+          <ul
+            class="sub-list "
+          />
+          <style>
+            
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+          </style>
+        </li>,
+        "key": "Test Name",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="active"
+            >
+              <div
+                className="item-content"
+              >
+                Test Name
+                <div
+                  className="chevron"
+                />
               </div>
-            </div>
-          </div>
-          <ul
-            className="sub-list "
-          >
-            <li
-              className=""
-              onClick={[Function]}
-              role="menuitem"
+            </div>,
+            <ul
+              className="sub-list "
+            />,
+            <style
+              jsx={true}
             >
-              <p />
-              <style
-                jsx={true}
-              >
-                
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          box-sizing: border-box;
-          border-left: 3px solid #ffffff;
-          display: flex;
-          align-items: center;
-          color: #006298;
-          font-size: 16px;
-          font-weight: normal;
-          text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
-        }
-        p {
-          margin-right: 2em;
-        }
-        .active {
-          box-sizing: border-box;
-          border-left: 3px solid #006298;
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: #ffffff;
-        }
-      
-              </style>
-            </li>
-            <li
-              className=""
-              onClick={[Function]}
-              role="menuitem"
-            >
-              <p />
-              <style
-                jsx={true}
-              >
-                
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          box-sizing: border-box;
-          border-left: 3px solid #ffffff;
-          display: flex;
-          align-items: center;
-          color: #006298;
-          font-size: 16px;
-          font-weight: normal;
-          text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
-        }
-        p {
-          margin-right: 2em;
-        }
-        .active {
-          box-sizing: border-box;
-          border-left: 3px solid #006298;
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: #ffffff;
-        }
-      
-              </style>
-            </li>
-            <li
-              className=""
-              onClick={[Function]}
-              role="menuitem"
-            >
-              <p />
-              <style
-                jsx={true}
-              >
-                
-        * {
-          font-family: PT Sans Caption;
-        }
-        li {
-          box-sizing: border-box;
-          border-left: 3px solid #ffffff;
-          display: flex;
-          align-items: center;
-          color: #006298;
-          font-size: 16px;
-          font-weight: normal;
-          text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
-        }
-        p {
-          margin-right: 2em;
-        }
-        .active {
-          box-sizing: border-box;
-          border-left: 3px solid #006298;
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: #ffffff;
-        }
-      
-              </style>
-            </li>
-          </ul>
-          <style
-            jsx={true}
-          >
-            
+              
         * {
           font-family: PT Sans Caption;
         }
@@ -679,31 +663,105 @@ exports[`Storyshots ContentNav Default 1`] = `
           transform: rotate(45deg);
         }
       
-          </style>
-        </li>
-        <li
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <div
-            className=""
-          >
-            <div
-              className="item-content"
+            </style>,
+          ],
+          "onClick": [Function],
+          "role": "menuitem",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="active"
             >
-              Scoring Rules
               <div
-                className="chevron"
-              />
-            </div>
-          </div>
-          <ul
-            className="sub-list "
-          />
-          <style
-            jsx={true}
-          >
-            
+                class="item-content"
+              >
+                Test Name
+                <div
+                  class="chevron"
+                />
+              </div>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="item-content"
+              >
+                Test Name
+                <div
+                  className="chevron"
+                />
+              </div>,
+              "className": "active",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div
+                  class="item-content"
+                >
+                  Test Name
+                  <div
+                    class="chevron"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Test Name",
+                    <div
+                      className="chevron"
+                    />,
+                  ],
+                  "className": "item-content",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Test Name",
+                  Object {
+                    "instance": <div
+                      class="chevron"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "chevron",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <ul
+              class="sub-list "
+            />,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "sub-list ",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": <style>
+              
         * {
           font-family: PT Sans Caption;
         }
@@ -764,40 +822,163 @@ exports[`Storyshots ContentNav Default 1`] = `
           transform: rotate(45deg);
         }
       
-          </style>
-        </li>
-      </ul>
-      <div
-        className="buffer"
-      />
-    </div>
-    <style
-      jsx={true}
-    >
-      
-          * {
-            font-family: 'PT Sans Caption';
-          }
-          ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-            border-width: 0 1px 0 0;
-            border-color: #000;
-            border-style: solid;
-            width: 100%;
-          }
-          .outer {
-            display: flex;
-            border-width: 0 0 0 0;
-            border-color: #000;
-            border-style: solid;
-          }
-          .buffer {
-            min-width: 27px;
-          }
-        
-    </style>
-  </div>
-</div>
+            </style>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+              "jsx": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+            ],
+            "type": "style",
+          },
+        ],
+        "type": "li",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
 `;
