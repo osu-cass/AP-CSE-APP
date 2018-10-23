@@ -2,6 +2,7 @@ import React from 'react';
 import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
+import { ITarget, IDOK, IStandards, IStem, ITaskModel } from '../../models/target';
 
 export interface TargetLayout {
   [key: string]: string;
@@ -22,75 +23,8 @@ export interface SubLayout {
   rubrics: string;
 }
 
-export interface Standard {
-  [key: string]: string;
-  stdCode: string;
-  stdDesc: string;
-}
-
-export interface DOK {
-  [key: string]: string;
-  dokCode: string;
-  dokDesc: string;
-  dokShort: string;
-}
-
-export interface Stem {
-  [key: string]: string;
-  stemDesc: string;
-  shortStem: string;
-}
-
-export interface Task {
-  [key: string]: string;
-  taskName: string;
-  taskDesc: string;
-  examples: string;
-  stimulus: string;
-}
-
-export interface Claim {
-  [key: string]: string | number | Target[];
-  _id: string;
-  title: string;
-  claimNumber: string;
-  grades: number;
-  subject: string;
-  description: string;
-  shortCode: string;
-  domain: string;
-  target: Target[];
-}
-
-export interface Target {
-  [key: string]: string | string[] | Standard[] | DOK[] | Stem[] | Task[] | undefined;
-  title: string;
-  shortCode: string;
-  description: string;
-  standards: Standard[];
-  DOK: DOK[];
-  targetType?: string;
-  clarification: string;
-  heading: string;
-  evidence: string[];
-  vocab: string;
-  tools: string;
-  stimInfo: string;
-  devNotes: string;
-  complexity: string;
-  dualText: string;
-  accessibility: string;
-  stem: Stem[];
-  taskModels: Task[];
-  rubrics: string[];
-}
-
-export interface TaskModel {
-  [key: string]: string;
-}
-
 export interface MainContentProps {
-  target: Target;
+  target: ITarget;
   names: TargetLayout;
   subNames: SubLayout;
 }
@@ -125,14 +59,14 @@ const colorStandardCode = (code: string) => {
   return code;
 };
 
-const sortStandards = (a: Standard, b: Standard) => {
+const sortStandards = (a: IStandards, b: IStandards) => {
   if (shortenStandardCode(a.stdCode) < shortenStandardCode(b.stdCode)) return -1;
   if (shortenStandardCode(a.stdCode) > b.stdCode) return 1;
 
   return 0;
 };
 
-const RenderStandards = (standards: Standard[]) =>
+const RenderStandards = (standards: IStandards[]) =>
   standards.map((standard, index) => {
     const code = colorStandardCode(shortenStandardCode(standard.stdCode));
     const desc = parseContent(standard.stdDesc);
@@ -145,11 +79,11 @@ const RenderStandards = (standards: Standard[]) =>
   });
 
 const RenderTaskModels = (
-  taskModels: Task[],
-  stems: Stem[],
+  taskModels: ITaskModel[],
+  stems: IStem[],
   evidence: string[],
-  scoringRules: string[],
-  names: SubLayout
+  names: SubLayout,
+  scoringRules?: string[]
 ) =>
   taskModels.map((taskModel, index) => {
     const startIndex = index * 2;
@@ -162,14 +96,14 @@ const RenderTaskModels = (
         task={taskModel}
         stems={targetStems}
         evidences={evidence}
-        scoringRule={scoringRules[index]}
+        scoringRule={scoringRules ? scoringRules[index] : ''}
         index={index + 1}
         names={names}
       />
     );
   });
 
-const RenderDOKs = (doks: DOK[]) =>
+const RenderDOKs = (doks: IDOK[]) =>
   doks.map((dok, index) => {
     return (
       <span key={index}>
@@ -225,7 +159,7 @@ export const MainContent: React.SFC<MainContentProps> = ({ target, names, subNam
         <NumberList>{renderListItems(target.evidence)}</NumberList>
       </Section>
 
-      {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics, subNames)}
+      {RenderTaskModels(target.taskModels, target.stem, target.evidence, subNames, target.rubrics)}
 
       <Section name={names.DOK}>
         <MainHeader text={names.DOK} />
