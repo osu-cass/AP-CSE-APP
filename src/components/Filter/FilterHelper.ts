@@ -60,7 +60,7 @@ function createClaimFilter(
   options: CSEFilterOptions,
   params: CSEFilterParams
 ): AdvancedFilterCategoryModel {
-  const selectedSub = find(options.subjects, s => s.code === params.subject);
+  const selectedSub = options.subjects.find(s => s.code === params.subject);
   const visibleClaimCodes = selectedSub ? selectedSub.claimCodes : undefined;
 
   return {
@@ -84,7 +84,7 @@ function createTargetFilter(
   options: CSEFilterOptions,
   params: CSEFilterParams
 ): AdvancedFilterCategoryModel {
-  const selectedClaim = find(options.claims, c => c.code === params.claim);
+  const selectedClaim = options.claims.find(c => c.code === params.claim);
   const visibleTargetCodes = selectedClaim ? selectedClaim.targetCodes : undefined;
 
   return {
@@ -110,11 +110,11 @@ export function sanitizeParams(
 ): CSEFilterParams {
   // are all grades in grade filter options?
   const grades = params.grades.filter(
-    gCode => find(filterOptions.grades, g => g.code === gCode) !== undefined
+    gCode => filterOptions.grades.find(g => g.code === gCode) !== undefined
   );
 
   // is subject in subject filter options?
-  const subjectOption = find(filterOptions.subjects, s => s.code === params.subject);
+  const subjectOption = filterOptions.subjects.find(s => s.code === params.subject);
   const subject = subjectOption ? params.subject : undefined;
 
   let claim: string | undefined;
@@ -124,7 +124,7 @@ export function sanitizeParams(
       (subjectOption.claimCodes || []).indexOf(params.claim || '') !== -1
         ? params.claim
         : undefined;
-    const claimOption = find(filterOptions.claims, c => c.code === claim);
+    const claimOption = filterOptions.claims.find(c => c.code === claim);
     if (claimOption) {
       target =
         (claimOption.targetCodes || []).indexOf(params.target || '') !== -1
@@ -141,27 +141,42 @@ export function paramsFromFilter(
   changeType: FilterType,
   change?: FilterOptionModel
 ): CSEFilterParams {
-  const newParams = { ...currentParams };
-  if (!change) {
-    switch (changeType) {
-      case FilterType.Grade:
-        newParams.grades = [];
-        break;
-      case FilterType.Subject:
-        newParams.subject = undefined;
-        break;
-      case FilterType.Claim:
-        newParams.claim = undefined;
-        break;
-      case FilterType.Target:
-        newParams.target = undefined;
-        break;
-      default:
-    }
+  return change
+    ? paramsFromFilterChange(currentParams, changeType, change)
+    : paramsFromFilterNoChange(currentParams, changeType);
+}
 
-    return newParams;
+function paramsFromFilterNoChange(
+  currentParams: CSEFilterParams,
+  changeType: FilterType
+): CSEFilterParams {
+  const newParams = { ...currentParams };
+
+  switch (changeType) {
+    case FilterType.Grade:
+      newParams.grades = [];
+      break;
+    case FilterType.Subject:
+      newParams.subject = undefined;
+      break;
+    case FilterType.Claim:
+      newParams.claim = undefined;
+      break;
+    case FilterType.Target:
+      newParams.target = undefined;
+      break;
+    default:
   }
 
+  return newParams;
+}
+
+function paramsFromFilterChange(
+  currentParams: CSEFilterParams,
+  changeType: FilterType,
+  change: FilterOptionModel
+): CSEFilterParams {
+  const newParams = { ...currentParams };
   // change.isSelected has previous state, therefore is true if it needs to be unselected
   // and falce if needs to be selected
   switch (changeType) {
@@ -185,14 +200,4 @@ export function paramsFromFilter(
   }
 
   return newParams;
-}
-
-function find<T>(arr: T[], matcher: (el: T) => boolean): T | undefined {
-  for (const el of arr) {
-    if (matcher(el)) {
-      return el;
-    }
-  }
-
-  return undefined;
 }
