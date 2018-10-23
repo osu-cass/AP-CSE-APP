@@ -5,6 +5,7 @@ import {
   AdvancedFilterCategoryModel,
   FilterOptionModel
 } from '@osu-cass/sb-components';
+import { CSEFilterParams } from '../../models/filter';
 
 // tslint:disable:no-non-null-assertion
 
@@ -192,6 +193,11 @@ describe('FilterHelper.createFilters for target', () => {
 });
 
 describe('FilterHelper.sanitizeParams', () => {
+  let params: CSEFilterParams;
+  beforeEach(() => {
+    params = { grades: ['ms', 'hs'], subject: 'math', claim: 'm1', target: 'pf' };
+  });
+
   it('does nothing with empty params', () => {
     const params = { grades: [] };
     const result = sanitizeParams(params, filterOptions);
@@ -200,14 +206,14 @@ describe('FilterHelper.sanitizeParams', () => {
   });
 
   it('does nothing on correct case', () => {
-    const params = { grades: ['ms', 'hs'], subject: 'math', claim: 'm1', target: 'pf' };
     const result = sanitizeParams(params, filterOptions);
 
     expect(result).toEqual(params);
   });
 
   it('removes invalid claim', () => {
-    const params = { grades: ['ms', 'hs'], subject: 'math', claim: 'invalid' };
+    params.claim = 'invalid';
+    params.target = undefined;
     const result = sanitizeParams(params, filterOptions);
 
     const expected = { grades: ['ms', 'hs'], subject: 'math' };
@@ -215,7 +221,7 @@ describe('FilterHelper.sanitizeParams', () => {
   });
 
   it('removes invalid target', () => {
-    const params = { grades: ['ms', 'hs'], subject: 'math', claim: 'm1', target: 'invalid' };
+    params.target = 'invalid';
     const result = sanitizeParams(params, filterOptions);
 
     const expected = { grades: ['ms', 'hs'], subject: 'math', claim: 'm1' };
@@ -223,7 +229,8 @@ describe('FilterHelper.sanitizeParams', () => {
   });
 
   it('removes claim when no subject', () => {
-    const params = { grades: ['ms', 'hs'], claim: 'm1' };
+    params.subject = undefined;
+    params.target = undefined;
     const result = sanitizeParams(params, filterOptions);
 
     const expected = { grades: ['ms', 'hs'] };
@@ -231,7 +238,8 @@ describe('FilterHelper.sanitizeParams', () => {
   });
 
   it('removes target when no subject', () => {
-    const params = { grades: ['ms', 'hs'], target: 'pf' };
+    params.subject = undefined;
+    params.claim = undefined;
     const result = sanitizeParams(params, filterOptions);
 
     const expected = { grades: ['ms', 'hs'] };
@@ -239,7 +247,7 @@ describe('FilterHelper.sanitizeParams', () => {
   });
 
   it('removes target when no claim', () => {
-    const params = { grades: ['ms', 'hs'], subject: 'math', target: 'pf' };
+    params.claim = undefined;
     const result = sanitizeParams(params, filterOptions);
 
     const expected = { grades: ['ms', 'hs'], subject: 'math' };
