@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1539197150142" clover="3.2.0">
+  <project timestamp="1539197150142" name="All files">
+    <metrics statements="399" coveredstatements="398" conditionals="94" coveredconditionals="91" methods="110" coveredmethods="110" elements="603" coveredelements="599" complexity="0" loc="399" ncloc="399" packages="15" files="35" classes="35">
+      <package name=".storybook">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="config.js" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\.storybook\config.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="9" count="25" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="12" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+        </file>
+        <file name="jestSetup.js" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\.storybook\jestSetup.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.Breadcrumbs">
+        <metrics statements="42" coveredstatements="42" conditionals="20" coveredconditionals="20" methods="9" coveredmethods="9"/>
+        <file name="BreadcrumbLink.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\Breadcrumbs\BreadcrumbLink.tsx">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="30" count="5" type="stmt"/>
+        </file>
+        <file name="BreadcrumbModel.ts" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\Breadcrumbs\BreadcrumbModel.ts">
+          <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+          <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="14" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="28" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+        </file>
+        <file name="Breadcrumbs.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\Breadcrumbs\Breadcrumbs.storybook.tsx">
+          <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="30" count="3" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\Breadcrumbs\index.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.ContentNav">
+        <metrics statements="54" coveredstatements="54" conditionals="14" coveredconditionals="14" methods="17" coveredmethods="17"/>
+        <file name="ContentNav.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\ContentNav\ContentNav.storybook.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\ContentNav\index.tsx">
+          <metrics statements="47" coveredstatements="47" conditionals="14" coveredconditionals="14" methods="16" coveredmethods="16"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="34" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="5" type="stmt"/>
+          <line num="40" count="5" type="stmt"/>
+          <line num="41" count="5" type="stmt"/>
+          <line num="42" count="35" type="stmt"/>
+          <line num="43" count="35" type="stmt"/>
+          <line num="44" count="35" type="stmt"/>
+          <line num="45" count="35" type="cond" truecount="2" falsecount="0"/>
+          <line num="46" count="5" type="stmt"/>
+          <line num="47" count="15" type="stmt"/>
+          <line num="49" count="15" type="stmt"/>
+          <line num="52" count="5" type="stmt"/>
+          <line num="55" count="35" type="stmt"/>
+          <line num="59" count="5" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
+          <line num="62" count="7" type="stmt"/>
+          <line num="63" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="64" count="1" type="stmt"/>
+          <line num="65" count="3" type="stmt"/>
+          <line num="66" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="68" count="3" type="stmt"/>
+          <line num="72" count="7" type="stmt"/>
+          <line num="75" count="1" type="stmt"/>
+          <line num="80" count="5" type="stmt"/>
+          <line num="81" count="1" type="stmt"/>
+          <line num="82" count="7" type="stmt"/>
+          <line num="84" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="85" count="3" type="stmt"/>
+          <line num="88" count="7" type="stmt"/>
+          <line num="91" count="1" type="stmt"/>
+          <line num="96" count="5" type="stmt"/>
+          <line num="97" count="4" type="stmt"/>
+          <line num="98" count="4" type="stmt"/>
+          <line num="99" count="28" type="cond" truecount="2" falsecount="0"/>
+          <line num="101" count="28" type="stmt"/>
+          <line num="104" count="4" type="stmt"/>
+          <line num="109" count="11" type="stmt"/>
+          <line num="110" count="11" type="stmt"/>
+          <line num="113" count="77" type="stmt"/>
+          <line num="114" count="77" type="stmt"/>
+          <line num="126" count="33" type="stmt"/>
+          <line num="151" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.ContentNav.Item">
+        <metrics statements="27" coveredstatements="27" conditionals="14" coveredconditionals="14" methods="12" coveredmethods="12"/>
+        <file name="Item.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\ContentNav\Item\Item.storybook.tsx">
+          <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\ContentNav\Item\index.tsx">
+          <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="5" coveredmethods="5"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="24" count="18" type="stmt"/>
+          <line num="25" count="18" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="8" type="stmt"/>
+          <line num="29" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="10" type="stmt"/>
+          <line num="38" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="55" count="85" type="stmt"/>
+          <line num="56" count="85" type="stmt"/>
+          <line num="60" count="2" type="cond" truecount="2" falsecount="0"/>
+        </file>
+      </package>
+      <package name="src.components.ContentNav.SubItem">
+        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <file name="SubItem.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\ContentNav\SubItem\SubItem.storybook.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\ContentNav\SubItem\index.tsx">
+          <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="24" count="43" type="stmt"/>
+          <line num="25" count="43" type="stmt"/>
+          <line num="29" count="2" type="cond" truecount="2" falsecount="0"/>
+        </file>
+      </package>
+      <package name="src.components.FilterItem">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="FilterItem.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\FilterItem\FilterItem.storybook.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\FilterItem\index.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="30" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.FilterItemList">
+        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <file name="FilterItemList.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\FilterItemList\FilterItemList.storybook.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\FilterItemList\index.tsx">
+          <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="31" count="2" type="stmt"/>
+          <line num="33" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="57" count="2" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.HelloWorld">
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <file name="HelloWorld.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\HelloWorld\HelloWorld.storybook.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\HelloWorld\index.tsx">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.MainContent">
+        <metrics statements="107" coveredstatements="106" conditionals="22" coveredconditionals="19" methods="36" coveredmethods="36"/>
+        <file name="Components.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\MainContent\Components.tsx">
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="22" count="26" type="stmt"/>
+          <line num="33" count="10" type="stmt"/>
+          <line num="38" count="18" type="stmt"/>
+          <line num="44" count="7" type="stmt"/>
+          <line num="58" count="4" type="stmt"/>
+          <line num="70" count="12" type="stmt"/>
+        </file>
+        <file name="MainContent.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\MainContent\MainContent.storybook.tsx">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+        </file>
+        <file name="TaskModel.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\MainContent\TaskModel.tsx">
+          <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="12" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="18" count="6" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="24" count="3" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="29" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="40" count="3" type="stmt"/>
+          <line num="41" count="3" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="44" count="3" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\MainContent\index.tsx">
+          <metrics statements="41" coveredstatements="40" conditionals="8" coveredconditionals="6" methods="12" coveredmethods="12"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="56" count="4" type="stmt"/>
+          <line num="57" count="16" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="61" count="52" type="stmt"/>
+          <line num="62" count="52" type="cond" truecount="1" falsecount="1"/>
+          <line num="64" count="52" type="stmt"/>
+          <line num="67" count="1" type="stmt"/>
+          <line num="68" count="8" type="stmt"/>
+          <line num="69" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="70" count="3" type="stmt"/>
+          <line num="82" count="5" type="stmt"/>
+          <line num="85" count="1" type="stmt"/>
+          <line num="86" count="17" type="cond" truecount="2" falsecount="0"/>
+          <line num="87" count="10" type="cond" truecount="1" falsecount="1"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="92" count="1" type="stmt"/>
+          <line num="93" count="1" type="stmt"/>
+          <line num="94" count="8" type="stmt"/>
+          <line num="95" count="8" type="stmt"/>
+          <line num="97" count="8" type="stmt"/>
+          <line num="104" count="1" type="stmt"/>
+          <line num="110" count="1" type="stmt"/>
+          <line num="111" count="3" type="stmt"/>
+          <line num="112" count="3" type="stmt"/>
+          <line num="113" count="3" type="stmt"/>
+          <line num="115" count="3" type="stmt"/>
+          <line num="127" count="1" type="stmt"/>
+          <line num="128" count="1" type="stmt"/>
+          <line num="129" count="2" type="stmt"/>
+          <line num="141" count="1" type="stmt"/>
+          <line num="142" count="1" type="stmt"/>
+          <line num="143" count="1" type="stmt"/>
+          <line num="144" count="1" type="stmt"/>
+          <line num="145" count="1" type="stmt"/>
+          <line num="147" count="1" type="stmt"/>
+          <line num="149" count="1" type="stmt"/>
+        </file>
+        <file name="parseUtils.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\MainContent\parseUtils.tsx">
+          <metrics statements="30" coveredstatements="30" conditionals="10" coveredconditionals="9" methods="10" coveredmethods="10"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="22" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="22" type="stmt"/>
+          <line num="15" count="158" type="stmt"/>
+          <line num="22" count="390" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="260" type="stmt"/>
+          <line num="27" count="260" type="stmt"/>
+          <line num="28" count="390" type="stmt"/>
+          <line num="29" count="390" type="cond" truecount="2" falsecount="0"/>
+          <line num="30" count="65" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="13" type="stmt"/>
+          <line num="35" count="325" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="158" type="stmt"/>
+          <line num="42" count="158" type="stmt"/>
+          <line num="43" count="260" type="stmt"/>
+          <line num="44" count="260" type="cond" truecount="2" falsecount="0"/>
+          <line num="45" count="51" type="stmt"/>
+          <line num="48" count="209" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="53" count="22" type="stmt"/>
+          <line num="55" count="22" type="cond" truecount="1" falsecount="1"/>
+          <line num="56" count="22" type="stmt"/>
+          <line num="58" count="22" type="cond" truecount="2" falsecount="0"/>
+          <line num="59" count="6" type="stmt"/>
+          <line num="62" count="22" type="stmt"/>
+          <line num="63" count="158" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.NavBar">
+        <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <file name="MainMenu.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\NavBar\MainMenu.tsx">
+          <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="16" count="4" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+        </file>
+        <file name="NavBar.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\NavBar\NavBar.storybook.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\NavBar\index.tsx">
+          <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.SbNavLink">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\SbNavLink\index.tsx">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.SearchBar">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="SearchBar.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\SearchBar\SearchBar.storybook.tsx">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\SearchBar\index.tsx">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.SearchPage">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="SearchPage.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\SearchPage\SearchPage.storybook.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\SearchPage\index.tsx">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.TitleBar">
+        <metrics statements="29" coveredstatements="29" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="6"/>
+        <file name="DownloadBtn.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\TitleBar\DownloadBtn.tsx">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+        </file>
+        <file name="TitleBar.storybook.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\TitleBar\TitleBar.storybook.tsx">
+          <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\components\TitleBar\index.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="4" type="stmt"/>
+          <line num="29" count="4" type="stmt"/>
+          <line num="30" count="4" type="stmt"/>
+          <line num="31" count="4" type="stmt"/>
+          <line num="32" count="4" type="stmt"/>
+          <line num="33" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.constants">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <file name="index.ts" path="C:\Users\arckm\Documents\GitHub\AP-CSE-APP\src\constants\index.ts">
+          <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+          <line num="1" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="2" count="4" type="stmt"/>
+          <line num="3" count="4" type="stmt"/>
+          <line num="4" count="4" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="8" count="4" type="stmt"/>
+          <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="4" type="stmt"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="14" count="4" type="stmt"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="16" count="4" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

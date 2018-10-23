@@ -1,0 +1,78 @@
+<testsuites name="jest tests" tests="33" failures="0" time="7.804">
+  <testsuite name="SubItem" errors="0" failures="0" skipped="0" timestamp="2018-10-10T18:45:45" time="1.28" tests="1">
+    <testcase classname="SubItem should be active" name="SubItem should be active" time="0.053">
+    </testcase>
+  </testsuite>
+  <testsuite name="Item" errors="0" failures="0" skipped="0" timestamp="2018-10-10T18:45:45" time="1.668" tests="1">
+    <testcase classname="Item should be activated on click" name="Item should be activated on click" time="0.045">
+    </testcase>
+  </testsuite>
+  <testsuite name="ContentNav" errors="0" failures="0" skipped="0" timestamp="2018-10-10T18:45:45" time="1.819" tests="5">
+    <testcase classname="ContentNav activates Items" name="ContentNav activates Items" time="0.067">
+    </testcase>
+    <testcase classname="ContentNav expands Items" name="ContentNav expands Items" time="0.013">
+    </testcase>
+    <testcase classname="ContentNav collapses Items" name="ContentNav collapses Items" time="0.029">
+    </testcase>
+    <testcase classname="ContentNav activates SubItems" name="ContentNav activates SubItems" time="0.022">
+    </testcase>
+    <testcase classname="Chevron is clickable" name="Chevron is clickable" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="HelloWorld uppercase function" errors="0" failures="0" skipped="0" timestamp="2018-10-10T18:45:45" time="2.819" tests="1">
+    <testcase classname="HelloWorld uppercase function Uppercases a phrase" name="HelloWorld uppercase function Uppercases a phrase" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Storyshots" errors="0" failures="0" skipped="0" timestamp="2018-10-10T18:45:45" time="4.354" tests="25">
+    <testcase classname="Storyshots Breadcrumbs component Renders a breadcrumb with subject data" name="Storyshots Breadcrumbs component Renders a breadcrumb with subject data" time="0.028">
+    </testcase>
+    <testcase classname="Storyshots Breadcrumbs component Renders Breadcrumbs without Data" name="Storyshots Breadcrumbs component Renders Breadcrumbs without Data" time="0.002">
+    </testcase>
+    <testcase classname="Storyshots Breadcrumbs component Renders Breadcrumbs with all data" name="Storyshots Breadcrumbs component Renders Breadcrumbs with all data" time="0.002">
+    </testcase>
+    <testcase classname="Storyshots ContentNav Default" name="Storyshots ContentNav Default" time="0.011">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Active Active" name="Storyshots ContentNav/Item/Active Active" time="0.01">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Active Expandable" name="Storyshots ContentNav/Item/Active Expandable" time="0.003">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Active Expanded" name="Storyshots ContentNav/Item/Active Expanded" time="0.003">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Active Expanded with active SubItem" name="Storyshots ContentNav/Item/Active Expanded with active SubItem" time="0.003">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Inactive Default" name="Storyshots ContentNav/Item/Inactive Default" time="0.002">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Inactive Expandable" name="Storyshots ContentNav/Item/Inactive Expandable" time="0.003">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/Item/Inactive Expanded" name="Storyshots ContentNav/Item/Inactive Expanded" time="0.002">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/SubItem SubItem" name="Storyshots ContentNav/SubItem SubItem" time="0.009">
+    </testcase>
+    <testcase classname="Storyshots ContentNav/SubItem SubItem Active" name="Storyshots ContentNav/SubItem SubItem Active" time="0.001">
+    </testcase>
+    <testcase classname="Storyshots FilterItem component FilterItem" name="Storyshots FilterItem component FilterItem" time="0.008">
+    </testcase>
+    <testcase classname="Storyshots FilterItemList component FilterItemList" name="Storyshots FilterItemList component FilterItemList" time="0.011">
+    </testcase>
+    <testcase classname="Storyshots HelloWorld component Renders a lowercased name" name="Storyshots HelloWorld component Renders a lowercased name" time="0.008">
+    </testcase>
+    <testcase classname="Storyshots HelloWorld component Renders a capitalized name" name="Storyshots HelloWorld component Renders a capitalized name" time="0.001">
+    </testcase>
+    <testcase classname="Storyshots MainContent component Renders a main content with target data" name="Storyshots MainContent component Renders a main content with target data" time="0.042">
+    </testcase>
+    <testcase classname="Storyshots NavBar component NavBar" name="Storyshots NavBar component NavBar" time="0.018">
+    </testcase>
+    <testcase classname="Storyshots SearchBar component SearchBar" name="Storyshots SearchBar component SearchBar" time="0.009">
+    </testcase>
+    <testcase classname="Storyshots SearchPage component SearchPage" name="Storyshots SearchPage component SearchPage" time="0.01">
+    </testcase>
+    <testcase classname="Storyshots TitleBar component Renders a Title Bar with header only" name="Storyshots TitleBar component Renders a Title Bar with header only" time="0.01">
+    </testcase>
+    <testcase classname="Storyshots TitleBar component Renders a download button" name="Storyshots TitleBar component Renders a download button" time="0.002">
+    </testcase>
+    <testcase classname="Storyshots TitleBar component Renders a Title Bar with a claim only" name="Storyshots TitleBar component Renders a Title Bar with a claim only" time="0.002">
+    </testcase>
+    <testcase classname="Storyshots TitleBar component Renders a Title Bar with all data" name="Storyshots TitleBar component Renders a Title Bar with all data" time="0.005">
+    </testcase>
+  </testsuite>
+</testsuites>
