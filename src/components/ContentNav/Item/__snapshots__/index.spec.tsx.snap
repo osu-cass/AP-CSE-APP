@@ -1,0 +1,984 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should be active 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Unknown
+    active={true}
+    name="Test Name"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "active": true,
+      "name": "Test Name",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <li
+        role="menuitem"
+      >
+        <div
+          class="active"
+        >
+          <div
+            class="item-content"
+          >
+            Test Name
+            <div
+              class="chevron"
+            />
+          </div>
+        </div>
+        <ul
+          class="sub-list "
+        />
+        <style>
+          
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+        </style>
+      </li>,
+      "key": "Test Name",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="active"
+          >
+            <div
+              className="item-content"
+            >
+              Test Name
+              <div
+                className="chevron"
+              />
+            </div>
+          </div>,
+          <ul
+            className="sub-list "
+          />,
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+          </style>,
+        ],
+        "onClick": [Function],
+        "role": "menuitem",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="active"
+          >
+            <div
+              class="item-content"
+            >
+              Test Name
+              <div
+                class="chevron"
+              />
+            </div>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="item-content"
+            >
+              Test Name
+              <div
+                className="chevron"
+              />
+            </div>,
+            "className": "active",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <div
+                class="item-content"
+              >
+                Test Name
+                <div
+                  class="chevron"
+                />
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Test Name",
+                  <div
+                    className="chevron"
+                  />,
+                ],
+                "className": "item-content",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Test Name",
+                Object {
+                  "instance": <div
+                    class="chevron"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "chevron",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <ul
+            class="sub-list "
+          />,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "sub-list ",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": <style>
+            
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+          </style>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+            "jsx": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+          ],
+          "type": "style",
+        },
+      ],
+      "type": "li",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "active": true,
+        "name": "Test Name",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <li
+          role="menuitem"
+        >
+          <div
+            class="active"
+          >
+            <div
+              class="item-content"
+            >
+              Test Name
+              <div
+                class="chevron"
+              />
+            </div>
+          </div>
+          <ul
+            class="sub-list "
+          />
+          <style>
+            
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+          </style>
+        </li>,
+        "key": "Test Name",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="active"
+            >
+              <div
+                className="item-content"
+              >
+                Test Name
+                <div
+                  className="chevron"
+                />
+              </div>
+            </div>,
+            <ul
+              className="sub-list "
+            />,
+            <style
+              jsx={true}
+            >
+              
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+            </style>,
+          ],
+          "onClick": [Function],
+          "role": "menuitem",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="active"
+            >
+              <div
+                class="item-content"
+              >
+                Test Name
+                <div
+                  class="chevron"
+                />
+              </div>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="item-content"
+              >
+                Test Name
+                <div
+                  className="chevron"
+                />
+              </div>,
+              "className": "active",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div
+                  class="item-content"
+                >
+                  Test Name
+                  <div
+                    class="chevron"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Test Name",
+                    <div
+                      className="chevron"
+                    />,
+                  ],
+                  "className": "item-content",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Test Name",
+                  Object {
+                    "instance": <div
+                      class="chevron"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "chevron",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <ul
+              class="sub-list "
+            />,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "sub-list ",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": <style>
+              
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      
+            </style>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+              "jsx": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              "
+        * {
+          font-family: PT Sans Caption;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
+          text-indent: 0.25em;
+          z-index: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          border-width: 0 1px 1px 0;
+          border-style: solid;
+          width: auto;
+        }
+        .sub-list {
+          border: none;
+          width: 100%;
+          margin: 0;
+        }
+        .sub-list .expanded {
+          height: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+        }
+        .active :after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
+          border-right: 1px solid #000000;
+          border-top: 1px solid #000000;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+      ",
+            ],
+            "type": "style",
+          },
+        ],
+        "type": "li",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

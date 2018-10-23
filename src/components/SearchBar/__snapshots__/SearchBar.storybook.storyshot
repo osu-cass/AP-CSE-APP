@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots SearchBar component SearchBar 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="search-bar"
+    >
+      <input
+        aria-label="Search"
+        className="field"
+        type="search"
+      />
+      <button
+        aria-label="Submit"
+        className="button"
+        type="submit"
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="#ffffff"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+          <line
+            x1="21"
+            x2="16.65"
+            y1="21"
+            y2="16.65"
+          />
+        </svg>
+      </button>
+      <style
+        jsx={true}
+      >
+        
+      .search-bar {
+        display: flex;
+        min-height: 2em;
+        position: relative;
+      }
+      .button {
+        align-items: center;
+        background-color: #63666A;
+        border-radius: 0 5px 5px 0;
+        border-style: none;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        min-height: 2em;
+        position: relative;
+      }
+      .field {
+        border-color: #63666A;
+        border-radius: 5px 0 0 5px;
+        border-style: solid;
+        color: #63666A;
+        height: auto;
+        min-height: 2em;
+        padding: 0 0.5em;
+      }
+    
+      </style>
+    </div>
+  </div>
+</div>
+`;

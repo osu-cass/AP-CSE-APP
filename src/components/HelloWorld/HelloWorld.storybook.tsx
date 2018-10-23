@@ -6,4 +6,5 @@ import { HelloWorld } from './index';
 
 storiesOf('HelloWorld component', module)
   .addDecorator(centered)
-  .add('Renders greeting', () => <HelloWorld />);
+  .add('Renders a lowercased name', () => <HelloWorld name="Thomas Noelcke" />)
+  .add('Renders a capitalized name', () => <HelloWorld name="Thomas Noelcke" caps />);
