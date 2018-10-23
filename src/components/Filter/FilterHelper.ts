@@ -178,12 +178,12 @@ function paramsFromFilterChange(
 ): CSEFilterParams {
   const newParams = { ...currentParams };
   // change.isSelected has previous state, therefore is true if it needs to be unselected
-  // and falce if needs to be selected
+  // and false if needs to be selected
   switch (changeType) {
     case FilterType.Grade:
-      if (!change.isSelected && newParams.grades.indexOf(change.key) === -1) {
+      if (!change.isSelected && newParams.grades.includes(change.key)) {
         newParams.grades = [...newParams.grades, change.key];
-      } else if (change.isSelected && newParams.grades.indexOf(change.key) !== -1) {
+      } else if (change.isSelected && !newParams.grades.includes(change.key)) {
         newParams.grades = newParams.grades.filter(g => g !== change.key);
       }
       break;
