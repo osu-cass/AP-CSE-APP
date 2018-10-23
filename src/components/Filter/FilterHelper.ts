@@ -120,16 +120,13 @@ export function sanitizeParams(
   let claim: string | undefined;
   let target: string | undefined;
   if (subjectOption) {
-    claim =
-      (subjectOption.claimCodes || []).indexOf(params.claim || '') !== -1
-        ? params.claim
-        : undefined;
+    const unwrappedCcodes = subjectOption.claimCodes || [];
+    claim = unwrappedCcodes.includes(params.claim || '') ? params.claim : undefined;
+
     const claimOption = filterOptions.claims.find(c => c.code === claim);
     if (claimOption) {
-      target =
-        (claimOption.targetCodes || []).indexOf(params.target || '') !== -1
-          ? params.target
-          : undefined;
+      const unwrappedTcodes = claimOption.targetCodes || [];
+      target = unwrappedTcodes.includes(params.target || '') ? params.target : undefined;
     }
   }
 
@@ -181,9 +178,9 @@ function paramsFromFilterChange(
   // and false if needs to be selected
   switch (changeType) {
     case FilterType.Grade:
-      if (!change.isSelected && newParams.grades.includes(change.key)) {
+      if (!change.isSelected && !newParams.grades.includes(change.key)) {
         newParams.grades = [...newParams.grades, change.key];
-      } else if (change.isSelected && !newParams.grades.includes(change.key)) {
+      } else if (change.isSelected && newParams.grades.includes(change.key)) {
         newParams.grades = newParams.grades.filter(g => g !== change.key);
       }
       break;
