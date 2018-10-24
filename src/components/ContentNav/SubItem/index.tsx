@@ -21,7 +21,9 @@ export interface SubItemProps {
  * @param {boolean} [active]
  * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
  */
-export const SubItem = ({ name, active, activate }: SubItemProps) => {
+export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => {
+  const subName = name.split('-')[1];
+
   return (
     <li
       className={`${active ? 'active' : ''}`}
@@ -30,7 +32,7 @@ export const SubItem = ({ name, active, activate }: SubItemProps) => {
       }}
       role="menuitem"
     >
-      <p>{name}</p>
+      <p>{subName}</p>
       <style jsx>{`
         * {
           font-family: ${Styles.sbSans};
@@ -41,7 +43,7 @@ export const SubItem = ({ name, active, activate }: SubItemProps) => {
           display: flex;
           align-items: center;
           color: ${Colors.sbBlue};
-          font-size: 16px;
+          font-size: ${Styles.fontLarger};
           font-weight: normal;
           text-indent: 1em;
           height: 3em;

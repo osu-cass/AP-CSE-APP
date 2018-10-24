@@ -1,5 +1,6 @@
-{
-    "_id": ObjectID("5b980992db2b3900a6276d0d"),
+/* tslint:disable */
+const ELAG3ClaimMock = {
+    "_id": "ObjectID('5b980992db2b3900a6276d0d')",
     "title": "English Language Arts Specification: Grade 3 Claim 1",
     "claimNumber": "C1",
     "grades": 3,
@@ -1436,3 +1437,4 @@
         }
     ]
 }
+export default ELAG3ClaimMock;

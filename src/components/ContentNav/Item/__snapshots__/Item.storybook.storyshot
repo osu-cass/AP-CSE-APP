@@ -54,8 +54,8 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -84,22 +84,22 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;
@@ -176,9 +176,7 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Task Descriptions
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -227,8 +225,8 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -257,22 +255,22 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;
@@ -349,9 +347,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Task Descriptions
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -392,9 +388,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Target Evidence Statement
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -443,8 +437,8 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -473,22 +467,22 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;
@@ -565,9 +559,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Task Descriptions
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -608,9 +600,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Target Evidence Statement
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -659,8 +649,8 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -689,22 +679,22 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;
@@ -771,8 +761,8 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -801,22 +791,22 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;
@@ -893,9 +883,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Task Descriptions
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -944,8 +932,8 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -974,22 +962,22 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;
@@ -1066,9 +1054,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           onClick={[Function]}
           role="menuitem"
         >
-          <p>
-            Task Descriptions
-          </p>
+          <p />
           <style
             jsx={true}
           >
@@ -1117,8 +1103,8 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: 16px;
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -1147,22 +1133,22 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / 1.4142135623730951 + 5px);
-          width: calc(2em / 1.4142135623730951 + 5px);
-          right: calc(-1 * calc(calc(2em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(2em / 1.4142135623730951) / 2 - 8px);
+          height: calc(3em / 1.4142135623730951 + 3px);
+          width: calc(3em / 1.4142135623730951 + 3px);
+          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
+          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: #ffffff;

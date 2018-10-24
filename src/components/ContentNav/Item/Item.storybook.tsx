@@ -8,7 +8,7 @@ import { subItemMock } from '../__mocks__';
 
 storiesOf('ContentNav/Item/Active', module)
   .addDecorator(centered)
-  .add('Active', () => <Item name={'Task Model 1'} active={true} />)
+  .add('Active', () => <Item name={'Task Model 1'} active={true} subItems={[]} />)
   .add('Expandable', () => (
     <Item name={'Test Name'} active={true} expanded={false} subItems={subItemMock}>
       <SubItem name={'Task Descriptions'} key={`${name}-${'Task Descriptions'}`} />
@@ -33,7 +33,7 @@ storiesOf('ContentNav/Item/Active', module)
 
 storiesOf('ContentNav/Item/Inactive', module)
   .addDecorator(centered)
-  .add('Default', () => <Item name={'Task Model 1'} />)
+  .add('Default', () => <Item name={'Task Model 1'} subItems={[]} />)
   .add('Expandable', () => (
     <Item name={'Test Name'} expanded={false} subItems={subItemMock}>
       <SubItem name={'Task Descriptions'} key={`${name}-${'Task Descriptions'}`} />

@@ -9,16 +9,16 @@ import { Colors } from '../../constants';
 
 const subjectLinkMock: BreadcrumbLinkProps = {
   link: 'ela',
-  value: SubjectType.ELA,
+  value: SubjectType['English Language Arts'],
   label: 'Subject'
 };
 
 const emptyMock: BreadcrumbsProps = {};
 
 const allDataMock: BreadcrumbsProps = {
-  subject: SubjectType.ELA,
-  grade: GradeType.Eight,
-  claim: ClaimType.Four,
+  subject: SubjectType['English Language Arts'],
+  grade: GradeType['G8'],
+  claim: ClaimType['C4'],
   target: 'Target 1'
 };
 

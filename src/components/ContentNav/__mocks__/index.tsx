@@ -17,19 +17,24 @@ export const subItemMock: SubItemProps[] = [
 ];
 export const itemMock: ItemProps[] = [
   {
-    name: 'Clarifications'
+    name: 'Clarifications',
+    subItems: []
   },
   {
-    name: 'Standards'
+    name: 'Standards',
+    subItems: []
   },
   {
-    name: 'Stimuli/Text Complexity'
+    name: 'Stimuli/Text Complexity',
+    subItems: []
   },
   {
-    name: 'Accessibility Concerns'
+    name: 'Accessibility Concerns',
+    subItems: []
   },
   {
-    name: 'Evidence Required'
+    name: 'Evidence Required',
+    subItems: []
   },
   {
     name: 'Task Model 1',
@@ -46,6 +51,7 @@ export const itemMock: ItemProps[] = [
     ]
   },
   {
-    name: 'Scoring Rules'
+    name: 'Scoring Rules',
+    subItems: []
   }
 ];

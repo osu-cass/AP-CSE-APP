@@ -1,8 +1,8 @@
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { SubjectType, GradeType, ClaimType } from './BreadcrumbModel';
 import { BreadcrumbLink } from './BreadcrumbLink';
+import { Styles, Colors } from '../../constants';
 
 /**
  * Properties for Breadcrumbs
@@ -10,15 +10,11 @@ import { BreadcrumbLink } from './BreadcrumbLink';
  * @interface BreadcrumbsProps
  */
 export interface BreadcrumbsProps {
-  subject?: SubjectType;
-  grade?: GradeType;
-  claim?: ClaimType;
+  subject?: string;
+  grade?: string;
+  claim?: string;
   target?: string;
 }
-
-const style = {
-  color: 'white'
-};
 
 /**
  * Renders breadcrumbs starting with a home button. It renders the only props that exist
@@ -33,9 +29,9 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
   <div>
     <ul>
       <li>
-        <Link style={style} to="/">
+        <Link to="/">
           <span aria-label="Home">
-            <Home />
+            <Home color={Colors.sbWhite} />
           </span>
         </Link>
       </li>
@@ -63,17 +59,25 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
         margin: 0;
         padding: 0;
       }
+      a {
+        color: white;
+      }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: ${Styles.targetContentWidth};
+        font-family: ${Styles.sbSans};
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;

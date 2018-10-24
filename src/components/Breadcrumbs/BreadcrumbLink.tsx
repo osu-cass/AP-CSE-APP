@@ -27,7 +27,11 @@ const style = {
  * @param {SubjectType | GradeType | ClaimType | string} value
  * @param {string} label
  */
-export const BreadcrumbLink = ({ link, value, label }: BreadcrumbLinkProps) => (
+export const BreadcrumbLink: React.SFC<BreadcrumbLinkProps> = ({
+  link,
+  value,
+  label
+}): JSX.Element => (
   <li>
     <Link style={style} to={link}>
       <span aria-label={label}>{value}</span>
@@ -48,8 +52,8 @@ export const BreadcrumbLink = ({ link, value, label }: BreadcrumbLinkProps) => (
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     `}</style>
