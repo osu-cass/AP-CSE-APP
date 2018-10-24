@@ -1,5 +1,5 @@
 import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
-import { filterOptions } from './__mocks__';
+import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 import {
   FilterType,
   AdvancedFilterCategoryModel,
@@ -19,7 +19,7 @@ describe('FilterHelper.createFilters', () => {
         disabled: false,
         label: 'Grade',
         code: FilterType.Grade,
-        filterOptions: filterOptions.grades.map(g => ({
+        filterOptions: filterOptionsGSCT.grades.map(g => ({
           key: g.code,
           label: g.label,
           isSelected: false,
@@ -30,14 +30,14 @@ describe('FilterHelper.createFilters', () => {
 
     it('no params', () => {
       const params = { grades: [] };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expect(result.gradeFilter).toEqual(expectation);
     });
 
     it('single selected', () => {
       const params = { grades: ['ms'] };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expectation.filterOptions.find(f => f.key === 'ms')!.isSelected = true;
       expect(result.gradeFilter).toEqual(expectation);
