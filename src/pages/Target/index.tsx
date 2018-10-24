@@ -170,8 +170,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   componentWillMount() {
     this.loadData()
-      .then(data => {
-        if (data !== undefined) {
+      .then(d => {
+        if (d !== undefined) {
+        const data = d as unknown as IClaim;
           this.setState({
             url: '',
             claim: data,
@@ -189,9 +190,11 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   /*tslint:disable: promise-function-async */
   loadData() {
-    let data: IClaim | undefined;
+    // let data: IClaim | undefined;
+    // const test = fetch(myRequest);
+    /*
     let promise = Promise.resolve();
-    promise = promise.then(() => {
+    promise = test.then(() => {
       return import('../../../mock_api_data/E.G3.C1').then(rawData => {
         data = (rawData.default as unknown) as IClaim;
       });
@@ -200,6 +203,22 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     return promise.then(() => {
       return data;
     });
+    */
+
+    const myRequest = new Request('http://localhost:3000/api/target/English%20Language%20Arts/6/C1/E.G6.C1RL.T1', {mode: 'no-cors'});
+
+    return fetch(myRequest)
+      .then(response => {
+        console.log(`then: ${JSON.stringify(response.headers)}`);
+        console.log(response.body);
+
+        return response.body;
+      })
+      .catch(response => {
+        console.log(`catch: ${response}`);
+
+        return response.body;
+      });
   }
 
   render() {
@@ -212,9 +231,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       downloadBtnProps
     } = this.state.titleBarProps;
 
-    return this.state.target === undefined ? (
+    return this.state.target === undefined ?
       <div>Loading data...</div>
-    ) : (
+    :
       <>
         <div className="content">
           <div style={style}>
@@ -238,7 +257,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
             }
           `}</style>
         </div>
-      </>
-    );
+      </>;
   }
 }
