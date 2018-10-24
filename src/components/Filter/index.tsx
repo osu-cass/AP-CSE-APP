@@ -17,8 +17,8 @@ export interface FilterProps {
 export interface CSEAdvancedFilterModels {
   gradeFilter: AdvancedFilterCategoryModel;
   subjectFilter: AdvancedFilterCategoryModel;
-  claimFilter: AdvancedFilterCategoryModel;
-  targetFilter: AdvancedFilterCategoryModel;
+  claimFilter?: AdvancedFilterCategoryModel;
+  targetFilter?: AdvancedFilterCategoryModel;
 }
 
 export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
@@ -34,32 +34,19 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
     onUpdate(newParams);
   };
 
-  return (
-    <Fragment>
-      <AdvancedFilter
-        {...gradeFilter}
-        onFilterOptionSelect={data => {
-          callback(FilterType.Grade, data);
-        }}
-      />
-      <AdvancedFilter
-        {...subjectFilter}
-        onFilterOptionSelect={data => {
-          callback(FilterType.Subject, data);
-        }}
-      />
-      <AdvancedFilter
-        {...claimFilter}
-        onFilterOptionSelect={data => {
-          callback(FilterType.Claim, data);
-        }}
-      />
-      <AdvancedFilter
-        {...targetFilter}
-        onFilterOptionSelect={data => {
-          callback(FilterType.Target, data);
-        }}
-      />
-    </Fragment>
+  const filterJsx = [gradeFilter, subjectFilter, claimFilter, targetFilter].map(
+    f =>
+      f ? (
+        <AdvancedFilter
+          {...f}
+          onFilterOptionSelect={data => {
+            callback(f.code, data);
+          }}
+        />
+      ) : (
+        undefined
+      )
   );
+
+  return <Fragment>{filterJsx}</Fragment>;
 };
