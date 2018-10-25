@@ -136,9 +136,15 @@ export function paramsFromFilter(
   changeType: FilterType,
   change?: FilterOptionModel
 ): CSEFilterParams {
-  return change
-    ? paramsFromFilterChange(currentParams, changeType, change)
-    : paramsFromFilterNoChange(currentParams, changeType);
+  if (change) {
+    if (change.isSelected) {
+      return paramsFromFilterChangeSelected(currentParams, changeType, change);
+    }
+
+    return paramsFromFilterChangeNotSelected(currentParams, changeType, change);
+  }
+
+  return paramsFromFilterNoChange(currentParams, changeType);
 }
 
 function paramsFromFilterNoChange(
@@ -166,7 +172,7 @@ function paramsFromFilterNoChange(
   return newParams;
 }
 
-function paramsFromFilterChange(
+function paramsFromFilterChangeSelected(
   currentParams: CSEFilterParams,
   changeType: FilterType,
   change: FilterOptionModel
@@ -176,20 +182,47 @@ function paramsFromFilterChange(
   // and false if needs to be selected
   switch (changeType) {
     case FilterType.Grade:
-      if (!change.isSelected && !newParams.grades.includes(change.key)) {
-        newParams.grades = [...newParams.grades, change.key];
-      } else if (change.isSelected && newParams.grades.includes(change.key)) {
+      if (newParams.grades.includes(change.key)) {
         newParams.grades = newParams.grades.filter(g => g !== change.key);
       }
       break;
     case FilterType.Subject:
-      newParams.subject = change.isSelected ? undefined : change.key;
+      newParams.subject = undefined;
       break;
     case FilterType.Claim:
-      newParams.claim = change.isSelected ? undefined : change.key;
+      newParams.claim = undefined;
       break;
     case FilterType.Target:
-      newParams.target = change.isSelected ? undefined : change.key;
+      newParams.target = undefined;
+      break;
+    default:
+  }
+
+  return newParams;
+}
+
+function paramsFromFilterChangeNotSelected(
+  currentParams: CSEFilterParams,
+  changeType: FilterType,
+  change: FilterOptionModel
+): CSEFilterParams {
+  const newParams = { ...currentParams };
+  // change.isSelected has previous state, therefore is true if it needs to be unselected
+  // and false if needs to be selected
+  switch (changeType) {
+    case FilterType.Grade:
+      if (!newParams.grades.includes(change.key)) {
+        newParams.grades = [...newParams.grades, change.key];
+      }
+      break;
+    case FilterType.Subject:
+      newParams.subject = change.key;
+      break;
+    case FilterType.Claim:
+      newParams.claim = change.key;
+      break;
+    case FilterType.Target:
+      newParams.target = change.key;
       break;
     default:
   }
