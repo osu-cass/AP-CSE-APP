@@ -24,19 +24,19 @@ export class TargetClient implements ITargetClient {
 
   private buildParams(params: ITargetParams): string {
     const { subject, grades, claim, targetShortCode } = params;
-    let url = `${this.endpoint}/api/target/?`;
+    let url = `${this.endpoint}/api/target`;
 
     if (subject) {
-      url = url.concat(url, `/${subject}`);
+      url = url.concat(`/${subject}`);
     }
     if (grades) {
-      url = url.concat(url, `/${grades}`);
+      url = url.concat(`/${grades}`);
     }
     if (claim) {
-      url = url.concat(url, `/${claim}`);
+      url = url.concat(`/${claim}`);
     }
     if (targetShortCode) {
-      url = url.concat(url, `/${targetShortCode}`);
+      url = url.concat(`/${targetShortCode}`);
     }
 
     return url;
@@ -46,8 +46,9 @@ export class TargetClient implements ITargetClient {
     const url: string = this.buildParams(params);
     let claim: IClaim;
 
+    console.log(url);
     try {
-      const response: Response = await window.fetch(url);
+      const response: Response = await window.fetch(url, {headers: {mode: 'cors'}});
       claim = <IClaim>await response.json();
     } catch (err) {
       throw new Error('Failed to fetch target.');

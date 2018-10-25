@@ -11,6 +11,7 @@ import { MainContent, TargetLayout, SubLayout } from '../../components/MainConte
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
 import { targetMock } from './__mocks__';
+import { TargetClient, ITargetParams } from '../../clients/target';
 
 export interface TargetPageProps {
   url: string;
@@ -205,6 +206,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     });
     */
 
+    /*
     const myRequest = new Request('http://localhost:3000/api/target/English%20Language%20Arts/6/C1/E.G6.C1RL.T1', {mode: 'no-cors'});
 
     return fetch(myRequest)
@@ -219,6 +221,14 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
         return response.body;
       });
+      */
+     const tp: ITargetParams = {grades: ['6'],
+                                subject: 'English Language Arts',
+                                claim: 'C6',
+                                targetShortCode: 'E.G6.C1RL.T1'};
+     const t = new TargetClient();
+
+     return t.getTarget(tp);
   }
 
   render() {
