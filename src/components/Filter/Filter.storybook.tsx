@@ -5,65 +5,58 @@ import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks_
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
-interface FilterTestProps {
-  params: CSEFilterParams;
-  options: CSEFilterOptions;
-}
-
-/**
- * Used solely for testing the `<Filter />` component
- */
-class FilterTest extends React.Component<FilterTestProps, CSEFilterParams> {
-  constructor(props: FilterTestProps) {
-    super(props);
-    this.state = props.params;
-  }
-
-  updateState = (newFilter: CSEFilterParams) => {
-    this.setState({ ...newFilter });
-  };
-
-  render() {
-    return (
-      <div>
-        Filter Object:
-        <code>{JSON.stringify(this.state)}</code>
-        <div style={{ display: 'flex' }}>
-          <Filter options={this.props.options} params={this.state} onUpdate={this.updateState} />
-        </div>
-      </div>
-    );
-  }
-}
+const callback = (newFilter: CSEFilterParams) => {
+  // tslint:disable-next-line:no-console
+  console.log('New filter params:', JSON.stringify(newFilter));
+};
 
 storiesOf('Filter', module)
   .addDecorator(centered)
-  .add('default', () => <FilterTest params={{ grades: [] }} options={filterOptionsGS} />)
-  .add('selected grade', () => <FilterTest params={{ grades: ['ms'] }} options={filterOptionsGS} />)
+  .add('default', () => (
+    <Filter params={{ grades: [] }} options={filterOptionsGS} onUpdate={callback} />
+  ))
+  .add('selected grade', () => (
+    <Filter params={{ grades: ['ms'] }} options={filterOptionsGS} onUpdate={callback} />
+  ))
   .add('selected subject', () => (
-    <FilterTest params={{ grades: [], subject: 'math' }} options={filterOptionsGSC} />
+    <Filter
+      params={{ grades: [], subject: 'math' }}
+      options={filterOptionsGSC}
+      onUpdate={callback}
+    />
   ))
   .add('selected subject, claim', () => (
-    <FilterTest params={{ grades: [], subject: 'math', claim: 'm1' }} options={filterOptionsGSCT} />
+    <Filter
+      params={{ grades: [], subject: 'math', claim: 'm1' }}
+      options={filterOptionsGSCT}
+      onUpdate={callback}
+    />
   ))
   .add('selected subject, claim, target', () => (
-    <FilterTest
+    <Filter
       params={{ grades: [], subject: 'math', claim: 'm1', target: 'pf' }}
       options={filterOptionsGSCT}
+      onUpdate={callback}
     />
   ))
   .add('selected grades, subject, claim, target', () => (
-    <FilterTest
+    <Filter
       params={{ grades: ['ms', 'hs'], subject: 'math', claim: 'm1', target: 'pf' }}
       options={filterOptionsGSCT}
+      onUpdate={callback}
     />
   ))
   .add('invalid', () => (
-    <FilterTest params={{ grades: ['ms'], claim: 'm1', target: 'pf' }} options={filterOptionsGS} />
+    <Filter
+      params={{ grades: ['ms'], claim: 'm1', target: 'pf' }}
+      options={filterOptionsGS}
+      onUpdate={callback}
+    />
   ))
   .add('invalid 2', () => (
-    <FilterTest
+    <Filter
       params={{ grades: ['ms'], subject: 'math', target: 'pf' }}
       options={filterOptionsGSC}
+      onUpdate={callback}
     />
   ));
