@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 // Export a function. Accept the base config as the only param.
 module.exports = (storybookBaseConfig, configType, config) => {
@@ -13,7 +13,7 @@ module.exports = (storybookBaseConfig, configType, config) => {
     loader: 'babel-loader',
   });
 
-  config.resolve.extensions.push(".ts", ".tsx");
+  config.resolve.extensions.push('.ts', '.tsx');
 
   // Return the altered config
   return config;
