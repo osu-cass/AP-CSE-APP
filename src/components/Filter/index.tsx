@@ -29,8 +29,7 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
   );
 
   const callback = (filterType: FilterType, data?: FilterOptionModel) => {
-    let newParams = paramsFromFilter(cleanParams, filterType, data);
-    newParams = sanitizeParams(newParams, options);
+    const newParams = paramsFromFilter(cleanParams, filterType, data);
     onUpdate(newParams);
   };
 

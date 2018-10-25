@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Filter } from '.';
-import { filterOptions } from './__mocks__';
+import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 
 describe('Filter', () => {
   it('calls callback on grade clicked', () => {
     const callback = jest.fn();
     const component = mount(
-      <Filter params={{ grades: [] }} options={filterOptions} onUpdate={callback} />
+      <Filter params={{ grades: [] }} options={filterOptionsGS} onUpdate={callback} />
     );
 
     component
@@ -21,7 +21,7 @@ describe('Filter', () => {
   it('calls callback on subject clicked', () => {
     const callback = jest.fn();
     const component = mount(
-      <Filter params={{ grades: [] }} options={filterOptions} onUpdate={callback} />
+      <Filter params={{ grades: [] }} options={filterOptionsGS} onUpdate={callback} />
     );
 
     component
@@ -37,7 +37,7 @@ describe('Filter', () => {
     const component = mount(
       <Filter
         params={{ grades: [], subject: 'math' }}
-        options={filterOptions}
+        options={filterOptionsGSC}
         onUpdate={callback}
       />
     );
@@ -50,12 +50,12 @@ describe('Filter', () => {
     expect(callback).toHaveBeenCalled();
   });
 
-  it('calls callback on subject clicked', () => {
+  it('calls callback on target clicked', () => {
     const callback = jest.fn();
     const component = mount(
       <Filter
         params={{ grades: [], subject: 'math', claim: 'm1' }}
-        options={filterOptions}
+        options={filterOptionsGSCT}
         onUpdate={callback}
       />
     );
