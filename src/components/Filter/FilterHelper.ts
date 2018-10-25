@@ -113,6 +113,9 @@ export function sanitizeParams(
     // does filter options contain the claim?
     const claimOption = options.claims.find(c => c.code === params.claim);
     claim = claimOption ? params.claim : undefined;
+  } else {
+    // if no possible claims, clear target filter
+    claim = undefined;
   }
 
   let target: string | undefined;
@@ -120,6 +123,9 @@ export function sanitizeParams(
     // does filter options contain the target?
     const targetOption = options.targets.find(t => t.code === params.target);
     target = targetOption ? params.target : undefined;
+  } else {
+    // if no possible targets, clear target filter
+    target = undefined;
   }
 
   return { grades, subject, claim, target };

@@ -45,7 +45,7 @@ describe('FilterHelper.createFilters', () => {
 
     it('multiple selected', () => {
       const params = { grades: ['ms', 'hs'] };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expectation.filterOptions.find(f => f.key === 'ms')!.isSelected = true;
       expectation.filterOptions.find(f => f.key === 'hs')!.isSelected = true;
@@ -63,7 +63,7 @@ describe('FilterHelper.createFilters', () => {
         disabled: false,
         label: 'Subject',
         code: FilterType.Subject,
-        filterOptions: filterOptions.subjects.map(s => ({
+        filterOptions: filterOptionsGSCT.subjects.map(s => ({
           key: s.code,
           label: s.label,
           isSelected: false,
@@ -74,14 +74,14 @@ describe('FilterHelper.createFilters', () => {
 
     it('none selected', () => {
       const params = { grades: [] };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expect(result.subjectFilter).toEqual(expectation);
     });
 
     it('math selected', () => {
       const params = { grades: [], subject: 'math' };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expectation.filterOptions.find(f => f.key === 'math')!.isSelected = true;
       expect(result.subjectFilter).toEqual(expectation);
@@ -97,33 +97,25 @@ describe('FilterHelper.createFilters', () => {
         disabled: false,
         label: 'Claim',
         code: FilterType.Claim,
-        filterOptions: [
-          {
-            key: 'm1',
-            label: 'Problem Solving',
-            isSelected: false,
-            filterType: FilterType.Claim
-          },
-          {
-            key: 'm2',
-            label: 'Other math stuff',
-            isSelected: false,
-            filterType: FilterType.Claim
-          }
-        ]
+        filterOptions: filterOptionsGSCT.claims.map(c => ({
+          key: c.code,
+          label: c.label,
+          isSelected: false,
+          filterType: FilterType.Claim
+        }))
       };
     });
 
     it('none selected', () => {
       const params = { grades: [], subject: 'math' };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expect(result.claimFilter).toEqual(expectation);
     });
 
     it('m1 selected', () => {
       const params = { grades: [], subject: 'math', claim: 'm1' };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expectation.filterOptions.find(f => f.key === 'm1')!.isSelected = true;
       expect(result.claimFilter).toEqual(expectation);
@@ -139,57 +131,28 @@ describe('FilterHelper.createFilters', () => {
         disabled: false,
         label: 'Target',
         code: FilterType.Target,
-        filterOptions: [
-          {
-            key: 'sr',
-            label: 'Short Response',
-            isSelected: false,
-            filterType: FilterType.Target
-          },
-          {
-            key: 'pf',
-            label: 'Proof',
-            isSelected: false,
-            filterType: FilterType.Target
-          }
-        ]
+        filterOptions: filterOptionsGSCT.targets.map(t => ({
+          key: t.code,
+          label: t.label,
+          isSelected: false,
+          filterType: FilterType.Target
+        }))
       };
     });
 
     it('none selected', () => {
       const params = { grades: [], subject: 'math', claim: 'm1' };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expect(result.targetFilter).toEqual(expectation);
     });
 
     it('target pf selected', () => {
       const params = { grades: [], subject: 'math', claim: 'm1', target: 'pf' };
-      const result = createFilters(filterOptions, params);
+      const result = createFilters(filterOptionsGSCT, params);
 
       expectation.filterOptions.find(f => f.key === 'pf')!.isSelected = true;
       expect(result.targetFilter).toEqual(expectation);
-    });
-
-    it('disables claim for no subject', () => {
-      const params = { grades: [] };
-      const result = createFilters(filterOptions, params);
-
-      expect(result.claimFilter.disabled).toEqual(true);
-    });
-
-    it('disables target for no subject', () => {
-      const params = { grades: [] };
-      const result = createFilters(filterOptions, params);
-
-      expect(result.targetFilter.disabled).toEqual(true);
-    });
-
-    it('disables target for no claim', () => {
-      const params = { grades: [], subject: 'math' };
-      const result = createFilters(filterOptions, params);
-
-      expect(result.targetFilter.disabled).toEqual(true);
     });
   });
 });
@@ -202,13 +165,13 @@ describe('FilterHelper.sanitizeParams', () => {
 
   it('does nothing with empty params', () => {
     const params = { grades: [] };
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGS);
 
     expect(result).toEqual(params);
   });
 
   it('does nothing on correct case', () => {
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGSCT);
 
     expect(result).toEqual(params);
   });
@@ -216,7 +179,7 @@ describe('FilterHelper.sanitizeParams', () => {
   it('removes invalid claim', () => {
     params.claim = 'invalid';
     params.target = undefined;
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGSC);
 
     const expected = { grades: ['ms', 'hs'], subject: 'math' };
     expect(result).toEqual(expected);
@@ -224,7 +187,7 @@ describe('FilterHelper.sanitizeParams', () => {
 
   it('removes invalid target', () => {
     params.target = 'invalid';
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGSCT);
 
     const expected = { grades: ['ms', 'hs'], subject: 'math', claim: 'm1' };
     expect(result).toEqual(expected);
@@ -233,7 +196,7 @@ describe('FilterHelper.sanitizeParams', () => {
   it('removes claim when no subject', () => {
     params.subject = undefined;
     params.target = undefined;
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGS);
 
     const expected = { grades: ['ms', 'hs'] };
     expect(result).toEqual(expected);
@@ -242,7 +205,7 @@ describe('FilterHelper.sanitizeParams', () => {
   it('removes target when no subject', () => {
     params.subject = undefined;
     params.claim = undefined;
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGS);
 
     const expected = { grades: ['ms', 'hs'] };
     expect(result).toEqual(expected);
@@ -250,7 +213,7 @@ describe('FilterHelper.sanitizeParams', () => {
 
   it('removes target when no claim', () => {
     params.claim = undefined;
-    const result = sanitizeParams(params, filterOptions);
+    const result = sanitizeParams(params, filterOptionsGS);
 
     const expected = { grades: ['ms', 'hs'], subject: 'math' };
     expect(result).toEqual(expected);
