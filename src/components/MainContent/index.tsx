@@ -3,36 +3,73 @@ import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
+export interface TargetLayout {
+  [key: string]: string;
+  clarification: string;
+  standards: string;
+  stimInfo: string;
+  accessibility: string;
+  evidence: string;
+  taskModels: string;
+  DOK: string;
+}
+
+export interface SubLayout {
+  [key: string]: string;
+  taskDesc: string;
+  evidence: string;
+  stem: string;
+  rubrics: string;
+}
+
 export interface Standard {
+  [key: string]: string;
   stdCode: string;
   stdDesc: string;
 }
 
 export interface DOK {
+  [key: string]: string;
   dokCode: string;
   dokDesc: string;
   dokShort: string;
 }
 
 export interface Stem {
+  [key: string]: string;
   stemDesc: string;
   shortStem: string;
 }
 
 export interface Task {
+  [key: string]: string;
   taskName: string;
   taskDesc: string;
   examples: string;
   stimulus: string;
 }
 
+export interface Claim {
+  [key: string]: string | number | Target[];
+  _id: string;
+  title: string;
+  claimNumber: string;
+  grades: number;
+  subject: string;
+  description: string;
+  shortCode: string;
+  domain: string;
+  target: Target[];
+}
+
 export interface Target {
+  [key: string]: string | string[] | Standard[] | DOK[] | Stem[] | Task[] | undefined;
   title: string;
   shortCode: string;
   description: string;
   standards: Standard[];
   DOK: DOK[];
-  targetType: string;
+  targetType?: string;
   clarification: string;
   heading: string;
   evidence: string[];
@@ -48,8 +85,14 @@ export interface Target {
   rubrics: string[];
 }
 
+export interface TaskModel {
+  [key: string]: string;
+}
+
 export interface MainContentProps {
   target: Target;
+  names: TargetLayout;
+  subNames: SubLayout;
 }
 
 export const renderListItems = (items: string[]) =>
@@ -72,7 +115,7 @@ const colorStandardCode = (code: string) => {
         {code}
         <style jsx>{`
           span {
-            color: #d00;
+            color: #e00;
           }
         `}</style>
       </span>
@@ -105,7 +148,8 @@ const RenderTaskModels = (
   taskModels: Task[],
   stems: Stem[],
   evidence: string[],
-  scoringRules: string[]
+  scoringRules: string[],
+  names: SubLayout
 ) =>
   taskModels.map((taskModel, index) => {
     const startIndex = index * 2;
@@ -120,6 +164,7 @@ const RenderTaskModels = (
         evidences={evidence}
         scoringRule={scoringRules[index]}
         index={index + 1}
+        names={names}
       />
     );
   });
@@ -138,7 +183,7 @@ const RenderDOKs = (doks: DOK[]) =>
     );
   });
 
-export const MainContent = ({ target }: MainContentProps) => {
+export const MainContent: React.SFC<MainContentProps> = ({ target, names, subNames }) => {
   const clarification = parseContent(target.clarification);
   const stimPassage = parseContent(target.stimInfo);
   const stimTextComplexity = parseContent(target.dualText);
@@ -148,18 +193,18 @@ export const MainContent = ({ target }: MainContentProps) => {
 
   return (
     <div className="container">
-      <Section name="clarification">
-        <MainHeader text="Clarification" />
+      <Section name={names.clarification}>
+        <MainHeader text={names.clarification} />
         <Passage>{clarification}</Passage>
       </Section>
 
-      <Section name="standards">
+      <Section name={names.standards}>
         <MainHeader text="Standards" />
         <NonBulletList>{RenderStandards(target.standards)}</NonBulletList>
       </Section>
 
-      <Section name="stimuli">
-        <MainHeader text="Stimuli Passage/Text Complexity" />
+      <Section name={names.stimInfo}>
+        <MainHeader text={names.stimInfo} />
         <Section name="stimuli-passage">
           <SubHeader text="Passage" />
           <Passage>{stimPassage}</Passage>
@@ -170,22 +215,20 @@ export const MainContent = ({ target }: MainContentProps) => {
         </Section>
       </Section>
 
-      <Section name="accessibility">
-        <MainHeader text="Accessibility Concerns" />
+      <Section name={names.accessibility}>
+        <MainHeader text={names.accessibility} />
         <Passage>{accessibility}</Passage>
       </Section>
 
-      <Section name="evidence">
-        <MainHeader text="Evidence Required" />
+      <Section name={names.evidence}>
+        <MainHeader text={names.evidence} />
         <NumberList>{renderListItems(target.evidence)}</NumberList>
       </Section>
 
-      <Section name="tasks">
-        {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics)}
-      </Section>
+      {RenderTaskModels(target.taskModels, target.stem, target.evidence, target.rubrics, subNames)}
 
-      <Section name="dok">
-        <MainHeader text="Depth of Knowledge" />
+      <Section name={names.DOK}>
+        <MainHeader text={names.DOK} />
         <Passage>{RenderDOKs(target.DOK)}</Passage>
       </Section>
 
@@ -205,7 +248,6 @@ export const MainContent = ({ target }: MainContentProps) => {
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          padding: 1em;
           max-width: 100%;
         }
       `}</style>

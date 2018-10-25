@@ -55,8 +55,8 @@ export interface FilterProps {
 export interface CSEAdvancedFilterModels {
   gradeFilter: AdvancedFilterCategoryModel;
   subjectFilter: AdvancedFilterCategoryModel;
-  claimFilter: AdvancedFilterCategoryModel;
-  targetFilter: AdvancedFilterCategoryModel;
+  claimFilter?: AdvancedFilterCategoryModel;
+  targetFilter?: AdvancedFilterCategoryModel;
 }
 
 export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
@@ -67,8 +67,7 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
   );
 
   const callback = (filterType: FilterType, data?: FilterOptionModel) => {
-    let newParams = paramsFromFilter(cleanParams, filterType, data);
-    newParams = sanitizeParams(newParams, options);
+    const newParams = paramsFromFilter(cleanParams, filterType, data);
     onUpdate(newParams);
   };
 
@@ -76,34 +75,23 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
   };
 
+  const filterJsx = [gradeFilter, subjectFilter, claimFilter, targetFilter].map(
+    f =>
+      f ? (
+        <AdvancedFilter
+          {...f}
+          onFilterOptionSelect={data => {
+            callback(f.code, data);
+          }}
+        />
+      ) : (
+        undefined
+      )
+  );
+
   return (
     <Fragment>
-      <div className="filter">
-        <AdvancedFilter
-          {...gradeFilter}
-          onFilterOptionSelect={data => {
-            callback(FilterType.Grade, data);
-          }}
-        />
-        <AdvancedFilter
-          {...subjectFilter}
-          onFilterOptionSelect={data => {
-            callback(FilterType.Subject, data);
-          }}
-        />
-        <AdvancedFilter
-          {...claimFilter}
-          onFilterOptionSelect={data => {
-            callback(FilterType.Claim, data);
-          }}
-        />
-        <AdvancedFilter
-          {...targetFilter}
-          onFilterOptionSelect={data => {
-            callback(FilterType.Target, data);
-          }}
-        />
-      </div>
+      <div className="filter">{filterJsx}</div>
       <div className="reset-container">
         <button className="btn" onClick={reset}>
           Reset

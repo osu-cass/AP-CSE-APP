@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scroll from 'react-scroll';
 import { Colors, Styles } from '../../constants';
 import { SbNavLink } from '../SbNavLink';
 import { Item, ItemProps } from './Item';
@@ -42,32 +43,39 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       const isActive = item.name === this.props.activeElement;
       let newItem = { ...item, active: isActive };
       let subItemIsActive = false;
-      if (item.subItems) {
-        newItem.subItems = item.subItems.map(subItem => {
-          subItemIsActive = `${item.name}-${subItem.name}` === this.props.activeElement;
+      newItem.subItems = item.subItems.map(subItem => {
+        subItemIsActive = `${item.name}-${subItem.name}` === this.props.activeElement;
 
-          return { ...subItem, active: subItemIsActive };
-        });
+        return { ...subItem, active: subItemIsActive };
+      });
 
-        newItem = { ...newItem, expanded: subItemIsActive };
-      }
+      newItem = { ...newItem, expanded: subItemIsActive };
 
       return newItem;
     });
   }
 
+  scrollPageTo = (name: string, scrollOffset: number) => {
+    Scroll.scroller.scrollTo(name, {
+      duration: 0,
+      delay: 0,
+      smooth: false,
+      containerId: 'content-frame',
+      offset: scrollOffset
+    });
+  };
+
   subItemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
     event.stopPropagation();
+    this.scrollPageTo(name, -250);
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
-      if (item.subItems) {
-        item.subItems = item.subItems.map((subItem: SubItemProps) => {
-          const isActive = subItem.name === name;
-          isItemActive = !isItemActive ? isActive : true;
+      item.subItems = item.subItems.map((subItem: SubItemProps) => {
+        const isActive = subItem.name === name;
+        isItemActive = !isItemActive ? isActive : true;
 
-          return { ...subItem, active: isActive };
-        });
-      }
+        return { ...subItem, active: isActive };
+      });
 
       return { ...item, active: isItemActive };
     });
@@ -78,10 +86,11 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   };
 
   itemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
+    this.scrollPageTo(name, -225);
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
-      let newSubItems: SubItemProps[] | undefined;
-      if (item.subItems) {
+      let newSubItems: SubItemProps[] = [];
+      if (item.subItems.length > 0) {
         newSubItems = item.subItems.map((subItem: SubItemProps) => ({ ...subItem, active: false }));
       }
 
@@ -106,12 +115,29 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   };
 
+  renderSubItems = (subItems: SubItemProps[]) => {
+    if (subItems.length > 0) {
+      return subItems.map((subItem: SubItemProps) => {
+        return (
+          <SubItem
+            name={subItem.name}
+            active={subItem.active}
+            activate={this.subItemClicked}
+            key={`${name}-${subItem.name}`}
+          />
+        );
+      });
+    }
+
+    return false;
+  };
+
   render() {
     return (
       <React.Fragment>
-        <ul className="list" role="menu">
-          {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => {
-            return (
+        <div className="outer">
+          <ul className="list" role="menu">
+            {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
               <Item
                 name={name}
                 subItems={subItems}
@@ -121,28 +147,33 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
                 expand={this.expand}
                 key={name}
               >
-                {subItems &&
-                  subItems.map(subItem => {
-                    return (
-                      <SubItem
-                        name={subItem.name}
-                        active={subItem.active}
-                        activate={this.subItemClicked}
-                        key={`${name}-${subItem.name}`}
-                      />
-                    );
-                  })}
+                {this.renderSubItems(subItems)}
               </Item>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+          <div className="buffer" />
+        </div>
         <style jsx>{`
+          * {
+            font-family: 'PT Sans Caption';
+          }
           ul {
             list-style-type: none;
             padding-left: 0;
-            border-width: 0 1px 1px 0;
+            margin: 0;
+            border-width: 0 1px 0 0;
+            border-color: #000;
             border-style: solid;
-            width: auto;
+            width: 100%;
+          }
+          .outer {
+            display: flex;
+            border-width: 0 0 0 0;
+            border-color: #000;
+            border-style: solid;
+          }
+          .buffer {
+            min-width: 27px;
           }
         `}</style>
       </React.Fragment>

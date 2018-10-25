@@ -1,6 +1,6 @@
 import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { Colors } from '../../constants';
+import { Styles, Colors } from '../../constants';
 
 /**
  * interface for TitleBar
@@ -66,13 +66,17 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       }
       div {
         // min-height: 100px;
-        padding: 20px;
+        display: flex;
+        font-family: ${Styles.sbSans};
+        justify-content: center;
+        padding: 20px 0;
       }
       div ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
+        max-width: ${Styles.targetContentWidth};
       }
       div ul li {
         min-height: 30px;
@@ -83,7 +87,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         color: white;
         font-size: 20px;
         font-weight: 800;
-        text-align: center;
+        text-align: left;
       }
       .desc {
         width: 75%;

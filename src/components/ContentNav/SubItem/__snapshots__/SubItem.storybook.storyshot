@@ -28,9 +28,7 @@ exports[`Storyshots ContentNav/SubItem SubItem 1`] = `
       onClick={[Function]}
       role="menuitem"
     >
-      <p>
-        Task Descriptions
-      </p>
+      <p />
       <style
         jsx={true}
       >
@@ -98,9 +96,7 @@ exports[`Storyshots ContentNav/SubItem SubItem Active 1`] = `
       onClick={[Function]}
       role="menuitem"
     >
-      <p>
-        Task Descriptions
-      </p>
+      <p />
       <style
         jsx={true}
       >

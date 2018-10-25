@@ -1,6 +1,6 @@
 import { CSEFilterOptions } from '../../../models/filter';
 
-export const filterOptions: CSEFilterOptions = {
+const filterOptionsAll: CSEFilterOptions = {
   grades: [
     {
       code: 'elem',
@@ -18,35 +18,29 @@ export const filterOptions: CSEFilterOptions = {
   subjects: [
     {
       code: 'math',
-      label: 'Math',
-      claimCodes: ['m1', 'm2']
+      label: 'Math'
     },
     {
       code: 'eng',
-      label: 'English',
-      claimCodes: ['e1', 'e2']
+      label: 'English'
     }
   ],
   claims: [
     {
       code: 'm1',
-      label: 'Problem Solving',
-      targetCodes: ['sr', 'pf']
+      label: 'Problem Solving'
     },
     {
       code: 'm2',
-      label: 'Other math stuff',
-      targetCodes: ['mc']
+      label: 'Other math stuff'
     },
     {
       code: 'e1',
-      label: 'Writing',
-      targetCodes: ['sr', 'es']
+      label: 'Writing'
     },
     {
       code: 'e2',
-      label: 'Reading',
-      targetCodes: ['sr']
+      label: 'Reading'
     }
   ],
   targets: [
@@ -68,3 +62,23 @@ export const filterOptions: CSEFilterOptions = {
     }
   ]
 };
+
+export const filterOptionsGS = {
+  ...filterOptionsAll,
+  claims: undefined,
+  targets: undefined
+};
+
+// tslint:disable:no-non-null-assertion
+export const filterOptionsGSC = {
+  ...filterOptionsAll,
+  claims: filterOptionsAll.claims!.filter(c => ['m1', 'm2'].includes(c.code)),
+  targets: undefined
+};
+
+export const filterOptionsGSCT = {
+  ...filterOptionsAll,
+  claims: filterOptionsAll.claims!.filter(c => ['m1', 'm2'].includes(c.code)),
+  targets: filterOptionsAll.targets!.filter(c => ['sr', 'pf'].includes(c.code))
+};
+// tslint:enable:no-non-null-assertion
