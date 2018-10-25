@@ -1,5 +1,5 @@
 import { SearchPageProps } from '..';
-import { filterOptions } from '../../Filter/__mocks__';
+import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from '../../Filter/__mocks__';
 import { FilterItemProps } from '../../FilterItem';
 
 export const filterItems: FilterItemProps[] = [
@@ -32,9 +32,17 @@ export const filterItems: FilterItemProps[] = [
   }
 ];
 
-// cSpell:disable
 export const searchPageMockProps: SearchPageProps = {
-  filterOptions,
-  searchApi: async () => filterItems
+  getFilterOptions: async (params, options) => {
+    if (!params.subject) {
+      return filterOptionsGS;
+    }
+    if (!params.claim) {
+      return filterOptionsGSC;
+    }
+
+    return filterOptionsGSCT;
+  },
+  paramsFromUrl: { grades: [] },
+  getSearch: async () => filterItems
 };
-// cSpell:enable

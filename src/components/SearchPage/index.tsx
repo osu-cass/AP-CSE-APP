@@ -7,22 +7,27 @@ import { FilterItemProps } from '../FilterItem';
 import { GenericPage } from '../GenericPage';
 import { Colors, Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
+import { Message, ErrorMessage } from '../Filter/Messages';
+import { Resource, getResourceContent } from '@osu-cass/sb-components';
+
+export type FilterOptionsQuery = (
+  params: CSEFilterParams,
+  current?: CSEFilterOptions
+) => Promise<CSEFilterOptions>;
+
+export type SearchQuery = (search: string, filter: CSEFilterParams) => Promise<FilterItemProps[]>;
 
 export interface SearchPageProps {
-  filterOptions: CSEFilterOptions;
-  searchApi: (search: string) => Promise<FilterItemProps[]>;
+  paramsFromUrl: CSEFilterParams;
+  getFilterOptions: FilterOptionsQuery;
+  getSearch: SearchQuery;
 }
 
 export interface SearchPageState {
-  filterParams: CSEFilterParams;
-  results: FilterItemProps[];
-  resultsState: ResultsState;
-}
-
-enum ResultsState {
-  initial,
-  error,
-  fetched
+  params: CSEFilterParams;
+  results: Resource<FilterItemProps[]>;
+  options: Resource<CSEFilterOptions>;
+  search: string;
 }
 
 /**
@@ -37,86 +42,97 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     super(props);
 
     this.state = {
-      filterParams: { grades: [] },
-      results: [],
-      resultsState: ResultsState.initial
+      params: { ...props.paramsFromUrl },
+      results: { kind: 'loading' },
+      options: { kind: 'loading' },
+      search: ''
     };
   }
 
-  updateFilter = (newFilter: CSEFilterParams) => {
-    this.setState({ filterParams: newFilter });
+  async loadFilterOptions(
+    params: CSEFilterParams,
+    oldOptions?: CSEFilterOptions
+  ): Promise<Resource<CSEFilterOptions>> {
+    try {
+      const options = await this.props.getFilterOptions(params, oldOptions);
+
+      return { kind: 'success', content: options };
+    } catch {
+      return { kind: 'failure' };
+    }
+  }
+
+  async loadSearchResults(
+    search: string,
+    params: CSEFilterParams
+  ): Promise<Resource<FilterItemProps[]>> {
+    try {
+      const results = await this.props.getSearch(search, params);
+
+      return { kind: 'success', content: results };
+    } catch {
+      return { kind: 'failure' };
+    }
+  }
+
+  async componentDidMount() {
+    const options = await this.loadFilterOptions(this.state.params);
+    this.setState({ options });
+  }
+
+  onFilterChanged = async (newFilter: CSEFilterParams) => {
+    const oldOptions = getResourceContent(this.state.options);
+    const [options, results] = await Promise.all([
+      this.loadFilterOptions(newFilter, oldOptions),
+      this.loadSearchResults(this.state.search, newFilter)
+    ]);
+
+    this.setState({ options, results, params: newFilter });
   };
 
-  onSearch = (search: string) => {
-    this.props
-      .searchApi(search)
-      .then(results => {
-        this.setState({ results, resultsState: ResultsState.fetched });
-      })
-      .catch(() => {
-        this.setState({ resultsState: ResultsState.error });
-      });
+  onSearch = async (search: string) => {
+    const results = await this.loadSearchResults(search, this.state.params);
+    this.setState({ results, search });
   };
 
-  renderContent() {
-    const { filterOptions } = this.props;
-    const { filterParams, results, resultsState } = this.state;
-
-    switch (resultsState) {
-      case ResultsState.initial:
-        return (
-          <div className="message">
-            Start by searching for a target
-            <style jsx>{`
-              .message {
-                text-align: center;
-              }
-            `}</style>
-          </div>
-        );
-      case ResultsState.error:
-        return (
-          <div className="error">
-            Error fetching results from the server
-            <style jsx>{`
-              .error {
-                color: ${Colors.sbError};
-                text-align: center;
-              }
-            `}</style>
-          </div>
-        );
-      case ResultsState.fetched:
-        if (results.length === 0) {
-          return (
-            <div className="message">
-              No results matched your query
-              <style jsx>{`
-                .message {
-                  text-align: center;
-                }
-              `}</style>
-            </div>
-          );
-        }
-      default:
+  renderFilter() {
+    const { params, options } = this.state;
+    const optionsContent = getResourceContent(options);
+    if (!optionsContent) {
+      return <ErrorMessage>Error loading filter options</ErrorMessage>;
     }
 
     return (
-      <Fragment>
-        <FilterContianer>
-          <Filter options={filterOptions} params={filterParams} onUpdate={this.updateFilter} />
-        </FilterContianer>
-        <FilterItemList allItems={results} />
-      </Fragment>
+      <FilterContianer>
+        <Filter options={optionsContent} params={params} onUpdate={this.onFilterChanged} />
+      </FilterContianer>
     );
+  }
+
+  renderResults() {
+    switch (this.state.results.kind) {
+      case 'loading':
+        return <Message>Begin by searching for targets.</Message>;
+      case 'failure':
+        return <ErrorMessage>Error fetching results from the server</ErrorMessage>;
+      default:
+    }
+    const resultsContent = getResourceContent(this.state.results);
+    if (!resultsContent || resultsContent.length === 0) {
+      return <Message>No results matched your query.</Message>;
+    }
+
+    return <FilterItemList allItems={resultsContent} />;
   }
 
   render() {
     return (
       <GenericPage claimTitle="Find Targets">
         <SearchBar onSearch={this.onSearch} />
-        <div className="content-container">{this.renderContent()}</div>
+        <div className="content-container">
+          {this.renderFilter()}
+          {this.renderResults()}
+        </div>
         <style jsx>{`
           .content-container {
             margin: ${Styles.paddingUnit} 0;

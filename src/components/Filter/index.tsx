@@ -76,9 +76,10 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
   };
 
   const filterJsx = [gradeFilter, subjectFilter, claimFilter, targetFilter].map(
-    f =>
+    (f, i) =>
       f ? (
         <AdvancedFilter
+          key={i}
           {...f}
           onFilterOptionSelect={data => {
             callback(f.code, data);
