@@ -145,17 +145,32 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
       className="content-container"
     >
       <div
-        className="message"
+        className="error"
       >
-        Start by searching for a target
+        Error loading filter options
         <style
           jsx={true}
         >
           
-              .message {
-                text-align: center;
-              }
-            
+      .error {
+        color: #8B0000;
+        text-align: center;
+      }
+    
+        </style>
+      </div>
+      <div
+        className="message"
+      >
+        Begin by searching for targets.
+        <style
+          jsx={true}
+        >
+          
+      .message {
+        text-align: center;
+      }
+    
         </style>
       </div>
     </div>
