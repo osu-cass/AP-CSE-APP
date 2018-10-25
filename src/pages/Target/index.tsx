@@ -173,7 +173,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.loadData()
       .then(d => {
         if (d !== undefined) {
-        const data = d as unknown as IClaim;
+          const data = (d as unknown) as IClaim;
           this.setState({
             url: '',
             claim: data,
@@ -191,11 +191,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   /*tslint:disable: promise-function-async */
   loadData() {
-    // let data: IClaim | undefined;
-    // const test = fetch(myRequest);
-    /*
+    let data: IClaim | undefined;
     let promise = Promise.resolve();
-    promise = test.then(() => {
+    promise = promise.then(() => {
       return import('../../../mock_api_data/E.G3.C1').then(rawData => {
         data = (rawData.default as unknown) as IClaim;
       });
@@ -204,31 +202,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     return promise.then(() => {
       return data;
     });
-    */
-
-    /*
-    const myRequest = new Request('http://localhost:3000/api/target/English%20Language%20Arts/6/C1/E.G6.C1RL.T1', {mode: 'no-cors'});
-
-    return fetch(myRequest)
-      .then(response => {
-        console.log(`then: ${JSON.stringify(response.headers)}`);
-        console.log(response.body);
-
-        return response.body;
-      })
-      .catch(response => {
-        console.log(`catch: ${response}`);
-
-        return response.body;
-      });
-      */
-     const tp: ITargetParams = {grades: ['6'],
-                                subject: 'English Language Arts',
-                                claim: 'C6',
-                                targetShortCode: 'E.G6.C1RL.T1'};
-     const t = new TargetClient();
-
-     return t.getTarget(tp);
   }
 
   render() {
@@ -241,9 +214,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       downloadBtnProps
     } = this.state.titleBarProps;
 
-    return this.state.target === undefined ?
+    return this.state.target === undefined ? (
       <div>Loading data...</div>
-    :
+    ) : (
       <>
         <div className="content">
           <div style={style}>
@@ -267,6 +240,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
             }
           `}</style>
         </div>
-      </>;
+      </>
+    );
   }
 }
