@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const isNow = process.env.NOW_ENV ? '/app' : '';
 
 module.exports = {
   mode: isDev ? 'development' : 'production',
@@ -13,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.[hash].js',
-    publicPath: `${isNow}/`
+    publicPath: `/`
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.css']
@@ -35,7 +34,7 @@ module.exports = {
           loader: 'file-loader',
           options: {
             outputPath: 'assets/',
-            publicPath: `${isNow}/assets/`
+            publicPath: `/assets/`
           }
         }
       }
