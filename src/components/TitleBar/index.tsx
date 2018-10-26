@@ -1,6 +1,7 @@
 import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { Styles, Colors, blueGradientBgImg } from '../../constants';
+import { Styles, Colors } from '../../constants';
+import { IDomain } from '../../models/claim';
 
 /**
  * interface for TitleBar
