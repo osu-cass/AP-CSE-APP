@@ -1,14 +1,14 @@
 const path = require('path');
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const isDev = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: './src/index.tsx',
-  devtool: "cheap-module-eval-source-map",
+  devtool: 'cheap-module-eval-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.[hash].js',
@@ -22,14 +22,11 @@ module.exports = {
       {
         test: /\.(tsx?)|(js)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader'
-        ]
+        loaders: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpg|jpeg|woff2?|ttf)$/,
@@ -41,7 +38,7 @@ module.exports = {
           }
         }
       }
-    ],
+    ]
   },
   devServer: {
     port: 8080,
@@ -53,9 +50,9 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new webpack.EnvironmentPlugin({
       API_ENDPOINT: 'http://localhost:3000'
-    })
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
-  ] 
+  ]
 };
