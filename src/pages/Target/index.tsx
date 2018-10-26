@@ -19,7 +19,6 @@ export interface TargetPageProps {
 
 export interface TargetPageState {
   url: string;
-  contentLoaded: boolean;
   claim?: IClaim;
   target?: ITarget;
   breadCrumbProps: BreadcrumbsProps;
@@ -95,18 +94,18 @@ export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
-    claim: claim.domain,
+    claim: claim.domain ? claim.domain[0].title : 'place holder',
     target: 'Placeholder Title'
   };
 };
 
 export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   return {
-    claimTitle: claim.domain,
+    claimTitle: claim.claimNumber,
     claimDesc: claim.description,
     downloadBtnProps: downloadBtnMock,
-    targetTitle: 'Placeholder Title',
-    targetDesc: claim.target[0].description
+    targetTitle: 'Place holder',
+    targetDesc: 'This description is a placeholder description.'
   };
 };
 
@@ -163,7 +162,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     super(props);
     this.state = {
       url: '',
-      contentLoaded: false,
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
@@ -173,19 +171,19 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.loadData()
       .then(d => {
         if (d !== undefined) {
-        const data = d as unknown as IClaim;
+          const data = d as unknown as IClaim;
           this.setState({
             url: '',
             claim: data,
             target: this.props.url === 'blank' ? targetMock : data.target[0],
-            contentLoaded: true,
             breadCrumbProps: parseBreadCrumbData(data),
             titleBarProps: parseTitleBarData(data)
           });
         }
       })
-      .catch(() => {
-        Error('hello');
+      .catch((e) => {
+        // console.log(e);
+        throw new Error(e);
       });
   }
 
@@ -224,7 +222,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       */
      const tp: ITargetParams = {grades: ['6'],
                                 subject: 'English Language Arts',
-                                claim: 'C6',
+                                claim: 'C1',
                                 targetShortCode: 'E.G6.C1RL.T1'};
      const t = new TargetClient();
 
