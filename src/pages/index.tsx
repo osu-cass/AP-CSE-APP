@@ -9,7 +9,7 @@ export const App: React.SFC = () => {
       <BrowserRouter>
         <div>
           <NavBar links={[]} siteName={'test'} mainContentId={'main'} />
-          <Route path="/" component={TargetPage} />
+          <Route path="/:subject/:grade/:claim/:shortCode" component={TargetPage} />
         </div>
       </BrowserRouter>
       <style jsx>{`

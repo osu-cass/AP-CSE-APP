@@ -13,7 +13,7 @@ const isUnderlined = (line: string) => {
   );
 };
 
-export const NewLine: React.SFC = ({ children }) => (
+export const NewLine:React.SFC = ({ children }) => (
   <span>
     {children}
     <br />

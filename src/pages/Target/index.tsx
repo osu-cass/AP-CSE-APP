@@ -14,11 +14,10 @@ import { targetMock } from './__mocks__';
 import { TargetClient, ITargetParams } from '../../clients/target';
 
 export interface TargetPageProps {
-  url: string;
+  match: any;
 }
 
 export interface TargetPageState {
-  url: string;
   claim?: IClaim;
   target?: ITarget;
   breadCrumbProps: BreadcrumbsProps;
@@ -94,7 +93,7 @@ export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
-    claim: claim.domain ? claim.domain[0].title : 'place holder',
+    claim: claim.claimNumber,
     target: 'Placeholder Title'
   };
 };
@@ -157,36 +156,42 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
    * to make requests to the API.
    */
 
+  targetClient: TargetClient;
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
-      url: '',
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
+    this.targetClient = new TargetClient();
   }
 
   componentWillMount() {
-    this.loadData()
-      .then(d => {
-        if (d !== undefined) {
-          const data = d as unknown as IClaim;
+    const test: ITargetParams = {
+      grades: [this.props.match.params.grade],
+      subject: this.props.match.params.subject,
+      claim: this.props.match.params.claim,
+      targetShortCode: this.props.match.params.shortCode
+    };
+    this.targetClient.getTarget(test)
+      .then((data) => {
+        if (data !== undefined) {
+          const claimData = data as unknown as IClaim;
           this.setState({
-            url: '',
-            claim: data,
-            target: this.props.url === 'blank' ? targetMock : data.target[0],
-            breadCrumbProps: parseBreadCrumbData(data),
-            titleBarProps: parseTitleBarData(data)
+            claim: claimData,
+            target: claimData.target[0],
+            breadCrumbProps: parseBreadCrumbData(claimData),
+            titleBarProps: parseTitleBarData(claimData)
           });
         }
       })
       .catch((e) => {
-        // console.log(e);
         throw new Error(e);
       });
   }
 
-  /*tslint:disable: promise-function-async */
+  /*
+  tslint:disable: promise-function-async
   loadData() {
     let data: IClaim | undefined;
     let promise = Promise.resolve();
@@ -200,6 +205,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       return data;
     });
   }
+  */
 
   render() {
     const { subject, grade, claim, target } = this.state.breadCrumbProps;
