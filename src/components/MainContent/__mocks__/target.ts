@@ -1,6 +1,6 @@
-import { Target } from '../index';
+import { ITarget } from '../../../models/target/index';
 
-export const targetMock: Target = {
+export const targetMock: ITarget = {
   title: 'English Language Arts Specification: Grade 3 Claim 1 Target 3',
   shortCode: 'E.G3.C1RL.T3',
   description:
