@@ -46,9 +46,8 @@ export class TargetClient implements ITargetClient {
     const url: string = this.buildParams(params);
     let claim: IClaim;
 
-    console.log(url);
     try {
-      const response: Response = await window.fetch(url, {headers: {mode: 'cors'}});
+      const response: Response = await window.fetch(url, { headers: { mode: 'cors' } });
       claim = <IClaim>await response.json();
     } catch (err) {
       throw new Error('Failed to fetch target.');
