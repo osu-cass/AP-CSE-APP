@@ -19,7 +19,7 @@ export class TargetClient implements ITargetClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = 'http://localhost:3000';
+    this.endpoint = process.env.API_ENDPOINT || 'http://localhost:3000';
   }
 
   private buildParams(params: ITargetParams): string {
