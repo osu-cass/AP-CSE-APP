@@ -10,7 +10,8 @@ module.exports = {
     devtool: "cheap-module-eval-source-map",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.[hash].js'
+        filename: 'app.bundle.[hash].js',
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json', '.css']
@@ -35,11 +36,17 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         outputPath: 'assets/',
-                        publicPath: 'assets/'
+                        publicPath: '/assets/'
                     }
                 }
             }
         ],
+    },
+    devServer: {
+        port: 8080,
+        historyApiFallback: {
+            disableDotRule: true
+        }
     },
     plugins: [
       new CleanWebpackPlugin(['dist']),
