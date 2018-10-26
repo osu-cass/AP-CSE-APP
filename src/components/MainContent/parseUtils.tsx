@@ -1,5 +1,4 @@
 import React from 'react';
-import { ContentProps } from './Components';
 
 const splitByNewLine = (text: string) => {
   return text.split('\r\n');
@@ -12,7 +11,7 @@ const isUnderlined = (line: string) => {
   );
 };
 
-export const NewLine = ({ children }: ContentProps) => (
+export const NewLine:React.SFC = ({ children }) => (
   <span>
     {children}
     <br />
