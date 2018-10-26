@@ -60,7 +60,7 @@ export const targetMock: ITarget = {
       dokShort: 'Level 2: Skills and Concepts'
     }
   ],
-  targetType: 'CAT',
+  type: 'CAT',
   clarification:
     'Targeted vocabulary words and phrases should be important to the text and worth assessing. The targeted vocabulary words and phrases should be **one to two** grade levels above testing grade. If the targeted word/phrase is used in a context that is different from what a student would normally encounter, it may be on grade level (e.g., state, factor). Answer choices need to be **on or below** grade level.\r\n\r\nThe vocabulary focus of this target is on determining meaning of tier 2 words based on context. Items focusing on antonyms and synonyms, Greek or Latin roots, affixes, and the use of resources should be limited. For a list of academic/tier 2 words, see Page 70 in the item specifications.\r\n\r\nAll items should require students to cite specific textual evidence to support conclusions drawn from the text(s).',
   heading: 'Item Writing and Scoring Guidelines',

@@ -1,8 +1,9 @@
 import React from 'react';
-import { ContentProps } from './Components';
 
-const splitByNewLine = (text: string) => {
-  return text.split('\r\n');
+const splitByNewLine = (text: string | undefined) => {
+  if (text) {
+    return text.split('\r\n');
+  }
 };
 
 const isUnderlined = (line: string) => {
@@ -12,7 +13,7 @@ const isUnderlined = (line: string) => {
   );
 };
 
-export const NewLine = ({ children }: ContentProps) => (
+export const NewLine: React.SFC = ({ children }) => (
   <span>
     {children}
     <br />
@@ -49,10 +50,10 @@ const parseDoubleAsterisks = (text: string, underlined: boolean) => {
   });
 };
 
-export const parseContent = (text: string) => {
+export const parseContent = (text: string | undefined) => {
   const lines = splitByNewLine(text);
 
-  if (!lines[0]) return;
+  if (!lines) return;
   const underlined = isUnderlined(lines[0]);
 
   if (underlined) {

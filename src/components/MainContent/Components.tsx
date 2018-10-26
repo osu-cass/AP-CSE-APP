@@ -1,6 +1,5 @@
 import React from 'react';
 import { Element } from 'react-scroll/modules';
-import { HTMLAttributes } from 'enzyme';
 
 export interface HeaderProps {
   text: string;
