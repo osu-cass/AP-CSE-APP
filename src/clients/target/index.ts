@@ -19,7 +19,7 @@ export class TargetClient implements ITargetClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = 'https://localhost:3000';
+    this.endpoint = 'http://localhost:3000';
   }
 
   private buildParams(params: ITargetParams): string {
@@ -47,7 +47,7 @@ export class TargetClient implements ITargetClient {
     let claim: IClaim;
 
     try {
-      const response: Response = await window.fetch(url, { headers: { mode: 'cors' } });
+      const response: Response = await window.fetch(url);
       claim = <IClaim>await response.json();
     } catch (err) {
       throw new Error('Failed to fetch target.');
