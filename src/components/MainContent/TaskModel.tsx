@@ -1,27 +1,28 @@
 import React from 'react';
-import { renderListItems, Stem, Task, SubLayout } from './index';
+import { renderListItems, SubLayout } from './index';
+import { IStem, ITaskModel } from '../../models/target';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
 export interface TaskModelProps {
-  task: Task;
-  stems: Stem[];
+  task: ITaskModel;
+  stems: IStem[];
   evidences: string[];
   scoringRule: string;
   index: number;
   names: SubLayout;
 }
 
-const renderStemsBy = (target: string, stems: Stem[]) =>
+const renderStemsBy = (target: string, stems: IStem[]) =>
   stems.filter(stem => stem.shortStem === target).map((stem, index) => {
     const desc = parseContent(stem.stemDesc);
 
     return <li key={index}>{desc}</li>;
   });
 
-const renderAppropriateStems = (stems: Stem[]) => renderStemsBy('Appropriate Stems', stems);
+const renderAppropriateStems = (stems: IStem[]) => renderStemsBy('Appropriate Stems', stems);
 
-const renderDualTextOnlyStems = (stems: Stem[]) =>
+const renderDualTextOnlyStems = (stems: IStem[]) =>
   renderStemsBy('Appropriate Stems for Dual-Text Stimuli', stems);
 
 const renderFormatExample = (example: string, sectionName: string) => {
@@ -46,7 +47,7 @@ export const TaskModel = ({
   names
 }: TaskModelProps) => {
   const taskPrefix = `taskModel${index}`;
-  const desc = parseContent(task.taskDesc);
+  const desc = parseContent(task.taskDesc ? task.taskDesc : '');
 
   return (
     <Section name={task.taskName}>
