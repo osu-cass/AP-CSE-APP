@@ -35,7 +35,7 @@ export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => 
       <p>{subName}</p>
       <style jsx>{`
         * {
-          font-family: ${Styles.sbSans};
+          font-family: ${Styles.sbSerif};
         }
         li {
           box-sizing: border-box;
@@ -48,9 +48,6 @@ export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => 
           text-indent: 1em;
           height: 3em;
         }
-        li :first-child {
-          border-top: 1px solid #000;
-        }
         p {
           margin-right: 2em;
         }
@@ -58,9 +55,6 @@ export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => 
           box-sizing: border-box;
           border-left: 3px solid ${Colors.sbBlue};
           font-weight: bold;
-        }
-        :not(.active) {
-          background-color: ${Colors.sbWhite};
         }
       `}</style>
     </li>

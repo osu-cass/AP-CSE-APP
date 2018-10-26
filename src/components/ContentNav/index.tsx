@@ -161,16 +161,10 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             list-style-type: none;
             padding-left: 0;
             margin: 0;
-            border-width: 0 1px 0 0;
-            border-color: #000;
-            border-style: solid;
             width: 100%;
           }
           .outer {
             display: flex;
-            border-width: 0 0 0 0;
-            border-color: #000;
-            border-style: solid;
           }
           .buffer {
             min-width: 27px;

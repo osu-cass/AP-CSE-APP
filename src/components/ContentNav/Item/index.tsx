@@ -82,14 +82,12 @@ export const Item: React.SFC<ItemProps> = ({
       <ul className={`sub-list ${expanded ? 'expanded' : ''}`}>{children}</ul>
       <style jsx>{`
         * {
-          font-family: ${Styles.sbSans};
+          font-family: ${Styles.sbSerif};
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
           font-size: ${Styles.fontLarger};
           text-indent: 0.25em;
           z-index: 0;
@@ -97,8 +95,6 @@ export const Item: React.SFC<ItemProps> = ({
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
         }
         .sub-list {
@@ -127,18 +123,8 @@ export const Item: React.SFC<ItemProps> = ({
           margin: -5px 5px;
           text-indent: 0;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: ${sideLength};
-          width: ${sideLength};
-          right: calc(-1 * calc(calc(${itemHeight} / ${Math.SQRT2}) / 2) - 3px);
-          top: calc(calc(${itemHeight} / ${Math.SQRT2}) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: ${Colors.sbWhite};
-          transform: rotate(45deg);
+        .active {
+          color: ${Colors.sbBlue};
         }
       `}</style>
     </li>
