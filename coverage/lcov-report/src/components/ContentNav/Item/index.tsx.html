@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>24/24</span>
+        <span class='fraction'>17/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>14/14</span>
       </div>
     </div>
   </div>
@@ -179,9 +179,19 @@
 134
 135
 136
-137</td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,9 +211,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -213,7 +222,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
@@ -233,21 +242,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">85x</span>
-<span class="cline-any cline-yes">85x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">140x</span>
+<span class="cline-any cline-yes">140x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">140x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -315,7 +326,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { ReactElement } from 'react';
 import { Colors, Styles } from '../../../constants';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { SubItemProps } from '../SubItem';
@@ -327,9 +347,8 @@ import { SubItemProps } from '../SubItem';
  */
 export interface ItemProps extends SubItemProps {
   expanded?: boolean;
-  subItems?: SubItemProps[];
+  subItems: SubItemProps[];
   expand?: (e: React.MouseEvent&lt;SVGElement&gt;, n: string) =&gt; void;
-  children?: JSX.Element[] | JSX.Element;
 }
 &nbsp;
 export interface ChevronProps {
@@ -338,7 +357,7 @@ export interface ChevronProps {
   itemName: string;
 }
 &nbsp;
-export const Chevron = ({ expanded, expand, itemName }: ChevronProps) =&gt; {
+export const Chevron: React.SFC&lt;ChevronProps&gt; = ({ expanded, expand, itemName }) =&gt; {
   if (expanded) {
     return (
       &lt;ChevronUp
@@ -369,7 +388,18 @@ export const Chevron = ({ expanded, expand, itemName }: ChevronProps) =&gt; {
  * @param {(e: React.MouseEvent&lt;HTMLLIElement&gt;, n: string) =&gt; void} [activate]
  * @param {JSX.Element[]&lt;LeftMouse&gt; | JSX.Element} [children]
  */
-export const Item = ({ name, active, activate, expanded, expand, children }: ItemProps) =&gt; {
+export const Item: React.SFC&lt;ItemProps&gt; = ({
+  name,
+  active,
+  activate,
+  expanded,
+  expand,
+  children
+}) =&gt; {
+  // const itemHeight = '0.75em';
+  const itemHeight = '3em';
+  const sideLength = `calc(${itemHeight} / ${Math.SQRT2} + 3px)`;
+&nbsp;
   return (
     &lt;li
       key={name}
@@ -396,8 +426,8 @@ export const Item = ({ name, active, activate, expanded, expand, children }: Ite
           display: flex;
           flex-direction: column;
           border-style: solid;
-          border-width: 1px 0 0 0;
-          font-size: 20px;
+          border-width: 0 0 1px 0;
+          font-size: ${Styles.fontLarger};
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -426,22 +456,22 @@ export const Item = ({ name, active, activate, expanded, expand, children }: Ite
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 0.5em 0;
+          margin: 1em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
-          margin: 0 5px;
+          margin: -5px 5px;
           text-indent: 0;
         }
         .active :after {
           z-index: -1;
           position: absolute;
           content: '';
-          height: calc(2em / ${Math.SQRT2} + 5px);
-          width: calc(2em / ${Math.SQRT2} + 5px);
-          right: calc(-1 * calc(calc(2em / ${Math.SQRT2}) / 2) - 3px);
-          top: calc(calc(2em / ${Math.SQRT2}) / 2 - 8px);
+          height: ${sideLength};
+          width: ${sideLength};
+          right: calc(-1 * calc(calc(${itemHeight} / ${Math.SQRT2}) / 2) - 3px);
+          top: calc(calc(${itemHeight} / ${Math.SQRT2}) / 2 - 10px);
           border-right: 1px solid #000000;
           border-top: 1px solid #000000;
           background-color: ${Colors.sbWhite};
@@ -457,7 +487,7 @@ export const Item = ({ name, active, activate, expanded, expand, children }: Ite
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 10 2018 11:45:49 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 26 2018 07:14:29 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="..\..\..\..\prettify.js"></script>

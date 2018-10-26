@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>6/6</span>
       </div>
     </div>
   </div>
@@ -146,9 +146,18 @@
 101
 102
 103
-104</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,6 +172,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -172,13 +182,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -251,7 +269,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { Colors } from '../../constants';
+import { Styles, Colors, blueGradientBgImg } from '../../constants';
 &nbsp;
 /**
  * interface for TitleBar
@@ -265,6 +283,12 @@ export interface TitleBarProps {
   targetDesc?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
+&nbsp;
+const style = {
+  ...blueGradientBgImg,
+  width: '100%',
+  flexBasis: '100%'
+};
 &nbsp;
 /**
  * Renders a TitleBar that shows a title, a description, a download button.
@@ -282,7 +306,7 @@ export const TitleBar = ({
   targetDesc,
   downloadBtnProps
 }: TitleBarProps) =&gt; (
-  &lt;div&gt;
+  &lt;div style={style}&gt;
     &lt;ul&gt;
       {claimTitle &amp;&amp; (
         &lt;li className="title"&gt;
@@ -316,32 +340,35 @@ export const TitleBar = ({
         padding: 0;
       }
       div {
-        // min-height: 100px;
-        padding: 20px;
+        display: flex;
+        font-family: ${Styles.sbSans};
+        justify-content: center;
+        padding: 0.7em 0;
       }
       div ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
+        max-width: ${Styles.targetContentWidth};
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
-        text-align: center;
+        font-size: 1.8em;
+        text-align: left;
       }
       .desc {
         width: 75%;
         min-width: 50px;
         padding-bottom: 15px;
         color: ${Colors.sbGrayLighter};
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 100;
         text-align: left;
       }
@@ -358,7 +385,7 @@ export const TitleBar = ({
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 10 2018 11:45:49 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 26 2018 07:14:29 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

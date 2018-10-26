@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/17</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>7/7</span>
       </div>
     </div>
   </div>
@@ -78,42 +78,12 @@
 33
 34
 35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+36</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,52 +101,28 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
 import { FilterItemProps, FilterItem } from '../FilterItem';
 &nbsp;
 export interface FilterItemListState {
-  items: FilterItemProps[] | undefined;
+  items: FilterItemProps[];
 }
 &nbsp;
 export interface FilterItemListProps {
-  allItems: FilterItemProps[] | undefined;
+  allItems: FilterItemProps[];
 }
-&nbsp;
-const headerStyle = {
-  color: '#AAAAAA',
-  fontFamily: 'PT Sans Caption',
-  marginBottom: '-.4em'
-};
 &nbsp;
 /**
  * Renders a list of results from the search/filter process
@@ -191,33 +137,15 @@ export class FilterItemList extends Component&lt;FilterItemListProps, FilterItem
   }
 &nbsp;
   render() {
-    let result = &lt;React.Fragment /&gt;;
+    const listItems = this.props.allItems.map(t =&gt; &lt;FilterItem {...t} /&gt;);
 &nbsp;
-    if (this.props.allItems) {
-      const listItems = this.props.allItems.map(t =&gt; &lt;FilterItem {...t} /&gt;);
-&nbsp;
-      result = (
-        &lt;React.Fragment&gt;
-          &lt;h2 style={headerStyle}&gt;Results&lt;/h2&gt;
-          &lt;hr /&gt;
-          &lt;ul className="list" role="menu"&gt;
-            {listItems}
-          &lt;/ul&gt;
-        &lt;/React.Fragment&gt;
-      );
-    } else {
-      result = (
-        &lt;React.Fragment&gt;
-          &lt;h2 style={headerStyle}&gt;Results&lt;/h2&gt;
-          &lt;hr /&gt;
-          &lt;ul className="list" role="menu"&gt;
-            &lt;div&gt;No items found&lt;/div&gt;
-          &lt;/ul&gt;
-        &lt;/React.Fragment&gt;
-      );
-    }
-&nbsp;
-    return result;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;ul className="list" role="menu"&gt;
+          {listItems}
+        &lt;/ul&gt;
+      &lt;/React.Fragment&gt;
+    );
   }
 }
 &nbsp;</pre></td></tr>
@@ -226,7 +154,7 @@ export class FilterItemList extends Component&lt;FilterItemListProps, FilterItem
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 10 2018 11:45:49 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 26 2018 07:14:29 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

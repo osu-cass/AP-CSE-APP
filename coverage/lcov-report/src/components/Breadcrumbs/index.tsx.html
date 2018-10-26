@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>7/7</span>
       </div>
     </div>
   </div>
@@ -130,17 +130,15 @@
 85
 86
 87
-88</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+88
+89
+90
+91
+92</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,7 +146,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,6 +162,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,8 +228,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { SubjectType, GradeType, ClaimType } from './BreadcrumbModel';
 import { BreadcrumbLink } from './BreadcrumbLink';
+import { Styles, Colors } from '../../constants';
 &nbsp;
 /**
  * Properties for Breadcrumbs
@@ -229,15 +237,11 @@ import { BreadcrumbLink } from './BreadcrumbLink';
  * @interface BreadcrumbsProps
  */
 export interface BreadcrumbsProps {
-  subject?: SubjectType;
-  grade?: GradeType;
-  claim?: ClaimType;
+  subject?: string;
+  grade?: string;
+  claim?: string;
   target?: string;
 }
-&nbsp;
-const style = {
-  color: 'white'
-};
 &nbsp;
 /**
  * Renders breadcrumbs starting with a home button. It renders the only props that exist
@@ -252,9 +256,9 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
   &lt;div&gt;
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;Link style={style} to="/"&gt;
+        &lt;Link to="/"&gt;
           &lt;span aria-label="Home"&gt;
-            &lt;Home /&gt;
+            &lt;Home color={Colors.sbWhite} /&gt;
           &lt;/span&gt;
         &lt;/Link&gt;
       &lt;/li&gt;
@@ -282,17 +286,25 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
         margin: 0;
         padding: 0;
       }
+      a {
+        color: white;
+      }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: ${Styles.targetContentWidth};
+        font-family: ${Styles.sbSans};
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;
@@ -310,7 +322,7 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 10 2018 11:45:49 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 26 2018 07:14:29 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>
