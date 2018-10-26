@@ -47,7 +47,7 @@ export const TaskModel = ({
   names
 }: TaskModelProps) => {
   const taskPrefix = `taskModel${index}`;
-  const desc = parseContent(task.taskDesc);
+  const desc = parseContent(task.taskDesc ? task.taskDesc : '');
 
   return (
     <Section name={task.taskName}>
