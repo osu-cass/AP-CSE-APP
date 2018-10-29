@@ -8,9 +8,10 @@ import { GenericPage } from '../GenericPage';
 import { Colors, Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
 import { Message, ErrorMessage } from '../Filter/Messages';
-import { Resource, getResourceContent } from '@osu-cass/sb-components';
+import { Resource, getResourceContent, FilterType } from '@osu-cass/sb-components';
 import { paramsToSearchQuery, ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
+import { IFilterClient } from '../../clients/filter';
 
 export type FilterOptionsQuery = (
   params: CSEFilterParams,
@@ -19,15 +20,23 @@ export type FilterOptionsQuery = (
 
 export interface SearchPageProps {
   paramsFromUrl: CSEFilterParams;
-  getFilterOptions: FilterOptionsQuery;
+  filterClient: IFilterClient;
   searchClient: ISearchClient;
 }
 
 export interface SearchPageState {
   params: CSEFilterParams;
   results?: IClaim[] | Error;
-  options: Resource<CSEFilterOptions>;
+  options?: CSEFilterOptions | Error;
   search: string;
+}
+
+function unwrapError<T>(data?: T | Error): T | undefined {
+  if (!data) {
+    return undefined;
+  }
+
+  return data instanceof Error ? undefined : data;
 }
 
 const placeholder = (targetCode: string) => `/target/${targetCode}`;
@@ -45,34 +54,37 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
     this.state = {
       params: { ...props.paramsFromUrl },
-      options: { kind: 'loading' },
       search: ''
     };
   }
 
-  async loadFilterOptions(
-    params: CSEFilterParams,
-    oldOptions?: CSEFilterOptions
-  ): Promise<Resource<CSEFilterOptions>> {
-    try {
-      const options = await this.props.getFilterOptions(params, oldOptions);
-
-      return { kind: 'success', content: options };
-    } catch {
-      return { kind: 'failure' };
-    }
-  }
-
   async componentDidMount() {
-    const options = await this.loadFilterOptions(this.state.params);
+    const options = await this.props.filterClient.getFilterOptions(
+      this.state.params,
+      FilterType.Grade
+    );
     this.setState({ options });
   }
 
+  private compareParams(oldParams: CSEFilterParams, newParams: CSEFilterParams): FilterType {
+    if (oldParams.claim !== newParams.claim) {
+      return FilterType.Claim;
+    }
+    if (oldParams.target !== newParams.target) {
+      return FilterType.Target;
+    }
+
+    return FilterType.Grade;
+  }
+
   onFilterChanged = async (newFilter: CSEFilterParams) => {
-    const oldOptions = getResourceContent(this.state.options);
     const query = paramsToSearchQuery(this.state.search, newFilter);
     const [options, results] = await Promise.all([
-      this.loadFilterOptions(newFilter, oldOptions),
+      this.props.filterClient.getFilterOptions(
+        newFilter,
+        this.compareParams(this.state.params, newFilter),
+        unwrapError(this.state.options)
+      ),
       this.props.searchClient.search(query)
     ]);
 
@@ -87,14 +99,16 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
   renderFilter() {
     const { params, options } = this.state;
-    const optionsContent = getResourceContent(options);
-    if (!optionsContent) {
+    if (!options) {
+      return <Message>Loading filter options...</Message>;
+    }
+    if (options instanceof Error) {
       return <ErrorMessage>Error loading filter options</ErrorMessage>;
     }
 
     return (
       <FilterContianer>
-        <Filter options={optionsContent} params={params} onUpdate={this.onFilterChanged} />
+        <Filter options={options} params={params} onUpdate={this.onFilterChanged} />
       </FilterContianer>
     );
   }
