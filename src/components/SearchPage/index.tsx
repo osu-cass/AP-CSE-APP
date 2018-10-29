@@ -9,26 +9,28 @@ import { Colors, Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
 import { Message, ErrorMessage } from '../Filter/Messages';
 import { Resource, getResourceContent } from '@osu-cass/sb-components';
+import { paramsToSearchQuery, ISearchClient } from '../../clients/search';
+import { IClaim } from '../../models/claim';
 
 export type FilterOptionsQuery = (
   params: CSEFilterParams,
   current?: CSEFilterOptions
 ) => Promise<CSEFilterOptions>;
 
-export type SearchQuery = (search: string, filter: CSEFilterParams) => Promise<FilterItemProps[]>;
-
 export interface SearchPageProps {
   paramsFromUrl: CSEFilterParams;
   getFilterOptions: FilterOptionsQuery;
-  getSearch: SearchQuery;
+  searchClient: ISearchClient;
 }
 
 export interface SearchPageState {
   params: CSEFilterParams;
-  results: Resource<FilterItemProps[]>;
+  results?: IClaim[] | Error;
   options: Resource<CSEFilterOptions>;
   search: string;
 }
+
+const placeholder = (targetCode: string) => `/target/${targetCode}`;
 
 /**
  * Search page react component. Handles text searching and filtering
@@ -43,7 +45,6 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
     this.state = {
       params: { ...props.paramsFromUrl },
-      results: { kind: 'loading' },
       options: { kind: 'loading' },
       search: ''
     };
@@ -62,19 +63,6 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     }
   }
 
-  async loadSearchResults(
-    search: string,
-    params: CSEFilterParams
-  ): Promise<Resource<FilterItemProps[]>> {
-    try {
-      const results = await this.props.getSearch(search, params);
-
-      return { kind: 'success', content: results };
-    } catch {
-      return { kind: 'failure' };
-    }
-  }
-
   async componentDidMount() {
     const options = await this.loadFilterOptions(this.state.params);
     this.setState({ options });
@@ -82,16 +70,18 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
   onFilterChanged = async (newFilter: CSEFilterParams) => {
     const oldOptions = getResourceContent(this.state.options);
+    const query = paramsToSearchQuery(this.state.search, newFilter);
     const [options, results] = await Promise.all([
       this.loadFilterOptions(newFilter, oldOptions),
-      this.loadSearchResults(this.state.search, newFilter)
+      this.props.searchClient.search(query)
     ]);
 
     this.setState({ options, results, params: newFilter });
   };
 
   onSearch = async (search: string) => {
-    const results = await this.loadSearchResults(search, this.state.params);
+    const query = paramsToSearchQuery(search, this.state.params);
+    const results = await this.props.searchClient.search(query);
     this.setState({ results, search });
   };
 
@@ -110,19 +100,18 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   renderResults() {
-    switch (this.state.results.kind) {
-      case 'loading':
-        return <Message>Begin by searching for targets.</Message>;
-      case 'failure':
-        return <ErrorMessage>Error fetching results from the server</ErrorMessage>;
-      default:
+    const { results } = this.state;
+    if (!results) {
+      return <Message>Enter a query to see matching targets.</Message>;
     }
-    const resultsContent = getResourceContent(this.state.results);
-    if (!resultsContent || resultsContent.length === 0) {
-      return <Message>No results matched your query.</Message>;
+    if (results instanceof Error) {
+      return <ErrorMessage>Error fetching results from the server</ErrorMessage>;
+    }
+    if (results.length === 0) {
+      return <Message>No results found.</Message>;
     }
 
-    return <FilterItemList allItems={resultsContent} />;
+    return <FilterItemList claims={results} getTargetLink={placeholder} />;
   }
 
   render() {

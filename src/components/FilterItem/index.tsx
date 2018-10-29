@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export interface FilterItemProps {
   subject: string;
-  grade: string;
+  grade: string[];
   claim: string;
   targetName: string;
   targetBodyText: string;

@@ -5,6 +5,7 @@ export interface ITaskModel {
   taskDesc?: string;
   examples?: string;
   stimulus?: string;
+  relatedEvidence: string[];
 }
 
 export interface IStem {
@@ -23,6 +24,11 @@ export interface IStandards {
   stdDesc: string;
 }
 
+export interface IEvidence {
+  evTitle: string;
+  evDesc: string;
+}
+
 export interface ITarget {
   title: string;
   shortCode: string;
@@ -32,7 +38,7 @@ export interface ITarget {
   type: string;
   clarification: string;
   heading: string;
-  evidence: string[];
+  evidence: IEvidence[];
   vocab: string;
   tools: string;
   stimInfo: string;
