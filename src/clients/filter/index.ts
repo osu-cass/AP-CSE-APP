@@ -72,12 +72,13 @@ export class FilterClient implements IFilterClient {
     let newOptions: CSEFilterOptions;
     try {
       if (options) {
-        newOptions = this.sanitizeOptions(options, params);
+        newOptions = { ...options };
       } else {
         const result = await this.getSubjectGradeOptions();
         newOptions = this.combineSubjectGradeOptions(result);
       }
 
+      // this should only happen if page was reloaded/navigated to
       if (!change) {
         const [c, t] = await Promise.all([this.updateClaims(params), this.updateTargets(params)]);
         newOptions.claims = c;
@@ -86,6 +87,7 @@ export class FilterClient implements IFilterClient {
 
       if (change === FilterType.Subject || change === FilterType.Grade) {
         newOptions.claims = await this.updateClaims(params);
+        newOptions.targets = undefined;
       }
       if (change === FilterType.Claim) {
         newOptions.targets = await this.updateTargets(params);
@@ -95,18 +97,6 @@ export class FilterClient implements IFilterClient {
     } catch (err) {
       return new Error(String(err));
     }
-  }
-
-  private sanitizeOptions(options: CSEFilterOptions, params: CSEFilterParams): CSEFilterOptions {
-    const newOptions = { ...options };
-    if (params.grades.length === 0 || !params.subject) {
-      newOptions.targets = undefined;
-      newOptions.claims = undefined;
-    } else if (!params.claim) {
-      newOptions.targets = undefined;
-    }
-
-    return newOptions;
   }
 
   private combineSubjectGradeOptions(options: FilterOptionsGradesSubjects): CSEFilterOptions {
