@@ -1,5 +1,6 @@
 import { SearchBaseModel, FilterType } from '@osu-cass/sb-components';
 import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
+const { API_ENDPOINT } = process.env;
 
 export interface FilterOptionsTargets {
   targetShortCodes: SearchBaseModel[];
@@ -31,8 +32,8 @@ export interface IFilterClient {
 export class FilterClient implements IFilterClient {
   private baseUrl: string;
 
-  constructor(baseUrl?: string) {
-    this.baseUrl = baseUrl || 'http://localhost:3000';
+  constructor() {
+    this.baseUrl = API_ENDPOINT || 'http://localhost:3000';
   }
 
   private async getSubjectGradeOptions(): Promise<FilterOptionsGradesSubjects> {

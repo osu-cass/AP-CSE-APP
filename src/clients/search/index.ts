@@ -2,6 +2,7 @@ import { IClaim } from '../../models/claim';
 import { ITargetParams } from '../target';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { SearchBaseModel } from '@osu-cass/sb-components';
+const { API_ENDPOINT } = process.env;
 
 export interface ISearchClient {
   search: (params: CSESearchQuery) => Promise<IClaim[] | Error>;
@@ -15,7 +16,7 @@ export class SearchClient implements ISearchClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = 'http://localhost:3000';
+    this.endpoint = API_ENDPOINT || 'http://localhost:3000';
   }
 
   private buildParams(params: CSESearchQuery): string {
