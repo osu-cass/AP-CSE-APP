@@ -1,25 +1,19 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { SearchBar } from '../SearchBar';
 import { FilterItemList } from '../FilterItemList';
 import { Filter } from '../Filter';
-import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { FilterItemProps } from '../FilterItem';
+import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { GenericPage } from '../GenericPage';
-import { Colors, Styles } from '../../constants';
+import { Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
 import { Message, ErrorMessage } from '../Filter/Messages';
-import { Resource, getResourceContent, FilterType } from '@osu-cass/sb-components';
+import { FilterType } from '@osu-cass/sb-components';
 import { paramsToSearchQuery, ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
 
-export type FilterOptionsQuery = (
-  params: CSEFilterParams,
-  current?: CSEFilterOptions
-) => Promise<CSEFilterOptions>;
-
 export interface SearchPageProps {
-  paramsFromUrl: CSEFilterParams;
+  paramsFromUrl: CSESearchQuery;
   filterClient: IFilterClient;
   searchClient: ISearchClient;
 }
@@ -53,7 +47,10 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     super(props);
 
     this.state = {
-      params: { ...props.paramsFromUrl },
+      params: {
+        ...props.paramsFromUrl,
+        grades: props.paramsFromUrl.grades || []
+      },
       search: ''
     };
   }
@@ -67,12 +64,13 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   private compareParams(oldParams: CSEFilterParams, newParams: CSEFilterParams): FilterType {
+    if (oldParams.subject !== newParams.subject) {
+      return FilterType.Subject;
+    }
     if (oldParams.claim !== newParams.claim) {
       return FilterType.Claim;
     }
-    if (oldParams.target !== newParams.target) {
-      return FilterType.Target;
-    }
+    // don't care about target
 
     return FilterType.Grade;
   }

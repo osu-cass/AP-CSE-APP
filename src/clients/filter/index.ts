@@ -32,7 +32,7 @@ export class FilterClient implements IFilterClient {
   private baseUrl: string;
 
   constructor(baseUrl?: string) {
-    this.baseUrl = baseUrl || 'https://localhost:3000';
+    this.baseUrl = baseUrl || 'http://localhost:3000';
   }
 
   private async getSubjectGradeOptions(): Promise<FilterOptionsGradesSubjects> {

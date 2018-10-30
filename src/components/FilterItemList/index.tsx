@@ -9,8 +9,8 @@ export interface FilterItemListProps {
 
 export const FilterItemList: React.SFC<FilterItemListProps> = ({ claims, getTargetLink }) => {
   const targetData: FilterItemProps[] = [];
-  claims.forEach(c =>
-    c.target.forEach(t =>
+  claims.forEach(c => {
+    c.target.forEach(t => {
       targetData.push({
         subject: c.subject,
         grade: c.grades,
@@ -18,10 +18,10 @@ export const FilterItemList: React.SFC<FilterItemListProps> = ({ claims, getTarg
         targetName: t.title,
         targetBodyText: t.description,
         targetLink: getTargetLink(t.shortCode)
-      })
-    )
-  );
-  const targetsJsx = targetData.map(t => <FilterItem {...t} />);
+      });
+    });
+  });
+  const targetsJsx = targetData.map((t, i) => <FilterItem {...t} key={i} />);
 
   return <Fragment>{targetsJsx}</Fragment>;
 };

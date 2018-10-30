@@ -28,7 +28,7 @@ export class SearchClient implements ISearchClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = 'https://localhost:3000';
+    this.endpoint = 'http://localhost:3000';
   }
 
   private buildParams(params: ISearchParams): string {
@@ -60,7 +60,7 @@ export class SearchClient implements ISearchClient {
     try {
       const response = await window.fetch(url);
 
-      return await response.json();
+      return (await response.json()) as IClaim[];
     } catch (err) {
       return new Error('Search failed.');
     }
