@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from 'react-scroll/modules';
+import { Element, Link } from 'react-scroll/modules';
 
 export interface HeaderProps {
   text: string;
@@ -21,6 +21,14 @@ export interface SectionProps extends ContentProps {
 
 export const Section = ({ name, children }: SectionProps) => (
   <Element name={name}>
+    <Link
+      activeClass="active"
+      to={name}
+      spy={true}
+      onSetActive={() => {
+        /*console.log(`active: ${name}`);*/
+      }}
+    />
     <div>{children}</div>
     <style jsx>{`
       div {

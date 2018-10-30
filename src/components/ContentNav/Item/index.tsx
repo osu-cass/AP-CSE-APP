@@ -27,6 +27,7 @@ export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName })
         onClick={e => {
           if (expand) expand(e, itemName);
         }}
+        size={20}
       />
     );
   }
@@ -36,6 +37,7 @@ export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName })
       onClick={e => {
         if (expand) expand(e, itemName);
       }}
+      size={20}
     />
   );
 };
@@ -60,8 +62,8 @@ export const Item: React.SFC<ItemProps> = ({
   children
 }) => {
   // const itemHeight = '0.75em';
-  const itemHeight = '3em';
-  const sideLength = `calc(${itemHeight} / ${Math.SQRT2} + 3px)`;
+  // const itemHeight = '3em';
+  // const sideLength = `calc(${itemHeight} / ${Math.SQRT2} + 3px)`;
 
   return (
     <li
@@ -88,7 +90,7 @@ export const Item: React.SFC<ItemProps> = ({
           position: relative;
           display: flex;
           flex-direction: column;
-          font-size: ${Styles.fontLarger};
+          font-size: ${Styles.font};
           text-indent: 0.25em;
           z-index: 0;
         }
@@ -96,14 +98,6 @@ export const Item: React.SFC<ItemProps> = ({
           list-style-type: none;
           padding-left: 0;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -115,13 +109,14 @@ export const Item: React.SFC<ItemProps> = ({
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: ${Colors.sbGrayDarker};
         }
         .active {
           color: ${Colors.sbBlue};

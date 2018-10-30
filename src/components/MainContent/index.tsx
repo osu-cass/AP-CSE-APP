@@ -2,6 +2,7 @@ import React from 'react';
 import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
+import { Styles } from '../../constants';
 
 export interface TargetLayout {
   [key: string]: string;
@@ -240,6 +241,7 @@ export const MainContent: React.SFC<MainContentProps> = ({ target, names, subNam
         * {
           margin: 0;
           padding: 0;
+          font-family: ${Styles.sbSerif};
         }
         div {
           max-width: 100%;

@@ -7,6 +7,7 @@ import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
 import { Breadcrumbs, BreadcrumbsProps } from '../../components/Breadcrumbs';
 import { Styles, blueGradientBgImg } from '../../constants';
 import { AdditionalMaterials } from '../../components/AdditionalMaterials';
+import Scroll from 'react-scroll';
 import {
   MainContent,
   Claim,
@@ -132,8 +133,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
           width: 65%;
         }
         .content-nav {
-          overflow-y: scroll;
-          width: 25%;
+          width: 20%;
         }
         .additional-materials {
           width: 15%;
@@ -171,6 +171,11 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
+  }
+
+  componentDidMount() {
+    Scroll.scrollSpy.update();
+    // console.log('updated');
   }
 
   componentWillMount() {

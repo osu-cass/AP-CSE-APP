@@ -38,23 +38,18 @@ export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => 
           font-family: ${Styles.sbSerif};
         }
         li {
-          box-sizing: border-box;
-          border-left: 3px solid ${Colors.sbWhite};
           display: flex;
           align-items: center;
-          color: ${Colors.sbBlue};
-          font-size: ${Styles.fontLarger};
-          font-weight: normal;
+          color: ${Colors.sbGray};
+          font-size: ${Styles.font};
           text-indent: 1em;
-          height: 3em;
+          height: 2em;
         }
         p {
           margin-right: 2em;
         }
         .active {
-          box-sizing: border-box;
-          border-left: 3px solid ${Colors.sbBlue};
-          font-weight: bold;
+          color: ${Colors.sbBlue};
         }
       `}</style>
     </li>

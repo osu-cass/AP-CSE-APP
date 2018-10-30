@@ -135,24 +135,22 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   render() {
     return (
       <React.Fragment>
-        <div className="outer">
-          <ul className="list" role="menu">
-            {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
-              <Item
-                name={name}
-                subItems={subItems}
-                expanded={expanded}
-                active={active}
-                activate={this.itemClicked}
-                expand={this.expand}
-                key={name}
-              >
-                {this.renderSubItems(subItems)}
-              </Item>
-            ))}
-          </ul>
-          <div className="buffer" />
-        </div>
+        <ul className="list" role="menu">
+          {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
+            <Item
+              name={name}
+              subItems={subItems}
+              expanded={expanded}
+              active={active}
+              activate={this.itemClicked}
+              expand={this.expand}
+              key={name}
+            >
+              {this.renderSubItems(subItems)}
+            </Item>
+          ))}
+        </ul>
+        <div className="buffer" />
         <style jsx>{`
           * {
             font-family: 'PT Sans Caption';
@@ -162,9 +160,6 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             padding-left: 0;
             margin: 0;
             width: 100%;
-          }
-          .outer {
-            display: flex;
           }
           .buffer {
             min-width: 27px;
