@@ -416,34 +416,26 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         padding-left: 0.5em;
       }
     
-            </style>
-          </div>
-          <div
-            name="Evidence Required"
-          >
-            <div>
-              <header>
-                <h1>
-                  Evidence Required
-                </h1>
-              </header>
-              <ol>
-                <li>
-                  The student will determine the meaning of a word or phrase based on its context in a literary text.
-                </li>
-                <li>
-                  The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                </li>
-                <li>
-                  The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                </li>
-                <li>
-                  The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                </li>
-                <style
-                  jsx={true}
-                >
-                  
+          </style>
+        </div>
+        <div
+          name="Evidence Required"
+        >
+          <div>
+            <header>
+              <h1>
+                Evidence Required
+              </h1>
+            </header>
+            <ol>
+              <li />
+              <li />
+              <li />
+              <li />
+              <style
+                jsx={true}
+              >
+                
       ol {
         margin: 0;
         padding-left: 1.5em;
@@ -460,19 +452,136 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         padding-left: 0.5em;
       }
     
-            </style>
-          </div>
-          <div
-            name="Task Model 1"
-          >
-            <div>
-              <header>
-                <h1>
-                  Task Model 1
-                </h1>
-              </header>
-              <div
-                name="Task Model 1-Task Description"
+          </style>
+        </div>
+        <div
+          name="Task Model 1"
+        >
+          <div>
+            <header>
+              <h1>
+                Task Model 1
+              </h1>
+            </header>
+            <div
+              name="Task Model 1-Task Description"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Task Description
+                  </h2>
+                </header>
+                <p>
+                  <span>
+                    The 
+                    <strong>
+                      item stem
+                    </strong>
+                     will pose a question about the meaning of a targeted word or phrase in the passage. The sentence or sentences in which the targeted word is found are excerpted and need to include enough context to correctly determine meaning. More than one sentence may be necessary.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Formatting note:
+                    </strong>
+                     in excerpts, both targeted words and phrases are underlined. In stems, targeted words are underlined; targeted phrases are placed within quotation marks.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    The 
+                    <strong>
+                      answer choices
+                    </strong>
+                     will present four options of similar structure using vocabulary on or below grade level. The correct answer will be a clearly discernible and correct meaning of the word or phrase. The 
+                    <strong>
+                      distractors
+                    </strong>
+                     will be meanings that may be plausible to students who 1) use another meaning of the word/phrase without considering context, 2) misinterpret the word, phrase, and/or context, or 3) use the wrong context to determine the meaning.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Distractors
+                    </strong>
+                     will reflect common student errors. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Rationales
+                    </strong>
+                     should state the justification for the type of plausible distractor.
+                    <br />
+                  </span>
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 1-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li />
+                  <li />
+                  <li />
+                  <li />
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    
+                  </style>
+                </ol>
+              </div>
+              <style
+                jsx={true}
               >
                 <div>
                   <header>
@@ -1532,15 +1641,29 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         justify-content: center;
       }
     
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      div {
-        padding-left: 0.5em;
+              </style>
+            </div>
+            <div
+              name="Task Model 2-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li />
+                  <li />
+                  <li />
+                  <li />
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
       }
     
                 </style>
@@ -1921,13 +2044,38 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         justify-content: center;
       }
     
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li />
+                  <li />
+                  <li />
+                  <li />
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    
+                  </style>
+                </ol>
+              </div>
+              <style
+                jsx={true}
+              >
+                
       div {
         padding-left: 0.5em;
       }

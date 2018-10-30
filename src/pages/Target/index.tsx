@@ -167,12 +167,22 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
   }
 
   componentWillMount() {
-    const test: ITargetParams = {
-      grades: [this.props.match.params.grade],
-      subject: this.props.match.params.subject,
-      claim: this.props.match.params.claim,
-      targetShortCode: this.props.match.params.shortCode
-    };
+    let test: ITargetParams;
+    if (!this.props.match || !this.props.match.params) {
+      test = {
+        grades: [''],
+        subject: '',
+        claim: '',
+        targetShortCode: ''
+      };
+    } else {
+      test = {
+        grades: [this.props.match.params.grade],
+        subject: this.props.match.params.subject,
+        claim: this.props.match.params.claim,
+        targetShortCode: this.props.match.params.shortCode
+      };
+    }
     this.targetClient.getTarget(test)
       .then((data) => {
         if (data !== undefined) {
