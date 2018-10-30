@@ -417,18 +417,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               </h1>
             </header>
             <ol>
-              <li>
-                The student will determine the meaning of a word or phrase based on its context in a literary text.
-              </li>
-              <li>
-                The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-              </li>
-              <li>
-                The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-              </li>
-              <li>
-                The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-              </li>
+              <li />
+              <li />
+              <li />
+              <li />
               <style
                 jsx={true}
               >
@@ -561,18 +553,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   </h2>
                 </header>
                 <ol>
-                  <li>
-                    The student will determine the meaning of a word or phrase based on its context in a literary text.
-                  </li>
-                  <li>
-                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                  </li>
-                  <li>
-                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                  </li>
-                  <li>
-                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                  </li>
+                  <li />
+                  <li />
+                  <li />
+                  <li />
                   <style
                     jsx={true}
                   >
@@ -1160,18 +1144,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   </h2>
                 </header>
                 <ol>
-                  <li>
-                    The student will determine the meaning of a word or phrase based on its context in a literary text.
-                  </li>
-                  <li>
-                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                  </li>
-                  <li>
-                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                  </li>
-                  <li>
-                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                  </li>
+                  <li />
+                  <li />
+                  <li />
+                  <li />
                   <style
                     jsx={true}
                   >
@@ -1659,18 +1635,10 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   </h2>
                 </header>
                 <ol>
-                  <li>
-                    The student will determine the meaning of a word or phrase based on its context in a literary text.
-                  </li>
-                  <li>
-                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                  </li>
-                  <li>
-                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                  </li>
-                  <li>
-                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                  </li>
+                  <li />
+                  <li />
+                  <li />
+                  <li />
                   <style
                     jsx={true}
                   >
