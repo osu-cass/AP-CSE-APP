@@ -71,7 +71,7 @@ export class FilterClient implements IFilterClient {
     let newOptions: CSEFilterOptions;
     try {
       if (options) {
-        newOptions = { ...options };
+        newOptions = this.sanitizeOptions(options, params);
       } else {
         const result = await this.getSubjectGradeOptions();
         newOptions = this.combineSubjectGradeOptions(result);
@@ -94,6 +94,18 @@ export class FilterClient implements IFilterClient {
     } catch (err) {
       return new Error(String(err));
     }
+  }
+
+  private sanitizeOptions(options: CSEFilterOptions, params: CSEFilterParams): CSEFilterOptions {
+    const newOptions = { ...options };
+    if (params.grades.length === 0 || !params.subject) {
+      newOptions.targets = undefined;
+      newOptions.claims = undefined;
+    } else if (!params.claim) {
+      newOptions.targets = undefined;
+    }
+
+    return newOptions;
   }
 
   private combineSubjectGradeOptions(options: FilterOptionsGradesSubjects): CSEFilterOptions {
