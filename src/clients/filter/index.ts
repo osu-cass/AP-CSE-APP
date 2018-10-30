@@ -77,10 +77,16 @@ export class FilterClient implements IFilterClient {
         newOptions = this.combineSubjectGradeOptions(result);
       }
 
-      if (!change || change === FilterType.Subject || change === FilterType.Grade) {
+      if (!change) {
+        const [c, t] = await Promise.all([this.updateClaims(params), this.updateTargets(params)]);
+        newOptions.claims = c;
+        newOptions.targets = t;
+      }
+
+      if (change === FilterType.Subject || change === FilterType.Grade) {
         newOptions.claims = await this.updateClaims(params);
       }
-      if (!change || change === FilterType.Claim) {
+      if (change === FilterType.Claim) {
         newOptions.targets = await this.updateTargets(params);
       }
 

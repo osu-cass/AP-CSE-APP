@@ -77,12 +77,16 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   async componentDidMount() {
-    let results: IClaim[] | Error | undefined;
     if (anyParams(this.props.paramsFromUrl)) {
-      results = await this.props.searchClient.search(this.props.paramsFromUrl);
+      const [results, options] = await Promise.all([
+        this.props.searchClient.search(this.props.paramsFromUrl),
+        this.props.filterClient.getFilterOptions(this.state.params)
+      ]);
+      this.setState({ results, options });
+    } else {
+      const options = await this.props.filterClient.getFilterOptions(this.state.params);
+      this.setState({ options });
     }
-    const options = await this.props.filterClient.getFilterOptions(this.state.params);
-    this.setState({ options, results });
   }
 
   private updateQuery(search: string, params: CSEFilterParams) {
