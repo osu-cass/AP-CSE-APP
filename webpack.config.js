@@ -10,7 +10,8 @@ module.exports = {
     devtool: "cheap-module-eval-source-map",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.[hash].js'
+        filename: 'app.bundle.[hash].js',
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json', '.css']

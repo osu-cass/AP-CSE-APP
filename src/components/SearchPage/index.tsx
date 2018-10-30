@@ -8,14 +8,17 @@ import { Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
 import { Message, ErrorMessage } from '../Filter/Messages';
 import { FilterType } from '@osu-cass/sb-components';
-import { paramsToSearchQuery, ISearchClient } from '../../clients/search';
+import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
+import { stringify } from 'query-string';
+import { History } from 'history';
 
 export interface SearchPageProps {
   paramsFromUrl: CSESearchQuery;
   filterClient: IFilterClient;
   searchClient: ISearchClient;
+  history: History;
 }
 
 export interface SearchPageState {
@@ -25,12 +28,30 @@ export interface SearchPageState {
   search: string;
 }
 
+function anyParams(urlParmas: CSESearchQuery): boolean {
+  return Object.values(urlParmas).some((p: boolean) => p);
+}
+
 function unwrapError<T>(data?: T | Error): T | undefined {
   if (!data) {
     return undefined;
   }
 
   return data instanceof Error ? undefined : data;
+}
+
+function compareParams(oldParams: CSEFilterParams, newParams: CSEFilterParams): FilterType {
+  if (JSON.stringify(oldParams.grades) !== JSON.stringify(newParams.grades)) {
+    return FilterType.Grade;
+  }
+  if (oldParams.subject !== newParams.subject) {
+    return FilterType.Subject;
+  }
+  if (oldParams.claim !== newParams.claim) {
+    return FilterType.Claim;
+  }
+
+  return FilterType.Target;
 }
 
 const placeholder = (targetCode: string) => `/target/${targetCode}`;
@@ -56,42 +77,42 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   async componentDidMount() {
-    const options = await this.props.filterClient.getFilterOptions(
-      this.state.params,
-      FilterType.Grade
-    );
-    this.setState({ options });
+    let results: IClaim[] | Error | undefined;
+    if (anyParams(this.props.paramsFromUrl)) {
+      results = await this.props.searchClient.search(this.props.paramsFromUrl);
+    }
+    const options = await this.props.filterClient.getFilterOptions(this.state.params);
+    this.setState({ options, results });
   }
 
-  private compareParams(oldParams: CSEFilterParams, newParams: CSEFilterParams): FilterType {
-    if (oldParams.subject !== newParams.subject) {
-      return FilterType.Subject;
-    }
-    if (oldParams.claim !== newParams.claim) {
-      return FilterType.Claim;
-    }
-    // don't care about target
-
-    return FilterType.Grade;
+  private updateQuery(search: string, params: CSEFilterParams) {
+    const query: CSESearchQuery = {
+      search,
+      ...params
+    };
+    const queryString = stringify(query);
+    this.props.history.replace({ search: queryString });
   }
 
   onFilterChanged = async (newFilter: CSEFilterParams) => {
-    const query = paramsToSearchQuery(this.state.search, newFilter);
+    const { params, search } = this.state;
     const [options, results] = await Promise.all([
       this.props.filterClient.getFilterOptions(
         newFilter,
-        this.compareParams(this.state.params, newFilter),
+        compareParams(params, newFilter),
         unwrapError(this.state.options)
       ),
-      this.props.searchClient.search(query)
+      this.props.searchClient.search({ search, ...params })
     ]);
 
+    this.updateQuery(search, newFilter);
     this.setState({ options, results, params: newFilter });
   };
 
   onSearch = async (search: string) => {
-    const query = paramsToSearchQuery(search, this.state.params);
-    const results = await this.props.searchClient.search(query);
+    const results = await this.props.searchClient.search({ search, ...this.state.params });
+
+    this.updateQuery(search, this.state.params);
     this.setState({ results, search });
   };
 
@@ -105,7 +126,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     }
 
     return (
-      <FilterContianer>
+      <FilterContianer expanded={anyParams(this.props.paramsFromUrl)}>
         <Filter options={options} params={params} onUpdate={this.onFilterChanged} />
       </FilterContianer>
     );

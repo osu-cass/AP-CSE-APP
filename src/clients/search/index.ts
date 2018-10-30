@@ -1,23 +1,10 @@
 import { IClaim } from '../../models/claim';
 import { ITargetParams } from '../target';
-import { CSEFilterParams } from '../../models/filter';
+import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { SearchBaseModel } from '@osu-cass/sb-components';
 
-export interface ISearchParams extends ITargetParams {
-  query?: string;
-}
 export interface ISearchClient {
-  search: (params: ISearchParams) => Promise<IClaim[] | Error>;
-}
-
-export function paramsToSearchQuery(search: string, params: CSEFilterParams): ISearchParams {
-  return {
-    query: search,
-    grades: params.grades,
-    subject: params.subject || '',
-    claim: params.claim || '',
-    targetShortCode: params.target || ''
-  };
+  search: (params: CSESearchQuery) => Promise<IClaim[] | Error>;
 }
 
 /**
@@ -31,12 +18,12 @@ export class SearchClient implements ISearchClient {
     this.endpoint = 'http://localhost:3000';
   }
 
-  private buildParams(params: ISearchParams): string {
-    const { query, subject, grades, claim, targetShortCode } = params;
+  private buildParams(params: CSESearchQuery): string {
+    const { search, subject, grades, claim, target } = params;
     let url = `${this.endpoint}/api/search/?`;
 
-    if (query) {
-      url = url.concat(`query=${query}&`);
+    if (search) {
+      url = url.concat(`query=${search}&`);
     }
     if (subject) {
       url = url.concat(`subject=${subject}`);
@@ -47,14 +34,14 @@ export class SearchClient implements ISearchClient {
     if (claim) {
       url = url.concat(`&claimNumber=${claim}`);
     }
-    if (targetShortCode) {
-      url = url.concat(`&targetShortCode=${targetShortCode}`);
+    if (target) {
+      url = url.concat(`&targetShortCode=${target}`);
     }
 
     return url;
   }
 
-  public async search(params: ISearchParams): Promise<IClaim[] | Error> {
+  public async search(params: CSESearchQuery): Promise<IClaim[] | Error> {
     const url: string = this.buildParams(params);
 
     try {

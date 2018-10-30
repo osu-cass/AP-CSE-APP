@@ -17,7 +17,7 @@ export interface FilterOptionsGradesSubjects {
 export interface IFilterClient {
   getFilterOptions: (
     params: CSEFilterParams,
-    change: FilterType,
+    change?: FilterType,
     options?: CSEFilterOptions
   ) => Promise<CSEFilterOptions | Error>;
 }
@@ -65,7 +65,7 @@ export class FilterClient implements IFilterClient {
 
   async getFilterOptions(
     params: CSEFilterParams,
-    change: FilterType,
+    change?: FilterType,
     options?: CSEFilterOptions
   ): Promise<CSEFilterOptions | Error> {
     let newOptions: CSEFilterOptions;
@@ -77,9 +77,10 @@ export class FilterClient implements IFilterClient {
         newOptions = this.combineSubjectGradeOptions(result);
       }
 
-      if (change === FilterType.Subject) {
+      if (!change || change === FilterType.Subject || change === FilterType.Grade) {
         newOptions.claims = await this.updateClaims(params);
-      } else if (change === FilterType.Claim) {
+      }
+      if (!change || change === FilterType.Claim) {
         newOptions.targets = await this.updateTargets(params);
       }
 
@@ -97,7 +98,7 @@ export class FilterClient implements IFilterClient {
   }
 
   private async updateClaims(params: CSEFilterParams): Promise<SearchBaseModel[] | undefined> {
-    if (params.subject) {
+    if (params.subject && params.grades) {
       const result = await this.getClaimOptions(params.subject, params.grades);
 
       return result.claimNumbers;
