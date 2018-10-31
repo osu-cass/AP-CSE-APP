@@ -1,6 +1,10 @@
 declare module '@react-pdf/renderer' {
   import React from 'react';
 
+  interface StyleSheet {
+    create: (object : any) => any;
+  }
+
   interface DocumentProps {
     title?: string;
     author?: string;
@@ -90,4 +94,6 @@ declare module '@react-pdf/renderer' {
     children: Function | Node;
   }
   export const PDFDownloadLink: React.SFC<PDFDownloadLinkProps>;
+  export const StyleSheet : StyleSheet;
 }
+
