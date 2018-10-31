@@ -67,9 +67,5 @@ module.exports = {
       inject: true,
       template: 'src/index.html'
     })
-    // new webpack.DllReferencePlugin({
-    //   context: __dirname,
-    //   manifest: require('./dist/vendor-manifest.json')
-    // })
   ]
 };
