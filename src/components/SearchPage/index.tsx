@@ -106,7 +106,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         compareParams(params, newFilter),
         unwrapError(this.state.options)
       ),
-      this.props.searchClient.search({ search, ...params })
+      this.props.searchClient.search({ search, ...newFilter })
     ]);
 
     this.updateQuery(search, newFilter);
