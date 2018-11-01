@@ -18,6 +18,8 @@ export enum Styles {
   targetContentWidth = '85%'
 }
 
+export const blueGradient = `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`;
+
 export const blueGradientBgImg = {
   backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
 };
