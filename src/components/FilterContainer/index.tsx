@@ -43,29 +43,39 @@ export class FilterContianer extends React.Component<FilterContianerProps, Filte
 
     return (
       <React.Fragment>
-        <div
+        <h2
           className="header"
           onClick={this.toggleExpanded}
           role="button"
           tabIndex={0}
           onKeyPress={this.handleEnterPress}
         >
-          <Filter /> Filter <span className="chevron">{chevron}</span>
-        </div>
+          <Filter />
+          &nbsp;Filter&nbsp;
+          <span className="chevron">{chevron}</span>
+        </h2>
+
         {expanded ? <div className="filter-container">{children}</div> : undefined}
         <style jsx>{`
           .filter-container {
             background-color: #eee;
-            border-top: 1px solid ${Colors.sbGray};
             border-bottom: 1px solid ${Colors.sbGray};
             padding: ${Styles.paddingUnit};
           }
           .chevron {
             color: gray;
+            display: flex;
+            align-items: center;
+          }
+          h2 {
+            font-weight: normal;
+            margin: 0;
+            border-bottom: 1px solid ${Colors.sbGray};
+            display: flex;
+            align-items: center;
           }
           .header {
             cursor: pointer;
-            font-size: 2em;
           }
         `}</style>
       </React.Fragment>

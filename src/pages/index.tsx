@@ -14,11 +14,12 @@ export const App: React.SFC = () => {
           <Route path="/target/" component={TargetPage} />
         </div>
       </BrowserRouter>
-      <style jsx>{`
+      <style jsx global>{`
         html,
         body {
           margin: 0;
           padding: 0;
+          font-family: PT Sans Caption;
         }
       `}</style>
     </React.Fragment>

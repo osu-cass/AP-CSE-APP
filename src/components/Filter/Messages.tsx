@@ -1,11 +1,12 @@
 import React from 'react';
-import { Colors } from '../../constants';
+import { Colors, Styles } from '../../constants';
 
 export const Message: React.SFC = ({ children }) => (
   <div className="message">
     {children}
     <style jsx>{`
       .message {
+        margin: ${Styles.paddingUnit} 0;
         text-align: center;
       }
     `}</style>

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { FilterItemProps, FilterItem } from '../FilterItem';
 import { IClaim } from '../../models/claim';
+import { Colors, Styles } from '../../constants';
 
 export interface FilterItemListProps {
   claims: IClaim[];
@@ -23,5 +24,17 @@ export const FilterItemList: React.SFC<FilterItemListProps> = ({ claims, getTarg
   });
   const targetsJsx = targetData.map((t, i) => <FilterItem {...t} key={i} />);
 
-  return <Fragment>{targetsJsx}</Fragment>;
+  return (
+    <Fragment>
+      <h2>Results</h2>
+      {targetsJsx}
+      <style jsx>{`
+        h2 {
+          font-weight: normal;
+          margin-top: ${Styles.paddingUnit};
+          border-bottom: 1px solid ${Colors.sbGray};
+        }
+      `}</style>
+    </Fragment>
+  );
 };

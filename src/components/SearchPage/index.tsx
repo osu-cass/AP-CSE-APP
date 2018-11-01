@@ -153,7 +153,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
   render() {
     return (
-      <GenericPage claimTitle="Find Targets">
+      <GenericPage title="Find Targets">
         <SearchBar onSearch={this.onSearch} />
         <div className="content-container">
           {this.renderFilter()}
