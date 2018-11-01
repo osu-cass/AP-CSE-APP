@@ -119,7 +119,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
   return (
     <div className="frame">
       <div className="content-nav">
-        <ContentNav items={parseNavProps(target)} />
+        <ContentNav items={parseNavProps(target)} referenceContainer={'content-frame'} />
       </div>
       <div className="content-frame" id="content-frame">
         <MainContent target={target} names={targetLayout} subNames={subItemLayout} />
@@ -171,11 +171,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
-  }
-
-  componentDidMount() {
-    Scroll.scrollSpy.update();
-    // console.log('updated');
   }
 
   componentWillMount() {

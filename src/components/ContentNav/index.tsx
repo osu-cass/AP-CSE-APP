@@ -13,6 +13,7 @@ import { SubItem, SubItemProps } from './SubItem';
 export interface ContentNavProps {
   items: ItemProps[];
   activeElement?: string;
+  referenceContainer?: string;
 }
 
 /**
@@ -55,19 +56,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   }
 
-  scrollPageTo = (name: string, scrollOffset: number) => {
-    Scroll.scroller.scrollTo(name, {
-      duration: 0,
-      delay: 0,
-      smooth: false,
-      containerId: 'content-frame',
-      offset: scrollOffset
-    });
-  };
-
-  subItemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    event.stopPropagation();
-    this.scrollPageTo(name, -250);
+  subItemClicked = (name: string) => {
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
       item.subItems = item.subItems.map((subItem: SubItemProps) => {
@@ -85,8 +74,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   };
 
-  itemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    this.scrollPageTo(name, -225);
+  itemClicked = (name: string) => {
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
       let newSubItems: SubItemProps[] = [];
@@ -124,6 +112,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             active={subItem.active}
             activate={this.subItemClicked}
             key={`${name}-${subItem.name}`}
+            referenceContainer={this.props.referenceContainer}
           />
         );
       });
@@ -144,6 +133,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
               active={active}
               activate={this.itemClicked}
               expand={this.expand}
+              referenceContainer={this.props.referenceContainer}
               key={name}
             >
               {this.renderSubItems(subItems)}

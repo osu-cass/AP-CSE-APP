@@ -1,6 +1,7 @@
 import React from 'react';
 import { Colors, Styles } from '../../../constants';
 import { ItemProps } from '../Item';
+import Scroll, { Link } from 'react-scroll';
 
 /**
  * Properties for SubItem
@@ -10,7 +11,8 @@ import { ItemProps } from '../Item';
 export interface SubItemProps {
   active?: boolean;
   name: string;
-  activate?: (e: React.MouseEvent<HTMLLIElement>, n: string) => void;
+  referenceContainer?: string;
+  activate?: (n: string) => void;
 }
 
 /**
@@ -19,19 +21,47 @@ export interface SubItemProps {
  * @function {SubItem}
  * @param {string} name
  * @param {boolean} [active]
- * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
+ * @param {(n: string) => void} [activate]
  */
-export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => {
+export const SubItem: React.SFC<SubItemProps> = ({
+  name,
+  active,
+  activate,
+  referenceContainer
+}) => {
   const subName = name.split('-')[1];
+
+  const scrollPageTo = (name: string, scrollOffset: number) => {
+    Scroll.scroller.scrollTo(name, {
+      duration: 0,
+      delay: 0,
+      smooth: false,
+      containerId: referenceContainer,
+      offset: scrollOffset
+    });
+  };
 
   return (
     <li
       className={`${active ? 'active' : ''}`}
       onClick={e => {
-        if (activate) activate(e, name);
+        if (activate) activate(name);
+        e.stopPropagation();
+        scrollPageTo(name, -255);
       }}
       role="menuitem"
     >
+      {referenceContainer && (
+        <Link
+          to={name}
+          spy={true}
+          containerId={referenceContainer}
+          offset={-30}
+          onSetActive={() => {
+            if (activate) activate(name);
+          }}
+        />
+      )}
       <p>{subName}</p>
       <style jsx>{`
         * {
@@ -43,7 +73,7 @@ export const SubItem: React.SFC<SubItemProps> = ({ name, active, activate }) => 
           color: ${Colors.sbGray};
           font-size: ${Styles.font};
           text-indent: 1em;
-          height: 2em;
+          height: 1.75em;
         }
         p {
           margin-right: 2em;
