@@ -25,18 +25,15 @@ export const FilterItem: React.SFC<FilterItemProps> = ({
   targetBodyText
 }) => (
   <div>
-    <div>
-      <Link to={targetLink}>
-        <h3>{targetName}</h3>
-      </Link>
-    </div>
+    <Link to={targetLink}>
+      <h3>{targetName}</h3>
+    </Link>
     <div className="indented">
       <div className="breadcrumb">
         {subject} &raquo; {grade} &raquo; {claim}
       </div>
       <div>{targetBodyText}</div>
     </div>
-    <hr />
     <style jsx>{`
       h3 {
         color: ${Colors.sbBlue};

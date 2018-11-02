@@ -8,8 +8,9 @@ import {
 import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { Colors, blueGradient, Styles } from '../../constants';
+import css from 'styled-jsx/css';
 
-const globalFilterStyle = `
+const globalFilterStyle = css.global`
   .filter-selection {
     margin-right: ${Styles.paddingUnit};
   }
