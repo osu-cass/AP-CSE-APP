@@ -1,7 +1,7 @@
 import React from 'react';
 import { Colors, Styles } from '../../../constants';
-import { ItemProps } from '../Item';
-import Scroll, { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
+import { scrollPageTo } from '../../../utilities/scroller';
 
 /**
  * Properties for SubItem
@@ -31,23 +31,13 @@ export const SubItem: React.SFC<SubItemProps> = ({
 }) => {
   const subName = name.split('-')[1];
 
-  const scrollPageTo = (name: string, scrollOffset: number) => {
-    Scroll.scroller.scrollTo(name, {
-      duration: 0,
-      delay: 0,
-      smooth: false,
-      containerId: referenceContainer,
-      offset: scrollOffset
-    });
-  };
-
   return (
     <li
       className={`${active ? 'active' : ''}`}
       onClick={e => {
         if (activate) activate(name);
         e.stopPropagation();
-        scrollPageTo(name, -255);
+        scrollPageTo(name, -255, referenceContainer);
       }}
       role="menuitem"
     >

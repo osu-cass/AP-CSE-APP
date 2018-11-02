@@ -1,5 +1,5 @@
 import React from 'react';
-import Scroll, { Element, Link } from 'react-scroll/modules';
+import { Element } from 'react-scroll/modules';
 
 export interface HeaderProps {
   text: string;

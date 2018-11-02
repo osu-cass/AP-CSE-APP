@@ -7,7 +7,6 @@ import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
 import { Breadcrumbs, BreadcrumbsProps } from '../../components/Breadcrumbs';
 import { Styles, blueGradientBgImg } from '../../constants';
 import { AdditionalMaterials } from '../../components/AdditionalMaterials';
-import Scroll from 'react-scroll';
 import {
   MainContent,
   Claim,

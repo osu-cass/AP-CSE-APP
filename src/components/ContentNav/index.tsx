@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Scroll from 'react-scroll';
-import { Colors, Styles } from '../../constants';
-import { SbNavLink } from '../SbNavLink';
 import { Item, ItemProps } from './Item';
 import { SubItem, SubItemProps } from './SubItem';
 
