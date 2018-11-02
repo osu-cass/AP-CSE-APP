@@ -69,10 +69,12 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
     this.state = {
       params: {
-        ...props.paramsFromUrl,
-        grades: props.paramsFromUrl.grades || []
+        grades: props.paramsFromUrl.grades || [],
+        subject: props.paramsFromUrl.subject,
+        claim: props.paramsFromUrl.claim,
+        target: props.paramsFromUrl.target
       },
-      search: ''
+      search: props.paramsFromUrl.search || ''
     };
   }
 
@@ -154,7 +156,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   render() {
     return (
       <GenericPage title="Find Targets">
-        <SearchBar onSearch={this.onSearch} />
+        <SearchBar onSearch={this.onSearch} initialText={this.props.paramsFromUrl.search} />
         <div className="content-container">
           {this.renderFilter()}
           {this.renderResults()}
