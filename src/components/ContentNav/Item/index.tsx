@@ -3,7 +3,7 @@ import { Colors, Styles } from '../../../constants';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { SubItemProps } from '../SubItem';
 import { Link } from 'react-scroll';
-import { scrollPageTo } from '../../../utilities/scroller';
+import { scrollPageTo, renderLink } from '../../../utilities/scroller';
 
 /**
  * Properties for Item
@@ -73,17 +73,7 @@ export const Item: React.SFC<ItemProps> = ({
       }}
       role="menuitem"
     >
-      {referenceContainer && (
-        <Link
-          to={name}
-          spy={true}
-          containerId={referenceContainer}
-          offset={-30}
-          onSetActive={() => {
-            if (activate) activate(name);
-          }}
-        />
-      )}
+      {renderLink(referenceContainer, name, activate)}
       <div className={active ? 'active' : ''}>
         <div className="item-content">
           {name}

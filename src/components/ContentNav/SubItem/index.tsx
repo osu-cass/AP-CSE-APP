@@ -1,7 +1,7 @@
 import React from 'react';
 import { Colors, Styles } from '../../../constants';
 import { Link } from 'react-scroll';
-import { scrollPageTo } from '../../../utilities/scroller';
+import { scrollPageTo, renderLink } from '../../../utilities/scroller';
 
 /**
  * Properties for SubItem
@@ -41,17 +41,7 @@ export const SubItem: React.SFC<SubItemProps> = ({
       }}
       role="menuitem"
     >
-      {referenceContainer && (
-        <Link
-          to={name}
-          spy={true}
-          containerId={referenceContainer}
-          offset={-30}
-          onSetActive={() => {
-            if (activate) activate(name);
-          }}
-        />
-      )}
+      {renderLink(referenceContainer, name, activate)}
       <p>{subName}</p>
       <style jsx>{`
         * {
