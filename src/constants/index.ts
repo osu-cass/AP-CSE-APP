@@ -11,6 +11,7 @@ export enum Colors {
 export enum Styles {
   shadow = '0 0.15em 0.35em 0 rgba(0,0,0,0.135)',
   paddingUnit = '20px',
+  font = '14px',
   fontLarger = '16px',
   sbLetterSpacing = '-.02em',
   sbSans = 'PT Sans Caption',
