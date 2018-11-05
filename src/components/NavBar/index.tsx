@@ -1,107 +1,101 @@
 import React from 'react';
-import { Colors, Styles } from '../../constants';
-import { MainMenu, IconProps } from './MainMenu';
-import { SbNavLink, SbNavlinkProps } from '../SbNavLink';
+import { Colors, Styles, iconStyle, mediaQueries, SizeBreaks } from '../../constants';
+import { MainMenu } from './MainMenu';
 import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';
+import MediaQuery from 'react-responsive';
+import { Link } from 'react-router-dom';
 
 /*tslint:disable: no-require-imports no-var-requires */
-const sbLogo: string = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
+const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
 
-export interface NavBarProps {
-  links?: SbNavlinkProps[];
-  siteName: string;
-  mainContentId: string;
-}
-
-export const Logo = (): JSX.Element => (
-  <div className="nav-titleGroup-item">
-    <a
-      rel="noopener noreferrer"
-      target="_blank"
-      href="http://www.smarterbalanced.org/"
-      title="Smarter Balanced Home"
-    >
-      <img alt="Smarter Balanced Logo" src={sbLogo} />
-    </a>
+export const HeaderLogo: React.SFC = () => (
+  <a href="https://www.smarterbalanced.org/">
+    <img alt="Smarter Balanced logo" src={sbLogo} className="sb-logo" />
     <style jsx>{`
-      .nav-titleGroup {
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        flex-grow: 1;
+      .sb-logo {
+        width: 128px;
+        padding: 3px ${Styles.paddingUnit} 3px 3px;
       }
-      img {
-        width: 183px;
-        padding-right: ${Styles.paddingUnit};
+
+      @media ${mediaQueries.tabletAndMobile} {
+        .sb-logo {
+          width: 100px;
+        }
       }
     `}</style>
-  </div>
+  </a>
 );
 
-export const NavBar = (props: NavBarProps): JSX.Element => {
-  const IconAttributes: IconProps = {
-    size: 40,
-    color: Colors.sbGray
+export const NavBar: React.SFC = () => {
+  const linkStyle: React.CSSProperties = {
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center'
   };
-  const help = <HelpCircle {...IconAttributes} />;
-  const menu = <Menu {...IconAttributes} />;
 
   return (
     <header>
-      <nav className="nav-container">
+      <HeaderLogo />
+      <nav>
         <div className="left-content">
-          <Logo />
-          <MainMenu />
+          <MediaQuery minWidth={SizeBreaks.mobile}>
+            <MainMenu />
+          </MediaQuery>
         </div>
         <div className="right-content">
-          <span>
+          <span className="right-spacing grow-search">
             <SearchBar />
           </span>
-          <span>
-            <SbNavLink url={'placeholder'} content={help} />
+          <span className="right-spacing">
+            <Link to="placeholder" style={linkStyle}>
+              <HelpCircle {...iconStyle} />
+            </Link>
           </span>
-          <span>
-            <SbNavLink url={'placeholder'} content={menu} />
-          </span>
+          <MediaQuery minWidth={SizeBreaks.mobile}>
+            <Link to="placeholder" style={linkStyle}>
+              <Menu {...iconStyle} />
+            </Link>
+          </MediaQuery>
         </div>
       </nav>
       <style jsx>{`
-        h1,
-        h2,
-        h3 {
-          color: ${Colors.sbGray};
-          letter-spacing: ${Styles.sbLetterSpacing};
-          margin: 0 ${Styles.paddingUnit} / 2;
-        }
-
-        img {
-          border-right: 1px solid ${Colors.sbGray};
-          padding-right: ${Styles.paddingUnit};
-          width: 183px;
-        }
-
-        .nav-container {
-          background-color: ${Colors.sbGrayLighter};
-          border-color: ${Colors.sbGrayLighter};
-          border-radius: 0px;
-          box-shadow: ${Styles.shadow};
+        header {
           display: flex;
+          padding: ${Styles.paddingUnit} / 2;
+          background-color: ${Colors.sbGrayLighter};
+          box-shadow: ${Styles.shadow};
+        }
+
+        nav {
+          display: flex;
+          flex-grow: 1;
           font-family: ${Styles.sbSans};
           justify-content: space-between;
           padding: ${Styles.paddingUnit} / 2;
         }
 
-        .right-content * {
-          margin: 0 0.5em;
+        .right-spacing {
+          margin-right: ${Styles.paddingUnit};
         }
 
         .left-content,
         .right-content {
           align-items: center;
           display: flex;
-          flex-flow: row;
-          justify-content: space-between;
+          justify-content: flex-end;
+        }
+        .right-content {
+          flex-grow: 1;
+        }
+
+        @media ${mediaQueries.tabletAndMobile} {
+          .grow-search {
+            flex-grow: 1;
+          }
+          .right-spacing {
+            margin-right: 10px;
+          }
         }
       `}</style>
     </header>

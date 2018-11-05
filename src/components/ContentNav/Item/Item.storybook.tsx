@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
-import { Item, ItemProps } from '.';
+import { Item } from '.';
 import { SubItem } from '../SubItem';
 import { subItemMock } from '../__mocks__';
 

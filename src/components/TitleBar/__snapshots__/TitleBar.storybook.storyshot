@@ -4,85 +4,71 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
+  <div>
     <div
       style={
         Object {
           "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "maxWidth": "1024px",
+          "flexBasis": "100%",
+          "width": "100%",
         }
       }
     >
-      <div>
-        <ul>
-          <li
-            className="title"
+      <ul>
+        <li
+          className="title"
+        >
+          <span>
+            Claim 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+          </span>
+        </li>
+        <li
+          className="download"
+        >
+          <a
+            aria-label="Download"
+            download="test-file-name"
+            href="test/url"
           >
-            <span>
-              Claim 1
-            </span>
-          </li>
-          <li
-            className="desc"
-          >
-            <span>
-              Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
-            </span>
-          </li>
-          <li
-            className="download"
-          >
-            <a
-              aria-label="Download"
-              download="test-file-name"
-              href="test/url"
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                />
-                <polyline
-                  points="7 10 12 15 17 10"
-                />
-                <line
-                  x1="12"
-                  x2="12"
-                  y1="15"
-                  y2="3"
-                />
-              </svg>
-              <style
-                jsx={true}
-              >
-                
+              <path
+                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+              />
+              <polyline
+                points="7 10 12 15 17 10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="15"
+                y2="3"
+              />
+            </svg>
+            <style
+              jsx={true}
+            >
+              
       * {
         margin: 0;
         padding: 0;
@@ -94,24 +80,23 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         color: #63666A;
       }
     
-              </style>
-            </a>
-          </li>
-        </ul>
-        <style
-          jsx={true}
-        >
-          
+            </style>
+          </a>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
       }
       div {
-        // min-height: 100px;
         display: flex;
         font-family: PT Sans Caption;
         justify-content: center;
-        padding: 20px 0;
+        padding: 0.7em 0;
       }
       div ul {
         display: flex;
@@ -119,16 +104,16 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 1.8em;
         text-align: left;
       }
       .desc {
@@ -136,7 +121,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 100;
         text-align: left;
       }
@@ -145,8 +130,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         margin-top: auto;
       }
     
-        </style>
-      </div>
+      </style>
     </div>
   </div>
 </div>
@@ -156,99 +140,85 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
+  <div>
     <div
       style={
         Object {
           "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "maxWidth": "1024px",
+          "flexBasis": "100%",
+          "width": "100%",
         }
       }
     >
-      <div>
-        <ul>
-          <li
-            className="title"
+      <ul>
+        <li
+          className="title"
+        >
+          <span>
+            Claim 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+          </span>
+        </li>
+        <li
+          className="title"
+        >
+          <span>
+            Target 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.
+          </span>
+        </li>
+        <li
+          className="download"
+        >
+          <a
+            aria-label="Download"
+            download="test-file-name"
+            href="test/url"
           >
-            <span>
-              Claim 1
-            </span>
-          </li>
-          <li
-            className="desc"
-          >
-            <span>
-              Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
-            </span>
-          </li>
-          <li
-            className="title"
-          >
-            <span>
-              Target 1
-            </span>
-          </li>
-          <li
-            className="desc"
-          >
-            <span>
-              Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.
-            </span>
-          </li>
-          <li
-            className="download"
-          >
-            <a
-              aria-label="Download"
-              download="test-file-name"
-              href="test/url"
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                />
-                <polyline
-                  points="7 10 12 15 17 10"
-                />
-                <line
-                  x1="12"
-                  x2="12"
-                  y1="15"
-                  y2="3"
-                />
-              </svg>
-              <style
-                jsx={true}
-              >
-                
+              <path
+                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+              />
+              <polyline
+                points="7 10 12 15 17 10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="15"
+                y2="3"
+              />
+            </svg>
+            <style
+              jsx={true}
+            >
+              
       * {
         margin: 0;
         padding: 0;
@@ -260,24 +230,23 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         color: #63666A;
       }
     
-              </style>
-            </a>
-          </li>
-        </ul>
-        <style
-          jsx={true}
-        >
-          
+            </style>
+          </a>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
       }
       div {
-        // min-height: 100px;
         display: flex;
         font-family: PT Sans Caption;
         justify-content: center;
-        padding: 20px 0;
+        padding: 0.7em 0;
       }
       div ul {
         display: flex;
@@ -285,16 +254,16 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 1.8em;
         text-align: left;
       }
       .desc {
@@ -302,7 +271,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 100;
         text-align: left;
       }
@@ -311,8 +280,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         margin-top: auto;
       }
     
-        </style>
-      </div>
+      </style>
     </div>
   </div>
 </div>
@@ -322,57 +290,42 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
+  <div>
     <div
       style={
         Object {
           "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "maxWidth": "1024px",
+          "flexBasis": "100%",
+          "width": "100%",
         }
       }
     >
-      <div>
-        <ul>
-          <li
-            className="title"
-          >
-            <span>
-              Claim 1
-            </span>
-          </li>
-        </ul>
-        <style
-          jsx={true}
+      <ul>
+        <li
+          className="title"
         >
-          
+          <span>
+            Claim 1
+          </span>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
       }
       div {
-        // min-height: 100px;
         display: flex;
         font-family: PT Sans Caption;
         justify-content: center;
-        padding: 20px 0;
+        padding: 0.7em 0;
       }
       div ul {
         display: flex;
@@ -380,16 +333,16 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 1.8em;
         text-align: left;
       }
       .desc {
@@ -397,7 +350,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 100;
         text-align: left;
       }
@@ -406,8 +359,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         margin-top: auto;
       }
     
-        </style>
-      </div>
+      </style>
     </div>
   </div>
 </div>
@@ -417,66 +369,44 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "maxWidth": "1024px",
-        }
-      }
+  <div>
+    <a
+      aria-label="Download"
+      download="test-file-name"
+      href="test/url"
     >
-      <a
-        aria-label="Download"
-        download="test-file-name"
-        href="test/url"
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-          />
-          <polyline
-            points="7 10 12 15 17 10"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="15"
-            y2="3"
-          />
-        </svg>
-        <style
-          jsx={true}
-        >
-          
+        <path
+          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+        />
+        <polyline
+          points="7 10 12 15 17 10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="15"
+          y2="3"
+        />
+      </svg>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
@@ -488,9 +418,8 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
         color: #63666A;
       }
     
-        </style>
-      </a>
-    </div>
+      </style>
+    </a>
   </div>
 </div>
 `;

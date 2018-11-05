@@ -4,70 +4,77 @@ exports[`Storyshots SearchBar component SearchBar 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
     <div
-      className="search-bar"
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <input
-        aria-label="Search"
-        className="field"
-        type="search"
-      />
-      <button
-        aria-label="Submit"
-        className="button"
-        type="submit"
+      <div
+        className="search-bar"
       >
-        <svg
-          fill="none"
-          height={16}
-          stroke="#ffffff"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
+        <input
+          aria-label="Search"
+          className="field"
+          placeholder="Search"
+          type="search"
+        />
+        <button
+          aria-label="Submit"
+          className="button"
+          type="submit"
         >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-      </button>
-      <style
-        jsx={true}
-      >
-        
+          <svg
+            fill="none"
+            height={16}
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </button>
+        <style
+          jsx={true}
+        >
+          
       .search-bar {
         display: flex;
         min-height: 2em;
-        position: relative;
       }
       .button {
         align-items: center;
@@ -78,7 +85,6 @@ exports[`Storyshots SearchBar component SearchBar 1`] = `
         height: auto;
         justify-content: center;
         min-height: 2em;
-        position: relative;
       }
       .field {
         border-color: #63666A;
@@ -88,9 +94,16 @@ exports[`Storyshots SearchBar component SearchBar 1`] = `
         height: auto;
         min-height: 2em;
         padding: 0 0.5em;
+        flex-grow: 1;
+      }
+      @media (max-width: 950px) {
+        .field {
+          width: 0; //needed so browser will shrink it past default size
+        }
       }
     
-      </style>
+        </style>
+      </div>
     </div>
   </div>
 </div>
