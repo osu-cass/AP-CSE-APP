@@ -4,66 +4,65 @@ exports[`Storyshots ContentNav/SubItem SubItem 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      className=""
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <p />
-      <style
-        jsx={true}
+      <li
+        className=""
+        onClick={[Function]}
+        role="menuitem"
       >
-        
+        <p>
+          Task Descriptions
+        </p>
+        <style
+          jsx={true}
+        >
+          
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
-          box-sizing: border-box;
-          border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #006298;
-          font-size: 16px;
-          font-weight: normal;
+          color: #63666A;
+          font-size: 14px;
           text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
+          height: 1.75em;
         }
         p {
           margin-right: 2em;
         }
         .active {
-          box-sizing: border-box;
-          border-left: 3px solid #006298;
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: #ffffff;
+          color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -72,66 +71,65 @@ exports[`Storyshots ContentNav/SubItem SubItem Active 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      className="active"
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <p />
-      <style
-        jsx={true}
+      <li
+        className="active"
+        onClick={[Function]}
+        role="menuitem"
       >
-        
+        <p>
+          Task Descriptions
+        </p>
+        <style
+          jsx={true}
+        >
+          
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
-          box-sizing: border-box;
-          border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #006298;
-          font-size: 16px;
-          font-weight: normal;
+          color: #63666A;
+          font-size: 14px;
           text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
+          height: 1.75em;
         }
         p {
           margin-right: 2em;
         }
         .active {
-          box-sizing: border-box;
-          border-left: 3px solid #006298;
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: #ffffff;
+          color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;

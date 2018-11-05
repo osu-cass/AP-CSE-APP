@@ -5,21 +5,11 @@ export interface HeaderProps {
   text: string;
 }
 
-export interface ContentProps {
-  children:
-    | void
-    | string
-    | JSX.Element
-    | JSX.Element[]
-    | (JSX.Element | undefined)[]
-    | (JSX.Element | undefined);
-}
-
-export interface SectionProps extends ContentProps {
+export interface SectionProps {
   name: string;
 }
 
-export const Section = ({ name, children }: SectionProps) => (
+export const Section: React.SFC<SectionProps> = ({ name, children }) => (
   <Element name={name}>
     <div>{children}</div>
     <style jsx>{`
@@ -41,7 +31,7 @@ export const SubHeader = ({ text }: HeaderProps) => (
   </header>
 );
 
-export const NonBulletList = ({ children }: ContentProps) => (
+export const NonBulletList: React.SFC = ({ children }) => (
   <ul>
     {children}
     <style jsx>{`
@@ -55,7 +45,7 @@ export const NonBulletList = ({ children }: ContentProps) => (
   </ul>
 );
 
-export const NumberList = ({ children }: ContentProps) => (
+export const NumberList: React.SFC = ({ children }) => (
   <ol>
     {children}
     <style jsx>{`
@@ -67,12 +57,13 @@ export const NumberList = ({ children }: ContentProps) => (
   </ol>
 );
 
-export const Passage = ({ children }: ContentProps) => (
+export const Passage: React.SFC = ({ children }) => (
   <p>
     {children}
     <style jsx>{`
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     `}</style>
   </p>

@@ -19,7 +19,7 @@ import {
   parsedItemWithSubsMock,
   parsedNavPropsMock
 } from './__mocks__';
-import { Target } from '../../components/MainContent';
+import { ITarget } from '../../models/target';
 
 describe('Target Page', () => {
   let targetPage: ReactWrapper;
@@ -29,6 +29,8 @@ describe('Target Page', () => {
         <TargetPage url={'regular'} />
       </MemoryRouter>
     );
+    /* tslint:disable: no-console */
+    console.error = jest.fn();
   });
   afterEach(() => {
     targetPage.unmount();
@@ -47,28 +49,28 @@ describe('Target Page', () => {
   });
 
   it('parses a subItem', () => {
-    const target: Target = ELAG3ClaimMock.target[0];
+    const target: ITarget = ELAG3ClaimMock.target[0];
     const parsedSubItem = parseSubItem(target.taskModels[0]);
 
     expect(parsedSubItem).toEqual(parsedSubItemMock);
   });
 
   it('parses a regular item', () => {
-    const target: Target = ELAG3ClaimMock.target[0];
+    const target: ITarget = ELAG3ClaimMock.target[0];
 
     const parsedItems = parseItem('evidence', target);
     expect(parsedItems).toEqual(parsedRegularItemMock);
   });
 
   it('parses an item with subItems', () => {
-    const target: Target = ELAG3ClaimMock.target[0];
+    const target: ITarget = ELAG3ClaimMock.target[0];
 
     const parsedItems = parseItem('taskModels', target);
     expect(parsedItems).toEqual(parsedItemWithSubsMock);
   });
 
   it('parses data for the ContentNav', () => {
-    const target: Target = ELAG3ClaimMock.target[0];
+    const target: ITarget = ELAG3ClaimMock.target[0];
 
     const parsedNavProps = parseNavProps(target);
     expect(parsedNavProps).toEqual(parsedNavPropsMock);

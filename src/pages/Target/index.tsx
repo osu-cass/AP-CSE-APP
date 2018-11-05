@@ -7,15 +7,11 @@ import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
 import { Breadcrumbs, BreadcrumbsProps } from '../../components/Breadcrumbs';
 import { Styles, blueGradientBgImg } from '../../constants';
 import { AdditionalMaterials } from '../../components/AdditionalMaterials';
-import {
-  MainContent,
-  Claim,
-  Target,
-  TargetLayout,
-  SubLayout,
-  TaskModel
-} from '../../components/MainContent';
+import { MainContent, TargetLayout, SubLayout } from '../../components/MainContent';
+import { ITarget, ITaskModel } from '../../models/target';
+import { IClaim } from '../../models/claim';
 import { targetMock } from './__mocks__';
+import { TargetClient, ITargetParams } from '../../clients/target';
 
 export interface TargetPageProps {
   url: string;
@@ -24,14 +20,14 @@ export interface TargetPageProps {
 export interface TargetPageState {
   url: string;
   contentLoaded: boolean;
-  claim?: Claim;
-  target?: Target;
+  claim?: IClaim;
+  target?: ITarget;
   breadCrumbProps: BreadcrumbsProps;
   titleBarProps: TitleBarProps;
 }
 
 export interface ContentFrameProps {
-  target: Target;
+  target: ITarget;
 }
 
 const style = {
@@ -59,7 +55,7 @@ export const subItemLayout: SubLayout = {
   rubrics: 'Scoring Rules'
 };
 
-export const parseSubItem = (taskModel: TaskModel): ItemProps => {
+export const parseSubItem = (taskModel: ITaskModel): ItemProps => {
   const item: ItemProps = { name: taskModel.taskName, subItems: [] };
   Object.keys(subItemLayout).forEach((subItemName: string) => {
     item.subItems.push({ name: `${item.name}-${subItemLayout[subItemName]}` });
@@ -68,13 +64,13 @@ export const parseSubItem = (taskModel: TaskModel): ItemProps => {
   return item;
 };
 
-export const parseItem = (targetItem: string, target: Target): ItemProps[] => {
+export const parseItem = (targetItem: string, target: ITarget): ItemProps[] => {
   const name: string = targetLayout[targetItem];
   let items: ItemProps[] = [];
   if (targetItem === 'taskModels') {
     const itemTaskModels: ItemProps[] = [];
     if (target.taskModels.length > 0) {
-      target.taskModels.forEach((taskModel: TaskModel) => {
+      target.taskModels.forEach((taskModel: ITaskModel) => {
         itemTaskModels.push(parseSubItem(taskModel));
       });
     }
@@ -86,7 +82,7 @@ export const parseItem = (targetItem: string, target: Target): ItemProps[] => {
   return items;
 };
 
-export const parseNavProps = (target: Target): ItemProps[] => {
+export const parseNavProps = (target: ITarget): ItemProps[] => {
   let items: ItemProps[] = [];
   Object.keys(targetLayout).forEach((targetItem: string) => {
     items = items.concat(parseItem(targetItem, target));
@@ -95,7 +91,7 @@ export const parseNavProps = (target: Target): ItemProps[] => {
   return items;
 };
 
-export const parseBreadCrumbData = (claim: Claim): BreadcrumbsProps => {
+export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
@@ -104,7 +100,7 @@ export const parseBreadCrumbData = (claim: Claim): BreadcrumbsProps => {
   };
 };
 
-export const parseTitleBarData = (claim: Claim): TitleBarProps => {
+export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   return {
     claimTitle: claim.domain,
     claimDesc: claim.description,
@@ -118,7 +114,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
   return (
     <div className="frame">
       <div className="content-nav">
-        <ContentNav items={parseNavProps(target)} />
+        <ContentNav items={parseNavProps(target)} referenceContainer={'content-frame'} />
       </div>
       <div className="content-frame" id="content-frame">
         <MainContent target={target} names={targetLayout} subNames={subItemLayout} />
@@ -132,8 +128,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
           width: 65%;
         }
         .content-nav {
-          overflow-y: scroll;
-          width: 25%;
+          width: 20%;
         }
         .additional-materials {
           width: 15%;
@@ -175,8 +170,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   componentWillMount() {
     this.loadData()
-      .then(data => {
-        if (data !== undefined) {
+      .then(d => {
+        if (d !== undefined) {
+          const data = (d as unknown) as IClaim;
           this.setState({
             url: '',
             claim: data,
@@ -194,11 +190,11 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   /*tslint:disable: promise-function-async */
   loadData() {
-    let data: Claim | undefined;
+    let data: IClaim | undefined;
     let promise = Promise.resolve();
     promise = promise.then(() => {
       return import('../../../mock_api_data/E.G3.C1').then(rawData => {
-        data = (rawData.default as unknown) as Claim;
+        data = (rawData.default as unknown) as IClaim;
       });
     });
 
