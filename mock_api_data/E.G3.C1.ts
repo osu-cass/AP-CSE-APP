@@ -2,7 +2,6 @@ import { IClaim } from '../src/models/claim';
 
 /* tslint:disable */
 const ELAG3ClaimMock:IClaim = {
-    "_id": "ObjectID('5bcf84141c0f8700272900e6')",
     "subject": "English Language Arts",
     "title": "English Language Arts Specification: Grade 6 Claim 1",
     "grades": [
@@ -11,7 +10,7 @@ const ELAG3ClaimMock:IClaim = {
     "claimNumber": "C1",
     "target": [
         {
-            "description": "hey",
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 1",
             "shortCode": "E.G6.C1RL.T1",
             "taskModels": [
@@ -101,6 +100,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 6",
             "shortCode": "E.G6.C1RL.T6",
             "taskModels": [
@@ -188,6 +188,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 5",
             "shortCode": "E.G6.C1RL.T5",
             "taskModels": [
@@ -331,6 +332,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 4",
             "shortCode": "E.G6.C1RL.T4",
             "taskModels": [
@@ -444,6 +446,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 2",
             "shortCode": "E.G6.C1RL.T2",
             "taskModels": [
@@ -584,6 +587,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 8",
             "shortCode": "E.G6.C1RI.T8",
             "taskModels": [
@@ -685,6 +689,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 9",
             "shortCode": "E.G6.C1RI.T9",
             "taskModels": [
@@ -833,6 +838,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 3",
             "shortCode": "E.G6.C1RL.T3",
             "taskModels": [
@@ -981,6 +987,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 7",
             "shortCode": "E.G6.C1RL.T7",
             "taskModels": [
@@ -1083,6 +1090,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 10",
             "shortCode": "E.G6.C1RI.T10",
             "taskModels": [
@@ -1239,6 +1247,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 11",
             "shortCode": "E.G6.C1RI.T11",
             "taskModels": [
@@ -1376,6 +1385,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 12",
             "shortCode": "E.G6.C1RI.T12",
             "taskModels": [
@@ -1519,6 +1529,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 13",
             "shortCode": "E.G6.C1RI.T13",
             "taskModels": [
@@ -1618,6 +1629,7 @@ const ELAG3ClaimMock:IClaim = {
             ]
         },
         {
+            "description": "placeholder",
             "title": "English Language Arts Specification: Grade 6 Claim 1 Target 14",
             "shortCode": "E.G6.C1RI.T14",
             "taskModels": [

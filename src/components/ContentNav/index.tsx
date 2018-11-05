@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Scroll from 'react-scroll';
-import { Colors, Styles } from '../../constants';
-import { SbNavLink } from '../SbNavLink';
 import { Item, ItemProps } from './Item';
 import { SubItem, SubItemProps } from './SubItem';
 
@@ -13,6 +10,7 @@ import { SubItem, SubItemProps } from './SubItem';
 export interface ContentNavProps {
   items: ItemProps[];
   activeElement?: string;
+  referenceContainer?: string;
 }
 
 /**
@@ -55,19 +53,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   }
 
-  scrollPageTo = (name: string, scrollOffset: number) => {
-    Scroll.scroller.scrollTo(name, {
-      duration: 0,
-      delay: 0,
-      smooth: false,
-      containerId: 'content-frame',
-      offset: scrollOffset
-    });
-  };
-
-  subItemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    event.stopPropagation();
-    this.scrollPageTo(name, -250);
+  subItemClicked = (name: string) => {
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
       item.subItems = item.subItems.map((subItem: SubItemProps) => {
@@ -85,8 +71,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     });
   };
 
-  itemClicked = (event: React.MouseEvent<HTMLLIElement>, name: string) => {
-    this.scrollPageTo(name, -225);
+  itemClicked = (name: string) => {
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
       let newSubItems: SubItemProps[] = [];
@@ -124,6 +109,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             active={subItem.active}
             activate={this.subItemClicked}
             key={`${name}-${subItem.name}`}
+            referenceContainer={this.props.referenceContainer}
           />
         );
       });
@@ -135,24 +121,23 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   render() {
     return (
       <React.Fragment>
-        <div className="outer">
-          <ul className="list" role="menu">
-            {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
-              <Item
-                name={name}
-                subItems={subItems}
-                expanded={expanded}
-                active={active}
-                activate={this.itemClicked}
-                expand={this.expand}
-                key={name}
-              >
-                {this.renderSubItems(subItems)}
-              </Item>
-            ))}
-          </ul>
-          <div className="buffer" />
-        </div>
+        <ul className="list" role="menu">
+          {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
+            <Item
+              name={name}
+              subItems={subItems}
+              expanded={expanded}
+              active={active}
+              activate={this.itemClicked}
+              expand={this.expand}
+              referenceContainer={this.props.referenceContainer}
+              key={name}
+            >
+              {this.renderSubItems(subItems)}
+            </Item>
+          ))}
+        </ul>
+        <div className="buffer" />
         <style jsx>{`
           * {
             font-family: 'PT Sans Caption';
@@ -161,16 +146,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             list-style-type: none;
             padding-left: 0;
             margin: 0;
-            border-width: 0 1px 0 0;
-            border-color: #000;
-            border-style: solid;
             width: 100%;
-          }
-          .outer {
-            display: flex;
-            border-width: 0 0 0 0;
-            border-color: #000;
-            border-style: solid;
           }
           .buffer {
             min-width: 27px;

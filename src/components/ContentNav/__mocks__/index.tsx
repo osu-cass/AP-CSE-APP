@@ -15,6 +15,7 @@ export const subItemMock: SubItemProps[] = [
     name: 'Appropriate Stems'
   }
 ];
+
 export const itemMock: ItemProps[] = [
   {
     name: 'Clarifications',
@@ -40,13 +41,13 @@ export const itemMock: ItemProps[] = [
     name: 'Task Model 1',
     subItems: [
       {
-        name: 'Task Descriptions'
+        name: 'Task Model 1-Task Descriptions'
       },
       {
-        name: 'Target Evidence Statement'
+        name: 'Task Model 1-Target Evidence Statement'
       },
       {
-        name: 'Appropriate Stems'
+        name: 'Task Model 1-Appropriate Stems'
       }
     ]
   },

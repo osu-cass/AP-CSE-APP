@@ -29,6 +29,8 @@ describe('Target Page', () => {
         <TargetPage match={'English Language Arts/6/C1/E.G6.C1RL.T1'} />
       </MemoryRouter>
     );
+    /* tslint:disable: no-console */
+    console.error = jest.fn();
   });
   afterEach(() => {
     targetPage.unmount();
