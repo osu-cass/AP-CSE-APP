@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Styling } from './Styling';
 export interface TaskButtonProps {
   taskName: string;
   id: string;
@@ -11,6 +11,7 @@ export interface TaskButtonProps {
 export const TaskButton = (props: TaskButtonProps): JSX.Element => {
   return (
     <div id="button-container">
+      <style jsx>{Styling}</style>
       <button
         type="button"
         id={`${props.id}-btn`}

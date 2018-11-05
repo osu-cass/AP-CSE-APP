@@ -1,5 +1,7 @@
 import { Colors, Styles, blueGradientBgImg } from '../../constants';
-export const Styling = `button {
+import css from 'styled-jsx/css';
+export const Styling = css`
+  button {
     display: flex;
     flex-direction: column;
     width: 225px;
@@ -12,12 +14,12 @@ export const Styling = `button {
     line-height: 30px;
     border-color: ${Colors.sbGray};
     border-radius: 4px;
-    background-color: #FFF;
+    background-color: #fff;
     font-family: ${Styles.sbSans};
     font-size: 16px;
     color: ${Colors.sbGrayDarker};
     letter-spacing: ${Styles.sbLetterSpacing};
-    }
+  }
   .checked {
     background-image: ${blueGradientBgImg.backgroundImage};
     color: ${Colors.sbGrayLighter};
@@ -40,9 +42,6 @@ export const Styling = `button {
     margin-right: -15px;
     height: 200px;
   }
-  .hidden {
-    display: none;
-  }
   #title-container {
     text-align: center;
     font-family: ${Styles.sbSans};
@@ -53,7 +52,31 @@ export const Styling = `button {
     margin-bottom: 5px;
     margin-top: -10px;
   }
+  .hidden {
+    display: none;
+  }
+`;
 
+export const pageStyling = css`
+  button {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 40px;
+    text-align: center;
+    text-align: -webkit-center;
+    border: solid;
+    line-height: 30px;
+    border-color: ${Colors.sbGray};
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: ${Styles.sbSans};
+    font-size: 16px;
+    color: ${Colors.sbGrayDarker};
+    letter-spacing: ${Styles.sbLetterSpacing};
+  }
   .hidden {
     display: none;
   }
@@ -87,4 +110,5 @@ export const Styling = `button {
     margin-top: 10px;
     display: inline-block;
     color: ${Colors.sbGrayLighter};
-  }`;
+  }
+`;

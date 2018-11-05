@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import css from 'styled-jsx/css';
 // tslint:disable-next-line
 import Modal from 'react-modal';
-import { Styling } from './Styling';
+import { Styling, pageStyling } from './Styling';
 import { Colors, Styles, blueGradientBgImg } from '../../constants';
 import { TaskButton } from './TaskButton';
 import _ from 'lodash';
@@ -279,6 +280,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
             Confirm
           </button>
         </div>
+        <style jsx>{pageStyling}</style>
       </div>
     );
   }
