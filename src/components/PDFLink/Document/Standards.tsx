@@ -20,7 +20,7 @@ const styles: StandardsStyles = StyleSheet.create({
   flexColumnLeft: {
     display: 'flex',
     width: '20%',
-    padding: 10,
+    padding: 5,
     paddingRight: 8,
     borderTop: '1px solid black',
     borderRight: '2px solid black',
@@ -36,6 +36,7 @@ const styles: StandardsStyles = StyleSheet.create({
     width: '80%',
     padding: 10,
     paddingLeft: 8,
+    paddingTop: 10,
     borderTop: '1px solid black',
     borderBottom: '1px solid black',
     borderRight: '2px solid black',
@@ -43,8 +44,7 @@ const styles: StandardsStyles = StyleSheet.create({
   },
   item: {
     display: 'flex',
-    padding: '3px',
-    margin: 5
+    padding: '3px'
   },
   desc: {
     padding: 5
