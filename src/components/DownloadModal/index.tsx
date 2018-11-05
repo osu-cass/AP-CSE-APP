@@ -246,7 +246,42 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
       />
     );
   }
-
+  modalForm(taskButtons: JSX.Element[]): JSX.Element {
+    return (
+      <form className={this.state.showMultiSelect}>
+        <div id="title-container">Download PDF</div>
+        <div id="entire-target-btn-container">{this.state.taskModelButtons[0]}</div>
+        <div id="scrollable-btn-container">
+          <div id="task-models-container">{taskButtons}</div>
+        </div>
+        <div id="submit-btn-container">
+          <button type="button" onClick={this.handleContinue} id="continue-btn">
+            Continue
+          </button>
+        </div>
+        <style jsx>{Styling}</style>
+      </form>
+    );
+  }
+  confirmSelection() {
+    return (
+      <div id="confirm-selections" className={this.state.showHide}>
+        <div id="selections-title">Selected Sections</div>
+        <div id="selections-list">
+          <ul>{this.state.selectedList}</ul>
+        </div>
+        <div id="pdf-page-count">This PDF will be X pages</div>
+        <div id="confirm-back-btn-container">
+          <button type="button" id="back-btn" onClick={this.handleBackButton}>
+            Back
+          </button>
+          <button type="button" id="confirm=btn" onClick={this.handleConfirm}>
+            Confirm
+          </button>
+        </div>
+      </div>
+    );
+  }
   render() {
     const taskButtons = this.state.taskModelButtons.slice(1);
 
@@ -259,34 +294,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
           contentLabel="Download PDF"
           style={customStyles}
         >
-          <form className={this.state.showMultiSelect}>
-            <div id="title-container">Download PDF</div>
-            <div id="entire-target-btn-container">{this.state.taskModelButtons[0]}</div>
-            <div id="scrollable-btn-container">
-              <div id="task-models-container">{taskButtons}</div>
-            </div>
-            <div id="submit-btn-container">
-              <button type="button" onClick={this.handleContinue} id="continue-btn">
-                Continue
-              </button>
-            </div>
-            <style jsx>{Styling}</style>
-          </form>
-          <div id="confirm-selections" className={this.state.showHide}>
-            <div id="selections-title">Selected Sections</div>
-            <div id="selections-list">
-              <ul>{this.state.selectedList}</ul>
-            </div>
-            <div id="pdf-page-count">This PDF will be X pages</div>
-            <div id="confirm-back-btn-container">
-              <button type="button" id="back-btn" onClick={this.handleBackButton}>
-                Back
-              </button>
-              <button type="button" id="confirm=btn" onClick={this.handleConfirm}>
-                Confirm
-              </button>
-            </div>
-          </div>
+          {this.modalForm(taskButtons)}
+          {this.confirmSelection()}
         </Modal>
       </div>
     );
