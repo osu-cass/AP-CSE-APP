@@ -1,4 +1,5 @@
 import React from 'react';
+import { Passage } from './Components';
 
 const splitByNewLine = (text: string | undefined) => {
   if (text) {
@@ -13,7 +14,7 @@ const isUnderlined = (line: string) => {
   );
 };
 
-export const NewLine:React.SFC = ({ children }) => (
+export const NewLine: React.SFC = ({ children }) => (
   <span>
     {children}
     <br />
@@ -60,7 +61,20 @@ export const parseContent = (text: string | undefined) => {
     lines.splice(0, 2);
   }
 
-  return lines.map((line, index) => {
+  const content = lines.map((line, index) => {
     return <NewLine key={index}>{parseDoubleAsterisks(line, underlined)}</NewLine>;
   });
+
+  return <Passage>{content}</Passage>;
+};
+
+export const parseExamples = (examples: string | string[]) => {
+  if (examples instanceof Array && examples.length > 0) {
+    return examples.map(parseContent);
+  }
+  if (typeof examples === 'string') {
+    return parseContent(examples);
+  }
+
+  return undefined;
 };
