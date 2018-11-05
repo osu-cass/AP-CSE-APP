@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // tslint:disable-next-line
 import Modal from 'react-modal';
+import { Styling } from './Styling';
 import { Colors, Styles, blueGradientBgImg } from '../../constants';
 import { TaskButton } from './TaskButton';
 import _ from 'lodash';
@@ -26,51 +27,6 @@ export interface DownloadModalState {
   selectedList: JSX.Element[];
 }
 
-const styling = `button {
-  display: flex;
-  flex-direction: column;
-  width: 225px;
-  margin-left: 15px;
-  margin-right: 10px;
-  height: 40px;
-  text-align: center;
-  text-align: -webkit-center;
-  border: solid;
-  line-height: 30px;
-  border-color: ${Colors.sbGray};
-  border-radius: 4px;
-  background-color: #FFF;
-  font-family: ${Styles.sbSans};
-  font-size: 16px;
-  color: ${Colors.sbGrayDarker};
-  letter-spacing: ${Styles.sbLetterSpacing};
-  }
-.checked {
-  background-image: ${blueGradientBgImg.backgroundImage};
-  color: ${Colors.sbGrayLighter};
-}
-#entire-target-btn {
-  margin-bottom: 12px;
-}
-#continue-btn {
-  margin-top: 50px;
-  margin-left: 40px;
-  border: none;
-  height: 30px;
-  line-height: 26px;
-  width: 175px;
-  background-image: ${blueGradientBgImg.backgroundImage};
-  color: ${Colors.sbGrayLighter};
-}
-#scrollable-btn-container {
-  overflow-y: scroll;
-  margin-right: -15px;
-  height: 200px;
-}
-.selected {
-  background-image: ${blueGradientBgImg.backgroundImage};
- }
-`;
 const customStyles = {
   content: {
     top: '50%',
@@ -304,21 +260,6 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
           style={customStyles}
         >
           <form className={this.state.showMultiSelect}>
-            <style jsx>{`
-              .hidden {
-                display: none;
-              }
-              #title-container {
-                text-align: center;
-                font-family: ${Styles.sbSans};
-                font-size: 18px;
-                font-weight: bold;
-                color: ${Colors.sbGray};
-                letter-spacing: ${Styles.sbLetterSpacing};
-                margin-bottom: 5px;
-                margin-top: -10px;
-              }
-            `}</style>
             <div id="title-container">Download PDF</div>
             <div id="entire-target-btn-container">{this.state.taskModelButtons[0]}</div>
             <div id="scrollable-btn-container">
@@ -329,45 +270,9 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
                 Continue
               </button>
             </div>
-            <style jsx>{styling}</style>
+            <style jsx>{Styling}</style>
           </form>
           <div id="confirm-selections" className={this.state.showHide}>
-            <style jsx>{`
-              .hidden {
-                display: none;
-              }
-              div {
-                font-family: ${Styles.sbSans};
-                text-align: center;
-                letter-spacing: ${Styles.sbLetterSpacing};
-                color: ${Colors.sbGray};
-              }
-              #selections-title {
-                font-size: 20px;
-                font-weight: bold;
-                margin-right: 35px;
-                margin-left: 35px;
-                margin-bottom: 5px;
-                margin-top: -10px;
-              }
-              #selections-list {
-                overflow-y: auto;
-                height: 200px;
-                margin-left: -20px;
-                text-align: left;
-                font-size: 16px;
-              }
-              #pdf-page-count {
-                font-size: 14px;
-              }
-              #confirm-back-btn-container button {
-                width: 100px;
-                background-image: ${blueGradientBgImg.backgroundImage};
-                margin-top: 10px;
-                display: inline-block;
-                color: ${Colors.sbGrayLighter};
-              }
-            `}</style>
             <div id="selections-title">Selected Sections</div>
             <div id="selections-list">
               <ul>{this.state.selectedList}</ul>
