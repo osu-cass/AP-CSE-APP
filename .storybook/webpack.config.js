@@ -13,7 +13,12 @@ module.exports = (storybookBaseConfig, configType, config) => {
     loader: 'babel-loader',
   });
 
-  config.resolve.extensions.push(".ts", ".tsx");
+  config.module.rules.push({
+    test: /\.ttf/,
+    loader: 'file-loader',
+  });
+
+  config.resolve.extensions.push(".ttf", ".ts", ".tsx");
 
   // Return the altered config
   return config;
