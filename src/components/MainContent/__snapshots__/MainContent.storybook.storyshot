@@ -80,6 +80,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
               </style>
@@ -295,6 +296,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -346,6 +348,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -392,6 +395,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
               </style>
@@ -536,6 +540,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1024,6 +1029,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1135,6 +1141,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1515,6 +1522,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1634,6 +1642,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1902,6 +1911,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -2037,6 +2047,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -2103,6 +2114,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
               </style>

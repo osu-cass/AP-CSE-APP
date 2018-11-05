@@ -32,7 +32,15 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
           }
         }
       >
-        <div>
+        <div
+          style={
+            Object {
+              "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+              "flexBasis": "100%",
+              "width": "100%",
+            }
+          }
+        >
           <ul>
             <li
               className="title"
@@ -51,11 +59,10 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         padding: 0;
       }
       div {
-        // min-height: 100px;
         display: flex;
         font-family: PT Sans Caption;
         justify-content: center;
-        padding: 20px 0;
+        padding: 0.7em 0;
       }
       div ul {
         display: flex;
@@ -63,16 +70,16 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 1.8em;
         text-align: left;
       }
       .desc {
@@ -80,7 +87,7 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 100;
         text-align: left;
       }
