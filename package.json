@@ -73,7 +73,6 @@
   "dependencies": {
     "@osu-cass/sb-components": "^1.5.0-alpha.10",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@osu-cass/sb-components": "^1.5.0-alpha.10",
     "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
     "@types/react-responsive": "^3.0.2",
     "promise-polyfill": "^8.1.0",
