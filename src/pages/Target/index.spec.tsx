@@ -29,6 +29,8 @@ describe('Target Page', () => {
         <TargetPage url={'regular'} />
       </MemoryRouter>
     );
+    /* tslint:disable: no-console */
+    console.error = jest.fn();
   });
   afterEach(() => {
     targetPage.unmount();

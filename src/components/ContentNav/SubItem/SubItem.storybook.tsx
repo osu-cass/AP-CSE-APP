@@ -6,5 +6,5 @@ import { SubItem } from '.';
 
 storiesOf('ContentNav/SubItem', module)
   .addDecorator(centered)
-  .add('SubItem', () => <SubItem name={'Task Descriptions'} />)
-  .add('SubItem Active', () => <SubItem name={'Task Descriptions'} active={true} />);
+  .add('SubItem', () => <SubItem name={'Task Model-Task Descriptions'} />)
+  .add('SubItem Active', () => <SubItem name={'Task Model-Task Descriptions'} active={true} />);

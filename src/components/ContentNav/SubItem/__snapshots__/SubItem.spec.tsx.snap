@@ -16,32 +16,21 @@ exports[`SubItem should be active 1`] = `
     >
       
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
-          box-sizing: border-box;
-          border-left: 3px solid #ffffff;
           display: flex;
           align-items: center;
-          color: #006298;
-          font-size: 16px;
-          font-weight: normal;
+          color: #63666A;
+          font-size: 14px;
           text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
+          height: 1.75em;
         }
         p {
           margin-right: 2em;
         }
         .active {
-          box-sizing: border-box;
-          border-left: 3px solid #006298;
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: #ffffff;
+          color: #006298;
         }
       
     </style>
