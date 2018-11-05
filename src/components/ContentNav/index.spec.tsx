@@ -23,27 +23,32 @@ const produceState = ({
   {
     active: firstItemActive,
     name: 'Clarifications',
-    subItems: undefined
+    subItems: [],
+    expanded: false
   },
   {
     active: false,
     name: 'Standards',
-    subItems: undefined
+    subItems: [],
+    expanded: false
   },
   {
     active: false,
     name: 'Stimuli/Text Complexity',
-    subItems: undefined
+    subItems: [],
+    expanded: false
   },
   {
     active: false,
     name: 'Accessibility Concerns',
-    subItems: undefined
+    subItems: [],
+    expanded: false
   },
   {
     active: false,
     name: 'Evidence Required',
-    subItems: undefined
+    subItems: [],
+    expanded: false
   },
   {
     active: expandItemActive,
@@ -52,22 +57,23 @@ const produceState = ({
     subItems: [
       {
         active: firstSubItemActive,
-        name: 'Task Descriptions'
+        name: 'Task Model 1-Task Descriptions'
       },
       {
         active: false,
-        name: 'Target Evidence Statement'
+        name: 'Task Model 1-Target Evidence Statement'
       },
       {
         active: false,
-        name: 'Appropriate Stems'
+        name: 'Task Model 1-Appropriate Stems'
       }
     ]
   },
   {
     active: false,
     name: 'Scoring Rules',
-    subItems: undefined
+    subItems: [],
+    expanded: false
   }
 ];
 

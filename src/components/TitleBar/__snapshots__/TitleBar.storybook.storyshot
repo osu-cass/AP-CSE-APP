@@ -115,13 +115,17 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
       }
       div {
         // min-height: 100px;
-        padding: 20px;
+        display: flex;
+        font-family: PT Sans Caption;
+        justify-content: center;
+        padding: 20px 0;
       }
       div ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
+        max-width: 85%;
       }
       div ul li {
         min-height: 30px;
@@ -132,7 +136,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         color: white;
         font-size: 20px;
         font-weight: 800;
-        text-align: center;
+        text-align: left;
       }
       .desc {
         width: 75%;
@@ -285,13 +289,17 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
       }
       div {
         // min-height: 100px;
-        padding: 20px;
+        display: flex;
+        font-family: PT Sans Caption;
+        justify-content: center;
+        padding: 20px 0;
       }
       div ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
+        max-width: 85%;
       }
       div ul li {
         min-height: 30px;
@@ -302,7 +310,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         color: white;
         font-size: 20px;
         font-weight: 800;
-        text-align: center;
+        text-align: left;
       }
       .desc {
         width: 75%;
@@ -384,13 +392,17 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
       }
       div {
         // min-height: 100px;
-        padding: 20px;
+        display: flex;
+        font-family: PT Sans Caption;
+        justify-content: center;
+        padding: 20px 0;
       }
       div ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
+        max-width: 85%;
       }
       div ul li {
         min-height: 30px;
@@ -401,7 +413,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         color: white;
         font-size: 20px;
         font-weight: 800;
-        text-align: center;
+        text-align: left;
       }
       .desc {
         width: 75%;

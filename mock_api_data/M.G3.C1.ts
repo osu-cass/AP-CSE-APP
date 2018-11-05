@@ -1,5 +1,6 @@
-{
-    "_id": ObjectID("5b980992db2b3900a6276d14"),
+/* tslint:disable */
+export const MATHG3ClaimMock = {
+    "_id": "ObjectID('5b980992db2b3900a6276d14')",
     "title": "Grade 3 Mathematics Item Specification C1",
     "claimNumber": "C1",
     "grades": 3,

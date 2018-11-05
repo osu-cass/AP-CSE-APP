@@ -70,6 +70,9 @@ export const NavBar: React.SFC = () => {
         nav {
           display: flex;
           flex-grow: 1;
+          font-family: ${Styles.sbSans};
+          justify-content: space-between;
+          padding: ${Styles.paddingUnit} / 2;
         }
 
         .right-spacing {

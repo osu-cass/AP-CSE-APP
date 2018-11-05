@@ -177,6 +177,9 @@ exports[`Storyshots NavBar NavBar 1`] = `
         nav {
           display: flex;
           flex-grow: 1;
+          font-family: PT Sans Caption;
+          justify-content: space-between;
+          padding: 20px / 2;
         }
 
         .right-spacing {

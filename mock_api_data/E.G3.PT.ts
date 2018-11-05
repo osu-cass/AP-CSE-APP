@@ -1,5 +1,6 @@
-{
-    "_id": ObjectID("5b980992db2b3900a6276d07"),
+/* tslint:disable */
+export const ELAG3TargetMock = {
+    "_id": "ObjectID('5b980992db2b3900a6276d07')",
     "title": "English Language Arts Performance Task Specification: Grade 3 Informational Writing",
     "claimNumber": "Informational Writing",
     "grades": 3,

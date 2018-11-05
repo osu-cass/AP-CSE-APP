@@ -71,6 +71,7 @@
     ]
   },
   "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
     "@types/react-responsive": "^3.0.2",
     "react": "^16.4.1",
@@ -133,7 +134,9 @@
     "mini-css-extract-plugin": "^0.4.2",
     "prettier": "^1.14.2",
     "react-test-renderer": "^16.4.2",
+    "storybook-react-router": "^1.0.1",
     "style-loader": "^0.21.0",
+    "styled-jsx": "^3.0.2",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
     "typescript": "^3.0.3",

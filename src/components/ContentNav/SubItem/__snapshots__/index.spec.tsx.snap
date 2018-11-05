@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubItem should be active 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Unknown
+    active={true}
+    name="Test Name"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "active": true,
+      "name": "Test Name",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <li
+        class="active"
+        role="menuitem"
+      >
+        <p />
+        <style>
+          
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+        </style>
+      </li>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <p />,
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>,
+        ],
+        "className": "active",
+        "onClick": [Function],
+        "role": "menuitem",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <p />,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": <style>
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      ",
+            "jsx": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            "
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      ",
+          ],
+          "type": "style",
+        },
+      ],
+      "type": "li",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "active": true,
+        "name": "Test Name",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <li
+          class="active"
+          role="menuitem"
+        >
+          <p />
+          <style>
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>
+        </li>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            <p />,
+            <style
+              jsx={true}
+            >
+              
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+            </style>,
+          ],
+          "className": "active",
+          "onClick": [Function],
+          "role": "menuitem",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <p />,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": <style>
+              
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+            </style>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      ",
+              "jsx": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              "
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      ",
+            ],
+            "type": "style",
+          },
+        ],
+        "type": "li",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

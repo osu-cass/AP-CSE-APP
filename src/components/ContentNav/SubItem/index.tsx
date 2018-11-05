@@ -1,6 +1,7 @@
 import React from 'react';
 import { Colors, Styles } from '../../../constants';
-import { ItemProps } from '../Item';
+import { Link } from 'react-scroll';
+import { scrollPageTo, renderLink } from '../../../utilities/scroller';
 
 /**
  * Properties for SubItem
@@ -10,7 +11,8 @@ import { ItemProps } from '../Item';
 export interface SubItemProps {
   active?: boolean;
   name: string;
-  activate?: (e: React.MouseEvent<HTMLLIElement>, n: string) => void;
+  referenceContainer?: string;
+  activate?: (n: string) => void;
 }
 
 /**
@@ -19,46 +21,45 @@ export interface SubItemProps {
  * @function {SubItem}
  * @param {string} name
  * @param {boolean} [active]
- * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
+ * @param {(n: string) => void} [activate]
  */
-export const SubItem = ({ name, active, activate }: SubItemProps) => {
+export const SubItem: React.SFC<SubItemProps> = ({
+  name,
+  active,
+  activate,
+  referenceContainer
+}) => {
+  const subName = name.split('-')[1];
+
   return (
     <li
       className={`${active ? 'active' : ''}`}
       onClick={e => {
-        if (activate) activate(e, name);
+        if (activate) activate(name);
+        e.stopPropagation();
+        scrollPageTo(name, -255, referenceContainer);
       }}
       role="menuitem"
     >
-      <p>{name}</p>
+      {renderLink(referenceContainer, name, activate)}
+      <p>{subName}</p>
       <style jsx>{`
         * {
-          font-family: ${Styles.sbSans};
+          font-family: ${Styles.sbSerif};
         }
         li {
-          box-sizing: border-box;
-          border-left: 3px solid ${Colors.sbWhite};
           display: flex;
           align-items: center;
-          color: ${Colors.sbBlue};
-          font-size: 16px;
-          font-weight: normal;
+          color: ${Colors.sbGray};
+          font-size: ${Styles.font};
           text-indent: 1em;
-          height: 3em;
-        }
-        li :first-child {
-          border-top: 1px solid #000;
+          height: 1.75em;
         }
         p {
           margin-right: 2em;
         }
         .active {
-          box-sizing: border-box;
-          border-left: 3px solid ${Colors.sbBlue};
-          font-weight: bold;
-        }
-        :not(.active) {
-          background-color: ${Colors.sbWhite};
+          color: ${Colors.sbBlue};
         }
       `}</style>
     </li>

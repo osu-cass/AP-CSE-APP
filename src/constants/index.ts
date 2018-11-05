@@ -12,10 +12,12 @@ export enum Styles {
   shadow = '0 0.15em 0.35em 0 rgba(0,0,0,0.135)',
   paddingUnit = '20px',
   mobilePadding = '10px',
-  fontLarger = '18px',
+  font = '14px',
+  fontLarger = '16px',
   sbLetterSpacing = '-.02em',
   sbSans = 'PT Sans Caption',
-  sbSerif = 'PT Serif'
+  sbSerif = 'PT Serif',
+  targetContentWidth = '85%'
 }
 
 export const blueGradientBgImg = {
@@ -48,3 +50,4 @@ export const mediaQueries = {
   tablet: `(min-width: ${SizeBreaks.mobile + 1}px) and (max-width: ${SizeBreaks.tablet}px)`,
   desktop: `(min-width: ${SizeBreaks.tablet + 1}px)`
 };
+ 

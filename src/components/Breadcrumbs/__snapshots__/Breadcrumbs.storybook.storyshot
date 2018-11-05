@@ -8,6 +8,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
     }
   }
 >
+
   <div
     style={
       Object {
@@ -29,6 +30,28 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           >
             <span
               aria-label="Home"
+
+  <div>
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            aria-label="Home"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="#ffffff"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+
             >
               <svg
                 fill="none"
@@ -88,11 +111,12 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     
+
           </style>
         </li>
         <li>
@@ -105,8 +129,22 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
                 "paddingLeft": "20px",
                 "textDecoration": "none",
               }
+
+        </style>
+      </li>
+      <li>
+        <a
+          href="/ELA/Grade 8"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+
             }
           >
+
             <span
               aria-label="Grade"
             >
@@ -116,7 +154,15 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           <style
             jsx={true}
           >
-            
+
+            Grade 8
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
+
       * {
         margin: 0;
         padding: 0;
@@ -132,11 +178,12 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     
+
           </style>
         </li>
         <li>
@@ -149,6 +196,19 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
                 "paddingLeft": "20px",
                 "textDecoration": "none",
               }
+
+        </style>
+      </li>
+      <li>
+        <a
+          href="/ELA/Grade 8/Claim 4"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+
             }
           >
             <span
@@ -160,7 +220,13 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           <style
             jsx={true}
           >
-            
+            Claim 4
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
       * {
         margin: 0;
         padding: 0;
@@ -176,8 +242,8 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     
@@ -193,6 +259,17 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
                 "paddingLeft": "20px",
                 "textDecoration": "none",
               }
+        </style>
+      </li>
+      <li>
+        <a
+          href="/ELA/Grade 8/Claim 4/Target 1"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
             }
           >
             <span
@@ -220,8 +297,8 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     
@@ -236,17 +313,25 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         margin: 0;
         padding: 0;
       }
+      a {
+        color: white;
+      }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: 85%;
+        font-family: PT Sans Caption;
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;
@@ -291,6 +376,26 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
           >
             <span
               aria-label="Home"
+  <div>
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            aria-label="Home"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="#ffffff"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <svg
                 fill="none"
@@ -322,17 +427,25 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
         margin: 0;
         padding: 0;
       }
+      a {
+        color: white;
+      }
       div {
+        display: flex;
+        justify-content: center;
         opacity: 1;
       }
       div ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style-type: none;
         overflow: auto;
+        width: 85%;
+        font-family: PT Sans Caption;
+        border-bottom: 1px solid #66a1c1;
       }
       div ul li {
         display: flex;
@@ -401,8 +514,8 @@ exports[`Storyshots Breadcrumbs component Renders a breadcrumb with subject data
         height: 32px;
         width: 32px;
         right: 20px;
-        border-top: 3px solid #66a1c1;
-        border-right: 3px solid #66a1c1;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
         transform: rotate(45deg);
       }
     
