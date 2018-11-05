@@ -4,39 +4,47 @@ exports[`Storyshots HelloWorld component Renders a capitalized name 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <div>
-      <h1>
-        THOMAS NOELCKE
-      </h1>
-      <style
-        jsx={true}
-      >
-        
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div>
+        <h1>
+          THOMAS NOELCKE
+        </h1>
+        <style
+          jsx={true}
+        >
+          
       h1 {
         color: gray;
         font-family: 'PT Sans Caption';
       }
     
-      </style>
+        </style>
+      </div>
     </div>
   </div>
 </div>
@@ -46,39 +54,47 @@ exports[`Storyshots HelloWorld component Renders a lowercased name 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <div>
-      <h1>
-        Thomas Noelcke
-      </h1>
-      <style
-        jsx={true}
-      >
-        
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div>
+        <h1>
+          Thomas Noelcke
+        </h1>
+        <style
+          jsx={true}
+        >
+          
       h1 {
         color: gray;
         font-family: 'PT Sans Caption';
       }
     
-      </style>
+        </style>
+      </div>
     </div>
   </div>
 </div>

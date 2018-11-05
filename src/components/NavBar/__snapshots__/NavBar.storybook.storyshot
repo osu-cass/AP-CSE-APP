@@ -1,363 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots NavBar component NavBar 1`] = `
+exports[`Storyshots NavBar NavBar 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <header>
-      <nav
-        className="nav-container"
+  <header>
+    <a
+      href="https://www.smarterbalanced.org/"
+    >
+      <img
+        alt="Smarter Balanced logo"
+        className="sb-logo"
+        src="test-file-stub"
+      />
+      <style
+        jsx={true}
       >
-        <div
-          className="left-content"
+        
+      .sb-logo {
+        width: 128px;
+        padding: 3px 20px 3px 3px;
+      }
+
+      @media (max-width: 950px) {
+        .sb-logo {
+          width: 100px;
+        }
+      }
+    
+      </style>
+    </a>
+    <nav>
+      <div
+        className="left-content"
+      />
+      <div
+        className="right-content"
+      >
+        <span
+          className="right-spacing grow-search"
         >
           <div
-            className="nav-titleGroup-item"
+            className="search-bar"
           >
-            <a
-              href="http://www.smarterbalanced.org/"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="Smarter Balanced Home"
+            <input
+              aria-label="Search"
+              className="field"
+              placeholder="Search"
+              type="search"
+            />
+            <button
+              aria-label="Submit"
+              className="button"
+              type="submit"
             >
-              <img
-                alt="Smarter Balanced Logo"
-                src="test-file-stub"
-              />
-            </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="#ffffff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+            </button>
             <style
               jsx={true}
             >
               
-      .nav-titleGroup {
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        flex-grow: 1;
-      }
-      img {
-        width: 183px;
-        padding-right: 20px;
-      }
-    
-            </style>
-          </div>
-          <div
-            className="main-menu"
-          >
-            <a>
-              <div>
-                <svg
-                  fill="none"
-                  height={40}
-                  stroke="#63666A"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width={40}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                  />
-                  <polyline
-                    points="9 22 9 12 15 12 15 22"
-                  />
-                </svg>
-                <p>
-                  Home
-                </p>
-                <style
-                  jsx={true}
-                >
-                  
-      p {
-        color: #63666A;
-        float: right;
-        margin: 0 10px;
-      }
-      div {
-        align-items: center;
-        display: flex;
-        float: left;
-        justify-content: flex-end;
-      }
-    
-                </style>
-              </div>
-              <style
-                jsx={true}
-              >
-                
-        a {
-          display: flex;
-          align-items: center;
-        }
-      
-              </style>
-            </a>
-            <a>
-              <div>
-                <svg
-                  fill="none"
-                  height={40}
-                  stroke="#63666A"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width={40}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="8"
-                  />
-                  <line
-                    x1="21"
-                    x2="16.65"
-                    y1="21"
-                    y2="16.65"
-                  />
-                </svg>
-                <p>
-                  Search
-                </p>
-                <style
-                  jsx={true}
-                >
-                  
-      p {
-        color: #63666A;
-        float: right;
-        margin: 0 10px;
-      }
-      div {
-        align-items: center;
-        display: flex;
-        float: left;
-        justify-content: flex-end;
-      }
-    
-                </style>
-              </div>
-              <style
-                jsx={true}
-              >
-                
-        a {
-          display: flex;
-          align-items: center;
-        }
-      
-              </style>
-            </a>
-            <a>
-              <div>
-                <svg
-                  fill="none"
-                  height={40}
-                  stroke="#63666A"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width={40}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="3"
-                  />
-                </svg>
-                <p>
-                  Explore
-                </p>
-                <style
-                  jsx={true}
-                >
-                  
-      p {
-        color: #63666A;
-        float: right;
-        margin: 0 10px;
-      }
-      div {
-        align-items: center;
-        display: flex;
-        float: left;
-        justify-content: flex-end;
-      }
-    
-                </style>
-              </div>
-              <style
-                jsx={true}
-              >
-                
-        a {
-          display: flex;
-          align-items: center;
-        }
-      
-              </style>
-            </a>
-            <a>
-              <div>
-                <svg
-                  fill="none"
-                  height={40}
-                  stroke="#63666A"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width={40}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    height="7"
-                    width="7"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="7"
-                    width="7"
-                    x="14"
-                    y="3"
-                  />
-                  <rect
-                    height="7"
-                    width="7"
-                    x="14"
-                    y="14"
-                  />
-                  <rect
-                    height="7"
-                    width="7"
-                    x="3"
-                    y="14"
-                  />
-                </svg>
-                <p>
-                  Apps
-                </p>
-                <style
-                  jsx={true}
-                >
-                  
-      p {
-        color: #63666A;
-        float: right;
-        margin: 0 10px;
-      }
-      div {
-        align-items: center;
-        display: flex;
-        float: left;
-        justify-content: flex-end;
-      }
-    
-                </style>
-              </div>
-              <style
-                jsx={true}
-              >
-                
-        a {
-          display: flex;
-          align-items: center;
-        }
-      
-              </style>
-            </a>
-            <style
-              jsx={true}
-            >
-              
-        .main-menu {
-          display: flex;
-          flex-wrap: nowrap;
-        }
-      
-            </style>
-          </div>
-        </div>
-        <div
-          className="right-content"
-        >
-          <span>
-            <div
-              className="search-bar"
-            >
-              <input
-                aria-label="Search"
-                className="field"
-                type="search"
-              />
-              <button
-                aria-label="Submit"
-                className="button"
-                type="submit"
-              >
-                <svg
-                  fill="none"
-                  height={16}
-                  stroke="#ffffff"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width={16}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="8"
-                  />
-                  <line
-                    x1="21"
-                    x2="16.65"
-                    y1="21"
-                    y2="16.65"
-                  />
-                </svg>
-              </button>
-              <style
-                jsx={true}
-              >
-                
       .search-bar {
         display: flex;
         min-height: 2em;
-        position: relative;
       }
       .button {
         align-items: center;
@@ -368,7 +99,6 @@ exports[`Storyshots NavBar component NavBar 1`] = `
         height: auto;
         justify-content: center;
         min-height: 2em;
-        position: relative;
       }
       .field {
         border-color: #63666A;
@@ -378,140 +108,332 @@ exports[`Storyshots NavBar component NavBar 1`] = `
         height: auto;
         min-height: 2em;
         padding: 0 0.5em;
+        flex-grow: 1;
+      }
+      @media (max-width: 950px) {
+        .field {
+          width: 0; //needed so browser will shrink it past default size
+        }
       }
     
-              </style>
-            </div>
-          </span>
-          <span>
-            <a>
-              <svg
-                fill="none"
-                height={40}
-                stroke="#63666A"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={40}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-                <path
-                  d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
-                />
-                <line
-                  x1="12"
-                  x2="12"
-                  y1="17"
-                  y2="17"
-                />
-              </svg>
-              <style
-                jsx={true}
-              >
-                
-        a {
-          display: flex;
-          align-items: center;
-        }
+            </style>
+          </div>
+        </span>
+        <span
+          className="right-spacing"
+        >
+          <a
+            href="/placeholder"
+            onClick={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "textDecoration": "none",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={35}
+              stroke="#63666A"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={35}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="17"
+                y2="17"
+              />
+            </svg>
+          </a>
+        </span>
+      </div>
+    </nav>
+    <style
+      jsx={true}
+    >
       
-              </style>
-            </a>
-          </span>
-          <span>
-            <a>
-              <svg
-                fill="none"
-                height={40}
-                stroke="#63666A"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={40}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="3"
-                  x2="21"
-                  y1="12"
-                  y2="12"
-                />
-                <line
-                  x1="3"
-                  x2="21"
-                  y1="6"
-                  y2="6"
-                />
-                <line
-                  x1="3"
-                  x2="21"
-                  y1="18"
-                  y2="18"
-                />
-              </svg>
-              <style
-                jsx={true}
-              >
-                
-        a {
+        header {
           display: flex;
-          align-items: center;
-        }
-      
-              </style>
-            </a>
-          </span>
-        </div>
-      </nav>
-      <style
-        jsx={true}
-      >
-        
-        h1,
-        h2,
-        h3 {
-          color: #63666A;
-          letter-spacing: -.02em;
-          margin: 0 20px / 2;
-        }
-
-        img {
-          border-right: 1px solid #63666A;
-          padding-right: 20px;
-          width: 183px;
-        }
-
-        .nav-container {
+          padding: 20px / 2;
           background-color: #ebebeb;
-          border-color: #ebebeb;
-          border-radius: 0px;
           box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
+        }
+
+        nav {
           display: flex;
+          flex-grow: 1;
           font-family: PT Sans Caption;
           justify-content: space-between;
           padding: 20px / 2;
         }
 
-        .right-content * {
-          margin: 0 0.5em;
+        .right-spacing {
+          margin-right: 20px;
         }
 
         .left-content,
         .right-content {
           align-items: center;
           display: flex;
-          flex-flow: row;
-          justify-content: space-between;
+          justify-content: flex-end;
+        }
+        .right-content {
+          flex-grow: 1;
+        }
+
+        @media (max-width: 950px) {
+          .grow-search {
+            flex-grow: 1;
+          }
+          .right-spacing {
+            margin-right: 10px;
+          }
         }
       
-      </style>
-    </header>
-  </div>
+    </style>
+  </header>
+</div>
+`;
+
+exports[`Storyshots NavBar/Mobile Default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <nav>
+    <a
+      href="/placeholder"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#63666A",
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={25}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={25}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+          />
+          <polyline
+            points="9 22 9 12 15 12 15 22"
+          />
+        </svg>
+        Home
+      </div>
+    </a>
+    <a
+      href="/placeholder"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#63666A",
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={25}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={25}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+          <line
+            x1="21"
+            x2="16.65"
+            y1="21"
+            y2="16.65"
+          />
+        </svg>
+        Search
+      </div>
+    </a>
+    <a
+      href="/placeholder"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#63666A",
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={25}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={25}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="3"
+          />
+        </svg>
+        Explore
+      </div>
+    </a>
+    <a
+      href="/placeholder"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#63666A",
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={25}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={25}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="7"
+            width="7"
+            x="3"
+            y="3"
+          />
+          <rect
+            height="7"
+            width="7"
+            x="14"
+            y="3"
+          />
+          <rect
+            height="7"
+            width="7"
+            x="14"
+            y="14"
+          />
+          <rect
+            height="7"
+            width="7"
+            x="3"
+            y="14"
+          />
+        </svg>
+        Menu
+      </div>
+    </a>
+    <a
+      href="/placeholder"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#63666A",
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={25}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={25}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+        Menu
+      </div>
+    </a>
+    <style
+      jsx={true}
+    >
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 10px;
+        background-color: #ebebeb;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.75em;
+      }
+    
+    </style>
+  </nav>
 </div>
 `;

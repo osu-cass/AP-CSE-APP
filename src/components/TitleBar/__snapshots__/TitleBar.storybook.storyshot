@@ -1,67 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-        "flexBasis": "100%",
-        "width": "100%",
-      }
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
     }
-  >
-    <ul>
-      <li
-        className="title"
-      >
-        <span>
-          Claim 1
-        </span>
-      </li>
-      <li
-        className="desc"
-      >
-        <span>
-          Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
-        </span>
-      </li>
-      <li
-        className="download"
-      >
-        <a
-          aria-label="Download"
-          download="test-file-name"
-          href="test/url"
+  }
+>
+  <div>
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+          "flexBasis": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <ul>
+        <li
+          className="title"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <span>
+            Claim 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+          </span>
+        </li>
+        <li
+          className="download"
+        >
+          <a
+            aria-label="Download"
+            download="test-file-name"
+            href="test/url"
           >
-            <path
-              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-            />
-            <polyline
-              points="7 10 12 15 17 10"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="15"
-              y2="3"
-            />
-          </svg>
-          <style
-            jsx={true}
-          >
-            
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+              />
+              <polyline
+                points="7 10 12 15 17 10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="15"
+                y2="3"
+              />
+            </svg>
+            <style
+              jsx={true}
+            >
+              
       * {
         margin: 0;
         padding: 0;
@@ -73,14 +80,14 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         color: #63666A;
       }
     
-          </style>
-        </a>
-      </li>
-    </ul>
-    <style
-      jsx={true}
-    >
-      
+            </style>
+          </a>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
@@ -123,87 +130,95 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         margin-top: auto;
       }
     
-    </style>
+      </style>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-        "flexBasis": "100%",
-        "width": "100%",
-      }
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
     }
-  >
-    <ul>
-      <li
-        className="title"
-      >
-        <span>
-          Claim 1
-        </span>
-      </li>
-      <li
-        className="desc"
-      >
-        <span>
-          Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
-        </span>
-      </li>
-      <li
-        className="title"
-      >
-        <span>
-          Target 1
-        </span>
-      </li>
-      <li
-        className="desc"
-      >
-        <span>
-          Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.
-        </span>
-      </li>
-      <li
-        className="download"
-      >
-        <a
-          aria-label="Download"
-          download="test-file-name"
-          href="test/url"
+  }
+>
+  <div>
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+          "flexBasis": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <ul>
+        <li
+          className="title"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <span>
+            Claim 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+          </span>
+        </li>
+        <li
+          className="title"
+        >
+          <span>
+            Target 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.
+          </span>
+        </li>
+        <li
+          className="download"
+        >
+          <a
+            aria-label="Download"
+            download="test-file-name"
+            href="test/url"
           >
-            <path
-              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-            />
-            <polyline
-              points="7 10 12 15 17 10"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="15"
-              y2="3"
-            />
-          </svg>
-          <style
-            jsx={true}
-          >
-            
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+              />
+              <polyline
+                points="7 10 12 15 17 10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="15"
+                y2="3"
+              />
+            </svg>
+            <style
+              jsx={true}
+            >
+              
       * {
         margin: 0;
         padding: 0;
@@ -215,14 +230,14 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         color: #63666A;
       }
     
-          </style>
-        </a>
-      </li>
-    </ul>
-    <style
-      jsx={true}
-    >
-      
+            </style>
+          </a>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
@@ -265,35 +280,43 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         margin-top: auto;
       }
     
-    </style>
+      </style>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-        "flexBasis": "100%",
-        "width": "100%",
-      }
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
     }
-  >
-    <ul>
-      <li
-        className="title"
-      >
-        <span>
-          Claim 1
-        </span>
-      </li>
-    </ul>
-    <style
-      jsx={true}
+  }
+>
+  <div>
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+          "flexBasis": "100%",
+          "width": "100%",
+        }
+      }
     >
-      
+      <ul>
+        <li
+          className="title"
+        >
+          <span>
+            Claim 1
+          </span>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
@@ -336,46 +359,54 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         margin-top: auto;
       }
     
-    </style>
+      </style>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots TitleBar component Renders a download button 1`] = `
-<div>
-  <a
-    aria-label="Download"
-    download="test-file-name"
-    href="test/url"
-  >
-    <svg
-      fill="none"
-      height="24"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <a
+      aria-label="Download"
+      download="test-file-name"
+      href="test/url"
     >
-      <path
-        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-      />
-      <polyline
-        points="7 10 12 15 17 10"
-      />
-      <line
-        x1="12"
-        x2="12"
-        y1="15"
-        y2="3"
-      />
-    </svg>
-    <style
-      jsx={true}
-    >
-      
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+        />
+        <polyline
+          points="7 10 12 15 17 10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="15"
+          y2="3"
+        />
+      </svg>
+      <style
+        jsx={true}
+      >
+        
       * {
         margin: 0;
         padding: 0;
@@ -387,7 +418,8 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
         color: #63666A;
       }
     
-    </style>
-  </a>
+      </style>
+    </a>
+  </div>
 </div>
 `;

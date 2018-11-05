@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, NavBarProps } from '../NavBar';
+import { NavBar } from '../NavBar';
 import { TitleBar } from '../TitleBar';
 import homeLogo from '../../assets/images/home-page.jpg';
 
@@ -9,7 +9,7 @@ const importedLogo = homeLogo as string;
 export const HomeContent = () => (
   <div className="content">
     <div className="element-wrapper">
-      <NavBar links={[]} siteName={'test'} mainContentId={'main'} />
+      <NavBar />
     </div>
     <div className="element-wrapper">
       <TitleBar claimTitle={'Content Specification Explorer'} />
