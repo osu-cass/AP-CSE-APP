@@ -76,7 +76,7 @@
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@react-pdf/renderer": "^1.0.0-alpha.17",
+    "@react-pdf/renderer": "^1.0.0-alpha.18",
     "@react-pdf/styled-components": "^1.2.0",
     "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
     "react": "^16.4.1",
