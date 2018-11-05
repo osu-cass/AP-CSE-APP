@@ -14,12 +14,13 @@ interface StandardsStyles {
 
 const styles: StandardsStyles = StyleSheet.create({
   flexRow: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    maxHeight: '100%'
   },
   flexColumnLeft: {
     display: 'flex',
     width: '20%',
-    padding: 5,
+    padding: 10,
     paddingRight: 8,
     borderTop: '1px solid black',
     borderRight: '2px solid black',
@@ -35,7 +36,6 @@ const styles: StandardsStyles = StyleSheet.create({
     width: '80%',
     padding: 10,
     paddingLeft: 8,
-    paddingTop: 10,
     borderTop: '1px solid black',
     borderBottom: '1px solid black',
     borderRight: '2px solid black',
@@ -43,7 +43,8 @@ const styles: StandardsStyles = StyleSheet.create({
   },
   item: {
     display: 'flex',
-    padding: '3px'
+    padding: '3px',
+    margin: 5
   },
   desc: {
     padding: 5
@@ -63,7 +64,7 @@ export const Standards = ({ content }: TargetProps) => {
       <View style={styles.flexColumnLeft}>
         <Text>Standards</Text>
       </View>
-      <View style={styles.flexColumnRight}>
+      <View wrap style={styles.flexColumnRight}>
         {content.map((element: IStandards) => {
           return (
             <View style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
