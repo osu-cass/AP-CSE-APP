@@ -235,16 +235,16 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         toggleParent={this.toggleButton}
       />
     );
-    taskArray.push(
-      <TaskButton
-        toggled={false}
-        cName="unchecked"
-        id="overview"
-        key="overview"
-        taskName="Overview"
-        toggleParent={this.toggleButton}
-      />
-    );
+    const overview = _.cloneDeep(taskArray[0]);
+    overview.props = {
+      toggled: false,
+      cName: 'unchecked',
+      id: 'overview',
+      key: 'overview',
+      taskName: 'Overview',
+      toggleParent: this.toggleButton
+    };
+    taskArray.push(overview);
   }
   modalForm(taskButtons: JSX.Element[]): JSX.Element {
     return (
