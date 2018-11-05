@@ -107,28 +107,20 @@ export function sanitizeParams(
   // remove subject if not in filter options
   const subjectOption = options.subjects.find(s => s.code === params.subject);
   const subject = subjectOption ? params.subject : undefined;
-
-  let claim: string | undefined;
-  if (options.claims) {
-    // does filter options contain the claim?
-    const claimOption = options.claims.find(c => c.code === params.claim);
-    claim = claimOption ? params.claim : undefined;
-  } else {
-    // if no possible claims, clear target filter
-    claim = undefined;
-  }
-
-  let target: string | undefined;
-  if (options.targets) {
-    // does filter options contain the target?
-    const targetOption = options.targets.find(t => t.code === params.target);
-    target = targetOption ? params.target : undefined;
-  } else {
-    // if no possible targets, clear target filter
-    target = undefined;
-  }
+  const claim = find(options.claims, params.claim);
+  const target = find(options.targets, params.target);
 
   return { grades, subject, claim, target };
+}
+
+function find(toSearch?: SearchBaseModel[], toFind?: string): string | undefined {
+  let found: string | undefined;
+  if (toSearch && toFind) {
+    const option = toSearch.find(c => c.code === toFind);
+    found = option ? toFind : undefined;
+  }
+
+  return found;
 }
 
 export function paramsFromFilter(
