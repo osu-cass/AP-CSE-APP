@@ -94,6 +94,7 @@ export const Item: React.SFC<ItemProps> = ({
           font-size: ${Styles.font};
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
