@@ -6,8 +6,9 @@ import { Head } from './Head';
 import { OneColumnLayout } from './OneColumnLayout';
 import { ClaimMe } from './testData';
 import { IClaim } from '../../../models/claim';
-import { Clarification } from './Clarification';
+import { StringContent } from './StringContent';
 import { Standards } from './Standards';
+import { DOK } from './DOK';
 
 interface DocumentStyles {
   page: object;
@@ -57,7 +58,6 @@ export interface PageProps {
 
 export interface TableViewProps {
   claim: IClaim;
-  bulletpoints: string[];
 }
 
 interface PageMeta {
@@ -65,19 +65,15 @@ interface PageMeta {
   totalPages: number;
 }
 
-const stringArray: string[] = [
-  'smells bad',
-  'always talks about linux and deathgrips',
-  'know-it-all'
-];
-
-const TableView = ({ bulletpoints, claim }: TableViewProps) => (
-  <>
+const TableView = ({ claim }: TableViewProps) => (
+  <View wrap>
     {claim.description && <OneColumnLayout text={claim.description} />}
     <OneColumnLayout text={claim.target[0].vocab} />
-    <Clarification content={claim.target[0]} />
+    <StringContent title={'Clarifications'} content={claim.target[0].clarification} />
     <Standards content={claim.target[0].standards} />
-  </>
+    <DOK content={claim.target[0].DOK} />
+    <StringContent title={'Stimuli'} content={claim.target[0].stimInfo} />
+  </View>
 );
 
 export const createDocument = (claim: IClaim) => (
@@ -85,7 +81,7 @@ export const createDocument = (claim: IClaim) => (
     <Page wrap style={styles.page}>
       <Head text={claim.title} />
       <View style={styles.flexContainer} wrap>
-        <TableView claim={claim} bulletpoints={stringArray} />
+        <TableView claim={claim} />
       </View>
       <Text
         style={styles.pageNumber}
