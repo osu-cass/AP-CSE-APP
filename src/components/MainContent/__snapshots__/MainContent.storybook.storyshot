@@ -46,6 +46,55 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         >
           <div
             name="clarification"
+          <div>
+            <header>
+              <h1>
+                Clarification
+              </h1>
+            </header>
+            <p>
+              <span>
+                Targeted vocabulary words and phrases should be important to the text and worth assessing. The targeted vocabulary words and phrases should be 
+                <strong>
+                  one to two
+                </strong>
+                 grade levels above testing grade. If the targeted word/phrase is used in a context that is different from what a student would normally encounter, it may be on grade level (e.g., state, factor). Answer choices need to be 
+                <strong>
+                  on or below
+                </strong>
+                 grade level.
+                <br />
+              </span>
+              <span>
+                
+                <br />
+              </span>
+              <span>
+                The vocabulary focus of this target is on determining meaning of tier 2 words based on context. Items focusing on antonyms and synonyms, Greek or Latin roots, affixes, and the use of resources should be limited. For a list of academic/tier 2 words, see Page 70 in the item specifications.
+                <br />
+              </span>
+              <span>
+                
+                <br />
+              </span>
+              <span>
+                All items should require students to cite specific textual evidence to support conclusions drawn from the text(s).
+                <br />
+              </span>
+              <style
+                jsx={true}
+              >
+                
+      p {
+        padding-left: 0.5em;
+        justify-content: center;
+      }
+    
+              </style>
+            </p>
+          </div>
+          <style
+            jsx={true}
           >
             <div>
               <header>
@@ -292,7 +341,39 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   <strong>
                     L-4c
                   </strong>
-                   
+                 
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+        justify-content: center;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="stimuli-complexity"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Text Complexity
+                  </h2>
+                </header>
+                <p>
                   <span>
                     Use a known root word as a clue to the meaning of an unknown word with the same root (e.g.,
                     <i>
@@ -376,6 +457,25 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         margin: 0;
         padding: 0;
         list-style-type: none;
+
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+        justify-content: center;
+      }
+    
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+
         padding-left: 0.5em;
       }
     
@@ -417,6 +517,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                 
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
               </style>
@@ -581,6 +682,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1069,6 +1171,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -1180,6 +1283,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -2263,6 +2367,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
       p {
 
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -2875,6 +2980,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
 
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
 
@@ -3660,6 +3766,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -3795,6 +3902,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                   </style>
@@ -3882,6 +3990,7 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   
       p {
         padding-left: 0.5em;
+        justify-content: center;
       }
     
                 </style>
