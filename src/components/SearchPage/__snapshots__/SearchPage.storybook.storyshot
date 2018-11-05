@@ -31,7 +31,6 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
       }
     >
       <div>
-      >
         <div
           style={
             Object {
@@ -40,7 +39,15 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
             }
           }
         >
-          <div>
+          <div
+            style={
+              Object {
+                "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+                "flexBasis": "100%",
+                "width": "100%",
+              }
+            }
+          >
             <ul>
               <li
                 className="title"
@@ -52,14 +59,6 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
             </ul>
             <style
               jsx={true}
-              "flexBasis": "100%",
-              "width": "100%",
-            }
-          }
-        >
-          <ul>
-            <li
-              className="title"
             >
               
       * {

@@ -6,7 +6,7 @@ import { MobileNavBar } from './mobile';
 
 storiesOf('NavBar', module)
   .addDecorator(RouterDecorator)
-  .add('NavBar', () => <NavBar siteName={'test'} mainContentId={'main'} />);
+  .add('NavBar', () => <NavBar />);
 
 storiesOf('NavBar/Mobile', module)
   .addDecorator(RouterDecorator)

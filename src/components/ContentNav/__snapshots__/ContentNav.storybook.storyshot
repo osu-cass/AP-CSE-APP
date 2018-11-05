@@ -364,34 +364,20 @@ exports[`Storyshots ContentNav Default 1`] = `
             <div
               className="item-content"
             >
-
               Task Model 1
               <div
                 className="chevron"
-
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-
               >
                 <svg
                   fill="none"
-                  height="24"
+                  height={20}
                   onClick={[Function]}
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
-                  width="24"
+                  width={20}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <polyline
@@ -608,28 +594,19 @@ exports[`Storyshots ContentNav Default 1`] = `
           color: #006298;
         }
       
-
           </style>
         </li>
       </ul>
+      <div
+        className="buffer"
+      />
       <style
         jsx={true}
       >
         
-
-        </style>
-      </li>
-    </ul>
-    <div
-      className="buffer"
-    />
-    <style
-      jsx={true}
-    >
-      
           * {
             font-family: 'PT Sans Caption';
-}
+          }
           ul {
             list-style-type: none;
             padding-left: 0;

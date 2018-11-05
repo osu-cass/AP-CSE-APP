@@ -8,7 +8,6 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
     }
   }
 >
-
   <div
     style={
       Object {
@@ -22,41 +21,14 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           <a
             href="/"
             onClick={[Function]}
-            style={
-              Object {
-                "color": "white",
-              }
-            }
           >
             <span
               aria-label="Home"
-
-  <div>
-    <ul>
-      <li>
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          <span
-            aria-label="Home"
-          >
-            <svg
-              fill="none"
-              height="24"
-              stroke="#ffffff"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-
             >
               <svg
                 fill="none"
                 height="24"
-                stroke="currentColor"
+                stroke="#ffffff"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -116,12 +88,11 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         transform: rotate(45deg);
       }
     
-
           </style>
         </li>
         <li>
           <a
-            href="/ELA/8"
+            href="/ELA/Grade 8"
             onClick={[Function]}
             style={
               Object {
@@ -129,40 +100,18 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
                 "paddingLeft": "20px",
                 "textDecoration": "none",
               }
-
-        </style>
-      </li>
-      <li>
-        <a
-          href="/ELA/Grade 8"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
-
             }
           >
-
             <span
               aria-label="Grade"
             >
-              8
+              Grade 8
             </span>
           </a>
           <style
             jsx={true}
           >
-
-            Grade 8
-          </span>
-        </a>
-        <style
-          jsx={true}
-        >
-          
-
+            
       * {
         margin: 0;
         padding: 0;
@@ -183,12 +132,11 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         transform: rotate(45deg);
       }
     
-
           </style>
         </li>
         <li>
           <a
-            href="/ELA/8/4"
+            href="/ELA/Grade 8/Claim 4"
             onClick={[Function]}
             style={
               Object {
@@ -196,37 +144,18 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
                 "paddingLeft": "20px",
                 "textDecoration": "none",
               }
-
-        </style>
-      </li>
-      <li>
-        <a
-          href="/ELA/Grade 8/Claim 4"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
-
             }
           >
             <span
               aria-label="Claim"
             >
-              4
+              Claim 4
             </span>
           </a>
           <style
             jsx={true}
           >
-            Claim 4
-          </span>
-        </a>
-        <style
-          jsx={true}
-        >
-          
+            
       * {
         margin: 0;
         padding: 0;
@@ -251,7 +180,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         </li>
         <li>
           <a
-            href="/ELA/8/4/Target 1"
+            href="/ELA/Grade 8/Claim 4/Target 1"
             onClick={[Function]}
             style={
               Object {
@@ -259,17 +188,6 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
                 "paddingLeft": "20px",
                 "textDecoration": "none",
               }
-        </style>
-      </li>
-      <li>
-        <a
-          href="/ELA/Grade 8/Claim 4/Target 1"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "white",
-              "paddingLeft": "20px",
-              "textDecoration": "none",
             }
           >
             <span
@@ -368,39 +286,14 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
           <a
             href="/"
             onClick={[Function]}
-            style={
-              Object {
-                "color": "white",
-              }
-            }
           >
             <span
               aria-label="Home"
-  <div>
-    <ul>
-      <li>
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          <span
-            aria-label="Home"
-          >
-            <svg
-              fill="none"
-              height="24"
-              stroke="#ffffff"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <svg
                 fill="none"
                 height="24"
-                stroke="currentColor"
+                stroke="#ffffff"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"

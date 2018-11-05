@@ -142,29 +142,17 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
             Test Name
             <div
               className="chevron"
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-
             >
               <svg
                 fill="none"
-                height="24"
+                height={20}
                 onClick={[Function]}
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                width="24"
+                width={20}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <polyline
@@ -177,20 +165,12 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
         <ul
           className="sub-list "
         >
-
           <li
             className=""
             onClick={[Function]}
             role="menuitem"
-
-          <p />
-          <style
-            jsx={true}
-
           >
-            <p>
-              Task Descriptions
-            </p>
+            <p />
             <style
               jsx={true}
             >
@@ -306,34 +286,20 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           <div
             className="item-content"
           >
-
             Test Name
             <div
               className="chevron"
-
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-
             >
               <svg
                 fill="none"
-                height="24"
+                height={20}
                 onClick={[Function]}
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                width="24"
+                width={20}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <polyline
@@ -346,20 +312,12 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         <ul
           className="sub-list expanded"
         >
-
           <li
             className=""
             onClick={[Function]}
             role="menuitem"
-
-          <p />
-          <style
-            jsx={true}
-
           >
-            <p>
-              Task Descriptions
-            </p>
+            <p />
             <style
               jsx={true}
             >
@@ -382,29 +340,14 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           color: #006298;
         }
       
-
             </style>
           </li>
           <li
             className=""
             onClick={[Function]}
             role="menuitem"
-
-          </style>
-        </li>
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <p />
-          <style
-            jsx={true}
-
           >
-            <p>
-              Target Evidence Statement
-            </p>
+            <p />
             <style
               jsx={true}
             >
@@ -520,34 +463,20 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           <div
             className="item-content"
           >
-
             Task Model 1
             <div
               className="chevron"
-
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-
             >
               <svg
                 fill="none"
-                height="24"
+                height={20}
                 onClick={[Function]}
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                width="24"
+                width={20}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <polyline
@@ -560,19 +489,12 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         <ul
           className="sub-list expanded"
         >
-
           <li
             className=""
             onClick={[Function]}
             role="menuitem"
-
-          <p />
-          <style
-            jsx={true}
           >
-            <p>
-              Task Descriptions
-            </p>
+            <p />
             <style
               jsx={true}
             >
@@ -595,29 +517,14 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           color: #006298;
         }
       
-
             </style>
           </li>
           <li
             className="active"
             onClick={[Function]}
             role="menuitem"
-
-          </style>
-        </li>
-        <li
-          className="active"
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <p />
-          <style
-            jsx={true}
-
           >
-            <p>
-              Target Evidence Statement
-            </p>
+            <p />
             <style
               jsx={true}
             >
@@ -832,34 +739,20 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           <div
             className="item-content"
           >
-
             Test Name
             <div
               className="chevron"
-
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-
             >
               <svg
                 fill="none"
-                height="24"
+                height={20}
                 onClick={[Function]}
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                width="24"
+                width={20}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <polyline
@@ -872,20 +765,12 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
         <ul
           className="sub-list "
         >
-
           <li
             className=""
             onClick={[Function]}
             role="menuitem"
-
-          <p />
-          <style
-            jsx={true}
-
           >
-            <p>
-              Task Descriptions
-            </p>
+            <p />
             <style
               jsx={true}
             >
@@ -1001,34 +886,20 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           <div
             className="item-content"
           >
-
             Test Name
             <div
               className="chevron"
-
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-
             >
               <svg
                 fill="none"
-                height="24"
+                height={20}
                 onClick={[Function]}
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                width="24"
+                width={20}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <polyline
@@ -1041,20 +912,12 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
         <ul
           className="sub-list expanded"
         >
-
           <li
             className=""
             onClick={[Function]}
             role="menuitem"
-
-          <p />
-          <style
-            jsx={true}
-
           >
-            <p>
-              Task Descriptions
-            </p>
+            <p />
             <style
               jsx={true}
             >
