@@ -4,48 +4,55 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className="active"
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className="active"
         >
-          Task Model 1
           <div
-            className="chevron"
-          />
+            className="item-content"
+          >
+            Task Model 1
+            <div
+              className="chevron"
+            />
+          </div>
         </div>
-      </div>
-      <ul
-        className="sub-list "
-      />
-      <style
-        jsx={true}
-      >
-        
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -85,8 +92,9 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -95,71 +103,78 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className="active"
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className="active"
         >
-          Test Name
           <div
-            className="chevron"
+            className="item-content"
           >
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            Test Name
+            <div
+              className="chevron"
             >
-              <polyline
-                points="6 9 12 15 18 9"
-              />
-            </svg>
+              <svg
+                fill="none"
+                height={20}
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={20}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="6 9 12 15 18 9"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <ul
-        className="sub-list "
-      >
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
+        <ul
+          className="sub-list "
         >
-          <p />
-          <style
-            jsx={true}
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -178,13 +193,13 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-      </ul>
-      <style
-        jsx={true}
-      >
-        
+            </style>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -224,8 +239,9 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -234,71 +250,78 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className="active"
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className="active"
         >
-          Test Name
           <div
-            className="chevron"
+            className="item-content"
           >
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            Test Name
+            <div
+              className="chevron"
             >
-              <polyline
-                points="18 15 12 9 6 15"
-              />
-            </svg>
+              <svg
+                fill="none"
+                height={20}
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={20}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="18 15 12 9 6 15"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <ul
-        className="sub-list expanded"
-      >
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
+        <ul
+          className="sub-list expanded"
         >
-          <p />
-          <style
-            jsx={true}
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -317,18 +340,18 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <p />
-          <style
-            jsx={true}
+            </style>
+          </li>
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -347,13 +370,13 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-      </ul>
-      <style
-        jsx={true}
-      >
-        
+            </style>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -393,8 +416,9 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -403,71 +427,78 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className="active"
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className="active"
         >
-          Task Model 1
           <div
-            className="chevron"
+            className="item-content"
           >
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            Task Model 1
+            <div
+              className="chevron"
             >
-              <polyline
-                points="18 15 12 9 6 15"
-              />
-            </svg>
+              <svg
+                fill="none"
+                height={20}
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={20}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="18 15 12 9 6 15"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <ul
-        className="sub-list expanded"
-      >
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
+        <ul
+          className="sub-list expanded"
         >
-          <p />
-          <style
-            jsx={true}
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -486,18 +517,18 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-        <li
-          className="active"
-          onClick={[Function]}
-          role="menuitem"
-        >
-          <p />
-          <style
-            jsx={true}
+            </style>
+          </li>
+          <li
+            className="active"
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -516,13 +547,13 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-      </ul>
-      <style
-        jsx={true}
-      >
-        
+            </style>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -562,8 +593,9 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -572,48 +604,55 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className=""
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className=""
         >
-          Task Model 1
           <div
-            className="chevron"
-          />
+            className="item-content"
+          >
+            Task Model 1
+            <div
+              className="chevron"
+            />
+          </div>
         </div>
-      </div>
-      <ul
-        className="sub-list "
-      />
-      <style
-        jsx={true}
-      >
-        
+        <ul
+          className="sub-list "
+        />
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -653,8 +692,9 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -663,71 +703,78 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className=""
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className=""
         >
-          Test Name
           <div
-            className="chevron"
+            className="item-content"
           >
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            Test Name
+            <div
+              className="chevron"
             >
-              <polyline
-                points="6 9 12 15 18 9"
-              />
-            </svg>
+              <svg
+                fill="none"
+                height={20}
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={20}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="6 9 12 15 18 9"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <ul
-        className="sub-list "
-      >
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
+        <ul
+          className="sub-list "
         >
-          <p />
-          <style
-            jsx={true}
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -746,13 +793,13 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-      </ul>
-      <style
-        jsx={true}
-      >
-        
+            </style>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -792,8 +839,9 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
@@ -802,71 +850,78 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <li
-      onClick={[Function]}
-      role="menuitem"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <div
-        className=""
+      <li
+        onClick={[Function]}
+        role="menuitem"
       >
         <div
-          className="item-content"
+          className=""
         >
-          Test Name
           <div
-            className="chevron"
+            className="item-content"
           >
-            <svg
-              fill="none"
-              height={20}
-              onClick={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            Test Name
+            <div
+              className="chevron"
             >
-              <polyline
-                points="18 15 12 9 6 15"
-              />
-            </svg>
+              <svg
+                fill="none"
+                height={20}
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={20}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="18 15 12 9 6 15"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <ul
-        className="sub-list expanded"
-      >
-        <li
-          className=""
-          onClick={[Function]}
-          role="menuitem"
+        <ul
+          className="sub-list expanded"
         >
-          <p />
-          <style
-            jsx={true}
+          <li
+            className=""
+            onClick={[Function]}
+            role="menuitem"
           >
-            
+            <p />
+            <style
+              jsx={true}
+            >
+              
         * {
           font-family: PT Serif;
         }
@@ -885,13 +940,13 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           color: #006298;
         }
       
-          </style>
-        </li>
-      </ul>
-      <style
-        jsx={true}
-      >
-        
+            </style>
+          </li>
+        </ul>
+        <style
+          jsx={true}
+        >
+          
         * {
           font-family: PT Serif;
         }
@@ -931,8 +986,9 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           color: #006298;
         }
       
-      </style>
-    </li>
+        </style>
+      </li>
+    </div>
   </div>
 </div>
 `;
