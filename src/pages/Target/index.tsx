@@ -118,7 +118,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
   return (
     <div className="frame">
       <div className="content-nav">
-        <ContentNav items={parseNavProps(target)} />
+        <ContentNav items={parseNavProps(target)} referenceContainer={'content-frame'} />
       </div>
       <div className="content-frame" id="content-frame">
         <MainContent target={target} names={targetLayout} subNames={subItemLayout} />
@@ -132,8 +132,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
           width: 65%;
         }
         .content-nav {
-          overflow-y: scroll;
-          width: 25%;
+          width: 20%;
         }
         .additional-materials {
           width: 15%;

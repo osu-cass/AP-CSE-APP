@@ -5,6 +5,7 @@ ReactWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     active={true}
     name="Test Name"
+    subItems={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -22,6 +23,7 @@ ReactWrapper {
     "props": Object {
       "active": true,
       "name": "Test Name",
+      "subItems": Array [],
     },
     "ref": null,
     "rendered": Object {
@@ -46,32 +48,20 @@ ReactWrapper {
         <style>
           
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -83,26 +73,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       
         </style>
@@ -111,6 +92,7 @@ ReactWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          undefined,
           <div
             className="active"
           >
@@ -131,32 +113,20 @@ ReactWrapper {
           >
             
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -168,26 +138,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       
           </style>,
@@ -290,32 +251,20 @@ ReactWrapper {
           "instance": <style>
             
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -327,26 +276,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       
           </style>,
@@ -355,32 +295,20 @@ ReactWrapper {
           "props": Object {
             "children": "
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -392,26 +320,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       ",
             "jsx": true,
@@ -420,32 +339,20 @@ ReactWrapper {
           "rendered": Array [
             "
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -457,26 +364,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       ",
           ],
@@ -495,6 +393,7 @@ ReactWrapper {
       "props": Object {
         "active": true,
         "name": "Test Name",
+        "subItems": Array [],
       },
       "ref": null,
       "rendered": Object {
@@ -519,32 +418,20 @@ ReactWrapper {
           <style>
             
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -556,26 +443,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       
           </style>
@@ -584,6 +462,7 @@ ReactWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            undefined,
             <div
               className="active"
             >
@@ -604,32 +483,20 @@ ReactWrapper {
             >
               
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -641,26 +508,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       
             </style>,
@@ -763,32 +621,20 @@ ReactWrapper {
             "instance": <style>
               
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -800,26 +646,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       
             </style>,
@@ -828,32 +665,20 @@ ReactWrapper {
             "props": Object {
               "children": "
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -865,26 +690,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       ",
               "jsx": true,
@@ -893,32 +709,20 @@ ReactWrapper {
             "rendered": Array [
               "
         * {
-          font-family: PT Sans Caption;
+          font-family: PT Serif;
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: 16px;
+          font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -930,26 +734,17 @@ ReactWrapper {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: #313335;
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: calc(3em / 1.4142135623730951 + 3px);
-          width: calc(3em / 1.4142135623730951 + 3px);
-          right: calc(-1 * calc(calc(3em / 1.4142135623730951) / 2) - 3px);
-          top: calc(calc(3em / 1.4142135623730951) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: #ffffff;
-          transform: rotate(45deg);
+        .active {
+          color: #006298;
         }
       ",
             ],
