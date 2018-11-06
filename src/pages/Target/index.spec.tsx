@@ -26,7 +26,7 @@ describe('Target Page', () => {
   beforeEach(() => {
     targetPage = mount(
       <MemoryRouter initialEntries={['/']}>
-        <TargetPage match={'English Language Arts/6/C1/E.G6.C1RL.T1'} />
+        <TargetPage match={{ params: { shortCode: 'E.G6.C1RL.T1' } }} />
       </MemoryRouter>
     );
     /* tslint:disable: no-console */

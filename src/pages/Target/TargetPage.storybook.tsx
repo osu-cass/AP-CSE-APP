@@ -8,5 +8,5 @@ import { TargetPage } from '.';
 storiesOf('Target Page', module)
   .addDecorator(RouterDecorator)
   .addDecorator(centered)
-  .add('Renders a target', () => <TargetPage match={'English Language Arts/6/C1/E.G6.C1RL.T1'} />)
-  .add('Renders a nothing', () => <TargetPage match={'English Language Arts/6/C1/E.G6.C1RL.T1'} />);
+  .add('Renders a target', () => <TargetPage match={{ params: { shortCode: 'E.G6.C1RL.T1' } }} />)
+  .add('Renders a nothing', () => <TargetPage match={{ params: { shortCode: 'E.G6.C1RL.T1' } }} />);
