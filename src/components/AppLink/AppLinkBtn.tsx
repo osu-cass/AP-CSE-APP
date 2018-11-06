@@ -23,7 +23,8 @@ export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
         color: ${Colors.sbGrayLighter};
       }
       a:hover {
-        color: ${Colors.sbGray};
+        text-shadow: 2px 2px ${Colors.sbGray};
+        font-size: 102%;
       }
       .container {
         display: inline-flex;
