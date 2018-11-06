@@ -50,4 +50,3 @@ export const mediaQueries = {
   tablet: `(min-width: ${SizeBreaks.mobile + 1}px) and (max-width: ${SizeBreaks.tablet}px)`,
   desktop: `(min-width: ${SizeBreaks.tablet + 1}px)`
 };
- 
