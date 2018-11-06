@@ -1807,51 +1807,60 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         padding: 0;
         list-style-type: none;
         padding-left: 0.5em;
-        justify-content: center;
       }
     
-                    </style>
-                  </p>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
+                  </style>
+                </ul>
+              </div>
+              <style
+                jsx={true}
+              >
+                
       div {
         padding-left: 0.5em;
       }
     
-                </style>
+              </style>
+            </div>
+            <div
+              name="Task Model 2-Scoring Rules"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Scoring Rules
+                  </h2>
+                </header>
+                <p>
+                  All responses correct: 1 point; Any other response combination: 0 points
+                  <style
+                    jsx={true}
+                  >
+                    
+      p {
+        padding-left: 0.5em;
+      }
+    
+                  </style>
+                </p>
               </div>
-              <div
-                name="Task Model 2-Target Evidence Statements"
+              <style
+                jsx={true}
               >
-                <div>
-                  <header>
-                    <h2>
-                      Target Evidence Statements
-                    </h2>
-                  </header>
-                  <ol>
-                    <li>
-                      The student will determine the meaning of a word or phrase based on its context in a literary text.
-                    </li>
-                    <li>
-                      The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
-                    </li>
-                    <li>
-                      The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <li>
-                      The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
-                    </li>
-                    <style
-                      jsx={true}
-                    >
-                      
-      ol {
-        margin: 0;
-        padding-left: 1.5em;
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+          </div>
+          <style
+            jsx={true}
+          >
+            
+      div {
+        padding-left: 0.5em;
       }
     
           </style>
@@ -2344,42 +2353,6 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                     Target Evidence Statements
                   </h2>
                 </header>
-                <ol>
-                  <li />
-                  <li />
-                  <li />
-                  <li />
-                  <style
-                    jsx={true}
-                  >
-                    
-      ol {
-        margin: 0;
-        padding-left: 1.5em;
-      }
-    
-                </style>
-              </div>
-            </div>
-            <style
-              jsx={true}
-            >
-              
-      div {
-        padding-left: 0.5em;
-      }
-    
-              </style>
-            </div>
-            <div
-              name="Task Model 3-Appropriate Stems"
-            >
-              <div>
-                <header>
-                  <h2>
-                    Appropriate Stems
-                  </h2>
-                </header>
                 <ul>
                   <li>
                     <p>
@@ -2433,6 +2406,119 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                       </span>
                       <span>
                         [excerpted selectable text]
+                        <br />
+                      </span>
+                      <style
+                        jsx={true}
+                      >
+                        
+      p {
+        padding-left: 0.5em;
+      }
+    
+                      </style>
+                    </p>
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    
+                </style>
+              </div>
+            </div>
+            <style
+              jsx={true}
+            >
+              
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Appropriate Stems"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Appropriate Stems
+                  </h2>
+                </header>
+                <ul>
+                  <li>
+                    <p>
+                      <span>
+                        • Read the [sentence(s)/line(s)] from [title text \\#2].
+                        <br />
+                      </span>
+                      <span>
+                        [Directly quoted sentence(s)/line(s) from text, with 
+                        <u>
+                          targeted word/phrase
+                        </u>
+                         underlined]
+                        <br />
+                      </span>
+                      <span>
+                        Click on the 
+                        <u>
+                          underlined
+                        </u>
+                         [word/phrase] in the [sentence(s)/set(s) of sentences/line(s)/paragraph(s)] from [title text \\#1] that means the same thing as [
+                        <u>
+                          targeted word
+                        </u>
+                        /“targeted phrase”].
+                        <br />
+                      </span>
+                      <span>
+                        [excerpted selectable text from text \\#1]
+                        <br />
+                      </span>
+                      <span>
+                        
+                        <br />
+                      </span>
+                      <span>
+                        • Read the sentence(s) from [title text \\#1].
+                        <br />
+                      </span>
+                      <span>
+                        [Directly quoted sentence or line from text, with 
+                        <u>
+                          targeted [word/phrase]
+                        </u>
+                         underlined]
+                        <br />
+                      </span>
+                      <span>
+                        Click on the 
+                        <u>
+                          underlined
+                        </u>
+                         [word/phrase] in the [sentences/paragraph] from [title text \\#2] that means the same thing as [
+                        <u>
+                          targeted word
+                        </u>
+                        /“targeted phrase”].
+                        <br />
+                      </span>
+                      <span>
+                        [excerpted selectable text from text \\#2]  
+                        <br />
+                      </span>
+                      <span>
+                        
+                        <strong>
+                          NOTE:
+                        </strong>
+                         This stem is only used with two literary passages.
                         <br />
                       </span>
                       <style

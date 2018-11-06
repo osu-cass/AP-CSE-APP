@@ -3,6 +3,7 @@ import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 import { ITarget, IDOK, IStandards, IStem, ITaskModel, IEvidence } from '../../models/target';
+import { Styles } from '../../constants';
 
 export interface TargetLayout {
   [key: string]: string;
