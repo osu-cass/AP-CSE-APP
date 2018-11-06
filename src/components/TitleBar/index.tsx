@@ -1,6 +1,6 @@
 import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { Styles, Colors } from '../../constants';
+import { Styles, Colors, blueGradientBgImg } from '../../constants';
 
 /**
  * interface for TitleBar
@@ -14,6 +14,12 @@ export interface TitleBarProps {
   targetDesc?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
+
+const style = {
+  ...blueGradientBgImg,
+  width: '100%',
+  flexBasis: '100%'
+};
 
 /**
  * Renders a TitleBar that shows a title, a description, a download button.
@@ -31,7 +37,7 @@ export const TitleBar = ({
   targetDesc,
   downloadBtnProps
 }: TitleBarProps) => (
-  <div>
+  <div style={style}>
     <ul>
       {claimTitle && (
         <li className="title">
@@ -65,11 +71,10 @@ export const TitleBar = ({
         padding: 0;
       }
       div {
-        // min-height: 100px;
         display: flex;
         font-family: ${Styles.sbSans};
         justify-content: center;
-        padding: 20px 0;
+        padding: 0.7em 0;
       }
       div ul {
         display: flex;
@@ -77,16 +82,16 @@ export const TitleBar = ({
         align-items: stretch;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 1.8em;
         text-align: left;
       }
       .desc {
@@ -94,7 +99,7 @@ export const TitleBar = ({
         min-width: 50px;
         padding-bottom: 15px;
         color: ${Colors.sbGrayLighter};
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 100;
         text-align: left;
       }

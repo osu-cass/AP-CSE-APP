@@ -4,491 +4,59 @@ exports[`Storyshots ContentNav Default 1`] = `
 <div
   style={
     Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "display": "flex",
-      "left": 0,
-      "overflow": "auto",
-      "position": "fixed",
-      "right": 0,
-      "top": 0,
+      "fontFamily": "PT Sans Caption",
     }
   }
 >
   <div
     style={
       Object {
-        "margin": "auto",
-        "maxHeight": "100%",
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
       }
     }
   >
-    <ul
-      className="list"
-      role="menu"
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
     >
-      <li
-        onClick={[Function]}
-        role="menuitem"
+      <ul
+        className="list"
+        role="menu"
       >
-        <div
-          className=""
+        <li
+          onClick={[Function]}
+          role="menuitem"
         >
           <div
-            className="item-content"
+            className=""
           >
-            Clarifications
             <div
-              className="chevron"
-            />
-          </div>
-        </div>
-        <ul
-          className="sub-list "
-        />
-        <style
-          jsx={true}
-        >
-          
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          font-size: 14px;
-          text-indent: 0.25em;
-          z-index: 0;
-          cursor: pointer;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          width: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0.5em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-          color: #313335;
-        }
-        .active {
-          color: #006298;
-        }
-      
-        </style>
-      </li>
-      <li
-        onClick={[Function]}
-        role="menuitem"
-      >
-        <div
-          className=""
-        >
-          <div
-            className="item-content"
-          >
-            Standards
-            <div
-              className="chevron"
-            />
-          </div>
-        </div>
-        <ul
-          className="sub-list "
-        />
-        <style
-          jsx={true}
-        >
-          
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          font-size: 14px;
-          text-indent: 0.25em;
-          z-index: 0;
-          cursor: pointer;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          width: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0.5em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-          color: #313335;
-        }
-        .active {
-          color: #006298;
-        }
-      
-        </style>
-      </li>
-      <li
-        onClick={[Function]}
-        role="menuitem"
-      >
-        <div
-          className=""
-        >
-          <div
-            className="item-content"
-          >
-            Stimuli/Text Complexity
-            <div
-              className="chevron"
-            />
-          </div>
-        </div>
-        <ul
-          className="sub-list "
-        />
-        <style
-          jsx={true}
-        >
-          
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          font-size: 14px;
-          text-indent: 0.25em;
-          z-index: 0;
-          cursor: pointer;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          width: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0.5em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-          color: #313335;
-        }
-        .active {
-          color: #006298;
-        }
-      
-        </style>
-      </li>
-      <li
-        onClick={[Function]}
-        role="menuitem"
-      >
-        <div
-          className=""
-        >
-          <div
-            className="item-content"
-          >
-            Accessibility Concerns
-            <div
-              className="chevron"
-            />
-          </div>
-        </div>
-        <ul
-          className="sub-list "
-        />
-        <style
-          jsx={true}
-        >
-          
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          font-size: 14px;
-          text-indent: 0.25em;
-          z-index: 0;
-          cursor: pointer;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          width: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0.5em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-          color: #313335;
-        }
-        .active {
-          color: #006298;
-        }
-      
-        </style>
-      </li>
-      <li
-        onClick={[Function]}
-        role="menuitem"
-      >
-        <div
-          className=""
-        >
-          <div
-            className="item-content"
-          >
-            Evidence Required
-            <div
-              className="chevron"
-            />
-          </div>
-        </div>
-        <ul
-          className="sub-list "
-        />
-        <style
-          jsx={true}
-        >
-          
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          font-size: 14px;
-          text-indent: 0.25em;
-          z-index: 0;
-          cursor: pointer;
-        }
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-          width: auto;
-        }
-        .sub-list :not(.expanded) {
-          display: none;
-          height: 0;
-          overflow: hidden;
-        }
-        .item-content {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0.5em 0;
-        }
-        .chevron {
-          display: flex;
-          align-items: center;
-          margin: -5px 5px;
-          text-indent: 0;
-          color: #313335;
-        }
-        .active {
-          color: #006298;
-        }
-      
-        </style>
-      </li>
-      <li
-        onClick={[Function]}
-        role="menuitem"
-      >
-        <div
-          className=""
-        >
-          <div
-            className="item-content"
-          >
-            Task Model 1
-            <div
-              className="chevron"
+              className="item-content"
             >
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="6 9 12 15 18 9"
-                />
-              </svg>
+              Clarifications
+              <div
+                className="chevron"
+              />
             </div>
           </div>
-        </div>
-        <ul
-          className="sub-list "
-        >
-          <li
-            className=""
-            onClick={[Function]}
-            role="menuitem"
+          <ul
+            className="sub-list "
+          />
+          <style
+            jsx={true}
           >
-            <p>
-              Task Descriptions
-            </p>
-            <style
-              jsx={true}
-            >
-              
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          display: flex;
-          align-items: center;
-          color: #63666A;
-          font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
-        }
-        p {
-          margin-right: 2em;
-        }
-        .active {
-          color: #006298;
-        }
-      
-            </style>
-          </li>
-          <li
-            className=""
-            onClick={[Function]}
-            role="menuitem"
-          >
-            <p>
-              Target Evidence Statement
-            </p>
-            <style
-              jsx={true}
-            >
-              
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          display: flex;
-          align-items: center;
-          color: #63666A;
-          font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
-        }
-        p {
-          margin-right: 2em;
-        }
-        .active {
-          color: #006298;
-        }
-      
-            </style>
-          </li>
-          <li
-            className=""
-            onClick={[Function]}
-            role="menuitem"
-          >
-            <p>
-              Appropriate Stems
-            </p>
-            <style
-              jsx={true}
-            >
-              
-        * {
-          font-family: PT Serif;
-        }
-        li {
-          display: flex;
-          align-items: center;
-          color: #63666A;
-          font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
-        }
-        p {
-          margin-right: 2em;
-        }
-        .active {
-          color: #006298;
-        }
-      
-            </style>
-          </li>
-        </ul>
-        <style
-          jsx={true}
-        >
-          
+            
         * {
           font-family: PT Serif;
         }
@@ -529,31 +97,31 @@ exports[`Storyshots ContentNav Default 1`] = `
           color: #006298;
         }
       
-        </style>
-      </li>
-      <li
-        onClick={[Function]}
-        role="menuitem"
-      >
-        <div
-          className=""
+          </style>
+        </li>
+        <li
+          onClick={[Function]}
+          role="menuitem"
         >
           <div
-            className="item-content"
+            className=""
           >
-            Scoring Rules
             <div
-              className="chevron"
-            />
+              className="item-content"
+            >
+              Standards
+              <div
+                className="chevron"
+              />
+            </div>
           </div>
-        </div>
-        <ul
-          className="sub-list "
-        />
-        <style
-          jsx={true}
-        >
-          
+          <ul
+            className="sub-list "
+          />
+          <style
+            jsx={true}
+          >
+            
         * {
           font-family: PT Serif;
         }
@@ -594,16 +162,455 @@ exports[`Storyshots ContentNav Default 1`] = `
           color: #006298;
         }
       
-        </style>
-      </li>
-    </ul>
-    <div
-      className="buffer"
-    />
-    <style
-      jsx={true}
-    >
+          </style>
+        </li>
+        <li
+          onClick={[Function]}
+          role="menuitem"
+        >
+          <div
+            className=""
+          >
+            <div
+              className="item-content"
+            >
+              Stimuli/Text Complexity
+              <div
+                className="chevron"
+              />
+            </div>
+          </div>
+          <ul
+            className="sub-list "
+          />
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
       
+          </style>
+        </li>
+        <li
+          onClick={[Function]}
+          role="menuitem"
+        >
+          <div
+            className=""
+          >
+            <div
+              className="item-content"
+            >
+              Accessibility Concerns
+              <div
+                className="chevron"
+              />
+            </div>
+          </div>
+          <ul
+            className="sub-list "
+          />
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>
+        </li>
+        <li
+          onClick={[Function]}
+          role="menuitem"
+        >
+          <div
+            className=""
+          >
+            <div
+              className="item-content"
+            >
+              Evidence Required
+              <div
+                className="chevron"
+              />
+            </div>
+          </div>
+          <ul
+            className="sub-list "
+          />
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>
+        </li>
+        <li
+          onClick={[Function]}
+          role="menuitem"
+        >
+          <div
+            className=""
+          >
+            <div
+              className="item-content"
+            >
+              Task Model 1
+              <div
+                className="chevron"
+              >
+                <svg
+                  fill="none"
+                  height={20}
+                  onClick={[Function]}
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="6 9 12 15 18 9"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <ul
+            className="sub-list "
+          >
+            <li
+              className=""
+              onClick={[Function]}
+              role="menuitem"
+            >
+              <p>
+                Task Descriptions
+              </p>
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+            <li
+              className=""
+              onClick={[Function]}
+              role="menuitem"
+            >
+              <p>
+                Target Evidence Statement
+              </p>
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+            <li
+              className=""
+              onClick={[Function]}
+              role="menuitem"
+            >
+              <p>
+                Appropriate Stems
+              </p>
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+          </ul>
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>
+        </li>
+        <li
+          onClick={[Function]}
+          role="menuitem"
+        >
+          <div
+            className=""
+          >
+            <div
+              className="item-content"
+            >
+              Scoring Rules
+              <div
+                className="chevron"
+              />
+            </div>
+          </div>
+          <ul
+            className="sub-list "
+          />
+          <style
+            jsx={true}
+          >
+            
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+          </style>
+        </li>
+      </ul>
+      <div
+        className="buffer"
+      />
+      <style
+        jsx={true}
+      >
+        
           * {
             font-family: 'PT Sans Caption';
           }
@@ -617,7 +624,8 @@ exports[`Storyshots ContentNav Default 1`] = `
             min-width: 27px;
           }
         
-    </style>
+      </style>
+    </div>
   </div>
 </div>
 `;
