@@ -675,10 +675,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               </h1>
             </header>
             <ol>
-              <li />
-              <li />
-              <li />
-              <li />
+              <li>
+                The student will determine the meaning of a word or phrase based on its context in a literary text.
+              </li>
+              <li>
+                The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+              </li>
+              <li>
+                The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
+              <li>
+                The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+              </li>
               <style
                 jsx={true}
               >
@@ -822,10 +830,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   </h2>
                 </header>
                 <ol>
-                  <li />
-                  <li />
-                  <li />
-                  <li />
+                  <li>
+                    The student will determine the meaning of a word or phrase based on its context in a literary text.
+                  </li>
+                  <li>
+                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+                  </li>
+                  <li>
+                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <li>
+                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
                   <style
                     jsx={true}
                   >
@@ -1446,10 +1462,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                   </h2>
                 </header>
                 <ol>
-                  <li />
-                  <li />
-                  <li />
-                  <li />
+                  <li>
+                    The student will determine the meaning of a word or phrase based on its context in a literary text.
+                  </li>
+                  <li>
+                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+                  </li>
+                  <li>
+                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <li>
+                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
                   <style
                     jsx={true}
                   >
@@ -1938,7 +1962,52 @@ exports[`Storyshots MainContent component Renders a main content with target dat
         padding-left: 0.5em;
       }
     
-                </style>
+                  </style>
+                </p>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      div {
+        padding-left: 0.5em;
+      }
+    
+              </style>
+            </div>
+            <div
+              name="Task Model 3-Target Evidence Statements"
+            >
+              <div>
+                <header>
+                  <h2>
+                    Target Evidence Statements
+                  </h2>
+                </header>
+                <ol>
+                  <li>
+                    The student will determine the meaning of a word or phrase based on its context in a literary text.
+                  </li>
+                  <li>
+                    The student will determine the intended meaning of academic/tier 2 words and domain-specific/tier 3 words in a literary text.
+                  </li>
+                  <li>
+                    The student will use resources to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <li>
+                    The student will use Greek or Latin word parts to determine the correct meaning of an unknown word or phrase in a literary text.
+                  </li>
+                  <style
+                    jsx={true}
+                  >
+                    
+      ol {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+    
+                  </style>
+                </ol>
               </div>
               <div
                 name="Task Model 2-Appropriate Stems"
