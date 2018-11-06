@@ -241,7 +241,7 @@ export class TestPage extends React.Component<TestPageProps, TestPageState> {
 
     return (
       <div>
-        <NavBar links={[]} siteName={'test'} mainContentId={'main'} />
+        <NavBar />
         <div style={titleStyle}>
           <TitleBar claimTitle={pageTitle} />
         </div>

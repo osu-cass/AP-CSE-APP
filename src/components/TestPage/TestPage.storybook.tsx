@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 import { TestPage, TestPageProps } from '.';
 import { MenuItems } from '../TestPage/index';
+import { RouterDecorator } from '../../__decorators__/';
 
 // cSpell:disable
 const testPageMockProps: TestPageProps = {
@@ -12,5 +13,5 @@ const testPageMockProps: TestPageProps = {
 // cSpell:enable
 
 storiesOf('TestPage component', module)
-  .addDecorator(centered)
+  .addDecorator(RouterDecorator)
   .add('TestPage', () => <TestPage {...testPageMockProps} />);

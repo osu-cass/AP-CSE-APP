@@ -16,7 +16,7 @@ const style = {
 
 export const SearchPage = (props: SearchPageProps): JSX.Element => (
   <div>
-    <NavBar links={[]} siteName={'test'} mainContentId={'main'} />
+    <NavBar />
     <div style={style}>
       <TitleBar claimTitle={props.pageTitle} />
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 import { SearchPage, SearchPageProps } from '.';
+import { RouterDecorator } from '../../__decorators__/';
 
 // cSpell:disable
 const searchPageMockProps: SearchPageProps = {
@@ -41,5 +42,5 @@ const searchPageMockProps: SearchPageProps = {
 // cSpell:enable
 
 storiesOf('SearchPage component', module)
-  .addDecorator(centered)
+  .addDecorator(RouterDecorator)
   .add('SearchPage', () => <SearchPage {...searchPageMockProps} />);
