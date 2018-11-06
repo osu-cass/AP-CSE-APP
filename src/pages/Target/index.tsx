@@ -175,8 +175,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
           const data = (d as unknown) as IClaim;
           this.setState({
             url: '',
-            claim: data,
-            target: this.props.url === 'blank' ? targetMock : data.target[0],
             contentLoaded: true,
             breadCrumbProps: parseBreadCrumbData(data),
             titleBarProps: parseTitleBarData(data)
