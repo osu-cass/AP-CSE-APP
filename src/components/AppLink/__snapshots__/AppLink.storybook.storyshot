@@ -26,6 +26,7 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
     <div
       style={
         Object {
+          "fontFamily": "PT Sans Caption",
           "maxWidth": "1024px",
         }
       }
@@ -45,7 +46,7 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
         >
           <img
             alt="Score Guides"
-            src="http://google.com"
+            src="test-file-stub"
           />
         </div>
         <div
@@ -99,7 +100,8 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
         color: #ebebeb;
       }
       a:hover {
-        color: #63666A;
+        text-shadow: 2px 2px #63666A;
+        font-size: 102%;
       }
       .container {
         display: inline-flex;
@@ -109,6 +111,8 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
         align-items: center;
         justify-content: center;
         width: 230px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       a div span {
         padding-right: 10px;
@@ -133,13 +137,18 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
         max-width: 450px;
       }
       .title span {
-        color: #006298;
-        font-size: 20px;
+        color: #0085AD;
+        font-size: 25px;
         font-weight: 500;
       }
       .linkImg {
+        padding: 0;
         border: 1px solid;
-        min-height: 180px;
+        height: 180px;
+      }
+      .linkImg img {
+        width: 100%;
+        height: 100%;
       }
       .desc {
         text-align: justify;
@@ -178,6 +187,7 @@ exports[`Storyshots AppLink component Renders a App Link Button 1`] = `
     <div
       style={
         Object {
+          "fontFamily": "PT Sans Caption",
           "maxWidth": "1024px",
         }
       }
@@ -227,7 +237,8 @@ exports[`Storyshots AppLink component Renders a App Link Button 1`] = `
         color: #ebebeb;
       }
       a:hover {
-        color: #63666A;
+        text-shadow: 2px 2px #63666A;
+        font-size: 102%;
       }
       .container {
         display: inline-flex;
@@ -237,6 +248,8 @@ exports[`Storyshots AppLink component Renders a App Link Button 1`] = `
         align-items: center;
         justify-content: center;
         width: 230px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       a div span {
         padding-right: 10px;
