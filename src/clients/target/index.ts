@@ -1,9 +1,6 @@
 import { IClaim } from '../../models/claim';
 
 export interface ITargetParams {
-  grades: string[];
-  subject: string;
-  claim: string;
   targetShortCode: string;
 }
 
@@ -26,15 +23,6 @@ export class TargetClient implements ITargetClient {
     const { subject, grades, claim, targetShortCode } = params;
     let url = `${this.endpoint}/api/target`;
 
-    if (subject) {
-      url = url.concat(`/${subject}`);
-    }
-    if (grades) {
-      url = url.concat(`/${grades}`);
-    }
-    if (claim) {
-      url = url.concat(`/${claim}`);
-    }
     if (targetShortCode) {
       url = url.concat(`/${targetShortCode}`);
     }

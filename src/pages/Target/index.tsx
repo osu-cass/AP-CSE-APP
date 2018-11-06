@@ -13,8 +13,17 @@ import { IClaim } from '../../models/claim';
 import { targetMock } from './__mocks__';
 import { TargetClient, ITargetParams } from '../../clients/target';
 
+export interface MatchParams {
+  shortCode: string;
+}
+
+export interface Match {
+  params: MatchParams;
+}
+
 export interface TargetPageProps {
-  match: any;
+  // tslint: disable: any
+  match: Match;
 }
 
 export interface TargetPageState {
@@ -168,25 +177,21 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   componentWillMount() {
     let test: ITargetParams;
+    const { shortCode: targetShortCode }: MatchParams = this.props.match.params;
     if (!this.props.match || !this.props.match.params) {
       test = {
-        grades: [''],
-        subject: '',
-        claim: '',
         targetShortCode: ''
       };
     } else {
       test = {
-        grades: [this.props.match.params.grade],
-        subject: this.props.match.params.subject,
-        claim: this.props.match.params.claim,
-        targetShortCode: this.props.match.params.shortCode
+        targetShortCode
       };
     }
-    this.targetClient.getTarget(test)
-      .then((data) => {
+    this.targetClient
+      .getTarget(test)
+      .then(data => {
         if (data !== undefined) {
-          const claimData = data as unknown as IClaim;
+          const claimData = (data as unknown) as IClaim;
           this.setState({
             claim: claimData,
             target: claimData.target[0],
@@ -195,7 +200,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
           });
         }
       })
-      .catch((e) => {
+      .catch((e: string) => {
         throw new Error(e);
       });
   }
@@ -227,9 +232,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       downloadBtnProps
     } = this.state.titleBarProps;
 
-    return this.state.target === undefined ?
+    return this.state.target === undefined ? (
       <div>Loading data...</div>
-    :
+    ) : (
       <>
         <div className="content">
           <div style={style}>
@@ -253,6 +258,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
             }
           `}</style>
         </div>
-      </>;
+      </>
+    );
   }
 }
