@@ -11,6 +11,7 @@ export interface ContentNavProps {
   items: ItemProps[];
   activeElement?: string;
   referenceContainer?: string;
+  onSelect?: (contentKey: string | undefined) => void;
 }
 
 /**
@@ -54,11 +55,17 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   }
 
   subItemClicked = (name: string) => {
+    let content: string | undefined;
+
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       let isItemActive = false;
       item.subItems = item.subItems.map((subItem: SubItemProps) => {
         const isActive = subItem.name === name;
         isItemActive = !isItemActive ? isActive : true;
+
+        if (isItemActive) {
+          content = item.contentKey;
+        }
 
         return { ...subItem, active: isActive };
       });
@@ -66,21 +73,34 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       return { ...item, active: isItemActive };
     });
 
+    if (this.props.onSelect) {
+      this.props.onSelect(content);
+    }
+
     this.setState({
       items: newItems
     });
   };
 
   itemClicked = (name: string) => {
+    let content: string | undefined;
+
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
       let newSubItems: SubItemProps[] = [];
       if (item.subItems.length > 0) {
         newSubItems = item.subItems.map((subItem: SubItemProps) => ({ ...subItem, active: false }));
       }
+      if (isActive) {
+        content = item.contentKey;
+      }
 
       return { ...item, subItems: newSubItems, active: isActive };
     });
+
+    if (this.props.onSelect) {
+      this.props.onSelect(content);
+    }
 
     this.setState({
       items: newItems

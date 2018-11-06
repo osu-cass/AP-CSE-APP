@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots SearchPage component SearchPage 1`] = `
+exports[`Storyshots TestPage component TestPage 1`] = `
 <div
   style={
     Object {
@@ -527,7 +527,7 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
               className="title"
             >
               <span>
-                Find Targets
+                Learn About Test Development and Design
               </span>
             </li>
           </ul>
@@ -581,155 +581,487 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
           </style>
         </div>
       </div>
-      <div>
-        This is a placeholder for the filter component
-      </div>
-      <ul
-        className="list"
-        role="menu"
+      <div
+        className="page-container"
       >
         <div
-          style={
-            Object {
-              "fontFamily": "PT Sans Caption",
-              "maxWidth": "1024px",
-            }
-          }
+          className="left-menu"
         >
-          <div>
-            <a
-              href=""
-              style={
-                Object {
-                  "color": "#005A93",
-                  "fontSize": "1.5em",
-                }
-              }
-            >
-              Donec aliquet, risus sed auctor sagittis
-            </a>
-          </div>
-          <div
-            style={
-              Object {
-                "marginLeft": "1.5em",
-              }
-            }
+          <ul
+            className="list"
+            role="menu"
           >
-            <div
-              style={
-                Object {
-                  "color": "#AAAAAA",
-                }
-              }
+            <li
+              onClick={[Function]}
+              role="menuitem"
             >
-              Lorem
-               &gt; 
-              Ipsum
-               &gt; 
-              Dolor
-            </div>
-            <div>
-              Curabitur gravida pretium metus, in malesuada nunc fringilla quis. Phasellus tincidunt, ligula ut commodo varius, mi nunc luctus mauris, sed dapibus dui mauris ac tortor. Praesent tincidunt id leo et feugiat. Etiam ut risus libero. Nullam tincidunt suscipit sem ac vestibulum. Donec at tortor ac metus pharetra blandit ut a diam. Nullam id tortor eu ligula malesuada feugiat. Etiam quis erat pharetra, eleifend risus sit amet, tempus nunc. Nunc commodo tincidunt nunc, viverra accumsan urna suscipit ut. Sed a porttitor quam. Morbi gravida dignissim nulla, at commodo felis ultrices quis.
-            </div>
-          </div>
-          <hr />
+              <div
+                className=""
+              >
+                <div
+                  className="item-content"
+                >
+                  Overview
+                  <div
+                    className="chevron"
+                  />
+                </div>
+              </div>
+              <ul
+                className="sub-list "
+              />
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+            <li
+              onClick={[Function]}
+              role="menuitem"
+            >
+              <div
+                className=""
+              >
+                <div
+                  className="item-content"
+                >
+                  Test Blueprints
+                  <div
+                    className="chevron"
+                  />
+                </div>
+              </div>
+              <ul
+                className="sub-list "
+              />
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+            <li
+              onClick={[Function]}
+              role="menuitem"
+            >
+              <div
+                className=""
+              >
+                <div
+                  className="item-content"
+                >
+                  Item Specifications
+                  <div
+                    className="chevron"
+                  >
+                    <svg
+                      fill="none"
+                      height={20}
+                      onClick={[Function]}
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      width={20}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="6 9 12 15 18 9"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <ul
+                className="sub-list "
+              >
+                <li
+                  className=""
+                  onClick={[Function]}
+                  role="menuitem"
+                >
+                  <p />
+                  <style
+                    jsx={true}
+                  >
+                    
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+                  </style>
+                </li>
+                <li
+                  className=""
+                  onClick={[Function]}
+                  role="menuitem"
+                >
+                  <p />
+                  <style
+                    jsx={true}
+                  >
+                    
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+                  </style>
+                </li>
+                <li
+                  className=""
+                  onClick={[Function]}
+                  role="menuitem"
+                >
+                  <p />
+                  <style
+                    jsx={true}
+                  >
+                    
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+                  </style>
+                </li>
+                <li
+                  className=""
+                  onClick={[Function]}
+                  role="menuitem"
+                >
+                  <p />
+                  <style
+                    jsx={true}
+                  >
+                    
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+          text-indent: 1em;
+          height: 1.75em;
+        }
+        p {
+          margin-right: 2em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+                  </style>
+                </li>
+              </ul>
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+            <li
+              onClick={[Function]}
+              role="menuitem"
+            >
+              <div
+                className=""
+              >
+                <div
+                  className="item-content"
+                >
+                  Content Specifications
+                  <div
+                    className="chevron"
+                  />
+                </div>
+              </div>
+              <ul
+                className="sub-list "
+              />
+              <style
+                jsx={true}
+              >
+                
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          text-indent: 0.25em;
+          z-index: 0;
+          cursor: pointer;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: auto;
+        }
+        .sub-list :not(.expanded) {
+          display: none;
+          height: 0;
+          overflow: hidden;
+        }
+        .item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.5em 0;
+        }
+        .chevron {
+          display: flex;
+          align-items: center;
+          margin: -5px 5px;
+          text-indent: 0;
+          color: #313335;
+        }
+        .active {
+          color: #006298;
+        }
+      
+              </style>
+            </li>
+          </ul>
+          <div
+            className="buffer"
+          />
+          <style
+            jsx={true}
+          >
+            
+          * {
+            font-family: 'PT Sans Caption';
+          }
+          ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            width: 100%;
+          }
+          .buffer {
+            min-width: 27px;
+          }
+        
+          </style>
         </div>
         <div
-          style={
-            Object {
-              "fontFamily": "PT Sans Caption",
-              "maxWidth": "1024px",
-            }
-          }
+          className="content-pane"
+          id="main-content"
         >
           <div>
-            <a
-              href=""
-              style={
-                Object {
-                  "color": "#005A93",
-                  "fontSize": "1.5em",
-                }
-              }
-            >
-              Vitae suscipit lacus commodo sed
-            </a>
+            <h1>
+              Overview
+            </h1>
+            <p>
+              Along with creating an innovative assessment, Smarter Balanced is committed to an unprecedented level of transparency, so that anyone who is interested can see exactly how the test is made.
+            </p>
+            <p>
+              On this page we provide the following materials used in the process of developing the Smarter Balanced assessment system.
+            </p>
+            <ul>
+              <li>
+                Summative Test Blueprints
+              </li>
+              <li>
+                Interim Assessment Overview and Blueprints
+              </li>
+              <li>
+                Item Specifications, Accessibility, and Guidelines
+              </li>
+              <li>
+                Content Specifications
+              </li>
+            </ul>
           </div>
-          <div
-            style={
-              Object {
-                "marginLeft": "1.5em",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "color": "#AAAAAA",
-                }
-              }
-            >
-              Integer
-               &gt; 
-              Elementum
-               &gt; 
-              Acru
-            </div>
-            <div>
-              Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tempus tellus ut tempus luctus. Nullam nec nunc mi. Duis volutpat ultricies aliquet. Aliquam commodo efficitur odio, ut vehicula quam aliquet sed. Ut at ligula sit amet arcu varius rhoncus. Curabitur accumsan sit amet magna eget efficitur. Pellentesque eleifend ipsum sed nibh pellentesque finibus. Donec ut mauris luctus, congue ante ac, cursus libero. Curabitur dolor ligula, aliquam vel ex eu, ornare tincidunt turpis. Quisque id ornare felis. Phasellus quis molestie ante. In eleifend posuere orci sagittis scelerisque.
-            </div>
-          </div>
-          <hr />
         </div>
-        <div
-          style={
-            Object {
-              "fontFamily": "PT Sans Caption",
-              "maxWidth": "1024px",
-            }
+      </div>
+      <style
+        jsx={true}
+      >
+        
+          .content-pane {
+            margin-right: auto;
+            padding-left: 1em;
+            padding-top: 0;
+            font-family: PT Sans Caption;
           }
-        >
-          <div>
-            <a
-              href=""
-              style={
-                Object {
-                  "color": "#005A93",
-                  "fontSize": "1.5em",
-                }
-              }
-            >
-              Quis libero cursus
-            </a>
-          </div>
-          <div
-            style={
-              Object {
-                "marginLeft": "1.5em",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "color": "#AAAAAA",
-                }
-              }
-            >
-              Duis
-               &gt; 
-              Pretium
-               &gt; 
-              Nisl
-            </div>
-            <div>
-              Sed ut orci eget orci imperdiet bibendum. Aliquam rhoncus, justo a ullamcorper elementum, urna dolor commodo ligula, efficitur sollicitudin arcu tellus nec tellus. Aenean pharetra, urna et imperdiet auctor, velit tellus iaculis eros, nec laoreet elit dui quis mauris. Quisque dictum ligula eget gravida porttitor. Aliquam rhoncus turpis id pharetra congue. Pellentesque non tristique diam. Nam feugiat euismod nibh in lobortis. Morbi facilisis diam est, ac pharetra est pellentesque vitae. Aliquam erat volutpat.
-            </div>
-          </div>
-          <hr />
-        </div>
-      </ul>
+          .page-container {
+            display: flex;
+            justify-content: space-between;
+          }
+          .left-menu {
+            margin-left: 8em;
+          }
+        
+      </style>
     </div>
   </div>
 </div>

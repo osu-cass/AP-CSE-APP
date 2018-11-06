@@ -178,8 +178,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
         if (data !== undefined) {
           this.setState({
             url: '',
-            claim: data,
-            target: this.props.url === 'blank' ? targetMock : data.target[0],
             contentLoaded: true,
             breadCrumbProps: parseBreadCrumbData(data),
             titleBarProps: parseTitleBarData(data)

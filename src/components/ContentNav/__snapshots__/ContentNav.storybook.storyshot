@@ -60,6 +60,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -124,6 +125,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -188,6 +190,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -252,6 +255,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -316,6 +320,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -494,6 +499,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -558,6 +564,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;

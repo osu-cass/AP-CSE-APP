@@ -14,6 +14,7 @@ export interface ItemProps extends SubItemProps {
   expanded?: boolean;
   subItems: SubItemProps[];
   expand?: (e: React.MouseEvent<SVGElement>, n: string) => void;
+  contentKey?: string;
 }
 
 export interface ChevronProps {
