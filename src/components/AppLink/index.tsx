@@ -34,13 +34,18 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
         max-width: 450px;
       }
       .title span {
-        color: ${Colors.sbBlue};
-        font-size: 20px;
+        color: ${Colors.sbBlueLighter};
+        font-size: 25px;
         font-weight: 500;
       }
       .linkImg {
+        padding: 0;
         border: 1px solid;
-        min-height: 180px;
+        height: 180px;
+      }
+      .linkImg img {
+        width: 100%;
+        height: 100%;
       }
       .desc {
         text-align: justify;

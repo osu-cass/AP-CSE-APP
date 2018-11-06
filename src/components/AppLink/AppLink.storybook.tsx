@@ -5,6 +5,11 @@ import centered from '@storybook/addon-centered';
 import { AppLinkBtn, AppLinkBtnProps } from './AppLinkBtn';
 import { AppLink, AppLinkProps } from './index';
 
+import { Styles } from '../../constants';
+
+/*tslint:disable: no-require-imports no-var-requires */
+const image: string = require('../../assets/images/smarter-balanced.png') as string;
+
 const linkButtonMock: AppLinkBtnProps = {
   text: 'Visit Score Guides Page',
   url:
@@ -13,14 +18,15 @@ const linkButtonMock: AppLinkBtnProps = {
 
 const appLinkProps: AppLinkProps = {
   title: 'Score Guides',
-  imgUrl: 'http://google.com',
+  imgUrl: image,
   desc:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
   linkBtnProps: linkButtonMock
 };
 
 const style = {
-  maxWidth: '1024px'
+  maxWidth: '1024px',
+  fontFamily: `${Styles.sbSans}`
 };
 
 storiesOf('AppLink component', module)

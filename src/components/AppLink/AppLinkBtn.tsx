@@ -34,6 +34,8 @@ export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
         align-items: center;
         justify-content: center;
         width: 230px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       a div span {
         padding-right: 10px;
