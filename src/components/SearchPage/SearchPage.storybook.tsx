@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 import { SearchPage, SearchPageProps } from '.';
-import { FilterItemProps } from '../FilterItem';
 
 // cSpell:disable
 const searchPageMockProps: SearchPageProps = {
