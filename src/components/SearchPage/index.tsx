@@ -7,7 +7,7 @@ import { GenericPage } from '../GenericPage';
 import { Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
 import { Message, ErrorMessage } from '../Filter/Messages';
-import { FilterType } from '@osu-cass/sb-components';
+import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
 import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
@@ -124,33 +124,41 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
   renderFilter() {
     const { params, options } = this.state;
+    const errorJsx = <ErrorMessage>Error loading filter options</ErrorMessage>;
     if (!options) {
       return <Message>Loading filter options...</Message>;
     }
     if (options instanceof Error) {
-      return <ErrorMessage>Error loading filter options</ErrorMessage>;
+      return errorJsx;
     }
 
     return (
       <FilterContianer expanded={anyParams(this.props.paramsFromUrl)}>
-        <Filter options={options} params={params} onUpdate={this.onFilterChanged} />
+        <ErrorBoundary fallbackUI={errorJsx}>
+          <Filter options={options} params={params} onUpdate={this.onFilterChanged} />
+        </ErrorBoundary>
       </FilterContianer>
     );
   }
 
   renderResults() {
     const { results } = this.state;
+    const errorJsx = <ErrorMessage>Error fetching results from the server</ErrorMessage>;
     if (!results) {
       return <Message>Enter a query to see matching targets.</Message>;
     }
     if (results instanceof Error) {
-      return <ErrorMessage>Error fetching results from the server</ErrorMessage>;
+      return errorJsx;
     }
     if (results.length === 0) {
       return <Message>No results found.</Message>;
     }
 
-    return <FilterItemList claims={results} getTargetLink={placeholder} />;
+    return (
+      <ErrorBoundary fallbackUI={errorJsx}>
+        <FilterItemList claims={results} getTargetLink={placeholder} />
+      </ErrorBoundary>
+    );
   }
 
   render() {
