@@ -1,4 +1,4 @@
-import { Target } from '../../../components/MainContent';
+import { ITarget } from '../../../models/target';
 import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
@@ -172,13 +172,13 @@ export const parsedSubItemMock: ItemProps = {
   ]
 };
 
-export const targetMock: Target = {
+export const targetMock: ITarget = {
   title: '',
   shortCode: '',
   description: '',
   standards: [],
   DOK: [],
-  targetType: '',
+  type: '',
   clarification: '',
   heading: '',
   evidence: [],

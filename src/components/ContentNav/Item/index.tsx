@@ -2,6 +2,8 @@ import React, { ReactElement } from 'react';
 import { Colors, Styles } from '../../../constants';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { SubItemProps } from '../SubItem';
+import { Link } from 'react-scroll';
+import { scrollPageTo, renderLink } from '../../../utilities/scroller';
 
 /**
  * Properties for Item
@@ -12,6 +14,7 @@ export interface ItemProps extends SubItemProps {
   expanded?: boolean;
   subItems: SubItemProps[];
   expand?: (e: React.MouseEvent<SVGElement>, n: string) => void;
+  contentKey?: string;
 }
 
 export interface ChevronProps {
@@ -27,6 +30,7 @@ export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName })
         onClick={e => {
           if (expand) expand(e, itemName);
         }}
+        size={20}
       />
     );
   }
@@ -36,6 +40,7 @@ export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName })
       onClick={e => {
         if (expand) expand(e, itemName);
       }}
+      size={20}
     />
   );
 };
@@ -48,7 +53,7 @@ export const Chevron: React.SFC<ChevronProps> = ({ expanded, expand, itemName })
  * @param {boolean} [active]
  * @param {boolean} [expanded]
  * @param {(e: React.MouseEvent<SVGElement>, n: string) => void} [expand]
- * @param {(e: React.MouseEvent<HTMLLIElement>, n: string) => void} [activate]
+ * @param {(n: string) => void} [activate]
  * @param {JSX.Element[]<LeftMouse> | JSX.Element} [children]
  */
 export const Item: React.SFC<ItemProps> = ({
@@ -57,20 +62,19 @@ export const Item: React.SFC<ItemProps> = ({
   activate,
   expanded,
   expand,
+  referenceContainer,
   children
 }) => {
-  // const itemHeight = '0.75em';
-  const itemHeight = '3em';
-  const sideLength = `calc(${itemHeight} / ${Math.SQRT2} + 3px)`;
-
   return (
     <li
       key={name}
-      onClick={e => {
-        if (activate) activate(e, name);
+      onClick={() => {
+        scrollPageTo(name, -225, referenceContainer);
+        if (activate) activate(name);
       }}
       role="menuitem"
     >
+      {renderLink(referenceContainer, name, activate)}
       <div className={active ? 'active' : ''}>
         <div className="item-content">
           {name}
@@ -82,32 +86,21 @@ export const Item: React.SFC<ItemProps> = ({
       <ul className={`sub-list ${expanded ? 'expanded' : ''}`}>{children}</ul>
       <style jsx>{`
         * {
-          font-family: ${Styles.sbSans};
+          font-family: ${Styles.sbSerif};
         }
         li {
           position: relative;
           display: flex;
           flex-direction: column;
-          border-style: solid;
-          border-width: 0 0 1px 0;
-          font-size: ${Styles.fontLarger};
+          font-size: ${Styles.font};
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
           padding-left: 0;
-          border-width: 0 1px 1px 0;
-          border-style: solid;
           width: auto;
-        }
-        .sub-list {
-          border: none;
-          width: 100%;
-          margin: 0;
-        }
-        .sub-list .expanded {
-          height: auto;
         }
         .sub-list :not(.expanded) {
           display: none;
@@ -119,26 +112,17 @@ export const Item: React.SFC<ItemProps> = ({
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 1em 0;
+          margin: 0.5em 0;
         }
         .chevron {
           display: flex;
           align-items: center;
           margin: -5px 5px;
           text-indent: 0;
+          color: ${Colors.sbGrayDarker};
         }
-        .active :after {
-          z-index: -1;
-          position: absolute;
-          content: '';
-          height: ${sideLength};
-          width: ${sideLength};
-          right: calc(-1 * calc(calc(${itemHeight} / ${Math.SQRT2}) / 2) - 3px);
-          top: calc(calc(${itemHeight} / ${Math.SQRT2}) / 2 - 10px);
-          border-right: 1px solid #000000;
-          border-top: 1px solid #000000;
-          background-color: ${Colors.sbWhite};
-          transform: rotate(45deg);
+        .active {
+          color: ${Colors.sbBlue};
         }
       `}</style>
     </li>

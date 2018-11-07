@@ -1,9 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import centered from '@storybook/addon-centered';
-
 import { NavBar } from '.';
+import { RouterDecorator } from '../../__decorators__/';
+import { MobileNavBar } from './mobile';
 
-storiesOf('NavBar component', module)
-  .addDecorator(centered)
-  .add('NavBar', () => <NavBar links={[]} siteName={'test'} mainContentId={'main'} />);
+storiesOf('NavBar', module)
+  .addDecorator(RouterDecorator)
+  .add('NavBar', () => <NavBar />);
+
+storiesOf('NavBar/Mobile', module)
+  .addDecorator(RouterDecorator)
+  .add('Default', () => <MobileNavBar />);

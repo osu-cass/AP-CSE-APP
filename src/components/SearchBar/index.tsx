@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'react-feather';
-import { Colors } from '../../constants';
+import { Colors, mediaQueries } from '../../constants';
 
 export interface SearchBarProps {
   initialText?: string;
@@ -62,7 +62,6 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
           .search-bar {
             display: flex;
             min-height: 2em;
-            position: relative;
           }
           .button {
             align-items: center;
@@ -73,7 +72,6 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
             height: auto;
             justify-content: center;
             min-height: 2em;
-            position: relative;
           }
           .field {
             border-color: ${Colors.sbGray};
@@ -83,6 +81,12 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
             height: auto;
             min-height: 2em;
             padding: 0 0.5em;
+            flex-grow: 1;
+          }
+          @media ${mediaQueries.tabletAndMobile} {
+            .field {
+              width: 0; //needed so browser will shrink it past default size
+            }
           }
         `}</style>
       </div>
