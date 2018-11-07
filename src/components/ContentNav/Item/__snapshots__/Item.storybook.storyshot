@@ -63,6 +63,7 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -210,6 +211,7 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -387,6 +389,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -564,6 +567,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -663,6 +667,7 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -810,6 +815,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -957,6 +963,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
