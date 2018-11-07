@@ -61,11 +61,9 @@ export const parseContent = (text: string | undefined) => {
     lines.splice(0, 2);
   }
 
-  const content = lines.map((line, index) => {
+  return lines.map((line, index) => {
     return <NewLine key={index}>{parseDoubleAsterisks(line, underlined)}</NewLine>;
   });
-
-  return <Passage>{content}</Passage>;
 };
 
 export const parseExamples = (examples: string | string[]) => {

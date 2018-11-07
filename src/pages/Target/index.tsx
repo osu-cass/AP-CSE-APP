@@ -10,7 +10,6 @@ import { AdditionalMaterials } from '../../components/AdditionalMaterials';
 import { MainContent, TargetLayout, SubLayout } from '../../components/MainContent';
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
-import { targetMock } from './__mocks__';
 import { TargetClient, ITargetParams } from '../../clients/target';
 
 export interface MatchParams {

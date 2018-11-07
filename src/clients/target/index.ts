@@ -20,7 +20,7 @@ export class TargetClient implements ITargetClient {
   }
 
   private buildParams(params: ITargetParams): string {
-    const { subject, grades, claim, targetShortCode } = params;
+    const { targetShortCode } = params;
     let url = `${this.endpoint}/api/target`;
 
     if (targetShortCode) {
