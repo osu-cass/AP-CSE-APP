@@ -9,7 +9,7 @@ export const App: React.SFC = () => {
     <React.Fragment>
       <BrowserRouter>
         <div>
-          <NavBar links={[]} siteName={'test'} mainContentId={'main'} />
+          <NavBar />
           <Route exact path="/" component={SearchPageRoute} />
           <Route path="/target/" component={TargetPage} />
         </div>

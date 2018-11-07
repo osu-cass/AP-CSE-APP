@@ -1,4 +1,4 @@
-import '@babel/polyfill';
+//import '@babel/polyfill';
 
 import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
