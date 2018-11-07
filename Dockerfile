@@ -7,7 +7,7 @@ RUN npm ci
 
 COPY . .
 
-ENV API_ENDPOINT http://cse-dev.cass.oregonstate.edu
+ENV API_ENDPOINT https://cse-api.cass.oregonstate.edu
 ENV NODE_ENV production
 RUN npm run build -- --output-path=public/
 
