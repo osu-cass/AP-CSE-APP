@@ -11,10 +11,14 @@ export interface FilterItemProps {
   targetLink: string;
 }
 
-const linkStyle = {
-  color: '#005A93',
-  fontSize: '1.3em'
-};
+function gradesToEnglish(grades: string[]) {
+  if (grades.length === 0) {
+    return 'No grades';
+  }
+  const prefix = grades.length === 1 ? 'Grade' : 'Grades';
+
+  return `${prefix} ${grades.join(', ')}`;
+}
 
 export const FilterItem: React.SFC<FilterItemProps> = ({
   targetLink,
@@ -30,7 +34,7 @@ export const FilterItem: React.SFC<FilterItemProps> = ({
     </Link>
     <div className="indented">
       <div className="breadcrumb">
-        {subject} &raquo; {grade} &raquo; {claim}
+        {subject} &raquo; {gradesToEnglish(grade)} &raquo; {claim}
       </div>
       <div>{targetBodyText}</div>
     </div>
