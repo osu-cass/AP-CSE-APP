@@ -9,15 +9,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
   }
 >
   <div>
-    <div
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "flexBasis": "100%",
-          "width": "100%",
-        }
-      }
-    >
+    <div>
       <ul>
         <li
           className="title"
@@ -97,6 +89,9 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         font-family: PT Sans Caption;
         justify-content: center;
         padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
       }
       div ul {
         display: flex;
@@ -113,7 +108,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 1.8em;
+        font-size: 18px;
         text-align: left;
       }
       .desc {
@@ -121,7 +116,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 1.5em;
+        font-size: 14px;
         font-weight: 100;
         text-align: left;
       }
@@ -145,15 +140,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
   }
 >
   <div>
-    <div
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "flexBasis": "100%",
-          "width": "100%",
-        }
-      }
-    >
+    <div>
       <ul>
         <li
           className="title"
@@ -247,6 +234,9 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         font-family: PT Sans Caption;
         justify-content: center;
         padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
       }
       div ul {
         display: flex;
@@ -263,7 +253,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 1.8em;
+        font-size: 18px;
         text-align: left;
       }
       .desc {
@@ -271,7 +261,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 1.5em;
+        font-size: 14px;
         font-weight: 100;
         text-align: left;
       }
@@ -295,15 +285,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
   }
 >
   <div>
-    <div
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-          "flexBasis": "100%",
-          "width": "100%",
-        }
-      }
-    >
+    <div>
       <ul>
         <li
           className="title"
@@ -326,6 +308,9 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         font-family: PT Sans Caption;
         justify-content: center;
         padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
       }
       div ul {
         display: flex;
@@ -342,7 +327,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 1.8em;
+        font-size: 18px;
         text-align: left;
       }
       .desc {
@@ -350,7 +335,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 1.5em;
+        font-size: 14px;
         font-weight: 100;
         text-align: left;
       }

@@ -18,7 +18,7 @@ import {
   parsedRegularItemMock,
   parsedItemWithSubsMock,
   parsedNavPropsMock
-} from './__mocks__';
+} from './mocks';
 import { ITarget } from '../../models/target';
 
 describe('Target Page', () => {
