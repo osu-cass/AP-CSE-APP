@@ -41,7 +41,7 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       .linkImg {
         padding: 0;
         border: 1px solid;
-        height: 180px;
+        height: 220px;
       }
       .linkImg img {
         width: 100%;
@@ -49,6 +49,7 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       }
       .desc {
         text-align: justify;
+        font-size: 0.8em;
       }
     `}</style>
   </div>

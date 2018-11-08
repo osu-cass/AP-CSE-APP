@@ -39,6 +39,7 @@ export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
       }
       a div span {
         padding-right: 10px;
+        font-size: 0.9em;
       }
     `}</style>
   </a>
