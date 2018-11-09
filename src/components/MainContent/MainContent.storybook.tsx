@@ -4,7 +4,7 @@ import centered from '@storybook/addon-centered';
 
 import { Colors } from '../../constants';
 import { MainContent } from './index';
-import { targetMock } from './__mocks__/target';
+import { targetMock } from './mocks/target';
 import { targetLayout, subItemLayout } from '../../pages/Target';
 
 const style = {

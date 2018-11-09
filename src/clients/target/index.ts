@@ -1,9 +1,7 @@
 import { IClaim } from '../../models/claim';
+const { API_ENDPOINT } = process.env;
 
 export interface ITargetParams {
-  grades: string[];
-  subject: string;
-  claim: string;
   targetShortCode: string;
 }
 
@@ -19,22 +17,13 @@ export class TargetClient implements ITargetClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = 'https://localhost:3000';
+    this.endpoint = API_ENDPOINT || 'http://localhost:3000';
   }
 
   private buildParams(params: ITargetParams): string {
-    const { subject, grades, claim, targetShortCode } = params;
+    const { targetShortCode } = params;
     let url = `${this.endpoint}/api/target`;
 
-    if (subject) {
-      url = url.concat(`/${subject}`);
-    }
-    if (grades) {
-      url = url.concat(`/${grades}`);
-    }
-    if (claim) {
-      url = url.concat(`/${claim}`);
-    }
     if (targetShortCode) {
       url = url.concat(`/${targetShortCode}`);
     }
@@ -47,7 +36,7 @@ export class TargetClient implements ITargetClient {
     let claim: IClaim;
 
     try {
-      const response: Response = await window.fetch(url, { headers: { mode: 'cors' } });
+      const response: Response = await window.fetch(url);
       claim = <IClaim>await response.json();
     } catch (err) {
       throw new Error('Failed to fetch target.');

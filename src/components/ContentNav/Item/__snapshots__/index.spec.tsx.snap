@@ -57,6 +57,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -122,6 +123,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -260,6 +262,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -304,6 +307,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -348,6 +352,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -427,6 +432,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -492,6 +498,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -630,6 +637,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -674,6 +682,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -718,6 +727,7 @@ ReactWrapper {
           font-size: 14px;
           text-indent: 0.25em;
           z-index: 0;
+          cursor: pointer;
         }
         ul {
           list-style-type: none;
@@ -772,8 +782,6 @@ ReactWrapper {
         },
       },
     },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
   },
 }
 `;
