@@ -59,7 +59,12 @@ module.exports = {
         vendor: [
           'react',
           'react-dom',
-          'react-feather'
+          'react-feather',
+          'react-responsive',
+          'react-router',
+          'react-router-dom',
+          'react-scroll',
+          '@osu-cass/sb-components'
         ]
       }
     }),
