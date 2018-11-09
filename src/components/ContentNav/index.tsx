@@ -110,7 +110,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   expand = (event: React.MouseEvent<SVGElement>, name: string) => {
     event.stopPropagation();
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
-      const isExpanded = item.name === name ? !item.expanded : item.expanded;
+      const isExpanded = item.name === name ? !item.expanded : false;
 
       return { ...item, expanded: isExpanded };
     });

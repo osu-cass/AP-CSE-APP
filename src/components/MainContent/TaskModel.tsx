@@ -14,11 +14,13 @@ export interface TaskModelProps {
 }
 
 const renderStemsBy = (target: string, stems: IStem[]) =>
-  stems.filter(stem => stem.shortStem === target).map((stem, index) => {
-    const desc = parseContent(stem.stemDesc);
+  stems
+    .filter(stem => stem.shortStem === target)
+    .map((stem, index) => {
+      const desc = parseContent(stem.stemDesc);
 
-    return <li key={index}>{desc}</li>;
-  });
+      return <li key={index}>{desc}</li>;
+    });
 
 const renderAppropriateStems = (stems: IStem[]) => renderStemsBy('Appropriate Stems', stems);
 
