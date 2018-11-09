@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import css from 'styled-jsx/css';
 // tslint:disable-next-line
 import Modal from 'react-modal';
-import { Styling, pageStyling } from './Styling';
 import { Colors, Styles, blueGradientBgImg } from '../../constants';
 import { TaskButton } from './TaskButton';
 import _ from 'lodash';
@@ -14,6 +12,7 @@ import _ from 'lodash';
  */
 export interface DownloadModalProps {
   taskModels: string[];
+  isOpen: boolean;
 }
 /**
  * State for DownloadModal
@@ -26,6 +25,7 @@ export interface DownloadModalState {
   showMultiSelect: string;
   taskModelButtons: JSX.Element[];
   selectedList: JSX.Element[];
+  confirmArr: string[];
 }
 
 const customStyles = {
@@ -39,7 +39,8 @@ const customStyles = {
   }
 };
 
-Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
+
 /**
  * Renders a Modal window to download a document's targets
  * @export
@@ -50,13 +51,13 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   constructor(props: DownloadModalProps) {
     super(props);
     this.state = {
-      showModal: false,
+      showModal: props.isOpen,
       showHide: 'hidden',
       showMultiSelect: '',
       taskModelButtons: this.generateButtons(props),
-      selectedList: []
+      selectedList: [],
+      confirmArr: []
     };
-    this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleContinue = this.handleContinue.bind(this);
     this.handleBackButton = this.handleBackButton.bind(this);
@@ -75,10 +76,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         selectedArr.push(task.props.taskName);
       }
     });
-  }
-
-  openModal() {
-    this.setState({ showModal: true });
+    this.setState({ confirmArr: selectedArr });
+    this.closeModal();
   }
 
   closeModal() {
@@ -260,7 +259,62 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
             Continue
           </button>
         </div>
-        <style jsx>{Styling}</style>
+        <style jsx>{`
+          button {
+            display: flex;
+            flex-direction: column;
+            width: 225px;
+            margin-left: 15px;
+            margin-right: 10px;
+            height: 40px;
+            text-align: center;
+            text-align: -webkit-center;
+            border: solid;
+            line-height: 30px;
+            border-color: ${Colors.sbGray};
+            border-radius: 4px;
+            background-color: #fff;
+            font-family: ${Styles.sbSans};
+            font-size: 16px;
+            color: ${Colors.sbGrayDarker};
+            letter-spacing: ${Styles.sbLetterSpacing};
+          }
+          .checked {
+            background-image: ${blueGradientBgImg.backgroundImage};
+            color: ${Colors.sbGrayLighter};
+          }
+          #entire-target-btn {
+            margin-bottom: 12px;
+          }
+          #continue-btn {
+            margin-top: 50px;
+            margin-left: 40px;
+            border: none;
+            height: 30px;
+            line-height: 26px;
+            width: 175px;
+            background-image: ${blueGradientBgImg.backgroundImage};
+            color: ${Colors.sbGrayLighter};
+          }
+          #scrollable-btn-container {
+            overflow-y: scroll;
+            margin-right: -15px;
+            height: 200px;
+          }
+          #title-container {
+            text-align: center;
+            font-family: ${Styles.sbSans};
+            font-size: 18px;
+            font-weight: bold;
+            color: ${Colors.sbGray};
+            letter-spacing: ${Styles.sbLetterSpacing};
+            margin-bottom: 5px;
+            margin-top: -10px;
+          }
+          .hidden {
+            display: none;
+          }
+        `}</style>
       </form>
     );
   }
@@ -276,11 +330,65 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
           <button type="button" id="back-btn" onClick={this.handleBackButton}>
             Back
           </button>
-          <button type="button" id="confirm=btn" onClick={this.handleConfirm}>
+          <button type="button" id="confirm-btn" onClick={this.handleConfirm}>
             Confirm
           </button>
         </div>
-        <style jsx>{pageStyling}</style>
+        <style jsx>{`
+          button {
+            display: flex;
+            flex-direction: column;
+            width: 225px;
+            margin-left: 15px;
+            margin-right: 10px;
+            height: 40px;
+            text-align: center;
+            text-align: -webkit-center;
+            border: solid;
+            line-height: 30px;
+            border-color: ${Colors.sbGray};
+            border-radius: 4px;
+            background-color: #fff;
+            font-family: ${Styles.sbSans};
+            font-size: 16px;
+            color: ${Colors.sbGrayDarker};
+            letter-spacing: ${Styles.sbLetterSpacing};
+          }
+          .hidden {
+            display: none;
+          }
+          div {
+            font-family: ${Styles.sbSans};
+            text-align: center;
+            letter-spacing: ${Styles.sbLetterSpacing};
+            color: ${Colors.sbGray};
+          }
+          #selections-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 35px;
+            margin-left: 35px;
+            margin-bottom: 5px;
+            margin-top: -10px;
+          }
+          #selections-list {
+            overflow-y: auto;
+            height: 200px;
+            margin-left: -20px;
+            text-align: left;
+            font-size: 16px;
+          }
+          #pdf-page-count {
+            font-size: 14px;
+          }
+          #confirm-back-btn-container button {
+            width: 100px;
+            background-image: ${blueGradientBgImg.backgroundImage};
+            margin-top: 10px;
+            display: inline-block;
+            color: ${Colors.sbGrayLighter};
+          }
+        `}</style>
       </div>
     );
   }
@@ -289,7 +397,6 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
 
     return (
       <div>
-        <button onClick={this.openModal}>Open Modal</button>
         <Modal
           isOpen={this.state.showModal}
           onRequestClose={this.closeModal}

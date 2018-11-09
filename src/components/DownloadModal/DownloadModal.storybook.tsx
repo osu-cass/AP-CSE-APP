@@ -8,6 +8,7 @@ storiesOf('DownloadModal', module)
   .addDecorator(centered)
   .add('Download Task Model Multi-Select', () => (
     <DownloadModal
+      isOpen={true}
       taskModels={[
         'Task Model 1',
         'Task Model 2',
