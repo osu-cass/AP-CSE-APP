@@ -1,9 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-<<<<<<< HEAD
-=======
 const AutoDllPlugin = require('autodll-webpack-plugin');
->>>>>>> dev
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -53,11 +50,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new webpack.EnvironmentPlugin({
-      API_ENDPOINT: 'http://localhost:3000'
+      API_ENDPOINT: 'https://cse-api.cass.oregonstate.edu'
+      // API_ENDPOINT: 'http://localhost:3000'
     }),
-<<<<<<< HEAD
-    new HtmlWebpackPlugin({
-=======
     new AutoDllPlugin({
       inject: true,
       filename: '[name].js',
@@ -76,7 +71,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
->>>>>>> dev
       template: 'src/index.html'
     })
   ]

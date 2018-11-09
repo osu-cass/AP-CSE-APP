@@ -13,7 +13,7 @@ import { IClaim } from '../../models/claim';
 import { TargetClient, ITargetParams } from '../../clients/target';
 
 export interface MatchParams {
-  shortCode: string;
+  targetShortCode: string;
 }
 
 export interface Match {
@@ -97,22 +97,22 @@ export const parseNavProps = (target: ITarget): ItemProps[] => {
   return items;
 };
 
-export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
+export const parseBreadCrumbData = (claim: IClaim, targetIndex: number): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
     claim: claim.claimNumber,
-    target: 'Placeholder Title'
+    target: claim.target[targetIndex].title
   };
 };
 
-export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
+export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
     downloadBtnProps: downloadBtnMock,
-    targetTitle: 'Place holder',
-    targetDesc: 'This description is a placeholder description.'
+    targetTitle: claim.target[targetIndex].title,
+    targetDesc: claim.target[targetIndex].description
   };
 };
 
@@ -176,7 +176,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   componentWillMount() {
     let test: ITargetParams;
-    const { shortCode: targetShortCode }: MatchParams = this.props.match.params;
+    const { targetShortCode }: MatchParams = this.props.match.params;
+    const splitCode = targetShortCode.split('.')[3].match(/\d+$/);
+    const targetCode = splitCode && parseInt(splitCode[0], 10);
     if (!this.props.match || !this.props.match.params) {
       test = {
         targetShortCode: ''
@@ -189,13 +191,13 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.targetClient
       .getTarget(test)
       .then(data => {
-        if (data !== undefined) {
+        if (data !== undefined && targetCode !== null) {
           const claimData = (data as unknown) as IClaim;
           this.setState({
             claim: claimData,
-            target: claimData.target[0],
-            breadCrumbProps: parseBreadCrumbData(claimData),
-            titleBarProps: parseTitleBarData(claimData)
+            target: claimData.target[targetCode - 1],
+            breadCrumbProps: parseBreadCrumbData(claimData, targetCode - 1),
+            titleBarProps: parseTitleBarData(claimData, targetCode - 1)
           });
         }
       })
@@ -203,23 +205,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
         throw new Error(e);
       });
   }
-
-  /*
-  tslint:disable: promise-function-async
-  loadData() {
-    let data: IClaim | undefined;
-    let promise = Promise.resolve();
-    promise = promise.then(() => {
-      return import('../../../mock_api_data/E.G3.C1').then(rawData => {
-        data = (rawData.default as unknown) as IClaim;
-      });
-    });
-
-    return promise.then(() => {
-      return data;
-    });
-  }
-  */
 
   render() {
     const { subject, grade, claim, target } = this.state.breadCrumbProps;
