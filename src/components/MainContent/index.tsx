@@ -2,7 +2,7 @@ import React from 'react';
 import { TaskModel } from './TaskModel';
 import { parseContent } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
-import { ITarget, IDOK, IStandards, IStem, ITaskModel } from '../../models/target';
+import { ITarget, IDOK, IStandards, IStem, ITaskModel, IEvidence } from '../../models/target';
 import { Styles } from '../../constants';
 
 export interface TargetLayout {
@@ -30,9 +30,9 @@ export interface MainContentProps {
   subNames: SubLayout;
 }
 
-export const renderListItems = (items: string[]) =>
+export const renderListItems = (items: IEvidence[]) =>
   items.map((item, index) => {
-    return <li key={index}>{item}</li>;
+    return <li key={index}>{item.evDesc}</li>;
   });
 
 const shortenStandardCode = (code: string) => {
@@ -82,7 +82,7 @@ const RenderStandards = (standards: IStandards[]) =>
 const RenderTaskModels = (
   taskModels: ITaskModel[],
   stems: IStem[],
-  evidence: string[],
+  evidence: IEvidence[],
   names: SubLayout,
   scoringRules?: string[]
 ) =>

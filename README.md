@@ -45,5 +45,3 @@ npm run dev
 ```
 
 Once again, any code changes should automatically be loaded without needing to refresh.
-
-> > > > > > > 2d30fc8d678a2e62fd402ad179f83e289a929be1

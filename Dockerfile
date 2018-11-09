@@ -7,7 +7,8 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run build -- --output-path=public/app
-RUN npm run build-storybook
+ENV API_ENDPOINT https://cse-api.cass.oregonstate.edu
+ENV NODE_ENV production
+RUN npm run build -- --output-path=public/
 
 RUN mv ./public /

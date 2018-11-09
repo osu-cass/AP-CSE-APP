@@ -1,8 +1,11 @@
+//import '@babel/polyfill';
+
 import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withConsole } from '@storybook/addon-console';
 import React from 'react';
+
 import 'typeface-pt-serif/index.css';
 import 'typeface-pt-sans-caption/index.css';
 

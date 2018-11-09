@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
 import { ContentNav } from '.';
-import { itemMock } from './__mocks__';
+import { itemMock } from './mocks';
 
 storiesOf('ContentNav', module)
   .addDecorator(centered)

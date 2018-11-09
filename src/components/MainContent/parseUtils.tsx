@@ -1,4 +1,5 @@
 import React from 'react';
+import { Passage } from './Components';
 
 const splitByNewLine = (text: string | undefined) => {
   if (text) {
@@ -63,4 +64,15 @@ export const parseContent = (text: string | undefined) => {
   return lines.map((line, index) => {
     return <NewLine key={index}>{parseDoubleAsterisks(line, underlined)}</NewLine>;
   });
+};
+
+export const parseExamples = (examples: string | string[]) => {
+  if (examples instanceof Array && examples.length > 0) {
+    return examples.map(parseContent);
+  }
+  if (typeof examples === 'string') {
+    return parseContent(examples);
+  }
+
+  return undefined;
 };
