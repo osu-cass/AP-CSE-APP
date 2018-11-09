@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavBar } from '../NavBar';
-import { TitleBar } from '../TitleBar';
+import { NavBar } from '../../components/NavBar';
+import { TitleBar } from '../../components/TitleBar';
 import homeLogo from '../../assets/images/home-page.jpg';
 
 const importedLogo = homeLogo as string;
@@ -8,9 +8,6 @@ const importedLogo = homeLogo as string;
 // cSpell:disable
 export const HomeContent = () => (
   <div className="content">
-    <div className="element-wrapper">
-      <NavBar />
-    </div>
     <div className="element-wrapper">
       <TitleBar claimTitle={'Content Specification Explorer'} />
     </div>
