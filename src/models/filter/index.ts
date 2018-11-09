@@ -13,3 +13,11 @@ export interface CSEFilterParams {
   claim?: string;
   target?: string;
 }
+
+export interface CSESearchQuery {
+  grades?: string[];
+  subject?: string;
+  claim?: string;
+  target?: string;
+  search?: string;
+}

@@ -1,5 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+<<<<<<< HEAD
+=======
+const AutoDllPlugin = require('autodll-webpack-plugin');
+>>>>>>> dev
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -51,7 +55,28 @@ module.exports = {
     new webpack.EnvironmentPlugin({
       API_ENDPOINT: 'http://localhost:3000'
     }),
+<<<<<<< HEAD
     new HtmlWebpackPlugin({
+=======
+    new AutoDllPlugin({
+      inject: true,
+      filename: '[name].js',
+      entry: {
+        vendor: [
+          'react',
+          'react-dom',
+          'react-feather',
+          'react-responsive',
+          'react-router',
+          'react-router-dom',
+          'react-scroll',
+          '@osu-cass/sb-components'
+        ]
+      }
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+>>>>>>> dev
       template: 'src/index.html'
     })
   ]

@@ -325,6 +325,35 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         </ul>
       </div>
     </div>
+    <style
+      jsx={true}
+    >
+      
+          .content-container {
+            margin: 20px 0;
+          }
+        
+    </style>
   </div>
+  <style
+    jsx={true}
+  >
+    
+      .title-bar {
+        background-image: linear-gradient(90deg, #006298, #0085AD);
+      }
+
+      .page-content {
+        max-width: 1024px;
+        margin: 20px auto;
+      }
+
+      @media (max-width: 1024px) {
+        .page-content {
+          margin: 20px;
+        }
+      }
+    
+  </style>
 </div>
 `;

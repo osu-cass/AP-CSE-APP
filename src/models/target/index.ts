@@ -27,6 +27,7 @@ export interface IEvidence {
   evTitle: string;
   evDesc: string;
 }
+
 export interface ITarget {
   title: string;
   shortCode: string;

@@ -1,14 +1,14 @@
-FROM node:latest
+FROM node as build-env
 
 WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm ci
-
 COPY . .
 
 ENV API_ENDPOINT https://cse-api.cass.oregonstate.edu
 ENV NODE_ENV production
-RUN npm run build -- --output-path=public/
+RUN npm run build
 
-RUN mv ./public /
+FROM nginx:alpine
+COPY --from=build-env /app/dist /usr/share/nginx/html
