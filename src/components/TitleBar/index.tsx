@@ -30,13 +30,13 @@ const style = {
  * @param {string | undefined} desc
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
-export const TitleBar: React.SFC<TitleBarProps> = ({
+export const TitleBar = ({
   claimTitle,
   claimDesc,
   targetTitle,
   targetDesc,
   downloadBtnProps
-}) => (
+}: TitleBarProps) => (
   <div style={style}>
     <ul>
       {claimTitle && (

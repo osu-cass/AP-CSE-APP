@@ -5,8 +5,7 @@ export enum Colors {
   sbGray = '#63666A',
   sbGrayDarker = '#313335',
   sbGrayLighter = '#ebebeb',
-  sbGreenLighter = '#43b02a',
-  sbError = '#8B0000'
+  sbGreenLighter = '#43b02a'
 }
 
 export enum Styles {
@@ -18,14 +17,11 @@ export enum Styles {
   sbLetterSpacing = '-.02em',
   sbSans = 'PT Sans Caption',
   sbSerif = 'PT Serif',
-  maxPageWidth = '1024px',
   targetContentWidth = '85%'
 }
 
-export const blueGradient = `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`;
-
 export const blueGradientBgImg = {
-  backgroundImage: blueGradient
+  backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
 };
 
 export interface IconProps {

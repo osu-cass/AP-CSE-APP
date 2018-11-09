@@ -1,40 +1,35 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { FilterItemProps, FilterItem } from '../FilterItem';
-import { IClaim } from '../../models/claim';
-import { Colors, Styles } from '../../constants';
 
-export interface FilterItemListProps {
-  claims: IClaim[];
-  getTargetLink: (target: string) => string;
+export interface FilterItemListState {
+  items: FilterItemProps[];
 }
 
-export const FilterItemList: React.SFC<FilterItemListProps> = ({ claims, getTargetLink }) => {
-  const targetData: FilterItemProps[] = [];
-  claims.forEach(c => {
-    c.target.forEach(t => {
-      targetData.push({
-        subject: c.subject,
-        grade: c.grades,
-        claim: c.claimNumber,
-        targetName: t.title,
-        targetBodyText: t.description,
-        targetLink: getTargetLink(t.shortCode)
-      });
-    });
-  });
-  const targetsJsx = targetData.map((t, i) => <FilterItem {...t} key={i} />);
+export interface FilterItemListProps {
+  allItems: FilterItemProps[];
+}
 
-  return (
-    <Fragment>
-      <h2>Results</h2>
-      {targetsJsx}
-      <style jsx>{`
-        h2 {
-          font-weight: normal;
-          margin-top: ${Styles.paddingUnit};
-          border-bottom: 1px solid ${Colors.sbGray};
-        }
-      `}</style>
-    </Fragment>
-  );
-};
+/**
+ * Renders a list of results from the search/filter process
+ * @export
+ * @class {FilterItemList}
+ * @param {FilterItemListProps} allItems
+ */
+export class FilterItemList extends Component<FilterItemListProps, FilterItemListState> {
+  constructor(props: FilterItemListProps) {
+    super(props);
+    this.state = { items: this.props.allItems };
+  }
+
+  render() {
+    const listItems = this.props.allItems.map(t => <FilterItem {...t} />);
+
+    return (
+      <React.Fragment>
+        <ul className="list" role="menu">
+          {listItems}
+        </ul>
+      </React.Fragment>
+    );
+  }
+}

@@ -1,5 +1,4 @@
 import { IClaim } from '../../models/claim';
-const { API_ENDPOINT } = process.env;
 
 export interface ITargetParams {
   grades: string[];
@@ -20,7 +19,7 @@ export class TargetClient implements ITargetClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = API_ENDPOINT || 'https://localhost:3000';
+    this.endpoint = 'https://localhost:3000';
   }
 
   private buildParams(params: ITargetParams): string {
