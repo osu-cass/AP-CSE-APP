@@ -6,7 +6,7 @@ import homeLogo from '../../assets/images/home-page.jpg';
 const importedLogo = homeLogo as string;
 
 // cSpell:disable
-export const HomeContent = () => (
+export const HomePage = () => (
   <div className="content">
     <div className="element-wrapper">
       <TitleBar claimTitle={'Content Specification Explorer'} />
