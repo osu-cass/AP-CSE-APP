@@ -1,11 +1,10 @@
 // tslint:disable:no-reserved-keywords
-
 export interface ITaskModel {
   taskName: string;
   taskDesc?: string;
   examples?: string;
   stimulus?: string;
-  relatedEvidence: string[];
+  relatedEvidence?: string[];
 }
 
 export interface IStem {
@@ -35,7 +34,7 @@ export interface ITarget {
   description: string;
   standards: IStandards[];
   DOK: IDOK[];
-  type: string;
+  interactionType: string;
   clarification: string;
   heading: string;
   evidence: IEvidence[];
@@ -48,5 +47,5 @@ export interface ITarget {
   accessibility: string;
   stem: IStem[];
   taskModels: ITaskModel[];
-  rubrics?: string[];
+  rubrics: string[];
 }

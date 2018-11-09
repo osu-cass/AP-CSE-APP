@@ -1,10 +1,15 @@
 {
-  "presets": ["@babel/env", "@babel/typescript", "@babel/react"],
+  "presets": ["@babel/preset-env", "@babel/typescript", "@babel/react"],
   "plugins": [
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-runtime",
     "styled-jsx/babel"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["require-context-hook"]
+    }
+  }
 }

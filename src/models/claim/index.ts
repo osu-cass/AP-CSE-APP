@@ -1,5 +1,4 @@
 import { ITarget } from '../target';
-
 export interface IClaim {
   title: string;
   claimNumber: string;
@@ -7,6 +6,11 @@ export interface IClaim {
   subject: string;
   description?: string;
   shortCode: string;
-  domain?: string;
+  domain?: IDomain[];
   target: ITarget[];
+}
+
+export interface IDomain {
+  title: string;
+  desc?: string;
 }

@@ -1943,122 +1943,110 @@ exports[`Storyshots MainContent component Renders a main content with target dat
                       Format Example
                     </h2>
                   </header>
-                  <p>
-                    <span>
-                      
-                      <strong>
-                        Format Example:
-                      </strong>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        The Format Example includes a sample of hot text from a grade 11 item and is included to provide guidance regarding 
-                        <i>
-                          formatting purposes only
-                        </i>
-                        .
-                      </strong>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <strong>
-                        Note:
-                      </strong>
-                       Selectable text is a whole, continuous section of text.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      __________________________________________________________________________
-                      <br />
-                    </span>
-                    <span>
-                      First, read the dictionary entry. 
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      (v) gather together or acquire an increasing number or quantity of; heap up
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      Click on the 
+                  <span>
+                    
+                    <strong>
+                      Format Example:
+                    </strong>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      The Format Example includes a sample of hot text from a grade 11 item and is included to provide guidance regarding 
                       <i>
-                        underlined
+                        formatting purposes only
                       </i>
-                       word in the paragraph that most closely matches the definition provided.
-                      <br />
-                    </span>
-                    <span>
-                      
-                      <br />
-                    </span>
-                    <span>
-                      The snow on the side of the road was really starting to [
-                      <i>
-                        accumulate
-                      </i>
-                      ]. The grass was now a pure, [
-                      <i>
-                        sparkling
-                      </i>
-                      ] white carpet. The fire hydrants and tree branches were three inches taller, and the road was now a river of ice and water. Ashley told me not to worry because the highway would be dry as we slowly [
-                      <i>
-                        negotiated
-                      </i>
-                      ] the narrow on-ramp to the interstate. I couldn’t help but smile as I read the sign: I-95 South. Was she taking me somewhere special for our winter holiday, maybe to visit Aunt Glenda in Delaware? I haven’t seen her in years, and I used to love visiting for family cook-outs. Aunt Glenda always made us feel welcome, and she had the cutest dogs named Tebow and Spikes that loved to play fetch with us. I wasn’t quite sure what our [
-                      <i>
-                        destination
-                      </i>
-                      ] was, but I had to quickly admit that it wasn’t my first [
-                      <i>
-                        suspicion
-                      </i>
-                      ] as I read the sign that said, “Thank You for Visiting Delaware, Come Back Soon!” and then just as quickly, “Welcome to Maryland, Buckle-Up and Please Drive Safely.” Now I was completely [
-                      <i>
-                        stumped
-                      </i>
-                      ] as to which mysterious locale my sister was [
-                      <i>
-                        whisking
-                      </i>
-                      ] us off to.
-                      <br />
-                    </span>
-                    <style
-                      jsx={true}
-                    >
-                      
-      p {
-        padding-left: 0.5em;
-        justify-content: center;
-      }
-    
-                    </style>
-                  </p>
+                      .
+                    </strong>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <strong>
+                      Note:
+                    </strong>
+                     Selectable text is a whole, continuous section of text.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    __________________________________________________________________________
+                    <br />
+                  </span>
+                  <span>
+                    First, read the dictionary entry. 
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    (v) gather together or acquire an increasing number or quantity of; heap up
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    Click on the 
+                    <i>
+                      underlined
+                    </i>
+                     word in the paragraph that most closely matches the definition provided.
+                    <br />
+                  </span>
+                  <span>
+                    
+                    <br />
+                  </span>
+                  <span>
+                    The snow on the side of the road was really starting to [
+                    <i>
+                      accumulate
+                    </i>
+                    ]. The grass was now a pure, [
+                    <i>
+                      sparkling
+                    </i>
+                    ] white carpet. The fire hydrants and tree branches were three inches taller, and the road was now a river of ice and water. Ashley told me not to worry because the highway would be dry as we slowly [
+                    <i>
+                      negotiated
+                    </i>
+                    ] the narrow on-ramp to the interstate. I couldn’t help but smile as I read the sign: I-95 South. Was she taking me somewhere special for our winter holiday, maybe to visit Aunt Glenda in Delaware? I haven’t seen her in years, and I used to love visiting for family cook-outs. Aunt Glenda always made us feel welcome, and she had the cutest dogs named Tebow and Spikes that loved to play fetch with us. I wasn’t quite sure what our [
+                    <i>
+                      destination
+                    </i>
+                    ] was, but I had to quickly admit that it wasn’t my first [
+                    <i>
+                      suspicion
+                    </i>
+                    ] as I read the sign that said, “Thank You for Visiting Delaware, Come Back Soon!” and then just as quickly, “Welcome to Maryland, Buckle-Up and Please Drive Safely.” Now I was completely [
+                    <i>
+                      stumped
+                    </i>
+                    ] as to which mysterious locale my sister was [
+                    <i>
+                      whisking
+                    </i>
+                    ] us off to.
+                    <br />
+                  </span>
                 </div>
                 <style
                   jsx={true}

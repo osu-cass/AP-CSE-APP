@@ -139,19 +139,18 @@ export const parsedNavPropsMock: ItemProps[] = [
 
 export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
-  grade: 'Grade 3',
-  claim: 'Literary Texts',
-  target: 'Placeholder Title'
+  grade: 'Grade 6',
+  claim: 'C1',
+  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1'
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
-  claimTitle: 'Literary Texts',
+  claimTitle: 'C1',
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: { url: 'test/url', filename: 'test-file-name' },
-  targetTitle: 'Placeholder Title',
-  targetDesc:
-    'Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.'
+  targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetDesc: 'placeholder'
 };
 
 export const parsedSubItemMock: ItemProps = {
@@ -178,7 +177,7 @@ export const targetMock: ITarget = {
   description: '',
   standards: [],
   DOK: [],
-  type: '',
+  interactionType: '',
   clarification: '',
   heading: '',
   evidence: [],
