@@ -80,7 +80,6 @@
     ]
   },
   "dependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/runtime": "^7.1.5",
     "@osu-cass/sb-components": "^1.5.0-alpha.10",
     "@sbac/sbac-ui-kit": "github:osu-cass/sbac-global-ui-kit#develop",
@@ -104,6 +103,7 @@
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
