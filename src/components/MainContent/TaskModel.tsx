@@ -1,13 +1,13 @@
 import React from 'react';
 import { renderListItems, SubLayout } from './index';
-import { parseContent } from './parseUtils';
-import { IStem, ITaskModel } from '../../models/target/index';
+import { IStem, ITaskModel, IEvidence } from '../../models/target';
+import { parseContent, parseExamples } from './parseUtils';
 import { MainHeader, NonBulletList, NumberList, Passage, Section, SubHeader } from './Components';
 
 export interface TaskModelProps {
   task: ITaskModel;
   stems: IStem[];
-  evidences: string[];
+  evidences: IEvidence[];
   scoringRule: string;
   index: number;
   names: SubLayout;
@@ -25,14 +25,14 @@ const renderAppropriateStems = (stems: IStem[]) => renderStemsBy('Appropriate St
 const renderDualTextOnlyStems = (stems: IStem[]) =>
   renderStemsBy('Appropriate Stems for Dual-Text Stimuli', stems);
 
-const renderFormatExample = (example: string | undefined, sectionName: string) => {
+const renderFormatExample = (sectionName: string, example: string | string[]) => {
   // If example data has 'NA' or 'Examples', ignore them temporarily.
   // If API changes how to present none for example, this block should change.
   if (example !== 'NA' && example !== 'Examples') {
     return (
       <Section name={sectionName}>
         <SubHeader text={'Format Example'} />
-        <Passage>{parseContent(example)}</Passage>
+        {parseExamples(example)}
       </Section>
     );
   }
@@ -47,7 +47,7 @@ export const TaskModel = ({
   names
 }: TaskModelProps) => {
   const taskPrefix = `taskModel${index}`;
-  const desc = parseContent(task.taskDesc);
+  const desc = parseContent(task.taskDesc ? task.taskDesc : '');
 
   return (
     <Section name={task.taskName}>
@@ -77,7 +77,7 @@ export const TaskModel = ({
         <Passage>{scoringRule}</Passage>
       </Section>
 
-      {renderFormatExample(task.examples, `${taskPrefix}-formatExample`)}
+      {task.examples && renderFormatExample(`${taskPrefix}-formatExample`, task.examples)}
     </Section>
   );
 };

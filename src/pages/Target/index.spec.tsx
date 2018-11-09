@@ -18,7 +18,7 @@ import {
   parsedRegularItemMock,
   parsedItemWithSubsMock,
   parsedNavPropsMock
-} from './__mocks__';
+} from './mocks';
 import { ITarget } from '../../models/target';
 
 describe('Target Page', () => {
@@ -26,7 +26,7 @@ describe('Target Page', () => {
   beforeEach(() => {
     targetPage = mount(
       <MemoryRouter initialEntries={['/']}>
-        <TargetPage url={'regular'} />
+        <TargetPage match={{ params: { targetShortCode: 'E.G6.C1RL.T1' } }} />
       </MemoryRouter>
     );
     /* tslint:disable: no-console */
@@ -37,13 +37,13 @@ describe('Target Page', () => {
   });
 
   it('parses breadcrumb data from a claim', () => {
-    const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock);
+    const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock, 0);
 
     expect(parsedBreadCrumbData).toEqual(parsedBreadCrumbDataMock);
   });
 
   it('parses title bar data from a claim', () => {
-    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock);
+    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock, 0);
 
     expect(parsedTitleBarData).toEqual(parsedTitleBarDataMock);
   });

@@ -11,7 +11,7 @@ export const App: React.SFC = () => {
         <div>
           <NavBar />
           <Route exact path="/" component={SearchPageRoute} />
-          <Route path="/target/" component={TargetPage} />
+          <Route path="/target/:targetShortCode" component={TargetPage} />
         </div>
       </BrowserRouter>
       <style jsx global>{`

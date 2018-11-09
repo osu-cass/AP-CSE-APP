@@ -10,16 +10,22 @@ import { AdditionalMaterials } from '../../components/AdditionalMaterials';
 import { MainContent, TargetLayout, SubLayout } from '../../components/MainContent';
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
-import { targetMock } from './__mocks__';
 import { TargetClient, ITargetParams } from '../../clients/target';
 
+export interface MatchParams {
+  targetShortCode: string;
+}
+
+export interface Match {
+  params: MatchParams;
+}
+
 export interface TargetPageProps {
-  url: string;
+  // tslint: disable: any
+  match: Match;
 }
 
 export interface TargetPageState {
-  url: string;
-  contentLoaded: boolean;
   claim?: IClaim;
   target?: ITarget;
   breadCrumbProps: BreadcrumbsProps;
@@ -91,22 +97,22 @@ export const parseNavProps = (target: ITarget): ItemProps[] => {
   return items;
 };
 
-export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
+export const parseBreadCrumbData = (claim: IClaim, targetIndex: number): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
-    claim: claim.domain,
-    target: 'Placeholder Title'
+    claim: claim.claimNumber,
+    target: claim.target[targetIndex].title
   };
 };
 
-export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
+export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
   return {
-    claimTitle: claim.domain,
+    claimTitle: claim.claimNumber,
     claimDesc: claim.description,
     downloadBtnProps: downloadBtnMock,
-    targetTitle: 'Placeholder Title',
-    targetDesc: claim.target[0].description
+    targetTitle: claim.target[targetIndex].title,
+    targetDesc: claim.target[targetIndex].description
   };
 };
 
@@ -158,47 +164,46 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
    * to make requests to the API.
    */
 
+  targetClient: TargetClient;
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
-      url: '',
-      contentLoaded: false,
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
+    this.targetClient = new TargetClient();
   }
 
   componentWillMount() {
-    this.loadData()
-      .then(d => {
-        if (d !== undefined) {
-          const data = (d as unknown) as IClaim;
+    let test: ITargetParams;
+    const { targetShortCode }: MatchParams = this.props.match.params;
+    const splitCode = targetShortCode.split('.')[3].match(/\d+$/);
+    const targetCode = splitCode && parseInt(splitCode[0], 10);
+    if (!this.props.match || !this.props.match.params) {
+      test = {
+        targetShortCode: ''
+      };
+    } else {
+      test = {
+        targetShortCode
+      };
+    }
+    this.targetClient
+      .getTarget(test)
+      .then(data => {
+        if (data !== undefined && targetCode !== null) {
+          const claimData = (data as unknown) as IClaim;
           this.setState({
-            url: '',
-            contentLoaded: true,
-            breadCrumbProps: parseBreadCrumbData(data),
-            titleBarProps: parseTitleBarData(data)
+            claim: claimData,
+            target: claimData.target[targetCode - 1],
+            breadCrumbProps: parseBreadCrumbData(claimData, targetCode - 1),
+            titleBarProps: parseTitleBarData(claimData, targetCode - 1)
           });
         }
       })
-      .catch(() => {
-        Error('hello');
+      .catch((e: string) => {
+        throw new Error(e);
       });
-  }
-
-  /*tslint:disable: promise-function-async */
-  loadData() {
-    let data: IClaim | undefined;
-    let promise = Promise.resolve();
-    promise = promise.then(() => {
-      return import('../../../mock_api_data/E.G3.C1').then(rawData => {
-        data = (rawData.default as unknown) as IClaim;
-      });
-    });
-
-    return promise.then(() => {
-      return data;
-    });
   }
 
   render() {

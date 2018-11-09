@@ -1,6 +1,7 @@
 import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { Styles, Colors, blueGradientBgImg } from '../../constants';
+import { Styles, Colors } from '../../constants';
+import { IDomain } from '../../models/claim';
 
 /**
  * interface for TitleBar
@@ -14,12 +15,6 @@ export interface TitleBarProps {
   targetDesc?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
-
-const style = {
-  ...blueGradientBgImg,
-  width: '100%',
-  flexBasis: '100%'
-};
 
 /**
  * Renders a TitleBar that shows a title, a description, a download button.
@@ -36,8 +31,8 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
   targetTitle,
   targetDesc,
   downloadBtnProps
-}) => (
-  <div style={style}>
+}: TitleBarProps) => (
+  <div>
     <ul>
       {claimTitle && (
         <li className="title">
@@ -75,6 +70,9 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         font-family: ${Styles.sbSans};
         justify-content: center;
         padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})
+        width: '100%',
+        flexBasis: '100%'
       }
       div ul {
         display: flex;
@@ -91,7 +89,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 1.8em;
+        font-size: 18px;
         text-align: left;
       }
       .desc {
@@ -99,7 +97,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         min-width: 50px;
         padding-bottom: 15px;
         color: ${Colors.sbGrayLighter};
-        font-size: 1.5em;
+        font-size: 14px;
         font-weight: 100;
         text-align: left;
       }

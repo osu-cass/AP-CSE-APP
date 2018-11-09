@@ -6,7 +6,7 @@ import { SearchPage } from '../../components/SearchPage';
 import { FilterClient } from '../../clients/filter';
 import { SearchClient } from '../../clients/search';
 
-export const SearchPageRoute: React.SFC<RouteComponentProps<{}>> = ({ location, history }) => {
+export const SearchPageRoute: React.SFC<RouteComponentProps> = ({ location, history }) => {
   const query: CSESearchQuery = parse(location.search);
   standardizeQuery(query);
 
