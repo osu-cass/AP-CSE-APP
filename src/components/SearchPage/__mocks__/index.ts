@@ -32,8 +32,13 @@ export const filterItems: FilterItemProps[] = [
   }
 ];
 
+interface MockParams {
+  subject: string;
+  claim: string;
+}
+
 export const searchPageMockProps: SearchPageProps = {
-  getFilterOptions: async (params, options) => {
+  getFilterOptions: async (params: MockParams, options) => {
     if (!params.subject) {
       return filterOptionsGS;
     }

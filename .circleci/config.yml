@@ -131,8 +131,8 @@ workflows:
             - install_cc_test_reporter
       - increment_version:
           filters: *devOnly
-          requires:
-            - test
+          # requires:
+          #   - test
       - push_image:
           filters: *devOnly
           requires:
