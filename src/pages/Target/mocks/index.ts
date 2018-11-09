@@ -141,7 +141,7 @@ export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
   grade: 'Grade 6',
   claim: 'C1',
-  target: 'Placeholder Title'
+  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1'
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
@@ -149,8 +149,8 @@ export const parsedTitleBarDataMock: TitleBarProps = {
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: { url: 'test/url', filename: 'test-file-name' },
-  targetTitle: 'Place holder',
-  targetDesc: 'This description is a placeholder description.'
+  targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetDesc: 'placeholder'
 };
 
 export const parsedSubItemMock: ItemProps = {

@@ -26,7 +26,7 @@ describe('Target Page', () => {
   beforeEach(() => {
     targetPage = mount(
       <MemoryRouter initialEntries={['/']}>
-        <TargetPage match={{ params: { shortCode: 'E.G6.C1RL.T1' } }} />
+        <TargetPage match={{ params: { targetShortCode: 'E.G6.C1RL.T1' } }} />
       </MemoryRouter>
     );
     /* tslint:disable: no-console */
@@ -37,13 +37,13 @@ describe('Target Page', () => {
   });
 
   it('parses breadcrumb data from a claim', () => {
-    const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock);
+    const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock, 0);
 
     expect(parsedBreadCrumbData).toEqual(parsedBreadCrumbDataMock);
   });
 
   it('parses title bar data from a claim', () => {
-    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock);
+    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock, 0);
 
     expect(parsedTitleBarData).toEqual(parsedTitleBarDataMock);
   });
