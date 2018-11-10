@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
+import { HomePage } from './Home';
 
 export const App: React.SFC = () => {
   return (
@@ -10,8 +11,10 @@ export const App: React.SFC = () => {
       <BrowserRouter>
         <div>
           <NavBar />
-          <Route exact path="/" component={SearchPageRoute} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
+          <Route path="/home" component={HomePage} />
+          <Route path="/search" component={SearchPageRoute} />
         </div>
       </BrowserRouter>
       <style jsx global>{`
