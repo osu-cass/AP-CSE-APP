@@ -34,7 +34,7 @@ export const NavBar: React.SFC = () => {
     alignItems: 'center'
   };
 
-  const handelRedirect = (search: string) => {
+  const handleRedirect = (search: string) => {
     window.location.assign(`/search?search=${search}`);
   };
 
@@ -49,7 +49,7 @@ export const NavBar: React.SFC = () => {
         </div>
         <div className="right-content">
           <span className="right-spacing grow-search">
-            <SearchBar onSearch={handelRedirect} />
+            <SearchBar onSearch={handleRedirect} />
           </span>
           <span className="right-spacing">
             <Link to="placeholder" style={linkStyle}>
