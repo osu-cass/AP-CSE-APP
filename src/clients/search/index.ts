@@ -1,58 +1,56 @@
 import { IClaim } from '../../models/claim';
 import { ITargetParams } from '../target';
+import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
+import { SearchBaseModel } from '@osu-cass/sb-components';
+const { API_ENDPOINT } = process.env;
 
-export interface ISearchParams extends ITargetParams {
-  query?: string;
-}
 export interface ISearchClient {
-  search: (params: ISearchParams) => Promise<IClaim | Error>;
+  search: (params: CSESearchQuery) => Promise<IClaim[] | Error>;
 }
 
 /**
- * Cliuent class that cxommunicates with the cse api
+ * Client class that cxommunicates with the cse api
  * @class {SearchClient}
  */
 export class SearchClient implements ISearchClient {
   private endpoint: string;
 
   constructor() {
-    this.endpoint = 'https://localhost:3000';
+    this.endpoint = API_ENDPOINT || 'http://localhost:3000';
   }
 
-  private buildParams(params: ISearchParams): string {
-    const { query, subject, grades, claim, targetShortCode } = params;
+  private buildParams(params: CSESearchQuery): string {
+    const { search, subject, grades, claim, target } = params;
     let url = `${this.endpoint}/api/search/?`;
 
-    if (query) {
-      url = url.concat(url, `query=${query}&`);
+    if (search) {
+      url = url.concat(`query=${search}&`);
     }
     if (subject) {
-      url = url.concat(url, `subject=${subject}`);
+      url = url.concat(`subject=${subject}`);
     }
     if (grades) {
-      url = url.concat(url, `&grades=${grades}`);
+      url = url.concat(`&grades=${grades}`);
     }
     if (claim) {
-      url = url.concat(url, `&claimNumber=${claim}`);
+      url = url.concat(`&claimNumber=${claim}`);
     }
-    if (targetShortCode) {
-      url = url.concat(url, `&targetShortCode=${targetShortCode}`);
+    if (target) {
+      url = url.concat(`&targetShortCode=${target}`);
     }
 
     return url;
   }
 
-  public async search(params: ISearchParams): Promise<IClaim | Error> {
+  public async search(params: CSESearchQuery): Promise<IClaim[] | Error> {
     const url: string = this.buildParams(params);
-    let claim: IClaim;
 
     try {
-      const response: Response = await window.fetch(url);
-      claim = <IClaim>await response.json();
-    } catch (err) {
-      throw new Error('Search failed.');
-    }
+      const response = await window.fetch(url);
 
-    return claim;
+      return (await response.json()) as IClaim[];
+    } catch (err) {
+      return new Error('Search failed.');
+    }
   }
 }

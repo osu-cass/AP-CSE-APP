@@ -1,45 +1,57 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Colors } from '../../constants';
 
 export interface FilterItemProps {
   subject: string;
-  grade: string;
+  grade: string[];
   claim: string;
   targetName: string;
   targetBodyText: string;
   targetLink: string;
 }
 
-const style = {
-  maxWidth: '1024px',
-  fontFamily: 'PT Sans Caption'
-};
+function gradesToEnglish(grades: string[]) {
+  if (grades.length === 0) {
+    return 'No grades';
+  }
+  const prefix = grades.length === 1 ? 'Grade' : 'Grades';
 
-const linkStyle = {
-  color: '#005A93',
-  fontSize: '1.5em'
-};
+  return `${prefix} ${grades.join(', ')}`;
+}
 
-const breadcrumbStyle = {
-  color: '#AAAAAA'
-};
-
-const indentedStyle = {
-  marginLeft: '1.5em'
-};
-
-export const FilterItem = (props: FilterItemProps): JSX.Element => (
-  <div style={style}>
-    <div>
-      <a style={linkStyle} href={props.targetLink}>
-        {props.targetName}
-      </a>
-    </div>
-    <div style={indentedStyle}>
-      <div style={breadcrumbStyle}>
-        {props.subject} &gt; {props.grade} &gt; {props.claim}
+export const FilterItem: React.SFC<FilterItemProps> = ({
+  targetLink,
+  targetName,
+  subject,
+  grade,
+  claim,
+  targetBodyText
+}) => (
+  <div>
+    <Link to={targetLink}>
+      <h3>{targetName}</h3>
+    </Link>
+    <div className="indented">
+      <div className="breadcrumb">
+        {subject} &raquo; {gradesToEnglish(grade)} &raquo; {claim}
       </div>
-      <div>{props.targetBodyText}</div>
+      <div>{targetBodyText}</div>
     </div>
-    <hr />
+    <style jsx>{`
+      h3 {
+        color: ${Colors.sbBlue};
+        text-decoration: underline;
+        margin-bottom: 0;
+      }
+
+      .breadcrumb {
+        color: #aaa;
+      }
+
+      .indented {
+        margin-left: 1em;
+      }
+    `}</style>
   </div>
 );

@@ -223,21 +223,21 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
             "flexBasis": "100%",
             "width": "100%",
           }
-        }
-      >
-        <ul>
-          <li
-            className="title"
-          >
-            <span>
-              Find Targets
-            </span>
-          </li>
-        </ul>
-        <style
-          jsx={true}
         >
-          
+          <div>
+            <ul>
+              <li
+                className="title"
+              >
+                <span>
+                  Find Targets
+                </span>
+              </li>
+            </ul>
+            <style
+              jsx={true}
+            >
+              
       * {
         margin: 0;
         padding: 0;
@@ -247,6 +247,9 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         font-family: PT Sans Caption;
         justify-content: center;
         padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
       }
       div ul {
         display: flex;
@@ -263,7 +266,7 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 1.8em;
+        font-size: 18px;
         text-align: left;
       }
       .desc {
@@ -271,7 +274,7 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 1.5em;
+        font-size: 14px;
         font-weight: 100;
         text-align: left;
       }
@@ -431,7 +434,36 @@ exports[`Storyshots SearchPage component SearchPage 1`] = `
         </div>
         <hr />
       </div>
-    </ul>
+    </div>
+    <style
+      jsx={true}
+    >
+      
+          .content-container {
+            margin: 20px 0;
+          }
+        
+    </style>
   </div>
+  <style
+    jsx={true}
+  >
+    
+      .title-bar {
+        background-image: linear-gradient(90deg, #006298, #0085AD);
+      }
+
+      .page-content {
+        max-width: 1024px;
+        margin: 20px auto;
+      }
+
+      @media (max-width: 1024px) {
+        .page-content {
+          margin: 20px;
+        }
+      }
+    
+  </style>
 </div>
 `;

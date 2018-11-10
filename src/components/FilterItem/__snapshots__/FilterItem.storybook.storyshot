@@ -22,21 +22,23 @@ exports[`Storyshots FilterItem component FilterItem 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "margin": "auto",
-          "maxHeight": "100%",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "fontFamily": "PT Sans Caption",
-            "maxWidth": "1024px",
+    <div>
+      <div>
+        <a
+          href="/"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "#005A93",
+              "fontSize": "1.5em",
+            }
           }
-        }
+        >
+          Donec aliquet, risus sed auctor sagittis
+        </a>
+      </div>
+      <div
+        className="indented"
       >
         <div>
           <a
