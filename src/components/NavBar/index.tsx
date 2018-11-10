@@ -48,7 +48,7 @@ export const NavBar: React.SFC = () => {
             <SearchBar />
           </span>
           <span className="right-spacing">
-            <Link to="placeholder" style={linkStyle}>
+            <Link to="/help" style={linkStyle}>
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
