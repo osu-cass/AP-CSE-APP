@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'react-feather';
-import { blueGradient, Colors } from '../../constants';
+import { blueGradient, blueGradientDarker, Colors } from '../../constants';
 
 export interface AppLinkBtnProps {
   text: string;
@@ -19,12 +19,11 @@ export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
         padding: 0;
       }
       a {
-        text-decoration: none !important;
+        text-decoration: none;
         color: ${Colors.sbGrayLighter};
       }
       a:hover {
-        text-shadow: 2px 2px ${Colors.sbGray};
-        font-size: 102%;
+        text-decoration: underline;
       }
       .container {
         display: inline-flex;
@@ -36,6 +35,9 @@ export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
         width: 230px;
         padding-left: 10px;
         padding-right: 10px;
+      }
+      .container:hover {
+        background: ${blueGradientDarker};
       }
       a div span {
         padding-right: 10px;
