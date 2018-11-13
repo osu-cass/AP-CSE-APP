@@ -97,12 +97,12 @@ export const parseNavProps = (target: ITarget): ItemProps[] => {
   return items;
 };
 
-export const parseBreadCrumbData = (claim: IClaim, targetIndex: number): BreadcrumbsProps => {
+export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
     claim: claim.claimNumber,
-    target: claim.target[targetIndex].title
+    target: claim.target[0].title
   };
 };
 
@@ -186,8 +186,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
   componentDidMount() {
     let test: ITargetParams;
     const { targetShortCode }: MatchParams = this.props.match.params;
-    const splitCode = targetShortCode.split('.')[3].match(/\d+$/);
-    const targetCode = splitCode && parseInt(splitCode[0], 10);
     if (!this.props.match || !this.props.match.params) {
       test = {
         targetShortCode: ''
@@ -200,12 +198,12 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.targetClient
       .getTarget(test)
       .then(data => {
-        if (data !== undefined && targetCode !== null) {
+        if (data !== undefined) {
           const claimData = (data as unknown) as IClaim;
           this.setState({
             claim: claimData,
             target: claimData.target[0],
-            breadCrumbProps: parseBreadCrumbData(claimData, 0),
+            breadCrumbProps: parseBreadCrumbData(claimData),
             titleBarProps: parseTitleBarData(claimData, 0)
           });
         }
