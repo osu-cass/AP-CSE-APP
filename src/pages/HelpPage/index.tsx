@@ -56,10 +56,10 @@ const helpSections: HelpSection[] = [
 ];
 
 export const HelpPage: React.SFC = () => {
-  const sectionsJsx = helpSections.map(s => (
-    <Section name={s.title}>
+  const sectionsJsx = helpSections.map((s, i) => (
+    <Section name={s.title} key={i}>
       <MainHeader text={s.title} />
-      <Passage>{s.jsx}</Passage>
+      {s.jsx}
     </Section>
   ));
 

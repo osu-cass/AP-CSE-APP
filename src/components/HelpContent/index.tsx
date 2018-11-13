@@ -122,7 +122,7 @@ export const HelpAccessibility: React.SFC = () => (
 
 export const HelpFaq: React.SFC = () => (
   <React.Fragment>
-    <h4>How should I use the item specifications?</h4>
+    <h3>How should I use the item specifications?</h3>
     <p>The Item Specifications can be used in several different ways across the school year.</p>
     <ul>
       <li>
@@ -146,7 +146,7 @@ export const HelpFaq: React.SFC = () => (
         the claim and target structure.
       </li>
     </ul>
-    <h4>What does “CAT” mean?</h4>
+    <h3>What does “CAT” mean?</h3>
     <p>
       CAT is the acronym for Computer Adaptive Test. The computer-based test adjusts the difficulty
       of questions throughout the assessment based on the student’s response. If a student answers a
@@ -158,19 +158,19 @@ export const HelpFaq: React.SFC = () => (
       </a>{' '}
       can be found on the Smarter Balanced website.
     </p>
-    <h4>What is a test blueprint?</h4>
+    <h3>What is a test blueprint?</h3>
     <p>
       Test blueprints describe the content of the English language arts/literacy and mathematics
       assessments (interim and summative) for grades 3–8 and high school—and how that content will
       be assessed.
     </p>
-    <h4>What kinds of questions will the students encounter on the SB?</h4>
+    <h3>What kinds of questions will the students encounter on the SB?</h3>
     <p>
       There are 12 different technology-enhanced item types used by Smarter Balanced. Definitions of
       each item type and sample of each item type can be found on the{' '}
       <a href="http://sampleitems.smarterbalanced.org/AboutItems">Sample Items website</a>.
     </p>
-    <h4>Can the students use a calculator on the mathematics assessment?</h4>
+    <h3>Can the students use a calculator on the mathematics assessment?</h3>
     <p>
       Smarter Balanced and Desmos are proud to offer calculators that are both free to students and
       include cutting edge accessibility features. Students are allowed to use a calculator on a
