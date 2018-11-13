@@ -130,6 +130,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             activate={this.subItemClicked}
             key={`${name}-${subItem.name}`}
             referenceContainer={this.props.referenceContainer}
+            scrollOffset={subItem.scrollOffset}
           />
         );
       });
@@ -142,7 +143,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     return (
       <React.Fragment>
         <ul className="list" role="menu">
-          {this.state.items.map(({ name, subItems, expanded, active }: ItemProps) => (
+          {this.state.items.map(({ name, subItems, expanded, active, scrollOffset }: ItemProps) => (
             <Item
               name={name}
               subItems={subItems}
@@ -151,6 +152,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
               activate={this.itemClicked}
               expand={this.expand}
               referenceContainer={this.props.referenceContainer}
+              scrollOffset={scrollOffset}
               key={name}
             >
               {this.renderSubItems(subItems)}
