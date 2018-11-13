@@ -37,13 +37,13 @@ describe('Target Page', () => {
   });
 
   it('parses breadcrumb data from a claim', () => {
-    const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock, 0);
+    const parsedBreadCrumbData = parseBreadCrumbData(ELAG3ClaimMock);
 
     expect(parsedBreadCrumbData).toEqual(parsedBreadCrumbDataMock);
   });
 
   it('parses title bar data from a claim', () => {
-    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock, 0);
+    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock);
 
     expect(parsedTitleBarData).toEqual(parsedTitleBarDataMock);
   });
