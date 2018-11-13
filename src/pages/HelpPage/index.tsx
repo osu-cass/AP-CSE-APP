@@ -27,8 +27,10 @@ const itemProps: ItemProps[] = Object.values(names).map(name => ({
 export const HelpPage: React.SFC = () => (
   <GenericPage title="Help">
     <div className="page-container">
-      <div id="help-content-nav">
-        <ContentNav items={itemProps} referenceContainer="main-content-scroll" />
+      <div className="nav-container">
+        <div id="help-content-nav">
+          <ContentNav items={itemProps} referenceContainer="main-content-scroll" />
+        </div>
       </div>
       <div id="help-content">
         <Section name={names.claimsTargets}>
@@ -63,8 +65,13 @@ export const HelpPage: React.SFC = () => (
           height: 100%;
         }
 
+        .nav-container {
+          min-width: 200px;
+        }
+
         #help-content-nav {
           min-width: 200px;
+          position: fixed;
         }
 
         #help-content {
@@ -83,11 +90,7 @@ export const HelpPage: React.SFC = () => (
             height: auto;
           }
 
-          // #help-content {
-          //   overflow-y: auto;
-          // }
-
-          #help-content-nav {
+          .nav-container {
             display: none;
           }
         }
