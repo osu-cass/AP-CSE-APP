@@ -107,12 +107,18 @@ export const parseBreadCrumbData = (claim: IClaim, targetIndex: number): Breadcr
 };
 
 export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
+  const taskNames: string[] = [];
+  claim.target[targetIndex].taskModels.forEach(task => {
+    taskNames.push(task.taskName);
+  });
+
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
     downloadBtnProps: downloadBtnMock,
     targetTitle: claim.target[targetIndex].title,
-    targetDesc: claim.target[targetIndex].description
+    targetDesc: claim.target[targetIndex].description,
+    taskModels: taskNames
   };
 };
 

@@ -11,7 +11,7 @@ import _ from 'lodash';
  * @interface DownloadModalProps
  */
 export interface DownloadModalProps {
-  taskModels: string[];
+  taskModels?: string[];
   isOpen: boolean;
 }
 /**
@@ -39,7 +39,7 @@ const customStyles = {
   }
 };
 
-if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#app');
 
 /**
  * Renders a Modal window to download a document's targets
@@ -198,8 +198,10 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   generateButtons(props: DownloadModalProps): JSX.Element[] {
     const taskArray: JSX.Element[] = [];
     this.generateDefaultButtons(taskArray);
-    for (const task of props.taskModels) {
-      this.generateTaskButtons(taskArray, task);
+    if (props.taskModels) {
+      for (const task of props.taskModels) {
+        this.generateTaskButtons(taskArray, task);
+      }
     }
 
     return taskArray;
