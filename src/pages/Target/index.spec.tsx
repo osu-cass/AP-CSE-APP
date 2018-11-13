@@ -43,7 +43,7 @@ describe('Target Page', () => {
   });
 
   it('parses title bar data from a claim', () => {
-    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock);
+    const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock, 0);
 
     expect(parsedTitleBarData).toEqual(parsedTitleBarDataMock);
   });
