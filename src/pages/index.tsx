@@ -6,6 +6,7 @@ import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
 import { DevelopmentPage } from './Development';
+import { AppsPage } from './Apps';
 
 export const App: React.SFC = () => {
   return (
@@ -22,6 +23,7 @@ export const App: React.SFC = () => {
             <Route path="/search" component={SearchPageRoute} />
             <Route path="/development" component={DevelopmentPage} />
             <Route path="/help" component={HelpPage} />
+            <Route path="/apps" component={AppsPage} />
           </div>
         </div>
       </BrowserRouter>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TitleBar } from '../../components/TitleBar';
+import { GenericPage } from '../../components/GenericPage';
 import { AppLink, AppLinkProps } from '../../components/AppLink';
 
 /*tslint:disable: no-require-imports no-var-requires */
@@ -59,11 +59,8 @@ const renderAppLink = (appLinkProps: AppLinkProps): JSX.Element => {
 };
 
 export const AppsPage = () => (
-  <>
+  <GenericPage title="My Applications">
     <div className="content">
-      <div className="title">
-        <TitleBar claimTitle="My Applications" />
-      </div>
       <div className="apps">
         {renderAppLink(scoreGuidesLinkProps)}
         {renderAppLink(digitalLibraryLinkProps)}
@@ -77,9 +74,6 @@ export const AppsPage = () => (
         flex-direction: column;
         align-items: center;
       }
-      .title {
-        width: 100%;
-      }
       .apps {
         width: 960px;
         height: 620px;
@@ -88,5 +82,5 @@ export const AppsPage = () => (
         justify-content: space-between;
       }
     `}</style>
-  </>
+  </GenericPage>
 );
