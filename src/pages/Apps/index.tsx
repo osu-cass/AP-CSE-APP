@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { TitleBar } from '../../components/TitleBar';
 import { AppLink, AppLinkProps } from '../../components/AppLink';
-import { blueGradient } from '../../constants';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const image: string = require('../../assets/images/smarter-balanced.png') as string;
+const sampleItemsImg: string = require('../../assets/images/sample-items.png') as string;
+const digitalLibraryImg: string = require('../../assets/images/digital-library.png') as string;
 
 const scoreGuidesLinkProps: AppLinkProps = {
   title: 'Score Guides',
@@ -18,11 +19,12 @@ const scoreGuidesLinkProps: AppLinkProps = {
 };
 const digitalLibraryLinkProps: AppLinkProps = {
   title: 'Digital Library',
-  imgUrl: image,
-  desc: 'Digital Library explanation...',
+  imgUrl: digitalLibraryImg,
+  desc:
+    'The Digital Library contains classroom activities, lessons, and professional development resources to help you enhance instruction and support learning.',
   linkBtnProps: {
     text: 'Visit Digital Library',
-    url: ''
+    url: 'https://sbdigitallibrary.org/'
   }
 };
 const practiceTestsLinkProps: AppLinkProps = {
@@ -36,11 +38,12 @@ const practiceTestsLinkProps: AppLinkProps = {
 };
 const sampleItemsLinkProps: AppLinkProps = {
   title: 'Sample Items',
-  imgUrl: image,
-  desc: 'Sample Items explanation...',
+  imgUrl: sampleItemsImg,
+  desc:
+    'This site provides examples of test questions used on Smarter Balanced assessments in English language arts / literacy and math. Teachers, parents, students, administrators, and policymakers can experience these test items just as students encounter them.',
   linkBtnProps: {
     text: 'Visit Sample Items Website',
-    url: ''
+    url: 'http://sampleitems.smarterbalanced.org/'
   }
 };
 
@@ -83,7 +86,6 @@ export const AppsPage = () => (
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
       }
     `}</style>
   </>
