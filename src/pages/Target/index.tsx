@@ -107,18 +107,21 @@ export const parseBreadCrumbData = (claim: IClaim, targetIndex: number): Breadcr
 };
 
 export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
-  const taskNames: string[] = [];
+  const taskNameArr: string[] = [];
   claim.target[targetIndex].taskModels.forEach(task => {
-    taskNames.push(task.taskName);
+    taskNameArr.push(task.taskName);
   });
 
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
-    downloadBtnProps: downloadBtnMock,
+    downloadBtnProps: {
+      url: window.location.href,
+      filename: 'mock.pdf',
+      taskNames: taskNameArr
+    },
     targetTitle: claim.target[targetIndex].title,
-    targetDesc: claim.target[targetIndex].description,
-    taskModels: taskNames
+    targetDesc: claim.target[targetIndex].description
   };
 };
 
@@ -180,7 +183,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.targetClient = new TargetClient();
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let test: ITargetParams;
     const { targetShortCode }: MatchParams = this.props.match.params;
     const splitCode = targetShortCode.split('.')[3].match(/\d+$/);
@@ -201,9 +204,9 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
           const claimData = (data as unknown) as IClaim;
           this.setState({
             claim: claimData,
-            target: claimData.target[targetCode - 1],
-            breadCrumbProps: parseBreadCrumbData(claimData, targetCode - 1),
-            titleBarProps: parseTitleBarData(claimData, targetCode - 1)
+            target: claimData.target[0],
+            breadCrumbProps: parseBreadCrumbData(claimData, 0),
+            titleBarProps: parseTitleBarData(claimData, 0)
           });
         }
       })

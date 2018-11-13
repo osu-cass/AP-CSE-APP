@@ -39,7 +39,7 @@ const customStyles = {
   }
 };
 
-if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#app');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('body');
 
 /**
  * Renders a Modal window to download a document's targets

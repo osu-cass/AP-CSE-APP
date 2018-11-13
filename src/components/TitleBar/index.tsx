@@ -13,7 +13,6 @@ export interface TitleBarProps {
   claimDesc?: string;
   targetTitle?: string;
   targetDesc?: string;
-  taskModels?: string[];
   downloadBtnProps?: DownloadBtnProps;
 }
 
@@ -31,8 +30,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
   claimDesc,
   targetTitle,
   targetDesc,
-  downloadBtnProps,
-  taskModels
+  downloadBtnProps
 }: TitleBarProps) => (
   <div>
     <ul>
@@ -61,7 +59,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
           <DownloadBtn
             url={downloadBtnProps.url}
             filename={downloadBtnProps.filename}
-            taskNames={taskModels}
+            taskNames={downloadBtnProps.taskNames}
           />
         </li>
       )}
