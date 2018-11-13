@@ -1,11 +1,10 @@
 import React from 'react';
-import { blueGradientBgImg, Colors } from '../../constants';
-import { NavBar } from '../NavBar';
-import { TitleBar } from '../TitleBar';
-import { ContentNav, ContentNavProps, ContentNavState } from '../ContentNav/index';
+import { Colors } from '../../constants';
+import { ContentNav } from '../ContentNav/index';
 import { ItemProps } from '../ContentNav/Item';
 import { LinkButton } from '../LinkButton/index';
 import { FileText } from 'react-feather';
+import { GenericPage } from '../GenericPage';
 
 const fileIcon = <FileText {...{ size: 40, color: Colors.sbWhite }} />;
 
@@ -208,18 +207,12 @@ export const MenuItems: ItemProps[] = [
 ];
 
 export interface TestPageProps {
-  pageTitle: string;
-  items: ItemProps[];
+  history: History;
 }
 
 export interface TestPageState {
   activeContent?: JSX.Element;
 }
-
-const titleStyle = {
-  ...blueGradientBgImg,
-  maxWidth: '1024px'
-};
 
 /**
  * Renders a static test page
@@ -241,17 +234,11 @@ export class TestPage extends React.Component<TestPageProps, TestPageState> {
   };
 
   render() {
-    const { pageTitle, items } = this.props;
-
     return (
-      <div>
-        <NavBar />
-        <div style={titleStyle}>
-          <TitleBar claimTitle={pageTitle} />
-        </div>
+      <GenericPage title="Learn About Test Development and Design">
         <div className="page-container">
           <div className="left-menu">
-            <ContentNav items={items} onSelect={this.onSelect} />
+            <ContentNav items={MenuItems} onSelect={this.onSelect} />
           </div>
           <div id="main-content" className="content-pane">
             {this.state.activeContent}
@@ -272,7 +259,7 @@ export class TestPage extends React.Component<TestPageProps, TestPageState> {
             margin-left: 8em;
           }
         `}</style>
-      </div>
+      </GenericPage>
     );
   }
 }

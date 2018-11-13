@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavBar } from '../../components/NavBar';
 import { TitleBar } from '../../components/TitleBar';
 import homeLogo from '../../assets/images/home-page.jpg';
+import { Link } from 'react-router-dom';
 
 const importedLogo = homeLogo as string;
 
@@ -23,7 +23,9 @@ export const HomePage = () => (
       </div>
       <div className="buttons">
         <button className="single-button">Navigate to a Target</button>
-        <button className="single-button">Learn About the Specs</button>
+        <Link to="/specs">
+          <button className="single-button">Learn About the Specs</button>
+        </Link>
       </div>
     </div>
     <img className="home-img" src={importedLogo} alt="home-pic" />
