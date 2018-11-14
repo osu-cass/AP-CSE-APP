@@ -9,11 +9,12 @@ import {
   HelpTestDevOverview,
   HelpFaq
 } from '../../components/HelpContent';
-import { GenericPage } from '../../components/GenericPage';
 import { SizeBreaks } from '../../constants';
 import MediaQuery from 'react-responsive';
 import { MobileHelpPage } from './mobile';
 import { DesktopHelpPage } from './desktop';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { Title } from '../../components/GenericPage/Title';
 
 export interface HelpSection {
   title: string;
@@ -59,13 +60,15 @@ export const helpSections: HelpSection[] = [
   }
 ];
 
-export const HelpPage: React.SFC = () => (
-  <GenericPage title="Help">
+const HelpPageContent: React.SFC = () => (
+  <React.Fragment>
     <MediaQuery minDeviceWidth={SizeBreaks.mobile + 1}>
       <DesktopHelpPage helpSections={helpSections} />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={SizeBreaks.mobile}>
       <MobileHelpPage helpSections={helpSections} />
     </MediaQuery>
-  </GenericPage>
+  </React.Fragment>
 );
+
+export const HelpPage = genericLayout(<Title>Help</Title>, HelpPageContent);

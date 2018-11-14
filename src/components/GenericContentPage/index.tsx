@@ -1,5 +1,4 @@
 import React from 'react';
-import { GenericPage } from '../GenericPage';
 import { SizeBreaks } from '../../constants';
 import MediaQuery from 'react-responsive';
 import { MobileGenericContentPage } from './mobile';
@@ -18,16 +17,16 @@ export interface GenericContentPageProps extends GenericContentProps {
   title: string;
 }
 
-export const GenericContentPage: React.SFC<GenericContentPageProps> = ({
+const GenericContentPage: React.SFC<GenericContentPageProps> = ({
   contentSections,
   title
 }) => (
-  <GenericPage title={title}>
+  <React.Fragment>
     <MediaQuery minDeviceWidth={SizeBreaks.mobile + 1}>
       <DesktopHelpPage contentSections={contentSections} />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={SizeBreaks.mobile}>
       <MobileGenericContentPage contentSections={contentSections} />
     </MediaQuery>
-  </GenericPage>
+  </React.Fragment>
 );
