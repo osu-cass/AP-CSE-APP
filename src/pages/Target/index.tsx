@@ -97,22 +97,22 @@ export const parseNavProps = (target: ITarget): ItemProps[] => {
   return items;
 };
 
-export const parseBreadCrumbData = (claim: IClaim, targetIndex: number): BreadcrumbsProps => {
+export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
     grade: `Grade ${claim.grades}`,
     claim: claim.claimNumber,
-    target: claim.target[targetIndex].title
+    target: claim.target[0].title
   };
 };
 
-export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
+export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
     downloadBtnProps: downloadBtnMock,
-    targetTitle: claim.target[targetIndex].title,
-    targetDesc: claim.target[targetIndex].description
+    targetTitle: claim.target[0].title,
+    targetDesc: claim.target[0].description
   };
 };
 
@@ -177,8 +177,6 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
   componentWillMount() {
     let test: ITargetParams;
     const { targetShortCode }: MatchParams = this.props.match.params;
-    const splitCode = targetShortCode.split('.')[3].match(/\d+$/);
-    const targetCode = splitCode && parseInt(splitCode[0], 10);
     if (!this.props.match || !this.props.match.params) {
       test = {
         targetShortCode: ''
@@ -191,13 +189,13 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     this.targetClient
       .getTarget(test)
       .then(data => {
-        if (data !== undefined && targetCode !== null) {
+        if (data !== undefined) {
           const claimData = (data as unknown) as IClaim;
           this.setState({
             claim: claimData,
-            target: claimData.target[targetCode - 1],
-            breadCrumbProps: parseBreadCrumbData(claimData, targetCode - 1),
-            titleBarProps: parseTitleBarData(claimData, targetCode - 1)
+            target: claimData.target[0],
+            breadCrumbProps: parseBreadCrumbData(claimData),
+            titleBarProps: parseTitleBarData(claimData)
           });
         }
       })

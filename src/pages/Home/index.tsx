@@ -1,16 +1,13 @@
 import React from 'react';
-import { NavBar } from '../NavBar';
-import { TitleBar } from '../TitleBar';
+import { TitleBar } from '../../components/TitleBar';
 import homeLogo from '../../assets/images/home-page.jpg';
+import { Link } from 'react-router-dom';
 
 const importedLogo = homeLogo as string;
 
 // cSpell:disable
-export const HomeContent = () => (
+export const HomePage = () => (
   <div className="content">
-    <div className="element-wrapper">
-      <NavBar />
-    </div>
     <div className="element-wrapper">
       <TitleBar claimTitle={'Content Specification Explorer'} />
     </div>
@@ -26,7 +23,9 @@ export const HomeContent = () => (
       </div>
       <div className="buttons">
         <button className="single-button">Navigate to a Target</button>
-        <button className="single-button">Learn About the Specs</button>
+        <Link to="/development">
+          <button className="single-button">Learn About the Specs</button>
+        </Link>
       </div>
     </div>
     <img className="home-img" src={importedLogo} alt="home-pic" />

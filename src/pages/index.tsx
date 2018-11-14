@@ -4,6 +4,8 @@ import { NavBar } from '../components/NavBar';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './HelpPage';
+import { HomePage } from './Home';
+import { DevelopmentPage } from './Development';
 
 export const App: React.SFC = () => {
   return (
@@ -14,8 +16,11 @@ export const App: React.SFC = () => {
             <NavBar />
           </div>
           <div className="main-content" id="main-content-scroll">
-            <Route exact path="/" component={SearchPageRoute} />
+            <Route exact path="/" component={HomePage} />
             <Route path="/target/:targetShortCode" component={TargetPage} />
+            <Route path="/home" component={HomePage} />
+            <Route path="/search" component={SearchPageRoute} />
+            <Route path="/development" component={DevelopmentPage} />
             <Route path="/help" component={HelpPage} />
           </div>
         </div>

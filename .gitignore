@@ -4,7 +4,7 @@ public
 coverage
 reports
 settings.json
-.cache/
+.cache
 
 # IntelliJ Idea	
 .idea/
