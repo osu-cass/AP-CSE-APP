@@ -54,7 +54,7 @@ export const MainMenu: React.SFC = () => {
           <Eye {...iconStyle} />
         </MenuItem>
       </Link>
-      <Link to="/search" style={noUnderline}>
+      <Link to="placeholder" style={noUnderline}>
         <MenuItem name="Apps">
           <Grid {...iconStyle} />
         </MenuItem>
