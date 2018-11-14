@@ -22,7 +22,9 @@ export const HomePage = () => (
         quasi.
       </div>
       <div className="buttons">
-        <button className="single-button">Navigate to a Target</button>
+        <Link to="/search">
+          <button className="single-button">Navigate to a Target</button>
+        </Link>
         <Link to="/development">
           <button className="single-button">Learn About the Specs</button>
         </Link>
