@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { RouterDecorator } from '../../__decorators__/';
 import centered from '@storybook/addon-centered';
 import { TestPage, TestPageProps } from '.';
 import { MenuItems } from '../TestPage/index';
@@ -13,4 +14,5 @@ const testPageMockProps: TestPageProps = {
 
 storiesOf('TestPage component', module)
   .addDecorator(centered)
+  .addDecorator(RouterDecorator)
   .add('TestPage', () => <TestPage {...testPageMockProps} />);

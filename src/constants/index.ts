@@ -2,10 +2,12 @@ export enum Colors {
   sbWhite = '#ffffff',
   sbBlue = '#006298',
   sbBlueLighter = '#0085AD',
+  sbBlueDarker = '#004266',
   sbGray = '#63666A',
   sbGrayDarker = '#313335',
   sbGrayLighter = '#ebebeb',
-  sbGreenLighter = '#43b02a'
+  sbGreenLighter = '#43b02a',
+  sbError = '#8B0000'
 }
 
 export enum Styles {
@@ -17,10 +19,14 @@ export enum Styles {
   sbLetterSpacing = '-.02em',
   sbSans = 'PT Sans Caption',
   sbSerif = 'PT Serif',
+  maxPageWidth = '1024px',
   targetContentWidth = '85%'
 }
 
 export const blueGradient = `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`;
+export const blueGradientDarker = `linear-gradient(90deg, ${Colors.sbBlueDarker}, ${
+  Colors.sbBlue
+})`;
 
 export const blueGradientBgImg = {
   backgroundImage: blueGradient

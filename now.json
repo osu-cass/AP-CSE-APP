@@ -1,5 +1,16 @@
 {
   "public": true,
   "type": "static",
-  "alias": ["ap-cse-app.now.sh"]
+  "alias": ["ap-cse-app.now.sh"],
+  "env": {
+    "NOW_ENV": "true"
+  },
+  "static": {
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }
