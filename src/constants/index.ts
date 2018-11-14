@@ -2,6 +2,7 @@ export enum Colors {
   sbWhite = '#ffffff',
   sbBlue = '#006298',
   sbBlueLighter = '#0085AD',
+  sbBlueDarker = '#004266',
   sbGray = '#63666A',
   sbGrayDarker = '#313335',
   sbGrayLighter = '#ebebeb',
@@ -23,6 +24,9 @@ export enum Styles {
 }
 
 export const blueGradient = `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`;
+export const blueGradientDarker = `linear-gradient(90deg, ${Colors.sbBlueDarker}, ${
+  Colors.sbBlue
+})`;
 
 export const blueGradientBgImg = {
   backgroundImage: blueGradient
