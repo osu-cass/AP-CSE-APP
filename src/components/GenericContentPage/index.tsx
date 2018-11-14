@@ -2,7 +2,7 @@ import React from 'react';
 import { SizeBreaks } from '../../constants';
 import MediaQuery from 'react-responsive';
 import { MobileGenericContentPage } from './mobile';
-import { DesktopHelpPage } from './desktop';
+import { DesktopGenericContentPage } from './desktop';
 
 export interface ContentSection {
   title: string;
@@ -13,17 +13,10 @@ export interface GenericContentProps {
   contentSections: ContentSection[];
 }
 
-export interface GenericContentPageProps extends GenericContentProps {
-  title: string;
-}
-
-const GenericContentPage: React.SFC<GenericContentPageProps> = ({
-  contentSections,
-  title
-}) => (
+export const GenericContentPage: React.SFC<GenericContentProps> = ({ contentSections }) => (
   <React.Fragment>
     <MediaQuery minDeviceWidth={SizeBreaks.mobile + 1}>
-      <DesktopHelpPage contentSections={contentSections} />
+      <DesktopGenericContentPage contentSections={contentSections} />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={SizeBreaks.mobile}>
       <MobileGenericContentPage contentSections={contentSections} />

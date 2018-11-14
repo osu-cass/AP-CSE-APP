@@ -5,7 +5,7 @@ import { ItemProps } from '../ContentNav/Item';
 import { mediaQueries } from '../../constants';
 import { GenericContentProps } from '.';
 
-export const DesktopHelpPage: React.SFC<GenericContentProps> = ({ contentSections }) => {
+export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({ contentSections }) => {
   const sectionsJsx = contentSections.map((s, i) => (
     <Section name={s.title} key={i}>
       <MainHeader text={s.title} />
@@ -17,7 +17,7 @@ export const DesktopHelpPage: React.SFC<GenericContentProps> = ({ contentSection
     name: section.title,
     referenceContainer: 'main-content-scroll',
     subItems: [],
-    scrollOffset: -50
+    scrollOffset: -115
   }));
 
   return (
