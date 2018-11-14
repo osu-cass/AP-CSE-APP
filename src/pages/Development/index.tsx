@@ -1,10 +1,10 @@
 import React from 'react';
 import { Colors } from '../../constants';
-import { ContentNav } from '../ContentNav/index';
-import { ItemProps } from '../ContentNav/Item';
-import { LinkButton } from '../LinkButton/index';
+import { ContentNav } from '../../components/ContentNav/index';
+import { ItemProps } from '../../components/ContentNav/Item';
+import { LinkButton } from '../../components/LinkButton/index';
 import { FileText } from 'react-feather';
-import { GenericPage } from '../GenericPage';
+import { GenericPage } from '../../components/GenericPage';
 
 const fileIcon = <FileText {...{ size: 40, color: Colors.sbWhite }} />;
 
@@ -206,11 +206,7 @@ export const MenuItems: ItemProps[] = [
   }
 ];
 
-export interface TestPageProps {
-  history: History;
-}
-
-export interface TestPageState {
+export interface DevelopmentPageState {
   activeContent?: JSX.Element;
 }
 
@@ -218,10 +214,10 @@ export interface TestPageState {
  * Renders a static test page
  * @export
  * @class {TestPage}
- * @param {TestPageProps} item
+ * @param {DevelopmentPageProps} item
  */
-export class TestPage extends React.Component<TestPageProps, TestPageState> {
-  constructor(props: TestPageProps) {
+export class DevelopmentPage extends React.Component<{}, DevelopmentPageState> {
+  constructor(props: {}) {
     super(props);
 
     this.state = { activeContent: OverviewContent };

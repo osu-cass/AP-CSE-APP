@@ -4,7 +4,7 @@ import { NavBar } from '../components/NavBar';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HomePage } from './Home';
-import { TestPage } from '../components/TestPage';
+import { DevelopmentPage } from './Development';
 
 export const App: React.SFC = () => {
   return (
@@ -16,7 +16,7 @@ export const App: React.SFC = () => {
           <Route path="/target/:targetShortCode" component={TargetPage} />
           <Route path="/home" component={HomePage} />
           <Route path="/search" component={SearchPageRoute} />
-          <Route path="/specs" component={TestPage} />
+          <Route path="/development" component={DevelopmentPage} />
         </div>
       </BrowserRouter>
       <style jsx global>{`

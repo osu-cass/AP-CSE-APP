@@ -23,7 +23,7 @@ export const HomePage = () => (
       </div>
       <div className="buttons">
         <button className="single-button">Navigate to a Target</button>
-        <Link to="/specs">
+        <Link to="/development">
           <button className="single-button">Learn About the Specs</button>
         </Link>
       </div>
