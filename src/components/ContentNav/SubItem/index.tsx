@@ -13,6 +13,7 @@ export interface SubItemProps {
   name: string;
   referenceContainer?: string;
   activate?: (n: string) => void;
+  scrollOffset?: number;
 }
 
 /**
@@ -27,7 +28,8 @@ export const SubItem: React.SFC<SubItemProps> = ({
   name,
   active,
   activate,
-  referenceContainer
+  referenceContainer,
+  scrollOffset
 }) => {
   const subName = name.split('-')[1];
 
@@ -37,7 +39,7 @@ export const SubItem: React.SFC<SubItemProps> = ({
       onClick={e => {
         if (activate) activate(name);
         e.stopPropagation();
-        scrollPageTo(name, -255, referenceContainer);
+        scrollPageTo(name, scrollOffset || -225, referenceContainer);
       }}
       role="menuitem"
     >
