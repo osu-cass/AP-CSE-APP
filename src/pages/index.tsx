@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
-import { HelpPage } from './HelpPage';
+import { HelpPage } from './Help';
 import { HomePage } from './Home';
 import { DevelopmentPage } from './Development';
 
