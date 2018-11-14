@@ -87,7 +87,7 @@ jobs:
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run:
           name: Build image
-          command: 'docker build -t osucass/content-specification-explorer-app:$TAG_VERSION -f Dockerfile-prod .'
+          command: 'docker build -t osucass/content-specification-explorer-app:$TAG_VERSION -f build/Dockerfile .'
       - run:
           name: Push image to Docker Hub
           command: 'docker push osucass/content-specification-explorer-app:$TAG_VERSION'
