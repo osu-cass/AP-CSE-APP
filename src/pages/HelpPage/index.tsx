@@ -1,5 +1,4 @@
 import React from 'react';
-import { Section, MainHeader, Passage } from '../../components/MainContent/Components';
 import {
   HelpClaims,
   HelpTargets,
@@ -10,17 +9,22 @@ import {
   HelpTestDevOverview,
   HelpFaq
 } from '../../components/HelpContent';
-import { ContentNav } from '../../components/ContentNav';
-import { ItemProps } from '../../components/ContentNav/Item';
 import { GenericPage } from '../../components/GenericPage';
-import { mediaQueries } from '../../constants';
+import { SizeBreaks } from '../../constants';
+import MediaQuery from 'react-responsive';
+import { MobileHelpPage } from './mobile';
+import { DesktopHelpPage } from './desktop';
 
-interface HelpSection {
+export interface HelpSection {
   title: string;
   jsx: React.ReactNode;
 }
 
-const helpSections: HelpSection[] = [
+export interface HelpPageProps {
+  helpSections: HelpSection[];
+}
+
+export const helpSections: HelpSection[] = [
   {
     title: 'Claims',
     jsx: <HelpClaims />
@@ -55,64 +59,13 @@ const helpSections: HelpSection[] = [
   }
 ];
 
-export const HelpPage: React.SFC = () => {
-  const sectionsJsx = helpSections.map((s, i) => (
-    <Section name={s.title} key={i}>
-      <MainHeader text={s.title} />
-      {s.jsx}
-    </Section>
-  ));
-
-  const itemProps: ItemProps[] = helpSections.map(section => ({
-    name: section.title,
-    referenceContainer: 'main-content-scroll',
-    subItems: [],
-    scrollOffset: -50
-  }));
-
-  return (
-    <GenericPage title="Help">
-      <div className="page-container">
-        <div className="nav-container">
-          <div id="help-content-nav">
-            <ContentNav items={itemProps} referenceContainer="main-content-scroll" />
-          </div>
-        </div>
-        <div id="help-content">{sectionsJsx}</div>
-        <style jsx>{`
-          .page-container {
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            height: 100%;
-          }
-
-          .nav-container {
-            min-width: 200px;
-            width: 200px;
-          }
-
-          #help-content-nav {
-            width: 200px;
-            position: fixed;
-          }
-
-          #help-content {
-            flex-grow: 1;
-          }
-
-          @media ${mediaQueries.mobile} {
-            .page-container {
-              flex-direction: column;
-              height: auto;
-            }
-
-            .nav-container {
-              display: none;
-            }
-          }
-        `}</style>
-      </div>
-    </GenericPage>
-  );
-};
+export const HelpPage: React.SFC = () => (
+  <GenericPage title="Help">
+    <MediaQuery minDeviceWidth={SizeBreaks.mobile + 1}>
+      <DesktopHelpPage helpSections={helpSections} />
+    </MediaQuery>
+    <MediaQuery maxDeviceWidth={SizeBreaks.mobile}>
+      <MobileHelpPage helpSections={helpSections} />
+    </MediaQuery>
+  </GenericPage>
+);
