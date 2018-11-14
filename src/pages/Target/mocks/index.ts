@@ -2,6 +2,23 @@ import { ITarget } from '../../../models/target';
 import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
+import { IClaim } from '../../../models/claim';
+
+export const mockTargetClient = {
+  getTarget: async () => {
+    return import('../../../../mock_api_data/E.G3.C1').then(
+      data => (data.default as unknown) as IClaim
+    );
+  }
+};
+
+export const mockEmptyTargetClient = {
+  getTarget: async () => {
+    return import('../../../../mock_api_data/Empty').then(
+      data => (data.default as unknown) as IClaim
+    );
+  }
+};
 
 export const parsedRegularItemMock: ItemProps[] = [{ name: 'Evidence Required', subItems: [] }];
 

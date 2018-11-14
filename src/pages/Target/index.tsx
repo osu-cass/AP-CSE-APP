@@ -10,7 +10,7 @@ import { AdditionalMaterials } from '../../components/AdditionalMaterials';
 import { MainContent, TargetLayout, SubLayout } from '../../components/MainContent';
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
-import { TargetClient, ITargetParams } from '../../clients/target';
+import { ITargetParams, ITargetClient } from '../../clients/target';
 
 export interface MatchParams {
   targetShortCode: string;
@@ -23,6 +23,7 @@ export interface Match {
 export interface TargetPageProps {
   // tslint: disable: any
   match: Match;
+  targetClient: ITargetClient;
 }
 
 export interface TargetPageState {
@@ -164,30 +165,28 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
    * to make requests to the API.
    */
 
-  targetClient: TargetClient;
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
-    this.targetClient = new TargetClient();
   }
 
   componentWillMount() {
-    let test: ITargetParams;
+    let targetParams: ITargetParams;
     const { targetShortCode }: MatchParams = this.props.match.params;
     if (!this.props.match || !this.props.match.params) {
-      test = {
+      targetParams = {
         targetShortCode: ''
       };
     } else {
-      test = {
+      targetParams = {
         targetShortCode
       };
     }
-    this.targetClient
-      .getTarget(test)
+    this.props.targetClient
+      .getTarget(targetParams)
       .then(data => {
         if (data !== undefined) {
           const claimData = (data as unknown) as IClaim;
