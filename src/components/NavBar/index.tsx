@@ -57,7 +57,7 @@ export const NavBar: React.SFC = () => {
             </Link>
           </span>
           <MediaQuery minWidth={SizeBreaks.mobile}>
-            <Link to="placeholder" style={linkStyle}>
+            <Link to="/search" style={linkStyle}>
               <Menu {...iconStyle} />
             </Link>
           </MediaQuery>
