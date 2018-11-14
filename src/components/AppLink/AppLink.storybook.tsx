@@ -36,7 +36,7 @@ storiesOf('AppLink component', module)
       <AppLinkBtn text={linkButtonMock.text} url={linkButtonMock.url} />
     </div>
   ))
-  .add('Reders a App Link with all data', () => (
+  .add('Renders a App Link with all data', () => (
     <div style={style}>
       <AppLink
         title={appLinkProps.title}

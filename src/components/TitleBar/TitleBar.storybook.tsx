@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { TitleBar, TitleBarProps } from './index';
 
