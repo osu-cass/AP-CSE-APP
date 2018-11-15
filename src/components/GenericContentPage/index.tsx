@@ -7,6 +7,7 @@ import { DesktopGenericContentPage } from './desktop';
 export interface ContentSection {
   title: string;
   jsx: React.ReactNode;
+  subsections?: ContentSection[];
 }
 
 export interface GenericContentProps {

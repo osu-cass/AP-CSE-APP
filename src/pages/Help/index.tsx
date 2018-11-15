@@ -11,25 +11,22 @@ import {
 } from '../../components/HelpContent';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
-import { GenericContentPage } from '../../components/GenericContentPage';
+import { GenericContentPage, ContentSection } from '../../components/GenericContentPage';
 
-export interface HelpSection {
-  title: string;
-  jsx: React.ReactNode;
-}
-
-export interface HelpPageProps {
-  helpSections: HelpSection[];
-}
-
-export const helpSections: HelpSection[] = [
+export const helpSections: ContentSection[] = [
   {
-    title: 'Claims',
-    jsx: <HelpClaims />
-  },
-  {
-    title: 'Targets',
-    jsx: <HelpTargets />
+    title: 'Claim and Target Specifications',
+    jsx: undefined,
+    subsections: [
+      {
+        title: 'Claims',
+        jsx: <HelpClaims />
+      },
+      {
+        title: 'Targets',
+        jsx: <HelpTargets />
+      }
+    ]
   },
   {
     title: 'Item Specifications Overview',
@@ -57,8 +54,6 @@ export const helpSections: HelpSection[] = [
   }
 ];
 
-const HelpPageContent: React.SFC = () => (
-  <GenericContentPage contentSections={helpSections} />
-);
+const HelpPageContent: React.SFC = () => <GenericContentPage contentSections={helpSections} />;
 
 export const HelpPage = genericLayout(<Title>Help</Title>, HelpPageContent);

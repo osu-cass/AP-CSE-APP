@@ -1,23 +1,39 @@
 import React from 'react';
-import { Section, MainHeader } from '..//MainContent/Components';
+import { Section, MainHeader, SubHeader } from '..//MainContent/Components';
 import { ContentNav } from '../ContentNav';
 import { ItemProps } from '../ContentNav/Item';
 import { mediaQueries } from '../../constants';
 import { GenericContentProps } from '.';
 
 export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({ contentSections }) => {
-  const sectionsJsx = contentSections.map((s, i) => (
-    <Section name={s.title} key={i}>
-      <MainHeader text={s.title} />
-      {s.jsx}
-    </Section>
-  ));
+  const sectionsJsx = contentSections.map((s, i) => {
+    const subsectionsJsx = (s.subsections || []).map((ss, j) => (
+      <Section name={`${s.title}-${ss.title}`} key={j}>
+        <SubHeader text={ss.title} />
+        {ss.jsx}
+      </Section>
+    ));
+
+    return (
+      <React.Fragment>
+        <Section name={s.title} key={i}>
+          <MainHeader text={s.title} />
+          {s.jsx}
+        </Section>
+        {subsectionsJsx}
+      </React.Fragment>
+    );
+  });
 
   const itemProps: ItemProps[] = contentSections.map(section => ({
     name: section.title,
     referenceContainer: 'main-content-scroll',
-    subItems: [],
-    scrollOffset: -115
+    scrollOffset: -115,
+    subItems: (section.subsections || []).map(ss => ({
+      name: `${section.title}-${ss.title}`,
+      referenceContainer: 'main-content-scroll',
+      scrollOffset: -115
+    }))
   }));
 
   return (
