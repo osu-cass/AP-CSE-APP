@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { PageWidthEnforcer } from './PageWidthEnforcer';
 import { genericLayout } from './GenericLayout';
-import { Title } from './Title';
 import { RouterDecorator } from '../../__decorators__';
 
 const TestComponent: React.SFC<{ test: string }> = ({ test }) => <div>{test}</div>;
