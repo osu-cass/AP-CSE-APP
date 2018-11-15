@@ -7,29 +7,27 @@ export const genericLayout = <T extends object>(
   Component: React.ComponentType<T>
 ): React.SFC<T> => {
   return (props: T) => (
-    <div className="full-page">
-      <div className="nav-bar">
-        <NavBar />
-      </div>
-      <div>{title}</div>
-      <div className="main-content" id="main-content-scroll">
-        <PageWidthEnforcer>
-          <Component {...props} />
-        </PageWidthEnforcer>
+    <React.Fragment>
+      <div className="title-and-content">
+        <div>{title}</div>
+        <div className="content" id="main-content-scroll">
+          <PageWidthEnforcer>
+            <Component {...props} />
+          </PageWidthEnforcer>
+        </div>
       </div>
       <style jsx>{`
-        .full-page {
-          height: 100vh;
-          width: 100vw;
+        .title-and-content {
+          flex-grow: 1;
           display: flex;
           flex-direction: column;
         }
 
-        .main-content {
+        .content {
           overflow-y: auto;
           flex-grow: 1;
         }
       `}</style>
-    </div>
+    </React.Fragment>
   );
 };
