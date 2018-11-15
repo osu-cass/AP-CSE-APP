@@ -2,18 +2,20 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { GenericContentPage } from '.';
 import { MobileGenericContentPage } from './mobile';
-import { DesktopHelpPage } from './desktop';
+import { DesktopGenericContentPage } from './desktop';
 import { contentSectionsMocks } from './__tests__/mocks';
+import { FullPageDecorator } from '../../__decorators__';
 
 storiesOf('Generic Content Page', module)
+  .addDecorator(FullPageDecorator)
   .add('default', () => (
     <div id="main-content-scroll" style={{ height: '100vh', overflowY: 'scroll' }}>
-      <GenericContentPage contentSections={contentSectionsMocks} title="Page title" />
+      <GenericContentPage contentSections={contentSectionsMocks} />
     </div>
   ))
   .add('mobile', () => <MobileGenericContentPage contentSections={contentSectionsMocks} />)
   .add('desktop', () => (
     <div id="main-content-scroll" style={{ height: '100vh', overflowY: 'scroll' }}>
-      <DesktopHelpPage contentSections={contentSectionsMocks} />
+      <DesktopGenericContentPage contentSections={contentSectionsMocks} />
     </div>
   ));
