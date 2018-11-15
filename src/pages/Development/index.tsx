@@ -4,7 +4,8 @@ import { ContentNav } from '../../components/ContentNav/index';
 import { ItemProps } from '../../components/ContentNav/Item';
 import { LinkButton } from '../../components/LinkButton/index';
 import { FileText } from 'react-feather';
-import { GenericPage } from '../../components/GenericPage';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { Title } from '../../components/GenericPage/Title';
 
 const fileIcon = <FileText {...{ size: 40, color: Colors.sbWhite }} />;
 
@@ -216,7 +217,7 @@ export interface DevelopmentPageState {
  * @class {TestPage}
  * @param {DevelopmentPageProps} item
  */
-export class DevelopmentPage extends React.Component<{}, DevelopmentPageState> {
+class DevelopmentPageComponent extends React.Component<{}, DevelopmentPageState> {
   constructor(props: {}) {
     super(props);
 
@@ -231,7 +232,7 @@ export class DevelopmentPage extends React.Component<{}, DevelopmentPageState> {
 
   render() {
     return (
-      <GenericPage title="Learn About Test Development and Design">
+      <React.Fragment>
         <div className="page-container">
           <div className="left-menu">
             <ContentNav items={MenuItems} onSelect={this.onSelect} />
@@ -255,7 +256,12 @@ export class DevelopmentPage extends React.Component<{}, DevelopmentPageState> {
             margin-left: 8em;
           }
         `}</style>
-      </GenericPage>
+      </React.Fragment>
     );
   }
 }
+
+export const DevelopmentPage = genericLayout(
+  <Title>Learn About Test Development and Design</Title>,
+  DevelopmentPageComponent
+);

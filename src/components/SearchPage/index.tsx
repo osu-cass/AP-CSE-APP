@@ -3,7 +3,6 @@ import { SearchBar } from '../SearchBar';
 import { FilterItemList } from '../FilterItemList';
 import { Filter } from '../Filter';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
-import { GenericPage } from '../GenericPage';
 import { Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
 import { Message, ErrorMessage } from '../Filter/Messages';
@@ -163,7 +162,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
   render() {
     return (
-      <GenericPage title="Find Targets">
+      <React.Fragment>
         <SearchBar onSearch={this.onSearch} initialText={this.props.paramsFromUrl.search} />
         <div className="content-container">
           {this.renderFilter()}
@@ -174,7 +173,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
             margin: ${Styles.paddingUnit} 0;
           }
         `}</style>
-      </GenericPage>
+      </React.Fragment>
     );
   }
 }

@@ -12,11 +12,11 @@ export const App: React.SFC = () => {
     <React.Fragment>
       <BrowserRouter>
         <React.Fragment>
-          {/* <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
           <Route path="/home" component={HomePage} />
           <Route path="/search" component={SearchPageRoute} />
-          <Route path="/development" component={DevelopmentPage} /> */}
+          <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
         </React.Fragment>
       </BrowserRouter>

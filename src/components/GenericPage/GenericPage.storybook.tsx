@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { GenericPage } from '.';
+import { PageWidthEnforcer } from './PageWidthEnforcer';
 
 storiesOf('Generic Page', module).add('default', () => (
-  <GenericPage claimTitle="Page title">This is some content...</GenericPage>
+  <PageWidthEnforcer>This is some content...</PageWidthEnforcer>
 ));
