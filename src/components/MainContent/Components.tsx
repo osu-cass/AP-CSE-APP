@@ -22,12 +22,12 @@ export const Section: React.SFC<SectionProps> = ({ name, children }) => (
 
 export const MainHeader = ({ text }: HeaderProps) => (
   <header>
-    <h1>{text}</h1>
+    <h2>{text}</h2>
   </header>
 );
 export const SubHeader = ({ text }: HeaderProps) => (
   <header>
-    <h2>{text}</h2>
+    <h3>{text}</h3>
   </header>
 );
 
