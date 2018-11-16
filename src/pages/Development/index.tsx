@@ -1,11 +1,11 @@
 import React from 'react';
-import { blueGradientBgImg, Colors } from '../../constants';
-import { NavBar } from '../NavBar';
-import { TitleBar } from '../TitleBar';
-import { ContentNav, ContentNavProps, ContentNavState } from '../ContentNav/index';
-import { ItemProps } from '../ContentNav/Item';
-import { LinkButton } from '../LinkButton/index';
+import { Colors } from '../../constants';
+import { ContentNav } from '../../components/ContentNav/index';
+import { ItemProps } from '../../components/ContentNav/Item';
+import { LinkButton } from '../../components/LinkButton/index';
 import { FileText } from 'react-feather';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { Title } from '../../components/GenericPage/Title';
 
 const fileIcon = <FileText {...{ size: 40, color: Colors.sbWhite }} />;
 
@@ -18,9 +18,10 @@ const OverviewContent: JSX.Element = (
   <div>
     <h1>Overview</h1>
     <p>
-      Along with creating an innovative assessment, Smarter Balanced is committed to an
-      unprecedented level of transparency, so that anyone who is interested can see exactly how the
-      test is made.
+      "Test Development and Design" is the title given to the full-cycle of constructing all
+      assessment. Smarter Balanced development process involves educators at every stage. Along with
+      creating an innovative assessment, Smarter Balanced is committed to an unprecedented level of
+      transparency, so that anyone who is interested can see exactly how the test is made.
     </p>
     <p>
       On this page we provide the following materials used in the process of developing the Smarter
@@ -79,11 +80,14 @@ const ItemContent: JSX.Element = (
     <h1>Item Specifications Overview</h1>
     <h2>Performance Task Specifications Overview</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      The Performance Tasks in English language arts (ELA) and mathematics will provide measures of
+      students’ achievement (proficiency in meeting grade-level standards), academic growth, and
+      progress toward college and career readiness. The domain of performance assessment is quite
+      broad, encompassing a range of response tasks. A Smarter Balanced performance task involves
+      significant interaction of students with stimulus materials and/or engagement in a problem
+      solution, ultimately leading to an exhibition of the students’ application of knowledge and
+      skills, often in writing or spoken language. Stimuli include a variety of information forms,
+      as well as an assignment or problem situation.
     </p>
     <h2>CAT Item Specifications Overview</h2>
     <p>
@@ -203,28 +207,18 @@ export const MenuItems: ItemProps[] = [
   }
 ];
 
-export interface TestPageProps {
-  pageTitle: string;
-  items: ItemProps[];
-}
-
-export interface TestPageState {
+export interface DevelopmentPageState {
   activeContent?: JSX.Element;
 }
-
-const titleStyle = {
-  ...blueGradientBgImg,
-  maxWidth: '1024px'
-};
 
 /**
  * Renders a static test page
  * @export
  * @class {TestPage}
- * @param {TestPageProps} item
+ * @param {DevelopmentPageProps} item
  */
-export class TestPage extends React.Component<TestPageProps, TestPageState> {
-  constructor(props: TestPageProps) {
+class DevelopmentPageComponent extends React.Component<{}, DevelopmentPageState> {
+  constructor(props: {}) {
     super(props);
 
     this.state = { activeContent: OverviewContent };
@@ -237,17 +231,11 @@ export class TestPage extends React.Component<TestPageProps, TestPageState> {
   };
 
   render() {
-    const { pageTitle, items } = this.props;
-
     return (
-      <div>
-        <NavBar links={[]} siteName={'test'} mainContentId={'main'} />
-        <div style={titleStyle}>
-          <TitleBar claimTitle={pageTitle} />
-        </div>
+      <React.Fragment>
         <div className="page-container">
           <div className="left-menu">
-            <ContentNav items={items} onSelect={this.onSelect} />
+            <ContentNav items={MenuItems} onSelect={this.onSelect} />
           </div>
           <div id="main-content" className="content-pane">
             {this.state.activeContent}
@@ -268,7 +256,12 @@ export class TestPage extends React.Component<TestPageProps, TestPageState> {
             margin-left: 8em;
           }
         `}</style>
-      </div>
+      </React.Fragment>
     );
   }
 }
+
+export const DevelopmentPage = genericLayout(
+  <Title>Learn About Test Development and Design</Title>,
+  DevelopmentPageComponent
+);

@@ -11,6 +11,7 @@ import { MainContent, TargetLayout, SubLayout } from '../../components/MainConte
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
 import { TargetClient, ITargetParams } from '../../clients/target';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
 
 export interface MatchParams {
   targetShortCode: string;
@@ -167,7 +168,7 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
  * @class {TargetPage}
  * @param {TargetPageProps} item
  */
-export class TargetPage extends Component<TargetPageProps, TargetPageState> {
+class TargetPageComponent extends Component<TargetPageProps, TargetPageState> {
   /*
    * This here content is waiting to be replaced with functionality
    * to make requests to the API.
@@ -253,3 +254,5 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     );
   }
 }
+
+export const TargetPage = genericLayout(undefined, TargetPageComponent);

@@ -5,8 +5,10 @@ import { CSESearchQuery } from '../../models/filter';
 import { SearchPage } from '../../components/SearchPage';
 import { FilterClient } from '../../clients/filter';
 import { SearchClient } from '../../clients/search';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { Title } from '../../components/GenericPage/Title';
 
-export const SearchPageRoute: React.SFC<RouteComponentProps> = ({ location, history }) => {
+const SearchPageComponent: React.SFC<RouteComponentProps> = ({ location, history }) => {
   const query: CSESearchQuery = parse(location.search);
   standardizeQuery(query);
 
@@ -25,3 +27,5 @@ function standardizeQuery(query: CSESearchQuery) {
     query.grades = [query.grades];
   }
 }
+
+export const SearchPageRoute = genericLayout(<Title>Find Targets</Title>, SearchPageComponent);
