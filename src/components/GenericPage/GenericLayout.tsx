@@ -24,7 +24,6 @@ export const genericLayout = <T extends object>(
         }
 
         .content {
-          overflow-y: auto;
           flex-grow: 1;
         }
       `}</style>

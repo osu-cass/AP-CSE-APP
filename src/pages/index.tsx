@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
-import { TargetClient } from '../clients/target';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
+import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
 
 export const App: React.SFC = () => {
@@ -18,12 +18,10 @@ export const App: React.SFC = () => {
           </div>
           <div className="main-content" id="main-content-scroll">
             <Route exact path="/" component={HomePage} />
-            <Route
-              path="/target/:targetShortCode"
-              render={props => <TargetPage targetClient={TargetClient} {...props} />}
-            />
+            <Route path="/target/:targetShortCode" component={TargetPage} />
             <Route path="/home" component={HomePage} />
             <Route path="/search" component={SearchPageRoute} />
+            <Route path="/apps" component={AppsPage} />
             <Route path="/development" component={DevelopmentPage} />
             <Route path="/help" component={HelpPage} />
           </div>

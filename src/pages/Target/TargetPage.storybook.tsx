@@ -17,6 +17,6 @@ storiesOf('Target Page', module)
   .add('Renders a nothing', () => (
     <TargetPage
       targetClient={mockEmptyTargetClient}
-      match={{ params: { targetShortCode: 'E.G3.C1.T1' } }}
+      match={{ params: { targetShortCode: 'invalid-target-code' } }}
     />
   ));
