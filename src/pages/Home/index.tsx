@@ -84,4 +84,7 @@ const HomePageComponent = () => (
 );
 // cSpell:enable
 
-export const HomePage = genericLayout(<Title>Home</Title>, HomePageComponent);
+export const HomePage = genericLayout(
+  <Title>Content Specification Explorer</Title>,
+  HomePageComponent
+);
