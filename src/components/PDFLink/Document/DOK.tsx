@@ -25,8 +25,9 @@ const styles: DOKStyles = StyleSheet.create({
     flexDirection: 'row'
   },
   flexColumnLeft: {
-    width: '20%',
+    width: '25%',
     padding: 5,
+    paddingTop: 15,
     paddingRight: 8,
     borderTop: '1px solid black',
     borderRight: '2px solid black',
@@ -40,7 +41,7 @@ const styles: DOKStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    width: '80%',
+    width: '75%',
     padding: 5,
     paddingLeft: 8,
     borderTop: '1px solid black',
@@ -61,9 +62,7 @@ const styles: DOKStyles = StyleSheet.create({
   },
   description: {
     display: 'flex',
-    width: '100%',
-    maxHeight: '100%',
-    minHeight: '5%'
+    width: '100%'
   }
 }) as DOKStyles;
 
@@ -73,15 +72,14 @@ export interface DOKProps {
 
 export const DOK = ({ content }: DOKProps) => {
   return (
-    <View style={styles.flexRow}>
+    <View minPresenceAhead={100} wrap={false} style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
-        <Text style={styles.bold}>Depth Of</Text>
-        <Text style={styles.bold}>Knowledge</Text>
+        <Text style={styles.bold}>Depth Of Knowledge</Text>
       </View>
       <View style={styles.flexColumnRight}>
         {content.map((element: IDOK) => {
           return (
-            <View style={styles.item} key={`${element.dokCode} - ${element.dokDesc}`}>
+            <View debug style={styles.item} key={`${element.dokCode} - ${element.dokDesc}`}>
               <Text style={styles.bold}>{`${element.dokCode} ${element.dokShort}: `}</Text>
               <Text style={styles.description}> {element.dokDesc}</Text>
             </View>

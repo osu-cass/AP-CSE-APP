@@ -9,6 +9,8 @@ import { IClaim } from '../../../models/claim';
 import { StringContent } from './StringContent';
 import { Standards } from './Standards';
 import { DOK } from './DOK';
+import { ParagraphContent } from './paragraphContent';
+import { Evidence } from './Evidence';
 
 interface DocumentStyles {
   page: object;
@@ -73,6 +75,12 @@ const TableView = ({ claim }: TableViewProps) => (
     <Standards content={claim.target[0].standards} />
     <DOK content={claim.target[0].DOK} />
     <StringContent title={'Stimuli'} content={claim.target[0].stimInfo} />
+    <ParagraphContent title={'Accessibility Concerns'} content={claim.target[0].accessibility}>
+      {' '}
+    </ParagraphContent>
+    <Evidence title={'Evidence Required'} content={claim.target[0].evidence}>
+      {' '}
+    </Evidence>
   </View>
 );
 

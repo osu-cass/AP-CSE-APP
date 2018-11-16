@@ -19,9 +19,10 @@ const styles: StandardsStyles = StyleSheet.create({
   },
   flexColumnLeft: {
     display: 'flex',
-    width: '20%',
+    width: '25%',
     padding: 5,
     paddingRight: 8,
+    paddingTop: 10,
     borderTop: '1px solid black',
     borderRight: '2px solid black',
     borderBottom: '1px solid black',
@@ -33,7 +34,7 @@ const styles: StandardsStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    width: '80%',
+    width: '75%',
     padding: 10,
     paddingLeft: 8,
     paddingTop: 10,
@@ -44,10 +45,11 @@ const styles: StandardsStyles = StyleSheet.create({
   },
   item: {
     display: 'flex',
-    padding: '3px'
+    padding: '3px',
+    margin: 3
   },
   desc: {
-    padding: 5
+    margin: 5
   },
   code: {
     color: 'red'
@@ -60,14 +62,14 @@ export interface TargetProps {
 
 export const Standards = ({ content }: TargetProps) => {
   return (
-    <View style={styles.flexRow}>
+    <View wrap style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
         <Text>Standards</Text>
       </View>
-      <View wrap style={styles.flexColumnRight}>
+      <View style={styles.flexColumnRight}>
         {content.map((element: IStandards) => {
           return (
-            <View style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
+            <View wrap={false} style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
               <Text style={styles.code}>{`${element.stdCode}: `}</Text>
               <Text style={styles.desc}>{element.stdDesc}</Text>
             </View>

@@ -10,18 +10,19 @@ import ReactPDF, {
   Image,
   FlatList
 } from '@react-pdf/renderer';
-import { ITarget } from '../../../models/target';
+import { ITarget, IEvidence } from '../../../models/target';
 
-interface ClarificationStyles {
+interface EvidenceStyles {
   flexRow: object;
   flexColumnLeft: object;
   flexColumnRight: object;
   flexContent: object;
   description: object;
   contentBox: object;
+  item: object;
 }
 
-const styles: ClarificationStyles = StyleSheet.create({
+const styles: EvidenceStyles = StyleSheet.create({
   flexRow: {
     flexDirection: 'row',
     position: 'relative'
@@ -51,18 +52,20 @@ const styles: ClarificationStyles = StyleSheet.create({
     borderRight: '2px solid black',
     fontSize: 12
   },
-  flexContent: {
-    display: 'flex',
+  description: {
+    maxHeight: '100%',
     margin: 5
   },
-  description: {
+  item: {
+    display: 'flex',
+    padding: 5,
     maxHeight: '100%',
     margin: 5
   },
   contentBox: {
     justifyContent: 'space-around'
   }
-}) as ClarificationStyles;
+}) as EvidenceStyles;
 
 export interface ItemRow {
   title: string;
@@ -71,25 +74,26 @@ export interface ItemRow {
 
 export interface TargetProps {
   title: string;
-  content: string;
+  content: IEvidence[];
 }
 
-export const StringContent = ({ content, title }: TargetProps): JSX.Element => {
-  const contentArray = content.split('\r\n\r\n').map((element: string, idx: number) => (
-    <View key={`${idx}`} style={styles.flexContent}>
-      <Text debug style={styles.description}>
-        {element}
-      </Text>
-    </View>
-  ));
-
+export const Evidence = ({ content, title }: TargetProps): JSX.Element => {
   return (
     <View style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
         <Text>{title}</Text>
       </View>
       <View style={styles.flexColumnRight}>
-        <View style={styles.contentBox}>{contentArray}</View>
+        {content.map((element: IEvidence, index: number) => {
+          return (
+            <View style={styles.item} key={`${element.evTitle} - ${element.evDesc}`}>
+              <Text widows={5} style={styles.description}>
+                {' '}
+                {`${index + 1}: ${element.evDesc}`}
+              </Text>
+            </View>
+          );
+        })}
       </View>
     </View>
   );

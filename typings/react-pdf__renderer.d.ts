@@ -43,6 +43,8 @@ declare module '@react-pdf/renderer' {
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
+    minPresenceAhead?: number;
+    
   }
   export const View: React.SFC<ViewProps>;
 
@@ -52,6 +54,9 @@ declare module '@react-pdf/renderer' {
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
+    minPresenceAhead?: number;
+    widows?: number;
+    orphans?: number;
   }
   export const Text: React.SFC<TextProps>;
 
