@@ -3,8 +3,11 @@ import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
 import { IClaim } from '../../../models/claim';
+import { ITargetParams } from '../../../clients/target';
 
 export const mockTargetClient = {
+  // tslint:disable-next-line:no-empty
+  buildParams: (params: ITargetParams) => '',
   getTarget: async () => {
     return import('../../../../mock_api_data/E.G3.C1').then(
       data => (data.default as unknown) as IClaim
@@ -13,11 +16,9 @@ export const mockTargetClient = {
 };
 
 export const mockEmptyTargetClient = {
-  getTarget: async () => {
-    return import('../../../../mock_api_data/Empty').then(
-      data => (data.default as unknown) as IClaim
-    );
-  }
+  // tslint:disable-next-line:no-empty
+  buildParams: (params: ITargetParams) => '',
+  getTarget: async () => Promise.reject(new Error('error'))
 };
 
 export const parsedRegularItemMock: ItemProps[] = [{ name: 'Evidence Required', subItems: [] }];

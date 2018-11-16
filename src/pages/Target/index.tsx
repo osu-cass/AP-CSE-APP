@@ -11,6 +11,7 @@ import { MainContent, TargetLayout, SubLayout } from '../../components/MainConte
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
 import { ITargetParams, ITargetClient, TargetClient } from '../../clients/target';
+import { Message } from '../../components/Filter/Messages';
 
 export interface MatchParams {
   targetShortCode: string;
@@ -34,6 +35,7 @@ export interface TargetPageState {
   target?: ITarget;
   breadCrumbProps: BreadcrumbsProps;
   titleBarProps: TitleBarProps;
+  error?: string;
 }
 
 export interface ContentFrameProps {
@@ -43,6 +45,7 @@ export interface ContentFrameProps {
 const style = {
   ...blueGradientBgImg
 };
+
 const downloadBtnMock: DownloadBtnProps = {
   url: 'test/url',
   filename: 'test-file-name'
@@ -193,7 +196,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     }
     this.props.targetClient
       .getTarget(targetParams)
-      // tslint:disable-next-line: no-unsafe-any no-any
+      // tslint:disable-next-line: no-unsafe-any no-anya
       .then(data => {
         if (data !== undefined) {
           const claimData = (data as unknown) as IClaim;
@@ -206,11 +209,13 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
         }
       })
       .catch((e: string) => {
-        throw new Error(e);
+        this.setState({ error: 'Failed to fetch Target.' });
+        // throw new Error(e);
       });
   }
 
   render() {
+    const { error } = this.state;
     const { subject, grade, claim, target } = this.state.breadCrumbProps;
     const {
       claimTitle,
@@ -220,34 +225,45 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       downloadBtnProps
     } = this.state.titleBarProps;
 
-    return this.state.target === undefined ? (
-      <div>Loading data...</div>
-    ) : (
-      <>
-        <div className="content">
-          <div style={style}>
-            <Breadcrumbs subject={subject} grade={grade} claim={claim} target={target} />
-            <TitleBar
-              claimTitle={claimTitle}
-              claimDesc={claimDesc}
-              targetTitle={targetTitle}
-              targetDesc={targetDesc}
-              downloadBtnProps={downloadBtnProps}
-            />
+    let page: React.ReactFragment;
+
+    if (!this.state.target && !error) {
+      page = <Message>Loading data...</Message>;
+    } else if (error) {
+      page = <Message>{error}</Message>;
+    } else if (this.state.target) {
+      page = (
+        <>
+          <div className="content">
+            <div className="title" style={style}>
+              <Breadcrumbs subject={subject} grade={grade} claim={claim} target={target} />
+              <TitleBar
+                claimTitle={claimTitle}
+                claimDesc={claimDesc}
+                targetTitle={targetTitle}
+                targetDesc={targetDesc}
+                downloadBtnProps={downloadBtnProps}
+              />
+            </div>
+            <ContentFrame target={this.state.target} />
+            <style jsx>{`
+              .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-height: calc(100vh - 64px);
+                width: 100%;
+              }
+              .title {
+                width: inherit;
+              }
+            `}</style>
           </div>
-          <ContentFrame target={this.state.target} />
-          <style jsx>{`
-            .content {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              max-height: calc(100vh - 64px);
-              width: 100%;
-            }
-          `}</style>
-        </div>
-      </>
-    );
+        </>
+      );
+    }
+
+    return page;
   }
 }
