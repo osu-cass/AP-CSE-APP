@@ -10,7 +10,7 @@ import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { Colors, blueGradient, Styles } from '../../constants';
 import css from 'styled-jsx/css';
 
-const globalFilterStyle = css`
+const globalFilterStyle = css.global`
   .filter-selection {
     margin-right: ${Styles.paddingUnit};
   }
@@ -76,18 +76,19 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
   };
 
-  const filterJsx = [gradeFilter, subjectFilter, claimFilter, targetFilter].map((f, i) =>
-    f ? (
-      <AdvancedFilter
-        key={i}
-        {...f}
-        onFilterOptionSelect={data => {
-          callback(f.code, data);
-        }}
-      />
-    ) : (
-      undefined
-    )
+  const filterJsx = [gradeFilter, subjectFilter, claimFilter, targetFilter].map(
+    (f, i) =>
+      f ? (
+        <AdvancedFilter
+          key={i}
+          {...f}
+          onFilterOptionSelect={data => {
+            callback(f.code, data);
+          }}
+        />
+      ) : (
+        undefined
+      )
   );
 
   return (
