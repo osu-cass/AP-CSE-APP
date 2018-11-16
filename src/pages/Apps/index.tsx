@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { AppLink, AppLinkProps } from '../../components/AppLink';
 import { Title } from '../../components/GenericPage/Title';
@@ -20,6 +19,7 @@ const scoreGuidesLinkProps: AppLinkProps = {
       'http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3'
   }
 };
+
 const digitalLibraryLinkProps: AppLinkProps = {
   title: 'Digital Library',
   imgUrl: digitalLibraryImg,
@@ -30,6 +30,7 @@ const digitalLibraryLinkProps: AppLinkProps = {
     url: 'https://sbdigitallibrary.org/'
   }
 };
+
 const practiceTestsLinkProps: AppLinkProps = {
   title: 'Practice Tests',
   imgUrl: Practiceimg,
@@ -40,6 +41,7 @@ const practiceTestsLinkProps: AppLinkProps = {
     url: 'http://www.smarterbalanced.org/assessments/samples/'
   }
 };
+
 const sampleItemsLinkProps: AppLinkProps = {
   title: 'Sample Items',
   imgUrl: sampleItemsImg,
@@ -51,25 +53,14 @@ const sampleItemsLinkProps: AppLinkProps = {
   }
 };
 
-const renderAppLink: React.SFC<AppLinkProps> = (appLinkProps: AppLinkProps): JSX.Element => {
-  return (
-    <AppLink
-      title={appLinkProps.title}
-      imgUrl={appLinkProps.imgUrl}
-      desc={appLinkProps.desc}
-      linkBtnProps={appLinkProps.linkBtnProps}
-    />
-  );
-};
-
 const AppsPageComponent: React.SFC = () => (
   <React.Fragment>
     <div className="content">
       <div className="apps">
-        {renderAppLink(scoreGuidesLinkProps)}
-        {renderAppLink(digitalLibraryLinkProps)}
-        {renderAppLink(practiceTestsLinkProps)}
-        {renderAppLink(sampleItemsLinkProps)}
+        <AppLink {...scoreGuidesLinkProps} />
+        <AppLink {...digitalLibraryLinkProps} />
+        <AppLink {...practiceTestsLinkProps} />
+        <AppLink {...sampleItemsLinkProps} />
       </div>
     </div>
     <style jsx>{`

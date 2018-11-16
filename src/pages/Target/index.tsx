@@ -225,7 +225,8 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
       downloadBtnProps
     } = this.state.titleBarProps;
 
-    let page: React.ReactFragment;
+    // tslint:disable-next-line:no-unnecessary-initializer
+    let page: React.ReactFragment = <></>;
 
     if (!this.state.target && !error) {
       page = <Message>Loading data...</Message>;

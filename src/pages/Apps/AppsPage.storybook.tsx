@@ -7,5 +7,4 @@ import { AppsPage } from '.';
 
 storiesOf('Apps Page', module)
   .addDecorator(RouterDecorator)
-  .addDecorator(centered)
-  .add('Render an Apps', () => <AppsPage />);
+  .add('Render the Apps page', () => <AppsPage />);
