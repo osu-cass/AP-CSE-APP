@@ -15,14 +15,12 @@ export const App: React.SFC = () => {
           <div className="nav-bar">
             <NavBar />
           </div>
-          <div className="main-content" id="main-content-scroll">
-            <Route exact path="/" component={HomePage} />
-            <Route path="/target/:targetShortCode" component={TargetPage} />
-            <Route path="/home" component={HomePage} />
-            <Route path="/search" component={SearchPageRoute} />
-            <Route path="/development" component={DevelopmentPage} />
-            <Route path="/help" component={HelpPage} />
-          </div>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/target/:targetShortCode" component={TargetPage} />
+          <Route path="/home" component={HomePage} />
+          <Route path="/search" component={SearchPageRoute} />
+          <Route path="/development" component={DevelopmentPage} />
+          <Route path="/help" component={HelpPage} />
         </div>
       </BrowserRouter>
       <style jsx global>{`
@@ -38,10 +36,6 @@ export const App: React.SFC = () => {
           width: 100vw;
           display: flex;
           flex-direction: column;
-        }
-
-        .main-content {
-          overflow-y: auto;
         }
       `}</style>
     </React.Fragment>

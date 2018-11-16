@@ -2,11 +2,13 @@ import React from 'react';
 import { TitleBar } from '../../components/TitleBar';
 import homeLogo from '../../assets/images/home-page.jpg';
 import { Link } from 'react-router-dom';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { Title } from '../../components/GenericPage/Title';
 
 const importedLogo = homeLogo as string;
 
 // cSpell:disable
-export const HomePage = () => (
+const HomePageComponent = () => (
   <div className="content">
     <div className="element-wrapper">
       <TitleBar claimTitle={'Content Specification Explorer'} />
@@ -81,3 +83,5 @@ export const HomePage = () => (
   </div>
 );
 // cSpell:enable
+
+export const HomePage = genericLayout(<Title>Home</Title>, HomePageComponent);
