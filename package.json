@@ -156,7 +156,6 @@
     "semantic-release": "^15.10.8",
     "storybook-react-router": "^1.0.1",
     "style-loader": "^0.21.0",
-    "styled-jsx-css-loader": "^0.3.0",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
