@@ -250,12 +250,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     taskArray.push(overview);
   }
   renderTaskButtons(taskButtons: TaskButtonProps[]) {
-    const result: JSX.Element[] = [];
-    taskButtons.forEach(task => {
-      result.push(<TaskButton {...task} />);
-    });
-
-    return result;
+    return taskButtons.map((b, i) => <TaskButton {...b} key={i} />);
   }
   modalForm(taskButtons: TaskButtonProps[]): JSX.Element {
     return (
