@@ -10,7 +10,7 @@ import { AdditionalMaterials } from '../../components/AdditionalMaterials';
 import { MainContent, TargetLayout, SubLayout } from '../../components/MainContent';
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
-import { ITargetParams, ITargetClient } from '../../clients/target';
+import { ITargetParams, ITargetClient, TargetClient } from '../../clients/target';
 
 export interface MatchParams {
   targetShortCode: string;
@@ -20,10 +20,13 @@ export interface Match {
   params: MatchParams;
 }
 
-export interface TargetPageProps {
+export interface DefaultTargetPageProps {
+  targetClient: ITargetClient;
+}
+
+export interface TargetPageProps extends DefaultTargetPageProps {
   // tslint: disable: any
   match: Match;
-  targetClient: ITargetClient;
 }
 
 export interface TargetPageState {
@@ -160,11 +163,14 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
  * @param {TargetPageProps} item
  */
 export class TargetPage extends Component<TargetPageProps, TargetPageState> {
+  static defaultProps: DefaultTargetPageProps = {
+    targetClient: TargetClient
+  };
+
   /*
    * This here content is waiting to be replaced with functionality
    * to make requests to the API.
    */
-
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
@@ -187,6 +193,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
     }
     this.props.targetClient
       .getTarget(targetParams)
+      // tslint:disable-next-line: no-unsafe-any no-any
       .then(data => {
         if (data !== undefined) {
           const claimData = (data as unknown) as IClaim;
@@ -236,6 +243,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
               justify-content: center;
               align-items: center;
               max-height: calc(100vh - 64px);
+              width: 100%;
             }
           `}</style>
         </div>

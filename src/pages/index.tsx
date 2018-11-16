@@ -20,7 +20,7 @@ export const App: React.SFC = () => {
             <Route exact path="/" component={HomePage} />
             <Route
               path="/target/:targetShortCode"
-              render={props => <TargetPage targetClient={new TargetClient()} {...props} />}
+              render={props => <TargetPage targetClient={TargetClient} {...props} />}
             />
             <Route path="/home" component={HomePage} />
             <Route path="/search" component={SearchPageRoute} />
@@ -42,10 +42,6 @@ export const App: React.SFC = () => {
           width: 100vw;
           display: flex;
           flex-direction: column;
-        }
-
-        .main-content {
-          overflow-y: auto;
         }
       `}</style>
     </React.Fragment>
