@@ -10,8 +10,8 @@ import { AdditionalMaterials } from '../../components/AdditionalMaterials';
 import { MainContent, TargetLayout, SubLayout } from '../../components/MainContent';
 import { ITarget, ITaskModel } from '../../models/target';
 import { IClaim } from '../../models/claim';
-import { TargetClient, ITargetParams } from '../../clients/target';
-import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { ITargetParams, ITargetClient, TargetClient } from '../../clients/target';
+import { Message } from '../../components/Filter/Messages';
 
 export interface MatchParams {
   targetShortCode: string;
@@ -21,7 +21,11 @@ export interface Match {
   params: MatchParams;
 }
 
-export interface TargetPageProps {
+export interface DefaultTargetPageProps {
+  targetClient: ITargetClient;
+}
+
+export interface TargetPageProps extends DefaultTargetPageProps {
   // tslint: disable: any
   match: Match;
 }
@@ -31,6 +35,7 @@ export interface TargetPageState {
   target?: ITarget;
   breadCrumbProps: BreadcrumbsProps;
   titleBarProps: TitleBarProps;
+  error?: string;
 }
 
 export interface ContentFrameProps {
@@ -40,6 +45,7 @@ export interface ContentFrameProps {
 const style = {
   ...blueGradientBgImg
 };
+
 const downloadBtnMock: DownloadBtnProps = {
   url: 'test/url',
   filename: 'test-file-name'
@@ -159,36 +165,38 @@ export const ContentFrame = ({ target }: ContentFrameProps): JSX.Element => {
  * @class {TargetPage}
  * @param {TargetPageProps} item
  */
-class TargetPageComponent extends Component<TargetPageProps, TargetPageState> {
+export class TargetPage extends Component<TargetPageProps, TargetPageState> {
+  static defaultProps: DefaultTargetPageProps = {
+    targetClient: TargetClient
+  };
+
   /*
    * This here content is waiting to be replaced with functionality
    * to make requests to the API.
    */
-
-  targetClient: TargetClient;
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
       breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
       titleBarProps: {}
     };
-    this.targetClient = new TargetClient();
   }
 
   componentWillMount() {
-    let test: ITargetParams;
+    let targetParams: ITargetParams;
     const { targetShortCode }: MatchParams = this.props.match.params;
     if (!this.props.match || !this.props.match.params) {
-      test = {
+      targetParams = {
         targetShortCode: ''
       };
     } else {
-      test = {
+      targetParams = {
         targetShortCode
       };
     }
-    this.targetClient
-      .getTarget(test)
+    this.props.targetClient
+      .getTarget(targetParams)
+      // tslint:disable-next-line: no-unsafe-any no-anya
       .then(data => {
         if (data !== undefined) {
           const claimData = (data as unknown) as IClaim;
@@ -201,11 +209,13 @@ class TargetPageComponent extends Component<TargetPageProps, TargetPageState> {
         }
       })
       .catch((e: string) => {
-        throw new Error(e);
+        this.setState({ error: 'Failed to fetch Target.' });
+        // throw new Error(e);
       });
   }
 
   render() {
+    const { error } = this.state;
     const { subject, grade, claim, target } = this.state.breadCrumbProps;
     const {
       claimTitle,
@@ -215,35 +225,45 @@ class TargetPageComponent extends Component<TargetPageProps, TargetPageState> {
       downloadBtnProps
     } = this.state.titleBarProps;
 
-    return this.state.target === undefined ? (
-      <div>Loading data...</div>
-    ) : (
-      <>
-        <div className="content">
-          <div style={style}>
-            <Breadcrumbs subject={subject} grade={grade} claim={claim} target={target} />
-            <TitleBar
-              claimTitle={claimTitle}
-              claimDesc={claimDesc}
-              targetTitle={targetTitle}
-              targetDesc={targetDesc}
-              downloadBtnProps={downloadBtnProps}
-            />
+    let page: React.ReactFragment;
+
+    if (!this.state.target && !error) {
+      page = <Message>Loading data...</Message>;
+    } else if (error) {
+      page = <Message>{error}</Message>;
+    } else if (this.state.target) {
+      page = (
+        <>
+          <div className="content">
+            <div className="title" style={style}>
+              <Breadcrumbs subject={subject} grade={grade} claim={claim} target={target} />
+              <TitleBar
+                claimTitle={claimTitle}
+                claimDesc={claimDesc}
+                targetTitle={targetTitle}
+                targetDesc={targetDesc}
+                downloadBtnProps={downloadBtnProps}
+              />
+            </div>
+            <ContentFrame target={this.state.target} />
+            <style jsx>{`
+              .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-height: calc(100vh - 64px);
+                width: 100%;
+              }
+              .title {
+                width: inherit;
+              }
+            `}</style>
           </div>
-          <ContentFrame target={this.state.target} />
-          <style jsx>{`
-            .content {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              max-height: calc(100vh - 64px);
-            }
-          `}</style>
-        </div>
-      </>
-    );
+        </>
+      );
+    }
+
+    return page;
   }
 }
-
-export const TargetPage = genericLayout(undefined, TargetPageComponent);
