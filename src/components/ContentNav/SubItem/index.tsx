@@ -54,11 +54,9 @@ export const SubItem: React.SFC<SubItemProps> = ({
           align-items: center;
           color: ${Colors.sbGray};
           font-size: ${Styles.font};
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: ${Colors.sbBlue};

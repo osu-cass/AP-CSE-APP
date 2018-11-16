@@ -1,5 +1,5 @@
 import React from 'react';
-import { blueGradientBgImg, Colors, blueGradient } from '../../constants';
+import { Colors, blueGradient } from '../../constants';
 
 export interface LinkButtonProps {
   url: string;
@@ -18,11 +18,13 @@ export const LinkButton: React.SFC<LinkButtonProps> = ({ url, text, icon }): JSX
       a {
         color: ${Colors.sbWhite};
         margin: 2px;
-        padding: 12px;
+        padding: 12px 0;
         background: ${blueGradient};
         border-radius: 10px;
-        max-width: 100px;
+        width: 100px;
         text-align: center;
+        font-size: 0.8em;
+        text-decoration: none;
       }
     `}</style>
   </React.Fragment>
