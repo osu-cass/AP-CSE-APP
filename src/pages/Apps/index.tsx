@@ -1,20 +1,23 @@
 import React from 'react';
 
-import { GenericPage } from '../../components/GenericPage';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { AppLink, AppLinkProps } from '../../components/AppLink';
+import { Title } from '../../components/GenericPage/Title';
 
 /*tslint:disable: no-require-imports no-var-requires */
-const image: string = require('../../assets/images/smarter-balanced.png') as string;
+const scoreimg: string = require('../../assets/images/score-guide.png') as string;
+const Practiceimg: string = require('../../assets/images/practice-tests.png') as string;
 const sampleItemsImg: string = require('../../assets/images/sample-items.png') as string;
 const digitalLibraryImg: string = require('../../assets/images/digital-library.png') as string;
 
 const scoreGuidesLinkProps: AppLinkProps = {
   title: 'Score Guides',
-  imgUrl: image,
-  desc: 'Score Guides explanation...',
+  imgUrl: scoreimg,
+  desc: 'Practice Test Scoring Guides for grades 3-12 in Math and English Language Arts.',
   linkBtnProps: {
     text: 'Visit Score Guides Page',
-    url: ''
+    url:
+      'http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3'
   }
 };
 const digitalLibraryLinkProps: AppLinkProps = {
@@ -29,11 +32,12 @@ const digitalLibraryLinkProps: AppLinkProps = {
 };
 const practiceTestsLinkProps: AppLinkProps = {
   title: 'Practice Tests',
-  imgUrl: image,
-  desc: 'Practice Tests explanation...',
+  imgUrl: Practiceimg,
+  desc:
+    'Use the same testing software as students to see what they encounter during testing! Try out an English language arts or math test to learn how the test works, what’s expected of students and what kind of questions are included on them.',
   linkBtnProps: {
     text: 'Visit Practice Tests Page',
-    url: ''
+    url: 'http://www.smarterbalanced.org/assessments/samples/'
   }
 };
 const sampleItemsLinkProps: AppLinkProps = {
@@ -47,7 +51,7 @@ const sampleItemsLinkProps: AppLinkProps = {
   }
 };
 
-const renderAppLink = (appLinkProps: AppLinkProps): JSX.Element => {
+const renderAppLink: React.SFC<AppLinkProps> = (appLinkProps: AppLinkProps): JSX.Element => {
   return (
     <AppLink
       title={appLinkProps.title}
@@ -58,8 +62,8 @@ const renderAppLink = (appLinkProps: AppLinkProps): JSX.Element => {
   );
 };
 
-export const AppsPage = () => (
-  <GenericPage title="My Applications">
+const AppsPageComponent: React.SFC = () => (
+  <React.Fragment>
     <div className="content">
       <div className="apps">
         {renderAppLink(scoreGuidesLinkProps)}
@@ -82,5 +86,7 @@ export const AppsPage = () => (
         justify-content: space-between;
       }
     `}</style>
-  </GenericPage>
+  </React.Fragment>
 );
+
+export const AppsPage = genericLayout(<Title>My Applications</Title>, AppsPageComponent);
