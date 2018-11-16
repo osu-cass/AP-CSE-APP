@@ -2,7 +2,6 @@ import React from 'react';
 import { blueGradient, Colors, Styles } from '../../constants';
 import { PageWidthEnforcer } from './PageWidthEnforcer';
 
-
 export const Title: React.SFC = ({ children }) => (
   <div className="title-bar">
     <PageWidthEnforcer noVerticalMargin>
