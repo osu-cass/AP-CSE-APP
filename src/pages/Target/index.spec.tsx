@@ -17,7 +17,9 @@ import {
   parsedBreadCrumbDataMock,
   parsedRegularItemMock,
   parsedItemWithSubsMock,
-  parsedNavPropsMock
+  parsedNavPropsMock,
+  mockEmptyTargetClient,
+  mockTargetClient
 } from './mocks';
 import { ITarget } from '../../models/target';
 
@@ -26,7 +28,10 @@ describe('Target Page', () => {
   beforeEach(() => {
     targetPage = mount(
       <MemoryRouter initialEntries={['/']}>
-        <TargetPage match={{ params: { targetShortCode: 'E.G6.C1RL.T1' } }} />
+        <TargetPage
+          targetClient={mockTargetClient}
+          match={{ params: { targetShortCode: 'E.G3.C1.T1' } }}
+        />
       </MemoryRouter>
     );
     /* tslint:disable: no-console */
