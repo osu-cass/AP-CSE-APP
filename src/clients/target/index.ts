@@ -6,7 +6,7 @@ export interface ITargetParams {
 }
 
 export interface ITargetClient {
-  getTarget: (params: ITargetParams) => Promise<IClaim | Error>;
+  getTarget: (params: ITargetParams) => Promise<IClaim>;
 }
 
 /**
@@ -31,7 +31,7 @@ export class TargetClient implements ITargetClient {
     return url;
   }
 
-  public async getTarget(params: ITargetParams): Promise<IClaim | Error> {
+  public async getTarget(params: ITargetParams): Promise<IClaim> {
     const url: string = this.buildParams(params);
     let claim: IClaim;
 
