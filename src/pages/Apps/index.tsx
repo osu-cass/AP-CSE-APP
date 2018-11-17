@@ -68,7 +68,6 @@ const AppsPageComponent: React.SFC = () => (
         align-items: center;
       }
       .apps {
-        width: 960px;
         height: 620px;
         display: flex;
         flex-wrap: wrap;
