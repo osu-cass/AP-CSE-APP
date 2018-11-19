@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import { ContentNav } from './index';
 import { Item, Chevron, ItemProps } from './Item';
 import { SubItem } from './SubItem';
-import { itemMock } from './__mocks__';
+import { itemMock } from './mocks';
 
 interface TestParams {
   firstItemActive: boolean;
@@ -57,15 +57,15 @@ const produceState = ({
     subItems: [
       {
         active: firstSubItemActive,
-        name: 'Task Descriptions'
+        name: 'Task Model 1-Task Descriptions'
       },
       {
         active: false,
-        name: 'Target Evidence Statement'
+        name: 'Task Model 1-Target Evidence Statement'
       },
       {
         active: false,
-        name: 'Appropriate Stems'
+        name: 'Task Model 1-Appropriate Stems'
       }
     ]
   },

@@ -1,3 +1,4 @@
+// tslint:disable:no-reserved-keywords
 export interface ITaskModel {
   taskName: string;
   taskDesc?: string;

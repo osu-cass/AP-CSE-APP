@@ -1,7 +1,25 @@
-import { Target } from '../../../components/MainContent';
+import { ITarget } from '../../../models/target';
 import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
+import { IClaim } from '../../../models/claim';
+import { ITargetParams } from '../../../clients/target';
+
+export const mockTargetClient = {
+  // tslint:disable-next-line:no-empty
+  buildParams: (params: ITargetParams) => '',
+  getTarget: async () => {
+    return import('../../../../mock_api_data/E.G3.C1').then(
+      data => (data.default as unknown) as IClaim
+    );
+  }
+};
+
+export const mockEmptyTargetClient = {
+  // tslint:disable-next-line:no-empty
+  buildParams: (params: ITargetParams) => '',
+  getTarget: async () => Promise.reject(new Error('error'))
+};
 
 export const parsedRegularItemMock: ItemProps[] = [{ name: 'Evidence Required', subItems: [] }];
 
@@ -139,19 +157,18 @@ export const parsedNavPropsMock: ItemProps[] = [
 
 export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
-  grade: 'Grade 3',
-  claim: 'Literary Texts',
-  target: 'Placeholder Title'
+  grade: 'Grade 6',
+  claim: 'C1',
+  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1'
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
-  claimTitle: 'Literary Texts',
+  claimTitle: 'C1',
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: { url: 'test/url', filename: 'test-file-name' },
-  targetTitle: 'Placeholder Title',
-  targetDesc:
-    'Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.'
+  targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetDesc: 'placeholder'
 };
 
 export const parsedSubItemMock: ItemProps = {
@@ -172,13 +189,13 @@ export const parsedSubItemMock: ItemProps = {
   ]
 };
 
-export const targetMock: Target = {
+export const targetMock: ITarget = {
   title: '',
   shortCode: '',
   description: '',
   standards: [],
   DOK: [],
-  targetType: '',
+  interactionType: '',
   clarification: '',
   heading: '',
   evidence: [],

@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 // Export a function. Accept the base config as the only param.
 module.exports = (storybookBaseConfig, configType, config) => {
@@ -7,19 +7,35 @@ module.exports = (storybookBaseConfig, configType, config) => {
   // 'PRODUCTION' is used when building the static version of storybook.
 
   // Make whatever fine-grained changes you need
-  config.module.rules.push({
-    test: /\.[jt]sx?/,
-    exclude: /node_modules/,
-    loader: 'babel-loader',
-  });
 
   config.module.rules.push({
     test: /\.ttf/,
     loader: 'file-loader',
   });
 
-  config.resolve.extensions.push(".ttf", ".ts", ".tsx");
+  config.module.rules.push(
+    {
+      test: /\.[jt]sx?/,
+      exclude: /node_modules/,
+      loader: 'babel-loader'
+    },
+    {
+      test: /\.less$/,
+      include: path.resolve(
+        __dirname,
+        '..',
+        'node_modules',
+        '@osu-cass',
+        'sb-components',
+        'lib',
+        'Assets',
+        'Styles'
+      ),
+      use: ['style-loader', 'css-loader?sourceMap', 'less-loader?sourceMap']
+    }
+  );
 
+  config.resolve.extensions.push('.ts', '.tsx', '.less');
   // Return the altered config
   return config;
 };

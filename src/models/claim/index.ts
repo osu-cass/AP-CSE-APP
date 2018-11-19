@@ -1,5 +1,4 @@
 import { ITarget } from '../target';
-
 export interface IClaim {
   title: string;
   claimNumber: string;

@@ -36,23 +36,19 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
         </Link>
       </li>
       {subject && <BreadcrumbLink link={`/${subject}`} value={subject} label="Subject" />}
-      {subject &&
-        grade && <BreadcrumbLink link={`/${subject}/${grade}`} value={grade} label="Grade" />}
-      {subject &&
-        grade &&
-        claim && (
-          <BreadcrumbLink link={`/${subject}/${grade}/${claim}`} value={claim} label="Claim" />
-        )}
-      {subject &&
-        grade &&
-        claim &&
-        target && (
-          <BreadcrumbLink
-            link={`/${subject}/${grade}/${claim}/${target}`}
-            value={target}
-            label="Target"
-          />
-        )}
+      {subject && grade && (
+        <BreadcrumbLink link={`/${subject}/${grade}`} value={grade} label="Grade" />
+      )}
+      {subject && grade && claim && (
+        <BreadcrumbLink link={`/${subject}/${grade}/${claim}`} value={claim} label="Claim" />
+      )}
+      {subject && grade && claim && target && (
+        <BreadcrumbLink
+          link={`/${subject}/${grade}/${claim}/${target}`}
+          value={target}
+          label="Target"
+        />
+      )}
     </ul>
     <style jsx>{`
       * {

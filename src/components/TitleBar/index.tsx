@@ -1,6 +1,7 @@
 import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { Styles, Colors } from '../../constants';
+import { IDomain } from '../../models/claim';
 
 /**
  * interface for TitleBar
@@ -20,11 +21,13 @@ export interface TitleBarProps {
  * The description and the download button are optional although the title is always shown
  * @export
  * @function TitleBar
- * @param {string} title
- * @param {string | undefined} desc
+ * @param {string | undefined} claimTitle
+ * @param {string | undefined} claimDesc
+ * @param {string | undefined} targetTitle
+ * @param {string | undefined} targetDesc
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
-export const TitleBar = ({
+export const TitleBar: React.SFC<TitleBarProps> = ({
   claimTitle,
   claimDesc,
   targetTitle,
@@ -65,11 +68,13 @@ export const TitleBar = ({
         padding: 0;
       }
       div {
-        // min-height: 100px;
         display: flex;
         font-family: ${Styles.sbSans};
         justify-content: center;
-        padding: 20px 0;
+        padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})
+        width: '100%',
+        flexBasis: '100%'
       }
       div ul {
         display: flex;
@@ -77,16 +82,16 @@ export const TitleBar = ({
         align-items: stretch;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
+        width: 100%;
       }
       div ul li {
-        min-height: 30px;
+        width: 100%;
       }
       .title {
         width: 20%;
         min-width: 50px;
         color: white;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 18px;
         text-align: left;
       }
       .desc {
