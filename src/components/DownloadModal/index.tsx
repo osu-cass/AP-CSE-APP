@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-// tslint:disable-next-line
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 import { Colors, Styles, blueGradientBgImg } from '../../constants';
 import { TaskButton, TaskButtonProps } from './TaskButton';
 
-// tslint:disable: no-unsafe-any no-any;
 /**
  * Properties for DownloadModal
  * @export
@@ -40,7 +38,7 @@ const customStyles = {
   }
 };
 
-if (process.env.NODE_ENV !== 'test') Modal.setAppElement('body');
+if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('body');
 
 /**
  * Renders a Modal window to download a document's targets
@@ -68,14 +66,14 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
    */
 
   handleConfirm = () => {
-    const selectedArr: string[] = [];
-    this.state.taskButtonProps.forEach(task => {
-      if (task.toggled) {
-        selectedArr.push(task.taskName);
-      }
+    const { taskButtonProps } = this.state;
+    this.setState({
+      confirmArr: taskButtonProps.filter(t => t.toggled).map(t => t.taskName)
     });
-    this.setState({ confirmArr: selectedArr });
-    this.closeModal();
+    if (this.props.closeFromParent !== undefined) {
+      this.props.closeFromParent();
+    }
+    this.setState({ showModal: false });
   };
 
   closeModal = () => {
@@ -411,7 +409,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
 
     return (
       <div>
-        <Modal
+        <ReactModal
           isOpen={this.props.isOpen}
           onRequestClose={this.props.closeFromParent}
           contentLabel="Download PDF"
@@ -419,7 +417,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         >
           {this.modalForm(taskButtons)}
           {this.confirmSelection()}
-        </Modal>
+        </ReactModal>
       </div>
     );
   }

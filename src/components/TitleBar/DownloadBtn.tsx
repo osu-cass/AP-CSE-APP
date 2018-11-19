@@ -39,15 +39,12 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
         isOpen: false
       }
     };
-    // tslint:disable: no-unsafe-any no-any;
-    this.showHideModal = this.showHideModal.bind(this);
-    // tslint:enable: no-unsafe-any no-any;
   }
-  showHideModal() {
+  showHideModal = () => {
     const curModal = this.state.modal;
     curModal.isOpen = !this.state.modal.isOpen;
     this.setState({ modal: curModal });
-  }
+  };
   render() {
     return (
       <div id="download-btn-container">

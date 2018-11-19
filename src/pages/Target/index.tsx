@@ -114,10 +114,7 @@ export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
 };
 
 export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
-  const taskNameArr: string[] = [];
-  claim.target[targetIndex].taskModels.forEach(task => {
-    taskNameArr.push(task.taskName);
-  });
+  const taskNameArr: string[] = claim.target[targetIndex].taskModels.map(task => task.taskName);
 
   return {
     claimTitle: claim.claimNumber,
