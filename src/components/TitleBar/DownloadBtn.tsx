@@ -41,24 +41,18 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
     };
     // tslint:disable: no-unsafe-any no-any;
     this.showHideModal = this.showHideModal.bind(this);
-    this.closeChildModal = this.closeChildModal.bind(this);
     // tslint:enable: no-unsafe-any no-any;
-  }
-  closeChildModal() {
-    const curModal = this.state.modal;
-    curModal.isOpen = false;
-    this.setState({ modal: curModal });
   }
   showHideModal() {
     const curModal = this.state.modal;
-    curModal.isOpen = true;
+    curModal.isOpen = !this.state.modal.isOpen;
     this.setState({ modal: curModal });
   }
   render() {
     return (
       <div id="download-btn-container">
-        <DownloadModal {...this.state.modal} closeFromParent={this.closeChildModal} />
-        <a aria-label="Download" role="button" onClick={this.showHideModal}>
+        <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
+        <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
           <Download />
           <style jsx>{`
             * {

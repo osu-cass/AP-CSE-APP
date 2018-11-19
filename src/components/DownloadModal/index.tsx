@@ -60,12 +60,6 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
       selectedList: [],
       confirmArr: []
     };
-    this.closeModal = this.closeModal.bind(this);
-    this.handleContinue = this.handleContinue.bind(this);
-    this.handleBackButton = this.handleBackButton.bind(this);
-    this.handleConfirm = this.handleConfirm.bind(this);
-    this.renderTaskButtons = this.renderTaskButtons.bind(this);
-    this.renderSelectionsList = this.renderSelectionsList.bind(this);
   }
   /**
    * Handles the user clicking the Confirm Button
@@ -73,7 +67,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
    * To Do: Link result to PDF generation/download
    */
 
-  handleConfirm() {
+  handleConfirm = () => {
     const selectedArr: string[] = [];
     this.state.taskButtonProps.forEach(task => {
       if (task.toggled) {
@@ -82,11 +76,11 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     });
     this.setState({ confirmArr: selectedArr });
     this.closeModal();
-  }
+  };
 
-  closeModal() {
+  closeModal = () => {
     this.setState({ showModal: false });
-  }
+  };
 
   /**
    * Handles the user clicking the Continue Button
@@ -94,41 +88,36 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
    * Toggles hidden selections page and makes an unordered list of selected buttons
    */
 
-  handleContinue() {
+  handleContinue = () => {
     const taskButtons = this.state.taskButtonProps;
-    const selectList: string[] = [];
-    this.createSelectionList(taskButtons, selectList);
+    const selectList: string[] = this.createSelectionList(taskButtons);
     this.setState({
       showMultiSelect: 'hidden',
       showHide: '',
       selectedList: selectList
     });
-  }
+  };
 
   /**
    * Generates a list of <li> elements containing all selected taskModels
    *
    */
-  createSelectionList(taskButtons: TaskButtonProps[], selectList: string[]) {
-    taskButtons.forEach(task => {
-      if (task.toggled) {
-        selectList.push(task.taskName);
-      }
-    });
-  }
+  createSelectionList = (taskButtons: TaskButtonProps[]) => {
+    return taskButtons.filter(task => task.toggled).map(t => t.taskName);
+  };
 
   /**
    * Handles the user clicking the Back Button on the confirm selection screen
    *
    * Toggles hidden selections page and clears the list of selected buttons
    */
-  handleBackButton() {
+  handleBackButton = () => {
     this.setState({
       showMultiSelect: '',
       showHide: 'hidden',
       selectedList: []
     });
-  }
+  };
 
   /**
    * Toggles a selected button and handles multi-select/all-select logic
@@ -249,9 +238,9 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     };
     taskArray.push(overview);
   }
-  renderTaskButtons(taskButtons: TaskButtonProps[]) {
+  renderTaskButtons = (taskButtons: TaskButtonProps[]) => {
     return taskButtons.map((b, i) => <TaskButton {...b} key={i} />);
-  }
+  };
   modalForm(taskButtons: TaskButtonProps[]): JSX.Element {
     return (
       <form className={this.state.showMultiSelect}>
@@ -326,7 +315,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
       </form>
     );
   }
-  renderSelectionsList() {
+  renderSelectionsList = () => {
     const result: JSX.Element[] = [];
     this.state.selectedList.forEach(task => {
       result.push(
@@ -342,7 +331,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     });
 
     return result;
-  }
+  };
   confirmSelection() {
     return (
       <div id="confirm-selections" className={this.state.showHide}>
