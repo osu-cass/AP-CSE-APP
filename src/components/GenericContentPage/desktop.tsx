@@ -15,8 +15,8 @@ export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({ cont
     ));
 
     return (
-      <React.Fragment>
-        <Section name={s.title} key={i}>
+      <React.Fragment key={i}>
+        <Section name={s.title}>
           <MainHeader text={s.title} />
           {s.jsx}
         </Section>
