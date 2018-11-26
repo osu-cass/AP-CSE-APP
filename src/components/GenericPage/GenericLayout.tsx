@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavBar } from '../NavBar';
 import { PageWidthEnforcer } from './PageWidthEnforcer';
 
 export const genericLayout = <T extends object>(
