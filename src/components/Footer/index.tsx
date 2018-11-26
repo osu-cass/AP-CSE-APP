@@ -54,6 +54,17 @@ export const Footer: React.SFC = () => {
           flex-shrink: 1;
           justify-content: space-around;
         }
+
+        a,
+        a:visited {
+          color: #007393;
+        }
+
+        a:hover,
+        a:active {
+          color: #111213;
+          text-decoration: none;
+        }
       `}</style>
     </>
   );
