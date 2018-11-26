@@ -8,7 +8,7 @@ import { Message, ErrorMessage } from '../../components/Filter/Messages';
 import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
 
 export interface TargetMatchParams {
-  target?: string;
+  targetShortCode?: string;
 }
 
 export interface TargetPageProps extends RouteComponentProps<TargetMatchParams> {
@@ -25,7 +25,7 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
-      target: props.match.params.target,
+      target: props.match.params.targetShortCode,
       loaded: false
     };
   }

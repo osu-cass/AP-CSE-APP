@@ -6,6 +6,7 @@ import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
 import { DevelopmentPage } from './Development';
+import { TargetClient } from '../clients/target';
 
 export const App: React.SFC = () => {
   return (
@@ -16,7 +17,11 @@ export const App: React.SFC = () => {
             <NavBar />
           </div>
           <Route exact path="/" component={HomePage} />
-          <Route path="/target/:targetShortCode" component={TargetPage} />
+          <Route
+            path="/target/:targetShortCode"
+            render={p => <TargetPage client={new TargetClient()} {...p} />}
+            component={TargetPage}
+          />
           <Route path="/home" component={HomePage} />
           <Route path="/search" component={SearchPageRoute} />
           <Route path="/development" component={DevelopmentPage} />

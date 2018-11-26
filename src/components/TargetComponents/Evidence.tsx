@@ -1,9 +1,13 @@
 import React from 'react';
 import { IEvidence } from '../../models/target';
-import { NumberList } from '../MainContent/Components';
+import { OrderedList } from './Lists';
 
-export const Evidence: React.SFC<IEvidence[]> = evidence => {
+export interface EvidenceProps {
+  evidence: IEvidence[];
+}
+
+export const Evidence: React.SFC<EvidenceProps> = ({ evidence }) => {
   const evidenceJsx = evidence.map((e, i) => <li key={i}>{e.evDesc}</li>);
 
-  return <NumberList>{evidenceJsx}</NumberList>;
+  return <OrderedList elements={evidenceJsx} />;
 };

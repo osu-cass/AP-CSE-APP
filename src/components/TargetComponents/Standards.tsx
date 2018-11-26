@@ -34,17 +34,21 @@ const colorStandardCode = (code: string) => {
   return code;
 };
 
-export const Standards: React.SFC<IStandards[]> = standards => {
+export interface StandardsProps {
+  standards: IStandards[];
+}
+
+export const Standards: React.SFC<StandardsProps> = ({ standards }) => {
   const standardsJsx = standards.sort(sortStandards).map((standard, index) => {
     const code = colorStandardCode(shortenStandardCode(standard.stdCode));
     const desc = parseContent(standard.stdDesc);
 
     return (
-      <li key={index}>
+      <p key={index}>
         <strong>{code}</strong> {desc}
-      </li>
+      </p>
     );
   });
 
-  return <React.Fragment>standardsJsx</React.Fragment>;
+  return <React.Fragment>{standardsJsx}</React.Fragment>;
 };

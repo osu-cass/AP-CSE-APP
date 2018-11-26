@@ -1,32 +1,55 @@
 import React from 'react';
 import { ContentSection, GenericContentPage } from '../GenericContentPage';
-import { ITarget, IStandards } from '../../models/target';
+import { ITarget } from '../../models/target';
 import { parseContent } from '../MainContent/parseUtils';
 import { Standards } from './Standards';
 import { Evidence } from './Evidence';
-import { TaskModel } from '../MainContent/TaskModel';
+import { OrderedList } from './Lists';
+import { Stems } from './Stems';
 
 export interface TargetDetailProps {
   target: ITarget;
 }
 
-
+// function optionallyRender<T>(data: T | undefined, title: string, jsx: React.ReactNode): {
+//   return data ? {render(data)} : undefined;
+// }
 
 export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
-  const taskModelSections: ContentSection[] = target.taskModels.map((tm, i) => ({
-    title: `Task Model ${i + 1}`,
-    jsx: undefined,
-    subsections: [
-      {
-        title: 'Task Description',
-        jsx: parseContent(tm.taskDesc)
-      },
-      {
+  const taskModelSections: ContentSection[] = target.taskModels.map((tm, i) => {
+    const subsections: ContentSection[] = [];
+
+    // task description
+    if (tm.taskDesc) {
+      subsections.push({ title: 'Task Description', jsx: parseContent(tm.taskDesc) });
+    }
+
+    // target evidence statements
+    if (tm.relatedEvidence) {
+      subsections.push({
         title: 'Target Evidence Statements',
-        jsx: 
-      }
-    ]
-  }))
+        jsx: <OrderedList elements={tm.relatedEvidence} />
+      });
+    }
+
+    // appropriate stems
+    subsections.push({
+      title: 'Appropriate Stems',
+      jsx: <Stems stems={target.stem} stemType="Appropriate Stems" />
+    });
+
+    // appropriate stems for dual-text stimuli
+    subsections.push({
+      title: 'Appropriate Stems for Dual-Text Stimuli',
+      jsx: <Stems stems={target.stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
+    });
+
+    return {
+      subsections,
+      title: tm.taskName,
+      jsx: undefined
+    };
+  });
 
   const sections: ContentSection[] = [
     {
@@ -35,7 +58,7 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     },
     {
       title: 'Standards',
-      jsx: <Standards {...target.standards} />
+      jsx: <Standards standards={target.standards} />
     },
     {
       title: 'Stimuli/Text Complexity',
@@ -57,9 +80,9 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     },
     {
       title: 'Evidence Required',
-      jsx: <Evidence {...target.evidence} />
+      jsx: <Evidence evidence={target.evidence} />
     },
-    ...
+    ...taskModelSections
   ];
 
   return <GenericContentPage contentSections={sections} />;
