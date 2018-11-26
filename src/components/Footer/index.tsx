@@ -55,13 +55,13 @@ export const Footer: React.SFC = () => {
           justify-content: space-around;
         }
 
-        a,
-        a:visited {
+        .links > a,
+        .links > a:visited {
           color: #007393;
         }
 
-        a:hover,
-        a:active {
+        .links > a:hover,
+        .links > a:active {
           color: #111213;
           text-decoration: none;
         }
