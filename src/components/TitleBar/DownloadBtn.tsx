@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Download } from 'react-feather';
 import { Colors } from '../../constants';
-import { DownloadModal } from '../DownloadModal';
+import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
 
 /**
  * interface for DownloadBtn
@@ -17,8 +17,7 @@ export interface DownloadBtnProps {
 export interface DownloadBtnState {
   url: string;
   filename: string;
-  modalOpen: boolean;
-  modal: JSX.Element;
+  modal: DownloadModalProps;
 }
 
 /**
@@ -35,20 +34,22 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
     this.state = {
       url: props.url,
       filename: props.filename,
-      modalOpen: false,
-      modal: <DownloadModal isOpen={true} taskModels={this.props.taskNames} />
+      modal: {
+        taskModels: props.taskNames,
+        isOpen: false
+      }
     };
-    // tslint:disable-next-line: no-unsafe-any no-any;
-    this.showHideModal = this.showHideModal.bind(this);
   }
-  showHideModal() {
-    this.setState({ modalOpen: true });
-  }
+  showHideModal = () => {
+    const curModal = this.state.modal;
+    curModal.isOpen = !this.state.modal.isOpen;
+    this.setState({ modal: curModal });
+  };
   render() {
     return (
       <div id="download-btn-container">
-        {this.state.modalOpen ? this.state.modal : ''}
-        <a aria-label="Download" role="button" onClick={this.showHideModal}>
+        <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
+        <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
           <Download />
           <style jsx>{`
             * {

@@ -63,13 +63,14 @@ export const Item: React.SFC<ItemProps> = ({
   expanded,
   expand,
   referenceContainer,
+  scrollOffset,
   children
 }) => {
   return (
     <li
       key={name}
       onClick={() => {
-        scrollPageTo(name, -225, referenceContainer);
+        scrollPageTo(name, scrollOffset || -225, referenceContainer);
         if (activate) activate(name);
       }}
       role="menuitem"

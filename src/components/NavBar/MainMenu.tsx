@@ -49,12 +49,12 @@ export const MainMenu: React.SFC = () => {
           <Search {...iconStyle} />
         </MenuItem>
       </Link>
-      <Link to="placeholder" style={noUnderline}>
+      <Link to="/search" style={noUnderline}>
         <MenuItem name="Explore">
           <Eye {...iconStyle} />
         </MenuItem>
       </Link>
-      <Link to="placeholder" style={noUnderline}>
+      <Link to="/apps" style={noUnderline}>
         <MenuItem name="Apps">
           <Grid {...iconStyle} />
         </MenuItem>
