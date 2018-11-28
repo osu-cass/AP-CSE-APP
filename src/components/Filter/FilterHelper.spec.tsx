@@ -59,7 +59,7 @@ describe('FilterHelper.createFilters', () => {
     beforeEach(() => {
       expectation = {
         isMultiSelect: false,
-        displayAllButton: true,
+        displayAllButton: false,
         disabled: false,
         label: 'Subject',
         code: FilterType.Subject,
@@ -93,7 +93,7 @@ describe('FilterHelper.createFilters', () => {
     beforeEach(() => {
       expectation = {
         isMultiSelect: false,
-        displayAllButton: true,
+        displayAllButton: false,
         disabled: false,
         label: 'Claim',
         code: FilterType.Claim,
@@ -127,7 +127,7 @@ describe('FilterHelper.createFilters', () => {
     beforeEach(() => {
       expectation = {
         isMultiSelect: false,
-        displayAllButton: true,
+        displayAllButton: false,
         disabled: false,
         label: 'Target',
         code: FilterType.Target,
