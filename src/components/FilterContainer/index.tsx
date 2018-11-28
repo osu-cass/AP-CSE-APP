@@ -2,11 +2,11 @@ import React, { KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Filter } from 'react-feather';
 import { Colors, Styles } from '../../constants';
 
-export interface FilterContianerProps {
+export interface FilterContainerProps {
   expanded?: boolean;
 }
 
-export interface FilterContianerState {
+export interface FilterContainerState {
   expanded: boolean;
 }
 
@@ -15,10 +15,10 @@ export interface FilterContianerState {
  *
  * @export
  * @class FilterContianer
- * @extends {React.Component<FilterContianerProps, FilterContianerState>}
+ * @extends {React.Component<FilterContainerProps, FilterContainerState>}
  */
-export class FilterContianer extends React.Component<FilterContianerProps, FilterContianerState> {
-  constructor(props: FilterContianerProps) {
+export class FilterContianer extends React.Component<FilterContainerProps, FilterContainerState> {
+  constructor(props: FilterContainerProps) {
     super(props);
 
     this.state = {

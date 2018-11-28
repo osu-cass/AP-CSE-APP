@@ -44,7 +44,7 @@ function createSubjectFilter(
 ): AdvancedFilterCategoryModel {
   return {
     isMultiSelect: false,
-    displayAllButton: true,
+    displayAllButton: false,
     disabled: false,
     label: 'Subject',
     code: FilterType.Subject,
@@ -63,7 +63,7 @@ function createClaimFilter(
 ): AdvancedFilterCategoryModel {
   return {
     isMultiSelect: false,
-    displayAllButton: true,
+    displayAllButton: false,
     disabled: false,
     label: 'Claim',
     code: FilterType.Claim,
@@ -82,7 +82,7 @@ function createTargetFilter(
 ): AdvancedFilterCategoryModel {
   return {
     isMultiSelect: false,
-    displayAllButton: true,
+    displayAllButton: false,
     disabled: false,
     label: 'Target',
     code: FilterType.Target,
