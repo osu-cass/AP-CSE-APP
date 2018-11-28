@@ -113,13 +113,19 @@ export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   };
 };
 
-export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
+export const parseTitleBarData = (claim: IClaim, targetIndex: number): TitleBarProps => {
+  const taskNameArr: string[] = claim.target[targetIndex].taskModels.map(task => task.taskName);
+
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
-    downloadBtnProps: downloadBtnMock,
-    targetTitle: claim.target[0].title,
-    targetDesc: claim.target[0].description
+    downloadBtnProps: {
+      url: window.location.href,
+      filename: 'mock.pdf',
+      taskNames: taskNameArr
+    },
+    targetTitle: claim.target[targetIndex].title,
+    targetDesc: claim.target[targetIndex].description
   };
 };
 
@@ -204,7 +210,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
             claim: claimData,
             target: claimData.target[0],
             breadCrumbProps: parseBreadCrumbData(claimData),
-            titleBarProps: parseTitleBarData(claimData)
+            titleBarProps: parseTitleBarData(claimData, 0)
           });
         }
       })

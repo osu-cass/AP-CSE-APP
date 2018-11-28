@@ -166,7 +166,11 @@ export const parsedTitleBarDataMock: TitleBarProps = {
   claimTitle: 'C1',
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
-  downloadBtnProps: { url: 'test/url', filename: 'test-file-name' },
+  downloadBtnProps: {
+    url: 'http://localhost/',
+    filename: 'mock.pdf',
+    taskNames: ['Task Model 1', 'Task Model 2', 'Task Model 3']
+  },
   targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetDesc: 'placeholder'
 };
