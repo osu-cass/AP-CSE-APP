@@ -19,11 +19,7 @@ export const App: React.SFC = () => {
             <NavBar />
           </div>
           <Route exact path="/" component={HomePage} />
-          <Route
-            path="/target/:targetShortCode"
-            render={p => <TargetPage client={new TargetClient()} {...p} />}
-            component={TargetPage}
-          />
+          <Route npm path="/target/:targetShortCode" component={TargetPage} />
           <Route path="/home" component={HomePage} />
           <Route path="/search" component={SearchPageRoute} />
           <Route path="/apps" component={AppsPage} />

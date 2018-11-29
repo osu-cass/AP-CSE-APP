@@ -6,37 +6,31 @@ export interface ITargetParams {
 }
 
 export interface ITargetClient {
-<<<<<<< HEAD
   getTarget: (params: ITargetParams) => Promise<IClaim>;
-=======
-  buildParams: (params: ITargetParams) => string;
-  getTarget: (params: ITargetParams) => Promise<IClaim | Error>;
->>>>>>> dev
 }
 
-function buildParams(params: ITargetParams): string {
-  const { targetShortCode } = params;
-  let url = `${API_ENDPOINT || 'http://localhost:3000'}/api/target`;
+/**
+ * Client class that communicates with the cse api
+ * @class {SearchClient}
+ */
+export class TargetClient implements ITargetClient {
+  private endpoint: string;
 
-  if (targetShortCode) {
-    url = url.concat(`/${targetShortCode}`);
+  constructor() {
+    this.endpoint = API_ENDPOINT || 'http://localhost:3000';
   }
 
-  return url;
-}
+  private buildParams(params: ITargetParams): string {
+    const { targetShortCode } = params;
+    let url = `${this.endpoint}/api/target`;
 
-async function getTarget(params: ITargetParams): Promise<IClaim | Error> {
-  const url: string = buildParams(params);
-  let claim: IClaim;
+    if (targetShortCode) {
+      url = url.concat(`/${targetShortCode}`);
+    }
 
-  try {
-    const response: Response = await window.fetch(url);
-    claim = <IClaim>await response.json();
-  } catch (err) {
-    throw new Error('Failed to fetch target.');
+    return url;
   }
 
-<<<<<<< HEAD
   public async getTarget(params: ITargetParams): Promise<IClaim> {
     const url: string = this.buildParams(params);
     let claim: IClaim;
@@ -50,12 +44,4 @@ async function getTarget(params: ITargetParams): Promise<IClaim | Error> {
 
     return claim;
   }
-=======
-  return claim;
->>>>>>> dev
 }
-
-export const TargetClient: ITargetClient = {
-  buildParams,
-  getTarget
-};

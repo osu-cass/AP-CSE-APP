@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import { IClaim } from '../../models/claim';
-import { ITargetClient } from '../../clients/target';
+import { ITargetClient, TargetClient } from '../../clients/target';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { TargetTitleBar } from './title';
 import { Message, ErrorMessage } from '../../components/Filter/Messages';
@@ -11,9 +11,7 @@ export interface TargetMatchParams {
   targetShortCode?: string;
 }
 
-export interface TargetPageProps extends RouteComponentProps<TargetMatchParams> {
-  client: ITargetClient;
-}
+export interface TargetPageProps extends RouteComponentProps<TargetMatchParams> {}
 
 export interface TargetPageState {
   target?: string;
@@ -21,6 +19,10 @@ export interface TargetPageState {
   loaded: boolean;
 }
 
+/**
+ * Class that handles placing the target page components in the generic page layout
+ * @class{TargetPage}
+ */
 export class TargetPage extends React.Component<TargetPageProps, TargetPageState> {
   constructor(props: TargetPageProps) {
     super(props);
@@ -36,9 +38,9 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
 
       return;
     }
-
+    const client = new TargetClient();
     try {
-      const result = await this.props.client.getTarget({ targetShortCode: this.state.target });
+      const result = await client.getTarget({ targetShortCode: this.state.target });
       this.setState({ result, loaded: true });
     } catch (err) {
       this.setState({ loaded: true });
