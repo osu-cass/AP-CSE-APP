@@ -1,5 +1,4 @@
 import React from 'react';
-import { TitleBar } from '../../components/TitleBar';
 import homeLogo from '../../assets/images/home-page.jpg';
 import { Link } from 'react-router-dom';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
@@ -10,9 +9,7 @@ const importedLogo = homeLogo as string;
 // cSpell:disable
 const HomePageComponent = () => (
   <div className="content">
-    <div className="element-wrapper">
-      <TitleBar claimTitle={'Content Specification Explorer'} />
-    </div>
+    <div className="element-wrapper" />
     <div className="passage">
       <h1 className="passage-title">About CSE</h1>
       <div className="passage-content">
@@ -32,14 +29,20 @@ const HomePageComponent = () => (
         </Link>
       </div>
     </div>
-    <img className="home-img" src={importedLogo} alt="home-pic" />
     <style jsx>{`
       .content {
         display: flex;
         flex-direction: row;
         font-family: PT Serif;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
+      }
+      .passage {
+        padding: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        background-color: #fff;
       }
       .passage-title {
         font-size: 20px;
@@ -68,12 +71,6 @@ const HomePageComponent = () => (
       }
       .content {
         margin-top: 40px;
-      }
-      .home-img {
-        height: 450px;
-        width: auto;
-        margin-top: 13px;
-        margin-left: 10px;
       }
       .element-wrapper {
         width: 100%;
