@@ -21,8 +21,10 @@ export interface TitleBarProps {
  * The description and the download button are optional although the title is always shown
  * @export
  * @function TitleBar
- * @param {string} title
- * @param {string | undefined} desc
+ * @param {string | undefined} claimTitle
+ * @param {string | undefined} claimDesc
+ * @param {string | undefined} targetTitle
+ * @param {string | undefined} targetDesc
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
 export const TitleBar: React.SFC<TitleBarProps> = ({
@@ -56,7 +58,11 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       )}
       {downloadBtnProps && (
         <li className="download">
-          <DownloadBtn url={downloadBtnProps.url} filename={downloadBtnProps.filename} />
+          <DownloadBtn
+            url={downloadBtnProps.url}
+            filename={downloadBtnProps.filename}
+            taskNames={downloadBtnProps.taskNames}
+          />
         </li>
       )}
     </ul>

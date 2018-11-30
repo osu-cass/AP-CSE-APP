@@ -15,7 +15,9 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       <span>{title}</span>
     </div>
     <div className="linkImg">
-      <img src={imgUrl} alt={title} />
+      <a href={linkBtnProps.url}>
+        <img src={imgUrl} alt={title} />
+      </a>
     </div>
     <div className="desc">{desc}</div>
     <div>
@@ -50,6 +52,7 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       .desc {
         text-align: justify;
         font-size: 0.8em;
+        height: 80px;
       }
     `}</style>
   </div>
