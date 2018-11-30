@@ -8,7 +8,7 @@ export interface AppLinkBtnProps {
 }
 
 export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
-  <a aria-label="Link" href={url}>
+  <a aria-label="Link" target="_blank" rel="noopener noreferrer" href={url}>
     <div className="container">
       <span>{text}</span>
       <ArrowRight />

@@ -80,7 +80,11 @@ export const DevInterimBlueprint: React.SFC = () => (
     <div className="right-margin">
       <h4>Interim Assessments Overview</h4>
       <div className="row">
-        <LinkButton text="Overview" icon={fileIcon} url="" />
+        <LinkButton
+          text="Overview"
+          icon={fileIcon}
+          url="https://portal.smarterbalanced.org/library/en/interim-assessments-overview.pdf"
+        />
       </div>
     </div>
     <div className="right-margin">
