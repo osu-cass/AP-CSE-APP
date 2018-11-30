@@ -17,7 +17,7 @@ const emptyMock: BreadcrumbsProps = {};
 
 const allDataMock: BreadcrumbsProps = {
   subject: SubjectType['English Language Arts'],
-  grade: GradeType['G8'],
+  grades: ['8'],
   claim: ClaimType['C4'],
   target: 'Target 1'
 };
@@ -43,7 +43,7 @@ storiesOf('Breadcrumbs component', module)
     <div style={background}>
       <Breadcrumbs
         subject={emptyMock.subject}
-        grade={emptyMock.grade}
+        grades={emptyMock.grades}
         claim={emptyMock.claim}
         target={emptyMock.target}
       />
@@ -53,7 +53,7 @@ storiesOf('Breadcrumbs component', module)
     <div style={background}>
       <Breadcrumbs
         subject={allDataMock.subject}
-        grade={allDataMock.grade}
+        grades={allDataMock.grades}
         claim={allDataMock.claim}
         target={allDataMock.target}
       />
