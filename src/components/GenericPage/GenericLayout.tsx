@@ -10,17 +10,19 @@ export const genericLayout = <T extends object>(
     <React.Fragment>
       <div className="title-and-content">
         <div>{title}</div>
-        <div
-          className="content"
-          id={
-            window.location.pathname === '/' || window.location.pathname.includes('home')
-              ? 'main-content-scroll-home'
-              : 'main-content-scroll'
-          }
-        >
-          <PageWidthEnforcer>
-            <Component {...props} />
-          </PageWidthEnforcer>
+        <div className="content" id="main-content-scroll">
+          <div
+            className="content"
+            id={
+              window.location.pathname === '/' || window.location.pathname.includes('home')
+                ? 'main-content-scroll-home'
+                : ''
+            }
+          >
+            <PageWidthEnforcer>
+              <Component {...props} />
+            </PageWidthEnforcer>
+          </div>
         </div>
       </div>
       <style jsx>{`
@@ -38,6 +40,7 @@ export const genericLayout = <T extends object>(
     background-size: cover;
     background-position: 0% 20%;
     background-repeat: no-repeat;
+    height: 100%;
   }
 
   `}</style>
