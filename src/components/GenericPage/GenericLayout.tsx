@@ -34,18 +34,14 @@ export const genericLayout = <T extends object>(
   .content {
     overflow-y: auto;
     flex-grow: 1;
-    height:85vh;
-  }
-  .home-content {
-    overflow-y: auto;
-    height:85vh;
   }
   #main-content-scroll-home {
     background-image: url("${homeLogo}");
     background-size: cover;
     background-position: 0% 20%;
     background-repeat: no-repeat;
-    height:83.7vh;
+    height:83.6vh;
+    overflow: visable;
   }
 
   `}</style>
