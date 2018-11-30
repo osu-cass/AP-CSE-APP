@@ -10,7 +10,10 @@ export const genericLayout = <T extends object>(
     <React.Fragment>
       <div className="title-and-content">
         <div>{title}</div>
-        <div className={`content ${window.location.pathname === '/' ? 'main-content-home' : ''}`}>
+        <div
+          className={`content ${window.location.pathname === '/' ? 'home-image' : ''}`}
+          id="main-content-scroll"
+        >
           <div className="content">
             <PageWidthEnforcer>
               <Component {...props} />
@@ -29,7 +32,7 @@ export const genericLayout = <T extends object>(
           flex-grow: 1;
           height: 100%;
         }
-        .main-content-home {
+        .home-image {
           background-image: url("${homeLogo}");
           background-size: cover;
           background-position: 0% 20%;
