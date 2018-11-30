@@ -13,7 +13,7 @@ import { stringify } from 'query-string';
  */
 export interface BreadcrumbsProps {
   subject?: string;
-  grade?: string;
+  grades?: string[];
   claim?: string;
   target?: string;
 }
@@ -24,13 +24,12 @@ export interface BreadcrumbsProps {
  * @param grade
  * @param claim
  */
-function buildSearchUrl(subject?: string, grade?: string, claim?: string): string {
+function buildSearchUrl(subject?: string, grades?: string[], claim?: string): string {
   const filterParams: CSEFilterParams = {
     subject,
     claim,
-    grades: grade ? [grade] : []
+    grades: grades ? grades : []
   };
-
   const query: CSESearchQuery = {
     ...filterParams
   };
@@ -44,11 +43,11 @@ function buildSearchUrl(subject?: string, grade?: string, claim?: string): strin
  * @export
  * @function {Breadcrumbs}
  * @param {SubjectType | undefined} subject
- * @param {GradeType | undefined} grade
+ * @param {GradeType | undefined} grades
  * @param {ClaimType | undefined} claim
  * @param {string | undefined} target
  */
-export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps) => (
+export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps) => (
   <div>
     <ul>
       <li>
@@ -59,15 +58,19 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
         </Link>
       </li>
       {subject && <BreadcrumbLink link={buildSearchUrl(subject)} value={subject} label="Subject" />}
-      {subject && grade && (
-        <BreadcrumbLink link={buildSearchUrl(subject, grade)} value={grade} label="Grade" />
-      )}
-      {subject && grade && claim && (
-        <BreadcrumbLink link={buildSearchUrl(subject, grade, claim)} value={claim} label="Claim" />
-      )}
-      {subject && grade && claim && target && (
+      {subject && grades && (
         <BreadcrumbLink
-          link={`/${subject}/${grade}/${claim}/${target}`}
+          link={buildSearchUrl(subject, grades)}
+          value={grades[0] === 'HS' ? 'High School' : `Grade ${grades[0]}`}
+          label="Grade"
+        />
+      )}
+      {subject && grades && claim && (
+        <BreadcrumbLink link={buildSearchUrl(subject, grades, claim)} value={claim} label="Claim" />
+      )}
+      {subject && grades && claim && target && (
+        <BreadcrumbLink
+          link={`/${subject}/${grades}/${claim}/${target}`}
           value={target}
           label="Target"
         />

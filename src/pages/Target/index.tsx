@@ -107,7 +107,7 @@ export const parseNavProps = (target: ITarget): ItemProps[] => {
 export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
-    grade: `Grade ${claim.grades}`,
+    grades: claim.grades,
     claim: claim.claimNumber,
     target: claim.target[0].title
   };
@@ -183,7 +183,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
   constructor(props: TargetPageProps) {
     super(props);
     this.state = {
-      breadCrumbProps: { subject: '', grade: '', claim: '', target: '' },
+      breadCrumbProps: { subject: '', grades: [], claim: '', target: '' },
       titleBarProps: {}
     };
   }
@@ -222,7 +222,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
 
   render() {
     const { error } = this.state;
-    const { subject, grade, claim, target } = this.state.breadCrumbProps;
+    const { subject, grades, claim, target } = this.state.breadCrumbProps;
     const {
       claimTitle,
       claimDesc,
@@ -243,7 +243,7 @@ export class TargetPage extends Component<TargetPageProps, TargetPageState> {
         <>
           <div className="content">
             <div className="title" style={style}>
-              <Breadcrumbs subject={subject} grade={grade} claim={claim} target={target} />
+              <Breadcrumbs subject={subject} grades={grades} claim={claim} target={target} />
               <TitleBar
                 claimTitle={claimTitle}
                 claimDesc={claimDesc}
