@@ -3,6 +3,8 @@ import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
 import { BreadcrumbLink } from './BreadcrumbLink';
 import { Styles, Colors } from '../../constants';
+import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
+import { stringify } from 'query-string';
 
 /**
  * Properties for Breadcrumbs
@@ -14,6 +16,27 @@ export interface BreadcrumbsProps {
   grade?: string;
   claim?: string;
   target?: string;
+}
+
+/**
+ *
+ * @param subject
+ * @param grade
+ * @param claim
+ */
+function buildSearchUrl(subject?: string, grade?: string, claim?: string): string {
+  const filterParams: CSEFilterParams = {
+    subject,
+    claim,
+    grades: grade ? [grade] : []
+  };
+
+  const query: CSESearchQuery = {
+    ...filterParams
+  };
+  const queryString = stringify(query);
+
+  return `/search?${queryString}`;
 }
 
 /**
@@ -35,12 +58,12 @@ export const Breadcrumbs = ({ subject, grade, claim, target }: BreadcrumbsProps)
           </span>
         </Link>
       </li>
-      {subject && <BreadcrumbLink link={`/${subject}`} value={subject} label="Subject" />}
+      {subject && <BreadcrumbLink link={buildSearchUrl(subject)} value={subject} label="Subject" />}
       {subject && grade && (
-        <BreadcrumbLink link={`/${subject}/${grade}`} value={grade} label="Grade" />
+        <BreadcrumbLink link={buildSearchUrl(subject, grade)} value={grade} label="Grade" />
       )}
       {subject && grade && claim && (
-        <BreadcrumbLink link={`/${subject}/${grade}/${claim}`} value={claim} label="Claim" />
+        <BreadcrumbLink link={buildSearchUrl(subject, grade, claim)} value={claim} label="Claim" />
       )}
       {subject && grade && claim && target && (
         <BreadcrumbLink
