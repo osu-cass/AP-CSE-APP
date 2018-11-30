@@ -34,6 +34,7 @@ export const genericLayout = <T extends object>(
   .content {
     overflow-y: auto;
     flex-grow: 1;
+    height:85vh;
   }
   .home-content {
     overflow-y: auto;
@@ -44,7 +45,7 @@ export const genericLayout = <T extends object>(
     background-size: cover;
     background-position: 0% 20%;
     background-repeat: no-repeat;
-    height:85vh;
+    height:83.7vh;
   }
 
   `}</style>

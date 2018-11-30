@@ -11,14 +11,15 @@ const HomePageComponent = () => (
   <div className="content">
     <div className="element-wrapper" />
     <div className="passage">
-      <h1 className="passage-title">About CSE</h1>
+      <h1 className="passage-title">Welcome to Content Spec Explorer!</h1>
       <div className="passage-content">
-        Ipsum aut accusamus quod omnis. Ex fugit eaque aut quia dolorum quaerat. Consequuntur
-        occaecati id voluptatibus illo enim. Velit eveniet consequuntur recusandae laboriosam eos
-        maiores. Illo earum voluptatem et praesentium quia et. Non est et cumque ullam eveniet quas
-        est molestiae. Et eveniet atque laboriosam provident et aut recusandae. Eos occaecati aut
-        laboriosam facere facilis qui. Maxime et omnis ipsum et minus. Eligendi repudiandae aut
-        quasi.
+        The CSE website provides easy access to a host of Smarter Balanced’s test development
+        documents. The primary resources in the CSE are the Item Specifications (“Item Specs”). Item
+        Specs outline how assessment items are to be written so the response shows evidence that the
+        students have the skills/knowledge to perform the item/task. The Item Specs are used by the
+        test development team to produce consistent, well-aligned items across the content areas.
+        Educators are encouraged to implement a similar structure when preparing classroom-level
+        assessments for both summative and formative uses.
       </div>
       <div className="buttons">
         <Link to="/search">
@@ -36,6 +37,12 @@ const HomePageComponent = () => (
         font-family: PT Serif;
         flex-wrap: wrap;
         justify-content: left;
+        margin-top: 40px;
+      }
+      @media (min-width: 1500px) {
+        .content {
+          margin-left: -30px;
+        }
       }
       .passage {
         padding: 20px;
@@ -68,9 +75,6 @@ const HomePageComponent = () => (
         border-radius: 5px;
         border: 1px solid black;
         cursor: pointer;
-      }
-      .content {
-        margin-top: 40px;
       }
       .element-wrapper {
         width: 100%;
