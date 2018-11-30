@@ -68,13 +68,7 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
       {subject && grades && claim && (
         <BreadcrumbLink link={buildSearchUrl(subject, grades, claim)} value={claim} label="Claim" />
       )}
-      {subject && grades && claim && target && (
-        <BreadcrumbLink
-          link={`/${subject}/${grades}/${claim}/${target}`}
-          value={target}
-          label="Target"
-        />
-      )}
+      {subject && grades && claim && target && <div />}
     </ul>
     <style jsx>{`
       * {
