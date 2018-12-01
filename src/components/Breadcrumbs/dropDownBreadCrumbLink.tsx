@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BreadcrumbLink, ListLink } from './BreadcrumbLink';
+import { ChevronUp, ChevronDown } from 'react-feather';
 
 export interface BreadcrumbDropDownProps {
   currentTarget: TargetLabel;
@@ -22,6 +23,10 @@ const style = {
   textDecoration: 'none',
   paddingBottom: '30px',
   overflow: 'hidden'
+};
+
+const menuStyle = {
+  display: 'inline'
 };
 
 /**
@@ -49,15 +54,21 @@ export class BreadcrumbDropDown extends Component<
   render() {
     const { currentTarget, targets } = this.props;
     const { expanded } = this.state;
+    const chevron = expanded ? (
+      <ChevronUp size={30} color="white" />
+    ) : (
+      <ChevronDown size={30} color="white" />
+    );
 
     return (
       <div>
-        <div onClick={this.onClick} role="Menu">
+        <div onClick={this.onClick} role="Menu" style={menuStyle}>
           <BreadcrumbLink
             value={currentTarget.label}
             label={currentTarget.label}
             link={`/target/${currentTarget.shortCode}`}
           />
+          <li>{chevron}</li>
         </div>
         {expanded && (
           <div className="listContainer">
@@ -66,6 +77,7 @@ export class BreadcrumbDropDown extends Component<
             })}
           </div>
         )}
+        <style jsx>{``}</style>
       </div>
     );
   }
