@@ -6,7 +6,7 @@ import { BreadcrumbLink, BreadcrumbLinkProps } from './BreadcrumbLink';
 import { Breadcrumbs, BreadcrumbsProps } from './index';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
 import { Colors } from '../../constants';
-import { BreadcrumbDropDownProps, BreadCrumbDropDown } from './dropDownBreadCrumbLink';
+import { BreadcrumbDropDownProps, BreadcrumbDropDown } from './dropDownBreadCrumbLink';
 
 const subjectLinkMock: BreadcrumbLinkProps = {
   link: 'ela',
@@ -84,9 +84,14 @@ const breadcrumbDropDownProps: BreadcrumbDropDownProps = {
 
 storiesOf('Breadcrumb Drop Down Menu', module)
   .addDecorator(story => <BrowserRouter>{story()}</BrowserRouter>)
-  .add('Renders When Collapsed', () => (
+  .add('Renders with no list', () => (
     <div style={background}>
-      <BreadCrumbDropDown
+      <BreadcrumbDropDown targets={[]} currentTarget={breadcrumbDropDownProps.currentTarget} />
+    </div>
+  ))
+  .add('Renders with list', () => (
+    <div style={background}>
+      <BreadcrumbDropDown
         targets={breadcrumbDropDownProps.targets}
         currentTarget={breadcrumbDropDownProps.currentTarget}
       />
