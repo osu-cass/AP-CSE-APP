@@ -64,9 +64,13 @@ export const Standards = ({ content }: TargetProps) => {
       </View>
       <View style={styles.flexColumnRight}>
         {content.map((element: IStandards) => {
+          const s = element.stdCode;
+          let array: string[];
+          array = s.split('.');
+
           return (
             <View wrap={false} style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
-              <Text>{`${element.stdCode}: `}</Text>
+              <Text>{`${array[4]}.${array[5]}.${array[6]}: `}</Text>
               <Text style={styles.desc}>{element.stdDesc}</Text>
             </View>
           );
