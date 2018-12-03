@@ -55,9 +55,9 @@ export class BreadcrumbDropDown extends Component<
     const { currentTarget, targets } = this.props;
     const { expanded } = this.state;
     const chevron = expanded ? (
-      <ChevronUp size={30} color="white" />
+      <ChevronUp size={30} color="white" className="chevron" />
     ) : (
-      <ChevronDown size={30} color="white" />
+      <ChevronDown size={30} color="white" className="chevron" />
     );
 
     return (
@@ -67,17 +67,30 @@ export class BreadcrumbDropDown extends Component<
             value={currentTarget.label}
             label={currentTarget.label}
             link={`/target/${currentTarget.shortCode}`}
+            className="targetDropDown"
           />
-          <li>{chevron}</li>
+          {chevron}
+          <style jsx>{`
+            .chevron {
+              padding-top: 3px;
+            }
+
+            .targetDropDown {
+              float: left;
+            }
+          `}</style>
         </div>
         {expanded && (
           <div className="listContainer">
-            {targets.map(t => {
-              return <ListLink link={`/target/${t.shortCode}`} value={t.label} label={t.label} />;
+            {targets.map((t, index) => {
+              return (
+                <div key={index + 1}>
+                  <ListLink link={`/target/${t.shortCode}`} value={t.label} label={t.label} />
+                </div>
+              );
             })}
           </div>
         )}
-        <style jsx>{``}</style>
       </div>
     );
   }

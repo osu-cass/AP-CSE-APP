@@ -11,6 +11,7 @@ export interface BreadcrumbLinkProps {
   link: string;
   value: SubjectType | GradeType | ClaimType | string;
   label: string;
+  className?: string;
 }
 
 const style = {
@@ -39,9 +40,10 @@ const listStyle = {
 export const BreadcrumbLink: React.SFC<BreadcrumbLinkProps> = ({
   link,
   value,
-  label
+  label,
+  className
 }): JSX.Element => (
-  <li>
+  <li className={className}>
     <Link style={style} to={link}>
       <span aria-label={label}>{value}</span>
     </Link>
