@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactPDF, { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import { IStandards } from '../../../models/target';
-import styled from '@react-pdf/styled-components';
 
 interface StandardsStyles {
   flexRow: object;
@@ -50,9 +49,6 @@ const styles: StandardsStyles = StyleSheet.create({
   },
   desc: {
     margin: 5
-  },
-  code: {
-    color: 'red'
   }
 }) as StandardsStyles;
 
@@ -70,7 +66,7 @@ export const Standards = ({ content }: TargetProps) => {
         {content.map((element: IStandards) => {
           return (
             <View wrap={false} style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
-              <Text style={styles.code}>{`${element.stdCode}: `}</Text>
+              <Text>{`${element.stdCode}: `}</Text>
               <Text style={styles.desc}>{element.stdDesc}</Text>
             </View>
           );
