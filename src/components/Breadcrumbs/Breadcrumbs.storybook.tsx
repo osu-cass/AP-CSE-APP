@@ -6,7 +6,7 @@ import { BreadcrumbLink, BreadcrumbLinkProps } from './BreadcrumbLink';
 import { Breadcrumbs, BreadcrumbsProps } from './index';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
 import { Colors } from '../../constants';
-import { BreadcrumbDropDownProps, BreadcrumbDropDown } from './dropDownBreadCrumbLink';
+import { BreadcrumbDropDownProps, BreadcrumbDropDown } from './BreadCrumbDropDown';
 
 const subjectLinkMock: BreadcrumbLinkProps = {
   link: 'ela',
