@@ -6,6 +6,7 @@ import { Standards } from './Standards';
 import { Evidence } from './Evidence';
 import { OrderedList } from './Lists';
 import { Stems } from './Stems';
+import { AdditionalMaterials } from './AdditionalMaterials';
 
 export interface TargetDetailProps {
   target: ITarget;
@@ -85,5 +86,11 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     ...taskModelSections
   ];
 
-  return <GenericContentPage contentSections={sections} />;
+  return (
+    <GenericContentPage
+      contentSections={sections}
+      scrollOffset={-260}
+      rightContent={<AdditionalMaterials target={target.shortCode} />}
+    />
+  );
 };

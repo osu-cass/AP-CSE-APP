@@ -7,7 +7,7 @@ export interface EvidenceProps {
 }
 
 export const Evidence: React.SFC<EvidenceProps> = ({ evidence }) => {
-  const evidenceJsx = evidence.map((e, i) => <li key={i}>{e.evDesc}</li>);
+  const evidenceJsx = evidence.map(e => e.evDesc);
 
   return <OrderedList elements={evidenceJsx} />;
 };
