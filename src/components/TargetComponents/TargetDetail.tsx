@@ -7,6 +7,7 @@ import { Evidence } from './Evidence';
 import { OrderedList } from './Lists';
 import { Stems } from './Stems';
 import { AdditionalMaterials } from './AdditionalMaterials';
+import { DOK } from './DOK';
 
 export interface TargetDetailProps {
   target: ITarget;
@@ -83,13 +84,17 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
       title: 'Evidence Required',
       jsx: <Evidence evidence={target.evidence} />
     },
-    ...taskModelSections
+    ...taskModelSections,
+    {
+      title: 'Depth of Knowledge',
+      jsx: <DOK dok={target.DOK} />
+    }
   ];
 
   return (
     <GenericContentPage
       contentSections={sections}
-      scrollOffset={-260}
+      scrollOffset={-300}
       rightContent={<AdditionalMaterials target={target.shortCode} />}
     />
   );

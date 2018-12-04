@@ -13,20 +13,11 @@ export const AdditionalMaterials: React.SFC<AdditionalMaterialsProps> = ({ targe
   ];
   const materialsJsx = materials.map((m, i) => (
     <div key={i}>
-      <span>
-        <HelpCircle size={20} />
-      </span>
       {m}
       <style jsx>{`
         div {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 5px 0;
-        }
-
-        span {
-          padding-right: 5px;
+          padding: 5px;
+          margin-left: 10px;
         }
       `}</style>
     </div>
