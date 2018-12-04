@@ -19,6 +19,11 @@ export const Footer: React.SFC = () => {
         </div>
       </div>
       <style jsx>{`
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
         .footer-container {
           font-family: PT Sans;
           background-color: #ebebeb;

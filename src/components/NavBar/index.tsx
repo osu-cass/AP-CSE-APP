@@ -56,11 +56,6 @@ export const NavBar: React.SFC = () => {
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
-          <MediaQuery minWidth={SizeBreaks.mobile}>
-            <Link to="/search" style={linkStyle}>
-              <Menu {...iconStyle} />
-            </Link>
-          </MediaQuery>
         </div>
       </nav>
       <style jsx>{`
@@ -100,6 +95,10 @@ export const NavBar: React.SFC = () => {
           .right-spacing {
             margin-right: 10px;
           }
+        }
+
+        .hidden {
+          visibility: hidden;
         }
       `}</style>
     </header>
