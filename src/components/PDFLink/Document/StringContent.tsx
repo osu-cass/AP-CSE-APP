@@ -1,16 +1,6 @@
 import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
-import ReactPDF, {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Font,
-  Image,
-  FlatList
-} from '@react-pdf/renderer';
-import { ITarget } from '../../../models/target';
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 interface ClarificationStyles {
   flexRow: object;
@@ -77,9 +67,7 @@ export interface TargetProps {
 export const StringContent = ({ content, title }: TargetProps): JSX.Element => {
   const contentArray = content.split('\r\n\r\n').map((element: string, idx: number) => (
     <View key={`${idx}`} style={styles.flexContent}>
-      <Text debug style={styles.description}>
-        {element}
-      </Text>
+      <Text style={styles.description}>{element}</Text>
     </View>
   ));
 
