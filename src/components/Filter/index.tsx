@@ -49,7 +49,6 @@ const globalFilterStyle = css`
   .filter-btn-group {
     display: flex;
     flex-direction: column;
-    border-left: 1px solid gray;
     padding-left: 4px;
     margin-left: 4px;
   }
