@@ -2,7 +2,7 @@ declare module '@react-pdf/renderer' {
   import React from 'react';
 
   interface StyleSheet {
-    create: (object : any) => any;
+    create: (Object : any) => any;
   }
 
   interface DocumentProps {
@@ -18,15 +18,14 @@ declare module '@react-pdf/renderer' {
     height?: string | number;
     style?: Object;
     className?: string;
-    children?: JSX.Element;
   }
   export const Document: React.SFC<DocumentProps>;
 
   interface PageProps {
-    size?: string | object | Array<any>;
+    size?: string | Object | Array<any>;
     orientation?: string;
     wrap?: boolean;
-    style?: object | Array<any>;
+    style?: Object | Array<any>;
     debug?: boolean;
     ruler?: boolean;
     rulerSteps?: number | string;
@@ -39,7 +38,7 @@ declare module '@react-pdf/renderer' {
 
   interface ViewProps {
     wrap?: boolean;
-    style?: object | Array<any>;
+    style?: Object | Array<any>;
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
@@ -50,7 +49,7 @@ declare module '@react-pdf/renderer' {
 
   interface TextProps {
     wrap?: boolean;
-    style?: object | Array<any>;
+    style?: Object | Array<any>;
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
@@ -62,7 +61,7 @@ declare module '@react-pdf/renderer' {
 
   interface LinkProps {
     wrap?: boolean;
-    style?: object | Array<any>;
+    style?: Object | Array<any>;
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
@@ -71,30 +70,29 @@ declare module '@react-pdf/renderer' {
 
   interface ImageProps {
     src: string;
-    style: object | Array<any>;
+    style: Object | Array<any>;
     debug?: boolean;
     fixed?: boolean;
   }
   export const Image: React.SFC<ImageProps>;
 
   interface NoteProps {
-    style?: object | Array<any>;
+    style?: Object | Array<any>;
     children: string;
     fixed?: boolean;
   }
   export const Note: React.SFC<NoteProps>;
 
   interface PDFViewerProps {
-    style?: Object;
+    style?: Object | Object[] | any | any[];
     className?: string;
-    children?: JSX.Element;
   }
   export const PDFViewer: React.SFC<PDFViewerProps>;
 
   interface PDFDownloadLinkProps {
     document: Document;
     filename: string;
-    style?: object | Array<any>;
+    style?: Object | Array<any>;
     classname?: string;
     children: Function | Node;
   }
