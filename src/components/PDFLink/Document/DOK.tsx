@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPDF, { Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { IDOK } from '../../../models/target';
 // import styled from '@react-pdf/styled-components';
 
@@ -79,7 +79,7 @@ export const DOK = ({ content }: DOKProps) => {
       <View style={styles.flexColumnRight}>
         {content.map((element: IDOK) => {
           return (
-            <View debug style={styles.item} key={`${element.dokCode} - ${element.dokDesc}`}>
+            <View style={styles.item} key={`${element.dokCode} - ${element.dokDesc}`}>
               <Text style={styles.bold}>{`${element.dokCode} ${element.dokShort}: `}</Text>
               <Text style={styles.description}> {element.dokDesc}</Text>
             </View>
