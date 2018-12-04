@@ -163,7 +163,14 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   render() {
     return (
       <React.Fragment>
-        <SearchBar onSearch={this.onSearch} initialText={this.props.paramsFromUrl.search} />
+        <SearchBar
+          onSearch={this.onSearch}
+          initialText={`${
+            this.props.paramsFromUrl.search === ''
+              ? 'search...'
+              : `${this.props.paramsFromUrl.search}`
+          }`}
+        />
         <div className="content-container">
           {this.renderFilter()}
           {this.renderResults()}
