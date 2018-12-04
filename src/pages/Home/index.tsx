@@ -26,7 +26,7 @@ const HomePageComponent = () => (
           <button className="single-button">Navigate to a Target</button>
         </Link>
         <Link to="/development">
-          <button className="single-button">Learn About the Specs</button>
+          <button className="single-button">Learn About Test Development</button>
         </Link>
       </div>
     </div>
