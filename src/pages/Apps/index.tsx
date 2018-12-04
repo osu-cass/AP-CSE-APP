@@ -77,4 +77,4 @@ const AppsPageComponent: React.SFC = () => (
   </React.Fragment>
 );
 
-export const AppsPage = genericLayout(<Title>My Applications</Title>, AppsPageComponent);
+export const AppsPage = genericLayout(<Title>My Resources</Title>, AppsPageComponent);
