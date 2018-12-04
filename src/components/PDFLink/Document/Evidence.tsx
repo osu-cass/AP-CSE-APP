@@ -1,15 +1,6 @@
 import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
-import ReactPDF, {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Font,
-  Image,
-  FlatList
-} from '@react-pdf/renderer';
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { ITarget, IEvidence } from '../../../models/target';
 
 interface EvidenceStyles {
@@ -47,6 +38,7 @@ const styles: EvidenceStyles = StyleSheet.create({
     paddingRight: 5,
     paddingLeft: 8,
     paddingTop: 5,
+    paddingBottom: 5,
     borderTop: '1px solid black',
     borderBottom: '1px solid black',
     borderRight: '2px solid black',
@@ -58,8 +50,8 @@ const styles: EvidenceStyles = StyleSheet.create({
   },
   item: {
     display: 'flex',
-    padding: 5,
     maxHeight: '100%',
+    paddingBottom: 3,
     margin: 5
   },
   contentBox: {
@@ -87,10 +79,7 @@ export const Evidence = ({ content, title }: TargetProps): JSX.Element => {
         {content.map((element: IEvidence, index: number) => {
           return (
             <View style={styles.item} key={`${element.evTitle} - ${element.evDesc}`}>
-              <Text widows={5} style={styles.description}>
-                {' '}
-                {`${index + 1}: ${element.evDesc}`}
-              </Text>
+              <Text style={styles.description}>{`${index + 1}: ${element.evDesc}`}</Text>
             </View>
           );
         })}
