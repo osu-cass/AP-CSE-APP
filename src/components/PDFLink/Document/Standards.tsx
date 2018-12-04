@@ -70,8 +70,12 @@ export const Standards = ({ content }: TargetProps) => {
 
           return (
             <View wrap={false} style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
-              <Text>{`${array[4]}.${array[5]}.${array[6]}: `}</Text>
-              <Text style={styles.desc}>{element.stdDesc}</Text>
+              <Text key={`${array[1]} - ${element.stdDesc}`}>{`${array[4]}.${array[5]}.${
+                array[6]
+              }: `}</Text>
+              <Text key={`${array[2]} - ${element.stdCode}`} style={styles.desc}>
+                {element.stdDesc}
+              </Text>
             </View>
           );
         })}
