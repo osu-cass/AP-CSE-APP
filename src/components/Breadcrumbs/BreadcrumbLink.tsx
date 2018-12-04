@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
+import { Colors } from '../../constants';
 
 /**
  * Properties for BreadcrumbLink
@@ -72,7 +73,15 @@ export const BreadcrumbLink: React.SFC<BreadcrumbLinkProps> = ({
 );
 
 export const ListLink: React.SFC<BreadcrumbLinkProps> = ({ link, value, label }): JSX.Element => (
-  <Link to={link} style={listStyle}>
-    <span aria-label={label}>{value}</span>
-  </Link>
+  <div>
+    <Link to={link} style={listStyle}>
+      <span aria-label={label}>{value}</span>
+    </Link>
+    <style jsx>{`
+      color: ${Colors.sbGrayDarker};
+      background: white;
+      border-top: 1px;
+      border-color: ${Colors.sbGrayDarker};
+    `}</style>
+  </div>
 );

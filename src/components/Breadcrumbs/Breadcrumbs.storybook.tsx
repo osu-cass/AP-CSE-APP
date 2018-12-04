@@ -41,24 +41,20 @@ storiesOf('Breadcrumbs component', module)
     </div>
   ))
   .add('Renders Breadcrumbs without Data', () => (
-    <div style={background}>
-      <Breadcrumbs
-        subject={emptyMock.subject}
-        grades={emptyMock.grades}
-        claim={emptyMock.claim}
-        target={emptyMock.target}
-      />
-    </div>
+    <Breadcrumbs
+      subject={emptyMock.subject}
+      grades={emptyMock.grades}
+      claim={emptyMock.claim}
+      target={emptyMock.target}
+    />
   ))
   .add('Renders Breadcrumbs with all data', () => (
-    <div style={background}>
-      <Breadcrumbs
-        subject={allDataMock.subject}
-        grades={allDataMock.grades}
-        claim={allDataMock.claim}
-        target={allDataMock.target}
-      />
-    </div>
+    <Breadcrumbs
+      subject={allDataMock.subject}
+      grades={allDataMock.grades}
+      claim={allDataMock.claim}
+      target={allDataMock.target}
+    />
   ));
 
 const breadcrumbDropDownProps: BreadcrumbDropDownProps = {

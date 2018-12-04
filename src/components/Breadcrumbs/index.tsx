@@ -39,6 +39,10 @@ function buildSearchUrl(subject?: string, grades?: string[], claim?: string): st
   return `/search?${queryString}`;
 }
 
+const background = {
+  backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
+};
+
 /**
  * Renders breadcrumbs starting with a home button. It renders the only props that exist
  * @export
@@ -66,37 +70,39 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
 
   return (
     <div>
-      <ul>
-        <li>
-          <Link to="/">
-            <span aria-label="Home">
-              <Home color={Colors.sbWhite} />
-            </span>
-          </Link>
-        </li>
-        {subject && (
-          <BreadcrumbLink link={buildSearchUrl(subject)} value={subject} label="Subject" />
-        )}
-        {subject && grades && (
-          <BreadcrumbLink
-            link={buildSearchUrl(subject, grades)}
-            value={grades[0] === 'HS' ? 'High School' : `Grade ${grades[0]}`}
-            label="Grade"
-          />
-        )}
-        {subject && grades && claim && (
-          <BreadcrumbLink
-            link={buildSearchUrl(subject, grades, claim)}
-            value={claim}
-            label="Claim"
-          />
-        )}
-        {subject && grades && claim && target && currentTarget && (
-          <div>
-            <BreadcrumbDropDown currentTarget={currentTarget} targets={targets} />
-          </div>
-        )}
-      </ul>
+      <div className="breadCrumbContainer">
+        <ul>
+          <li>
+            <Link to="/">
+              <span aria-label="Home">
+                <Home color={Colors.sbWhite} />
+              </span>
+            </Link>
+          </li>
+          {subject && (
+            <BreadcrumbLink link={buildSearchUrl(subject)} value={subject} label="Subject" />
+          )}
+          {subject && grades && (
+            <BreadcrumbLink
+              link={buildSearchUrl(subject, grades)}
+              value={grades[0] === 'HS' ? 'High School' : `Grade ${grades[0]}`}
+              label="Grade"
+            />
+          )}
+          {subject && grades && claim && (
+            <BreadcrumbLink
+              link={buildSearchUrl(subject, grades, claim)}
+              value={claim}
+              label="Claim"
+            />
+          )}
+          {subject && grades && claim && target && currentTarget && (
+            <div>
+              <BreadcrumbDropDown currentTarget={currentTarget} targets={targets} />
+            </div>
+          )}
+        </ul>
+      </div>
       <style jsx>{`
         * {
           margin: 0;
@@ -105,11 +111,7 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
         a {
           color: white;
         }
-        div {
-          display: flex;
-          justify-content: center;
-          opacity: 1;
-        }
+
         div ul {
           display: flex;
           flex-direction: row;
@@ -117,10 +119,8 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
           justify-content: left;
           align-items: center;
           list-style-type: none;
-          overflow: auto;
           width: ${Styles.targetContentWidth};
           font-family: ${Styles.sbSans};
-          border-bottom: 1px solid #66a1c1;
         }
         div ul li {
           display: flex;
@@ -128,6 +128,12 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
           align-items: center;
           width: 35px;
           height: 35px;
+        }
+
+        .breadCrumbContainer {
+          background-image: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter});
+          overflow: visible;
+          height: 36px;
         }
       `}</style>
     </div>

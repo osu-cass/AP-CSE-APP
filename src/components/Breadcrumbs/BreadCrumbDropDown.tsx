@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BreadcrumbLink, ListLink } from './BreadcrumbLink';
 import { ChevronUp, ChevronDown, AlignCenter } from 'react-feather';
+import { Colors } from '../../constants';
 
 export interface BreadcrumbDropDownProps {
   currentTarget: TargetLabel;
@@ -23,8 +24,7 @@ const style = {
 };
 
 const chevronStyle = {
-  marginLeft: '10px',
-  marginBottom: '4px'
+  marginLeft: '10px'
 };
 
 const menuStyle = {
@@ -65,25 +65,25 @@ export class BreadcrumbDropDown extends Component<
 
     return (
       <div className="root">
-        <div style={menuStyle}>
+        <div className="breadCrumbBar" style={menuStyle}>
           <li onClick={this.onClick} role="Menu">
             <div className="targetContainer" style={style}>
               <div className="targetLabel">{currentTarget.label}</div>
               {targets.length > 0 && chevron}
             </div>
           </li>
-          {expanded && (
-            <div className="listContainer">
-              {targets.map((t, index) => {
-                return (
-                  <div key={index + 1}>
-                    <ListLink link={`/target/${t.shortCode}`} value={t.label} label={t.label} />
-                  </div>
-                );
-              })}
-            </div>
-          )}
         </div>
+        {expanded && (
+          <div className="listContainer">
+            {targets.map((t, index) => {
+              return (
+                <div key={index + 1} className="listItem">
+                  <ListLink link={`/target/${t.shortCode}`} value={t.label} label={t.label} />
+                </div>
+              );
+            })}
+          </div>
+        )}
         <style jsx>{`
           .root {
             display: flex;
@@ -93,11 +93,9 @@ export class BreadcrumbDropDown extends Component<
             margin: 0;
             padding: 0;
           }
-          .listContainer {
-            padding-top: 10px;
-          }
+
           .targetLabel {
-            padding-top: 4px;
+            padding-top: 5px;
           }
           .targetContainer {
             width: 100%;
@@ -114,6 +112,7 @@ export class BreadcrumbDropDown extends Component<
             height: 32px;
             width: 32px;
             right: 20px;
+            margin-top: 5px;
             border-top: 1px solid #66a1c1;
             border-right: 1px solid #66a1c1;
             transform: rotate(45deg);
