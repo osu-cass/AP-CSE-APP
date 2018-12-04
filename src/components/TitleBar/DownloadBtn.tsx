@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Download } from 'react-feather';
+import { DownloadCloud } from 'react-feather';
 import { Colors } from '../../constants';
 import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
 
@@ -50,7 +50,7 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
       <div id="download-btn-container">
         <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
         <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
-          <Download />
+          <DownloadCloud />
           <style jsx>{`
             * {
               margin: 0;

@@ -34,7 +34,11 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
   targetDesc,
   downloadBtnProps
 }: TitleBarProps) => (
-  <div>
+  <div className="title-container">
+    <div className="item-spec">
+      Item <br />
+      Specification
+    </div>
     <ul>
       {claimTitle && (
         <li className="title">
@@ -56,29 +60,34 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
           <span>{targetDesc}</span>
         </li>
       )}
-      {downloadBtnProps && (
-        <li className="download">
-          <DownloadBtn
-            url={downloadBtnProps.url}
-            filename={downloadBtnProps.filename}
-            taskNames={downloadBtnProps.taskNames}
-          />
-        </li>
-      )}
     </ul>
+    {downloadBtnProps && (
+      <div className="download">
+        <DownloadBtn
+          url={downloadBtnProps.url}
+          filename={downloadBtnProps.filename}
+          taskNames={downloadBtnProps.taskNames}
+        />
+      </div>
+    )}
     <style jsx>{`
       * {
         margin: 0;
         padding: 0;
       }
-      div {
+      .title-container {
         display: flex;
         font-family: ${Styles.sbSans};
-        justify-content: center;
         padding: 0.7em 0;
         backgroundImage: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})
         width: '100%',
         flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+      }
+      div.title{
+        margin-left:50px;
       }
       div ul {
         display: flex;
@@ -86,7 +95,8 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         align-items: stretch;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
-        width: 100%;
+        width: 60%;
+        flex-grow:1;
       }
       div ul li {
         width: 100%;
@@ -98,18 +108,25 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         font-size: 18px;
         text-align: left;
       }
+      .item-spec{
+        font-size:24px;
+        margin-left:20px;
+        color:white;
+        flex-grow:1;
+      }
       .desc {
         width: 75%;
         min-width: 50px;
         padding-bottom: 15px;
         color: ${Colors.sbGrayLighter};
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 100;
         text-align: left;
       }
       .download {
-        margin-left: auto;
-        margin-top: auto;
+        margin-left:50px;
+        flex-grow:1;
+
       }
     `}</style>
   </div>
