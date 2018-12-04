@@ -10,7 +10,7 @@ import {
   parseSubItem,
   parseItem,
   parseNavProps
-} from './index';
+} from './Old';
 import {
   parsedSubItemMock,
   parsedTitleBarDataMock,
