@@ -1,15 +1,6 @@
 import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
-import ReactPDF, {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Font,
-  Image,
-  FlatList
-} from '@react-pdf/renderer';
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { ITarget } from '../../../models/target';
 
 interface ClarificationStyles {
