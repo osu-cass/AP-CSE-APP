@@ -73,7 +73,7 @@ const HomePageComponent = () => (
         width: 330px;
         text-align: center;
         border-radius: 5px;
-        border: 1px solid black;
+        border: 0px;
         cursor: pointer;
       }
       .element-wrapper {
