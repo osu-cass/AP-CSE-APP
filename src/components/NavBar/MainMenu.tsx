@@ -39,7 +39,7 @@ export const MainMenu: React.SFC = () => {
 
   return (
     <div className="main-menu">
-      <Link to="/home" style={noUnderline}>
+      <Link to="/" style={noUnderline}>
         <MenuItem name="Home">
           <Home {...iconStyle} />
         </MenuItem>
