@@ -1,16 +1,6 @@
 import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
-import ReactPDF, {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Font,
-  Image,
-  FlatList
-} from '@react-pdf/renderer';
-import { element } from 'prop-types';
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 interface OneColumnStyles {
   flexSingleRow: object;
@@ -20,15 +10,11 @@ interface OneColumnStyles {
 // tslint:disable-next-line:no-any no-unsafe-any
 const styles: OneColumnStyles = StyleSheet.create({
   flexSingleRow: {
-    flexDirection: 'row',
     borderTop: '1px solid black',
     borderRight: '2px solid black',
     borderLeft: '2px solid black',
     borderBottom: '1px solid black',
-    fontSize: 12
-  },
-  flexColumn: {
-    flexDirection: 'col',
+    fontSize: 12,
     padding: '5px',
     width: '100%'
   }
@@ -36,12 +22,17 @@ const styles: OneColumnStyles = StyleSheet.create({
 
 export interface OneColumnLayoutProps {
   text?: string;
+  center: boolean;
 }
 
-export const OneColumnLayout = ({ text }: OneColumnLayoutProps) => (
-  <View style={styles.flexSingleRow}>
-    <View style={styles.flexColumn}>
+// ADD BOLD TEXT
+
+export const OneColumnLayout = ({ text, center }: OneColumnLayoutProps) => {
+  const layout = center ? { textAlign: 'center', ...styles.flexSingleRow } : styles.flexSingleRow;
+
+  return (
+    <View style={layout}>
       <Text>{text}</Text>
     </View>
-  </View>
-);
+  );
+};
