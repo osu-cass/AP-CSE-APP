@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Download } from 'react-feather';
 import { Colors } from '../../constants';
+import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
 
 /**
  * interface for DownloadBtn
@@ -10,6 +11,13 @@ import { Colors } from '../../constants';
 export interface DownloadBtnProps {
   url: string;
   filename: string;
+  taskNames?: string[];
+}
+
+export interface DownloadBtnState {
+  url: string;
+  filename: string;
+  modal: DownloadModalProps;
 }
 
 /**
@@ -19,20 +27,44 @@ export interface DownloadBtnProps {
  * @param {string} url
  * @param {string} filename
  */
-export const DownloadBtn = ({ url, filename }: DownloadBtnProps) => (
-  <a aria-label="Download" href={url} download={filename}>
-    <Download />
-    <style jsx>{`
-      * {
-        margin: 0;
-        padding: 0;
+
+export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
+  constructor(props: DownloadBtnProps) {
+    super(props);
+    this.state = {
+      url: props.url,
+      filename: props.filename,
+      modal: {
+        taskModels: props.taskNames,
+        isOpen: false
       }
-      a {
-        color: ${Colors.sbGrayLighter};
-      }
-      a:hover {
-        color: ${Colors.sbGray};
-      }
-    `}</style>
-  </a>
-);
+    };
+  }
+  showHideModal = () => {
+    const curModal = this.state.modal;
+    curModal.isOpen = !this.state.modal.isOpen;
+    this.setState({ modal: curModal });
+  };
+  render() {
+    return (
+      <div id="download-btn-container">
+        <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
+        <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
+          <Download />
+          <style jsx>{`
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            a {
+              color: ${Colors.sbGrayLighter};
+            }
+            a:hover {
+              color: ${Colors.sbGray};
+            }
+          `}</style>
+        </a>
+      </div>
+    );
+  }
+}

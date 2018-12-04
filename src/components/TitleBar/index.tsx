@@ -58,7 +58,11 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       )}
       {downloadBtnProps && (
         <li className="download">
-          <DownloadBtn url={downloadBtnProps.url} filename={downloadBtnProps.filename} />
+          <DownloadBtn
+            url={downloadBtnProps.url}
+            filename={downloadBtnProps.filename}
+            taskNames={downloadBtnProps.taskNames}
+          />
         </li>
       )}
     </ul>

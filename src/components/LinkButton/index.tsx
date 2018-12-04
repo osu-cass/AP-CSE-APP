@@ -9,7 +9,7 @@ export interface LinkButtonProps {
 
 export const LinkButton: React.SFC<LinkButtonProps> = ({ url, text, icon }): JSX.Element => (
   <React.Fragment>
-    <a href={url} role="button">
+    <a href={url} role="button" rel="noopener noreferrer" target="_blank">
       {icon}
       <br />
       {text}
