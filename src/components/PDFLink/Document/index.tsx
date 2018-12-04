@@ -82,11 +82,11 @@ const TaskModel1: React.SFC<TaskModelProps> = ({ taskModels, claim }) => {
   const taskModelsJSX: JSX.Element[] = [];
   taskModels.forEach((element: ITaskModel, idx: number) =>
     taskModelsJSX.push(
-      <Page style={styles.page}>
-        <View style={styles.flexContainer} wrap>
-          <Head text={claim.title} />
-          <View wrap>
-            <TaskModel key={`${idx}`} content={element} />
+      <Page key={`${idx}`} style={styles.page}>
+        <View key={`${idx} - ${element.taskName}`} style={styles.flexContainer} wrap>
+          <Head key={`${element.taskName} - ${idx}`} text={claim.title} />
+          <View key={`${idx}-${idx}`} wrap>
+            <TaskModel key={`${idx}-${idx}-${idx}`} content={element} />
           </View>
         </View>
         <Text
