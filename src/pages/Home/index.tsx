@@ -66,7 +66,7 @@ const HomePageComponent = () => (
       }
       .single-button {
         margin-top: 20px;
-        background-color: #006298;
+        background-image: linear-gradient(to right, #006298 70%, #177c9e);
         color: white;
         font-size: 15px;
         padding: 6px;
