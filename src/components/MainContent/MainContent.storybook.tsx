@@ -5,7 +5,7 @@ import centered from '@storybook/addon-centered';
 import { Colors } from '../../constants';
 import { MainContent } from './index';
 import { targetMock } from './mocks/target';
-import { targetLayout, subItemLayout } from '../../pages/Target/Old';
+import { targetLayout, subItemLayout } from '../TargetComponents/Old';
 
 const style = {
   maxWidth: '800px',
