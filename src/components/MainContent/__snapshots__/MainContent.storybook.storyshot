@@ -48,9 +48,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Clarification
-                </h1>
+                </h2>
               </header>
               <p>
                 <span>
@@ -108,9 +108,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Standards
-                </h1>
+                </h2>
               </header>
               <ul>
                 <li>
@@ -271,18 +271,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Stimuli/Text Complexity
-                </h1>
+                </h2>
               </header>
               <div
                 name="stimuli-passage"
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Passage
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     <span>
@@ -324,9 +324,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Text Complexity
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     <span>
@@ -387,9 +387,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Accessibility Concerns
-                </h1>
+                </h2>
               </header>
               <p>
                 <span>
@@ -423,9 +423,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Evidence Required
-                </h1>
+                </h2>
               </header>
               <ol>
                 <li>
@@ -467,18 +467,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Task Model 1
-                </h1>
+                </h2>
               </header>
               <div
                 name="Task Model 1-Task Description"
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Task Description
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     <span>
@@ -568,9 +568,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Target Evidence Statements
-                    </h2>
+                    </h3>
                   </header>
                   <ol>
                     <li>
@@ -612,9 +612,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Appropriate Stems
-                    </h2>
+                    </h3>
                   </header>
                   <ul>
                     <li>
@@ -912,9 +912,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Appropriate Stems for Dual-Text Stimuli Only
-                    </h2>
+                    </h3>
                   </header>
                   <ul>
                     <li>
@@ -1024,9 +1024,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Scoring Rules
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     Correct response: 1 point; Incorrect response: 0 points
@@ -1068,18 +1068,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Task Model 2
-                </h1>
+                </h2>
               </header>
               <div
                 name="Task Model 2-Task Description"
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Task Description
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     <span>
@@ -1169,9 +1169,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Target Evidence Statements
-                    </h2>
+                    </h3>
                   </header>
                   <ol>
                     <li>
@@ -1213,9 +1213,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Appropriate Stems
-                    </h2>
+                    </h3>
                   </header>
                   <ul>
                     <li>
@@ -1397,9 +1397,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Appropriate Stems for Dual-Text Stimuli Only
-                    </h2>
+                    </h3>
                   </header>
                   <ul>
                     <li>
@@ -1517,9 +1517,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Scoring Rules
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     All responses correct: 1 point; Any other response combination: 0 points
@@ -1561,18 +1561,18 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Task Model 3
-                </h1>
+                </h2>
               </header>
               <div
                 name="Task Model 3-Task Description"
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Task Description
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     <span>
@@ -1670,9 +1670,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Target Evidence Statements
-                    </h2>
+                    </h3>
                   </header>
                   <ol>
                     <li>
@@ -1714,9 +1714,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Appropriate Stems
-                    </h2>
+                    </h3>
                   </header>
                   <ul>
                     <li>
@@ -1802,9 +1802,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Appropriate Stems for Dual-Text Stimuli Only
-                    </h2>
+                    </h3>
                   </header>
                   <ul>
                     <li>
@@ -1906,9 +1906,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Scoring Rules
-                    </h2>
+                    </h3>
                   </header>
                   <p>
                     Correct response: 1 point; Incorrect response: 0 points
@@ -1939,9 +1939,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
               >
                 <div>
                   <header>
-                    <h2>
+                    <h3>
                       Format Example
-                    </h2>
+                    </h3>
                   </header>
                   <span>
                     
@@ -2074,9 +2074,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Depth of Knowledge
-                </h1>
+                </h2>
               </header>
               <p>
                 <span>
@@ -2130,9 +2130,9 @@ exports[`Storyshots MainContent component Renders a main content with target dat
           >
             <div>
               <header>
-                <h1>
+                <h2>
                   Allowable Item Types
-                </h1>
+                </h2>
               </header>
             </div>
             <style
