@@ -9,6 +9,7 @@ import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
 import { TargetClient } from '../clients/target';
 import { Footer } from '../components/Footer';
+import { mediaQueries } from '../constants';
 
 export const App: React.SFC = () => {
   return (
@@ -40,6 +41,13 @@ export const App: React.SFC = () => {
           width: 100vw;
           display: flex;
           flex-direction: column;
+        }
+
+        @media ${mediaQueries.tabletAndMobile} {
+          html,
+          body {
+            position: fixed;
+          }
         }
       `}</style>
     </React.Fragment>
