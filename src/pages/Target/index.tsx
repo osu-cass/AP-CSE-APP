@@ -3,7 +3,7 @@ import { RouteComponentProps } from 'react-router';
 import { IClaim } from '../../models/claim';
 import { ITargetClient, TargetClient } from '../../clients/target';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
-import { TargetTitleBar } from './title';
+import { TargetTitleBar } from '../../components/TargetComponents/title';
 import { Message, ErrorMessage } from '../../components/Filter/Messages';
 import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
 
