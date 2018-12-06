@@ -12,15 +12,26 @@ export interface ContentSection {
 
 export interface GenericContentProps {
   contentSections: ContentSection[];
+  scrollOffset?: number;
+  rightContent?: React.ReactNode;
 }
 
-export const GenericContentPage: React.SFC<GenericContentProps> = ({ contentSections }) => (
+export const GenericContentPage: React.SFC<GenericContentProps> = ({
+  contentSections,
+  scrollOffset,
+  rightContent
+}) => (
   <React.Fragment>
     <MediaQuery minDeviceWidth={SizeBreaks.mobile + 1}>
-      <DesktopGenericContentPage contentSections={contentSections} />
+      <DesktopGenericContentPage
+        contentSections={contentSections}
+        scrollOffset={scrollOffset}
+        rightContent={rightContent}
+      />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={SizeBreaks.mobile}>
       <MobileGenericContentPage contentSections={contentSections} />
+      {rightContent}
     </MediaQuery>
   </React.Fragment>
 );

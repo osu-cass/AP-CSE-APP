@@ -80,6 +80,14 @@ const HomePageComponent = () => (
         width: 100%;
         flex-basis: 100%;
       }
+
+      :global(.home-image) {
+        background-image: url("${homeLogo}");
+        background-size: cover;
+        background-position: 0% 20%;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
     `}</style>
   </div>
 );
@@ -87,5 +95,6 @@ const HomePageComponent = () => (
 
 export const HomePage = genericLayout(
   <Title>Content Specification Explorer</Title>,
-  HomePageComponent
+  HomePageComponent,
+  'home-image'
 );

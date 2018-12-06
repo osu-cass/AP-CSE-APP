@@ -5,7 +5,11 @@ import { ItemProps } from '../ContentNav/Item';
 import { mediaQueries } from '../../constants';
 import { GenericContentProps } from '.';
 
-export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({ contentSections }) => {
+export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({
+  contentSections,
+  scrollOffset,
+  rightContent
+}) => {
   const sectionsJsx = contentSections.map((s, i) => {
     const subsectionsJsx = (s.subsections || []).map((ss, j) => (
       <Section name={`${s.title}-${ss.title}`} key={j}>
@@ -28,22 +32,41 @@ export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({ cont
   const itemProps: ItemProps[] = contentSections.map(section => ({
     name: section.title,
     referenceContainer: 'main-content-scroll',
-    scrollOffset: -115,
+    scrollOffset: scrollOffset || -115,
     subItems: (section.subsections || []).map(ss => ({
       name: `${section.title}-${ss.title}`,
       referenceContainer: 'main-content-scroll',
-      scrollOffset: -115
+      scrollOffset: scrollOffset || -115
     }))
   }));
 
+  const rightContentWrapper = rightContent ? (
+    <div className="right-container">
+      <div className="right-content">{rightContent}</div>
+      <style jsx>{`
+        .right-container {
+          min-width: 200px;
+        }
+
+        .right-content {
+          width: 200px;
+          position: fixed;
+        }
+      `}</style>
+    </div>
+  ) : (
+    undefined
+  );
+
   return (
     <div className="page-container">
-      <div className="nav-container">
-        <div id="help-content-nav">
+      <div className="left-container">
+        <div className="left-content">
           <ContentNav items={itemProps} referenceContainer="main-content-scroll" />
         </div>
       </div>
       <div id="help-content">{sectionsJsx}</div>
+      {rightContentWrapper}
       <style jsx>{`
         .page-container {
           display: flex;
@@ -52,29 +75,18 @@ export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({ cont
           height: 100%;
         }
 
-        .nav-container {
+        .left-container {
           min-width: 200px;
-          width: 200px;
         }
 
-        #help-content-nav {
+        .left-content {
           width: 200px;
           position: fixed;
         }
 
         #help-content {
           flex-grow: 1;
-        }
-
-        @media ${mediaQueries.mobile} {
-          .page-container {
-            flex-direction: column;
-            height: auto;
-          }
-
-          .nav-container {
-            display: none;
-          }
+          overflow-x: hidden;
         }
       `}</style>
     </div>
