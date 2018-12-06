@@ -21,7 +21,7 @@ describe('Filter', () => {
   it('calls callback on subject clicked', () => {
     const callback = jest.fn();
     const component = mount(
-      <Filter params={{ grades: [] }} options={filterOptionsGS} onUpdate={callback} />
+      <Filter params={{ grades: ['3', '4', '5'] }} options={filterOptionsGS} onUpdate={callback} />
     );
 
     component
