@@ -3,6 +3,7 @@ import homeLogo from '../../assets/images/home-page.jpg';
 import { Link } from 'react-router-dom';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
+import { Colors } from '../../constants';
 
 const importedLogo = homeLogo as string;
 
@@ -66,7 +67,7 @@ const HomePageComponent = () => (
       }
       .single-button {
         margin-top: 20px;
-        background-image: linear-gradient(to right, #006298 70%, #177c9e);
+        background-image: linear-gradient(to right, ${Colors.sbBlue} 70%, #177c9e);
         color: white;
         font-size: 15px;
         padding: 6px;
