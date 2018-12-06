@@ -5,11 +5,18 @@ import {
   FilterOptionModel,
   FilterType
 } from '@osu-cass/sb-components';
-import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
+import {
+  createFilters,
+  sanitizeParams,
+  paramsFromFilter,
+  paramsFromMobileFilter
+} from './FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { Colors, blueGradient, Styles } from '../../constants';
+import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants';
 import css from 'styled-jsx/css';
 import { Message } from './Messages';
+import MediaQuery from 'react-responsive';
+import { MobileFilter } from './MobileFilter';
 
 const globalFilterStyle = css`
   .filter-selection {
@@ -60,6 +67,7 @@ export interface CSEAdvancedFilterModels {
   targetFilter?: AdvancedFilterCategoryModel;
 }
 
+//tslint:disable
 export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
   const cleanParams = sanitizeParams(params, options);
 
@@ -75,6 +83,11 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
     onUpdate(newParams);
   };
 
+  const callbackMobile = (selectedOptions: string[], code: FilterType) => {
+    const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
+    onUpdate(newParams);
+  };
+
   const reset = () => {
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
   };
@@ -86,7 +99,7 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
         <AdvancedFilter
           key={claimFilter.label}
           {...claimFilter}
-          onFilterOptionSelect={(data: FilterOptionModel) => {
+          onFilterOptionSelect={(data?: FilterOptionModel) => {
             callback(claimFilter.code, data);
           }}
         />
@@ -105,7 +118,7 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
         <AdvancedFilter
           key={targetFilter.label}
           {...targetFilter}
-          onFilterOptionSelect={(data: FilterOptionModel) => {
+          onFilterOptionSelect={(data?: FilterOptionModel) => {
             callback(targetFilter.code, data);
           }}
         />
@@ -123,14 +136,14 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
         <AdvancedFilter
           key={gradeFilter.label}
           {...gradeFilter}
-          onFilterOptionSelect={(data: FilterOptionModel) => {
+          onFilterOptionSelect={(data?: FilterOptionModel) => {
             callback(gradeFilter.code, data);
           }}
         />
         <AdvancedFilter
           key={subjectFilter.label}
           {...subjectFilter}
-          onFilterOptionSelect={(data: FilterOptionModel) => {
+          onFilterOptionSelect={(data?: FilterOptionModel) => {
             callback(subjectFilter.code, data);
           }}
         />
@@ -146,6 +159,12 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
         .filter {
           display: flex;
           flex-wrap: wrap;
+        }
+
+        @media ${mediaQueries.mobile} {
+          .filter {
+            flex-direction: column;
+          }
         }
 
         .reset-container {

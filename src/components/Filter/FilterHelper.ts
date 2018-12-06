@@ -221,3 +221,28 @@ function paramsFromFilterChangeNotSelected(
 
   return newParams;
 }
+
+export function paramsFromMobileFilter(
+  currentParams: CSEFilterParams,
+  change: string[],
+  changeType: FilterType
+): CSEFilterParams {
+  const newParams = { ...currentParams };
+  switch (changeType) {
+    case FilterType.Grade:
+      newParams.grades = change;
+      break;
+    case FilterType.Subject:
+      newParams.subject = change.length > 0 ? change[0] : undefined;
+      break;
+    case FilterType.Claim:
+      newParams.claim = change.length > 0 ? change[0] : undefined;
+      break;
+    case FilterType.Target:
+      newParams.target = change.length > 0 ? change[0] : undefined;
+      break;
+    default:
+  }
+
+  return newParams;
+}

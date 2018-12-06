@@ -4,7 +4,7 @@ import centered from '@storybook/addon-centered';
 
 import { DownloadModal } from '.';
 
-storiesOf('DownloadModal', module)
+storiesOf('DownloadModal DontTest', module)
   .addDecorator(centered)
   .add('Download Task Model Multi-Select', () => (
     <DownloadModal

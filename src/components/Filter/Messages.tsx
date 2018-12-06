@@ -18,6 +18,7 @@ export const ErrorMessage: React.SFC = ({ children }) => (
     {children}
     <style jsx>{`
       .error {
+        margin: ${Styles.paddingUnit} 0;
         color: ${Colors.sbError};
         text-align: center;
       }
