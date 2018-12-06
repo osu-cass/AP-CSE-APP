@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
-import { Filter } from './';
+import { Filter } from '.';
 import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';

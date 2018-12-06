@@ -67,7 +67,8 @@ export interface CSEAdvancedFilterModels {
   targetFilter?: AdvancedFilterCategoryModel;
 }
 
-export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
+//tslint:disable
+export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
   const cleanParams = sanitizeParams(params, options);
 
   const {

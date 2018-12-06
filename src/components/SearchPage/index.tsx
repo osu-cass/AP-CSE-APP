@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchBar } from '../SearchBar';
 import { FilterItemList } from '../FilterItemList';
-import { Filter } from '../Filter';
+import { Filter } from '../Filter/DesktopFilter';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { Styles } from '../../constants';
 import { FilterContianer } from '../FilterContainer';
