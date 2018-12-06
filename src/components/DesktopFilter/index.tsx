@@ -16,7 +16,7 @@ import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../co
 import css from 'styled-jsx/css';
 import { Message } from './Messages';
 import MediaQuery from 'react-responsive';
-import { MobileFilter } from './MobileFilter';
+import { MobileFilter } from '../MobileFilter/MobileFilter';
 
 const globalFilterStyle = css`
   .filter-selection {
@@ -68,7 +68,7 @@ export interface CSEAdvancedFilterModels {
 }
 
 //tslint:disable
-export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
+export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
   const cleanParams = sanitizeParams(params, options);
 
   const {
