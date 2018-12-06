@@ -74,7 +74,7 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
         <ul>
           <li>
             <Link to="/">
-              <span aria-label="Home">
+              <span aria-label="Home" className="home">
                 <Home color={Colors.sbWhite} />
               </span>
             </Link>
@@ -117,15 +117,12 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: left;
-          align-items: center;
           list-style-type: none;
           width: ${Styles.targetContentWidth};
           font-family: ${Styles.sbSans};
         }
         div ul li {
           display: flex;
-          justify-content: center;
-          align-items: center;
           width: 35px;
           height: 35px;
         }
