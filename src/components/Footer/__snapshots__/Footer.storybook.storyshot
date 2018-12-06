@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Footer default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="footer-container"
+  >
+    <div
+      className="footer-sub-container"
+    >
+      <div
+        className="copyright"
+      >
+        © The Regents of the University of California.
+      </div>
+      <div
+        className="links"
+      >
+        <a
+          href="//www.smarterbalanced.org"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Smarter Balanced Assessment Consortium
+        </a>
+        <a
+          href="//www.smarterbalanced.org/privacy-policy/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Privacy Policy
+        </a>
+      </div>
+    </div>
+    <style
+      jsx={true}
+    >
+      
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
+        .footer-container {
+          font-family: PT Sans;
+          background-color: #ebebeb;
+          display: flex;
+          flex-flow: row wrap;
+          min-height: 50px;
+          align-content: center;
+          align-items: center;
+          justify-content: center;
+          letter-spacing: 0;
+          bottom: 0;
+        }
+
+        .footer-sub-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 95%;
+        }
+
+        .copyright {
+          flex-grow: 2;
+          justify-content: flex-start;
+        }
+
+        .links {
+          display: flex;
+          flex-grow: 1;
+          justify-content: space-around;
+        }
+
+        .links &gt; a,
+        .links &gt; a:visited {
+          color: #007393;
+        }
+
+        .links &gt; a:hover,
+        .links &gt; a:active {
+          color: #111213;
+          text-decoration: none;
+        }
+      
+    </style>
+  </div>
+</div>
+`;

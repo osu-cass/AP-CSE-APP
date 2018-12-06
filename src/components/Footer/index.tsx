@@ -2,24 +2,20 @@ import * as React from 'react';
 
 export const Footer: React.SFC = () => {
   return (
-    <>
-      <div className="footer-container">
-        <div className="footer-sub-container">
-          <div className="copyright">
-            <p>© The Regents of the University of California.</p>
-          </div>
-          <div className="links">
-            <a target="_blank" rel="noopener noreferrer" href="//www.smarterbalanced.org">
-              Smarter Balanced Assessment Consortium
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="//www.smarterbalanced.org/privacy-policy/"
-            >
-              Privacy Policy
-            </a>
-          </div>
+    <div className="footer-container">
+      <div className="footer-sub-container">
+        <div className="copyright">© The Regents of the University of California.</div>
+        <div className="links">
+          <a target="_blank" rel="noopener noreferrer" href="//www.smarterbalanced.org">
+            Smarter Balanced Assessment Consortium
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="//www.smarterbalanced.org/privacy-policy/"
+          >
+            Privacy Policy
+          </a>
         </div>
       </div>
       <style jsx>{`
@@ -56,7 +52,6 @@ export const Footer: React.SFC = () => {
         .links {
           display: flex;
           flex-grow: 1;
-          flex-shrink: 1;
           justify-content: space-around;
         }
 
@@ -71,6 +66,6 @@ export const Footer: React.SFC = () => {
           text-decoration: none;
         }
       `}</style>
-    </>
+    </div>
   );
 };

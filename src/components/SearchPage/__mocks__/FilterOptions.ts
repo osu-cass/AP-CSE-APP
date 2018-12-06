@@ -2,7 +2,7 @@ import {
   FilterOptionsGradesSubjects,
   FilterOptionsClaims,
   FilterOptionsTargets
-} from '../../../clients/search';
+} from '../../../clients/filter';
 
 export const noParams: FilterOptionsGradesSubjects = {
   subject: [

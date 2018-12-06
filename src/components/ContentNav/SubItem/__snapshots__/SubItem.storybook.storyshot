@@ -50,11 +50,9 @@ exports[`Storyshots ContentNav/SubItem SubItem 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -117,11 +115,9 @@ exports[`Storyshots ContentNav/SubItem SubItem Active 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;

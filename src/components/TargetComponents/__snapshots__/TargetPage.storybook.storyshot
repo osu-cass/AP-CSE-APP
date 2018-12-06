@@ -29,11 +29,7 @@ exports[`Storyshots Target Page Renders a nothing 1`] = `
           "maxHeight": "100%",
         }
       }
-    >
-      <div>
-        Loading data...
-      </div>
-    </div>
+    />
   </div>
 </div>
 `;
@@ -67,11 +63,7 @@ exports[`Storyshots Target Page Renders a target 1`] = `
           "maxHeight": "100%",
         }
       }
-    >
-      <div>
-        Loading data...
-      </div>
-    </div>
+    />
   </div>
 </div>
 `;
