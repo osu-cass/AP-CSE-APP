@@ -11,7 +11,7 @@ export interface MobileFilterProps extends AdvancedFilterCategoryModel {
   onMobileSelect: (selectedOptions: string[], code: FilterType) => void;
 }
 
-export const MobileFilter: React.SFC<MobileFilterProps> = ({
+export const MobileFilterItem: React.SFC<MobileFilterProps> = ({
   onMobileSelect,
   filterOptions,
   isMultiSelect,
