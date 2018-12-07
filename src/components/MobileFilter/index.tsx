@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
-import { MobileFilterItem } from '../MobileFilterItem';
+import { MobileAdvancedFilter } from '../MobileAdvancedFilter';
 import { Message } from '../FilterMessage';
 import {
   sanitizeParams,
@@ -14,8 +14,9 @@ import {
   FilterOptionModel,
   AdvancedFilter
 } from '@osu-cass/sb-components';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
-export const MobileAdvancedFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
+export const MobileFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
   const cleanParams = sanitizeParams(params, options);
   const {
     gradeFilter,
@@ -40,7 +41,7 @@ export const MobileAdvancedFilter: React.SFC<FilterProps> = ({ options, params, 
     let content: JSX.Element | undefined;
     if (claimFilter) {
       content = (
-        <MobileFilterItem
+        <MobileAdvancedFilter
           key={claimFilter.label}
           {...claimFilter}
           onMobileSelect={onMobileSelect}
@@ -58,7 +59,7 @@ export const MobileAdvancedFilter: React.SFC<FilterProps> = ({ options, params, 
     let content: JSX.Element | undefined;
     if (claimFilter && targetFilter) {
       content = (
-        <MobileFilterItem
+        <MobileAdvancedFilter
           key={targetFilter.label}
           {...targetFilter}
           onMobileSelect={onMobileSelect}
@@ -81,14 +82,14 @@ export const MobileAdvancedFilter: React.SFC<FilterProps> = ({ options, params, 
           onFilterOptionSelect={onSubjectUpdate}
           isMultiSelect={false}
         />
-        <MobileFilterItem
+        <MobileAdvancedFilter
           key={gradeFilter.label}
           {...gradeFilter}
           isMultiSelect={true}
           onMobileSelect={onMobileSelect}
         />
-        {renderClaimFilter}
-        {renderTargetFilter}
+        {renderClaimFilter()}
+        {renderTargetFilter()}
       </div>
       <style jsx>{`
         .filter {
@@ -107,3 +108,5 @@ export const MobileAdvancedFilter: React.SFC<FilterProps> = ({ options, params, 
     </Fragment>
   );
 };
+
+export const MobileFilterWrapped = mediaQueryWrapper(MobileFilter, MobileBreakSize);
