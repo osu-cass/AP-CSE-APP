@@ -17,7 +17,7 @@ export interface FilterContainerState {
  * @class FilterContianer
  * @extends {React.Component<FilterContainerProps, FilterContainerState>}
  */
-export class FilterContianer extends React.Component<FilterContainerProps, FilterContainerState> {
+export class FilterContainer extends React.Component<FilterContainerProps, FilterContainerState> {
   constructor(props: FilterContainerProps) {
     super(props);
 

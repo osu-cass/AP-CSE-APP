@@ -1,24 +1,26 @@
 import React from 'react';
-import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
 import { MobileFilter } from '.';
-import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from '../DesktopFilter/__mocks__';
 import { storiesOf, addDecorator } from '@storybook/react';
 import centered from '@storybook/addon-centered';
-import { withViewport } from '@storybook/addon-viewport';
+import { filterModelGS, filterModelGSC, filterModelCSCT } from './mocks';
+import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 
-const callback = (newFilter: CSEFilterParams) => {
+const callback = (newFilter: string[], code: FilterType) => {
   // tslint:disable-next-line:no-console
   console.log('New filter params:', JSON.stringify(newFilter));
 };
 
+const reset = () => {
+  // tslint:disable-next-line:no-console
+  console.log('Filter Reset');
+};
+
 storiesOf('Mobile Filter', module)
   .addDecorator(centered)
-  .add('default', () => (
-    <MobileFilter params={{ grades: [] }} options={filterOptionsGS} onUpdate={callback} />
-  ))
+  .add('default', () => <MobileFilter filters={filterModelGS} onUpdate={callback} reset={reset} />)
   .add('with claims', () => (
-    <MobileFilter params={{ grades: [] }} options={filterOptionsGSC} onUpdate={callback} />
+    <MobileFilter filters={filterModelGSC} onUpdate={callback} reset={reset} />
   ))
   .add('with targets', () => (
-    <MobileFilter params={{ grades: [] }} options={filterOptionsGSCT} onUpdate={callback} />
+    <MobileFilter filters={filterModelCSCT} onUpdate={callback} reset={reset} />
   ));
