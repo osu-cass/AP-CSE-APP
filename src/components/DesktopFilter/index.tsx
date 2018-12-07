@@ -13,11 +13,12 @@ import {
 } from '../FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants';
-import css from 'styled-jsx/css';
 import { Message } from '../FilterMessage';
-import {FilterProps, CSEAdvancedFilterModels} from '../FilterProps';
+import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
+import css from 'styled-jsx/css';
+import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
 
-const globalFilterStyle = css`
+export const globalFilterStyle = css`
   .filter-selection {
     margin-right: ${Styles.paddingUnit};
   }
@@ -52,7 +53,6 @@ const globalFilterStyle = css`
     margin-left: 4px;
   }
 `;
-
 
 //tslint:disable
 export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
@@ -148,12 +148,6 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdat
           flex-wrap: wrap;
         }
 
-        @media ${mediaQueries.mobile} {
-          .filter {
-            flex-direction: column;
-          }
-        }
-
         .reset-container {
           text-align: right;
         }
@@ -164,3 +158,5 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdat
     </Fragment>
   );
 };
+
+export const DesktopFilterWrapped = mediaQueryWrapper(DesktopFilter, DesktopBreakSize);
