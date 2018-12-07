@@ -84,7 +84,7 @@ const gradeFilterCategory: AdvancedFilterCategoryModel = {
 const subjectFilterCategory: AdvancedFilterCategoryModel = {
   code: FilterType.Grade,
   disabled: false,
-  label: 'Grade',
+  label: 'Subject',
   filterOptions: subjectOptionModel,
   isMultiSelect: true,
   displayAllButton: false
@@ -93,7 +93,7 @@ const subjectFilterCategory: AdvancedFilterCategoryModel = {
 const claimFilterCategory: AdvancedFilterCategoryModel = {
   code: FilterType.Grade,
   disabled: false,
-  label: 'Grade',
+  label: 'Claim',
   filterOptions: claimOptionModel,
   isMultiSelect: true,
   displayAllButton: false
@@ -102,7 +102,7 @@ const claimFilterCategory: AdvancedFilterCategoryModel = {
 const targetFilterCategory: AdvancedFilterCategoryModel = {
   code: FilterType.Grade,
   disabled: false,
-  label: 'Grade',
+  label: 'Target',
   filterOptions: targetOptionModel,
   isMultiSelect: true,
   displayAllButton: false

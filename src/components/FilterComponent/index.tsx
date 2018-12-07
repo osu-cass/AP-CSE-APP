@@ -11,7 +11,12 @@ import { MobileFilter, MobileFilterWrapped } from '../MobileFilter';
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { FilterContainer } from '../FilterContainer';
 
-export const FilterComponent: React.SFC<FilterComponentProps> = ({ options, params, onUpdate }) => {
+export const FilterComponent: React.SFC<FilterComponentProps> = ({
+  options,
+  params,
+  onUpdate,
+  expanded
+}) => {
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
 
@@ -37,7 +42,7 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({ options, para
 
   return (
     <Fragment>
-      <FilterContainer>{content}</FilterContainer>
+      <FilterContainer expanded={expanded}>{content}</FilterContainer>
     </Fragment>
   );
 };

@@ -9,6 +9,7 @@ export interface FilterComponentProps {
   options: CSEFilterOptions;
   params: CSEFilterParams;
   onUpdate: (filter: CSEFilterParams) => void;
+  expanded?: boolean;
 }
 
 export interface FilterProps {
