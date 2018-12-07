@@ -54,30 +54,13 @@ export const globalFilterStyle = css`
   }
 `;
 
-//tslint:disable
-export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
-  const cleanParams = sanitizeParams(params, options);
-
+export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset }) => {
   const {
-    gradeFilter,
     subjectFilter,
+    gradeFilter,
     claimFilter,
     targetFilter
-  }: CSEAdvancedFilterModels = createFilters(options, cleanParams);
-
-  const callback = (filterType: FilterType, data?: FilterOptionModel) => {
-    const newParams = paramsFromFilter(cleanParams, filterType, data);
-    onUpdate(newParams);
-  };
-
-  const callbackMobile = (selectedOptions: string[], code: FilterType) => {
-    const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
-    onUpdate(newParams);
-  };
-
-  const reset = () => {
-    onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
-  };
+  }: CSEAdvancedFilterModels = filters;
 
   const renderClaimFilter = (): JSX.Element | undefined => {
     let content: JSX.Element | undefined;
@@ -87,7 +70,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdat
           key={claimFilter.label}
           {...claimFilter}
           onFilterOptionSelect={(data?: FilterOptionModel) => {
-            callback(claimFilter.code, data);
+            onUpdate(claimFilter.code, data);
           }}
         />
       );
@@ -106,7 +89,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdat
           key={targetFilter.label}
           {...targetFilter}
           onFilterOptionSelect={(data?: FilterOptionModel) => {
-            callback(targetFilter.code, data);
+            onUpdate(targetFilter.code, data);
           }}
         />
       );
@@ -124,14 +107,14 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdat
           key={gradeFilter.label}
           {...gradeFilter}
           onFilterOptionSelect={(data?: FilterOptionModel) => {
-            callback(gradeFilter.code, data);
+            onUpdate(gradeFilter.code, data);
           }}
         />
         <AdvancedFilter
           key={subjectFilter.label}
           {...subjectFilter}
           onFilterOptionSelect={(data?: FilterOptionModel) => {
-            callback(subjectFilter.code, data);
+            onUpdate(subjectFilter.code, data);
           }}
         />
         {renderClaimFilter()}

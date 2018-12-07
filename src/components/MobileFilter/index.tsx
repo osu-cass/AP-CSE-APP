@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
+import { MobileFilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import { MobileAdvancedFilter } from '../MobileAdvancedFilter';
 import { Message } from '../FilterMessage';
 import {
@@ -16,24 +16,17 @@ import {
 } from '@osu-cass/sb-components';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
-export const MobileFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
-  const cleanParams = sanitizeParams(params, options);
+export const MobileFilter: React.SFC<MobileFilterProps> = ({ filters, onUpdate, reset }) => {
   const {
     gradeFilter,
     subjectFilter,
     claimFilter,
     targetFilter
-  }: CSEAdvancedFilterModels = createFilters(options, cleanParams);
-
-  const onMobileSelect = (selectOptions: string[], code: FilterType) => {
-    const newParams = paramsFromMobileFilter(cleanParams, selectOptions, code);
-    onUpdate(newParams);
-  };
+  }: CSEAdvancedFilterModels = filters;
 
   const onSubjectUpdate = (data?: FilterOptionModel) => {
     if (data) {
-      const newParams = paramsFromFilter(params, FilterType.Subject, data);
-      onUpdate(params);
+      onUpdate([data.key], subjectFilter.code);
     }
   };
 
@@ -44,7 +37,7 @@ export const MobileFilter: React.SFC<FilterProps> = ({ options, params, onUpdate
         <MobileAdvancedFilter
           key={claimFilter.label}
           {...claimFilter}
-          onMobileSelect={onMobileSelect}
+          onMobileSelect={onUpdate}
           isMultiSelect={false}
         />
       );
@@ -62,7 +55,7 @@ export const MobileFilter: React.SFC<FilterProps> = ({ options, params, onUpdate
         <MobileAdvancedFilter
           key={targetFilter.label}
           {...targetFilter}
-          onMobileSelect={onMobileSelect}
+          onMobileSelect={onUpdate}
           isMultiSelect={false}
         />
       );
@@ -86,10 +79,15 @@ export const MobileFilter: React.SFC<FilterProps> = ({ options, params, onUpdate
           key={gradeFilter.label}
           {...gradeFilter}
           isMultiSelect={true}
-          onMobileSelect={onMobileSelect}
+          onMobileSelect={onUpdate}
         />
         {renderClaimFilter()}
         {renderTargetFilter()}
+        <div className="reset-container">
+          <button className="btn" onClick={reset}>
+            Reset
+          </button>
+        </div>
       </div>
       <style jsx>{`
         .filter {

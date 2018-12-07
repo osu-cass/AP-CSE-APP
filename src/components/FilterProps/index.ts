@@ -1,16 +1,31 @@
-import {CSEFilterOptions, CSEFilterParams} from '../../models//filter';
-import {AdvancedFilterCategoryModel} from '@osu-cass/sb-components';
+import { CSEFilterOptions, CSEFilterParams } from '../../models//filter';
+import {
+  AdvancedFilterCategoryModel,
+  FilterType,
+  FilterOptionModel
+} from '@osu-cass/sb-components';
 
-
-export interface FilterProps {
-    options: CSEFilterOptions;
-    params: CSEFilterParams;
-    onUpdate: (filter: CSEFilterParams) => void;
+export interface FilterComponentProps {
+  options: CSEFilterOptions;
+  params: CSEFilterParams;
+  onUpdate: (filter: CSEFilterParams) => void;
 }
 
-  export interface CSEAdvancedFilterModels {
-    gradeFilter: AdvancedFilterCategoryModel;
-    subjectFilter: AdvancedFilterCategoryModel;
-    claimFilter?: AdvancedFilterCategoryModel;
-    targetFilter?: AdvancedFilterCategoryModel;
+export interface FilterProps {
+  filters: CSEAdvancedFilterModels;
+  onUpdate: (code: FilterType, filter?: FilterOptionModel) => void;
+  reset: () => void;
+}
+
+export interface MobileFilterProps {
+  filters: CSEAdvancedFilterModels;
+  onUpdate: (selectedOptions: string[], code: FilterType) => void;
+  reset: () => void;
+}
+
+export interface CSEAdvancedFilterModels {
+  gradeFilter: AdvancedFilterCategoryModel;
+  subjectFilter: AdvancedFilterCategoryModel;
+  claimFilter?: AdvancedFilterCategoryModel;
+  targetFilter?: AdvancedFilterCategoryModel;
 }
