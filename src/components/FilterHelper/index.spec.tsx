@@ -1,4 +1,4 @@
-import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
+import { createFilters, sanitizeParams, paramsFromFilter } from '.';
 import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 import {
   FilterType,

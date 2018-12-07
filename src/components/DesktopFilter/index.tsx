@@ -10,13 +10,12 @@ import {
   sanitizeParams,
   paramsFromFilter,
   paramsFromMobileFilter
-} from './FilterHelper';
+} from '../FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants';
 import css from 'styled-jsx/css';
-import MediaQuery from 'react-responsive';
-import { MobileFilter } from './MobileFilter';
-import { Message } from './Messages';
+import { Message } from '../FilterMessage';
+import {FilterProps, CSEAdvancedFilterModels} from '../FilterProps';
 
 const globalFilterStyle = css`
   .filter-selection {
@@ -54,18 +53,6 @@ const globalFilterStyle = css`
   }
 `;
 
-export interface FilterProps {
-  options: CSEFilterOptions;
-  params: CSEFilterParams;
-  onUpdate: (filter: CSEFilterParams) => void;
-}
-
-export interface CSEAdvancedFilterModels {
-  gradeFilter: AdvancedFilterCategoryModel;
-  subjectFilter: AdvancedFilterCategoryModel;
-  claimFilter?: AdvancedFilterCategoryModel;
-  targetFilter?: AdvancedFilterCategoryModel;
-}
 
 //tslint:disable
 export const DesktopFilter: React.SFC<FilterProps> = ({ options, params, onUpdate }) => {
