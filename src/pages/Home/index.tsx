@@ -3,6 +3,7 @@ import homeLogo from '../../assets/images/home-page.jpg';
 import { Link } from 'react-router-dom';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
+import { Colors } from '../../constants';
 
 const importedLogo = homeLogo as string;
 
@@ -66,14 +67,14 @@ const HomePageComponent = () => (
       }
       .single-button {
         margin-top: 20px;
-        background-color: #006298;
+        background-image: linear-gradient(to right, ${Colors.sbBlue} 70%, #177c9e);
         color: white;
         font-size: 15px;
         padding: 6px;
         width: 330px;
         text-align: center;
         border-radius: 5px;
-        border: 1px solid black;
+        border: 0px;
         cursor: pointer;
       }
       .element-wrapper {

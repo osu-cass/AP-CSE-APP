@@ -14,10 +14,12 @@ exports[`Storyshots Search Page default 1`] = `
     <input
       aria-label="Search"
       className="field"
+      onBlur={[Function]}
       onChange={[Function]}
+      onClick={[Function]}
       onKeyPress={[Function]}
       type="search"
-      value=""
+      value="Search..."
     />
     <button
       aria-label="Submit"
@@ -145,10 +147,12 @@ exports[`Storyshots Search Page error 1`] = `
     <input
       aria-label="Search"
       className="field"
+      onBlur={[Function]}
       onChange={[Function]}
+      onClick={[Function]}
       onKeyPress={[Function]}
       type="search"
-      value=""
+      value="Search..."
     />
     <button
       aria-label="Submit"
