@@ -10,7 +10,7 @@ const callback = (newFilter: CSEFilterParams) => {
   console.log('New filter params:', JSON.stringify(newFilter));
 };
 
-storiesOf('Filter', module)
+storiesOf('Desktop Filter', module)
   .addDecorator(centered)
   .add('default', () => (
     <DesktopFilter params={{ grades: [] }} options={filterOptionsGS} onUpdate={callback} />
