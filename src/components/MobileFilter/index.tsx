@@ -1,5 +1,5 @@
-import {FilterProps} from 
+import {FilterProps, CSEAdvancedFilterModels} from '../FilterProps';
 
-export const mobileAdvancedFilter: React.SFC<FilterProps> = ({options, params, onUpdate}) => {
-
-}
+export const MobileAdvancedFilter: React.SFC<FilterProps> = ({options, params, onUpdate}) => {
+    return (<div></div>);
+};
