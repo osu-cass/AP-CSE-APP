@@ -35,7 +35,12 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 
   const content = (
     <Fragment>
-      <MobileFilterWrapped filters={filters} onUpdate={onUpdateMobile} reset={reset} />
+      <MobileFilterWrapped
+        filters={filters}
+        onUpdate={onUpdateMobile}
+        onSubjectUpdate={onUpdateDesktop}
+        reset={reset}
+      />
       <DesktopFilterWrapped filters={filters} onUpdate={onUpdateDesktop} reset={reset} />
     </Fragment>
   );

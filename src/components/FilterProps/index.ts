@@ -21,6 +21,7 @@ export interface FilterProps {
 export interface MobileFilterProps {
   filters: CSEAdvancedFilterModels;
   onUpdate: (selectedOptions: string[], code: FilterType) => void;
+  onSubjectUpdate: (code: FilterType, filter?: FilterOptionModel) => void;
   reset: () => void;
 }
 

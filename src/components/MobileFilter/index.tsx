@@ -15,20 +15,22 @@ import {
   AdvancedFilter
 } from '@osu-cass/sb-components';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { globalFilterStyle } from '../DesktopFilter';
+import css from 'styled-jsx/css';
 
-export const MobileFilter: React.SFC<MobileFilterProps> = ({ filters, onUpdate, reset }) => {
+// tslint:disable
+export const MobileFilter: React.SFC<MobileFilterProps> = ({
+  filters,
+  onUpdate,
+  onSubjectUpdate,
+  reset
+}) => {
   const {
     gradeFilter,
     subjectFilter,
     claimFilter,
     targetFilter
   }: CSEAdvancedFilterModels = filters;
-
-  const onSubjectUpdate = (data?: FilterOptionModel) => {
-    if (data) {
-      onUpdate([data.key], subjectFilter.code);
-    }
-  };
 
   const renderClaimFilter = (): JSX.Element | undefined => {
     let content: JSX.Element | undefined;
@@ -72,7 +74,9 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({ filters, onUpdate, 
         <AdvancedFilter
           key={subjectFilter.label}
           {...subjectFilter}
-          onFilterOptionSelect={onSubjectUpdate}
+          onFilterOptionSelect={(data?: FilterOptionModel) => {
+            onSubjectUpdate(subjectFilter.code, data);
+          }}
           isMultiSelect={false}
         />
         <MobileAdvancedFilter
@@ -90,11 +94,6 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({ filters, onUpdate, 
         </div>
       </div>
       <style jsx>{`
-        .filter {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
         .mobileFilter {
           flex-direction: column;
         }
@@ -103,6 +102,9 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({ filters, onUpdate, 
           text-align: right;
         }
       `}</style>
+      <style jsx global>
+        {globalFilterStyle}
+      </style>
     </Fragment>
   );
 };
