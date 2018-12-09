@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { DesktopFilter } from '.';
-import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
+import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from '../MobileFilter/mocks';
 
 describe('Filter', () => {
   it('calls callback on reset button clicked', () => {

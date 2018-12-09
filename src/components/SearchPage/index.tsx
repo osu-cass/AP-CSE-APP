@@ -4,7 +4,7 @@ import { FilterItemList } from '../FilterItemList';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { Styles } from '../../constants';
 import { FilterContainer } from '../FilterContainer';
-import { Message, ErrorMessage } from '../FilterMessage';
+import { Message, ErrorMessage } from '../Message';
 import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
 import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
