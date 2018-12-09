@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { MobileFilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import { MobileAdvancedFilter } from '../MobileAdvancedFilter';
-import { Message } from '../FilterMessage';
+import { Message } from '../Message';
 import {
   sanitizeParams,
   createFilters,
@@ -51,8 +51,9 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({
   };
 
   const renderTargetFilter = (): JSX.Element | undefined => {
-    let content: JSX.Element | undefined;
+    let content: JSX.Element;
     if (claimFilter && targetFilter) {
+      console.log(targetFilter);
       content = (
         <MobileAdvancedFilter
           key={targetFilter.label}

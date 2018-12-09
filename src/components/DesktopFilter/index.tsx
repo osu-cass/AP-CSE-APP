@@ -13,7 +13,7 @@ import {
 } from '../FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants';
-import { Message } from '../FilterMessage';
+import { Message } from '../Message';
 import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import css from 'styled-jsx/css';
 import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
