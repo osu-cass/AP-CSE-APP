@@ -4,7 +4,7 @@ import { IClaim } from '../../models/claim';
 import { ITargetClient, TargetClient } from '../../clients/target';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { TargetTitleBar } from '../../components/TargetComponents/title';
-import { Message, ErrorMessage } from '../../components/Filter/Messages';
+import { Message, ErrorMessage } from '../../components/Message';
 import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
 
 export interface TargetMatchParams {

@@ -1,5 +1,9 @@
 import { SearchPageProps } from '..';
-import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from '../../Filter/__mocks__';
+import {
+  filterOptionsGS,
+  filterOptionsGSC,
+  filterOptionsGSCT
+} from '../../FilterComponent/__mocks__';
 import { FilterItemProps } from '../../FilterItem';
 import { IClaim } from '../../../models/claim';
 import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
