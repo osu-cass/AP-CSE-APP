@@ -5,10 +5,17 @@ import {
   FilterOptionModel,
   FilterType
 } from '@osu-cass/sb-components';
-import { createFilters, sanitizeParams, paramsFromFilter } from './FilterHelper';
+import {
+  createFilters,
+  sanitizeParams,
+  paramsFromFilter,
+  paramsFromMobileFilter
+} from './FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { Colors, blueGradient, Styles } from '../../constants';
+import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants';
 import css from 'styled-jsx/css';
+import MediaQuery from 'react-responsive';
+import { MobileFilter } from './MobileFilter';
 
 const globalFilterStyle = css`
   .filter-selection {
@@ -72,19 +79,30 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
     onUpdate(newParams);
   };
 
+  const callbackMobile = (selectedOptions: string[], code: FilterType) => {
+    const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
+    onUpdate(newParams);
+  };
+
   const reset = () => {
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
   };
 
   const filterJsx = [gradeFilter, subjectFilter, claimFilter, targetFilter].map((f, i) =>
     f ? (
-      <AdvancedFilter
-        key={i}
-        {...f}
-        onFilterOptionSelect={data => {
-          callback(f.code, data);
-        }}
-      />
+      <Fragment key={i}>
+        <MediaQuery maxWidth={SizeBreaks.mobile}>
+          <MobileFilter {...f} onMobileSelect={callbackMobile} />
+        </MediaQuery>
+        <MediaQuery minWidth={SizeBreaks.mobile + 1}>
+          <AdvancedFilter
+            {...f}
+            onFilterOptionSelect={data => {
+              callback(f.code, data);
+            }}
+          />
+        </MediaQuery>
+      </Fragment>
     ) : (
       undefined
     )
@@ -102,6 +120,12 @@ export const Filter: React.SFC<FilterProps> = ({ options, params, onUpdate }) =>
         .filter {
           display: flex;
           flex-wrap: wrap;
+        }
+
+        @media ${mediaQueries.mobile} {
+          .filter {
+            flex-direction: column;
+          }
         }
 
         .reset-container {

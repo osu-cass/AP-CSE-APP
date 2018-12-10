@@ -7,7 +7,9 @@ import { HelpPage } from './Help';
 import { HomePage } from './Home';
 import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
+import { TargetClient } from '../clients/target';
 import { Footer } from '../components/Footer';
+import { mediaQueries } from '../constants';
 
 export const App: React.SFC = () => {
   return (
@@ -19,7 +21,6 @@ export const App: React.SFC = () => {
           </div>
           <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
-          <Route path="/home" component={HomePage} />
           <Route path="/search" component={SearchPageRoute} />
           <Route path="/apps" component={AppsPage} />
           <Route path="/development" component={DevelopmentPage} />
@@ -40,6 +41,13 @@ export const App: React.SFC = () => {
           width: 100vw;
           display: flex;
           flex-direction: column;
+        }
+
+        @media ${mediaQueries.tabletAndMobile} {
+          html,
+          body {
+            position: fixed;
+          }
         }
       `}</style>
     </React.Fragment>
