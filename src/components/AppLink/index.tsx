@@ -51,7 +51,7 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 14px;
         height: 80px;
       }
     `}</style>
