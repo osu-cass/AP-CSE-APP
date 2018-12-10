@@ -41,7 +41,7 @@ exports[`Storyshots SearchBar component default 1`] = `
           onClick={[Function]}
           onKeyPress={[Function]}
           type="search"
-          value="search..."
+          value="Search..."
         />
         <button
           aria-label="Submit"

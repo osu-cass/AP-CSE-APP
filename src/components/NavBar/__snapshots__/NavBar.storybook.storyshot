@@ -55,7 +55,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
               onClick={[Function]}
               onKeyPress={[Function]}
               type="search"
-              value="search..."
+              value="Search..."
             />
             <button
               aria-label="Submit"
