@@ -17,9 +17,25 @@ export interface TargetDetailProps {
 //   return data ? {render(data)} : undefined;
 // }
 
+function stemSection(stem: IStem[]): ContentSection[] {
+  const sections: ContentSection[] = [];
+
+  sections.push({
+    title: 'Appropriate Stems',
+    jsx: <Stems stems={stem} stemType="Appropriate Stems" />
+  });
+
+  sections.push({
+    title: 'Appropriate Stems for Dual-Text Stimuli',
+    jsx: <Stems stems={stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
+  });
+
+  return sections;
+}
+
 function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSection[] {
   return taskModels.map((tm, i) => {
-    const subsections: ContentSection[] = [];
+    let subsections: ContentSection[] = [];
 
     // task description
     if (tm.taskDesc) {
@@ -34,20 +50,9 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
       });
     }
 
-    // appropriate stems
+    // stem section
     if (stem) {
-      subsections.push({
-        title: 'Appropriate Stems',
-        jsx: <Stems stems={stem} stemType="Appropriate Stems" />
-      });
-    }
-
-    // appropriate stems for dual-text stimuli
-    if (stem) {
-      subsections.push({
-        title: 'Appropriate Stems for Dual-Text Stimuli',
-        jsx: <Stems stems={stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
-      });
+      subsections = subsections.concat(stemSection(stem));
     }
 
     return {
