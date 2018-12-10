@@ -21,10 +21,12 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
   return taskModels.map((tm, i) => {
     const subsections: ContentSection[] = [];
 
+    // task description
     if (tm.taskDesc) {
       subsections.push({ title: 'Task Description', jsx: parseContent(tm.taskDesc) });
     }
 
+    // target evidence statements
     if (tm.relatedEvidence) {
       subsections.push({
         title: 'Target Evidence Statements',
@@ -32,6 +34,7 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
       });
     }
 
+    // appropriate stems
     if (stem) {
       subsections.push({
         title: 'Appropriate Stems',
@@ -39,6 +42,7 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
       });
     }
 
+    // appropriate stems for dual-text stimuli
     if (stem) {
       subsections.push({
         title: 'Appropriate Stems for Dual-Text Stimuli',
