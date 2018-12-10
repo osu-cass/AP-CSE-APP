@@ -6,7 +6,7 @@ import { DesktopGenericContentPage } from './desktop';
 import { contentSectionsMocks } from './__tests__/mocks';
 import { FullPageDecorator } from '../../__decorators__';
 
-storiesOf('Generic Content Page', module)
+storiesOf('Generic Content Page DontTest', module)
   .addDecorator(FullPageDecorator)
   .add('default', () => (
     <div id="main-content-scroll" style={{ height: '100vh', overflowY: 'scroll' }}>
