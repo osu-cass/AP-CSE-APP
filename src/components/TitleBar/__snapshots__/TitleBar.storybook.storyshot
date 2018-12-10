@@ -92,9 +92,6 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
             flex-direction: column;
             color: White;
           }
-          a:hover {
-            color: #63666A;
-          }
         
           </style>
         </div>
@@ -274,9 +271,6 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
             align-items: center;
             flex-direction: column;
             color: White;
-          }
-          a:hover {
-            color: #63666A;
           }
         
           </style>
@@ -512,9 +506,6 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
             align-items: center;
             flex-direction: column;
             color: White;
-          }
-          a:hover {
-            color: #63666A;
           }
         
       </style>
