@@ -6,12 +6,12 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 
-const callback = (Code: FilterType, newFilter?: FilterOptionModel) => {
+export const callback = (Code: FilterType, newFilter?: FilterOptionModel) => {
   // tslint:disable-next-line:no-console
   console.log('New filter params:', JSON.stringify(newFilter));
 };
 
-const reset = () => {
+export const reset = () => {
   // tslint:disable-next-line:no-console
   console.log('Reset Pressed');
 };
