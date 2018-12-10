@@ -19,7 +19,7 @@ exports[`Storyshots Search Page default 1`] = `
       onClick={[Function]}
       onKeyPress={[Function]}
       type="search"
-      value="Search..."
+      value="search..."
     />
     <button
       aria-label="Submit"
@@ -78,6 +78,7 @@ exports[`Storyshots Search Page default 1`] = `
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media (max-width: 950px) {
             .field {
@@ -152,7 +153,7 @@ exports[`Storyshots Search Page error 1`] = `
       onClick={[Function]}
       onKeyPress={[Function]}
       type="search"
-      value="Search..."
+      value="search..."
     />
     <button
       aria-label="Submit"
@@ -211,6 +212,7 @@ exports[`Storyshots Search Page error 1`] = `
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media (max-width: 950px) {
             .field {

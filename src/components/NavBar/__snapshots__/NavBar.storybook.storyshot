@@ -55,7 +55,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
               onClick={[Function]}
               onKeyPress={[Function]}
               type="search"
-              value="Search..."
+              value="search..."
             />
             <button
               aria-label="Submit"
@@ -114,6 +114,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media (max-width: 950px) {
             .field {
