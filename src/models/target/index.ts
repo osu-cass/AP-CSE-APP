@@ -32,12 +32,12 @@ export interface ITarget {
   title: string;
   shortCode: string;
   description: string;
-  standards: IStandards[];
+  standards?: IStandards[];
   DOK: IDOK[];
   interactionType: string;
   clarification: string;
   heading: string;
-  evidence: IEvidence[];
+  evidence?: IEvidence[];
   vocab: string;
   tools: string;
   stimInfo: string;
@@ -45,7 +45,7 @@ export interface ITarget {
   complexity: string;
   dualText: string;
   accessibility: string;
-  stem: IStem[];
+  stem?: IStem[];
   taskModels: ITaskModel[];
   rubrics: string[];
 }

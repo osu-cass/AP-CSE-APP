@@ -35,16 +35,20 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     }
 
     // appropriate stems
-    subsections.push({
-      title: 'Appropriate Stems',
-      jsx: <Stems stems={target.stem} stemType="Appropriate Stems" />
-    });
+    if (target.stem) {
+      subsections.push({
+        title: 'Appropriate Stems',
+        jsx: <Stems stems={target.stem} stemType="Appropriate Stems" />
+      });
+    }
 
     // appropriate stems for dual-text stimuli
-    subsections.push({
-      title: 'Appropriate Stems for Dual-Text Stimuli',
-      jsx: <Stems stems={target.stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
-    });
+    if (target.stem) {
+      subsections.push({
+        title: 'Appropriate Stems for Dual-Text Stimuli',
+        jsx: <Stems stems={target.stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
+      });
+    }
 
     return {
       subsections,
@@ -53,43 +57,55 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     };
   });
 
-  const sections: ContentSection[] = [
-    {
-      title: 'Clarification',
-      jsx: parseContent(target.clarification)
-    },
-    {
+  const sections: ContentSection[] = [];
+
+  sections.push({
+    title: 'Clarification',
+    jsx: parseContent(target.clarification)
+  });
+
+  if (target.standards) {
+    sections.push({
       title: 'Standards',
       jsx: <Standards standards={target.standards} />
-    },
-    {
-      title: 'Stimuli/Text Complexity',
-      jsx: undefined,
-      subsections: [
-        {
-          title: 'Passage',
-          jsx: parseContent(target.stimInfo)
-        },
-        {
-          title: 'Text Complexity',
-          jsx: parseContent(target.dualText)
-        }
-      ]
-    },
-    {
-      title: 'Accessibility Concerns',
-      jsx: parseContent(target.accessibility)
-    },
-    {
+    });
+  }
+
+  sections.push({
+    title: 'Stimuli/Text Complexity',
+    jsx: undefined,
+    subsections: [
+      {
+        title: 'Passage',
+        jsx: parseContent(target.stimInfo)
+      },
+      {
+        title: 'Text Complexity',
+        jsx: parseContent(target.dualText)
+      }
+    ]
+  });
+
+  sections.push({
+    title: 'Accessibility Concerns',
+    jsx: parseContent(target.accessibility)
+  });
+
+  // evidence required
+  if (target.evidence) {
+    sections.push({
       title: 'Evidence Required',
       jsx: <Evidence evidence={target.evidence} />
-    },
-    ...taskModelSections,
-    {
-      title: 'Depth of Knowledge',
-      jsx: <DOK dok={target.DOK} />
-    }
-  ];
+    });
+  }
+
+  // add task model sections
+  sections.concat(taskModelSections);
+
+  sections.push({
+    title: 'Depth of Knowledge',
+    jsx: <DOK dok={target.DOK} />
+  });
 
   return (
     <GenericContentPage
