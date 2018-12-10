@@ -2,11 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { BrowserRouter } from 'react-router-dom';
-import { BreadcrumbLink, BreadcrumbLinkProps } from './BreadcrumbLink';
+import { BreadcrumbLink, BreadcrumbLinkProps } from '../BreadcrumbLink/BreadcrumbLink';
 import { Breadcrumbs, BreadcrumbsProps } from './index';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
 import { Colors } from '../../constants';
-import { BreadcrumbDropDownProps, BreadcrumbDropDown } from './BreadCrumbDropDown';
+import {
+  BreadcrumbDropDownProps,
+  BreadcrumbDropDown
+} from '../BreadcrumbDropDown/BreadCrumbDropDown';
 
 const subjectLinkMock: BreadcrumbLinkProps = {
   link: 'ela',

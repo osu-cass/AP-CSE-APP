@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { BreadcrumbLink, ListLink } from './BreadcrumbLink';
+import { BreadcrumbLink, ListLink } from '../BreadcrumbLink/BreadcrumbLink';
 import { ChevronUp, ChevronDown, AlignCenter } from 'react-feather';
 import { Colors } from '../../constants';
 
@@ -120,6 +120,11 @@ export class BreadcrumbDropDown extends Component<
           .targetLabel {
             paddingleft: 20px;
             color: 'white';
+          }
+          .listContainer {
+            position: relative;
+            top: 40px;
+            right: 165px;
           }
         `}</style>
       </div>

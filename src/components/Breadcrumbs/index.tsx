@@ -1,8 +1,8 @@
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { BreadcrumbLink } from './BreadcrumbLink';
-import { BreadcrumbDropDown, TargetLabel } from './BreadCrumbDropDown';
+import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
+import { BreadcrumbDropDown, TargetLabel } from '../BreadcrumbDropDown/BreadCrumbDropDown';
 import { Styles, Colors } from '../../constants';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
@@ -121,12 +121,18 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
           width: ${Styles.targetContentWidth};
           font-family: ${Styles.sbSans};
         }
+
+        .home {
+          position: relative;
+          top: 5px;
+          left: 5px;
+        }
+
         div ul li {
           display: flex;
           width: 35px;
           height: 35px;
         }
-
         .breadCrumbContainer {
           background-image: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter});
           overflow: visible;
