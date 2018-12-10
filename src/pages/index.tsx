@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
