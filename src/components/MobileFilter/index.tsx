@@ -80,12 +80,7 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({
           }}
           isMultiSelect={false}
         />
-        <MobileAdvancedFilter
-          key={gradeFilter.label}
-          {...gradeFilter}
-          isMultiSelect={true}
-          onMobileSelect={onUpdate}
-        />
+        <MobileAdvancedFilter key={gradeFilter.label} {...gradeFilter} onMobileSelect={onUpdate} />
         {renderClaimFilter()}
         {renderTargetFilter()}
         <div className="reset-container">
