@@ -74,9 +74,6 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
             flex-direction: column;
             color: White;
           }
-          a:hover {
-            color: ${Colors.sbGray};
-          }
         `}</style>
       </div>
     );
