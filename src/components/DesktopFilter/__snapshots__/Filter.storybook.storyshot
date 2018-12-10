@@ -1,5 +1,785 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Desktop Filter Subject grade and target 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="filter"
+      >
+        <div
+          className="filter-selection"
+          id="grade-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Elementry
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English Language Arts
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Mathematics
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="claim-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Claim
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Claim 1
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Claim 2
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Claim 3
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="target-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Target
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Target 1
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Target 2
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Target 3
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Desktop Filter Subject, Grade and Claim 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="filter"
+      >
+        <div
+          className="filter-selection"
+          id="grade-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Elementry
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English Language Arts
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Mathematics
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="claim-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Claim
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Claim 1
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Claim 2
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Claim 3
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="message"
+        >
+          Please select a Claim.
+          <style
+            jsx={true}
+          >
+            
+      .message {
+        margin: 20px 0;
+        text-align: center;
+      }
+    
+          </style>
+        </div>
+      </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Desktop Filter default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="filter"
+      >
+        <div
+          className="filter-selection"
+          id="grade-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Elementry
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English Language Arts
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Mathematics
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="message"
+        >
+          Please select a Grade and Subject
+          <style
+            jsx={true}
+          >
+            
+      .message {
+        margin: 20px 0;
+        text-align: center;
+      }
+    
+          </style>
+        </div>
+      </div>
+      <div
+        className="reset-container"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Reset
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Filter default 1`] = `
 <div
   style={
