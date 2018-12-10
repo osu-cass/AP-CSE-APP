@@ -86,17 +86,16 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         justify-content: center;
         align-items:center;
       }
-      div.title{
-        margin-left:50px;
-      }
-      div ul {
+
+      ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
-        width: 60%;
         flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
       }
       div ul li {
         width: 100%;
@@ -110,9 +109,11 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       }
       .item-spec{
         font-size:24px;
-        margin-left:20px;
+        margin-left:10vw;
+        margin-right:25px;
         color:white;
         flex-grow:1;
+        font-weight:bold;
       }
       .desc {
         width: 75%;
@@ -124,7 +125,8 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         text-align: left;
       }
       .download {
-        margin-left:50px;
+        margin-left:25px;
+        margin-right:20vw;
         flex-grow:1;
 
       }
