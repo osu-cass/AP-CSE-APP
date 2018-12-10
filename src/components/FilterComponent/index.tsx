@@ -27,6 +27,7 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 
   const onUpdateMobile = (selectedOptions: string[], code: FilterType) => {
     const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
+    onUpdate(newParams);
   };
 
   const reset = () => {
