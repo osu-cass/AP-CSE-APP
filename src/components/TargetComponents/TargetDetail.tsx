@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContentSection, GenericContentPage } from '../GenericContentPage';
-import { ITarget } from '../../models/target';
+import { ITarget, ITaskModel, IStem } from '../../models/target';
 import { parseContent } from '../MainContent/parseUtils';
 import { Standards } from './Standards';
 import { Evidence } from './Evidence';
@@ -17,8 +17,8 @@ export interface TargetDetailProps {
 //   return data ? {render(data)} : undefined;
 // }
 
-export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
-  const taskModelSections: ContentSection[] = target.taskModels.map((tm, i) => {
+function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSection[] {
+  return taskModels.map((tm, i) => {
     const subsections: ContentSection[] = [];
 
     // task description
@@ -35,18 +35,18 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     }
 
     // appropriate stems
-    if (target.stem) {
+    if (stem) {
       subsections.push({
         title: 'Appropriate Stems',
-        jsx: <Stems stems={target.stem} stemType="Appropriate Stems" />
+        jsx: <Stems stems={stem} stemType="Appropriate Stems" />
       });
     }
 
     // appropriate stems for dual-text stimuli
-    if (target.stem) {
+    if (stem) {
       subsections.push({
         title: 'Appropriate Stems for Dual-Text Stimuli',
-        jsx: <Stems stems={target.stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
+        jsx: <Stems stems={stem} stemType="Appropriate Stems for Dual-Text Stimuli" />
       });
     }
 
@@ -56,7 +56,9 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
       jsx: undefined
     };
   });
+}
 
+export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   let sections: ContentSection[] = [];
 
   sections.push({
@@ -100,7 +102,7 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   }
 
   // add task model sections
-  sections = sections.concat(taskModelSections);
+  sections = sections.concat(taskModelSections(target.taskModels, target.stem));
 
   sections.push({
     title: 'Depth of Knowledge',
