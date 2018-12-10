@@ -23,7 +23,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
     super(props);
 
     this.state = {
-      text: props.initialText || 'Search...'
+      text: props.initialText || 'search...'
     };
   }
 
@@ -95,6 +95,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media ${mediaQueries.tabletAndMobile} {
             .field {
