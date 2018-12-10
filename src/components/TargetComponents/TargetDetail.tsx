@@ -57,7 +57,7 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     };
   });
 
-  const sections: ContentSection[] = [];
+  let sections: ContentSection[] = [];
 
   sections.push({
     title: 'Clarification',
@@ -100,7 +100,7 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   }
 
   // add task model sections
-  sections.concat(taskModelSections);
+  sections = sections.concat(taskModelSections);
 
   sections.push({
     title: 'Depth of Knowledge',
