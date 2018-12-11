@@ -52,12 +52,12 @@ exports[`Storyshots NavBar NavBar 1`] = `
             <input
               aria-label="Search"
               className="field"
-              onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
               onKeyPress={[Function]}
+              placeholder="Search..."
               type="search"
-              value="Search..."
+              value=""
             />
             <button
               aria-label="Submit"
@@ -232,7 +232,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
 >
   <nav>
     <a
-      href="/placeholder"
+      href="/"
       onClick={[Function]}
       style={
         Object {
@@ -264,7 +264,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/placeholder"
+      href="/search"
       onClick={[Function]}
       style={
         Object {
@@ -301,7 +301,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/placeholder"
+      href="/search"
       onClick={[Function]}
       style={
         Object {
@@ -335,7 +335,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/placeholder"
+      href="/apps"
       onClick={[Function]}
       style={
         Object {
@@ -381,51 +381,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
             y="14"
           />
         </svg>
-        Menu
-      </div>
-    </a>
-    <a
-      href="/placeholder"
-      onClick={[Function]}
-      style={
-        Object {
-          "color": "#63666A",
-          "textDecoration": "none",
-        }
-      }
-    >
-      <div>
-        <svg
-          fill="none"
-          height={25}
-          stroke="#63666A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width={25}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="3"
-            x2="21"
-            y1="12"
-            y2="12"
-          />
-          <line
-            x1="3"
-            x2="21"
-            y1="6"
-            y2="6"
-          />
-          <line
-            x1="3"
-            x2="21"
-            y1="18"
-            y2="18"
-          />
-        </svg>
-        Menu
+        Apps
       </div>
     </a>
     <style
@@ -437,6 +393,8 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
         justify-content: space-between;
         padding: 3px 10px;
         background-color: #ebebeb;
+        bottom: 0;
+        min-height: 40px;
       }
       div {
         display: flex;
