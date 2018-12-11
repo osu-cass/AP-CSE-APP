@@ -47,6 +47,8 @@ export const MobileNavBar: React.SFC = () => (
         justify-content: space-between;
         padding: 3px 10px;
         background-color: ${Colors.sbGrayLighter};
+        bottom: 0;
+        min-height: 40px;
       }
       div {
         display: flex;
