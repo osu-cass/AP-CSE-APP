@@ -202,6 +202,11 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
         font-size: 0.8em;
         height: 80px;
       }
+      @media (max-width: 500px) {
+        .desc {
+          height: auto;
+        }
+      }
     
               </style>
             </div>
@@ -337,6 +342,11 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
         text-align: justify;
         font-size: 0.8em;
         height: 80px;
+      }
+      @media (max-width: 500px) {
+        .desc {
+          height: auto;
+        }
       }
     
               </style>
@@ -474,6 +484,11 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
         font-size: 0.8em;
         height: 80px;
       }
+      @media (max-width: 500px) {
+        .desc {
+          height: auto;
+        }
+      }
     
               </style>
             </div>
@@ -609,6 +624,11 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
         text-align: justify;
         font-size: 0.8em;
         height: 80px;
+      }
+      @media (max-width: 500px) {
+        .desc {
+          height: auto;
+        }
       }
     
               </style>
