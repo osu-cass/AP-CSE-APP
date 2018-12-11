@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Download } from 'react-feather';
+import { DownloadCloud } from 'react-feather';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Colors } from '../../constants';
 import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
 
@@ -50,20 +52,29 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
       <div id="download-btn-container">
         <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
         <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
-          <Download />
-          <style jsx>{`
-            * {
-              margin: 0;
-              padding: 0;
-            }
-            a {
-              color: ${Colors.sbGrayLighter};
-            }
-            a:hover {
-              color: ${Colors.sbGray};
-            }
-          `}</style>
+          <FontAwesomeIcon className="cloud" icon={faCloudDownloadAlt} />
         </a>
+        <div className="download-label">Download</div>
+        <style jsx>{`
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: ${Colors.sbWhite};
+            font-size: 30px;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+        `}</style>
       </div>
     );
   }
