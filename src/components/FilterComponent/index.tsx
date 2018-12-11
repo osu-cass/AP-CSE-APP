@@ -48,9 +48,7 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 
   return (
     <Fragment>
-      <FilterContainer expanded={window.location.pathname === '/search' ? true : expanded}>
-        {content}
-      </FilterContainer>
+      <FilterContainer expanded={expanded}>{content}</FilterContainer>
     </Fragment>
   );
 };
