@@ -2,21 +2,9 @@ import React, { Fragment } from 'react';
 import { MobileFilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import { MobileAdvancedFilter } from '../MobileAdvancedFilter';
 import { Message } from '../Message';
-import {
-  sanitizeParams,
-  createFilters,
-  paramsFromMobileFilter,
-  paramsFromFilter
-} from '../FilterHelper';
-import {
-  FilterType,
-  onFilterSelect,
-  FilterOptionModel,
-  AdvancedFilter
-} from '@osu-cass/sb-components';
+import { FilterOptionModel, AdvancedFilter } from '@osu-cass/sb-components';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 import { globalFilterStyle } from '../DesktopFilter';
-import css from 'styled-jsx/css';
 
 // tslint:disable
 export const MobileFilter: React.SFC<MobileFilterProps> = ({
