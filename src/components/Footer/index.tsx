@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
 
 export const Footer: React.SFC = () => {
   return (
@@ -69,3 +70,5 @@ export const Footer: React.SFC = () => {
     </div>
   );
 };
+
+export const FooterWrapped = mediaQueryWrapper(Footer, DesktopBreakSize);
