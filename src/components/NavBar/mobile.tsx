@@ -11,28 +11,28 @@ const noUnderline: React.CSSProperties = {
 
 export const MobileNavBar: React.SFC = () => (
   <nav>
-    <Link to="placeholder" style={noUnderline}>
+    <Link to="/" style={noUnderline}>
       <div>
         <Home {...mobileIconStyle} />
         Home
       </div>
     </Link>
-    <Link to="placeholder" style={noUnderline}>
+    <Link to="search" style={noUnderline}>
       <div>
         <Search {...mobileIconStyle} />
         Search
       </div>
     </Link>
-    <Link to="placeholder" style={noUnderline}>
+    <Link to="search" style={noUnderline}>
       <div>
         <Eye {...mobileIconStyle} />
         Explore
       </div>
     </Link>
-    <Link to="placeholder" style={noUnderline}>
+    <Link to="apps" style={noUnderline}>
       <div>
         <Grid {...mobileIconStyle} />
-        Menu
+        Apps
       </div>
     </Link>
     <Link to="placeholder" style={noUnderline}>
