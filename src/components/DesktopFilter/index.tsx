@@ -33,7 +33,7 @@ export const globalFilterStyle = css`
     background-color: transparent;
     padding: 5px 7px;
     margin: 2px 0;
-    font-size: 18px;
+    font-size: 1.125em;
   }
 
   .btn.active {
