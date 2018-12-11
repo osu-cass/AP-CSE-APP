@@ -11,6 +11,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
   <header>
     <a
       href="https://www.smarterbalanced.org/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Smarter Balanced logo"
