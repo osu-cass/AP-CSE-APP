@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Home, Search, Eye, Grid } from 'react-feather';
 import { Colors, mobileIconStyle } from '../../constants';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
 const noUnderline: React.CSSProperties = {
   textDecoration: 'none',
@@ -56,3 +57,4 @@ export const MobileNavBar: React.SFC = () => (
     `}</style>
   </nav>
 );
+export const MobileNavBarWrapped = mediaQueryWrapper(MobileNavBar, MobileBreakSize);
