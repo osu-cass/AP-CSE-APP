@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
+import { MobileNavBarWrapped } from '../components/NavBar/mobile';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
@@ -8,7 +9,7 @@ import { HomePage } from './Home';
 import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
 import { TargetClient } from '../clients/target';
-import { Footer } from '../components/Footer';
+import { FooterWrapped } from '../components/Footer';
 import { mediaQueries } from '../constants';
 
 export const App: React.SFC = () => {
@@ -25,7 +26,8 @@ export const App: React.SFC = () => {
           <Route path="/apps" component={AppsPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
-          <Footer />
+          <FooterWrapped />
+          <MobileNavBarWrapped />
         </div>
       </BrowserRouter>
       <style jsx global>{`
