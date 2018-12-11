@@ -54,9 +54,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -99,9 +103,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -144,9 +152,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -189,9 +201,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -234,9 +250,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -279,9 +299,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -324,9 +348,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -369,9 +397,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -414,9 +446,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -459,9 +495,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -504,9 +544,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -549,9 +593,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -594,9 +642,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -639,9 +691,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -684,9 +740,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -729,9 +789,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -774,9 +838,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -819,9 +887,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -864,9 +936,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -909,9 +985,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -954,9 +1034,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -999,9 +1083,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1044,9 +1132,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1089,9 +1181,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1134,9 +1230,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1179,9 +1279,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1224,9 +1328,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1269,9 +1377,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1314,9 +1426,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1359,9 +1475,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1404,9 +1524,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1449,9 +1573,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1494,9 +1622,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1539,9 +1671,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1584,9 +1720,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1629,9 +1769,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1674,9 +1818,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1719,9 +1867,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1764,9 +1916,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1809,9 +1965,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1854,9 +2014,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
@@ -1899,9 +2063,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
              » 
             C1
           </div>
-          <div>
-            placeholder
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "placeholder",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}
