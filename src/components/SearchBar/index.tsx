@@ -38,13 +38,13 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   };
 
   onClicked = () => {
-    if (this.state.text === 'search...') {
+    if (this.state.text === 'Search...') {
       this.setState({ text: '' });
     }
   };
   onLoseFocus = () => {
     if (this.state.text === '') {
-      this.setState({ text: 'search...' });
+      this.setState({ text: 'Search...' });
     }
   };
 
@@ -95,6 +95,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media ${mediaQueries.tabletAndMobile} {
             .field {
