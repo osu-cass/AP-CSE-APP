@@ -11,6 +11,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
   <header>
     <a
       href="https://www.smarterbalanced.org/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Smarter Balanced logo"
@@ -50,12 +52,17 @@ exports[`Storyshots NavBar NavBar 1`] = `
             <input
               aria-label="Search"
               className="field"
-              placeholder="Search"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onKeyPress={[Function]}
               type="search"
+              value="Search..."
             />
             <button
               aria-label="Submit"
               className="button"
+              onClick={[Function]}
               type="submit"
             >
               <svg
@@ -86,36 +93,37 @@ exports[`Storyshots NavBar NavBar 1`] = `
               jsx={true}
             >
               
-      .search-bar {
-        display: flex;
-        min-height: 2em;
-      }
-      .button {
-        align-items: center;
-        background-color: #63666A;
-        border-radius: 0 5px 5px 0;
-        border-style: none;
-        display: flex;
-        height: auto;
-        justify-content: center;
-        min-height: 2em;
-      }
-      .field {
-        border-color: #63666A;
-        border-radius: 5px 0 0 5px;
-        border-style: solid;
-        color: #63666A;
-        height: auto;
-        min-height: 2em;
-        padding: 0 0.5em;
-        flex-grow: 1;
-      }
-      @media (max-width: 950px) {
-        .field {
-          width: 0; //needed so browser will shrink it past default size
-        }
-      }
-    
+          .search-bar {
+            display: flex;
+            min-height: 2em;
+          }
+          .button {
+            align-items: center;
+            background-color: #63666A;
+            border-radius: 0 5px 5px 0;
+            border-style: none;
+            display: flex;
+            height: auto;
+            justify-content: center;
+            min-height: 2em;
+          }
+          .field {
+            border-color: #63666A;
+            border-radius: 5px 0 0 5px;
+            border-style: solid;
+            color: #63666A;
+            height: auto;
+            min-height: 2em;
+            padding: 0 0.5em;
+            flex-grow: 1;
+            font-size: 14px;
+          }
+          @media (max-width: 950px) {
+            .field {
+              width: 0; //needed so browser will shrink it past default size
+            }
+          }
+        
             </style>
           </div>
         </span>
@@ -123,7 +131,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
           className="right-spacing"
         >
           <a
-            href="/placeholder"
+            href="/help"
             onClick={[Function]}
             style={
               Object {
@@ -203,6 +211,10 @@ exports[`Storyshots NavBar NavBar 1`] = `
           .right-spacing {
             margin-right: 10px;
           }
+        }
+
+        .hidden {
+          visibility: hidden;
         }
       
     </style>

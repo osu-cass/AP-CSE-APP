@@ -13,7 +13,7 @@ import {
   DevIntroMathContentSpec
 } from '.';
 
-storiesOf('Development Page Components', module)
+storiesOf('Development Page Components DontTest', module)
   .add('Overview', () => <DevOverview />)
   .add('DevTestBlueprint', () => <DevTestBlueprint />)
   .add('DevInterimBlueprint', () => <DevInterimBlueprint />)

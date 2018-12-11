@@ -23,7 +23,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
     super(props);
 
     this.state = {
-      text: props.initialText || ''
+      text: props.initialText || 'Search...'
     };
   }
 
@@ -37,6 +37,17 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
     }
   };
 
+  onClicked = () => {
+    if (this.state.text === 'Search...') {
+      this.setState({ text: '' });
+    }
+  };
+  onLoseFocus = () => {
+    if (this.state.text === '') {
+      this.setState({ text: 'Search...' });
+    }
+  };
+
   render() {
     return (
       <div className="search-bar">
@@ -47,6 +58,8 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
           value={this.state.text}
           onChange={this.onTextUpdated}
           onKeyPress={this.onEnterPressed}
+          onClick={this.onClicked}
+          onBlur={this.onLoseFocus}
         />
         <button
           aria-label="Submit"
@@ -82,6 +95,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media ${mediaQueries.tabletAndMobile} {
             .field {
