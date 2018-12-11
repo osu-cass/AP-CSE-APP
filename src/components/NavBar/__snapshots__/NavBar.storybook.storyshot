@@ -11,6 +11,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
   <header>
     <a
       href="https://www.smarterbalanced.org/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Smarter Balanced logo"
@@ -50,12 +52,12 @@ exports[`Storyshots NavBar NavBar 1`] = `
             <input
               aria-label="Search"
               className="field"
-              onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
               onKeyPress={[Function]}
+              placeholder="Search..."
               type="search"
-              value="Search..."
+              value=""
             />
             <button
               aria-label="Submit"
@@ -114,6 +116,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
             min-height: 2em;
             padding: 0 0.5em;
             flex-grow: 1;
+            font-size: 14px;
           }
           @media (max-width: 950px) {
             .field {
