@@ -9,7 +9,16 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
   }
 >
   <div>
-    <div>
+    <div
+      className="title-container"
+    >
+      <div
+        className="item-spec"
+      >
+        Item 
+        <br />
+        Specification
+      </div>
       <ul>
         <li
           className="title"
@@ -25,57 +34,68 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
             Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
           </span>
         </li>
-        <li
-          className="download"
+      </ul>
+      <div
+        className="download"
+      >
+        <div
+          id="download-btn-container"
         >
+          <div />
           <a
             aria-label="Download"
-            download="test-file-name"
-            href="test/url"
+            id="download-btn"
+            onClick={[Function]}
+            role="button"
           >
             <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
+              aria-hidden="true"
+              className="svg-inline--fa fa-cloud-download-alt fa-w-20 cloud"
+              data-icon="cloud-download-alt"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 640 512"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-              />
-              <polyline
-                points="7 10 12 15 17 10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="15"
-                y2="3"
+                d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"
+                fill="currentColor"
+                style={Object {}}
               />
             </svg>
-            <style
-              jsx={true}
-            >
-              
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        color: #ebebeb;
-      }
-      a:hover {
-        color: #63666A;
-      }
-    
-            </style>
           </a>
-        </li>
-      </ul>
+          <div
+            className="download-label"
+          >
+            Download
+          </div>
+          <style
+            jsx={true}
+          >
+            
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: #ffffff;
+            font-size: 30px;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+        
+          </style>
+        </div>
+      </div>
       <style
         jsx={true}
       >
@@ -84,22 +104,27 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         margin: 0;
         padding: 0;
       }
-      div {
+      .title-container {
         display: flex;
         font-family: PT Sans Caption;
-        justify-content: center;
         padding: 0.7em 0;
         backgroundImage: linear-gradient(90deg, #006298, #0085AD)
         width: '100%',
         flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
       }
-      div ul {
+
+      ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
-        width: 100%;
+        flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
       }
       div ul li {
         width: 100%;
@@ -111,18 +136,28 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         font-size: 18px;
         text-align: left;
       }
+      .item-spec{
+        font-size:24px;
+        margin-left:10vw;
+        margin-right:25px;
+        color:white;
+        flex-grow:1;
+        font-weight:bold;
+      }
       .desc {
         width: 75%;
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 100;
         text-align: left;
       }
       .download {
-        margin-left: auto;
-        margin-top: auto;
+        margin-left:25px;
+        margin-right:20vw;
+        flex-grow:1;
+
       }
     
       </style>
@@ -140,7 +175,16 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
   }
 >
   <div>
-    <div>
+    <div
+      className="title-container"
+    >
+      <div
+        className="item-spec"
+      >
+        Item 
+        <br />
+        Specification
+      </div>
       <ul>
         <li
           className="title"
@@ -170,57 +214,68 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
             Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.
           </span>
         </li>
-        <li
-          className="download"
+      </ul>
+      <div
+        className="download"
+      >
+        <div
+          id="download-btn-container"
         >
+          <div />
           <a
             aria-label="Download"
-            download="test-file-name"
-            href="test/url"
+            id="download-btn"
+            onClick={[Function]}
+            role="button"
           >
             <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
+              aria-hidden="true"
+              className="svg-inline--fa fa-cloud-download-alt fa-w-20 cloud"
+              data-icon="cloud-download-alt"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 640 512"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-              />
-              <polyline
-                points="7 10 12 15 17 10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="15"
-                y2="3"
+                d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"
+                fill="currentColor"
+                style={Object {}}
               />
             </svg>
-            <style
-              jsx={true}
-            >
-              
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        color: #ebebeb;
-      }
-      a:hover {
-        color: #63666A;
-      }
-    
-            </style>
           </a>
-        </li>
-      </ul>
+          <div
+            className="download-label"
+          >
+            Download
+          </div>
+          <style
+            jsx={true}
+          >
+            
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: #ffffff;
+            font-size: 30px;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+        
+          </style>
+        </div>
+      </div>
       <style
         jsx={true}
       >
@@ -229,22 +284,27 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         margin: 0;
         padding: 0;
       }
-      div {
+      .title-container {
         display: flex;
         font-family: PT Sans Caption;
-        justify-content: center;
         padding: 0.7em 0;
         backgroundImage: linear-gradient(90deg, #006298, #0085AD)
         width: '100%',
         flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
       }
-      div ul {
+
+      ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
-        width: 100%;
+        flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
       }
       div ul li {
         width: 100%;
@@ -256,18 +316,28 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         font-size: 18px;
         text-align: left;
       }
+      .item-spec{
+        font-size:24px;
+        margin-left:10vw;
+        margin-right:25px;
+        color:white;
+        flex-grow:1;
+        font-weight:bold;
+      }
       .desc {
         width: 75%;
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 100;
         text-align: left;
       }
       .download {
-        margin-left: auto;
-        margin-top: auto;
+        margin-left:25px;
+        margin-right:20vw;
+        flex-grow:1;
+
       }
     
       </style>
@@ -285,7 +355,16 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
   }
 >
   <div>
-    <div>
+    <div
+      className="title-container"
+    >
+      <div
+        className="item-spec"
+      >
+        Item 
+        <br />
+        Specification
+      </div>
       <ul>
         <li
           className="title"
@@ -303,22 +382,27 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         margin: 0;
         padding: 0;
       }
-      div {
+      .title-container {
         display: flex;
         font-family: PT Sans Caption;
-        justify-content: center;
         padding: 0.7em 0;
         backgroundImage: linear-gradient(90deg, #006298, #0085AD)
         width: '100%',
         flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
       }
-      div ul {
+
+      ul {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         list-style-type: none;
         max-width: 85%;
-        width: 100%;
+        flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
       }
       div ul li {
         width: 100%;
@@ -330,18 +414,28 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         font-size: 18px;
         text-align: left;
       }
+      .item-spec{
+        font-size:24px;
+        margin-left:10vw;
+        margin-right:25px;
+        color:white;
+        flex-grow:1;
+        font-weight:bold;
+      }
       .desc {
         width: 75%;
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 100;
         text-align: left;
       }
       .download {
-        margin-left: auto;
-        margin-top: auto;
+        margin-left:25px;
+        margin-right:20vw;
+        flex-grow:1;
+
       }
     
       </style>
@@ -359,52 +453,63 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
   }
 >
   <div>
-    <a
-      aria-label="Download"
-      download="test-file-name"
-      href="test/url"
+    <div
+      id="download-btn-container"
     >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+      <div />
+      <a
+        aria-label="Download"
+        id="download-btn"
+        onClick={[Function]}
+        role="button"
       >
-        <path
-          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-        />
-        <polyline
-          points="7 10 12 15 17 10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="15"
-          y2="3"
-        />
-      </svg>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-cloud-download-alt fa-w-20 cloud"
+          data-icon="cloud-download-alt"
+          data-prefix="fas"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 640 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </a>
+      <div
+        className="download-label"
+      >
+        Download
+      </div>
       <style
         jsx={true}
       >
         
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        color: #ebebeb;
-      }
-      a:hover {
-        color: #63666A;
-      }
-    
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: #ffffff;
+            font-size: 30px;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+        
       </style>
-    </a>
+    </div>
   </div>
 </div>
 `;

@@ -1,5 +1,16 @@
 import React from 'react';
-
+const linkStyle = (
+  <style jsx>{`
+    a {
+      color: #007393;
+    }
+    a:hover,
+    a:active {
+      color: #111213;
+      text-decoration: none;
+    }
+  `}</style>
+);
 export const HelpClaims: React.SFC = () => (
   <ul>
     <li>
@@ -8,19 +19,28 @@ export const HelpClaims: React.SFC = () => (
     </li>
     <li>
       English language arts/literacy has four{' '}
-      <a href="https://portal.smarterbalanced.org/library/en/claims-for-the-ela-literacy-summative-assessments.pdf">
+      <a
+        href="https://portal.smarterbalanced.org/library/en/claims-for-the-ela-literacy-summative-assessments.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         content claims
       </a>
       : Reading, Writing, Speaking and Listening, and Research/Inquiry
     </li>
     <li>
       Mathematics has four{' '}
-      <a href="https://portal.smarterbalanced.org/library/en/claims-for-the-mathematics-summative-assessments.pdf">
+      <a
+        href="https://portal.smarterbalanced.org/library/en/claims-for-the-mathematics-summative-assessments.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         content claims:
       </a>{' '}
       Concepts and Procedures, Problem Solving, Communicating Reasoning, and Modeling and Data
       Analysis
     </li>
+    {linkStyle}
   </ul>
 );
 
@@ -34,10 +54,17 @@ export const HelpTargets: React.SFC = () => (
       Library resources and assessment items and tasks.
     </li>
     <li>
-      Links to <a href="https://smarterbalanced.org">ELA targets</a> and{' '}
-      <a href="https://smarterbalanced.org/">mathematics targets</a>
+      Links to{' '}
+      <a href="https://smarterbalanced.org" target="_blank" rel="noopener noreferrer">
+        ELA targets
+      </a>{' '}
+      and{' '}
+      <a href="https://smarterbalanced.org/" target="_blank" rel="noopener noreferrer">
+        mathematics targets
+      </a>
     </li>
     <li>ELA claim/target graphics emailed separately </li>
+    {linkStyle}
   </ul>
 );
 
@@ -54,11 +81,19 @@ export const HelpContentSpec: React.SFC = () => (
   <ul>
     <li>
       Smarter Balanced has developed content specifications in{' '}
-      <a href="https://portal.smarterbalanced.org/library/en/english-language-artsliteracy-content-specifications.pdf">
+      <a
+        href="https://portal.smarterbalanced.org/library/en/english-language-artsliteracy-content-specifications.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         English language arts/literacy
       </a>{' '}
       and{' '}
-      <a href="https://portal.smarterbalanced.org/library/en/mathematics-content-specifications.pdf">
+      <a
+        href="https://portal.smarterbalanced.org/library/en/mathematics-content-specifications.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         mathematics
       </a>{' '}
       to ensure that the assessments cover the range of knowledge and skills in the Common Core
@@ -69,17 +104,26 @@ export const HelpContentSpec: React.SFC = () => (
       Digital Library Resources
       <ul>
         <li>
-          <a href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-mathematics-content-specifications">
+          <a
+            href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-mathematics-content-specifications"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Mathematics
           </a>
         </li>
         <li>
-          <a href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-elaliteracy-content-specifications">
+          <a
+            href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-elaliteracy-content-specifications"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             English language arts/literacy
           </a>
         </li>
       </ul>
     </li>
+    {linkStyle}
   </ul>
 );
 
@@ -106,17 +150,26 @@ export const HelpAccessibility: React.SFC = () => (
       for any state to create on its own.
     </p>
     <p>
-      <a href="https://portal.smarterbalanced.org/library/en/accessibility-accommodations-fact-sheet.pdf">
+      <a
+        href="https://portal.smarterbalanced.org/library/en/accessibility-accommodations-fact-sheet.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Accessibility and Accommodations Fact Sheet
       </a>
     </p>
     <p>
       More information about{' '}
-      <a href="http://www.smarterbalanced.org/assessments/accessibility-and-accommodations/">
+      <a
+        href="http://www.smarterbalanced.org/assessments/accessibility-and-accommodations/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         accessibility and accommodations
       </a>{' '}
       can be found on the Smarter Balanced website.
     </p>
+    {linkStyle}
   </React.Fragment>
 );
 
@@ -153,7 +206,11 @@ export const HelpFaq: React.SFC = () => (
       question correctly, the next question will be harder; if a student answers incorrectly, the
       next question will be easier. This system is called computer adaptive testing, and it is part
       of the summative (end-of-year) assessments. More information about{' '}
-      <a href="http://www.smarterbalanced.org/assessments/testing-technology/">
+      <a
+        href="http://www.smarterbalanced.org/assessments/testing-technology/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         computer adaptive testing
       </a>{' '}
       can be found on the Smarter Balanced website.
@@ -168,17 +225,25 @@ export const HelpFaq: React.SFC = () => (
     <p>
       There are 12 different technology-enhanced item types used by Smarter Balanced. Definitions of
       each item type and sample of each item type can be found on the{' '}
-      <a href="http://sampleitems.smarterbalanced.org/AboutItems">Sample Items website</a>.
+      <a
+        href="http://sampleitems.smarterbalanced.org/AboutItems"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Sample Items website
+      </a>
+      .
     </p>
     <h3>Can the students use a calculator on the mathematics assessment?</h3>
     <p>
       Smarter Balanced and Desmos are proud to offer calculators that are both free to students and
       include cutting edge accessibility features. Students are allowed to use a calculator on a
       certain percentage of mathematics items, depending on the construct being assessed.{' '}
-      <a href="http://calculator.smarterbalanced.org/">
+      <a href="http://calculator.smarterbalanced.org/" target="_blank" rel="noopener noreferrer">
         Smarter Balanced Calculators: Powered by Desmos
       </a>
     </p>
+    {linkStyle}
   </React.Fragment>
 );
 
