@@ -35,12 +35,6 @@ export const MobileNavBar: React.SFC = () => (
         Apps
       </div>
     </Link>
-    <Link to="placeholder" style={noUnderline}>
-      <div>
-        <Menu {...mobileIconStyle} />
-        Menu
-      </div>
-    </Link>
     <style jsx>{`
       nav {
         display: flex;
