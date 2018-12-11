@@ -103,7 +103,7 @@ exports[`Storyshots AppLink component Renders a App Link Button 1`] = `
       }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
           </style>
@@ -245,7 +245,7 @@ exports[`Storyshots AppLink component Renders a App Link with all data 1`] = `
       }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
               </style>
@@ -282,7 +282,7 @@ exports[`Storyshots AppLink component Renders a App Link with all data 1`] = `
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
         height: 80px;
       }
     
