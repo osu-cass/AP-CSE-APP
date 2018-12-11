@@ -232,7 +232,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
 >
   <nav>
     <a
-      href="/placeholder"
+      href="/"
       onClick={[Function]}
       style={
         Object {
@@ -264,7 +264,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/placeholder"
+      href="/search"
       onClick={[Function]}
       style={
         Object {
@@ -301,7 +301,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/placeholder"
+      href="/search"
       onClick={[Function]}
       style={
         Object {
@@ -335,7 +335,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/placeholder"
+      href="/apps"
       onClick={[Function]}
       style={
         Object {
@@ -381,7 +381,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
             y="14"
           />
         </svg>
-        Menu
+        Apps
       </div>
     </a>
     <a
@@ -437,6 +437,8 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
         justify-content: space-between;
         padding: 3px 10px;
         background-color: #ebebeb;
+        bottom: 0;
+        min-height: 40px;
       }
       div {
         display: flex;
