@@ -162,7 +162,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
                   </style>
@@ -199,7 +199,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
         height: 80px;
       }
       @media (max-width: 500px) {
@@ -303,7 +303,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
                   </style>
@@ -340,7 +340,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
         height: 80px;
       }
       @media (max-width: 500px) {
@@ -444,7 +444,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
                   </style>
@@ -481,7 +481,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
         height: 80px;
       }
       @media (max-width: 500px) {
@@ -585,7 +585,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
                   </style>
@@ -622,7 +622,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
         height: 80px;
       }
       @media (max-width: 500px) {
@@ -679,6 +679,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
           flex-grow: 1;
           display: flex;
           flex-direction: column;
+          font-size: 14px;
         }
 
         .content {
