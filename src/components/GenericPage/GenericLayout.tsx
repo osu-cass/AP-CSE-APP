@@ -22,6 +22,7 @@ export const genericLayout = <T extends object>(
           flex-grow: 1;
           display: flex;
           flex-direction: column;
+          font-size: 14px;
         }
 
         .content {
