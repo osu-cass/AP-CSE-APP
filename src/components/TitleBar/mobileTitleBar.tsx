@@ -2,7 +2,7 @@ import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { Styles, Colors } from '../../constants';
 import { IDomain } from '../../models/claim';
-import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
 /**
  * interface for TitleBar
@@ -11,9 +11,7 @@ import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWra
  */
 export interface TitleBarProps {
   claimTitle?: string;
-  claimDesc?: string;
   targetTitle?: string;
-  targetDesc?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
 
@@ -23,42 +21,24 @@ export interface TitleBarProps {
  * @export
  * @function TitleBar
  * @param {string | undefined} claimTitle
- * @param {string | undefined} claimDesc
  * @param {string | undefined} targetTitle
- * @param {string | undefined} targetDesc
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
 export const TitleBar: React.SFC<TitleBarProps> = ({
   claimTitle,
-  claimDesc,
   targetTitle,
-  targetDesc,
   downloadBtnProps
 }: TitleBarProps) => (
   <div className="title-container">
-    <div className="item-spec">
-      Item <br />
-      Specification
-    </div>
     <ul>
       {claimTitle && (
         <li className="title">
           <span>{claimTitle}</span>
         </li>
       )}
-      {claimDesc && (
-        <li className="desc">
-          <span>{claimDesc}</span>
-        </li>
-      )}
       {targetTitle && (
         <li className="title">
           <span>{targetTitle}</span>
-        </li>
-      )}
-      {targetDesc && (
-        <li className="desc">
-          <span>{targetDesc}</span>
         </li>
       )}
     </ul>
@@ -91,47 +71,30 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       ul {
         display: flex;
         flex-wrap: wrap;
-        align-items: stretch;
+        flex-direction:row;
+        align-items: center;
+        justify-content:center;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
         flex-grow:1;
-        margin-left: 25px;
-        margin-right: 25px;
-      }
+        }
       div ul li {
-        width: 100%;
+        width: auto;
+        margin: 10px;
       }
       .title {
-        width: 20%;
-        min-width: 50px;
         color: white;
         font-size: 18px;
         text-align: left;
       }
-      .item-spec{
-        font-size:24px;
-        margin-left:10vw;
-        margin-right:25px;
-        color:white;
-        flex-grow:1;
-        font-weight:bold;
-      }
-      .desc {
-        width: 75%;
-        min-width: 50px;
-        padding-bottom: 15px;
-        color: ${Colors.sbGrayLighter};
-        font-size: 12px;
-        font-weight: 100;
-        text-align: left;
-      }
       .download {
-        margin-left:25px;
-        margin-right:20vw;
+        margin-left:10px;
         flex-grow:1;
-
+      }
+      .download-label{
+          display:none;
       }
     `}</style>
   </div>
 );
-export const TitleBarWrapped = mediaQueryWrapper(TitleBar, DesktopBreakSize);
+export const MobileTitleBarWrapped = mediaQueryWrapper(TitleBar, MobileBreakSize);
