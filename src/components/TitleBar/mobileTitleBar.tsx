@@ -41,16 +41,16 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
           <span>{targetTitle}</span>
         </li>
       )}
+      {downloadBtnProps && (
+        <li className="download">
+          <DownloadBtn
+            url={downloadBtnProps.url}
+            filename={downloadBtnProps.filename}
+            taskNames={downloadBtnProps.taskNames}
+          />
+        </li>
+      )}
     </ul>
-    {downloadBtnProps && (
-      <div className="download">
-        <DownloadBtn
-          url={downloadBtnProps.url}
-          filename={downloadBtnProps.filename}
-          taskNames={downloadBtnProps.taskNames}
-        />
-      </div>
-    )}
     <style jsx>{`
       * {
         margin: 0;
@@ -73,26 +73,18 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         flex-wrap: wrap;
         flex-direction:row;
         align-items: center;
-        justify-content:center;
+        justify-content:space-evenly;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
-        flex-grow:1;
+        width:100vw;
         }
-      div ul li {
-        width: auto;
-        margin: 10px;
-      }
       .title {
         color: white;
-        font-size: 18px;
+        font-size: 1.129em;
         text-align: left;
       }
       .download {
-        margin-left:10px;
-        flex-grow:1;
-      }
-      .download-label{
-          display:none;
+        width:auto;
       }
     `}</style>
   </div>

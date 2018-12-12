@@ -6,10 +6,14 @@ export interface ClaimTargetProps {
   claim: IClaim;
 }
 export const parseMobileData = (claim: IClaim): TargetClaimProps => {
+  const codeSegments: string[] = claim.target[0].shortCode.split('.');
+  const targetTitle: string = `Target ${codeSegments[codeSegments.length - 1].slice(1)}`;
+  const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
+
   return {
-    claimTitle: claim.claimNumber,
+    claimTitle,
+    targetTitle,
     claimDesc: claim.description,
-    targetTitle: claim.target[0].title,
     targetDesc: claim.target[0].description
   };
 };

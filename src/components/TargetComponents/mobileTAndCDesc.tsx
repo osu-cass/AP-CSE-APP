@@ -42,14 +42,14 @@ export const TargetClaimSec: React.SFC<TargetClaimProps> = ({
     <style jsx>{`
         .target-claim-container {
           font-family: ${Styles.sbSans};
-          padding: 0.7em 0;
+          padding: 0;
           width: '100%',
           font-size:1.2em;
-        }
-        .title {
           color: black;
-          text-align: left;
+          text-align:left;
+          margin-top:-15px;
         }
+
         .target-section{
           marigin-top: 10px;
           padding: 5px;
@@ -57,13 +57,7 @@ export const TargetClaimSec: React.SFC<TargetClaimProps> = ({
         .claim-section{
           padding:5px;
         }
-        .desc {
-          width: 75%;
-          min-width: 50px;
-          padding-bottom: 15px;
-          color: black;
-          text-align: left;
-        }
+
       `}</style>
   </div>
 );
