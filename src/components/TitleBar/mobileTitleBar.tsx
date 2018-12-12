@@ -73,6 +73,8 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
         width:100vw;
+        margin: 0;
+        padding: 0;
         }
       .title {
         color: white;
