@@ -63,6 +63,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
       <div
         className="page-content width-enforcer"
       >
+        <div />
         <div
           className="content"
         >

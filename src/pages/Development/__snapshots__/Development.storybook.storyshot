@@ -63,6 +63,7 @@ exports[`Storyshots Development Page Default 1`] = `
       <div
         className="page-content width-enforcer"
       >
+        <div />
         <style
           jsx={true}
         >

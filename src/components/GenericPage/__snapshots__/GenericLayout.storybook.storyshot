@@ -23,6 +23,7 @@ exports[`Storyshots Generic Layout default 1`] = `
       <div
         className="page-content width-enforcer"
       >
+        <div />
         <div>
           Placeholder page content
         </div>
