@@ -96,6 +96,7 @@
     "query-string": "^6.2.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "yoga-layout": "github:naminho/yoga-layout-windows",
     "react-feather": "^1.1.4",
     "react-responsive": "^5.0.0",
     "react-router": "^4.3.1",
