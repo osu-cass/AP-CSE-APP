@@ -1,11 +1,13 @@
 import React from 'react';
 import { PageWidthEnforcer } from './PageWidthEnforcer';
 import homeLogo from '../../assets/images/home-page.jpg';
+import { SubHeader } from '../MainContent/Components';
 
 export const genericLayout = <T extends object>(
   title: React.ReactNode,
   Component: React.ComponentType<T>,
-  mainContentClass?: string
+  mainContentClass?: string,
+  subheader?: React.ReactNode
 ): React.SFC<T> => {
   return (props: T) => (
     <React.Fragment>
@@ -13,6 +15,7 @@ export const genericLayout = <T extends object>(
         <div>{title}</div>
         <div className={`content ${mainContentClass}`} id="main-content-scroll">
           <PageWidthEnforcer>
+            <div>{subheader}</div>
             <Component {...props} />
           </PageWidthEnforcer>
         </div>

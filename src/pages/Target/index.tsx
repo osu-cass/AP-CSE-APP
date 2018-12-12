@@ -4,6 +4,7 @@ import { IClaim } from '../../models/claim';
 import { ITargetClient, TargetClient } from '../../clients/target';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { TargetTitleBar } from '../../components/TargetComponents/title';
+import { ClaimTarget } from '../../components/TargetComponents/ClaimTarget';
 import { Message, ErrorMessage } from '../../components/Message';
 import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
 
@@ -18,7 +19,6 @@ export interface TargetPageState {
   result?: IClaim;
   loaded: boolean;
 }
-
 /**
  * Class that handles placing the target page components in the generic page layout
  * @class{TargetPage}
@@ -55,7 +55,12 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
       return <ErrorMessage>Error loading target {this.state.target}.</ErrorMessage>;
     }
 
-    const Page = genericLayout(<TargetTitleBar claim={this.state.result} />, TargetDetail);
+    const Page = genericLayout(
+      <TargetTitleBar claim={this.state.result} />,
+      TargetDetail,
+      'Target',
+      <ClaimTarget claim={this.state.result} />
+    );
 
     return <Page target={this.state.result.target[0]} />;
   }
