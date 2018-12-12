@@ -1,12 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
+import { MobileNavBarWrapped } from '../components/NavBar/mobile';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
 import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
+import { TargetClient } from '../clients/target';
+import { FooterWrapped } from '../components/Footer';
+import { mediaQueries } from '../constants';
 
 export const App: React.SFC = () => {
   return (
@@ -18,11 +22,12 @@ export const App: React.SFC = () => {
           </div>
           <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
-          <Route path="/home" component={HomePage} />
           <Route path="/search" component={SearchPageRoute} />
           <Route path="/apps" component={AppsPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
+          <FooterWrapped />
+          <MobileNavBarWrapped />
         </div>
       </BrowserRouter>
       <style jsx global>{`
@@ -38,6 +43,13 @@ export const App: React.SFC = () => {
           width: 100vw;
           display: flex;
           flex-direction: column;
+        }
+
+        @media ${mediaQueries.tabletAndMobile} {
+          html,
+          body {
+            position: fixed;
+          }
         }
       `}</style>
     </React.Fragment>

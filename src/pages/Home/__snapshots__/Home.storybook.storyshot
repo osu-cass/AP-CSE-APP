@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots HomeContent component HomeContent 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="title-and-content"
+      >
+        <div>
+          <div
+            className="title-bar"
+          >
+            <div
+              className="page-content width-enforcer"
+            >
+              <h1>
+                Content Specification Explorer
+              </h1>
+              <style
+                jsx={true}
+              >
+                
+      .width-enforcer {
+        margin: 0 auto;
+        max-width: 1024px;
+      }
+
+      @media (max-width: 1024px) {
+        .width-enforcer {
+          margin: 0 20px;
+        }
+      }
+    
+              </style>
+            </div>
+            <style
+              jsx={true}
+            >
+              
+      .title-bar {
+        background-image: linear-gradient(90deg, #006298, #0085AD);
+        color: #ffffff;
+      }
+
+      h1 {
+        font-weight: normal;
+        padding: 7px 0;
+        margin: 0;
+      }
+    
+            </style>
+          </div>
+        </div>
+        <div
+          className="content home-image"
+          id="main-content-scroll"
+        >
+          <div
+            className="page-content width-enforcer"
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="element-wrapper"
+              />
+              <div
+                className="passage"
+              >
+                <h1
+                  className="passage-title"
+                >
+                  Welcome to Content Spec Explorer!
+                </h1>
+                <div
+                  className="passage-content"
+                >
+                  The CSE website provides easy access to a host of Smarter Balanced’s test development documents. The primary resources in the CSE are the Item Specifications (“Item Specs”). Item Specs outline how assessment items are to be written so the response shows evidence that the students have the skills/knowledge to perform the item/task. The Item Specs are used by the test development team to produce consistent, well-aligned items across the content areas. Educators are encouraged to implement a similar structure when preparing classroom-level assessments for both summative and formative uses.
+                </div>
+                <div
+                  className="buttons"
+                >
+                  <a
+                    href="/search?filter=open"
+                    onClick={[Function]}
+                  >
+                    <button
+                      className="single-button"
+                    >
+                      Navigate to a Target
+                    </button>
+                  </a>
+                  <a
+                    href="/development"
+                    onClick={[Function]}
+                  >
+                    <button
+                      className="single-button"
+                    >
+                      Learn About Test Development
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <style
+                jsx={true}
+              >
+                
+      .content {
+        display: flex;
+        flex-direction: row;
+        font-family: PT Serif;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-top: 40px;
+      }
+      @media (min-width: 1500px) {
+        .content {
+          margin-left: -30px;
+        }
+      }
+      .passage {
+        padding: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        background-color: #fff;
+      }
+      .passage-title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .passage-content {
+        width: 330px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid black;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+      }
+      .single-button {
+        margin-top: 20px;
+        background-image: linear-gradient(to right, #006298 70%, #177c9e);
+        color: white;
+        font-size: 15px;
+        padding: 6px;
+        width: 330px;
+        text-align: center;
+        border-radius: 5px;
+        border: 0px;
+        cursor: pointer;
+      }
+      .element-wrapper {
+        width: 100%;
+        flex-basis: 100%;
+      }
+
+      :global(.home-image) {
+        background-image: url("test-file-stub");
+        background-size: cover;
+        background-position: 0% 20%;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+      @media (max-width: 500px) {
+        :global(.home-image){
+          background-image: none;
+          background-color:white;
+        }
+        .passage{
+          max-width:70vw;
+          padding:3px;
+        }
+        .content{
+          margin-top:10px;
+        }
+      }
+    
+              </style>
+            </div>
+            <style
+              jsx={true}
+            >
+              
+      .width-enforcer {
+        margin: 20px auto;
+        max-width: 1024px;
+      }
+
+      @media (max-width: 1024px) {
+        .width-enforcer {
+          margin: 20px 20px;
+        }
+      }
+    
+            </style>
+          </div>
+        </div>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .title-and-content {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+        }
+
+        .content {
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+          flex-grow: 1;
+        }
+      
+      </style>
+    </div>
+  </div>
+</div>
+`;

@@ -184,11 +184,9 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -332,11 +330,9 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -362,11 +358,9 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -510,11 +504,9 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -540,11 +532,9 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -788,11 +778,9 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;
@@ -936,11 +924,9 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           align-items: center;
           color: #63666A;
           font-size: 14px;
-          text-indent: 1em;
-          height: 1.75em;
         }
         p {
-          margin-right: 2em;
+          margin: 5px 2em 5px 1em;
         }
         .active {
           color: #006298;

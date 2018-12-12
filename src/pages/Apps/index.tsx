@@ -1,6 +1,6 @@
 import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
-import { AppLink, AppLinkProps } from '../../components/AppLink';
+import { AppLinkProps, AppLink } from '../../components/AppLink';
 import { Title } from '../../components/GenericPage/Title';
 
 /*tslint:disable: no-require-imports no-var-requires */
@@ -77,4 +77,4 @@ const AppsPageComponent: React.SFC = () => (
   </React.Fragment>
 );
 
-export const AppsPage = genericLayout(<Title>My Applications</Title>, AppsPageComponent);
+export const AppsPage = genericLayout(<Title>My Resources</Title>, AppsPageComponent);

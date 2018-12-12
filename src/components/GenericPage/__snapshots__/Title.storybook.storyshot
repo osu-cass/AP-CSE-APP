@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Title default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="title-bar"
+  >
+    <div
+      className="page-content width-enforcer"
+    >
+      <h1>
+        Title text
+      </h1>
+      <style
+        jsx={true}
+      >
+        
+      .width-enforcer {
+        margin: 0 auto;
+        max-width: 1024px;
+      }
+
+      @media (max-width: 1024px) {
+        .width-enforcer {
+          margin: 0 20px;
+        }
+      }
+    
+      </style>
+    </div>
+    <style
+      jsx={true}
+    >
+      
+      .title-bar {
+        background-image: linear-gradient(90deg, #006298, #0085AD);
+        color: #ffffff;
+      }
+
+      h1 {
+        font-weight: normal;
+        padding: 7px 0;
+        margin: 0;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
