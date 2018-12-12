@@ -109,7 +109,7 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                   className="buttons"
                 >
                   <a
-                    href="/search"
+                    href="/search?filter=open"
                     onClick={[Function]}
                   >
                     <button
@@ -190,6 +190,19 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
         background-position: 0% 20%;
         background-repeat: no-repeat;
         height: 100%;
+      }
+      @media (max-width: 500px) {
+        :global(.home-image){
+          background-image: none;
+          background-color:white;
+        }
+        .passage{
+          max-width:70vw;
+          padding:3px;
+        }
+        .content{
+          margin-top:10px;
+        }
       }
     
               </style>

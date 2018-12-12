@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
 import { Colors } from '../../constants';
+import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
 
 const importedLogo = homeLogo as string;
 
@@ -23,7 +24,7 @@ const HomePageComponent = () => (
         assessments for both summative and formative uses.
       </div>
       <div className="buttons">
-        <Link to="/search">
+        <Link to="/search?filter=open">
           <button className="single-button">Navigate to a Target</button>
         </Link>
         <Link to="/development">
@@ -88,6 +89,19 @@ const HomePageComponent = () => (
         background-position: 0% 20%;
         background-repeat: no-repeat;
         height: 100%;
+      }
+      @media (max-width: ${MobileBreakSize.maxWidth}px) {
+        :global(.home-image){
+          background-image: none;
+          background-color:white;
+        }
+        .passage{
+          max-width:70vw;
+          padding:3px;
+        }
+        .content{
+          margin-top:10px;
+        }
       }
     `}</style>
   </div>
