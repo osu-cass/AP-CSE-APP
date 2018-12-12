@@ -22,7 +22,9 @@ export const globalFilterStyle = css`
   .filter-selection {
     margin-right: ${Styles.paddingUnit};
   }
-
+  #target-filter {
+    max-width: 25vw;
+  }
   .tooltip-label {
     font-weight: bold;
   }
@@ -33,6 +35,7 @@ export const globalFilterStyle = css`
     background-color: transparent;
     padding: 5px 7px;
     margin: 2px 0;
+    font-size: 1.125em;
   }
 
   .btn.active {
