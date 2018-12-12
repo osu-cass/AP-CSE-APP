@@ -108,7 +108,7 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                   className="buttons"
                 >
                   <a
-                    href="/search"
+                    href="/search?filter=open"
                     onClick={[Function]}
                   >
                     <button

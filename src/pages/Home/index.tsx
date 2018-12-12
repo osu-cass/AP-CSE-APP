@@ -24,7 +24,7 @@ const HomePageComponent = () => (
         assessments for both summative and formative uses.
       </div>
       <div className="buttons">
-        <Link to="/search">
+        <Link to="/search?filter=open">
           <button className="single-button">Navigate to a Target</button>
         </Link>
         <Link to="/development">
