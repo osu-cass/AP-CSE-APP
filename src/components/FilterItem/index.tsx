@@ -19,6 +19,15 @@ function gradesToEnglish(grades: string[]) {
 
   return `${prefix} ${grades.join(', ')}`;
 }
+export const boldSearchText = (targetBodyText: string) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  // tslint:disable-next-line : no-backbone-get-set-outside-model
+  const searchText = urlParams.get('search');
+  const find: string = searchText !== null ? searchText : '';
+  const regex = new RegExp(find, 'g');
+
+  return { __html: searchText ? targetBodyText.replace(regex, find.bold()) : targetBodyText };
+};
 
 export const FilterItem: React.SFC<FilterItemProps> = ({
   targetLink,
@@ -36,7 +45,8 @@ export const FilterItem: React.SFC<FilterItemProps> = ({
       <div className="breadcrumb">
         {subject} &raquo; {gradesToEnglish(grade)} &raquo; {claim}
       </div>
-      <div>{targetBodyText}</div>
+      {/* tslint:disable-next-line : react-no-dangerous-html */}
+      <div dangerouslySetInnerHTML={boldSearchText(targetBodyText)} />
     </div>
     <style jsx>{`
       h3 {
