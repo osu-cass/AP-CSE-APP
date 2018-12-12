@@ -17,19 +17,19 @@ export const MobileNavBar: React.SFC = () => (
         Home
       </div>
     </Link>
-    <Link to="search" style={noUnderline}>
+    <Link to="/search" style={noUnderline}>
       <div>
         <Search {...mobileIconStyle} />
         Search
       </div>
     </Link>
-    <Link to="search" style={noUnderline}>
+    <Link to="/search" style={noUnderline}>
       <div>
         <Eye {...mobileIconStyle} />
         Explore
       </div>
     </Link>
-    <Link to="apps" style={noUnderline}>
+    <Link to="/apps" style={noUnderline}>
       <div>
         <Grid {...mobileIconStyle} />
         Apps
