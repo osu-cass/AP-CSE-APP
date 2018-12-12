@@ -52,10 +52,6 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       )}
     </ul>
     <style jsx>{`
-      * {
-        margin: 0;
-        padding: 0;
-      }
       .title-container {
         display: flex;
         font-family: ${Styles.sbSans};
