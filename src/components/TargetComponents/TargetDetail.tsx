@@ -79,7 +79,7 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     });
   }
 
-  if (target.stimInfo || target.dualText) {
+  if (target.stimInfo) {
     sections.push({
       title: 'Stimuli/Text Complexity',
       jsx: undefined,
@@ -112,12 +112,10 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
 
   // add task model sections
   sections = sections.concat(taskModelSections(target.taskModels, target.stem));
-  if (target.DOK) {
-    sections.push({
-      title: 'Depth of Knowledge',
-      jsx: <DOK dok={target.DOK} />
-    });
-  }
+  sections.push({
+    title: 'Depth of Knowledge',
+    jsx: <DOK dok={target.DOK} />
+  });
 
   return (
     <GenericContentPage
