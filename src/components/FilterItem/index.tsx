@@ -25,8 +25,11 @@ export const boldSearchText = (targetBodyText: string) => {
   const searchText = urlParams.get('search');
   const find: string = searchText !== null ? searchText : '';
   const regex = new RegExp(find, 'g');
+  if (searchText !== undefined && targetBodyText !== undefined) {
+    return { __html: targetBodyText.replace(regex, find.bold()) };
+  }
 
-  return { __html: searchText ? targetBodyText.replace(regex, find.bold()) : targetBodyText };
+  return { __html: targetBodyText };
 };
 
 export const FilterItem: React.SFC<FilterItemProps> = ({
