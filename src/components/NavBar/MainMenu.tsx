@@ -49,7 +49,7 @@ export const MainMenu: React.SFC = () => {
           <Search {...iconStyle} />
         </MenuItem>
       </Link>
-      <Link to="/search" style={noUnderline}>
+      <Link to="/search?filter=open" style={noUnderline}>
         <MenuItem name="Explore">
           <Eye {...iconStyle} />
         </MenuItem>

@@ -51,9 +51,13 @@ exports[`Storyshots FilterItem component FilterItem 1`] = `
              » 
             Dolor
           </div>
-          <div>
-            Curabitur gravida pretium metus, in malesuada nunc fringilla quis. Phasellus tincidunt, ligula ut commodo varius, mi nunc luctus mauris, sed dapibus dui mauris ac tortor. Praesent tincidunt id leo et feugiat. Etiam ut risus libero. Nullam tincidunt suscipit sem ac vestibulum. Donec at tortor ac metus pharetra blandit ut a diam. Nullam id tortor eu ligula malesuada feugiat. Etiam quis erat pharetra, eleifend risus sit amet, tempus nunc. Nunc commodo tincidunt nunc, viverra accumsan urna suscipit ut. Sed a porttitor quam. Morbi gravida dignissim nulla, at commodo felis ultrices quis.
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Curabitur gravida pretium metus, in malesuada nunc fringilla quis. Phasellus tincidunt, ligula ut commodo varius, mi nunc luctus mauris, sed dapibus dui mauris ac tortor. Praesent tincidunt id leo et feugiat. Etiam ut risus libero. Nullam tincidunt suscipit sem ac vestibulum. Donec at tortor ac metus pharetra blandit ut a diam. Nullam id tortor eu ligula malesuada feugiat. Etiam quis erat pharetra, eleifend risus sit amet, tempus nunc. Nunc commodo tincidunt nunc, viverra accumsan urna suscipit ut. Sed a porttitor quam. Morbi gravida dignissim nulla, at commodo felis ultrices quis.",
+              }
+            }
+          />
         </div>
         <style
           jsx={true}

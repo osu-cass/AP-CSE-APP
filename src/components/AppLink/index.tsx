@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppLinkBtn, AppLinkBtnProps } from './AppLinkBtn';
 import { Colors } from '../../constants';
-
+import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
 export interface AppLinkProps {
   title: string;
   imgUrl: string;
@@ -51,8 +51,13 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
         height: 80px;
+      }
+      @media (max-width: ${MobileBreakSize.maxWidth}px) {
+        .desc {
+          height: auto;
+        }
       }
     `}</style>
   </div>

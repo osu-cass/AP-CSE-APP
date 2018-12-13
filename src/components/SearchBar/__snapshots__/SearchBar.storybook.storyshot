@@ -36,12 +36,12 @@ exports[`Storyshots SearchBar component default 1`] = `
         <input
           aria-label="Search"
           className="field"
-          onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
           onKeyPress={[Function]}
+          placeholder="Search..."
           type="search"
-          value="Search..."
+          value=""
         />
         <button
           aria-label="Submit"
@@ -151,10 +151,10 @@ exports[`Storyshots SearchBar component with initial search 1`] = `
         <input
           aria-label="Search"
           className="field"
-          onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
           onKeyPress={[Function]}
+          placeholder="Search..."
           type="search"
           value="initial text"
         />
