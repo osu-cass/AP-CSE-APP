@@ -23,7 +23,7 @@ const allDataMock: BreadcrumbsProps = {
   subject: SubjectType['English Language Arts'],
   grades: ['8'],
   claim: ClaimType['C4'],
-  target: 'Target 1'
+  target: 'Target 1 and stuff and things this could be really long'
 };
 
 const background = {

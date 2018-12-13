@@ -21,15 +21,6 @@ const style = {
   textDecoration: 'none'
 };
 
-const listStyle = {
-  paddingLeft: '53px',
-  color: 'white',
-  textDecoration: 'none',
-  paddingBottom: '5px',
-  overflow: 'hidden',
-  display: 'block'
-};
-
 /**
  * Renders an arrow-shaped separator and a breadcrumb
  * @export
@@ -74,14 +65,15 @@ export const BreadcrumbLink: React.SFC<BreadcrumbLinkProps> = ({
 
 export const ListLink: React.SFC<BreadcrumbLinkProps> = ({ link, value, label }): JSX.Element => (
   <div>
-    <Link to={link} style={listStyle}>
+    <a href={link}>
       <span aria-label={label}>{value}</span>
-    </Link>
+    </a>
     <style jsx>{`
       color: ${Colors.sbGrayDarker};
       background: white;
-      border-top: 1px;
       border-color: ${Colors.sbGrayDarker};
+      padding: 8px;
+      text-decoration: underline;
     `}</style>
   </div>
 );

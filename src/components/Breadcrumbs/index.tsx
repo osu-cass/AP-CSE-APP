@@ -2,10 +2,11 @@ import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
 import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
-import { BreadcrumbDropDown, TargetLabel } from '../BreadcrumbDropDown/BreadCrumbDropDown';
+import { BreadcrumbDropDown } from '../BreadcrumbDropDown/BreadCrumbDropDown';
 import { Styles, Colors } from '../../constants';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
+import { SearchBaseModel } from '@osu-cass/sb-components';
 
 /**
  * Properties for Breadcrumbs
@@ -17,6 +18,7 @@ export interface BreadcrumbsProps {
   grades?: string[];
   claim?: string;
   target?: string;
+  targetList?: SearchBaseModel[];
 }
 
 /**
@@ -52,21 +54,11 @@ const background = {
  * @param {ClaimType | undefined} claim
  * @param {string | undefined} target
  */
-export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps) => {
-  let currentTarget: TargetLabel | undefined;
+export const Breadcrumbs = ({ subject, grades, claim, target, targetList }: BreadcrumbsProps) => {
+  let currentTarget: SearchBaseModel | undefined;
   if (target) {
-    currentTarget = { shortCode: target, label: target };
+    currentTarget = { code: target, label: target };
   }
-  const targets: TargetLabel[] = [
-    {
-      label: 'Stuff and things',
-      shortCode: 'a.b.c.d'
-    },
-    {
-      label: 'Another Target',
-      shortCode: 'ab.ab.ab.T2'
-    }
-  ];
 
   return (
     <div>
@@ -98,7 +90,7 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
           )}
           {subject && grades && claim && target && currentTarget && (
             <div>
-              <BreadcrumbDropDown currentTarget={currentTarget} targets={targets} />
+              <BreadcrumbDropDown currentTarget={currentTarget} targets={targetList} />
             </div>
           )}
         </ul>
@@ -133,10 +125,10 @@ export const Breadcrumbs = ({ subject, grades, claim, target }: BreadcrumbsProps
           width: 35px;
           height: 35px;
         }
+
         .breadCrumbContainer {
           background-image: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter});
           overflow: visible;
-          height: 36px;
         }
       `}</style>
     </div>

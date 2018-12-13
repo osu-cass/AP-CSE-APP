@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom';
 import { BreadcrumbLink, ListLink } from '../BreadcrumbLink/BreadcrumbLink';
 import { ChevronUp, ChevronDown, AlignCenter } from 'react-feather';
 import { Colors } from '../../constants';
+import { SearchBaseModel } from '@osu-cass/sb-components';
 
 export interface BreadcrumbDropDownProps {
-  currentTarget: TargetLabel;
-  targets: TargetLabel[];
+  currentTarget: SearchBaseModel;
+  targets?: SearchBaseModel[];
 }
 
 export interface BreadCrumbDropDownState {
   expanded: boolean;
-}
-
-export interface TargetLabel {
-  label: string;
-  shortCode: string;
 }
 
 const style = {
@@ -25,10 +21,6 @@ const style = {
 
 const chevronStyle = {
   marginLeft: '10px'
-};
-
-const menuStyle = {
-  display: 'inline'
 };
 
 /**
@@ -56,29 +48,30 @@ export class BreadcrumbDropDown extends Component<
   render() {
     const { currentTarget, targets } = this.props;
     const { expanded } = this.state;
-    const numTarget = targets.length;
-    const chevron = expanded ? (
-      <ChevronUp size={30} color="white" className="chevron" style={chevronStyle} />
-    ) : (
-      <ChevronDown size={30} color="white" className="chevron" style={chevronStyle} />
-    );
+    const showChevron: boolean = targets ? targets.length > 1 : false;
+    const chevron =
+      expanded && showChevron ? (
+        <ChevronUp size={30} color="white" className="chevron" style={chevronStyle} />
+      ) : (
+        <ChevronDown size={30} color="white" className="chevron" style={chevronStyle} />
+      );
 
     return (
       <div className="root">
-        <div className="breadCrumbBar" style={menuStyle}>
+        <div className="breadCrumbBar">
           <li onClick={this.onClick} role="Menu">
             <div className="targetContainer" style={style}>
               <div className="targetLabel">{currentTarget.label}</div>
-              {targets.length > 0 && chevron}
+              {showChevron && chevron}
             </div>
           </li>
         </div>
-        {expanded && (
+        {expanded && targets && showChevron && (
           <div className="listContainer">
             {targets.map((t, index) => {
               return (
                 <div key={index + 1} className="listItem">
-                  <ListLink link={`/target/${t.shortCode}`} value={t.label} label={t.label} />
+                  <ListLink link={`/target/${t.code}`} value={t.label} label={t.label} />
                 </div>
               );
             })}
@@ -118,13 +111,17 @@ export class BreadcrumbDropDown extends Component<
             transform: rotate(45deg);
           }
           .targetLabel {
-            paddingleft: 20px;
             color: 'white';
           }
           .listContainer {
-            position: relative;
-            top: 40px;
-            right: 165px;
+            position: absolute;
+            margin-top: 35px;
+            padding: 8px 0;
+            margin-left: 30px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: ${Colors.sbGrayLighter};
+            border-radius: 4px;
           }
         `}</style>
       </div>
