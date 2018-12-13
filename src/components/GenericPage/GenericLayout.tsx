@@ -33,7 +33,7 @@ export const genericLayout = <T extends object>(
         }
         @media (max-width: ${MobileBreakSize.maxWidth}px) {
           .title-and-content {
-            max-height: 86vh;
+            max-height: 76vh;
           }
         }
       `}</style>
