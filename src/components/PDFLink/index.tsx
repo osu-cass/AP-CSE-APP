@@ -3,10 +3,12 @@ import { Download } from 'react-feather';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
 import { Loading } from '../Loading';
-import { CustomDocument } from './Document';
+import { createDocument } from './Document';
 
 interface PDFDownloadLinkRenderProps {
   loading: boolean;
+  document: Document;
+  fileName: string;
 }
 
 export const DownloadIcon = () => (
@@ -28,13 +30,16 @@ export const DownloadIcon = () => (
   </div>
 );
 
-export const render = ({ loading }: PDFDownloadLinkRenderProps) =>
+export const render = (loading: boolean) =>
   loading ? <Loading /> : <DownloadIcon />;
 
-export const PDFLink = () => (
-  <div>
-    <PDFDownloadLink document={CustomDocument} fileName="somename.pdf">
-      {render}
-    </PDFDownloadLink>
+export const PDFLink = ({loading, document, fileName}:PDFDownloadLinkRenderProps) => {
+
+  return (
+    <div>
+      <PDFDownloadLink document={document} filename={fileName}>
+        render(loading)
+      </PDFDownloadLink>
   </div>
-);
+  );
+};
