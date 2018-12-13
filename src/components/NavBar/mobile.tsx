@@ -47,6 +47,7 @@ export const MobileNavBar: React.SFC = () => (
       .link-container {
         display: flex;
         justify-content: space-between;
+        width: 95vw;
         padding: 3px 10px;
         flex-direction: row;
       }
