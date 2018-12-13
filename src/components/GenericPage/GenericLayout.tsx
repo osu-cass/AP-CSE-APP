@@ -29,10 +29,11 @@ export const genericLayout = <T extends object>(
         .content {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
+          flex-grow: 1;
         }
         @media (max-width: ${MobileBreakSize.maxWidth}px) {
-          .content {
-            height: 70vh;
+          .title-and-content {
+            max-height: 86vh;
           }
         }
       `}</style>
