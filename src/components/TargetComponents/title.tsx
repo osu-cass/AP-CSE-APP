@@ -15,7 +15,7 @@ export interface TargetTitleBarProps {
   targetList?: SearchBaseModel[];
 }
 
-const downloadBtnMock: DownloadBtnProps = {
+const downloadBtnProps: DownloadBtnProps = {
   url: 'test/url',
   filename: 'test-file-name'
 };
@@ -28,7 +28,7 @@ export const parseTitleBarMobileData = (claim: IClaim): TitleBarProps => {
   return {
     claimTitle,
     targetTitle,
-    downloadBtnProps: downloadBtnMock
+    downloadBtnProps
   };
 };
 
@@ -47,9 +47,9 @@ export const parseBreadCrumbData = (
 export const parseDownloadBtnProps = (claim: IClaim): DownloadBtnProps => {
   const tNameArr: string[] = [];
   claim.target[0].taskModels.forEach(tm => tNameArr.push(tm.taskName));
-  downloadBtnMock.taskNames = tNameArr;
+  downloadBtnProps.taskNames = tNameArr;
 
-  return downloadBtnMock;
+  return downloadBtnProps;
 };
 export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   return {

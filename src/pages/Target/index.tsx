@@ -81,7 +81,7 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
     }
 
     const Page = genericLayout(
-      <TargetTitleBar claim={this.state.result} />,
+      <TargetTitleBar claim={this.state.result} targetList={this.state.targetList} />,
       TargetDetail,
       'Target',
       <ClaimTarget claim={this.state.result} />
