@@ -34,7 +34,7 @@ export const genericLayout = <T extends object>(
         }
         @media (max-width: ${MobileBreakSize.maxWidth}px) {
           .mobile-padding {
-            height: 100px;
+            height: 200px;
             width: 100px;
           }
           .title-and-content {

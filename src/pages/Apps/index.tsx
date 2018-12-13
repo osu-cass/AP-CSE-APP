@@ -66,7 +66,7 @@ const AppsPageComponent: React.SFC = () => (
     <style jsx>{`
       @media (max-width: ${MobileBreakSize.maxWidth}px) {
         .app-page-mobile-padding {
-          height: 100px;
+          height: 200px;
           width: 100px;
         }
       }
