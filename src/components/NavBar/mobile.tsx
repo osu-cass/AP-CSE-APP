@@ -39,21 +39,28 @@ export const MobileNavBar: React.SFC = () => (
     </div>
     <style jsx>{`
       nav {
-        display: fixed;
-        background-color: ${Colors.sbGrayLighter};
-        top: 80vh;
-        min-height: 20vh;
+        position: fixed;
+        top: 0px;
+        height: 100%;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        justify-content: flex-end;
       }
       .link-container {
         display: flex;
-        justify-content: space-between;
-        width: 95vw;
-        padding: 3px 10px;
         flex-direction: row;
+        justify-content: space-between;
+        height: 40px;
+        background-color: ${Colors.sbGrayLighter};
+        width: 95vw;
+        bottom: 0px;
+        padding: 3px 10px;
       }
       div {
         display: flex;
         flex-direction: column;
+        align-items: center;
         font-size: 0.75em;
       }
     `}</style>
