@@ -157,9 +157,10 @@ export const parsedNavPropsMock: ItemProps[] = [
 
 export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
-  grade: 'Grade 6',
+  grades: ['6'],
   claim: 'C1',
-  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1'
+  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetList: undefined
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
@@ -168,7 +169,8 @@ export const parsedTitleBarDataMock: TitleBarProps = {
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: {
     url: 'test/url',
-    filename: 'test-file-name'
+    filename: 'test-file-name',
+    taskNames: ['Task Model 1', 'Task Model 2', 'Task Model 3']
   },
   targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetDesc: 'placeholder'

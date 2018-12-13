@@ -64,6 +64,7 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
           a {
             color: ${Colors.sbWhite};
             font-size: 30px;
+            cursor: pointer;
           }
           .download-label {
             font-size: 15px;

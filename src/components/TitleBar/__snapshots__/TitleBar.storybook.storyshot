@@ -81,6 +81,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
           a {
             color: #ffffff;
             font-size: 30px;
+            cursor: pointer;
           }
           .download-label {
             font-size: 15px;
@@ -269,6 +270,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
           a {
             color: #ffffff;
             font-size: 30px;
+            cursor: pointer;
           }
           .download-label {
             font-size: 15px;
@@ -512,6 +514,7 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
           a {
             color: #ffffff;
             font-size: 30px;
+            cursor: pointer;
           }
           .download-label {
             font-size: 15px;
