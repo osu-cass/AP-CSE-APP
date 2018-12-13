@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
-import { MobileNavBarWrapped } from '../components/NavBar/mobile';
+import { MobileNavBarWrapped, MobileNavBar } from '../components/NavBar/mobile';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
@@ -27,7 +27,7 @@ export const App: React.SFC = () => {
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
           <FooterWrapped />
-          <MobileNavBarWrapped />
+          <MobileNavBar />
         </div>
       </BrowserRouter>
       <style jsx global>{`

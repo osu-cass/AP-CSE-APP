@@ -50,6 +50,11 @@ export const MobileNavBar: React.SFC = () => (
         align-items: center;
         font-size: 0.75em;
       }
+      @media (min-width: ${MobileBreakSize.maxWidth}px) {
+        nav {
+          display: none;
+        }
+      }
     `}</style>
   </nav>
 );
