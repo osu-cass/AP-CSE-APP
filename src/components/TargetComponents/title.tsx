@@ -4,9 +4,11 @@ import { BreadcrumbsProps, Breadcrumbs } from '../../components/Breadcrumbs';
 import { TitleBarProps, TitleBar } from '../../components/TitleBar';
 import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
 import { blueGradient } from '../../constants';
+import { SearchBaseModel } from '@osu-cass/sb-components';
 
 export interface TargetTitleBarProps {
   claim: IClaim;
+  targetList?: SearchBaseModel[];
 }
 
 const downloadBtnMock: DownloadBtnProps = {
@@ -14,10 +16,14 @@ const downloadBtnMock: DownloadBtnProps = {
   filename: 'test-file-name'
 };
 
-export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
+export const parseBreadCrumbData = (
+  claim: IClaim,
+  targetList?: SearchBaseModel[]
+): BreadcrumbsProps => {
   return {
+    targetList,
     subject: claim.subject,
-    grade: `Grade ${claim.grades}`,
+    grades: claim.grades,
     claim: claim.claimNumber,
     target: claim.target[0].title
   };
@@ -33,9 +39,9 @@ export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   };
 };
 
-export const TargetTitleBar: React.SFC<TargetTitleBarProps> = ({ claim }) => (
+export const TargetTitleBar: React.SFC<TargetTitleBarProps> = ({ claim, targetList }) => (
   <div>
-    <Breadcrumbs {...parseBreadCrumbData(claim)} />
+    <Breadcrumbs {...parseBreadCrumbData(claim, targetList)} />
     <TitleBar {...parseTitleBarData(claim)} />
     <style jsx>{`
       div {

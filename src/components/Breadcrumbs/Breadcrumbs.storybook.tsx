@@ -63,20 +63,20 @@ storiesOf('Breadcrumbs component', module)
 const breadcrumbDropDownProps: BreadcrumbDropDownProps = {
   currentTarget: {
     label: 'Current Target',
-    shortCode: 'a.b.c.ct'
+    code: 'a.b.c.ct'
   },
   targets: [
     {
       label: 'My Target',
-      shortCode: 'a.b.c.e'
+      code: 'a.b.c.e'
     },
     {
       label: 'Target Two',
-      shortCode: 'a.b.c.t2'
+      code: 'a.b.c.t2'
     },
     {
       label: 'Target Three',
-      shortCode: 'a.b.c.t3'
+      code: 'a.b.c.t3'
     }
   ]
 };
