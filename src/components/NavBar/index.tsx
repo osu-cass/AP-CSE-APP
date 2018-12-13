@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
 
 export const HeaderLogo: React.SFC = () => (
-  <a href="https://www.smarterbalanced.org/">
+  <a href="https://www.smarterbalanced.org/" target="_blank" rel="noopener noreferrer">
     <img alt="Smarter Balanced logo" src={sbLogo} className="sb-logo" />
     <style jsx>{`
       .sb-logo {
@@ -56,11 +56,6 @@ export const NavBar: React.SFC = () => {
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
-          <MediaQuery minWidth={SizeBreaks.mobile}>
-            <Link to="/search" style={linkStyle}>
-              <Menu {...iconStyle} />
-            </Link>
-          </MediaQuery>
         </div>
       </nav>
       <style jsx>{`
@@ -100,6 +95,10 @@ export const NavBar: React.SFC = () => {
           .right-spacing {
             margin-right: 10px;
           }
+        }
+
+        .hidden {
+          visibility: hidden;
         }
       `}</style>
     </header>

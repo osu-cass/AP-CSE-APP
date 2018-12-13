@@ -1,6 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
+exports[`Storyshots AppLink component Renders a App Link Button 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontFamily": "PT Sans Caption",
+            "maxWidth": "1024px",
+          }
+        }
+      >
+        <a
+          aria-label="Link"
+          href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div
+            className="container"
+          >
+            <span>
+              Visit Score Guides Page
+            </span>
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </div>
+          <style
+            jsx={true}
+          >
+            
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #ebebeb;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        display: inline-flex;
+        min-height: 35px;
+        border-radius: 5px;
+        background-image: linear-gradient(90deg, #006298, #0085AD);
+        align-items: center;
+        justify-content: center;
+        width: 230px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .container:hover {
+        background: linear-gradient(90deg, #004266, #006298);
+      }
+      a div span {
+        padding-right: 10px;
+        font-size: 1.1em;
+      }
+    
+          </style>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots AppLink component Renders a App Link with all data 1`] = `
 <div
   style={
     Object {
@@ -51,10 +165,14 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
           <div
             className="linkImg"
           >
-            <img
-              alt="Score Guides"
-              src="test-file-stub"
-            />
+            <a
+              href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+            >
+              <img
+                alt="Score Guides"
+                src="test-file-stub"
+              />
+            </a>
           </div>
           <div
             className="desc"
@@ -65,6 +183,8 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
             <a
               aria-label="Link"
               href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <div
                 className="container"
@@ -103,12 +223,11 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
         padding: 0;
       }
       a {
-        text-decoration: none !important;
+        text-decoration: none;
         color: #ebebeb;
       }
       a:hover {
-        text-shadow: 2px 2px #63666A;
-        font-size: 102%;
+        text-decoration: underline;
       }
       .container {
         display: inline-flex;
@@ -121,9 +240,12 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
         padding-left: 10px;
         padding-right: 10px;
       }
+      .container:hover {
+        background: linear-gradient(90deg, #004266, #006298);
+      }
       a div span {
         padding-right: 10px;
-        font-size: 0.9em;
+        font-size: 1.1em;
       }
     
               </style>
@@ -160,121 +282,17 @@ exports[`Storyshots AppLink component Reders a App Link with all data 1`] = `
       }
       .desc {
         text-align: justify;
-        font-size: 0.8em;
+        font-size: 1em;
+        height: 80px;
+      }
+      @media (max-width: 500px) {
+        .desc {
+          height: auto;
+        }
       }
     
           </style>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots AppLink component Renders a App Link Button 1`] = `
-<div
-  style={
-    Object {
-      "fontFamily": "PT Sans Caption",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "alignItems": "center",
-        "bottom": 0,
-        "display": "flex",
-        "left": 0,
-        "overflow": "auto",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "margin": "auto",
-          "maxHeight": "100%",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "fontFamily": "PT Sans Caption",
-            "maxWidth": "1024px",
-          }
-        }
-      >
-        <a
-          aria-label="Link"
-          href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
-        >
-          <div
-            className="container"
-          >
-            <span>
-              Visit Score Guides Page
-            </span>
-            <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
-              />
-              <polyline
-                points="12 5 19 12 12 19"
-              />
-            </svg>
-          </div>
-          <style
-            jsx={true}
-          >
-            
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none !important;
-        color: #ebebeb;
-      }
-      a:hover {
-        text-shadow: 2px 2px #63666A;
-        font-size: 102%;
-      }
-      .container {
-        display: inline-flex;
-        min-height: 35px;
-        border-radius: 5px;
-        background-image: linear-gradient(90deg, #006298, #0085AD);
-        align-items: center;
-        justify-content: center;
-        width: 230px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      a div span {
-        padding-right: 10px;
-        font-size: 0.9em;
-      }
-    
-          </style>
-        </a>
       </div>
     </div>
   </div>

@@ -1,17 +1,16 @@
 import React from 'react';
 import { SearchBar } from '../SearchBar';
 import { FilterItemList } from '../FilterItemList';
-import { Filter } from '../Filter';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { Styles } from '../../constants';
-import { FilterContianer } from '../FilterContainer';
-import { Message, ErrorMessage } from '../Filter/Messages';
+import { Message, ErrorMessage } from '../Message';
 import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
 import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
 import { stringify } from 'query-string';
 import { History } from 'history';
+import { FilterComponent } from '../FilterComponent';
 
 export interface SearchPageProps {
   paramsFromUrl: CSESearchQuery;
@@ -132,11 +131,14 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     }
 
     return (
-      <FilterContianer expanded={anyParams(this.props.paramsFromUrl)}>
-        <ErrorBoundary fallbackUI={errorJsx}>
-          <Filter options={options} params={params} onUpdate={this.onFilterChanged} />
-        </ErrorBoundary>
-      </FilterContianer>
+      <ErrorBoundary fallbackUI={errorJsx}>
+        <FilterComponent
+          options={options}
+          params={params}
+          onUpdate={this.onFilterChanged}
+          expanded={anyParams(this.props.paramsFromUrl)}
+        />
+      </ErrorBoundary>
     );
   }
 
