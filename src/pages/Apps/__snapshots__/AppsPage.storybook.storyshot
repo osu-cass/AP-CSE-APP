@@ -633,12 +633,21 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
     
               </style>
             </div>
+            <div
+              className="app-page-mobile-padding"
+            />
           </div>
         </div>
         <style
           jsx={true}
         >
           
+      @media (max-width: 500px) {
+        .app-page-mobile-padding {
+          height: 200px;
+          width: 100px;
+        }
+      }
       .content {
         display: flex;
         flex-direction: column;
@@ -669,6 +678,9 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
     
         </style>
       </div>
+      <div
+        className="mobile-padding"
+      />
     </div>
   </div>
   <style
@@ -686,6 +698,15 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
           flex-grow: 1;
+        }
+        @media (max-width: 500px) {
+          .mobile-padding {
+            height: 200px;
+            width: 100px;
+          }
+          .title-and-content {
+            max-height: 95vh;
+          }
         }
       
   </style>
