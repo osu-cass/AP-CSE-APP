@@ -1,8 +1,9 @@
+// tslint:disable:no-any no-unsafe-any
 declare module '@react-pdf/renderer' {
   import React from 'react';
 
   interface StyleSheet {
-    create: (Object : any) => any;
+    create: (Object: any) => any;
   }
 
   interface DocumentProps {
@@ -22,10 +23,10 @@ declare module '@react-pdf/renderer' {
   export const Document: React.SFC<DocumentProps>;
 
   interface PageProps {
-    size?: string | Object | Array<any>;
+    size?: string | Object | any[];
     orientation?: string;
     wrap?: boolean;
-    style?: Object | Array<any>;
+    style?: Object | any[];
     debug?: boolean;
     ruler?: boolean;
     rulerSteps?: number | string;
@@ -38,18 +39,17 @@ declare module '@react-pdf/renderer' {
 
   interface ViewProps {
     wrap?: boolean;
-    style?: Object | Array<any>;
+    style?: Object | any[];
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
     minPresenceAhead?: number;
-    
   }
   export const View: React.SFC<ViewProps>;
 
   interface TextProps {
     wrap?: boolean;
-    style?: Object | Array<any>;
+    style?: Object | any[];
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
@@ -61,7 +61,7 @@ declare module '@react-pdf/renderer' {
 
   interface LinkProps {
     wrap?: boolean;
-    style?: Object | Array<any>;
+    style?: Object | any[];
     render?: Function;
     debug?: boolean;
     fixed?: boolean;
@@ -70,14 +70,14 @@ declare module '@react-pdf/renderer' {
 
   interface ImageProps {
     src: string;
-    style: Object | Array<any>;
+    style: Object | any[];
     debug?: boolean;
     fixed?: boolean;
   }
   export const Image: React.SFC<ImageProps>;
 
   interface NoteProps {
-    style?: Object | Array<any>;
+    style?: Object | any[];
     children: string;
     fixed?: boolean;
   }
@@ -92,11 +92,10 @@ declare module '@react-pdf/renderer' {
   interface PDFDownloadLinkProps {
     document: Document;
     filename: string;
-    style?: Object | Array<any>;
+    style?: Object | any[];
     classname?: string;
     children: Function | Node;
   }
   export const PDFDownloadLink: React.SFC<PDFDownloadLinkProps>;
-  export const StyleSheet : StyleSheet;
+  export const StyleSheet: StyleSheet;
 }
-

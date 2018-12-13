@@ -2,5 +2,5 @@ import initStoryshots, { multiSnapshotWithOptions, Stories } from '@storybook/ad
 
 initStoryshots({
   test: multiSnapshotWithOptions({}),
-  storyKindRegex: /^((?!.*?PDFLink).)*$/
+  storyKindRegex: /^((?!.*?DontTest).)*$/
 });
