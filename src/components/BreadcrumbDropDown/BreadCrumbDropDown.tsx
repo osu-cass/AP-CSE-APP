@@ -117,11 +117,13 @@ export class BreadcrumbDropDown extends Component<
             position: absolute;
             margin-top: 35px;
             padding: 8px 0;
-            margin-left: 30px;
+            margin-left: 50px;
             border-style: solid;
             border-width: 2px;
             border-color: ${Colors.sbGrayLighter};
             border-radius: 4px;
+            background-color: white;
+            z-index: 1;
           }
         `}</style>
       </div>

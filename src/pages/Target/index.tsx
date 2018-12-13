@@ -80,7 +80,10 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
       return <ErrorMessage>Error loading target {this.state.target}.</ErrorMessage>;
     }
 
-    const Page = genericLayout(<TargetTitleBar claim={this.state.result} />, TargetDetail);
+    const Page = genericLayout(
+      <TargetTitleBar claim={this.state.result} targetList={this.state.targetList} />,
+      TargetDetail
+    );
 
     return <Page target={this.state.result.target[0]} />;
   }
