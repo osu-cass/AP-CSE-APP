@@ -19,6 +19,7 @@ export const App: React.SFC = () => {
         <div className="full-page">
           <div className="nav-bar">
             <NavBar />
+            <MobileNavBarWrapped />
           </div>
           <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
@@ -27,7 +28,6 @@ export const App: React.SFC = () => {
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
           <FooterWrapped />
-          <MobileNavBarWrapped />
         </div>
       </BrowserRouter>
       <style jsx global>{`
