@@ -16,6 +16,7 @@ export const genericLayout = <T extends object>(
           <PageWidthEnforcer>
             <Component {...props} />
           </PageWidthEnforcer>
+          <div className="mobile-padding" />
         </div>
       </div>
       <style jsx>{`
@@ -32,8 +33,12 @@ export const genericLayout = <T extends object>(
           flex-grow: 1;
         }
         @media (max-width: ${MobileBreakSize.maxWidth}px) {
+          .mobile-padding {
+            height: 100px;
+            width: 100px;
+          }
           .title-and-content {
-            max-height: 76vh;
+            max-height: 95vh;
           }
         }
       `}</style>
