@@ -27,7 +27,7 @@ export const App: React.SFC = () => {
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
           <FooterWrapped />
-          <MobileNavBar />
+          <MobileNavBarWrapped />
         </div>
       </BrowserRouter>
       <style jsx global>{`
