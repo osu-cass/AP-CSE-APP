@@ -41,8 +41,8 @@ export const MobileNavBar: React.SFC = () => (
       nav {
         display: fixed;
         background-color: ${Colors.sbGrayLighter};
-        top: 90vh;
-        min-height: 10vh;
+        top: 80vh;
+        min-height: 20vh;
       }
       .link-container {
         display: flex;
@@ -54,7 +54,6 @@ export const MobileNavBar: React.SFC = () => (
       div {
         display: flex;
         flex-direction: column;
-        align-items: center;
         font-size: 0.75em;
       }
     `}</style>
