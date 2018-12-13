@@ -5,6 +5,7 @@ import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
 import { Colors } from '../../constants';
 import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
+import { CustomDocument, createDocument } from '../../components/PDFLink/Document';
 
 const importedLogo = homeLogo as string;
 
@@ -24,6 +25,7 @@ const HomePageComponent = () => (
         assessments for both summative and formative uses.
       </div>
       <div className="buttons">
+        {createDocument}
         <Link to="/search?filter=open">
           <button className="single-button">Navigate to a Target</button>
         </Link>
