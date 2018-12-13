@@ -23,6 +23,8 @@ export const genericLayout = <T extends object>(
           display: flex;
           flex-direction: column;
           font-size: 14px;
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
         }
 
         .content {
