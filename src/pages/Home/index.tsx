@@ -40,7 +40,6 @@ const HomePageComponent = () => (
         flex-wrap: wrap;
         justify-content: left;
         margin-top: 40px;
-        overflow:scroll;
       }
       @media (min-width: 1500px) {
         .content {
@@ -102,6 +101,8 @@ const HomePageComponent = () => (
         }
         .content{
           margin-top:10px;
+          overflow: scroll;
+          -webkit-overflow-scrolling: touch;
         }
       }
     `}</style>
