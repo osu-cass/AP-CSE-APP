@@ -28,7 +28,7 @@ export const genericLayout = <T extends object>(
         .content {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
-          flex-grow: 1;
+          height: 80vh;
         }
       `}</style>
     </React.Fragment>

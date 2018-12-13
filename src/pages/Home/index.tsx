@@ -101,8 +101,6 @@ const HomePageComponent = () => (
         }
         .content{
           margin-top:10px;
-          overflow: scroll;
-          -webkit-overflow-scrolling: touch;
         }
       }
     `}</style>
