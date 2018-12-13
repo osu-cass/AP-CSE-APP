@@ -50,6 +50,9 @@ export const App: React.SFC = () => {
           body {
             position: fixed;
           }
+          .full-page {
+            height: 100%;
+          }
         }
       `}</style>
     </React.Fragment>
