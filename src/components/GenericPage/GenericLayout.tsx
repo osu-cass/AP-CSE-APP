@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageWidthEnforcer } from './PageWidthEnforcer';
 import homeLogo from '../../assets/images/home-page.jpg';
+import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
 
 export const genericLayout = <T extends object>(
   title: React.ReactNode,
@@ -28,7 +29,11 @@ export const genericLayout = <T extends object>(
         .content {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
-          height: 80vh;
+        }
+        @media (max-width: ${MobileBreakSize.maxWidth}px) {
+          .content {
+            height: 70vh;
+          }
         }
       `}</style>
     </React.Fragment>
