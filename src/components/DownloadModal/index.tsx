@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
 import { Colors, Styles, blueGradientBgImg } from '../../constants';
 import { TaskButton, TaskButtonProps } from './TaskButton';
+import { IClaim } from '../../models/claim';
+import { DocumentProps } from '../PDFLink/Document/DocumentModels';
+import { ClaimMe } from '../PDFLink/Document/testData';
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
+import { PDFLink } from '../PDFLink';
+import { createDocument } from '../PDFLink/Document';
+import { parseExamples } from '../MainContent/parseUtils';
 
 /**
  * Properties for DownloadModal
@@ -9,7 +17,7 @@ import { TaskButton, TaskButtonProps } from './TaskButton';
  * @interface DownloadModalProps
  */
 export interface DownloadModalProps {
-  taskModels?: string[];
+  claim: IClaim;
   isOpen: boolean;
   closeFromParent?: () => void;
 }
@@ -24,7 +32,8 @@ export interface DownloadModalState {
   showMultiSelect: string;
   taskButtonProps: TaskButtonProps[];
   selectedList: string[];
-  confirmArr: string[];
+  submitDownloadProps: DocumentProps;
+  submitDownload: boolean;
 }
 
 const customStyles = {
@@ -54,9 +63,14 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
       showHide: 'hidden',
       showMultiSelect: '',
       taskButtonProps: this.generateButtons(props),
-      // taskModelButtons: this.generateButtons(props),
       selectedList: [],
-      confirmArr: []
+      submitDownloadProps: {
+        claim: this.props.claim,
+        taskModels: [],
+        renderOverview: false,
+        renderEntireTarget: false
+      },
+      submitDownload: false
     };
   }
   /**
@@ -66,18 +80,21 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
    */
 
   handleConfirm = () => {
-    const { taskButtonProps } = this.state;
     this.setState({
-      confirmArr: taskButtonProps.filter(t => t.toggled).map(t => t.taskName)
+      submitDownloadProps: {
+        claim: this.props.claim,
+        taskModels: this.props.claim.target[0].taskModels.filter(t =>
+          this.state.selectedList.includes(t.taskName)
+        ),
+        renderOverview: this.state.selectedList.includes('Overview'),
+        renderEntireTarget: this.state.selectedList.includes('Entire Target')
+      },
+      // showModal: false,
+      submitDownload: true
     });
-    if (this.props.closeFromParent !== undefined) {
-      this.props.closeFromParent();
-    }
-    this.setState({ showModal: false });
-  };
-
-  closeModal = () => {
-    this.setState({ showModal: false });
+    // if (this.props.closeFromParent !== undefined) {
+    //   this.props.closeFromParent();
+    // }
   };
 
   /**
@@ -187,9 +204,11 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
    */
   generateButtons(props: DownloadModalProps): TaskButtonProps[] {
     const taskArray: TaskButtonProps[] = [];
+    const models: string[] = [];
+    props.claim.target[0].taskModels.forEach(tm => models.push(tm.taskName));
     this.generateDefaultButtons(taskArray);
-    if (props.taskModels) {
-      const taskModels = props.taskModels.sort((a, b) => {
+    if (props.claim) {
+      const taskModels = models.sort((a, b) => {
         return (
           parseInt(a.replace('Task Model ', ''), 10) - parseInt(b.replace('Task Model ', ''), 10)
         );
@@ -338,6 +357,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
           <ul>{this.renderSelectionsList()}</ul>
         </div>
         <div id="pdf-page-count">This PDF will be X pages</div>
+        {this.state.submitDownload ? <PDFLink {...this.state.submitDownloadProps} /> : ''}
         <div id="confirm-back-btn-container">
           <button type="button" id="back-btn" onClick={this.handleBackButton}>
             Back
