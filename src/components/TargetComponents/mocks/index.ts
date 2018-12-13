@@ -157,9 +157,10 @@ export const parsedNavPropsMock: ItemProps[] = [
 
 export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
-  grade: 'Grade 6',
+  grades: ['6'],
   claim: 'C1',
-  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1'
+  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetList: undefined
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
