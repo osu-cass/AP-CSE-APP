@@ -48,7 +48,7 @@ export const mobileIconStyle: IconProps = {
 };
 
 export enum SizeBreaks {
-  mobile = 500,
+  mobile = 700,
   tablet = 950
 }
 
