@@ -1,9 +1,13 @@
 import React from 'react';
 import { Download } from 'react-feather';
-import { PDFDownloadLink } from '@react-pdf/renderer';
-
+import { PDFDownloadLink, Document } from '@react-pdf/renderer';
+import { DocumentProps } from './Document/DocumentModels';
+import { createDocument } from './Document/';
 import { Loading } from '../Loading';
+<<<<<<< HEAD
 import { createDocument } from './Document';
+=======
+>>>>>>> 44d0fc8511a2c1c7c68494c993aca3bb47edd162
 
 interface PDFDownloadLinkRenderProps {
   loading: boolean;

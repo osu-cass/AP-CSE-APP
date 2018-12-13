@@ -9,11 +9,6 @@ export interface TargetTitleBarProps {
   claim: IClaim;
 }
 
-const downloadBtnMock: DownloadBtnProps = {
-  url: 'test/url',
-  filename: 'test-file-name'
-};
-
 export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   return {
     subject: claim.subject,
@@ -23,13 +18,13 @@ export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
   };
 };
 
-export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
+export const parseTitleBarData = (IClaim: IClaim): TitleBarProps => {
   return {
-    claimTitle: claim.claimNumber,
-    claimDesc: claim.description,
-    downloadBtnProps: downloadBtnMock,
-    targetTitle: claim.target[0].title,
-    targetDesc: claim.target[0].description
+    claimTitle: IClaim.claimNumber,
+    claimDesc: IClaim.description,
+    downloadBtnProps: { claim: IClaim },
+    targetTitle: IClaim.target[0].title,
+    targetDesc: IClaim.target[0].description
   };
 };
 

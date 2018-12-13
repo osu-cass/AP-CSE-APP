@@ -63,11 +63,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
     </ul>
     {downloadBtnProps && (
       <div className="download">
-        <DownloadBtn
-          url={downloadBtnProps.url}
-          filename={downloadBtnProps.filename}
-          taskNames={downloadBtnProps.taskNames}
-        />
+        <DownloadBtn claim={downloadBtnProps.claim} />
       </div>
     )}
     <style jsx>{`

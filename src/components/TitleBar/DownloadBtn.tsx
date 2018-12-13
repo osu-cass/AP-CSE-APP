@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Colors } from '../../constants';
 import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
+import { IClaim } from '../../models/claim';
 
 /**
  * interface for DownloadBtn
@@ -11,14 +12,10 @@ import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
  * @interface DownloadBtnProps
  */
 export interface DownloadBtnProps {
-  url: string;
-  filename: string;
-  taskNames?: string[];
+  claim: IClaim;
 }
 
 export interface DownloadBtnState {
-  url: string;
-  filename: string;
   modal: DownloadModalProps;
 }
 
@@ -34,10 +31,8 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
   constructor(props: DownloadBtnProps) {
     super(props);
     this.state = {
-      url: props.url,
-      filename: props.filename,
       modal: {
-        taskModels: props.taskNames,
+        claim: props.claim,
         isOpen: false
       }
     };
@@ -52,6 +47,7 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
       <div id="download-btn-container">
         <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
         <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
+          {/* tslint:disable-next-line:no-unsafe-any */}
           <FontAwesomeIcon className="cloud" icon={faCloudDownloadAlt} />
         </a>
         <div className="download-label">Download</div>
@@ -63,6 +59,7 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
           a {
             color: ${Colors.sbWhite};
             font-size: 30px;
+            cursor: pointer;
           }
           .download-label {
             font-size: 15px;
