@@ -190,6 +190,19 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
         background-repeat: no-repeat;
         height: 100%;
       }
+      @media (max-width: 500px) {
+        :global(.home-image){
+          background-image: none;
+          background-color:white;
+        }
+        .passage{
+          max-width:70vw;
+          padding:3px;
+        }
+        .content{
+          margin-top:10px;
+        }
+      }
     
               </style>
             </div>
