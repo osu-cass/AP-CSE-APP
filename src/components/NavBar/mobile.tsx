@@ -11,39 +11,43 @@ const noUnderline: React.CSSProperties = {
 
 export const MobileNavBar: React.SFC = () => (
   <nav>
-    <Link to="/" style={noUnderline}>
-      <div>
-        <Home {...mobileIconStyle} />
-        Home
-      </div>
-    </Link>
-    <Link to="search" style={noUnderline}>
-      <div>
-        <Search {...mobileIconStyle} />
-        Search
-      </div>
-    </Link>
-    <Link to="search" style={noUnderline}>
-      <div>
-        <Eye {...mobileIconStyle} />
-        Explore
-      </div>
-    </Link>
-    <Link to="apps" style={noUnderline}>
-      <div>
-        <Grid {...mobileIconStyle} />
-        Apps
-      </div>
-    </Link>
+    <div className="link-container">
+      <Link to="/" style={noUnderline}>
+        <div>
+          <Home {...mobileIconStyle} />
+          Home
+        </div>
+      </Link>
+      <Link to="search" style={noUnderline}>
+        <div>
+          <Search {...mobileIconStyle} />
+          Search
+        </div>
+      </Link>
+      <Link to="search" style={noUnderline}>
+        <div>
+          <Eye {...mobileIconStyle} />
+          Explore
+        </div>
+      </Link>
+      <Link to="apps" style={noUnderline}>
+        <div>
+          <Grid {...mobileIconStyle} />
+          Apps
+        </div>
+      </Link>
+    </div>
     <style jsx>{`
       nav {
+        display: fixed;
+        background-color: ${Colors.sbGrayLighter};
+        top: 90vh;
+        min-height: 10vh;
+      }
+      .link-container {
         display: flex;
         justify-content: space-between;
         padding: 3px 10px;
-        background-color: ${Colors.sbGrayLighter};
-        bottom: 0;
-        min-height: 40px;
-        margin-bottom: 40px;
       }
       div {
         display: flex;
