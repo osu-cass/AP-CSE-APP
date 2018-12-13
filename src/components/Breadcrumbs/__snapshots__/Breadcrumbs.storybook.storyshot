@@ -8,14 +8,10 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
     }
   }
 >
-  <div
-    style={
-      Object {
-        "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-      }
-    }
-  >
-    <div>
+  <div>
+    <div
+      className="breadCrumbContainer"
+    >
       <ul>
         <li>
           <a
@@ -24,6 +20,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
           >
             <span
               aria-label="Home"
+              className="home"
             >
               <svg
                 fill="none"
@@ -48,7 +45,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         </li>
         <li>
           <a
-            href="/ELA"
+            href="/search?subject=ELA"
             onClick={[Function]}
             style={
               Object {
@@ -92,7 +89,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         </li>
         <li>
           <a
-            href="/ELA/Grade 8"
+            href="/search?grades=8&subject=ELA"
             onClick={[Function]}
             style={
               Object {
@@ -136,7 +133,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
         </li>
         <li>
           <a
-            href="/ELA/Grade 8/Claim 4"
+            href="/search?claim=Claim%204&grades=8&subject=ELA"
             onClick={[Function]}
             style={
               Object {
@@ -178,89 +175,131 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs with all data 1`] 
     
           </style>
         </li>
-        <li>
-          <a
-            href="/ELA/Grade 8/Claim 4/Target 1"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "white",
-                "paddingLeft": "20px",
-                "textDecoration": "none",
-              }
-            }
+        <div>
+          <div
+            className="root"
           >
-            <span
-              aria-label="Target"
+            <div
+              className="breadCrumbBar"
             >
-              Target 1
-            </span>
-          </a>
-          <style
-            jsx={true}
-          >
-            
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        height: 35px;
-        overflow: hidden;
-      }
-      li:before {
-        content: '';
-        height: 32px;
-        width: 32px;
-        right: 20px;
-        border-top: 1px solid #66a1c1;
-        border-right: 1px solid #66a1c1;
-        transform: rotate(45deg);
-      }
-    
-          </style>
-        </li>
-      </ul>
-      <style
-        jsx={true}
-      >
+              <li
+                onClick={[Function]}
+                role="Menu"
+              >
+                <div
+                  className="targetContainer"
+                  style={
+                    Object {
+                      "color": "white",
+                      "marginLeft": "20px",
+                    }
+                  }
+                >
+                  <div
+                    className="targetLabel"
+                  >
+                    Target 1 and stuff and things this could be really long
+                  </div>
+                </div>
+              </li>
+            </div>
+            <style
+              jsx={true}
+            >
+              
+          .root {
+            display: flex;
+            flex: 1;
+          }
+          * {
+            margin: 0;
+            padding: 0;
+          }
+
+          .targetLabel {
+            padding-top: 5px;
+          }
+          .targetContainer {
+            width: 100%;
+            display: flex;
+          }
+          li {
+            display: flex;
+            align-items: center;
+            height: 35px;
+            overflow: hidden;
+          }
+          li:before {
+            content: '';
+            height: 32px;
+            width: 32px;
+            right: 20px;
+            margin-top: 5px;
+            border-top: 1px solid #66a1c1;
+            border-right: 1px solid #66a1c1;
+            transform: rotate(45deg);
+          }
+          .targetLabel {
+            color: 'white';
+          }
+          .listContainer {
+            position: absolute;
+            margin-top: 35px;
+            padding: 8px 0;
+            margin-left: 50px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #ebebeb;
+            border-radius: 4px;
+            background-color: white;
+            z-index: 1;
+          }
         
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        color: white;
-      }
-      div {
-        display: flex;
-        justify-content: center;
-        opacity: 1;
-      }
-      div ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: left;
-        align-items: center;
-        list-style-type: none;
-        overflow: auto;
-        width: 85%;
-        font-family: PT Sans Caption;
-        border-bottom: 1px solid #66a1c1;
-      }
-      div ul li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-      }
-    
-      </style>
+            </style>
+          </div>
+        </div>
+      </ul>
     </div>
+    <style
+      jsx={true}
+    >
+      
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        a {
+          color: white;
+        }
+
+        div ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: left;
+          list-style-type: none;
+          width: 85%;
+          font-family: PT Sans Caption;
+        }
+
+        .home {
+          position: relative;
+          top: 5px;
+          left: 5px;
+        }
+
+        div ul li {
+          display: flex;
+          width: 35px;
+          height: 35px;
+        }
+
+        .breadCrumbContainer {
+          background-image: linear-gradient(90deg, #006298, #0085AD);
+          overflow: visible;
+        }
+      
+    </style>
   </div>
 </div>
 `;
@@ -273,14 +312,10 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
     }
   }
 >
-  <div
-    style={
-      Object {
-        "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
-      }
-    }
-  >
-    <div>
+  <div>
+    <div
+      className="breadCrumbContainer"
+    >
       <ul>
         <li>
           <a
@@ -289,6 +324,7 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
           >
             <span
               aria-label="Home"
+              className="home"
             >
               <svg
                 fill="none"
@@ -312,44 +348,47 @@ exports[`Storyshots Breadcrumbs component Renders Breadcrumbs without Data 1`] =
           </a>
         </li>
       </ul>
-      <style
-        jsx={true}
-      >
-        
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        color: white;
-      }
-      div {
-        display: flex;
-        justify-content: center;
-        opacity: 1;
-      }
-      div ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: left;
-        align-items: center;
-        list-style-type: none;
-        overflow: auto;
-        width: 85%;
-        font-family: PT Sans Caption;
-        border-bottom: 1px solid #66a1c1;
-      }
-      div ul li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-      }
-    
-      </style>
     </div>
+    <style
+      jsx={true}
+    >
+      
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        a {
+          color: white;
+        }
+
+        div ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: left;
+          list-style-type: none;
+          width: 85%;
+          font-family: PT Sans Caption;
+        }
+
+        .home {
+          position: relative;
+          top: 5px;
+          left: 5px;
+        }
+
+        div ul li {
+          display: flex;
+          width: 35px;
+          height: 35px;
+        }
+
+        .breadCrumbContainer {
+          background-image: linear-gradient(90deg, #006298, #0085AD);
+          overflow: visible;
+        }
+      
+    </style>
   </div>
 </div>
 `;
