@@ -22,12 +22,18 @@ export const parseBreadCrumbData = (claim: IClaim): BreadcrumbsProps => {
     target: claim.target[0].title
   };
 };
+export const parseDownloadBtnProps = (claim: IClaim): DownloadBtnProps => {
+  const tNameArr: string[] = [];
+  claim.target[0].taskModels.forEach(tm => tNameArr.push(tm.taskName));
+  downloadBtnMock.taskNames = tNameArr;
 
+  return downloadBtnMock;
+};
 export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
-    downloadBtnProps: downloadBtnMock,
+    downloadBtnProps: parseDownloadBtnProps(claim),
     targetTitle: claim.target[0].title,
     targetDesc: claim.target[0].description
   };
