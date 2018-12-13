@@ -29,10 +29,6 @@ You can do this by open powershell and typing the following command:
 ```sh
 choco install rsync
 ```
-You will also be required to install the ! command. To do this run the following command:
-```sh
-
-```
 
 To begin working on AP-CSE-APP, you have two choices: Run Storybook for component development, or run the frontend application with `webpack`.
 
