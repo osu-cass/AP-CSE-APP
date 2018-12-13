@@ -43,6 +43,7 @@ export const MobileNavBar: React.SFC = () => (
         background-color: ${Colors.sbGrayLighter};
         bottom: 0;
         min-height: 40px;
+        margin-bottom: 40px;
       }
       div {
         display: flex;
