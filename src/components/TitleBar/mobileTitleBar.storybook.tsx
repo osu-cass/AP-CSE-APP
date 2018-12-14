@@ -16,7 +16,7 @@ const allDataMock: MobileTitleBarProps = {
   targetTitle: 'Target 1'
 };
 
-storiesOf('TitleBar component', module)
+storiesOf('Mobile TitleBar component', module)
   .add('Renders a Title Bar with header only', () => (
     <div>
       <TitleBar claimTitle={claimOnlyMock.claimTitle} />
