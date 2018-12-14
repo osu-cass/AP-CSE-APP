@@ -131,6 +131,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
           className="right-spacing"
         >
           <a
+            aria-label="Help"
             href="/help"
             onClick={[Function]}
             style={
@@ -389,18 +390,21 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
     >
       
       nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 3px 10px;
-        background-color: #ebebeb;
+        position: fixed;
         bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         min-height: 40px;
+        background-color: #ebebeb;
+        width: 100vw;
       }
       div {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 0.75em;
+        padding: 3px;
       }
     
     </style>
