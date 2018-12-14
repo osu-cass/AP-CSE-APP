@@ -17,7 +17,7 @@ import { Message } from '../Message';
 import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import css from 'styled-jsx/css';
 import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
-import { PtToggleBtn } from '../Togglebtn';
+import { PtToggleYes, PtToggleNo } from '../Togglebtn';
 
 export const globalFilterStyle = css`
   .filter-selection {
@@ -124,7 +124,8 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         {renderClaimFilter()}
         {renderTargetFilter()}
       </div>
-      <PtToggleBtn />
+      <PtToggleYes />
+      <PtToggleNo />
       <div className="reset-container">
         <button className="btn" onClick={reset}>
           Reset
