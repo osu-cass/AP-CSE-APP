@@ -9,7 +9,7 @@ import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrap
  * @export
  * @interface TitleBarProps
  */
-export interface TitleBarProps {
+export interface MobileTitleBarProps {
   claimTitle?: string;
   targetTitle?: string;
   downloadBtnProps?: DownloadBtnProps;
@@ -24,11 +24,11 @@ export interface TitleBarProps {
  * @param {string | undefined} targetTitle
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
-export const TitleBar: React.SFC<TitleBarProps> = ({
+export const TitleBar: React.SFC<MobileTitleBarProps> = ({
   claimTitle,
   targetTitle,
   downloadBtnProps
-}: TitleBarProps) => (
+}: MobileTitleBarProps) => (
   <div className="title-container">
     <ul>
       {claimTitle && (
