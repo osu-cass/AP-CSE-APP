@@ -5,7 +5,7 @@ import { Colors, Styles, blueGradientBgImg } from '../../constants';
 import { TaskButton, TaskButtonProps } from './TaskButton';
 import { IClaim } from '../../models/claim';
 import { DocumentProps } from '../PDFLink/Document/DocumentModels';
-import { ClaimMe } from '../PDFLink/Document/testData';
+import { ClaimMe } from '../PDFLink/Document/mocks/testData';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { PDFLink } from '../PDFLink';
 import { createDocument } from '../PDFLink/Document';

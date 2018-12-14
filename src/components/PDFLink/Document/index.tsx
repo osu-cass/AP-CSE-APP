@@ -4,7 +4,7 @@ import { Document, Page, Text, View } from '@react-pdf/renderer';
 // import { Colors, Styles } from '../../../constants';
 import { Head } from './Head';
 import { OneColumnLayout } from './OneColumnLayout';
-import { ClaimMe } from './testData';
+import { ClaimMe } from './mocks/testData';
 import { IClaim } from '../../../models/claim';
 import { StringContent } from './StringContent';
 import { Standards } from './Standards';
@@ -64,6 +64,3 @@ export const createDocument = ({
     )}
   </Document>
 );
-
-
-

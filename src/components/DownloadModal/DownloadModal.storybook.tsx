@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
 import { DownloadModal } from '.';
-import { ClaimMe } from '../PDFLink/Document/testData';
+import { ClaimMe } from '../PDFLink/Document/mocks/testData';
 
 storiesOf('DownloadModal DontTest', module)
   .addDecorator(centered)

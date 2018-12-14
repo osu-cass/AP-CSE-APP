@@ -1,4 +1,4 @@
-import { IClaim } from '../../../models/claim';
+import { IClaim } from '../../../../models/claim';
 
 export const ClaimMe: IClaim = {
   subject: 'English Language Arts',
