@@ -85,6 +85,7 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
           <div
             className="page-content width-enforcer"
           >
+            <div />
             <div
               className="content"
             >

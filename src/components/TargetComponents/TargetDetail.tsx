@@ -65,11 +65,12 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
 
 export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   let sections: ContentSection[] = [];
-
-  sections.push({
-    title: 'Clarification',
-    jsx: parseContent(target.clarification)
-  });
+  if (target.clarification) {
+    sections.push({
+      title: 'Clarification',
+      jsx: parseContent(target.clarification)
+    });
+  }
 
   if (target.standards) {
     sections.push({
@@ -78,25 +79,28 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     });
   }
 
-  sections.push({
-    title: 'Stimuli/Text Complexity',
-    jsx: undefined,
-    subsections: [
-      {
-        title: 'Passage',
-        jsx: parseContent(target.stimInfo)
-      },
-      {
-        title: 'Text Complexity',
-        jsx: parseContent(target.dualText)
-      }
-    ]
-  });
-
-  sections.push({
-    title: 'Accessibility Concerns',
-    jsx: parseContent(target.accessibility)
-  });
+  if (target.stimInfo) {
+    sections.push({
+      title: 'Stimuli/Text Complexity',
+      jsx: undefined,
+      subsections: [
+        {
+          title: 'Passage',
+          jsx: parseContent(target.stimInfo)
+        },
+        {
+          title: 'Text Complexity',
+          jsx: parseContent(target.dualText)
+        }
+      ]
+    });
+  }
+  if (target.accessibility) {
+    sections.push({
+      title: 'Accessibility Concerns',
+      jsx: parseContent(target.accessibility)
+    });
+  }
 
   // evidence required
   if (target.evidence) {
@@ -108,7 +112,6 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
 
   // add task model sections
   sections = sections.concat(taskModelSections(target.taskModels, target.stem));
-
   sections.push({
     title: 'Depth of Knowledge',
     jsx: <DOK dok={target.DOK} />
