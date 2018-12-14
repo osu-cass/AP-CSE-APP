@@ -59,18 +59,7 @@ exports[`PDFLink component DownloadIcon component matches snapshot 1`] = `
 
 exports[`PDFLink component matches snapshot 1`] = `
 <div>
-  <Component
-    document={
-      <DOCUMENT>
-        <PAGE>
-          <TEXT>
-            Hello, World
-          </TEXT>
-        </PAGE>
-      </DOCUMENT>
-    }
-    fileName="somename.pdf"
-  >
+  <Component>
     <Component />
   </Component>
 </div>
