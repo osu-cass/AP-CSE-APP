@@ -1,7 +1,9 @@
 import { ITarget } from '../../../models/target';
 import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
+import { MobileTitleBarProps } from '../../../components/TitleBar/mobileTitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
+import { TargetClaimProps } from '../../MobileClaimTargetSec/mobileTAndCDesc';
 import { IClaim } from '../../../models/claim';
 import { ITargetParams } from '../../../clients/target';
 
@@ -174,6 +176,22 @@ export const parsedTitleBarDataMock: TitleBarProps = {
   },
   targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetDesc: 'placeholder'
+};
+export const parsedCLaimTargetdataMock: TargetClaimProps = {
+  claimTitle: 'Claim 1',
+  claimDesc:
+    'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
+  targetTitle: 'Target 1',
+  targetDesc: 'placeholder'
+};
+export const parsedMobileTitleBarDataMock: MobileTitleBarProps = {
+  claimTitle: 'Claim 1',
+  targetTitle: 'Target 1',
+  downloadBtnProps: {
+    url: 'test/url',
+    filename: 'test-file-name',
+    taskNames: ['Task Model 1', 'Task Model 2', 'Task Model 3']
+  }
 };
 
 export const parsedSubItemMock: ItemProps = {

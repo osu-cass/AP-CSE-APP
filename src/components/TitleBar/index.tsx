@@ -2,6 +2,7 @@ import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { Styles, Colors } from '../../constants';
 import { IDomain } from '../../models/claim';
+import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
 /**
  * interface for TitleBar
@@ -133,3 +134,4 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
     `}</style>
   </div>
 );
+export const TitleBarWrapped = mediaQueryWrapper(TitleBar, DesktopBreakSize);

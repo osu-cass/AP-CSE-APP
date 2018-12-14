@@ -4,6 +4,7 @@ import { IClaim } from '../../models/claim';
 import { ITargetClient, TargetClient } from '../../clients/target';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { TargetTitleBar } from '../../components/TargetComponents/title';
+import { ClaimTarget } from '../../components/TargetComponents/ClaimTarget';
 import { Message, ErrorMessage } from '../../components/Message';
 import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
 import { FilterClient } from '../../clients/filter';
@@ -22,7 +23,6 @@ export interface TargetPageState {
   loaded: boolean;
   targetList?: SearchBaseModel[];
 }
-
 /**
  * Class that handles placing the target page components in the generic page layout
  * @class{TargetPage}
@@ -82,7 +82,9 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
 
     const Page = genericLayout(
       <TargetTitleBar claim={this.state.result} targetList={this.state.targetList} />,
-      TargetDetail
+      TargetDetail,
+      'Target',
+      <ClaimTarget claim={this.state.result} />
     );
 
     return <Page target={this.state.result.target[0]} />;
