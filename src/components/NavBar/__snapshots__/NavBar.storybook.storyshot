@@ -131,6 +131,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
           className="right-spacing"
         >
           <a
+            aria-label="Help"
             href="/help"
             onClick={[Function]}
             style={
