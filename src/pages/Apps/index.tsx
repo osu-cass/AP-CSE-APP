@@ -2,6 +2,7 @@ import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { AppLinkProps, AppLink } from '../../components/AppLink';
 import { Title } from '../../components/GenericPage/Title';
+import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const scoreimg: string = require('../../assets/images/score-guide.png') as string;
@@ -59,9 +60,16 @@ const AppsPageComponent: React.SFC = () => (
         {linkProps.map((props: AppLinkProps, idx: number) => (
           <AppLink key={idx} {...props} />
         ))}
+        <div className="app-page-mobile-padding" />
       </div>
     </div>
     <style jsx>{`
+      @media (max-width: ${MobileBreakSize.maxWidth}px) {
+        .app-page-mobile-padding {
+          height: 200px;
+          width: 100px;
+        }
+      }
       .content {
         display: flex;
         flex-direction: column;

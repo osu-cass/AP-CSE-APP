@@ -52,7 +52,7 @@ export const NavBar: React.SFC = () => {
             <SearchBar onSearch={handleRedirect} />
           </span>
           <span className="right-spacing">
-            <Link to="/help" style={linkStyle}>
+            <Link to="/help" style={linkStyle} aria-label="Help">
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
