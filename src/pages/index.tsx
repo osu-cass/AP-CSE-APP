@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
-import { MobileNavBarWrapped } from '../components/NavBar/mobile';
+import { MobileNavBarWrapped, MobileNavBar } from '../components/NavBar/mobile';
 import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
@@ -49,6 +49,9 @@ export const App: React.SFC = () => {
           html,
           body {
             position: fixed;
+          }
+          .full-page {
+            height: 100%;
           }
         }
       `}</style>
