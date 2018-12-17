@@ -320,28 +320,49 @@ export const DevFullItemSpec: React.SFC = () => (
 );
 
 export const DevContentSpec: React.SFC = () => (
-  <p>
-    Smarter Balanced has developed content specifications in English language arts/literacy and math
-    to ensure that the assessments cover the range of knowledge and skills in the Common Core State
-    Standards. The content specifications serve as the basis for the Smarter Balanced system of
-    summative and interim assessments and formative assessment support for teachers. Dr. Linda
-    Darling-Hammond, former Smarter Balanced Senior Research Advisor and Charles E. Ducommun
-    Professor of Education Emeritus at Stanford University, led the development of the content
-    specifications in collaboration with experts in the field. The Smarter Balanced Technical
-    Advisory Committee, Consortium work groups, and the lead authors of the Common Core State
-    Standards also contributed to the documents. Hundreds of organizations and individual
-    stakeholders provided feedback during two rounds of public comment.
-  </p>
+  <React.Fragment>
+    <p>
+      Smarter Balanced has developed content specifications in English language arts/literacy and
+      math to ensure that the assessments cover the range of knowledge and skills in the Common Core
+      State Standards. The content specifications serve as the basis for the Smarter Balanced system
+      of summative and interim assessments and formative assessment support for teachers. Dr. Linda
+      Darling-Hammond, former Smarter Balanced Senior Research Advisor and Charles E. Ducommun
+      Professor of Education Emeritus at Stanford University, led the development of the content
+      specifications in collaboration with experts in the field. The Smarter Balanced Technical
+      Advisory Committee, Consortium work groups, and the lead authors of the Common Core State
+      Standards also contributed to the documents. Hundreds of organizations and individual
+      stakeholders provided feedback during two rounds of public comment.
+    </p>
+    <div className="row">
+      <LinkButton text="Content Specifications Full Download" icon={fileIcon} url="" />
+      <style jsx>{rowStyle}</style>
+    </div>
+  </React.Fragment>
 );
 
 export const DevIntroELAContentSpec: React.SFC = () => (
-  <p>
-    Vivamus posuere vestibulum ligula, vitae tristique sem aliquam ac. Vivamus nec libero a ex
-    faucibus consequat. Mauris nulla risus, finibus eget maximus at, volutpat id dui. Ut
-    sollicitudin nibh ac enim lobortis vulputate. Aenean volutpat justo lorem, et rutrum diam mattis
-    id. Morbi risus odio, suscipit sit amet ipsum et, tincidunt tincidunt urna. Nam quis sapien
-    tortor. In lacinia nulla et augue placerat pulvinar.
-  </p>
+  <React.Fragment>
+    <p>
+      Vivamus posuere vestibulum ligula, vitae tristique sem aliquam ac. Vivamus nec libero a ex
+      faucibus consequat. Mauris nulla risus, finibus eget maximus at, volutpat id dui. Ut
+      sollicitudin nibh ac enim lobortis vulputate. Aenean volutpat justo lorem, et rutrum diam
+      mattis id. Morbi risus odio, suscipit sit amet ipsum et, tincidunt tincidunt urna. Nam quis
+      sapien tortor. In lacinia nulla et augue placerat pulvinar.
+    </p>
+    <div className="row">
+      <LinkButton
+        text="ELA/Literacy Content Specifications"
+        icon={fileIcon}
+        url="https://portal.smarterbalanced.org/library/en/english-language-artsliteracy-content-specifications.pdf"
+      />
+      <LinkButton
+        text="ELA Stimulus Specifications"
+        icon={fileIcon}
+        url="https://portal.smarterbalanced.org/library/en/ela-stimulus-specifications.pdf"
+      />
+      <style jsx>{rowStyle}</style>
+    </div>
+  </React.Fragment>
 );
 
 export const DevIntroMathContentSpec: React.SFC = () => (
@@ -355,21 +376,10 @@ export const DevIntroMathContentSpec: React.SFC = () => (
     </p>
     <div className="row">
       <LinkButton
-        text="ELA/Literacy Content Specifications"
-        icon={fileIcon}
-        url="https://portal.smarterbalanced.org/library/en/english-language-artsliteracy-content-specifications.pdf"
-      />
-      <LinkButton
-        text="ELA Stimulus Specifications"
-        icon={fileIcon}
-        url="https://portal.smarterbalanced.org/library/en/ela-stimulus-specifications.pdf"
-      />
-      <LinkButton
         text="Mathematics Content Specifications"
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/mathematics-content-specifications.pdf"
       />
-      <LinkButton text="Content Specifications Full Download" icon={fileIcon} url="" />
       <style jsx>{rowStyle}</style>
     </div>
   </React.Fragment>
