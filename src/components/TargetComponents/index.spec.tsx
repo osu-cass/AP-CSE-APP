@@ -1,7 +1,8 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import { parseBreadCrumbData, parseTitleBarData } from './title';
+import { parseBreadCrumbData, parseTitleBarData, parseTitleBarMobileData } from './title';
+import { parseMobileData } from './ClaimTarget';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 import { TargetDetail, TargetDetailProps } from './TargetDetail';
 import {
@@ -10,7 +11,9 @@ import {
   parsedBreadCrumbDataMock,
   parsedRegularItemMock,
   parsedItemWithSubsMock,
-  parsedNavPropsMock
+  parsedNavPropsMock,
+  parsedCLaimTargetdataMock,
+  parsedMobileTitleBarDataMock
 } from './mocks';
 import { ITarget } from '../../models/target';
 import { ELAG3TargetMock } from '../../../mock_api_data/E.G3.PT';
@@ -41,5 +44,16 @@ describe('Target Page', () => {
     const parsedTitleBarData = parseTitleBarData(ELAG3ClaimMock);
 
     expect(parsedTitleBarData).toEqual(parsedTitleBarDataMock);
+  });
+  it('parses mobile title bar data from a claim', () => {
+    const parsedMobileTitleBarData = parseTitleBarMobileData(ELAG3ClaimMock);
+
+    expect(parsedMobileTitleBarData).toEqual(parsedMobileTitleBarDataMock);
+  });
+
+  it('parses target claim data for mobile', () => {
+    const parsedMobileData = parseMobileData(ELAG3ClaimMock);
+
+    expect(parsedMobileData).toEqual(parsedCLaimTargetdataMock);
   });
 });

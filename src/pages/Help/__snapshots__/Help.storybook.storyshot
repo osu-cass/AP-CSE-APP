@@ -63,6 +63,7 @@ exports[`Storyshots Help Page default 1`] = `
       <div
         className="page-content width-enforcer"
       >
+        <div />
         <style
           jsx={true}
         >
@@ -80,6 +81,9 @@ exports[`Storyshots Help Page default 1`] = `
     
         </style>
       </div>
+      <div
+        className="mobile-padding"
+      />
     </div>
   </div>
   <style
@@ -97,6 +101,15 @@ exports[`Storyshots Help Page default 1`] = `
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
           flex-grow: 1;
+        }
+        @media (max-width: 500px) {
+          .mobile-padding {
+            height: 200px;
+            width: 100px;
+          }
+          .title-and-content {
+            max-height: 95vh;
+          }
         }
       
   </style>

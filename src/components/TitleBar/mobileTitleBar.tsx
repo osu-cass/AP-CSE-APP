@@ -2,18 +2,16 @@ import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { Styles, Colors } from '../../constants';
 import { IDomain } from '../../models/claim';
-import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
 /**
  * interface for TitleBar
  * @export
  * @interface TitleBarProps
  */
-export interface TitleBarProps {
+export interface MobileTitleBarProps {
   claimTitle?: string;
-  claimDesc?: string;
   targetTitle?: string;
-  targetDesc?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
 
@@ -23,32 +21,19 @@ export interface TitleBarProps {
  * @export
  * @function TitleBar
  * @param {string | undefined} claimTitle
- * @param {string | undefined} claimDesc
  * @param {string | undefined} targetTitle
- * @param {string | undefined} targetDesc
  * @param {DownloadBtnProps | undefined} downloadBtnProps
  */
-export const TitleBar: React.SFC<TitleBarProps> = ({
+export const TitleBar: React.SFC<MobileTitleBarProps> = ({
   claimTitle,
-  claimDesc,
   targetTitle,
-  targetDesc,
   downloadBtnProps
-}: TitleBarProps) => (
+}: MobileTitleBarProps) => (
   <div className="title-container">
-    <div className="item-spec">
-      Item <br />
-      Specification
-    </div>
     <ul>
       {claimTitle && (
         <li className="title">
           <span>{claimTitle}</span>
-        </li>
-      )}
-      {claimDesc && (
-        <li className="desc">
-          <span>{claimDesc}</span>
         </li>
       )}
       {targetTitle && (
@@ -56,22 +41,13 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
           <span>{targetTitle}</span>
         </li>
       )}
-      {targetDesc && (
-        <li className="desc">
-          <span>{targetDesc}</span>
+      {downloadBtnProps && (
+        <li className="download">
+          <DownloadBtn {...downloadBtnProps} />
         </li>
       )}
     </ul>
-    {downloadBtnProps && (
-      <div className="download">
-        <DownloadBtn claim={downloadBtnProps.claim} />
-      </div>
-    )}
     <style jsx>{`
-      * {
-        margin: 0;
-        padding: 0;
-      }
       .title-container {
         display: flex;
         font-family: ${Styles.sbSans};
@@ -87,47 +63,24 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
       ul {
         display: flex;
         flex-wrap: wrap;
-        align-items: stretch;
+        flex-direction:row;
+        align-items: center;
+        justify-content:space-evenly;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
-        flex-grow:1;
-        margin-left: 25px;
-        margin-right: 25px;
-      }
-      div ul li {
-        width: 100%;
-      }
+        width:100vw;
+        margin: 0;
+        padding: 0;
+        }
       .title {
-        width: 20%;
-        min-width: 50px;
         color: white;
-        font-size: 18px;
-        text-align: left;
-      }
-      .item-spec{
-        font-size:24px;
-        margin-left:10vw;
-        margin-right:25px;
-        color:white;
-        flex-grow:1;
-        font-weight:bold;
-      }
-      .desc {
-        width: 75%;
-        min-width: 50px;
-        padding-bottom: 15px;
-        color: ${Colors.sbGrayLighter};
-        font-size: 12px;
-        font-weight: 100;
+        font-size: 1.129em;
         text-align: left;
       }
       .download {
-        margin-left:25px;
-        margin-right:20vw;
-        flex-grow:1;
-
+        width:auto;
       }
     `}</style>
   </div>
 );
-export const TitleBarWrapped = mediaQueryWrapper(TitleBar, DesktopBreakSize);
+export const MobileTitleBarWrapped = mediaQueryWrapper(TitleBar, MobileBreakSize);

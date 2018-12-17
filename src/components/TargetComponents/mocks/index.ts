@@ -1,7 +1,9 @@
 import { ITarget } from '../../../models/target';
 import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
+import { MobileTitleBarProps } from '../../../components/TitleBar/mobileTitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
+import { TargetClaimProps } from '../../MobileClaimTargetSec/mobileTAndCDesc';
 import { IClaim } from '../../../models/claim';
 import { ITargetParams } from '../../../clients/target';
 import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
@@ -158,9 +160,10 @@ export const parsedNavPropsMock: ItemProps[] = [
 
 export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
-  grade: 'Grade 6',
+  grades: ['6'],
   claim: 'C1',
-  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1'
+  target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetList: undefined
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
@@ -172,6 +175,20 @@ export const parsedTitleBarDataMock: TitleBarProps = {
   },
   targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetDesc: 'placeholder'
+};
+export const parsedCLaimTargetdataMock: TargetClaimProps = {
+  claimTitle: 'Claim 1',
+  claimDesc:
+    'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
+  targetTitle: 'Target 1',
+  targetDesc: 'placeholder'
+};
+export const parsedMobileTitleBarDataMock: MobileTitleBarProps = {
+  claimTitle: 'Claim 1',
+  targetTitle: 'Target 1',
+  downloadBtnProps: {
+    claim: ELAG3ClaimMock
+  }
 };
 
 export const parsedSubItemMock: ItemProps = {

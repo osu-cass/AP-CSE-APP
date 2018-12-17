@@ -5,6 +5,7 @@ import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Colors } from '../../constants';
 import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
 import { IClaim } from '../../models/claim';
+import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
 
 /**
  * interface for DownloadBtn
@@ -70,6 +71,14 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
             align-items: center;
             flex-direction: column;
             color: White;
+          }
+          @media (max-width: ${MobileBreakSize.maxWidth}px) {
+            .download-label {
+              display: none;
+            }
+            a {
+              fontsize: 1em;
+            }
           }
         `}</style>
       </div>

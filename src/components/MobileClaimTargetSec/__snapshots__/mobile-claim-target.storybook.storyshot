@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots MobileCLaimTargetSec component Renders a Title Bar with a claim only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      className="target-claim-container"
+    >
+      <div
+        className="claim-section"
+      >
+        <span
+          className="title"
+        >
+          Claim 1
+          : 
+        </span>
+      </div>
+      <div
+        className="target-section"
+      />
+      <style
+        jsx={true}
+      >
+        
+        .target-claim-container {
+          font-family: PT Sans Caption;
+          padding: 0;
+          width: '100%',
+          font-size:1.2em;
+          color: black;
+          text-align:left;
+          margin-top:-15px;
+        }
+
+        .target-section{
+          marigin-top: 10px;
+          padding: 5px;
+        }
+        .claim-section{
+          padding:5px;
+        }
+
+      
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots MobileCLaimTargetSec component Renders a Title Bar with all data 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      className="target-claim-container"
+    >
+      <div
+        className="claim-section"
+      >
+        <span
+          className="title"
+        >
+          Claim 1
+          : 
+        </span>
+      </div>
+      <div
+        className="target-section"
+      >
+        <span
+          className="title"
+        >
+          Target 1
+          : 
+        </span>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .target-claim-container {
+          font-family: PT Sans Caption;
+          padding: 0;
+          width: '100%',
+          font-size:1.2em;
+          color: black;
+          text-align:left;
+          margin-top:-15px;
+        }
+
+        .target-section{
+          marigin-top: 10px;
+          padding: 5px;
+        }
+        .claim-section{
+          padding:5px;
+        }
+
+      
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots MobileCLaimTargetSec component Renders a Title Bar with header only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      className="target-claim-container"
+    >
+      <div
+        className="claim-section"
+      >
+        <span
+          className="title"
+        >
+          Claim 1
+          : 
+        </span>
+      </div>
+      <div
+        className="target-section"
+      />
+      <style
+        jsx={true}
+      >
+        
+        .target-claim-container {
+          font-family: PT Sans Caption;
+          padding: 0;
+          width: '100%',
+          font-size:1.2em;
+          color: black;
+          text-align:left;
+          margin-top:-15px;
+        }
+
+        .target-section{
+          marigin-top: 10px;
+          padding: 5px;
+        }
+        .claim-section{
+          padding:5px;
+        }
+
+      
+      </style>
+    </div>
+  </div>
+</div>
+`;
