@@ -98,12 +98,18 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                 <h1
                   className="passage-title"
                 >
-                  Welcome to Content Spec Explorer!
+                  Welcome!
                 </h1>
                 <div
                   className="passage-content"
                 >
-                  The CSE website provides easy access to a host of Smarter Balanced’s test development documents. The primary resources in the CSE are the Item Specifications (“Item Specs”). Item Specs outline how assessment items are to be written so the response shows evidence that the students have the skills/knowledge to perform the item/task. The Item Specs are used by the test development team to produce consistent, well-aligned items across the content areas. Educators are encouraged to implement a similar structure when preparing classroom-level assessments for both summative and formative uses.
+                  The Content Spec Explorer is a tool for educators to learn about the design and content of the Smarter Balanced assessments. 
+                  <br />
+                  <br />
+                  Choose “Navigate to a Target” to find item specifications, linking the claims and assessment targets to the content standards. 
+                  <br />
+                  <br />
+                  Choose “Learn About Test Development” to find information explaining interim and summative assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
                 </div>
                 <div
                   className="buttons"
@@ -183,7 +189,6 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
         width: 100%;
         flex-basis: 100%;
       }
-
       :global(.home-image) {
         background-image: url("test-file-stub");
         background-size: cover;
