@@ -4,6 +4,7 @@ import { TitleBarProps } from '../../../components/TitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
 import { IClaim } from '../../../models/claim';
 import { ITargetParams } from '../../../clients/target';
+import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
 
 export const mockTargetClient = {
   // tslint:disable-next-line:no-empty
@@ -167,8 +168,7 @@ export const parsedTitleBarDataMock: TitleBarProps = {
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: {
-    url: 'test/url',
-    filename: 'test-file-name'
+    claim: ELAG3ClaimMock
   },
   targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetDesc: 'placeholder'
