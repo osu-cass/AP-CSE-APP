@@ -7,7 +7,7 @@ import { IClaim } from '../../models/claim';
 import { DocumentProps } from '../PDFLink/Document/DocumentModels';
 import { ClaimMe } from '../PDFLink/Document/mocks/testData';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
-import { PDFLink } from '../PDFLink';
+import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
 import { createDocument } from '../PDFLink/Document';
 import { parseExamples } from '../MainContent/parseUtils';
 
@@ -350,6 +350,11 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     return result;
   };
   confirmSelection() {
+    const pdfDownLoadProps: PDFDownloadLinkRenderProps = {
+      document: createDocument({ ...this.state.submitDownloadProps }),
+      fileName: `${this.state.submitDownloadProps.claim.target[0].title}.pdf`
+    };
+
     return (
       <div id="confirm-selections" className={this.state.showHide}>
         <div id="selections-title">Selected Sections</div>
@@ -357,7 +362,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
           <ul>{this.renderSelectionsList()}</ul>
         </div>
         <div id="pdf-page-count">This PDF will be X pages</div>
-        {this.state.submitDownload ? <PDFLink {...this.state.submitDownloadProps} /> : ''}
+        {this.state.submitDownload ? <PDFLink {...pdfDownLoadProps} /> : ''}
         <div id="confirm-back-btn-container">
           <button type="button" id="back-btn" onClick={this.handleBackButton}>
             Back

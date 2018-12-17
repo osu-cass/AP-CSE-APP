@@ -5,7 +5,7 @@ import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
 import { Colors } from '../../constants';
 import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
-import { CustomDocument, createDocument } from '../../components/PDFLink/Document';
+import { createDocument } from '../../components/PDFLink/Document';
 
 const importedLogo = homeLogo as string;
 

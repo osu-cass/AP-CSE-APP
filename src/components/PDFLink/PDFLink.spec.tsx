@@ -1,12 +1,26 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { render, PDFLink, DownloadIcon, PDFDownloadLinkRenderProps } from './';
+import { ClaimMe } from './Document/mocks/testData';
+import { DocumentProps } from './Document/DocumentModels';
+import { createDocument } from './Document';
 
-import { render, PDFLink, DownloadIcon } from './';
+const mockProps: DocumentProps = {
+  claim: ClaimMe,
+  taskModels: [],
+  renderEntireTarget: true,
+  renderOverview: false
+};
+
+const pdfLinkMockProps: PDFDownloadLinkRenderProps = {
+  document: createDocument(mockProps),
+  fileName: 'testFile'
+};
 
 describe('PDFLink component', () => {
   it('matches snapshot', () => {
-    const component = shallow(<PDFLink />);
+    const component = shallow(<PDFLink {...pdfLinkMockProps} />);
 
     expect(toJson(component)).toMatchSnapshot();
   });

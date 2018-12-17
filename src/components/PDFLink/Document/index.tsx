@@ -40,27 +40,29 @@ const Overview = ({ claim }: OverviewProps) => (
   </View>
 );
 
-export const createDocument = ({
+export function createDocument({
   claim,
   taskModels,
   renderOverview,
   renderEntireTarget
-}: DocumentProps) => (
-  <Document>
-    <Page wrap style={styles.page}>
-      <Head text={claim.title} />
-      <View style={styles.flexContainer} wrap>
-        <Description claim={claim} />
-        {(renderOverview || renderEntireTarget) && <Overview claim={claim} />}
-      </View>
-      <Text
-        style={styles.pageNumber}
-        render={({ pageNumber, totalPages }: PageMeta) => `${pageNumber} / ${totalPages}`}
-        fixed
-      />
-    </Page>
-    {taskModels && ((taskModels.length > 0 && renderEntireTarget) || taskModels.length > 0) && (
-      <TaskModelComponent claim={claim} taskModels={claim.target[0].taskModels} />
-    )}
-  </Document>
-);
+}: DocumentProps): JSX.Element {
+  return (
+    <Document>
+      <Page wrap style={styles.page}>
+        <Head text={claim.title} />
+        <View style={styles.flexContainer} wrap>
+          <Description claim={claim} />
+          {(renderOverview || renderEntireTarget) && <Overview claim={claim} />}
+        </View>
+        <Text
+          style={styles.pageNumber}
+          render={({ pageNumber, totalPages }: PageMeta) => `${pageNumber} / ${totalPages}`}
+          fixed
+        />
+      </Page>
+      {taskModels && ((taskModels.length > 0 && renderEntireTarget) || taskModels.length > 0) && (
+        <TaskModelComponent claim={claim} taskModels={claim.target[0].taskModels} />
+      )}
+    </Document>
+  );
+}

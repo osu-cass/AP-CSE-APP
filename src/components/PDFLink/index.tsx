@@ -6,8 +6,7 @@ import { createDocument } from './Document/';
 import { Loading } from '../Loading';
 
 export interface PDFDownloadLinkRenderProps {
-  loading: boolean;
-  document: Document;
+  document: JSX.Element;
   fileName: string;
 }
 
@@ -36,11 +35,11 @@ export const DownloadIcon = () => (
 
 export const render = ({ loading }: LoadingProps) => (loading ? <Loading /> : <DownloadIcon />);
 
-export const PDFLink = ({ loading, document, fileName }: PDFDownloadLinkRenderProps) => {
+export const PDFLink = ({ document, fileName }: PDFDownloadLinkRenderProps) => {
   return (
     <div>
       <PDFDownloadLink document={document} filename={fileName}>
-        {({ loading }: LoadingProps) => render({ loading })}
+        {render}
       </PDFDownloadLink>
     </div>
   );
