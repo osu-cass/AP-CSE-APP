@@ -18,7 +18,7 @@ const pdfLinkMockProps: PDFDownloadLinkRenderProps = {
   fileName: 'testFile'
 };
 
-storiesOf('PDFLink', module)
+storiesOf('PDFLink DontTest', module)
   .addDecorator(centered)
   .add('Download Link', () => <PDFLink {...pdfLinkMockProps} />)
   .add('Download Indicator', () => <DownloadIcon />);
