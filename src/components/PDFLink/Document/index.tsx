@@ -11,9 +11,10 @@ import { Standards } from './Standards';
 import { DOK } from './DOK';
 import { ParagraphContent } from './paragraphContent';
 import { Evidence } from './Evidence';
-import { OverviewProps, PageMeta, DocumentProps } from './DocumentModels';
+import { OverviewProps, PageMeta, DocumentProps, TaskModelComponentProps } from './DocumentModels';
 import { styles } from './styles';
 import { TaskModelComponent } from './TaskModelComponent';
+import { render } from 'enzyme';
 
 const array: string[] = ['Task Model 1', 'Task Model 2'];
 
@@ -40,12 +41,33 @@ const Overview = ({ claim }: OverviewProps) => (
   </View>
 );
 
+const renderTaskModels = (
+  { taskModels, claim }: TaskModelComponentProps,
+  renderEntireTarget?: boolean
+): JSX.Element | undefined => {
+  let taskModelComponent: JSX.Element | undefined;
+  if (renderEntireTarget) {
+    taskModelComponent = (
+      <TaskModelComponent claim={claim} taskModels={claim.target[0].taskModels} />
+    );
+  } else if (taskModels.length > 0) {
+    taskModelComponent = <TaskModelComponent claim={claim} taskModels={taskModels} />;
+  }
+
+  return taskModelComponent;
+};
+
 export function createDocument({
   claim,
   taskModels,
   renderOverview,
   renderEntireTarget
 }: DocumentProps): JSX.Element {
+  const renderedTaskModels = renderTaskModels(
+    { claim, taskModels: taskModels ? taskModels : [] },
+    renderEntireTarget
+  );
+
   return (
     <Document>
       <Page wrap style={styles.page}>
@@ -60,9 +82,7 @@ export function createDocument({
           fixed
         />
       </Page>
-      {taskModels && ((taskModels.length > 0 && renderEntireTarget) || taskModels.length > 0) && (
-        <TaskModelComponent claim={claim} taskModels={claim.target[0].taskModels} />
-      )}
+      {renderedTaskModels}
     </Document>
   );
 }
