@@ -85,6 +85,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
               >
                 <a
                   href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+                  target="__Blank"
                 >
                   <img
                     alt="Score Guides"
@@ -226,6 +227,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
               >
                 <a
                   href="https://sbdigitallibrary.org/"
+                  target="__Blank"
                 >
                   <img
                     alt="Digital Library"
@@ -367,6 +369,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
               >
                 <a
                   href="http://www.smarterbalanced.org/assessments/samples/"
+                  target="__Blank"
                 >
                   <img
                     alt="Practice Tests"
@@ -508,6 +511,7 @@ exports[`Storyshots Apps Page Render the Apps page 1`] = `
               >
                 <a
                   href="http://sampleitems.smarterbalanced.org/"
+                  target="__Blank"
                 >
                   <img
                     alt="Sample Items"

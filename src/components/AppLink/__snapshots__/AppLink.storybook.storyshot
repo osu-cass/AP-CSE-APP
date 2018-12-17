@@ -167,6 +167,7 @@ exports[`Storyshots AppLink component Renders a App Link with all data 1`] = `
           >
             <a
               href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+              target="__Blank"
             >
               <img
                 alt="Score Guides"
