@@ -16,15 +16,13 @@ const HomePageComponent = () => (
       <h1 className="passage-title">Welcome!</h1>
       <div className="passage-content">
         The Content Spec Explorer is a tool for educators to learn about the design and content of
-        the Smarter Balanced assessments.
-        <p>
-          Choose “Navigate to a Target” to find item specifications, linking the claims and
-          assessment targets to the content standards.
-        </p>
-        <p>
-          Choose “Learn About Test Development” to find information explaining interim and summative
-          assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
-        </p>
+        the Smarter Balanced assessments. <br />
+        <br />
+        Choose “Navigate to a Target” to find item specifications, linking the claims and assessment
+        targets to the content standards. <br />
+        <br />
+        Choose “Learn About Test Development” to find information explaining interim and summative
+        assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
       </div>
       <div className="buttons">
         <Link to="/search?filter=open">
@@ -85,7 +83,6 @@ const HomePageComponent = () => (
         width: 100%;
         flex-basis: 100%;
       }
-
       :global(.home-image) {
         background-image: url("${homeLogo}");
         background-size: cover;
