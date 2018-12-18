@@ -20,6 +20,38 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
 
+  const sortFilters = () => {
+    if (filters.claimFilter) {
+      filters.claimFilter.filterOptions.sort((a, b) => {
+        const x = a.key.toLowerCase();
+        const y = b.key.toLowerCase();
+        if (x < y) {
+          return -1;
+        }
+        if (x > y) {
+          return 1;
+        }
+
+        return 0;
+      });
+    }
+    if (filters.targetFilter) {
+      filters.targetFilter.filterOptions.sort((a, b) => {
+        const x = a.key.toLowerCase();
+        const y = b.key.toLowerCase();
+        if (x < y) {
+          return -1;
+        }
+        if (x > y) {
+          return 1;
+        }
+
+        return 0;
+      });
+    }
+  };
+  sortFilters();
+
   const onUpdateDesktop = (filterType: FilterType, data?: FilterOptionModel) => {
     const newParams = paramsFromFilter(cleanParams, filterType, data);
     onUpdate(newParams);
