@@ -1,4 +1,4 @@
-const links: Map<String, String> = new Map([
+export const digitalLibraryLinks: Map<string, string> = new Map([
   ['E.G3.C1RL.T1', 'https://www.smarterbalancedlibrary.org/playlist/t/111321'],
   ['E.G3.C1RL.T2', 'https://www.smarterbalancedlibrary.org/playlist/t/111326'],
   ['E.G3.C1RL.T3', 'https://www.smarterbalancedlibrary.org/playlist/t/111331'],
