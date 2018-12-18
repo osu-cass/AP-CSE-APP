@@ -141,24 +141,12 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
       </ErrorBoundary>
     );
   }
-
-  renderResults() {
-    const { results } = this.state;
-    const errorJsx = <ErrorMessage>Error fetching results from the server</ErrorMessage>;
-    if (!results) {
-      return <Message>Enter a query to see matching targets.</Message>;
-    }
-    if (results instanceof Error) {
-      return errorJsx;
-    }
-    if (results.length === 0) {
-      return <Message>No results found.</Message>;
-    }
+  renderNarrowText(results: IClaim[]) {
     let resultCount = 0;
     results.forEach(r => (resultCount = resultCount + r.target.length));
 
     return (
-      <ErrorBoundary fallbackUI={errorJsx}>
+      <div>
         {resultCount > 10 ? (
           <div id="narrow-results">
             <i>Use filter to narrow search results</i>
@@ -171,6 +159,25 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         ) : (
           ''
         )}
+      </div>
+    );
+  }
+  renderResults() {
+    const { results } = this.state;
+    const errorJsx = <ErrorMessage>Error fetching results from the server</ErrorMessage>;
+    if (!results) {
+      return <Message>Enter a query to see matching targets.</Message>;
+    }
+    if (results instanceof Error) {
+      return errorJsx;
+    }
+    if (results.length === 0) {
+      return <Message>No results found.</Message>;
+    }
+
+    return (
+      <ErrorBoundary fallbackUI={errorJsx}>
+        {this.renderNarrowText(results)}
         <FilterItemList claims={results} getTargetLink={placeholder} />
       </ErrorBoundary>
     );
