@@ -5,18 +5,7 @@ export const sortHelper = (filter: FilterOptionModel[]) => {
     let x: string | number = a.label.toLowerCase();
     let y: string | number = b.label.toLowerCase();
     if (a.label.includes('Target ')) {
-      x = parseFloat(
-        a.label
-          .split(':')[0]
-          .split('Target ')[1]
-          .replace('a', '.1')
-      );
-      y = parseFloat(
-        b.label
-          .split(':')[0]
-          .split('Target ')[1]
-          .replace('b', '.2')
-      );
+      ({ x, y } = handleTargetSort([a, b]));
     }
     if (x < y) {
       return -1;
@@ -28,3 +17,21 @@ export const sortHelper = (filter: FilterOptionModel[]) => {
     return 0;
   });
 };
+function handleTargetSort(filters: FilterOptionModel[]) {
+  const res: number[] = [];
+  filters.forEach(f =>
+    res.push(
+      parseFloat(
+        f.label
+          .split(':')[0]
+          .split('Target ')[1]
+          .replace('a', '.1')
+          .replace('b', '.2')
+      )
+    )
+  );
+  const x = res[0];
+  const y = res[1];
+
+  return { x, y };
+}
