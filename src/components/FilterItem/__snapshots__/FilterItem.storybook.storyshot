@@ -70,7 +70,8 @@ exports[`Storyshots FilterItem component FilterItem 1`] = `
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
       }
 
       .indented {
