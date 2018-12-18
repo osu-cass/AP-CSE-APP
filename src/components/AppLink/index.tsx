@@ -15,7 +15,7 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
       <span>{title}</span>
     </div>
     <div className="linkImg">
-      <a href={linkBtnProps.url}>
+      <a href={linkBtnProps.url} target="__Blank">
         <img src={imgUrl} alt={title} />
       </a>
     </div>
