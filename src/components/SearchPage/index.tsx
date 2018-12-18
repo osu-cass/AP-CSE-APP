@@ -154,9 +154,23 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     if (results.length === 0) {
       return <Message>No results found.</Message>;
     }
+    let resultCount = 0;
+    results.forEach(r => (resultCount = resultCount + r.target.length));
 
     return (
       <ErrorBoundary fallbackUI={errorJsx}>
+        {resultCount > 10 ? (
+          <div id="narrow-results">
+            <i>Use filter to narrow search results</i>
+            <style jsx>{`
+              #narrow-results {
+                color: #ff0000;
+              }
+            `}</style>
+          </div>
+        ) : (
+          ''
+        )}
         <FilterItemList claims={results} getTargetLink={placeholder} />
       </ErrorBoundary>
     );
