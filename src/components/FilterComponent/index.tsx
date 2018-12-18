@@ -6,6 +6,7 @@ import {
   paramsFromFilter,
   paramsFromMobileFilter
 } from '../FilterHelper';
+import { sortHelper } from './sortHelper';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 import { MobileFilter, MobileFilterWrapped } from '../MobileFilter';
 import { DesktopFilterWrapped } from '../DesktopFilter';
@@ -19,34 +20,6 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 }) => {
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
-  const sortHelper = (filter: FilterOptionModel[]) => {
-    filter.sort((a, b) => {
-      let x: string | number = a.label.toLowerCase();
-      let y: string | number = b.label.toLowerCase();
-      if (a.label.includes('Target ')) {
-        x = parseFloat(
-          a.label
-            .split(':')[0]
-            .split('Target ')[1]
-            .replace('a', '.1')
-        );
-        y = parseFloat(
-          b.label
-            .split(':')[0]
-            .split('Target ')[1]
-            .replace('b', '.2')
-        );
-      }
-      if (x < y) {
-        return -1;
-      }
-      if (x > y) {
-        return 1;
-      }
-
-      return 0;
-    });
-  };
 
   const sortFilters = () => {
     if (filters.claimFilter) {
