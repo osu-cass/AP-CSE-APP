@@ -19,35 +19,27 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 }) => {
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
+  const sortHelper = (filter: FilterOptionModel[]) => {
+    filter.sort((a, b) => {
+      const x = a.key.toLowerCase();
+      const y = b.key.toLowerCase();
+      if (x < y) {
+        return -1;
+      }
+      if (x > y) {
+        return 1;
+      }
+
+      return 0;
+    });
+  };
 
   const sortFilters = () => {
     if (filters.claimFilter) {
-      filters.claimFilter.filterOptions.sort((a, b) => {
-        const x = a.key.toLowerCase();
-        const y = b.key.toLowerCase();
-        if (x < y) {
-          return -1;
-        }
-        if (x > y) {
-          return 1;
-        }
-
-        return 0;
-      });
+      sortHelper(filters.claimFilter.filterOptions);
     }
     if (filters.targetFilter) {
-      filters.targetFilter.filterOptions.sort((a, b) => {
-        const x = a.key.toLowerCase();
-        const y = b.key.toLowerCase();
-        if (x < y) {
-          return -1;
-        }
-        if (x > y) {
-          return 1;
-        }
-
-        return 0;
-      });
+      sortHelper(filters.targetFilter.filterOptions);
     }
   };
   sortFilters();
