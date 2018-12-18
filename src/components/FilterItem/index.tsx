@@ -59,7 +59,8 @@ export const FilterItem: React.SFC<FilterItemProps> = ({
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: ${Colors.sbGrayDarker};
+        text-decoration: underline;
       }
 
       .indented {
