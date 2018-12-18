@@ -8,6 +8,7 @@ import {
 } from '../FilterHelper';
 import { FilterOptionModel, FilterType, AdvancedFilter } from '@osu-cass/sb-components';
 import { MobileFilter, MobileFilterWrapped } from '../MobileFilter';
+import { ToggleBtn, ToggleBtnProps } from '../ToggleBtn';
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { FilterContainer } from '../FilterContainer';
 import { performanceOptions } from '../../models/filter';
@@ -21,7 +22,6 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 }) => {
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
-
   const onUpdateDesktop = (filterType: FilterType, data?: FilterOptionModel) => {
     const newParams = paramsFromFilter(cleanParams, filterType, data);
     onUpdate(newParams);
@@ -31,33 +31,23 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
     const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
     onUpdate(newParams);
   };
+  const clearPTFilter = () => {
+    onUpdateDesktop(FilterType.Performance, performanceOptions[0]);
+  };
+  const toggleProps: ToggleBtnProps = {
+    toggled: false,
+    filter: filterPT,
+    unFilter: clearPTFilter
+  };
 
   const reset = () => {
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
-    performanceOptions[0].isSelected = false;
-    performanceOptions[1].isSelected = true;
+    toggleProps.toggled = false;
   };
 
   const ptFilter = (
     <div id="pt-filter">
-      <AdvancedFilter
-        label={'Show Performance Task Items Only?'}
-        isMultiSelect={false}
-        displayAllButton={false}
-        disabled={false}
-        filterOptions={performanceOptions}
-        code={FilterType.Performance}
-        onFilterOptionSelect={(data?: FilterOptionModel) => {
-          if (filterPT) {
-            performanceOptions.forEach(o => (o.isSelected = !o.isSelected));
-            if (performanceOptions[0].isSelected) {
-              filterPT();
-            } else {
-              onUpdateDesktop(FilterType.Performance, data);
-            }
-          }
-        }}
-      />
+      <ToggleBtn {...toggleProps} />
     </div>
   );
   const content = (
