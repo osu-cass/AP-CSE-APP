@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MediaQuery from 'react-responsive';
-import { SizeBreaks } from '../../constants';
+import { SizeBreaks } from '../../constants/style';
 
 export const MobileBreakSize = {
   maxWidth: SizeBreaks.mobile

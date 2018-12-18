@@ -1,6 +1,6 @@
 import React from 'react';
 import { LinkButton } from '../LinkButton';
-import { Styles, Colors } from '../../constants';
+import { Styles, Colors } from '../../constants/style';
 import { FileText } from 'react-feather';
 import css from 'styled-jsx/css';
 

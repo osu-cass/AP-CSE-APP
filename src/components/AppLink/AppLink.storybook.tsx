@@ -5,7 +5,7 @@ import centered from '@storybook/addon-centered';
 import { AppLinkBtn, AppLinkBtnProps } from './AppLinkBtn';
 import { AppLink, AppLinkProps } from './index';
 
-import { Styles } from '../../constants';
+import { Styles } from '../../constants/style';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const image: string = require('../../assets/images/smarter-balanced.png') as string;

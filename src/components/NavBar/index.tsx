@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles, iconStyle, mediaQueries, SizeBreaks } from '../../constants';
+import { Colors, Styles, iconStyle, mediaQueries, SizeBreaks } from '../../constants/style';
 import { MainMenu } from './MainMenu';
 import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';

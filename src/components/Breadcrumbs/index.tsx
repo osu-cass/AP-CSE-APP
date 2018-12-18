@@ -3,7 +3,7 @@ import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
 import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
 import { BreadcrumbDropDown } from '../BreadcrumbDropDown/BreadCrumbDropDown';
-import { Styles, Colors } from '../../constants';
+import { Styles, Colors } from '../../constants/style';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
 import { SearchBaseModel } from '@osu-cass/sb-components';

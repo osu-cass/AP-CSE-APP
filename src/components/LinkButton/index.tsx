@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, blueGradient } from '../../constants';
+import { Colors, blueGradient } from '../../constants/style';
 
 export interface LinkButtonProps {
   url: string;
