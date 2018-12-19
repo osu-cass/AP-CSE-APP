@@ -5,6 +5,6 @@ import centered from '@storybook/addon-centered';
 
 import { ResourcesPage } from '.';
 
-storiesOf('Apps Page', module)
+storiesOf('Resources Page', module)
   .addDecorator(RouterDecorator)
-  .add('Render the Apps page', () => <ResourcesPage />);
+  .add('Render the Resources page', () => <ResourcesPage />);
