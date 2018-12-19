@@ -55,12 +55,13 @@ export const FilterItem: React.SFC<FilterItemProps> = ({
       h3 {
         color: ${Colors.sbBlue};
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
         color: ${Colors.sbGrayDarker};
         text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
