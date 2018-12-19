@@ -1,7 +1,7 @@
 import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
 import ReactPDF, { Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import { Colors, Styles } from '../../../constants';
+import { Colors, Styles } from '../../../constants/style';
 
 interface HeadStyles {
   header: object;
