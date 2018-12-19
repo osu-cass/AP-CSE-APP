@@ -7,6 +7,12 @@ module.exports = (storybookBaseConfig, configType, config) => {
   // 'PRODUCTION' is used when building the static version of storybook.
 
   // Make whatever fine-grained changes you need
+
+  config.module.rules.push({
+    test: /\.ttf/,
+    loader: 'file-loader',
+  });
+
   config.module.rules.push(
     {
       test: /\.[jt]sx?/,
