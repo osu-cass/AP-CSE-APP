@@ -8,6 +8,7 @@ import { OrderedList } from './Lists';
 import { Stems } from './Stems';
 import { AdditionalMaterials } from './AdditionalMaterials';
 import { DOK } from './DOK';
+import { ExamplesProps } from '../TaskModelExample';
 
 export interface TargetDetailProps {
   target: ITarget;
@@ -32,6 +33,7 @@ function stemSection(stem: IStem[]): ContentSection[] {
 
   return sections;
 }
+
 // tslint:disable: no-non-null-assertion
 function handleFractions(taskModels: ITaskModel[]) {
   const rex = /\$\\frac{(\w+)}{(\w+)}\$/g;
@@ -68,8 +70,17 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[], isMath?:boo
       subsections = subsections.concat(stemSection(stem));
     }
 
-    if(tm.examples && isMath) {
-      const examples = parseExamples(tm.examples);
+    if (tm.examples && isMath) {
+      const exampleProps: ExamplesProps = {
+        examples: []
+      };
+      if (typeof tm.examples === 'string') {
+        exampleProps.examples.push({ label: 'Example 1', content: tm.examples });
+      } else {
+        tm.examples.map((e, index) => {
+          exampleProps.examples.push({ label: `Example ${index + 1}`, content: e });
+        });
+      }
     }
 
     return {
