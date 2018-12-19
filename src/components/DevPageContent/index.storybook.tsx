@@ -8,9 +8,7 @@ import {
   DevAccForItems,
   DevAddtlItemSpec,
   DevFullItemSpec,
-  DevContentSpec,
-  DevIntroELAContentSpec,
-  DevIntroMathContentSpec
+  DevContentSpec
 } from '.';
 
 storiesOf('Development Page Components DontTest', module)
@@ -21,6 +19,4 @@ storiesOf('Development Page Components DontTest', module)
   .add('DevAccForItems', () => <DevAccForItems />)
   .add('DevAddtlItemSpec', () => <DevAddtlItemSpec />)
   .add('DevFullItemSpec', () => <DevFullItemSpec />)
-  .add('DevContentSpec', () => <DevContentSpec />)
-  .add('DevIntroELAContentSpec', () => <DevIntroELAContentSpec />)
-  .add('DevIntroMathContentSpec', () => <DevIntroMathContentSpec />);
+  .add('DevContentSpec', () => <DevContentSpec />);

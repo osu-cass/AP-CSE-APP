@@ -75,7 +75,59 @@ exports[`Storyshots Filter Component Subject, Grade and Claim 1`] = `
       </h2>
       <div
         className="filter-container"
-      />
+      >
+        <div
+          id="pt-filter"
+        >
+          <div
+            onClick={[Function]}
+            role="Button"
+          >
+            <div
+              className="toggle-container"
+            >
+              <span>
+                Show Performance Tasks only?
+              </span>
+              <svg
+                className="pt-toggle"
+                fill="currentColor"
+                height="36"
+                stroke="none"
+                viewBox="0 0 36 36"
+                width="46"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="20"
+                  rx="10"
+                  ry="10"
+                  width="40"
+                  x="1"
+                  y="8"
+                />
+                <circle
+                  cx="11"
+                  cy="18"
+                  fill="white"
+                  r="8"
+                />
+              </svg>
+              <span
+                className="inner-text no"
+              >
+                 No 
+              </span>
+              <style
+                global={true}
+                jsx={true}
+              >
+                
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
       <style
         jsx={true}
       >
@@ -182,7 +234,59 @@ exports[`Storyshots Filter Component Subject, Grade, Claim and Target 1`] = `
       </h2>
       <div
         className="filter-container"
-      />
+      >
+        <div
+          id="pt-filter"
+        >
+          <div
+            onClick={[Function]}
+            role="Button"
+          >
+            <div
+              className="toggle-container"
+            >
+              <span>
+                Show Performance Tasks only?
+              </span>
+              <svg
+                className="pt-toggle"
+                fill="currentColor"
+                height="36"
+                stroke="none"
+                viewBox="0 0 36 36"
+                width="46"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="20"
+                  rx="10"
+                  ry="10"
+                  width="40"
+                  x="1"
+                  y="8"
+                />
+                <circle
+                  cx="11"
+                  cy="18"
+                  fill="white"
+                  r="8"
+                />
+              </svg>
+              <span
+                className="inner-text no"
+              >
+                 No 
+              </span>
+              <style
+                global={true}
+                jsx={true}
+              >
+                
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
       <style
         jsx={true}
       >
@@ -289,7 +393,59 @@ exports[`Storyshots Filter Component default 1`] = `
       </h2>
       <div
         className="filter-container"
-      />
+      >
+        <div
+          id="pt-filter"
+        >
+          <div
+            onClick={[Function]}
+            role="Button"
+          >
+            <div
+              className="toggle-container"
+            >
+              <span>
+                Show Performance Tasks only?
+              </span>
+              <svg
+                className="pt-toggle"
+                fill="currentColor"
+                height="36"
+                stroke="none"
+                viewBox="0 0 36 36"
+                width="46"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="20"
+                  rx="10"
+                  ry="10"
+                  width="40"
+                  x="1"
+                  y="8"
+                />
+                <circle
+                  cx="11"
+                  cy="18"
+                  fill="white"
+                  r="8"
+                />
+              </svg>
+              <span
+                className="inner-text no"
+              >
+                 No 
+              </span>
+              <style
+                global={true}
+                jsx={true}
+              >
+                
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
       <style
         jsx={true}
       >
