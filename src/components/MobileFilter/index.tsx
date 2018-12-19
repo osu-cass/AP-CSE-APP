@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { MobileFilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import { MobileAdvancedFilter } from '../MobileAdvancedFilter';
 import { Message } from '../Message';
-import { FilterOptionModel, AdvancedFilter } from '@osu-cass/sb-components';
+import { FilterOptionModel, AdvancedFilter, FilterType } from '@osu-cass/sb-components';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 import { globalFilterStyle } from '../DesktopFilter';
 
@@ -20,14 +20,25 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({
     targetFilter
   }: CSEAdvancedFilterModels = filters;
 
+  const update = (selectedOptions: string[], code: FilterType) => {
+    if (selectedOptions.includes('All')) {
+      onUpdate([], code);
+    } else {
+      onUpdate(selectedOptions, code);
+    }
+  };
+
   const renderClaimFilter = (): JSX.Element | undefined => {
     let content: JSX.Element | undefined;
     if (claimFilter) {
+      let filterOptions: FilterOptionModel[] = [{ label: 'All', key: 'All', isSelected: false }];
+      filterOptions = filterOptions.concat(claimFilter.filterOptions);
+      claimFilter.filterOptions = filterOptions;
       content = (
         <MobileAdvancedFilter
           key={claimFilter.label}
           {...claimFilter}
-          onMobileSelect={onUpdate}
+          onMobileSelect={update}
           isMultiSelect={false}
         />
       );
@@ -41,12 +52,17 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({
   const renderTargetFilter = (): JSX.Element | undefined => {
     let content: JSX.Element;
     if (claimFilter && targetFilter) {
+      let filterOptions: FilterOptionModel[] = [{ label: 'All', key: 'All', isSelected: false }];
+
+      filterOptions = filterOptions.concat(targetFilter.filterOptions);
+      targetFilter.filterOptions = filterOptions;
+
       console.log(targetFilter);
       content = (
         <MobileAdvancedFilter
           key={targetFilter.label}
           {...targetFilter}
-          onMobileSelect={onUpdate}
+          onMobileSelect={update}
           isMultiSelect={false}
         />
       );
