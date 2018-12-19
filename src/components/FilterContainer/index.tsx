@@ -1,6 +1,6 @@
 import React, { KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp, Filter } from 'react-feather';
-import { Colors, Styles } from '../../constants';
+import { Colors, Styles } from '../../constants/style';
 
 export interface FilterContainerProps {
   expanded?: boolean;

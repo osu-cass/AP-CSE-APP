@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles, iconStyle, mediaQueries } from '../../constants';
+import { Colors, Styles, iconStyle, mediaQueries } from '../../constants/style';
 import { Home, Search, Eye, Grid } from 'react-feather';
 import { Link } from 'react-router-dom';
 

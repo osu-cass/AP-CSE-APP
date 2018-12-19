@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 import { LinkButton, LinkButtonProps } from '.';

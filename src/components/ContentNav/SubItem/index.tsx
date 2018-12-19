@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles } from '../../../constants';
+import { Colors, Styles } from '../../../constants/style';
 import { Link } from 'react-scroll';
 import { scrollPageTo, renderLink } from '../../../utilities/scroller';
 

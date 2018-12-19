@@ -2,7 +2,7 @@ import React from 'react';
 import { SearchBar } from '../SearchBar';
 import { FilterItemList } from '../FilterItemList';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
-import { Styles } from '../../constants';
+import { Styles } from '../../constants/style';
 import { Message, ErrorMessage } from '../Message';
 import {
   FilterType,
@@ -149,7 +149,6 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
       </ErrorBoundary>
     );
   }
-
   filterPerformanceTasks = () => {
     if (this.state.results) {
       const res = this.state.results as IClaim[];
@@ -160,6 +159,27 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     }
   };
 
+  renderNarrowText(results: IClaim[]) {
+    let resultCount = 0;
+    results.forEach(r => (resultCount = resultCount + r.target.length));
+
+    return (
+      <div>
+        {resultCount > 10 ? (
+          <div id="narrow-results">
+            <i>Use filter to narrow search results</i>
+            <style jsx>{`
+              #narrow-results {
+                color: #ff0000;
+              }
+            `}</style>
+          </div>
+        ) : (
+          ''
+        )}
+      </div>
+    );
+  }
   renderResults() {
     const { results } = this.state;
     const errorJsx = <ErrorMessage>Error fetching results from the server</ErrorMessage>;
@@ -175,6 +195,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
     return (
       <ErrorBoundary fallbackUI={errorJsx}>
+        {this.renderNarrowText(results)}
         <FilterItemList claims={results} getTargetLink={placeholder} />
       </ErrorBoundary>
     );

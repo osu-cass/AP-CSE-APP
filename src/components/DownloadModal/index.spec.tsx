@@ -1,14 +1,17 @@
 import React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
+import { mount, ReactWrapper, shallow } from 'enzyme';
 
 import { DownloadModal } from './index';
+import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import toJson from 'enzyme-to-json';
 
 const taskModelMock = ['Task Model 1'];
 
 describe('DownloadModal', () => {
   let downloadModal: ReactWrapper;
   beforeEach(() => {
-    downloadModal = mount(<DownloadModal isOpen={true} taskModels={taskModelMock} />);
+    downloadModal = mount(<DownloadModal isOpen={true} claim={ELAG3ClaimMock} />);
   });
   afterEach(() => {
     downloadModal.unmount();
@@ -30,18 +33,6 @@ describe('DownloadModal', () => {
       .first()
       .simulate('click');
     expect(downloadModal.state('showMultiSelect')).toEqual('');
-  });
-
-  it('confirms selection', () => {
-    downloadModal
-      .find('#continue-btn')
-      .first()
-      .simulate('click');
-    downloadModal
-      .find('#confirm-btn')
-      .first()
-      .simulate('click');
-    expect(downloadModal.state('confirmArr')).toEqual(['Entire Target']);
   });
 
   it('toggles a button', () => {
@@ -68,15 +59,9 @@ describe('DownloadModal', () => {
     expect(overviewBtn).toEqual('unchecked');
   });
 
-  it('closes the modal', () => {
-    downloadModal
-      .find('#continue-btn')
-      .first()
-      .simulate('click');
-    downloadModal
-      .find('#confirm-btn')
-      .first()
-      .simulate('click');
-    expect(downloadModal.state('showModal')).toEqual(false);
+  it('Renders Correctly', () => {
+    const component = shallow(<DownloadModal isOpen={true} claim={ELAG3ClaimMock} />);
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 });
