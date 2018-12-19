@@ -25,6 +25,15 @@ const globalToggleStyle = css`
     margin-left: -39px;
   }
 `;
+const svgProps = {
+  xmlns: 'http://www.w3.org/2000/svg',
+  width: '46',
+  height: '36',
+  viewBox: '0 0 36 36',
+  stroke: 'none',
+  className: 'pt-toggle'
+};
+const rect = <rect x="1" y="8" width="40" height="20" rx="10" ry="10" />;
 export interface ToggleBtnProps {
   toggled: Boolean;
   filter?: () => void;
@@ -51,16 +60,8 @@ export class ToggleBtn extends Component<ToggleBtnProps, ToggleBtnState> {
   PtToggleYes = (
     <div className="toggle-container">
       <span>Show Performance Tasks only?</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="46"
-        height="36"
-        viewBox="0 0 36 36"
-        fill={Colors.sbBlueLighter}
-        stroke="none"
-        className="pt-toggle"
-      >
-        <rect x="1" y="8" width="40" height="20" rx="10" ry="10" />
+      <svg {...svgProps} fill={Colors.sbBlueLighter}>
+        {rect}
         <circle cx="30" cy="18" r="8" fill="white" />
       </svg>
       <span className="inner-text yes">Yes</span>
@@ -72,16 +73,8 @@ export class ToggleBtn extends Component<ToggleBtnProps, ToggleBtnState> {
   PtToggleNo = (
     <div className="toggle-container">
       <span>Show Performance Tasks only?</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="46"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="currentColor"
-        stroke="none"
-        className="pt-toggle"
-      >
-        <rect x="1" y="8" width="40" height="20" rx="10" ry="10" />
+      <svg {...svgProps} fill="currentColor">
+        {rect}
         <circle cx="11" cy="18" r="8" fill="white" />
       </svg>
       <span className="inner-text no"> No </span>
