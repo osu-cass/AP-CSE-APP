@@ -8,7 +8,6 @@ export interface CSEFilterOptions {
   subjects: SearchBaseModel[];
   claims?: SearchBaseModel[];
   targets?: SearchBaseModel[];
-  performance: SearchBaseModel[];
 }
 
 export interface CSEFilterParams {
@@ -16,7 +15,6 @@ export interface CSEFilterParams {
   subject?: string;
   claim?: string;
   target?: string;
-  performance?: string;
 }
 
 export interface CSESearchQuery {
