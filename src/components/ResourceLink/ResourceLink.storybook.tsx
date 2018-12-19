@@ -2,21 +2,21 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
-import { AppLinkBtn, AppLinkBtnProps } from './AppLinkBtn';
-import { AppLink, AppLinkProps } from './index';
+import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
+import { ResourceLink, ResourceLinkProps } from './index';
 
 import { Styles } from '../../constants/style';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const image: string = require('../../assets/images/smarter-balanced.png') as string;
 
-const linkButtonMock: AppLinkBtnProps = {
+const linkButtonMock: ResourceLinkBtnProps = {
   text: 'Visit Score Guides Page',
   url:
     'http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3'
 };
 
-const appLinkProps: AppLinkProps = {
+const resourceLinkProps: ResourceLinkProps = {
   title: 'Score Guides',
   imgUrl: image,
   desc:
@@ -29,20 +29,20 @@ const style = {
   fontFamily: `${Styles.sbSans}`
 };
 
-storiesOf('AppLink component', module)
+storiesOf('Resource Link component', module)
   .addDecorator(centered)
-  .add('Renders a App Link Button', () => (
+  .add('Renders a Resource Link Button', () => (
     <div style={style}>
-      <AppLinkBtn text={linkButtonMock.text} url={linkButtonMock.url} />
+      <ResourceLinkBtn text={linkButtonMock.text} url={linkButtonMock.url} />
     </div>
   ))
-  .add('Renders a App Link with all data', () => (
+  .add('Renders a Resource Link with all data', () => (
     <div style={style}>
-      <AppLink
-        title={appLinkProps.title}
-        imgUrl={appLinkProps.imgUrl}
-        desc={appLinkProps.desc}
-        linkBtnProps={appLinkProps.linkBtnProps}
+      <ResourceLink
+        title={resourceLinkProps.title}
+        imgUrl={resourceLinkProps.imgUrl}
+        desc={resourceLinkProps.desc}
+        linkBtnProps={resourceLinkProps.linkBtnProps}
       />
     </div>
   ));

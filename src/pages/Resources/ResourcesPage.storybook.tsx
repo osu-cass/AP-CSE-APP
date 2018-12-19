@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { RouterDecorator } from '../../__decorators__';
 import centered from '@storybook/addon-centered';
 
-import { AppsPage } from '.';
+import { ResourcesPage } from '.';
 
-storiesOf('Apps Page', module)
+storiesOf('Resources Page', module)
   .addDecorator(RouterDecorator)
-  .add('Render the Apps page', () => <AppsPage />);
+  .add('Render the Resources page', () => <ResourcesPage />);

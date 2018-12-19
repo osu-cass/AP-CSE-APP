@@ -6,7 +6,7 @@ import { TargetPage } from './Target';
 import { SearchPageRoute } from './Search';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
-import { AppsPage } from './Apps';
+import { ResourcesPage } from './Resources';
 import { DevelopmentPage } from './Development';
 import { TargetClient } from '../clients/target';
 import { FooterWrapped } from '../components/Footer';
@@ -23,7 +23,7 @@ export const App: React.SFC = () => {
           <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
           <Route path="/search" component={SearchPageRoute} />
-          <Route path="/apps" component={AppsPage} />
+          <Route path="/resources" component={ResourcesPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
           <FooterWrapped />

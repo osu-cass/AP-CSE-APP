@@ -1,15 +1,15 @@
 import React from 'react';
-import { AppLinkBtn, AppLinkBtnProps } from './AppLinkBtn';
+import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
 import { Colors } from '../../constants/style';
 import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
-export interface AppLinkProps {
+export interface ResourceLinkProps {
   title: string;
   imgUrl: string;
   desc: string;
-  linkBtnProps: AppLinkBtnProps;
+  linkBtnProps: ResourceLinkBtnProps;
 }
 
-export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => (
+export const ResourceLink = ({ title, imgUrl, desc, linkBtnProps }: ResourceLinkProps) => (
   <div className="container">
     <div className="title">
       <span>{title}</span>
@@ -21,7 +21,7 @@ export const AppLink = ({ title, imgUrl, desc, linkBtnProps }: AppLinkProps) => 
     </div>
     <div className="desc">{desc}</div>
     <div>
-      <AppLinkBtn text={linkBtnProps.text} url={linkBtnProps.url} />
+      <ResourceLinkBtn text={linkBtnProps.text} url={linkBtnProps.url} />
     </div>
     <style jsx>{`
       * {

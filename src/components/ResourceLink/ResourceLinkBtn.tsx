@@ -2,12 +2,12 @@ import React from 'react';
 import { ArrowRight } from 'react-feather';
 import { blueGradient, blueGradientDarker, Colors } from '../../constants/style';
 
-export interface AppLinkBtnProps {
+export interface ResourceLinkBtnProps {
   text: string;
   url: string;
 }
 
-export const AppLinkBtn = ({ text, url }: AppLinkBtnProps) => (
+export const ResourceLinkBtn = ({ text, url }: ResourceLinkBtnProps) => (
   <a aria-label="Link" target="_blank" rel="noopener noreferrer" href={url}>
     <div className="container">
       <span>{text}</span>

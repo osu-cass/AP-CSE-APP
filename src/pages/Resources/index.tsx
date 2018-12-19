@@ -1,6 +1,6 @@
 import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
-import { AppLinkProps, AppLink } from '../../components/AppLink';
+import { ResourceLinkProps, ResourceLink } from '../../components/ResourceLink';
 import { Title } from '../../components/GenericPage/Title';
 import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
 
@@ -10,7 +10,7 @@ const Practiceimg: string = require('../../assets/images/practice-tests.png') as
 const sampleItemsImg: string = require('../../assets/images/sample-items.png') as string;
 const digitalLibraryImg: string = require('../../assets/images/digital-library.png') as string;
 
-const linkProps: AppLinkProps[] = [
+const linkProps: ResourceLinkProps[] = [
   {
     title: 'Score Guides',
     imgUrl: scoreimg,
@@ -53,19 +53,19 @@ const linkProps: AppLinkProps[] = [
   }
 ];
 
-const AppsPageComponent: React.SFC = () => (
+const ResourcesPageComponent: React.SFC = () => (
   <React.Fragment>
     <div className="content">
-      <div className="apps">
-        {linkProps.map((props: AppLinkProps, idx: number) => (
-          <AppLink key={idx} {...props} />
+      <div className="resource">
+        {linkProps.map((props: ResourceLinkProps, idx: number) => (
+          <ResourceLink key={idx} {...props} />
         ))}
-        <div className="app-page-mobile-padding" />
+        <div className="resource-page-mobile-padding" />
       </div>
     </div>
     <style jsx>{`
       @media (max-width: ${MobileBreakSize.maxWidth}px) {
-        .app-page-mobile-padding {
+        .resource-page-mobile-padding {
           height: 200px;
           width: 100px;
         }
@@ -75,7 +75,7 @@ const AppsPageComponent: React.SFC = () => (
         flex-direction: column;
         align-items: center;
       }
-      .apps {
+      .resource {
         height: 620px;
         display: flex;
         flex-wrap: wrap;
@@ -85,4 +85,4 @@ const AppsPageComponent: React.SFC = () => (
   </React.Fragment>
 );
 
-export const AppsPage = genericLayout(<Title>My Resources</Title>, AppsPageComponent);
+export const ResourcesPage = genericLayout(<Title>My Resources</Title>, ResourcesPageComponent);
