@@ -1,6 +1,6 @@
 import React from 'react';
 import { HelpCircle } from 'react-feather';
-import { Styles } from '../../constants';
+import { Styles } from '../../constants/style';
 import { SbNavLink, SbNavlinkProps } from '../SbNavLink';
 
 export interface AdditionalMaterialsProps {

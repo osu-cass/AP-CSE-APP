@@ -1,6 +1,6 @@
 import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { Styles, Colors } from '../../constants';
+import { Styles, Colors } from '../../constants/style';
 import { IDomain } from '../../models/claim';
 import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
@@ -64,11 +64,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
     </ul>
     {downloadBtnProps && (
       <div className="download">
-        <DownloadBtn
-          url={downloadBtnProps.url}
-          filename={downloadBtnProps.filename}
-          taskNames={downloadBtnProps.taskNames}
-        />
+        <DownloadBtn claim={downloadBtnProps.claim} />
       </div>
     )}
     <style jsx>{`

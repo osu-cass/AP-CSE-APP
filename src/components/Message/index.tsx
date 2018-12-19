@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles } from '../../constants';
+import { Colors, Styles } from '../../constants/style';
 
 export const Message: React.SFC = ({ children }) => (
   <div className="message">

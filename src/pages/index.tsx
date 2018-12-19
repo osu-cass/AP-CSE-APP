@@ -10,7 +10,7 @@ import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
 import { TargetClient } from '../clients/target';
 import { FooterWrapped } from '../components/Footer';
-import { mediaQueries } from '../constants';
+import { mediaQueries } from '../constants/style';
 
 export const App: React.SFC = () => {
   return (
@@ -45,13 +45,14 @@ export const App: React.SFC = () => {
           flex-direction: column;
         }
 
-        @media ${mediaQueries.tabletAndMobile} {
+        @media ${mediaQueries.mobile} {
           html,
           body {
             position: fixed;
           }
           .full-page {
             height: 100%;
+            position: relative;
           }
         }
       `}</style>

@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { TitleBar, TitleBarProps } from './index';
+import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 
 const downloadBtnMock: DownloadBtnProps = {
-  url: 'test/url',
-  filename: 'test-file-name'
+  claim: ELAG3ClaimMock
 };
 const claimOnlyMock: TitleBarProps = {
   claimTitle: 'Claim 1',
@@ -28,7 +28,7 @@ storiesOf('TitleBar component', module)
   ))
   .add('Renders a download button', () => (
     <div>
-      <DownloadBtn url={downloadBtnMock.url} filename={downloadBtnMock.filename} />
+      <DownloadBtn {...downloadBtnMock} />
     </div>
   ))
   .add('Renders a Title Bar with a claim only', () => (
