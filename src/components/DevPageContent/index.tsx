@@ -349,7 +349,6 @@ export const DevContentSpec: React.SFC = () => (
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/mathematics-content-specifications.pdf"
       />
-      <LinkButton text="Content Specifications Full Download" icon={fileIcon} url="" />
       <style jsx>{rowStyle}</style>
     </div>
   </React.Fragment>
