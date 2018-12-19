@@ -1,5 +1,5 @@
 import React from 'react';
-import { Styles, Colors } from '../../constants';
+import { Styles, Colors } from '../../constants/style';
 import { IDomain } from '../../models/claim';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 

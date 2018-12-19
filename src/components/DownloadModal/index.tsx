@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
-import { Colors, Styles, blueGradientBgImg } from '../../constants';
+import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
 import { TaskButton, TaskButtonProps } from './TaskButton';
 
 /**
