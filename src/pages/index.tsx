@@ -23,7 +23,7 @@ export const App: React.SFC = () => {
           <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
           <Route path="/search" component={SearchPageRoute} />
-          <Route path="/apps" component={AppsPage} />
+          <Route path="/resources" component={AppsPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
           <FooterWrapped />

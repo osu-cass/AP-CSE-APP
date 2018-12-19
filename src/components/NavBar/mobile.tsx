@@ -29,10 +29,10 @@ export const MobileNavBar: React.SFC = () => (
         Explore
       </div>
     </Link>
-    <Link to="/apps" style={noUnderline}>
+    <Link to="/resources" style={noUnderline}>
       <div>
         <Grid {...mobileIconStyle} />
-        Apps
+        Resources
       </div>
     </Link>
     <style jsx>{`
