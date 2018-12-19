@@ -336,7 +336,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
       </div>
     </a>
     <a
-      href="/apps"
+      href="/resources"
       onClick={[Function]}
       style={
         Object {
@@ -382,7 +382,7 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
             y="14"
           />
         </svg>
-        Apps
+        Resources
       </div>
     </a>
     <style
