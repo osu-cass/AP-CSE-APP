@@ -19,7 +19,15 @@ git clone https://github.com/osu-cass/AP-CSE-APP
 cd AP-CSE-APP
 
 # Install dependencies
+
 npm install
+```
+
+## Windows Users
+To install the dependencies for this application you will be required to install rsync.
+You can do this by open powershell and typing the following command:
+```sh
+choco install rsync
 ```
 
 To begin working on AP-CSE-APP, you have two choices: Run Storybook for component development, or run the frontend application with `webpack`.
