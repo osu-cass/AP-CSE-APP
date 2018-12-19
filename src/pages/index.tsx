@@ -45,13 +45,14 @@ export const App: React.SFC = () => {
           flex-direction: column;
         }
 
-        @media ${mediaQueries.tabletAndMobile} {
+        @media ${mediaQueries.mobile} {
           html,
           body {
             position: fixed;
           }
           .full-page {
             height: 100%;
+            position: relative;
           }
         }
       `}</style>
