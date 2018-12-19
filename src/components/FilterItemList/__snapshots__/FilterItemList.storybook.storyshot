@@ -69,11 +69,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -118,11 +120,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -167,11 +171,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -216,11 +222,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -265,11 +273,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -314,11 +324,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -363,11 +375,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -412,11 +426,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -461,11 +477,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -510,11 +528,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -559,11 +579,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -608,11 +630,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -657,11 +681,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -706,11 +732,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -755,11 +783,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -804,11 +834,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -853,11 +885,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -902,11 +936,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -951,11 +987,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1000,11 +1038,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1049,11 +1089,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1098,11 +1140,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1147,11 +1191,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1196,11 +1242,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1245,11 +1293,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1294,11 +1344,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1343,11 +1395,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1392,11 +1446,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1441,11 +1497,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1490,11 +1548,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1539,11 +1599,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1588,11 +1650,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1637,11 +1701,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1686,11 +1752,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1735,11 +1803,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1784,11 +1854,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1833,11 +1905,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1882,11 +1956,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1931,11 +2007,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -1980,11 +2058,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -2029,11 +2109,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
@@ -2078,11 +2160,13 @@ exports[`Storyshots FilterItemList component FilterItemList 1`] = `
       h3 {
         color: #006298;
         text-decoration: underline;
-        margin-bottom: 0;
+        margin-bottom: 3px;
       }
 
       .breadcrumb {
-        color: #aaa;
+        color: #313335;
+        text-decoration: underline;
+        margin-bottom: 6px;
       }
 
       .indented {
