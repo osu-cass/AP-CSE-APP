@@ -334,22 +334,6 @@ export const DevContentSpec: React.SFC = () => (
       stakeholders provided feedback during two rounds of public comment.
     </p>
     <div className="row">
-      <LinkButton text="Content Specifications Full Download" icon={fileIcon} url="" />
-      <style jsx>{rowStyle}</style>
-    </div>
-  </React.Fragment>
-);
-
-export const DevIntroELAContentSpec: React.SFC = () => (
-  <React.Fragment>
-    <p>
-      Vivamus posuere vestibulum ligula, vitae tristique sem aliquam ac. Vivamus nec libero a ex
-      faucibus consequat. Mauris nulla risus, finibus eget maximus at, volutpat id dui. Ut
-      sollicitudin nibh ac enim lobortis vulputate. Aenean volutpat justo lorem, et rutrum diam
-      mattis id. Morbi risus odio, suscipit sit amet ipsum et, tincidunt tincidunt urna. Nam quis
-      sapien tortor. In lacinia nulla et augue placerat pulvinar.
-    </p>
-    <div className="row">
       <LinkButton
         text="ELA/Literacy Content Specifications"
         icon={fileIcon}
@@ -360,26 +344,12 @@ export const DevIntroELAContentSpec: React.SFC = () => (
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/ela-stimulus-specifications.pdf"
       />
-      <style jsx>{rowStyle}</style>
-    </div>
-  </React.Fragment>
-);
-
-export const DevIntroMathContentSpec: React.SFC = () => (
-  <React.Fragment>
-    <p>
-      Aliquam erat volutpat. Nulla consectetur malesuada ante, id volutpat erat. Suspendisse eu
-      sodales leo, nec vulputate lectus. Curabitur laoreet, velit ac aliquam posuere, ante velit
-      molestie elit, in rutrum enim urna ut lacus. Praesent lacinia orci at aliquet iaculis. Morbi
-      quis imperdiet ante. Fusce ut lobortis quam. Mauris quis libero luctus, porttitor nulla eu,
-      feugiat risus. Aliquam erat volutpat. Pellentesque sit amet ullamcorper quam.
-    </p>
-    <div className="row">
       <LinkButton
         text="Mathematics Content Specifications"
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/mathematics-content-specifications.pdf"
       />
+      <LinkButton text="Content Specifications Full Download" icon={fileIcon} url="" />
       <style jsx>{rowStyle}</style>
     </div>
   </React.Fragment>
