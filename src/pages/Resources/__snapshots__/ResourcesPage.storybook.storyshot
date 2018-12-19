@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Apps Page Render the Apps page 1`] = `
+exports[`Storyshots Resources Page Render the Resources page 1`] = `
 <div
   style={
     Object {
