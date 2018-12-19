@@ -6,6 +6,7 @@ import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
 import { TargetClaimProps } from '../../MobileClaimTargetSec/mobileTAndCDesc';
 import { IClaim } from '../../../models/claim';
 import { ITargetParams } from '../../../clients/target';
+import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
 
 export const mockTargetClient = {
   // tslint:disable-next-line:no-empty
@@ -170,9 +171,7 @@ export const parsedTitleBarDataMock: TitleBarProps = {
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: {
-    url: 'test/url',
-    filename: 'test-file-name',
-    taskNames: ['Task Model 1', 'Task Model 2', 'Task Model 3']
+    claim: ELAG3ClaimMock
   },
   targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetDesc: 'placeholder'
@@ -188,9 +187,7 @@ export const parsedMobileTitleBarDataMock: MobileTitleBarProps = {
   claimTitle: 'Claim 1',
   targetTitle: 'Target 1',
   downloadBtnProps: {
-    url: 'test/url',
-    filename: 'test-file-name',
-    taskNames: ['Task Model 1', 'Task Model 2', 'Task Model 3']
+    claim: ELAG3ClaimMock
   }
 };
 

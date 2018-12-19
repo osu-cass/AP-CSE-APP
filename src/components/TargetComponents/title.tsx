@@ -15,11 +15,6 @@ export interface TargetTitleBarProps {
   targetList?: SearchBaseModel[];
 }
 
-const downloadBtnProps: DownloadBtnProps = {
-  url: 'test/url',
-  filename: 'test-file-name'
-};
-
 export const parseTitleBarMobileData = (claim: IClaim): TitleBarProps => {
   const codeSegments: string[] = claim.target[0].shortCode.split('.');
   const targetTitle: string = `Target ${codeSegments[codeSegments.length - 1].slice(1)}`;
@@ -28,7 +23,7 @@ export const parseTitleBarMobileData = (claim: IClaim): TitleBarProps => {
   return {
     claimTitle,
     targetTitle,
-    downloadBtnProps
+    downloadBtnProps: { claim }
   };
 };
 
@@ -45,17 +40,15 @@ export const parseBreadCrumbData = (
   };
 };
 export const parseDownloadBtnProps = (claim: IClaim): DownloadBtnProps => {
-  const tNameArr: string[] = [];
-  claim.target[0].taskModels.forEach(tm => tNameArr.push(tm.taskName));
-  downloadBtnProps.taskNames = tNameArr;
-
-  return downloadBtnProps;
+  return {
+    claim
+  };
 };
 export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   return {
     claimTitle: claim.claimNumber,
     claimDesc: claim.description,
-    downloadBtnProps: parseDownloadBtnProps(claim),
+    downloadBtnProps: { claim },
     targetTitle: claim.target[0].title,
     targetDesc: claim.target[0].description
   };

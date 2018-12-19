@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadModal Renders Correctly 1`] = `
+<div>
+  <Modal
+    ariaHideApp={true}
+    bodyOpenClassName="ReactModal__Body--open"
+    closeTimeoutMS={0}
+    contentLabel="Download PDF"
+    isOpen={true}
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    role="dialog"
+    shouldCloseOnEsc={true}
+    shouldCloseOnOverlayClick={true}
+    shouldFocusAfterRender={true}
+    shouldReturnFocusAfterClose={true}
+    style={
+      Object {
+        "content": Object {
+          "bottom": "auto",
+          "left": "50%",
+          "marginRight": "-50%",
+          "right": "auto",
+          "top": "50%",
+          "transform": "translate(-50%, -50%)",
+        },
+      }
+    }
+  >
+    <form
+      className=""
+    >
+      <div
+        id="title-container"
+      >
+        Download PDF
+      </div>
+      <div
+        id="entire-target-btn-container"
+      >
+        <Component
+          cName="checked"
+          id="entire-target"
+          taskName="Entire Target"
+          toggleParent={[Function]}
+          toggled={true}
+        />
+      </div>
+      <div
+        id="scrollable-btn-container"
+      >
+        <div
+          id="task-models-container"
+        >
+          <Component
+            cName="unchecked"
+            id="overview"
+            key="0"
+            taskName="Overview"
+            toggleParent={[Function]}
+            toggled={false}
+          />
+          <Component
+            cName="unchecked"
+            id="task-model 1"
+            key="1"
+            taskName="Task Model 1"
+            toggleParent={[Function]}
+            toggled={false}
+          />
+          <Component
+            cName="unchecked"
+            id="task-model 2"
+            key="2"
+            taskName="Task Model 2"
+            toggleParent={[Function]}
+            toggled={false}
+          />
+          <Component
+            cName="unchecked"
+            id="task-model 3"
+            key="3"
+            taskName="Task Model 3"
+            toggleParent={[Function]}
+            toggled={false}
+          />
+        </div>
+      </div>
+      <div
+        id="submit-btn-container"
+      >
+        <button
+          id="continue-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          Continue
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+          button {
+            display: flex;
+            flex-direction: column;
+            width: 225px;
+            margin-left: 15px;
+            margin-right: 10px;
+            height: 40px;
+            text-align: center;
+            text-align: -webkit-center;
+            border: solid;
+            line-height: 30px;
+            border-color: #63666A;
+            border-radius: 4px;
+            background-color: #fff;
+            font-family: PT Sans Caption;
+            font-size: 16px;
+            color: #313335;
+            letter-spacing: -.02em;
+          }
+          .checked {
+            background-image: linear-gradient(90deg, #006298, #0085AD);
+            color: #ebebeb;
+          }
+          #entire-target-btn {
+            margin-bottom: 12px;
+          }
+          #continue-btn {
+            margin-top: 50px;
+            margin-left: 40px;
+            border: none;
+            height: 30px;
+            line-height: 26px;
+            width: 175px;
+            background-image: linear-gradient(90deg, #006298, #0085AD);
+            color: #ebebeb;
+          }
+          #scrollable-btn-container {
+            overflow-y: scroll;
+            margin-right: -15px;
+            height: 200px;
+          }
+          #title-container {
+            text-align: center;
+            font-family: PT Sans Caption;
+            font-size: 18px;
+            font-weight: bold;
+            color: #63666A;
+            letter-spacing: -.02em;
+            margin-bottom: 5px;
+            margin-top: -10px;
+          }
+          .hidden {
+            display: none;
+          }
+        
+      </style>
+    </form>
+    <div
+      className="hidden"
+      id="confirm-selections"
+    >
+      <div
+        id="selections-title"
+      >
+        Selected Sections
+      </div>
+      <div
+        id="selections-list"
+      >
+        <ul />
+      </div>
+      <div
+        id="pdf-page-count"
+      >
+        This PDF will be X pages
+      </div>
+      <div
+        id="confirm-back-btn-container"
+      >
+        <button
+          id="back-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          Back
+        </button>
+        <button
+          id="confirm-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          Confirm
+        </button>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+          button {
+            display: flex;
+            flex-direction: column;
+            width: 225px;
+            margin-left: 15px;
+            margin-right: 10px;
+            height: 40px;
+            text-align: center;
+            text-align: -webkit-center;
+            border: solid;
+            line-height: 30px;
+            border-color: #63666A;
+            border-radius: 4px;
+            background-color: #fff;
+            font-family: PT Sans Caption;
+            font-size: 16px;
+            color: #313335;
+            letter-spacing: -.02em;
+          }
+          .hidden {
+            display: none;
+          }
+          div {
+            font-family: PT Sans Caption;
+            text-align: center;
+            letter-spacing: -.02em;
+            color: #63666A;
+          }
+          #selections-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 35px;
+            margin-left: 35px;
+            margin-bottom: 5px;
+            margin-top: -10px;
+          }
+          #selections-list {
+            overflow-y: auto;
+            height: 200px;
+            margin-left: -20px;
+            text-align: left;
+            font-size: 16px;
+          }
+          #pdf-page-count {
+            font-size: 14px;
+          }
+          #confirm-back-btn-container button {
+            width: 100px;
+            background-image: linear-gradient(90deg, #006298, #0085AD);
+            margin-top: 10px;
+            display: inline-block;
+            color: #ebebeb;
+          }
+        
+      </style>
+    </div>
+  </Modal>
+</div>
+`;
