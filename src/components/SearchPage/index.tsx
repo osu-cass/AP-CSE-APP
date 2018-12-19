@@ -4,7 +4,12 @@ import { FilterItemList } from '../FilterItemList';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { Styles } from '../../constants/style';
 import { Message, ErrorMessage } from '../Message';
-import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
+import {
+  FilterType,
+  ErrorBoundary,
+  FilterOptionModel,
+  AdvancedFilter
+} from '@osu-cass/sb-components';
 import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
@@ -24,6 +29,7 @@ export interface SearchPageState {
   results?: IClaim[] | Error;
   options?: CSEFilterOptions | Error;
   search: string;
+  pt: boolean;
 }
 
 function anyParams(urlParmas: CSESearchQuery): boolean {
@@ -72,7 +78,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         claim: props.paramsFromUrl.claim,
         target: props.paramsFromUrl.target
       },
-      search: props.paramsFromUrl.search || ''
+      search: props.paramsFromUrl.search || '',
+      pt: false
     };
   }
 
@@ -137,10 +144,21 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
           params={params}
           onUpdate={this.onFilterChanged}
           expanded={anyParams(this.props.paramsFromUrl)}
+          filterPT={this.filterPerformanceTasks}
         />
       </ErrorBoundary>
     );
   }
+  filterPerformanceTasks = () => {
+    if (this.state.results) {
+      const res = this.state.results as IClaim[];
+      res.forEach(c => (c.target = c.target.filter(t => t.interactionType === 'PT')));
+      this.setState({
+        results: res
+      });
+    }
+  };
+
   renderNarrowText(results: IClaim[]) {
     let resultCount = 0;
     results.forEach(r => (resultCount = resultCount + r.target.length));

@@ -43,7 +43,16 @@ export const globalFilterStyle = css`
     border-color: transparent;
     color: ${Colors.sbWhite};
   }
-
+  #pt-filter .nested-btn-group div {
+    max-width: 20%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #pt-filter .nested-btn-group button {
+    margin-right: 5px;
+    min-width: 48.75px;
+  }
   .nested-btn-group {
     display: flex;
     align-items: flex-start;
@@ -56,7 +65,7 @@ export const globalFilterStyle = css`
     margin-left: 4px;
   }
 `;
-
+// tslint:disable: max-func-body-length
 export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset }) => {
   const {
     subjectFilter,

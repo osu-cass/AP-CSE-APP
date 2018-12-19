@@ -9,14 +9,17 @@ import {
 import { sortHelper } from './sortHelper';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 import { MobileFilter, MobileFilterWrapped } from '../MobileFilter';
+import { ToggleBtn, ToggleBtnProps } from '../ToggleBtn';
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { FilterContainer } from '../FilterContainer';
+import { performanceOptions } from '../../models/filter';
 
 export const FilterComponent: React.SFC<FilterComponentProps> = ({
   options,
   params,
   onUpdate,
-  expanded
+  expanded,
+  filterPT
 }) => {
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
@@ -40,11 +43,25 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
     const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
     onUpdate(newParams);
   };
+  const clearPTFilter = () => {
+    onUpdateDesktop(FilterType.Performance, performanceOptions[0]);
+  };
+  const toggleProps: ToggleBtnProps = {
+    toggled: false,
+    filter: filterPT,
+    unFilter: clearPTFilter
+  };
 
   const reset = () => {
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
+    toggleProps.toggled = false;
   };
 
+  const ptFilter = (
+    <div id="pt-filter">
+      <ToggleBtn {...toggleProps} />
+    </div>
+  );
   const content = (
     <Fragment>
       <MobileFilterWrapped
@@ -54,6 +71,7 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
         reset={reset}
       />
       <DesktopFilterWrapped filters={filters} onUpdate={onUpdateDesktop} reset={reset} />
+      {ptFilter}
     </Fragment>
   );
 

@@ -1,5 +1,8 @@
-import { SearchBaseModel } from '@osu-cass/sb-components';
+import { SearchBaseModel, FilterOptionModel } from '@osu-cass/sb-components';
 
+export const performanceOptions: FilterOptionModel[] = [
+  { key: 'PT', label: 'Yes', isSelected: false }
+];
 export interface CSEFilterOptions {
   grades: SearchBaseModel[];
   subjects: SearchBaseModel[];
