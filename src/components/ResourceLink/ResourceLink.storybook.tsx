@@ -16,7 +16,7 @@ const linkButtonMock: ResourceLinkBtnProps = {
     'http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3'
 };
 
-const appLinkProps: ResourceLinkProps = {
+const resourceLinkProps: ResourceLinkProps = {
   title: 'Score Guides',
   imgUrl: image,
   desc:
@@ -39,10 +39,10 @@ storiesOf('Resource Link component', module)
   .add('Renders a Resource Link with all data', () => (
     <div style={style}>
       <ResourceLink
-        title={appLinkProps.title}
-        imgUrl={appLinkProps.imgUrl}
-        desc={appLinkProps.desc}
-        linkBtnProps={appLinkProps.linkBtnProps}
+        title={resourceLinkProps.title}
+        imgUrl={resourceLinkProps.imgUrl}
+        desc={resourceLinkProps.desc}
+        linkBtnProps={resourceLinkProps.linkBtnProps}
       />
     </div>
   ));

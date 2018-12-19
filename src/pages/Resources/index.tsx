@@ -1,6 +1,6 @@
 import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
-import { ResourceLinkProps, ResourceLink } from '../../components/AppLink';
+import { ResourceLinkProps, ResourceLink } from '../../components/ResourceLink';
 import { Title } from '../../components/GenericPage/Title';
 import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
 
@@ -56,16 +56,16 @@ const linkProps: ResourceLinkProps[] = [
 const ResourcesPageComponent: React.SFC = () => (
   <React.Fragment>
     <div className="content">
-      <div className="apps">
+      <div className="resource">
         {linkProps.map((props: ResourceLinkProps, idx: number) => (
           <ResourceLink key={idx} {...props} />
         ))}
-        <div className="app-page-mobile-padding" />
+        <div className="resource-page-mobile-padding" />
       </div>
     </div>
     <style jsx>{`
       @media (max-width: ${MobileBreakSize.maxWidth}px) {
-        .app-page-mobile-padding {
+        .resource-page-mobile-padding {
           height: 200px;
           width: 100px;
         }
@@ -75,7 +75,7 @@ const ResourcesPageComponent: React.SFC = () => (
         flex-direction: column;
         align-items: center;
       }
-      .apps {
+      .resource {
         height: 620px;
         display: flex;
         flex-wrap: wrap;
