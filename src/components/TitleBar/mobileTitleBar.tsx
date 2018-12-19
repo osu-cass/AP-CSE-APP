@@ -43,11 +43,7 @@ export const TitleBar: React.SFC<MobileTitleBarProps> = ({
       )}
       {downloadBtnProps && (
         <li className="download">
-          <DownloadBtn
-            url={downloadBtnProps.url}
-            filename={downloadBtnProps.filename}
-            taskNames={downloadBtnProps.taskNames}
-          />
+          <DownloadBtn {...downloadBtnProps} />
         </li>
       )}
     </ul>

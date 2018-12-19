@@ -3,19 +3,8 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
 import { DownloadModal } from '.';
+import { ClaimMe } from '../PDFLink/Document/mocks/testData';
 
 storiesOf('DownloadModal DontTest', module)
   .addDecorator(centered)
-  .add('Download Task Model Multi-Select', () => (
-    <DownloadModal
-      isOpen={true}
-      taskModels={[
-        'Task Model 1',
-        'Task Model 2',
-        'Task Model 3',
-        'Task Model 4',
-        'Task Model 5',
-        'Task Model 6'
-      ]}
-    />
-  ));
+  .add('Download Task Model Multi-Select', () => <DownloadModal claim={ClaimMe} isOpen={true} />);
