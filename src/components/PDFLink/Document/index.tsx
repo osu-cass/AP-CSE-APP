@@ -27,19 +27,25 @@ const Description = ({ claim }: OverviewProps) => (
   </View>
 );
 
-const Overview = ({ claim }: OverviewProps) => (
-  <View wrap>
-    <OneColumnLayout center={false} text={claim.target[0].vocab} />
-    <StringContent title={'Clarifications'} content={claim.target[0].clarification} />
-    {claim.target[0].standards && <Standards content={claim.target[0].standards} />}
-    <DOK content={claim.target[0].DOK} />
-    <StringContent title={'Stimuli'} content={claim.target[0].stimInfo} />
-    <ParagraphContent title={'Accessibility Concerns'} content={claim.target[0].accessibility} />
-    {claim.target[0].evidence && (
-      <Evidence title={'Evidence Required'} content={claim.target[0].evidence} />
-    )}
-  </View>
-);
+const Overview = ({ claim }: OverviewProps) => {
+  const target = claim.target[0];
+  const { vocab, clarification, standards, stimInfo, accessibility, evidence } = target;
+  const dok = target.DOK;
+
+  return (
+    <View wrap>
+      {vocab && <OneColumnLayout center={false} text={vocab} />}
+      {clarification && <StringContent title={'Clarifications'} content={clarification} />}
+      {standards && <Standards content={standards} />}
+      {dok && <DOK content={dok} />}
+      {stimInfo && <StringContent title={'Stimuli'} content={stimInfo} />}
+      {accessibility && (
+        <ParagraphContent title={'Accessibility Concerns'} content={accessibility} />
+      )}
+      {evidence && <Evidence title={'Evidence Required'} content={evidence} />}
+    </View>
+  );
+};
 
 const renderTaskModels = (
   { taskModels, claim }: TaskModelComponentProps,

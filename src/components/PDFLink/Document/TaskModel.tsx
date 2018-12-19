@@ -94,9 +94,9 @@ export const TaskModelChild: React.SFC<ITaskModel> = ({
         </View>
         <View style={styles.flexColumnRight}>
           <View style={styles.flexContent}>
-            <Text style={styles.description}>{taskDesc}</Text>
-            <Text style={styles.description}>{stimulus}</Text>
-            <Text style={styles.description}>{examples}</Text>
+            {taskDesc && <Text style={styles.description}>{taskDesc}</Text>}
+            {stimulus && <Text style={styles.description}>{stimulus}</Text>}
+            {examples && <Text style={styles.description}>{examples}</Text>}
           </View>
         </View>
       </View>
