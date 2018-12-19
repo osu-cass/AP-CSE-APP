@@ -10,9 +10,7 @@ import {
   DevAccForItems,
   DevAddtlItemSpec,
   DevFullItemSpec,
-  DevContentSpec,
-  DevIntroELAContentSpec,
-  DevIntroMathContentSpec
+  DevContentSpec
 } from '../../components/DevPageContent';
 
 const sections: ContentSection[] = [
@@ -58,17 +56,7 @@ const sections: ContentSection[] = [
   },
   {
     title: 'Content Specifications',
-    jsx: <DevContentSpec />,
-    subsections: [
-      {
-        title: 'Introduction to ELA Content Specifications',
-        jsx: <DevIntroELAContentSpec />
-      },
-      {
-        title: 'Introduction to Math Content Specifications',
-        jsx: <DevIntroMathContentSpec />
-      }
-    ]
+    jsx: <DevContentSpec />
   }
 ];
 

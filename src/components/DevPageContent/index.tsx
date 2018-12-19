@@ -320,38 +320,18 @@ export const DevFullItemSpec: React.SFC = () => (
 );
 
 export const DevContentSpec: React.SFC = () => (
-  <p>
-    Smarter Balanced has developed content specifications in English language arts/literacy and math
-    to ensure that the assessments cover the range of knowledge and skills in the Common Core State
-    Standards. The content specifications serve as the basis for the Smarter Balanced system of
-    summative and interim assessments and formative assessment support for teachers. Dr. Linda
-    Darling-Hammond, former Smarter Balanced Senior Research Advisor and Charles E. Ducommun
-    Professor of Education Emeritus at Stanford University, led the development of the content
-    specifications in collaboration with experts in the field. The Smarter Balanced Technical
-    Advisory Committee, Consortium work groups, and the lead authors of the Common Core State
-    Standards also contributed to the documents. Hundreds of organizations and individual
-    stakeholders provided feedback during two rounds of public comment.
-  </p>
-);
-
-export const DevIntroELAContentSpec: React.SFC = () => (
-  <p>
-    Vivamus posuere vestibulum ligula, vitae tristique sem aliquam ac. Vivamus nec libero a ex
-    faucibus consequat. Mauris nulla risus, finibus eget maximus at, volutpat id dui. Ut
-    sollicitudin nibh ac enim lobortis vulputate. Aenean volutpat justo lorem, et rutrum diam mattis
-    id. Morbi risus odio, suscipit sit amet ipsum et, tincidunt tincidunt urna. Nam quis sapien
-    tortor. In lacinia nulla et augue placerat pulvinar.
-  </p>
-);
-
-export const DevIntroMathContentSpec: React.SFC = () => (
   <React.Fragment>
     <p>
-      Aliquam erat volutpat. Nulla consectetur malesuada ante, id volutpat erat. Suspendisse eu
-      sodales leo, nec vulputate lectus. Curabitur laoreet, velit ac aliquam posuere, ante velit
-      molestie elit, in rutrum enim urna ut lacus. Praesent lacinia orci at aliquet iaculis. Morbi
-      quis imperdiet ante. Fusce ut lobortis quam. Mauris quis libero luctus, porttitor nulla eu,
-      feugiat risus. Aliquam erat volutpat. Pellentesque sit amet ullamcorper quam.
+      Smarter Balanced has developed content specifications in English language arts/literacy and
+      math to ensure that the assessments cover the range of knowledge and skills in the Common Core
+      State Standards. The content specifications serve as the basis for the Smarter Balanced system
+      of summative and interim assessments and formative assessment support for teachers. Dr. Linda
+      Darling-Hammond, former Smarter Balanced Senior Research Advisor and Charles E. Ducommun
+      Professor of Education Emeritus at Stanford University, led the development of the content
+      specifications in collaboration with experts in the field. The Smarter Balanced Technical
+      Advisory Committee, Consortium work groups, and the lead authors of the Common Core State
+      Standards also contributed to the documents. Hundreds of organizations and individual
+      stakeholders provided feedback during two rounds of public comment.
     </p>
     <div className="row">
       <LinkButton
@@ -369,7 +349,6 @@ export const DevIntroMathContentSpec: React.SFC = () => (
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/mathematics-content-specifications.pdf"
       />
-      <LinkButton text="Content Specifications Full Download" icon={fileIcon} url="" />
       <style jsx>{rowStyle}</style>
     </div>
   </React.Fragment>
