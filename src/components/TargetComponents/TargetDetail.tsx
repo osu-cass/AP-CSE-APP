@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContentSection, GenericContentPage } from '../GenericContentPage';
 import { ITarget, ITaskModel, IStem } from '../../models/target';
-import { parseContent } from '../MainContent/parseUtils';
+import { parseContent, parseExamples } from '../MainContent/parseUtils';
 import { Standards } from './Standards';
 import { Evidence } from './Evidence';
 import { OrderedList } from './Lists';
@@ -33,7 +33,7 @@ function stemSection(stem: IStem[]): ContentSection[] {
   return sections;
 }
 
-function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSection[] {
+function taskModelSections(taskModels: ITaskModel[], stem?: IStem[], isMath?:boolean ): ContentSection[] {
   return taskModels.map((tm, i) => {
     let subsections: ContentSection[] = [];
 
@@ -53,6 +53,10 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
     // stem section
     if (stem) {
       subsections = subsections.concat(stemSection(stem));
+    }
+
+    if(tm.examples && isMath) {
+      const examples = parseExamples(tm.examples);
     }
 
     return {
