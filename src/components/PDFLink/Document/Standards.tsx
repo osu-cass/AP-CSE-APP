@@ -64,16 +64,20 @@ export const Standards = ({ content }: TargetProps) => {
       </View>
       <View style={styles.flexColumnRight}>
         {content.map((element: IStandards) => {
-          const s = element.stdCode;
-          let array: string[];
-          array = s.split('.');
+          const array = element.stdCode.split('.');
+          let standardShortCode: string;
+
+          if (array[0] === 'E') {
+            standardShortCode = `${array[4]}-${array[6]}`;
+          } else {
+            // if it is a math target
+            standardShortCode = `${array[4]}.${array[5]}.${array[6]}.${array[7]}`;
+          }
 
           return (
             <View wrap={false} style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
-              <Text key={`${array[1]} - ${element.stdDesc}`}>{`${array[4]}.${array[5]}.${
-                array[6]
-              }: `}</Text>
-              <Text key={`${array[2]} - ${element.stdCode}`} style={styles.desc}>
+              <Text key={`${element.stdDesc}-1`}>{`${standardShortCode}: `}</Text>
+              <Text key={`${element.stdCode}-2`} style={styles.desc}>
                 {element.stdDesc}
               </Text>
             </View>
