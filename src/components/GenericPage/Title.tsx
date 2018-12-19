@@ -1,5 +1,5 @@
 import React from 'react';
-import { blueGradient, Colors, Styles } from '../../constants';
+import { blueGradient, Colors, Styles } from '../../constants/style';
 import { PageWidthEnforcer } from './PageWidthEnforcer';
 
 export const Title: React.SFC = ({ children }) => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Colors, Styles, blueGradientBgImg } from '../../constants/index';
+import { Colors, Styles, blueGradientBgImg } from '../../constants/style/index';
 export interface TaskButtonProps {
   taskName: string;
   id: string;

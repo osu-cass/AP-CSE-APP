@@ -5,7 +5,7 @@ import {
   FilterOptionModel,
   FilterType
 } from '@osu-cass/sb-components';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 
 export interface MobileFilterProps extends AdvancedFilterCategoryModel {
   onMobileSelect: (selectedOptions: string[], code: FilterType) => void;

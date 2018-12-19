@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { BreadcrumbLink, BreadcrumbLinkProps } from '../BreadcrumbLink/BreadcrumbLink';
 import { Breadcrumbs, BreadcrumbsProps } from './index';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 import {
   BreadcrumbDropDownProps,
   BreadcrumbDropDown

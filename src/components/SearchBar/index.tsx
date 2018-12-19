@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'react-feather';
-import { Colors, mediaQueries } from '../../constants';
+import { Colors, mediaQueries } from '../../constants/style';
 
 export interface SearchBarProps {
   initialText?: string;

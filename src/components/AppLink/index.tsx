@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppLinkBtn, AppLinkBtnProps } from './AppLinkBtn';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
 export interface AppLinkProps {
   title: string;

@@ -10,7 +10,7 @@ import { AppsPage } from './Apps';
 import { DevelopmentPage } from './Development';
 import { TargetClient } from '../clients/target';
 import { FooterWrapped } from '../components/Footer';
-import { mediaQueries } from '../constants';
+import { mediaQueries } from '../constants/style';
 
 export const App: React.SFC = () => {
   return (

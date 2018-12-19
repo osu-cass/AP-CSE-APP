@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BreadcrumbLink, ListLink } from '../BreadcrumbLink/BreadcrumbLink';
 import { ChevronUp, ChevronDown, AlignCenter } from 'react-feather';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 import { SearchBaseModel } from '@osu-cass/sb-components';
 
 export interface BreadcrumbDropDownProps {
