@@ -358,6 +358,13 @@ exports[`Storyshots Mobile Filter with claims 1`] = `
             <option
               aria-selected={false}
               selected={false}
+              value="All"
+            >
+              All
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
               value="c1"
             >
               Claim 1
@@ -600,6 +607,20 @@ exports[`Storyshots Mobile Filter with targets 1`] = `
             <option
               aria-selected={false}
               selected={false}
+              value="All"
+            >
+              All
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="All"
+            >
+              All
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
               value="c1"
             >
               Claim 1
@@ -649,6 +670,13 @@ exports[`Storyshots Mobile Filter with targets 1`] = `
             multiple={false}
             onChange={[Function]}
           >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="All"
+            >
+              All
+            </option>
             <option
               aria-selected={false}
               selected={false}
