@@ -6,6 +6,7 @@ import {
   paramsFromFilter,
   paramsFromMobileFilter
 } from '../FilterHelper';
+import { sortHelper } from './sortHelper';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 import { MobileFilter, MobileFilterWrapped } from '../MobileFilter';
 import { DesktopFilterWrapped } from '../DesktopFilter';
@@ -19,6 +20,16 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
 }) => {
   const cleanParams = sanitizeParams(params, options);
   const filters: CSEAdvancedFilterModels = createFilters(options, cleanParams);
+
+  const sortFilters = () => {
+    if (filters.claimFilter) {
+      sortHelper(filters.claimFilter.filterOptions);
+    }
+    if (filters.targetFilter) {
+      sortHelper(filters.targetFilter.filterOptions);
+    }
+  };
+  sortFilters();
 
   const onUpdateDesktop = (filterType: FilterType, data?: FilterOptionModel) => {
     const newParams = paramsFromFilter(cleanParams, filterType, data);

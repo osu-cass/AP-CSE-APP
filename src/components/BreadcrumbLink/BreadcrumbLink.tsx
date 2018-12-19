@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ClaimType, GradeType, SubjectType } from '../Breadcrumbs/BreadcrumbModel';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 
 /**
  * Properties for BreadcrumbLink

@@ -2,7 +2,7 @@ import React from 'react';
 import { Section, MainHeader, SubHeader } from '..//MainContent/Components';
 import { ContentNav } from '../ContentNav';
 import { ItemProps } from '../ContentNav/Item';
-import { mediaQueries } from '../../constants';
+import { mediaQueries } from '../../constants/style';
 import { GenericContentProps } from '.';
 
 export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({

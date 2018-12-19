@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
-import { Colors, Styles, blueGradientBgImg } from '../../constants';
+import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
 import { TaskButton, TaskButtonProps } from './TaskButton';
 import { IClaim } from '../../models/claim';
 import { DocumentProps } from '../PDFLink/Document/DocumentModels';

@@ -12,7 +12,7 @@ import {
   paramsFromMobileFilter
 } from '../FilterHelper';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants';
+import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants/style';
 import { Message } from '../Message';
 import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import css from 'styled-jsx/css';

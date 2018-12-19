@@ -4,7 +4,7 @@ import { BreadcrumbsProps, Breadcrumbs } from '../../components/Breadcrumbs';
 import { TitleBarProps, TitleBar, TitleBarWrapped } from '../../components/TitleBar';
 import { MobileTitleBarWrapped } from '../../components/TitleBar/mobileTitleBar';
 import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
-import { blueGradient } from '../../constants';
+import { blueGradient } from '../../constants/style';
 
 import { Z_ASCII } from 'zlib';
 import { ClaimType } from '../Breadcrumbs/BreadcrumbModel';

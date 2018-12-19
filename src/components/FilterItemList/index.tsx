@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { FilterItemProps, FilterItem } from '../FilterItem';
 import { IClaim } from '../../models/claim';
-import { Colors, Styles } from '../../constants';
+import { Colors, Styles } from '../../constants/style';
 
 export interface FilterItemListProps {
   claims: IClaim[];
