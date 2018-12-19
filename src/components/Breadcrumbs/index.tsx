@@ -56,8 +56,10 @@ const background = {
  */
 export const Breadcrumbs = ({ subject, grades, claim, target, targetList }: BreadcrumbsProps) => {
   let currentTarget: SearchBaseModel | undefined;
-  if (target) {
-    currentTarget = { code: target, label: target };
+  if (target && targetList) {
+    currentTarget = targetList.find(
+      t => t.code === window.location.pathname.replace('/target/', '')
+    );
   }
 
   return (
