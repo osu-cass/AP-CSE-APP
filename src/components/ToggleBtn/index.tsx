@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Colors } from '../../constants';
+import { Colors } from '../../constants/style';
 import css from 'styled-jsx/css';
 
 const globalToggleStyle = css`
