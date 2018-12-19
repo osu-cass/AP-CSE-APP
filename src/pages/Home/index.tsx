@@ -26,7 +26,6 @@ const HomePageComponent = () => (
         assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
       </div>
       <div className="buttons">
-        {createDocument}
         <Link to="/search?filter=open">
           <button className="single-button">Navigate to a Target</button>
         </Link>
