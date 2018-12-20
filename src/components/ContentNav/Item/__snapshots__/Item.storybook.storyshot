@@ -38,12 +38,12 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
           className="active"
         >
           <div
+            className="chevron"
+          />
+          <div
             className="item-content"
           >
             Task Model 1
-            <div
-              className="chevron"
-            />
           </div>
         </div>
         <ul
@@ -84,13 +84,17 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -138,29 +142,29 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           className="active"
         >
           <div
+            className="chevron"
+          >
+            <svg
+              fill="none"
+              height={20}
+              onClick={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+          <div
             className="item-content"
           >
             Test Name
-            <div
-              className="chevron"
-            >
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="6 9 12 15 18 9"
-                />
-              </svg>
-            </div>
           </div>
         </div>
         <ul
@@ -230,13 +234,17 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -284,29 +292,29 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           className="active"
         >
           <div
+            className="chevron"
+          >
+            <svg
+              fill="none"
+              height={20}
+              onClick={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="18 15 12 9 6 15"
+              />
+            </svg>
+          </div>
+          <div
             className="item-content"
           >
             Test Name
-            <div
-              className="chevron"
-            >
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="18 15 12 9 6 15"
-                />
-              </svg>
-            </div>
           </div>
         </div>
         <ul
@@ -404,13 +412,17 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -458,29 +470,29 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           className="active"
         >
           <div
+            className="chevron"
+          >
+            <svg
+              fill="none"
+              height={20}
+              onClick={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="18 15 12 9 6 15"
+              />
+            </svg>
+          </div>
+          <div
             className="item-content"
           >
             Task Model 1
-            <div
-              className="chevron"
-            >
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="18 15 12 9 6 15"
-                />
-              </svg>
-            </div>
           </div>
         </div>
         <ul
@@ -578,13 +590,17 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -632,12 +648,12 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
           className=""
         >
           <div
+            className="chevron"
+          />
+          <div
             className="item-content"
           >
             Task Model 1
-            <div
-              className="chevron"
-            />
           </div>
         </div>
         <ul
@@ -678,13 +694,17 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -732,29 +752,29 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           className=""
         >
           <div
+            className="chevron"
+          >
+            <svg
+              fill="none"
+              height={20}
+              onClick={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+          <div
             className="item-content"
           >
             Test Name
-            <div
-              className="chevron"
-            >
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="6 9 12 15 18 9"
-                />
-              </svg>
-            </div>
           </div>
         </div>
         <ul
@@ -824,13 +844,17 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -878,29 +902,29 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           className=""
         >
           <div
+            className="chevron"
+          >
+            <svg
+              fill="none"
+              height={20}
+              onClick={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="18 15 12 9 6 15"
+              />
+            </svg>
+          </div>
+          <div
             className="item-content"
           >
             Test Name
-            <div
-              className="chevron"
-            >
-              <svg
-                fill="none"
-                height={20}
-                onClick={[Function]}
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="18 15 12 9 6 15"
-                />
-              </svg>
-            </div>
           </div>
         </div>
         <ul
@@ -970,13 +994,17 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
