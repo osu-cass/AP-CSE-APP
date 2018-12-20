@@ -25,11 +25,11 @@ const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
 
 const removeBackSlash = (text: string) => text.replace(/(\\)([_<>])/g, '$2');
 
-const replacer = (match: string, code: string) => String.fromCharCode(code);
+const replacer = (match: string, code: string) => String.fromCharCode(Number(code));
 const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
 
 const parsersInOrder = [replaceDashWithDot, removeBackSlash, replaceCharRef];
-const applyParsers = (parsers: {}[], text: string) => {
+const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   let parsedText: string = text;
   parsers.map((parser: (text: string) => string) => {
     parsedText = parser(parsedText);
