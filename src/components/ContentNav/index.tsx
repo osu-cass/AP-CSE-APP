@@ -88,14 +88,16 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isActive = item.name === name;
       let newSubItems: SubItemProps[] = [];
+      let expanded = false;
       if (item.subItems.length > 0) {
         newSubItems = item.subItems.map((subItem: SubItemProps) => ({ ...subItem, active: false }));
       }
       if (isActive) {
         content = item.contentKey;
+        expanded = !item.expanded;
       }
 
-      return { ...item, subItems: newSubItems, active: isActive };
+      return { ...item, expanded, subItems: newSubItems, active: isActive };
     });
 
     if (this.props.onSelect) {
@@ -109,6 +111,10 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
 
   expand = (event: React.MouseEvent<SVGElement>, name: string) => {
     event.stopPropagation();
+    this.textExpand(name);
+  };
+
+  textExpand = (name: string) => {
     const newItems: ItemProps[] = this.state.items.map((item: ItemProps) => {
       const isExpanded = item.name === name ? !item.expanded : false;
 
