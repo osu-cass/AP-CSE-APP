@@ -28,10 +28,10 @@ const removeBackSlash = (text: string) => text.replace(/(\\)([_<>])/g, '$2');
 const replacer = (match: string, code: string) => String.fromCharCode(Number(code));
 const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
 
-const parsersInOrder = [replaceDashWithDot, removeBackSlash, replaceCharRef];
+const parsers = [replaceDashWithDot, removeBackSlash, replaceCharRef];
 const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   let parsedText: string = text;
-  parsers.map((parser: (text: string) => string) => {
+  parsers.forEach((parser: (text: string) => string) => {
     parsedText = parser(parsedText);
   });
 
@@ -42,7 +42,7 @@ const parseSingleAsterisk = (text: string, underlined: boolean) => {
   const parts = text.split('*');
 
   return parts.map((part, index) => {
-    const parsedText: string = applyParsers(parsersInOrder, part);
+    const parsedText: string = applyParsers(parsers, part);
 
     if (index % 2 === 1) {
       if (underlined) return <u key={index}>{parsedText}</u>;
