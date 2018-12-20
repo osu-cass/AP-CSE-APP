@@ -31,13 +31,15 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({
   const renderClaimFilter = (): JSX.Element | undefined => {
     let content: JSX.Element | undefined;
     if (claimFilter) {
-      let filterOptions: FilterOptionModel[] = [{ label: 'All', key: 'All', isSelected: false }];
-      filterOptions = filterOptions.concat(claimFilter.filterOptions);
-      claimFilter.filterOptions = filterOptions;
+      const filterOptions: FilterOptionModel[] = [{ label: 'All', key: 'All', isSelected: false }];
+      const newFilter = {
+        filterOptions: filterOptions.concat(claimFilter.filterOptions),
+        ...claimFilter
+      };
       content = (
         <MobileAdvancedFilter
-          key={claimFilter.label}
-          {...claimFilter}
+          key={newFilter.label}
+          {...newFilter}
           onMobileSelect={update}
           isMultiSelect={false}
         />
@@ -53,15 +55,15 @@ export const MobileFilter: React.SFC<MobileFilterProps> = ({
     let content: JSX.Element;
     if (claimFilter && targetFilter) {
       let filterOptions: FilterOptionModel[] = [{ label: 'All', key: 'All', isSelected: false }];
+      const newFilter = {
+        filterOptions: filterOptions.concat(targetFilter.filterOptions),
+        ...targetFilter
+      };
 
-      filterOptions = filterOptions.concat(targetFilter.filterOptions);
-      targetFilter.filterOptions = filterOptions;
-
-      console.log(targetFilter);
       content = (
         <MobileAdvancedFilter
-          key={targetFilter.label}
-          {...targetFilter}
+          key={newFilter.label}
+          {...newFilter}
           onMobileSelect={update}
           isMultiSelect={false}
         />
