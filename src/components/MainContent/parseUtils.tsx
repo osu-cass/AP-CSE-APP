@@ -23,18 +23,34 @@ export const NewLine: React.SFC = ({ children }) => (
 
 const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
 
+const removeBackSlash = (text: string) => text.replace(/(\\)([_<>])/g, '$2');
+
+const replacer = (match: string, code: string) => String.fromCharCode(code);
+const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
+
+const parsersInOrder = [replaceDashWithDot, removeBackSlash, replaceCharRef];
+const applyParsers = (parsers: {}[], text: string) => {
+  let parsedText: string = text;
+  parsers.map((parser: (text: string) => string) => {
+    parsedText = parser(parsedText);
+  });
+
+  return parsedText;
+};
+
 const parseSingleAsterisk = (text: string, underlined: boolean) => {
   const parts = text.split('*');
 
   return parts.map((part, index) => {
-    const noDashPart = replaceDashWithDot(part);
-    if (index % 2 === 1) {
-      if (underlined) return <u key={index}>{noDashPart}</u>;
+    const parsedText: string = applyParsers(parsersInOrder, part);
 
-      return <i key={index}>{noDashPart}</i>;
+    if (index % 2 === 1) {
+      if (underlined) return <u key={index}>{parsedText}</u>;
+
+      return <i key={index}>{parsedText}</i>;
     }
 
-    return <React.Fragment key={index}>{noDashPart}</React.Fragment>;
+    return <React.Fragment key={index}>{parsedText}</React.Fragment>;
   });
 };
 
