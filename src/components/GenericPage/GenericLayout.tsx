@@ -13,7 +13,7 @@ export const genericLayout = <T extends object>(
   return (props: T) => (
     <React.Fragment>
       <div className="title-and-content">
-        <div>{title}</div>
+        <div id="titleContainer">{title}</div>
         <div className={`content ${mainContentClass}`} id="main-content-scroll">
           <PageWidthEnforcer>
             <div>{subheader}</div>

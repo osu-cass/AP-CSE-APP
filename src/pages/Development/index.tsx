@@ -60,7 +60,9 @@ const sections: ContentSection[] = [
   }
 ];
 
-const DevelopmentPageComponent: React.SFC = () => <GenericContentPage contentSections={sections} />;
+const DevelopmentPageComponent: React.SFC = () => (
+  <GenericContentPage contentSections={sections} scrollOffset={-115} />
+);
 
 export const DevelopmentPage = genericLayout(
   <Title>Learn About Test Development and Design</Title>,

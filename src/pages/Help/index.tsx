@@ -54,6 +54,8 @@ export const helpSections: ContentSection[] = [
   }
 ];
 
-const HelpPageContent: React.SFC = () => <GenericContentPage contentSections={helpSections} />;
+const HelpPageContent: React.SFC = () => (
+  <GenericContentPage contentSections={helpSections} scrollOffset={-115} />
+);
 
 export const HelpPage = genericLayout(<Title>Help</Title>, HelpPageContent);

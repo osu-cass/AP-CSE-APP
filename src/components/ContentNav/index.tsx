@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Item, ItemProps } from './Item';
 import { SubItem, SubItemProps } from './SubItem';
+import { ItemSearch } from '@osu-cass/sb-components';
 
 /**
  * Properties for ContentNav
@@ -21,6 +22,7 @@ export interface ContentNavProps {
  */
 export interface ContentNavState {
   items: ItemProps[];
+  scrollOffset: number | undefined;
 }
 
 /**
@@ -33,8 +35,24 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   constructor(props: ContentNavProps) {
     super(props);
     this.state = {
-      items: this.constructItems(this.props.items)
+      items: this.constructItems(this.props.items),
+      scrollOffset: undefined
     };
+  }
+
+  componentDidMount() {
+    if (!this.state.items[0].scrollOffset) {
+      const titleContainer: HTMLElement | null = document.getElementById('titleContainer');
+      if (titleContainer) {
+        const offSetHeight = titleContainer.offsetHeight;
+
+        if (offSetHeight !== this.state.scrollOffset) {
+          this.setState({
+            scrollOffset: offSetHeight * -1.35
+          });
+        }
+      }
+    }
   }
 
   constructItems(items: ItemProps[]): ItemProps[] {
@@ -127,6 +145,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   };
 
   renderSubItems = (subItems: SubItemProps[]) => {
+    const { scrollOffset } = this.state;
     if (subItems.length > 0) {
       return subItems.map((subItem: SubItemProps) => {
         return (
@@ -136,7 +155,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
             activate={this.subItemClicked}
             key={`${name}-${subItem.name}`}
             referenceContainer={this.props.referenceContainer}
-            scrollOffset={subItem.scrollOffset}
+            scrollOffset={scrollOffset ? scrollOffset : subItem.scrollOffset}
           />
         );
       });
@@ -146,6 +165,8 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
   };
 
   render() {
+    const stateScrollOffset = this.state.scrollOffset;
+
     return (
       <React.Fragment>
         <ul className="list" role="menu">
@@ -158,7 +179,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
               activate={this.itemClicked}
               expand={this.expand}
               referenceContainer={this.props.referenceContainer}
-              scrollOffset={scrollOffset}
+              scrollOffset={stateScrollOffset ? stateScrollOffset : scrollOffset}
               key={name}
             >
               {this.renderSubItems(subItems)}
