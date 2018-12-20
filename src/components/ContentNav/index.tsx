@@ -48,7 +48,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
 
         if (offSetHeight !== this.state.scrollOffset) {
           this.setState({
-            scrollOffset: offSetHeight * -1.35
+            scrollOffset: (offSetHeight + 62) * -1
           });
         }
       }
