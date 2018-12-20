@@ -11,7 +11,7 @@ export const scrollPageTo = (
     delay: 0,
     smooth: false,
     containerId: referenceContainer,
-    offset: -175
+    offset: scrollOffset
   });
 };
 
