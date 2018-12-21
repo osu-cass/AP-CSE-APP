@@ -179,7 +179,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
               activate={this.itemClicked}
               expand={this.expand}
               referenceContainer={this.props.referenceContainer}
-              scrollOffset={stateScrollOffset ? stateScrollOffset : scrollOffset}
+              scrollOffset={stateScrollOffset || scrollOffset}
               key={name}
             >
               {this.renderSubItems(subItems)}
