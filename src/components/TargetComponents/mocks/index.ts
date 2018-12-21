@@ -185,6 +185,7 @@ export const parsedCLaimTargetdataMock: TargetClaimProps = {
 };
 export const parsedMobileTitleBarDataMock: MobileTitleBarProps = {
   claimTitle: 'Claim 1',
+  claimUrl: '/search?claim=C1&grades=6&subject=English%20Language%20Arts',
   targetTitle: 'Target 1',
   downloadBtnProps: {
     claim: ELAG3ClaimMock

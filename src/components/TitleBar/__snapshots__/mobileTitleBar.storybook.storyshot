@@ -16,9 +16,11 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with a claim o
         <li
           className="title"
         >
-          <span>
-            Claim 1
-          </span>
+          <a>
+            <span>
+              Claim 1
+            </span>
+          </a>
         </li>
         <li
           className="download"
@@ -99,33 +101,36 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with a claim o
         display: flex;
         font-family: PT Sans Caption;
         padding: 0.7em 0;
-        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
-        width: '100%',
-        flexBasis: '100%'
+        backgroundimage: linear-gradient(90deg, #006298, #0085AD);
+        width: '100%';
+        flex-basis: '100%';
         flex-direction: row;
         justify-content: center;
-        align-items:center;
+        align-items: center;
       }
 
+      a {
+        color: #ffffff;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
-        flex-direction:row;
+        flex-direction: row;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         list-style-type: none;
         max-width: 85%;
-        width:100vw;
+        width: 100vw;
         margin: 0;
         padding: 0;
-        }
+      }
       .title {
         color: white;
         font-size: 1.129em;
         text-align: left;
       }
       .download {
-        width:auto;
+        width: auto;
       }
     
       </style>
@@ -150,9 +155,11 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with all data 
         <li
           className="title"
         >
-          <span>
-            Claim 1
-          </span>
+          <a>
+            <span>
+              Claim 1
+            </span>
+          </a>
         </li>
         <li
           className="title"
@@ -240,33 +247,36 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with all data 
         display: flex;
         font-family: PT Sans Caption;
         padding: 0.7em 0;
-        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
-        width: '100%',
-        flexBasis: '100%'
+        backgroundimage: linear-gradient(90deg, #006298, #0085AD);
+        width: '100%';
+        flex-basis: '100%';
         flex-direction: row;
         justify-content: center;
-        align-items:center;
+        align-items: center;
       }
 
+      a {
+        color: #ffffff;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
-        flex-direction:row;
+        flex-direction: row;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         list-style-type: none;
         max-width: 85%;
-        width:100vw;
+        width: 100vw;
         margin: 0;
         padding: 0;
-        }
+      }
       .title {
         color: white;
         font-size: 1.129em;
         text-align: left;
       }
       .download {
-        width:auto;
+        width: auto;
       }
     
       </style>
@@ -291,9 +301,11 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with header on
         <li
           className="title"
         >
-          <span>
-            Claim 1
-          </span>
+          <a>
+            <span>
+              Claim 1
+            </span>
+          </a>
         </li>
       </ul>
       <style
@@ -304,33 +316,36 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with header on
         display: flex;
         font-family: PT Sans Caption;
         padding: 0.7em 0;
-        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
-        width: '100%',
-        flexBasis: '100%'
+        backgroundimage: linear-gradient(90deg, #006298, #0085AD);
+        width: '100%';
+        flex-basis: '100%';
         flex-direction: row;
         justify-content: center;
-        align-items:center;
+        align-items: center;
       }
 
+      a {
+        color: #ffffff;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
-        flex-direction:row;
+        flex-direction: row;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         list-style-type: none;
         max-width: 85%;
-        width:100vw;
+        width: 100vw;
         margin: 0;
         padding: 0;
-        }
+      }
       .title {
         color: white;
         font-size: 1.129em;
         text-align: left;
       }
       .download {
-        width:auto;
+        width: auto;
       }
     
       </style>
