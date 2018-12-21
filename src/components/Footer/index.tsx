@@ -36,6 +36,8 @@ export const Footer: React.SFC = () => {
           justify-content: center;
           letter-spacing: 0;
           bottom: 0;
+          position: fixed;
+          width: 100%;
         }
 
         .footer-sub-container {

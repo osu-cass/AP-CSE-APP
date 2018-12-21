@@ -36,13 +36,19 @@ export const App: React.SFC = () => {
           margin: 0;
           padding: 0;
           font-family: PT Sans Caption;
+          position: fixed;
         }
 
         .full-page {
           height: 100vh;
-          width: 100vw;
+          width: 100%;
           display: flex;
           flex-direction: column;
+        }
+
+        .nav-bar {
+          position: fixed;
+          width: 100%;
         }
 
         @media ${mediaQueries.mobile} {
