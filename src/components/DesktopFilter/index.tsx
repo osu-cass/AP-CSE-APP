@@ -1,18 +1,6 @@
 import React, { Fragment } from 'react';
-import {
-  AdvancedFilterCategoryModel,
-  AdvancedFilter,
-  FilterOptionModel,
-  FilterType
-} from '@osu-cass/sb-components';
-import {
-  createFilters,
-  sanitizeParams,
-  paramsFromFilter,
-  paramsFromMobileFilter
-} from '../FilterHelper';
-import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants/style';
+import { AdvancedFilter, FilterOptionModel } from '@osu-cass/sb-components';
+import { Colors, blueGradient, Styles } from '../../constants/style';
 import { Message } from '../Message';
 import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import css from 'styled-jsx/css';
