@@ -87,7 +87,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         />
       );
     } else {
-      content = <Message>Please select a Grade and Subject</Message>;
+      content = <Message>Select a Grade and Subject first.</Message>;
     }
 
     return content;
@@ -106,7 +106,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         />
       );
     } else if (claimFilter) {
-      content = <Message>Please select a Claim.</Message>;
+      content = <Message>Select a Grade, Subject, and Claim first</Message>;
     }
 
     return content;
