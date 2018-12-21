@@ -29,7 +29,7 @@ export interface BreadcrumbsProps {
  * @param grade
  * @param claim
  */
-function buildSearchUrl(subject?: string, grades?: string[], claim?: string): string {
+export function buildSearchUrl(subject?: string, grades?: string[], claim?: string): string {
   const filterParams: CSEFilterParams = {
     subject,
     claim,
