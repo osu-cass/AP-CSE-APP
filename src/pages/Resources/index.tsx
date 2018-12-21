@@ -60,16 +60,9 @@ const ResourcesPageComponent: React.SFC = () => (
         {linkProps.map((props: ResourceLinkProps, idx: number) => (
           <ResourceLink key={idx} {...props} />
         ))}
-        <div className="resource-page-mobile-padding" />
       </div>
     </div>
     <style jsx>{`
-      @media (max-width: ${MobileBreakSize.maxWidth}px) {
-        .resource-page-mobile-padding {
-          height: 200px;
-          width: 100px;
-        }
-      }
       .content {
         display: flex;
         flex-direction: column;
