@@ -4,12 +4,7 @@ import { FilterItemList } from '../FilterItemList';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { Styles } from '../../constants/style';
 import { Message, ErrorMessage } from '../Message';
-import {
-  FilterType,
-  ErrorBoundary,
-  FilterOptionModel,
-  AdvancedFilter
-} from '@osu-cass/sb-components';
+import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
 import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
@@ -84,16 +79,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   async componentDidMount() {
-    if (anyParams(this.props.paramsFromUrl)) {
-      const [results, options] = await Promise.all([
-        this.props.searchClient.search(this.props.paramsFromUrl),
-        this.props.filterClient.getFilterOptions(this.state.params)
-      ]);
-      this.setState({ results, options });
-    } else {
-      const options = await this.props.filterClient.getFilterOptions(this.state.params);
-      this.setState({ options });
-    }
+    const options = await this.props.filterClient.getFilterOptions(this.state.params);
+    this.setState({ options });
   }
 
   private updateQuery(search: string, params: CSEFilterParams) {
