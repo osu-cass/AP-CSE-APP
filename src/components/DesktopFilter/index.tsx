@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
 import { AdvancedFilter, FilterOptionModel } from '@osu-cass/sb-components';
-import { Colors, blueGradient, Styles } from '../../constants/style';
-import { Message } from '../Message';
-import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
+import React, { Fragment } from 'react';
 import css from 'styled-jsx/css';
-import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { blueGradient, Colors, Styles } from '../../constants/style';
+import { CSEAdvancedFilterModels, FilterProps } from '../FilterProps';
+import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { Message } from '../Message';
 
 export const globalFilterStyle = css`
   .filter-selection {

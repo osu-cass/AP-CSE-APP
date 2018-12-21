@@ -1,15 +1,15 @@
+import { SearchBaseModel } from '@osu-cass/sb-components';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { IClaim } from '../../models/claim';
-import { ITargetClient, TargetClient } from '../../clients/target';
-import { genericLayout } from '../../components/GenericPage/GenericLayout';
-import { TargetTitleBar } from '../../components/TargetComponents/title';
-import { ClaimTarget } from '../../components/TargetComponents/ClaimTarget';
-import { Message, ErrorMessage } from '../../components/Message';
-import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
 import { FilterClient } from '../../clients/filter';
-import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
-import { SearchBaseModel } from '@osu-cass/sb-components';
+import { TargetClient } from '../../clients/target';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { ErrorMessage, Message } from '../../components/Message';
+import { ClaimTarget } from '../../components/TargetComponents/ClaimTarget';
+import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
+import { TargetTitleBar } from '../../components/TargetComponents/title';
+import { IClaim } from '../../models/claim';
+import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 
 export interface TargetMatchParams {
   targetShortCode?: string;
