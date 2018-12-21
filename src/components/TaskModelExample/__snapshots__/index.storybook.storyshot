@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Task Model examples default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div>
+        <p>
+          <strong>
+            Example 1:
+          </strong>
+        </p>
+        <p>
+          <span>
+            stuff and things and stuff
+            <br />
+          </span>
+        </p>
+      </div>
+      <div>
+        <p>
+          <strong>
+            Example 2:
+          </strong>
+        </p>
+        <p>
+          <span>
+            stuff and things and stuff
+            <br />
+          </span>
+        </p>
+      </div>
+      <div>
+        <p>
+          <strong>
+            Example 3:
+          </strong>
+        </p>
+        <p>
+          <span>
+            stuff and things and stuff
+            <br />
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
