@@ -15,6 +15,7 @@ export interface CSEFilterParams {
   subject?: string;
   claim?: string;
   target?: string;
+  filter?: string;
 }
 
 export interface CSESearchQuery {
@@ -23,4 +24,5 @@ export interface CSESearchQuery {
   claim?: string;
   target?: string;
   search?: string;
+  filter?: string;
 }

@@ -1,22 +1,10 @@
+import { AdvancedFilter, FilterOptionModel } from '@osu-cass/sb-components';
 import React, { Fragment } from 'react';
-import {
-  AdvancedFilterCategoryModel,
-  AdvancedFilter,
-  FilterOptionModel,
-  FilterType
-} from '@osu-cass/sb-components';
-import {
-  createFilters,
-  sanitizeParams,
-  paramsFromFilter,
-  paramsFromMobileFilter
-} from '../FilterHelper';
-import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { Colors, blueGradient, Styles, SizeBreaks, mediaQueries } from '../../constants/style';
-import { Message } from '../Message';
-import { FilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import css from 'styled-jsx/css';
-import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { blueGradient, Colors, Styles } from '../../constants/style';
+import { CSEAdvancedFilterModels, FilterProps } from '../FilterProps';
+import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { Message } from '../Message';
 
 export const globalFilterStyle = css`
   .filter-selection {
@@ -87,7 +75,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         />
       );
     } else {
-      content = <Message>Please select a Grade and Subject</Message>;
+      content = <Message>Select a Grade and Subject first.</Message>;
     }
 
     return content;
@@ -106,7 +94,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         />
       );
     } else if (claimFilter) {
-      content = <Message>Please select a Claim.</Message>;
+      content = <Message>Select a Grade, Subject, and Claim first</Message>;
     }
 
     return content;
