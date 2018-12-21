@@ -5,5 +5,5 @@ import { FilterContainer } from '.';
 
 storiesOf('FilterContianer', module)
   .addDecorator(centered)
-  .add('default', () => <FilterContainer>Filter goes here</FilterContainer>)
+  .add('default', () => <FilterContainer expanded={false}>Filter goes here</FilterContainer>)
   .add('expanded', () => <FilterContainer expanded>Filter goes here</FilterContainer>);

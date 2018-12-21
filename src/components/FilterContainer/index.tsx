@@ -3,7 +3,7 @@ import { ChevronDown, ChevronUp, Filter } from 'react-feather';
 import { Colors, Styles } from '../../constants/style';
 
 export interface FilterContainerProps {
-  expanded?: boolean;
+  expanded: boolean;
 }
 
 export interface FilterContainerState {
@@ -22,8 +22,15 @@ export class FilterContainer extends React.Component<FilterContainerProps, Filte
     super(props);
 
     this.state = {
-      expanded: props.expanded || false
+      expanded: props.expanded
     };
+  }
+
+  componentDidUpdate(prevProps: FilterContainerProps) {
+    const { expanded } = this.props;
+    if (prevProps.expanded !== expanded) {
+      this.setState({ expanded });
+    }
   }
 
   toggleExpanded = () => {

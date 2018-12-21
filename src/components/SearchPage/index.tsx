@@ -4,12 +4,7 @@ import { FilterItemList } from '../FilterItemList';
 import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { Styles } from '../../constants/style';
 import { Message, ErrorMessage } from '../Message';
-import {
-  FilterType,
-  ErrorBoundary,
-  FilterOptionModel,
-  AdvancedFilter
-} from '@osu-cass/sb-components';
+import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
 import { ISearchClient } from '../../clients/search';
 import { IClaim } from '../../models/claim';
 import { IFilterClient } from '../../clients/filter';
@@ -32,8 +27,8 @@ export interface SearchPageState {
   pt: boolean;
 }
 
-function anyParams(urlParmas: CSESearchQuery): boolean {
-  return Object.values(urlParmas).some((p: boolean) => p);
+function anyParams(urlParams: CSESearchQuery): boolean {
+  return urlParams.filter ? true : false;
 }
 
 function unwrapError<T>(data?: T | Error): T | undefined {
@@ -76,7 +71,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         grades: props.paramsFromUrl.grades || [],
         subject: props.paramsFromUrl.subject,
         claim: props.paramsFromUrl.claim,
-        target: props.paramsFromUrl.target
+        target: props.paramsFromUrl.target,
+        filter: props.paramsFromUrl.filter
       },
       search: props.paramsFromUrl.search || '',
       pt: false
@@ -84,16 +80,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   async componentDidMount() {
-    if (anyParams(this.props.paramsFromUrl)) {
-      const [results, options] = await Promise.all([
-        this.props.searchClient.search(this.props.paramsFromUrl),
-        this.props.filterClient.getFilterOptions(this.state.params)
-      ]);
-      this.setState({ results, options });
-    } else {
-      const options = await this.props.filterClient.getFilterOptions(this.state.params);
-      this.setState({ options });
-    }
+    const { filter, ...filterParams } = this.state.params;
+    const options = await this.props.filterClient.getFilterOptions(filterParams);
+    this.setState({ options });
   }
 
   private updateQuery(search: string, params: CSEFilterParams) {

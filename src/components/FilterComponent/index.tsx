@@ -1,18 +1,18 @@
-import React, { Fragment } from 'react';
-import { FilterProps, CSEAdvancedFilterModels, FilterComponentProps } from '../FilterProps';
-import {
-  sanitizeParams,
-  createFilters,
-  paramsFromFilter,
-  paramsFromMobileFilter
-} from '../FilterHelper';
-import { sortHelper } from './sortHelper';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
-import { MobileFilter, MobileFilterWrapped } from '../MobileFilter';
-import { ToggleBtn, ToggleBtnProps } from '../ToggleBtn';
+import React, { Fragment } from 'react';
+import { performanceOptions } from '../../models/filter';
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { FilterContainer } from '../FilterContainer';
-import { performanceOptions } from '../../models/filter';
+import {
+  createFilters,
+  paramsFromFilter,
+  paramsFromMobileFilter,
+  sanitizeParams
+} from '../FilterHelper';
+import { CSEAdvancedFilterModels, FilterComponentProps } from '../FilterProps';
+import { MobileFilterWrapped } from '../MobileFilter';
+import { ToggleBtn, ToggleBtnProps } from '../ToggleBtn';
+import { sortHelper } from './sortHelper';
 
 export const FilterComponent: React.SFC<FilterComponentProps> = ({
   options,
