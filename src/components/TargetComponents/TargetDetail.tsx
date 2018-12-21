@@ -48,7 +48,11 @@ function handleFractions(taskModels: ITaskModel[]) {
   });
 }
 
-function taskModelSections(taskModels: ITaskModel[], stem?: IStem[], isMath?:boolean ): ContentSection[] {
+function taskModelSections(
+  taskModels: ITaskModel[],
+  stem?: IStem[],
+  isMath?: boolean
+): ContentSection[] {
   return taskModels.map((tm, i) => {
     let subsections: ContentSection[] = [];
 
