@@ -27,8 +27,8 @@ export interface SearchPageState {
   pt: boolean;
 }
 
-function anyParams(urlParmas: CSESearchQuery): boolean {
-  return Object.values(urlParmas).some((p: boolean) => p);
+function anyParams(urlParams: CSESearchQuery): boolean {
+  return urlParams.filter ? true : false;
 }
 
 function unwrapError<T>(data?: T | Error): T | undefined {
@@ -71,7 +71,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         grades: props.paramsFromUrl.grades || [],
         subject: props.paramsFromUrl.subject,
         claim: props.paramsFromUrl.claim,
-        target: props.paramsFromUrl.target
+        target: props.paramsFromUrl.target,
+        filter: props.paramsFromUrl.filter
       },
       search: props.paramsFromUrl.search || '',
       pt: false
@@ -79,7 +80,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   async componentDidMount() {
-    const options = await this.props.filterClient.getFilterOptions(this.state.params);
+    const { filter, ...filterParams } = this.state.params;
+    const options = await this.props.filterClient.getFilterOptions(filterParams);
     this.setState({ options });
   }
 
