@@ -11,6 +11,7 @@ import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrap
  */
 export interface MobileTitleBarProps {
   claimTitle?: string;
+  claimUrl?: string;
   targetTitle?: string;
   downloadBtnProps?: DownloadBtnProps;
 }
@@ -26,6 +27,7 @@ export interface MobileTitleBarProps {
  */
 export const TitleBar: React.SFC<MobileTitleBarProps> = ({
   claimTitle,
+  claimUrl,
   targetTitle,
   downloadBtnProps
 }: MobileTitleBarProps) => (
@@ -33,7 +35,9 @@ export const TitleBar: React.SFC<MobileTitleBarProps> = ({
     <ul>
       {claimTitle && (
         <li className="title">
-          <span>{claimTitle}</span>
+          <a href={claimUrl}>
+            <span>{claimTitle}</span>
+          </a>
         </li>
       )}
       {targetTitle && (
@@ -52,33 +56,36 @@ export const TitleBar: React.SFC<MobileTitleBarProps> = ({
         display: flex;
         font-family: ${Styles.sbSans};
         padding: 0.7em 0;
-        backgroundImage: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})
-        width: '100%',
-        flexBasis: '100%'
+        backgroundimage: linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter});
+        width: '100%';
+        flex-basis: '100%';
         flex-direction: row;
         justify-content: center;
-        align-items:center;
+        align-items: center;
       }
 
+      a {
+        color: ${Colors.sbWhite};
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
-        flex-direction:row;
+        flex-direction: row;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         list-style-type: none;
         max-width: ${Styles.targetContentWidth};
-        width:100vw;
+        width: 100vw;
         margin: 0;
         padding: 0;
-        }
+      }
       .title {
         color: white;
         font-size: 1.129em;
         text-align: left;
       }
       .download {
-        width:auto;
+        width: auto;
       }
     `}</style>
   </div>

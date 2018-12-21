@@ -7,6 +7,8 @@ import { Styles, Colors } from '../../constants/style';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
 import { SearchBaseModel } from '@osu-cass/sb-components';
+import { DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import MediaQuery from 'react-responsive';
 
 /**
  * Properties for Breadcrumbs
@@ -27,7 +29,7 @@ export interface BreadcrumbsProps {
  * @param grade
  * @param claim
  */
-function buildSearchUrl(subject?: string, grades?: string[], claim?: string): string {
+export function buildSearchUrl(subject?: string, grades?: string[], claim?: string): string {
   const filterParams: CSEFilterParams = {
     subject,
     claim,
@@ -83,18 +85,20 @@ export const Breadcrumbs = ({ subject, grades, claim, target, targetList }: Brea
               label="Grade"
             />
           )}
-          {subject && grades && claim && (
-            <BreadcrumbLink
-              link={buildSearchUrl(subject, grades, claim)}
-              value={claim}
-              label="Claim"
-            />
-          )}
-          {subject && grades && claim && target && currentTarget && (
-            <div>
-              <BreadcrumbDropDown currentTarget={currentTarget} targets={targetList} />
-            </div>
-          )}
+          <MediaQuery {...DesktopBreakSize}>
+            {subject && grades && claim && (
+              <BreadcrumbLink
+                link={buildSearchUrl(subject, grades, claim)}
+                value={claim}
+                label="Claim"
+              />
+            )}
+            {subject && grades && claim && target && currentTarget && (
+              <div>
+                <BreadcrumbDropDown currentTarget={currentTarget} targets={targetList} />
+              </div>
+            )}
+          </MediaQuery>
         </ul>
       </div>
       <style jsx>{`

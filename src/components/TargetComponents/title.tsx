@@ -1,8 +1,11 @@
 import React from 'react';
 import { IClaim } from '../../models/claim';
-import { BreadcrumbsProps, Breadcrumbs } from '../../components/Breadcrumbs';
+import { BreadcrumbsProps, Breadcrumbs, buildSearchUrl } from '../../components/Breadcrumbs';
 import { TitleBarProps, TitleBar, TitleBarWrapped } from '../../components/TitleBar';
-import { MobileTitleBarWrapped } from '../../components/TitleBar/mobileTitleBar';
+import {
+  MobileTitleBarWrapped,
+  MobileTitleBarProps
+} from '../../components/TitleBar/mobileTitleBar';
 import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
 import { blueGradient } from '../../constants/style';
 
@@ -15,13 +18,15 @@ export interface TargetTitleBarProps {
   targetList?: SearchBaseModel[];
 }
 
-export const parseTitleBarMobileData = (claim: IClaim): TitleBarProps => {
+export const parseTitleBarMobileData = (claim: IClaim): MobileTitleBarProps => {
   const codeSegments: string[] = claim.target[0].shortCode.split('.');
   const targetTitle: string = `Target ${codeSegments[codeSegments.length - 1].slice(1)}`;
   const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
+  const claimUrl: string = buildSearchUrl(claim.subject, claim.grades, claim.claimNumber);
 
   return {
     claimTitle,
+    claimUrl,
     targetTitle,
     downloadBtnProps: { claim }
   };
