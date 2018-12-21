@@ -135,7 +135,6 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   return (
     <GenericContentPage
       contentSections={sections}
-      scrollOffset={-300}
       rightContent={<AdditionalMaterials target={target.shortCode} />}
     />
   );

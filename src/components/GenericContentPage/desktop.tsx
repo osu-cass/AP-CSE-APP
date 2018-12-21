@@ -32,11 +32,11 @@ export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({
   const itemProps: ItemProps[] = contentSections.map(section => ({
     name: section.title,
     referenceContainer: 'main-content-scroll',
-    scrollOffset: scrollOffset || -115,
+    scrollOffset: scrollOffset || undefined,
     subItems: (section.subsections || []).map(ss => ({
       name: `${section.title}-${ss.title}`,
       referenceContainer: 'main-content-scroll',
-      scrollOffset: scrollOffset || -115
+      scrollOffset: scrollOffset || undefined
     }))
   }));
 

@@ -34,12 +34,12 @@ ReactWrapper {
           class="active"
         >
           <div
+            class="chevron"
+          />
+          <div
             class="item-content"
           >
             Test Name
-            <div
-              class="chevron"
-            />
           </div>
         </div>
         <ul
@@ -78,13 +78,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
         </style>
@@ -98,12 +102,12 @@ ReactWrapper {
             className="active"
           >
             <div
+              className="chevron"
+            />
+            <div
               className="item-content"
             >
               Test Name
-              <div
-                className="chevron"
-              />
             </div>
           </div>,
           <ul
@@ -144,13 +148,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
           </style>,
@@ -165,68 +173,62 @@ ReactWrapper {
             class="active"
           >
             <div
+              class="chevron"
+            />
+            <div
               class="item-content"
             >
               Test Name
-              <div
-                class="chevron"
-              />
             </div>
           </div>,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <div
-              className="item-content"
-            >
-              Test Name
+            "children": Array [
               <div
                 className="chevron"
-              />
-            </div>,
+              />,
+              <div
+                className="item-content"
+              >
+                Test Name
+              </div>,
+            ],
             "className": "active",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": <div
+                class="chevron"
+              />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "chevron",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div
                 class="item-content"
               >
                 Test Name
-                <div
-                  class="chevron"
-                />
               </div>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Test Name",
-                  <div
-                    className="chevron"
-                  />,
-                ],
+                "children": "Test Name",
                 "className": "item-content",
               },
               "ref": null,
               "rendered": Array [
                 "Test Name",
-                Object {
-                  "instance": <div
-                    class="chevron"
-                  />,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "chevron",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    undefined,
-                  ],
-                  "type": "div",
-                },
               ],
               "type": "div",
             },
@@ -283,13 +285,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
           </style>,
@@ -328,13 +334,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       ",
             "jsx": true,
@@ -373,13 +383,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       ",
           ],
@@ -409,12 +423,12 @@ ReactWrapper {
             class="active"
           >
             <div
+              class="chevron"
+            />
+            <div
               class="item-content"
             >
               Test Name
-              <div
-                class="chevron"
-              />
             </div>
           </div>
           <ul
@@ -453,13 +467,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
           </style>
@@ -473,12 +491,12 @@ ReactWrapper {
               className="active"
             >
               <div
+                className="chevron"
+              />
+              <div
                 className="item-content"
               >
                 Test Name
-                <div
-                  className="chevron"
-                />
               </div>
             </div>,
             <ul
@@ -519,13 +537,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
             </style>,
@@ -540,68 +562,62 @@ ReactWrapper {
               class="active"
             >
               <div
+                class="chevron"
+              />
+              <div
                 class="item-content"
               >
                 Test Name
-                <div
-                  class="chevron"
-                />
               </div>
             </div>,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div
-                className="item-content"
-              >
-                Test Name
+              "children": Array [
                 <div
                   className="chevron"
-                />
-              </div>,
+                />,
+                <div
+                  className="item-content"
+                >
+                  Test Name
+                </div>,
+              ],
               "className": "active",
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": <div
+                  class="chevron"
+                />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "chevron",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div
                   class="item-content"
                 >
                   Test Name
-                  <div
-                    class="chevron"
-                  />
                 </div>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    "Test Name",
-                    <div
-                      className="chevron"
-                    />,
-                  ],
+                  "children": "Test Name",
                   "className": "item-content",
                 },
                 "ref": null,
                 "rendered": Array [
                   "Test Name",
-                  Object {
-                    "instance": <div
-                      class="chevron"
-                    />,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": undefined,
-                      "className": "chevron",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      undefined,
-                    ],
-                    "type": "div",
-                  },
                 ],
                 "type": "div",
               },
@@ -658,13 +674,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       
             </style>,
@@ -703,13 +723,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       ",
               "jsx": true,
@@ -748,13 +772,17 @@ ReactWrapper {
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: #313335;
+          display: inline;
         }
         .active {
           color: #006298;
+          font-weight: bold;
         }
       ",
             ],

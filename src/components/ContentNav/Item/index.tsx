@@ -77,12 +77,10 @@ export const Item: React.SFC<ItemProps> = ({
     >
       {renderLink(referenceContainer, name, activate)}
       <div className={active ? 'active' : ''}>
-        <div className="item-content">
-          {name}
-          <div className="chevron">
-            {children && <Chevron expanded={expanded} expand={expand} itemName={name} />}
-          </div>
+        <div className="chevron">
+          {children && <Chevron expanded={expanded} expand={expand} itemName={name} />}
         </div>
+        <div className="item-content">{name}</div>
       </div>
       <ul className={`sub-list ${expanded ? 'expanded' : ''}`}>{children}</ul>
       <style jsx>{`
@@ -117,13 +115,17 @@ export const Item: React.SFC<ItemProps> = ({
         }
         .chevron {
           display: flex;
+          margin-top: 5px;
+          margin-left: -30px;
           align-items: center;
-          margin: -5px 5px;
           text-indent: 0;
+          float: left;
           color: ${Colors.sbGrayDarker};
+          display: inline;
         }
         .active {
           color: ${Colors.sbBlue};
+          font-weight: bold;
         }
       `}</style>
     </li>
