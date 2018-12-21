@@ -33,7 +33,9 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
       <div
         className="title-and-content"
       >
-        <div>
+        <div
+          id="titleContainer"
+        >
           <div
             className="title-bar"
           >

@@ -24,7 +24,7 @@ const produceState = ({
     active: firstItemActive,
     name: 'Clarifications',
     subItems: [],
-    expanded: false
+    expanded: firstItemActive
   },
   {
     active: false,
