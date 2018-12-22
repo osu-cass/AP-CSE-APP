@@ -2,7 +2,6 @@ import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { ResourceLinkProps, ResourceLink } from '../../components/ResourceLink';
 import { Title } from '../../components/GenericPage/Title';
-import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const scoreimg: string = require('../../assets/images/score-guide.png') as string;
