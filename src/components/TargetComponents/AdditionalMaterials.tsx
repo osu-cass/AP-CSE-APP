@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { HelpCircle } from 'react-feather';
+import css from 'styled-jsx/css';
+import { Colors } from '../../constants/style';
 import { digitalLibraryLinks } from '../../constants/links';
+
+const linkStyle = css`
+  a {
+    color: ${Colors.sbBlueLighter};
+  }
+`;
 
 export interface AdditionalMaterialsProps {
   target: string;
@@ -14,20 +22,26 @@ export const AdditionalMaterials: React.SFC<AdditionalMaterialsProps> = ({ targe
   const dlLink = digitalLibraryLinks.get(target);
   const materials = () => {
     const includedMaterials = [
-      <a
-        href={`https://sampleitems.smarterbalanced.org/BrowseItems?Claim=${subject}${claim}&Subject=${subject}&Grade=${grade}&Target=${targ}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        'Sample Items, Scoring Guides and Rubrics'
-      </a>
+      <Fragment>
+        <a
+          href={`https://sampleitems.smarterbalanced.org/BrowseItems?Claim=${subject}${claim}&Subject=${subject}&Grade=${grade}&Target=${targ}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          'Sample Items, Scoring Guides and Rubrics'
+        </a>
+        <style jsx>{linkStyle}</style>
+      </Fragment>
     ];
     const dlLink = digitalLibraryLinks.get(target);
     if (dlLink) {
       includedMaterials.push(
-        <a href={dlLink} target="_blank" rel="noopener noreferrer">
-          'Digital Library Resources'
-        </a>
+        <Fragment>
+          <a href={dlLink} target="_blank" rel="noopener noreferrer">
+            'Digital Library Resources'
+          </a>
+          <style jsx>{linkStyle}</style>
+        </Fragment>
       );
     }
 
