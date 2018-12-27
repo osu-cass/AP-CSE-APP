@@ -8,7 +8,7 @@ import { OrderedList } from './Lists';
 import { Stems } from './Stems';
 import { AdditionalMaterials } from '../AdditionalMaterials';
 import { DOK } from './DOK';
-import { ExamplesProps } from '../TaskModelExample';
+import { ExamplesProps, Examples } from '../TaskModelExample';
 
 export interface TargetDetailProps {
   target: ITarget;
@@ -74,17 +74,18 @@ function taskModelSections(
       subsections = subsections.concat(stemSection(stem));
     }
 
-    if (tm.examples && isMath) {
+    // Have to check if Example is NA because is possible there is one example like this ['NA']
+    if (tm.examples && tm.examples[0] !== 'NA') {
       const exampleProps: ExamplesProps = {
         examples: []
       };
-      if (typeof tm.examples === 'string') {
-        exampleProps.examples.push({ label: 'Example 1', content: tm.examples });
-      } else {
-        tm.examples.map((e, index) => {
-          exampleProps.examples.push({ label: `Example ${index + 1}`, content: e });
-        });
-      }
+      tm.examples.map((e, index) => {
+        exampleProps.examples.push({ label: `Example ${index + 1}`, content: e });
+      });
+      subsections.push({
+        title: 'Examples',
+        jsx: <Examples {...exampleProps} />
+      });
     }
 
     return {
