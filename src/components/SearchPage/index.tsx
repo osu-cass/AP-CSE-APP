@@ -1,16 +1,17 @@
-import React from 'react';
-import { SearchBar } from '../SearchBar';
-import { FilterItemList } from '../FilterItemList';
-import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
-import { Styles } from '../../constants/style';
-import { Message, ErrorMessage } from '../Message';
-import { FilterType, ErrorBoundary } from '@osu-cass/sb-components';
-import { ISearchClient } from '../../clients/search';
-import { IClaim } from '../../models/claim';
-import { IFilterClient } from '../../clients/filter';
-import { stringify } from 'query-string';
+import { ErrorBoundary, FilterType } from '@osu-cass/sb-components';
 import { History } from 'history';
+import { stringify } from 'query-string';
+import React from 'react';
+
+import { IFilterClient } from '../../clients/filter';
+import { ISearchClient } from '../../clients/search';
+import { Styles } from '../../constants/style';
+import { IClaim } from '../../models/claim';
+import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { FilterComponent } from '../FilterComponent';
+import { FilterItemList } from '../FilterItemList';
+import { ErrorMessage, Message } from '../Message';
+import { SearchBar } from '../SearchBar';
 
 export interface SearchPageProps {
   paramsFromUrl: CSESearchQuery;
@@ -96,7 +97,8 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
 
   onFilterChanged = async (newFilter: CSEFilterParams) => {
     const { params, search } = this.state;
-    const [options, results] = await Promise.all([
+    // tslint:disable-next-line:prefer-const
+    let [options, results] = await Promise.all([
       this.props.filterClient.getFilterOptions(
         newFilter,
         compareParams(params, newFilter),
@@ -105,12 +107,20 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
       this.props.searchClient.search({ search, ...newFilter })
     ]);
 
+    if (this.state.pt) {
+      results = this.filterPerformanceTasks(results as IClaim[]);
+    }
+
     this.updateQuery(search, newFilter);
     this.setState({ options, results, params: newFilter });
   };
 
   onSearch = async (search: string) => {
-    const results = await this.props.searchClient.search({ search, ...this.state.params });
+    let results = await this.props.searchClient.search({ search, ...this.state.params });
+
+    if (this.state.pt) {
+      results = this.filterPerformanceTasks(results as IClaim[]);
+    }
 
     this.updateQuery(search, this.state.params);
     this.setState({ results, search });
@@ -133,19 +143,30 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
           params={params}
           onUpdate={this.onFilterChanged}
           expanded={anyParams(this.props.paramsFromUrl)}
-          filterPT={this.filterPerformanceTasks}
+          filterPT={this.togglePerformaceTask}
         />
       </ErrorBoundary>
     );
   }
-  filterPerformanceTasks = () => {
-    if (this.state.results) {
-      const res = this.state.results as IClaim[];
-      res.forEach(c => (c.target = c.target.filter(t => t.interactionType === 'PT')));
-      this.setState({
-        results: res
-      });
-    }
+
+  togglePerformaceTask = () => {
+    const { results } = this.state;
+    this.setState(() => ({
+      results: this.filterPerformanceTasks(results as IClaim[]),
+      pt: !this.state.pt
+    }));
+  };
+
+  filterPerformanceTasks = (claims: IClaim[]): IClaim[] => {
+    const results: IClaim[] = [];
+    claims.forEach(c => {
+      c.target = c.target.filter(t => t.interactionType === 'PT');
+      if (c.target.length > 0) {
+        results.push(c);
+      }
+    });
+
+    return results;
   };
 
   renderNarrowText(results: IClaim[]) {
@@ -169,6 +190,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
       </div>
     );
   }
+
   renderResults() {
     const { results } = this.state;
     const errorJsx = <ErrorMessage>Error fetching results from the server</ErrorMessage>;
