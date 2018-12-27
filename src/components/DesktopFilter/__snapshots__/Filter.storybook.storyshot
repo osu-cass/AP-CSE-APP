@@ -530,7 +530,7 @@ exports[`Storyshots Desktop Filter Subject, Grade and Claim 1`] = `
         <div
           className="message"
         >
-          Please select a Claim.
+          Select a Grade, Subject, and Claim first
           <style
             jsx={true}
           >
@@ -732,7 +732,7 @@ exports[`Storyshots Desktop Filter default 1`] = `
         <div
           className="message"
         >
-          Please select a Grade and Subject
+          Select a Grade and Subject first.
           <style
             jsx={true}
           >

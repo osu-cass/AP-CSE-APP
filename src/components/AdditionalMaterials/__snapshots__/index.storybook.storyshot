@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Additional Materials With Digital Library Resources 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <a
+      href="https://sampleitems.smarterbalanced.org/BrowseItems?Claim=ELA2&Subject=ELA&Grade=8&Target=1a"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Sample Items, Scoring Guides and Rubrics
+    </a>
+    <style
+      jsx={true}
+    >
+      
+    </style>
+    <style
+      jsx={true}
+    >
+      
+        div {
+          padding: 5px;
+          margin-left: 10px;
+        }
+      
+    </style>
+  </div>
+  <div>
+    <a
+      href="https://www.smarterbalancedlibrary.org/playlist/t/112396"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Digital Library Resources
+    </a>
+    <style
+      jsx={true}
+    >
+      
+    </style>
+    <style
+      jsx={true}
+    >
+      
+        div {
+          padding: 5px;
+          margin-left: 10px;
+        }
+      
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Additional Materials default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <a
+      href="https://sampleitems.smarterbalanced.org/BrowseItems?Claim=MATH3&Subject=MATH&Grade=8&Target=D"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Sample Items, Scoring Guides and Rubrics
+    </a>
+    <style
+      jsx={true}
+    >
+      
+    </style>
+    <style
+      jsx={true}
+    >
+      
+        div {
+          padding: 5px;
+          margin-left: 10px;
+        }
+      
+    </style>
+  </div>
+</div>
+`;

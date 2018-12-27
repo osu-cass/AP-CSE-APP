@@ -6,7 +6,7 @@ import { Standards } from './Standards';
 import { Evidence } from './Evidence';
 import { OrderedList } from './Lists';
 import { Stems } from './Stems';
-import { AdditionalMaterials } from './AdditionalMaterials';
+import { AdditionalMaterials } from '../AdditionalMaterials';
 import { DOK } from './DOK';
 import { ExamplesProps } from '../TaskModelExample';
 
