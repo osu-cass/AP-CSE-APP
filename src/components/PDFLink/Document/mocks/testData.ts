@@ -19,7 +19,7 @@ export const ClaimMe: IClaim = {
           taskName: 'Task Model 1',
           stimulus:
             '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus\r\n\r\n**Stems:**\r\n-   Source \\#1 discusses &#60topic&#62 . Explain how the information in Source \\#2 adds to the reader’s understanding of &#60topic&#62 . Give **two** [details/examples] from Source \\#2 to support your explanation.\r\n\r\n-   The sources discuss &#60topic&#62 . Explain what the sources say about &#60topic&#62 . Use **one** detail from each source to support your explanation. For each detail, include the source title or number.',
-          examples: 'Scoring Rules',
+          examples: ['Scoring Rules'],
           relatedEvidence: []
         },
         {
@@ -28,7 +28,7 @@ export const ClaimMe: IClaim = {
           taskName: 'Task Model 2',
           stimulus:
             '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** G3.T2. Excerpt from one of the Sources \r\n\r\n**Stems:**\r\n-   Source \\#1 says &#60quote&#62 . Click on [**one**/**two**] sentence(s) in Source \\#2 below that **best** [supports/support] this [idea/detail].\r\n\r\n**Clarifications:** The stem should appear above the text not after it.',
-          examples: 'Stimulus Information',
+          examples: ['Stimulus Information'],
           relatedEvidence: []
         }
       ],
