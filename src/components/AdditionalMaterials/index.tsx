@@ -8,6 +8,11 @@ const linkStyle = css`
   a {
     color: ${Colors.sbBlueLighter};
   }
+  a:hover,
+  a:active {
+    color: #111213;
+    text-decoration: none;
+  }
 `;
 
 export interface AdditionalMaterialsProps {
