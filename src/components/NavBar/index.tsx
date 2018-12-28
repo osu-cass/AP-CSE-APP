@@ -5,9 +5,29 @@ import { SearchBar } from '../SearchBar';
 import { HelpCircle, Menu } from 'react-feather';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
+import css from 'styled-jsx/css';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
+
+const globalStyles = css`
+  a.nav-item:hover {
+    border-bottom: 8px solid;
+    border-color: ${Colors.sbGray};
+    margin-bottom: -8px;
+  }
+
+  a.help:hover {
+    border-bottom: 8px solid;
+    border-color: ${Colors.sbGray};
+    margin-bottom: -8px;
+  }
+
+  .nav-item {
+    height: 46px;
+    margin-bottom: 8px;
+  }
+`;
 
 export const HeaderLogo: React.SFC = () => (
   <a href="https://www.smarterbalanced.org/" target="_blank" rel="noopener noreferrer">
@@ -52,7 +72,7 @@ export const NavBar: React.SFC = () => {
             <SearchBar onSearch={handleRedirect} />
           </span>
           <span className="right-spacing">
-            <Link to="/help" style={linkStyle} aria-label="Help">
+            <Link className="help" to="/help" style={linkStyle} aria-label="Help">
               <HelpCircle {...iconStyle} />
             </Link>
           </span>
@@ -88,6 +108,10 @@ export const NavBar: React.SFC = () => {
           flex-grow: 1;
         }
 
+        .help {
+          height: 52px;
+        }
+
         @media ${mediaQueries.tabletAndMobile} {
           .grow-search {
             flex-grow: 1;
@@ -101,6 +125,10 @@ export const NavBar: React.SFC = () => {
           visibility: hidden;
         }
       `}</style>
+
+      <style jsx global>
+        {globalStyles}
+      </style>
     </header>
   );
 };

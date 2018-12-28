@@ -132,6 +132,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
         >
           <a
             aria-label="Help"
+            className="help"
             href="/help"
             onClick={[Function]}
             style={
@@ -205,6 +206,10 @@ exports[`Storyshots NavBar NavBar 1`] = `
           flex-grow: 1;
         }
 
+        .help {
+          height: 52px;
+        }
+
         @media (max-width: 950px) {
           .grow-search {
             flex-grow: 1;
@@ -217,6 +222,12 @@ exports[`Storyshots NavBar NavBar 1`] = `
         .hidden {
           visibility: hidden;
         }
+      
+    </style>
+    <style
+      global={true}
+      jsx={true}
+    >
       
     </style>
   </header>
