@@ -1,13 +1,14 @@
 import React from 'react';
 import { ContentSection, GenericContentPage } from '../GenericContentPage';
 import { ITarget, ITaskModel, IStem } from '../../models/target';
-import { parseContent } from '../MainContent/parseUtils';
+import { parseContent, parseExamples } from '../MainContent/parseUtils';
 import { Standards } from './Standards';
 import { Evidence } from './Evidence';
 import { OrderedList } from './Lists';
 import { Stems } from './Stems';
 import { AdditionalMaterials } from '../AdditionalMaterials';
 import { DOK } from './DOK';
+import { ExamplesProps, Examples } from '../TaskModelExample';
 
 export interface TargetDetailProps {
   target: ITarget;
@@ -32,23 +33,12 @@ function stemSection(stem: IStem[]): ContentSection[] {
 
   return sections;
 }
-// tslint:disable: no-non-null-assertion
-function handleFractions(taskModels: ITaskModel[]) {
-  const rex = /\$\\frac{(\w+)}{(\w+)}\$/g;
-  const rexMin = /{(\w+)}{(\w+)}/;
-  taskModels.forEach(tm => {
-    if (tm.taskDesc && tm.taskDesc.match(rex)) {
-      tm.taskDesc.match(rex)!.forEach(m => {
-        tm.taskDesc = tm.taskDesc!.replace(m, `${m.match(rexMin)![1]}/${m.match(rexMin)![2]}`);
-      });
-    }
-    // tslint:enable: no-non-null-assertion
-  });
-}
 
-function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSection[] {
-  handleFractions(taskModels);
-
+function taskModelSections(
+  taskModels: ITaskModel[],
+  stem?: IStem[],
+  isMath?: boolean
+): ContentSection[] {
   return taskModels.map((tm, i) => {
     let subsections: ContentSection[] = [];
 
@@ -68,6 +58,20 @@ function taskModelSections(taskModels: ITaskModel[], stem?: IStem[]): ContentSec
     // stem section
     if (stem) {
       subsections = subsections.concat(stemSection(stem));
+    }
+
+    // Have to check if Example is NA because is possible there is one example like this ['NA']
+    if (tm.examples && tm.examples[0] !== 'NA') {
+      const exampleProps: ExamplesProps = {
+        examples: []
+      };
+      tm.examples.map((e, index) => {
+        exampleProps.examples.push({ label: `Example ${index + 1}`, content: e });
+      });
+      subsections.push({
+        title: 'Examples',
+        jsx: <Examples {...exampleProps} />
+      });
     }
 
     return {

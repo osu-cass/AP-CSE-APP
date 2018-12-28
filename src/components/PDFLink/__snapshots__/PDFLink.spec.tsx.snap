@@ -367,7 +367,9 @@ $~$
 -   For Grade 3 Performance Tasks, where there are only 2 sources, visuals may be included *within* the sources as delineated in bullets above.",
                       "taskModels": Array [
                         Object {
-                          "examples": "Scoring Rules",
+                          "examples": Array [
+                            "Scoring Rules",
+                          ],
                           "relatedEvidence": Array [],
                           "stimulus": "**Lead-in:** No lead-in
 
@@ -381,7 +383,9 @@ $~$
                           "taskName": "Task Model 1",
                         },
                         Object {
-                          "examples": "Stimulus Information",
+                          "examples": Array [
+                            "Stimulus Information",
+                          ],
                           "relatedEvidence": Array [],
                           "stimulus": "**Lead-in:** No lead-in
 
@@ -695,7 +699,9 @@ $~$
 -   For Grade 3 Performance Tasks, where there are only 2 sources, visuals may be included *within* the sources as delineated in bullets above.",
                       "taskModels": Array [
                         Object {
-                          "examples": "Scoring Rules",
+                          "examples": Array [
+                            "Scoring Rules",
+                          ],
                           "relatedEvidence": Array [],
                           "stimulus": "**Lead-in:** No lead-in
 
@@ -709,7 +715,9 @@ $~$
                           "taskName": "Task Model 1",
                         },
                         Object {
-                          "examples": "Stimulus Information",
+                          "examples": Array [
+                            "Stimulus Information",
+                          ],
                           "relatedEvidence": Array [],
                           "stimulus": "**Lead-in:** No lead-in
 
@@ -1040,7 +1048,9 @@ $~$
 -   For Grade 3 Performance Tasks, where there are only 2 sources, visuals may be included *within* the sources as delineated in bullets above.",
                   "taskModels": Array [
                     Object {
-                      "examples": "Scoring Rules",
+                      "examples": Array [
+                        "Scoring Rules",
+                      ],
                       "relatedEvidence": Array [],
                       "stimulus": "**Lead-in:** No lead-in
 
@@ -1054,7 +1064,9 @@ $~$
                       "taskName": "Task Model 1",
                     },
                     Object {
-                      "examples": "Stimulus Information",
+                      "examples": Array [
+                        "Stimulus Information",
+                      ],
                       "relatedEvidence": Array [],
                       "stimulus": "**Lead-in:** No lead-in
 
@@ -1087,7 +1099,9 @@ The **correct answer choice(s)** should be sentences that clearly provide suppor
           taskModels={
             Array [
               Object {
-                "examples": "Scoring Rules",
+                "examples": Array [
+                  "Scoring Rules",
+                ],
                 "relatedEvidence": Array [],
                 "stimulus": "**Lead-in:** No lead-in
 
@@ -1101,7 +1115,9 @@ The **correct answer choice(s)** should be sentences that clearly provide suppor
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "Stimulus Information",
+                "examples": Array [
+                  "Stimulus Information",
+                ],
                 "relatedEvidence": Array [],
                 "stimulus": "**Lead-in:** No lead-in
 

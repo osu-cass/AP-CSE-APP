@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Passage } from './Components';
+import { ITaskModel } from '../../models/target';
 
 const splitByNewLine = (text: string | undefined) => {
   if (text) {
@@ -28,7 +29,27 @@ const removeBackSlash = (text: string) => text.replace(/(\\)([_<>])/g, '$2');
 const replacer = (match: string, code: string) => String.fromCharCode(Number(code));
 const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
 
-const parsers = [replaceDashWithDot, removeBackSlash, replaceCharRef];
+function replaceFractions(text: string): string {
+  let newContent = text;
+  const fractionPattern = /\$\\frac{(\w+)}{(\w+)}\$/g;
+  const match = text.match(fractionPattern);
+
+  if (match) {
+    const numbersPattern = /{(\w+)}{(\w+)}/;
+    match.forEach(m => {
+      const newMatch = m.match(numbersPattern);
+      const numerator = newMatch && newMatch[1];
+      const denominator = newMatch && newMatch[2];
+      if (numerator && denominator) {
+        newContent = newContent.replace(m, `${numerator}/${denominator}`);
+      }
+    });
+  }
+
+  return newContent;
+}
+
+const parsers = [replaceDashWithDot, removeBackSlash, replaceCharRef, replaceFractions];
 const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   let parsedText: string = text;
   parsers.forEach((parser: (text: string) => string) => {
@@ -67,6 +88,16 @@ const parseDoubleAsterisks = (text: string, underlined: boolean) => {
   });
 };
 
+// I'm assuming you've already checked if this line of the
+// content is an image prior to this function call
+export const parseImageTags = (text: string): JSX.Element => {
+  const urlPattern = /\!\[\]\((.*)\)/;
+  const match = text.match(urlPattern);
+  const url = match && match[1];
+
+  return <img src={url || ''} role="presentation" alt="" />;
+};
+
 export const parseContent = (text: string | undefined) => {
   const lines = splitByNewLine(text);
 
@@ -78,17 +109,25 @@ export const parseContent = (text: string | undefined) => {
   }
 
   return lines.map((line, index) => {
-    return <NewLine key={index}>{parseDoubleAsterisks(line, underlined)}</NewLine>;
+    let content;
+    if (line.startsWith('![](') && line.endsWith(')')) {
+      content = parseImageTags(line);
+    } else {
+      content = parseDoubleAsterisks(line, underlined);
+    }
+
+    return <NewLine key={index}>{content}</NewLine>;
   });
 };
 
-export const parseExamples = (examples: string | string[]) => {
-  if (examples instanceof Array && examples.length > 0) {
-    return examples.map(parseContent);
-  }
-  if (typeof examples === 'string') {
-    return parseContent(examples);
+export const parseExamples = (example: string) => {
+  const lines = splitByNewLine(example);
+  let content;
+  if (lines) {
+    content = lines.map(parseContent);
+  } else {
+    content = parseContent(example);
   }
 
-  return undefined;
+  return content;
 };
