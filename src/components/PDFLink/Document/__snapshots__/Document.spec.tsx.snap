@@ -176,9 +176,11 @@ Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] that 
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
+                    "examples": Array [
+                      "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence/line] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -193,9 +195,11 @@ The **answer choices** will present four options. Options that are paraphrased w
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
+                    "examples": Array [
+                      "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [details/sentences/lines] from [title text \\\\#1] **best** support the same [inference/conclusion]? Select **[two/three]** answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -210,7 +214,8 @@ The **answer choices** will present **five or six** options. Options that are pa
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
+                    "examples": Array [
+                      "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
 [excerpted selectable text]
 **NOTE:** This stem can only be used with two **literary** passages.
 
@@ -219,6 +224,7 @@ The **answer choices** will present **five or six** options. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]?
 [excerpted selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -375,9 +381,11 @@ Select the statements that **best** explain why the author chose to include [thi
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
+                    "examples": Array [
+                      "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -393,9 +401,11 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select [**two/three**] answers.
+                    "examples": Array [
+                      "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select [**two/three**] answers.
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written? Select [**two/three**] answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -789,7 +799,8 @@ Click on the statement that **best** describes how that information helps the re
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
+                    "examples": Array [
+                      "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
 
 -   How does [provide character’s name]’s point of view in [title text \\\\#1] differ from [provide character’s name]’s point of view in [title text \\\\#2]?
 
@@ -810,6 +821,7 @@ How does that information help the reader understand the [provide conflict/point
 -   Which statement **best** describes how the use of [dialogue/character’s actions/characters’ interactions/etc.] affects [provide the characters/events] in **both** texts?
 
 -   How do the authors of both texts develop the idea that [provide targeted idea]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -827,7 +839,8 @@ Rationales should state the justification for the type of plausible **distractor
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]? Select [**two/three**] answers.
+                    "examples": Array [
+                      "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]? Select [**two/three**] answers.
 
 -   How does [provide character’s name]’s point of view in [title text \\\\#1] differ from [provide character’s name]’s point of view in [title text \\\\#2]? Select [**two/three**] answers.
 
@@ -846,6 +859,7 @@ How does that information help the reader understand the [provide conflict/point
 -   Which statements are **most** accurate about the [provide character actions/interactions/relationships/etc.] in **both** [insert names of texts]? Select [**two/three**] answers.
 
 -   Which statements **best** describe how the use of [dialogue/character’s actions/characters’ interactions/etc.] affects [provide the characters/events] in **both** texts? Select [**two/three**] answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -863,7 +877,8 @@ The **answer choices** will present **five** or **six** options of similar struc
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
 
@@ -894,6 +909,7 @@ How does that information help the reader understand the [provide conflict/point
 
 -   Which [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from the text **best** [show(s)/support(s)] the [comparison/connection/relationship] made in part A?
 [insert selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -919,7 +935,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Click on the statement that **best** describes how [provide character’s name(s)] in [title text \\\\#1] resembles [provide character’s name] in [title text \\\\#2]?
 
@@ -948,6 +965,7 @@ Click on the statement that **best** describes how that information helps the re
 
 -   Click on the [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from [title of text] that **best** [show(s)/support(s)] the [comparison/connection/relationship] made in part A.
 [insert selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1170,7 +1188,8 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
@@ -1183,6 +1202,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Which [sentence(s)/line(s)/set of lines/paragraph(s)] from [text \\\\#1 name] **best** support(s) your answer in part A?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1206,7 +1226,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
+                    "examples": Array [
+                      "-   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [provide character’s name/setting/event/theme/topic/etc.] in [title text \\\\#1]? Explain using key details from [title text \\\\#1/both texts] to support your answer.
 
@@ -1221,6 +1242,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [the author/the speaker/the narrator/or provide character’s name]’s [thoughts/beliefs] about [provide character’s name/provide information about character/idea/event] in [title text \\\\#1]? Explain using key details from [title text \\\\#1/both texts] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1238,7 +1260,8 @@ Short text items require students to cite specific textual evidence to support i
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
@@ -1251,6 +1274,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Click on the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#1] that **best** support(s) your answer in part A.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1448,10 +1472,12 @@ NOTE: This stem can only be used with two literary passages.",
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
+                    "examples": Array [
+                      "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two literary passages.
 
 -   What [theme/central idea] from [title text \\\\#1] is made clear by the description of [provide idea/event/character/etc.] in [title text \\\\#2]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1467,7 +1493,9 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1483,7 +1511,9 @@ The **answer choices** will present five or six options of similar structure. Of
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1501,10 +1531,12 @@ The **answer choices** will be selectable lines, sentences, paragraphs, sections
                     "taskName": "Task Model 4",
                   },
                   Object {
-                    "examples": "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]? Explain using key details from both passages to support your answer.
+                    "examples": Array [
+                      "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]? Explain using key details from both passages to support your answer.
 **NOTE:** This stem can only be used with two literary passages.
 
 -   What [theme/central idea] from [title text \\\\#1] is made clear by the description of [provide idea/event/character/etc.] in [title text \\\\#2]? Explain using key details from [title text\\\\#1] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1519,7 +1551,8 @@ Examples will reflect common student responses.",
                     "taskName": "Task Model 5",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two literary passages.
@@ -1532,6 +1565,7 @@ Examples will reflect common student responses.",
 
 -   Which [sentences/lines/paragraphs] from [title text \\\\#1] and [title text \\\\#2] name best support your answer in part A?
 NOTE: This stem can only be used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -1708,9 +1742,11 @@ Click the [detail/sentence/set of sentences/paragraph] that **best** supports th
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   Which [evidence/detail/sentence] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on the two passages] is true of **both** texts? **NOTE:** This stem is only used with two informational passages.
+                    "examples": Array [
+                      "-   Which [evidence/detail/sentence] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on the two passages] is true of **both** texts? **NOTE:** This stem is only used with two informational passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [evidence/detail/sentence] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -1725,10 +1761,12 @@ The **answer choices** will present four options. Options that are paraphrased w
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two or three]** answers.
+                    "examples": Array [
+                      "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two or three]** answers.
 **NOTE:** This stem can only be used with two informational passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence] from [title text \\\\#1] best supports that [provide inference or conclusion]? Select **[two or three]** answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -1743,7 +1781,8 @@ The **answer choices** will present **five or six options**. Options that are pa
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#2] that also supports [provide inference or conclusion].
+                    "examples": Array [
+                      "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#2] that also supports [provide inference or conclusion].
 [Provide excerpted selectable text]
 **NOTE:** This stem can only be used with two **informational** passages.
 
@@ -1752,6 +1791,7 @@ The **answer choices** will present **five or six options**. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]? 
 [Provide excerpted selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -1952,10 +1992,12 @@ A [key event/idea/detail] is missing from the summary. Click on the [sentence/pa
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
+                    "examples": Array [
+                      "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two informational passages.
 
 -   What central idea from [title text \\\\#1] is made clear by the description of [provide idea/event] in [title text \\\\#2]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1971,7 +2013,9 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -1987,7 +2031,8 @@ The **answer choices** will present five or six options of similar structure. Of
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
 NOTE: This stem can only be used with two informational passages.
@@ -2000,6 +2045,7 @@ NOTE: This stem can only be used with two informational passages.
 
 -   Which [sentences/details] from [title text \\\\#1] and [title text \\\\#2] best [support/are an example of] your answer in part A?
 **NOTE:** This stem can only be used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -2022,10 +2068,12 @@ The **answer choices of PART B** will present four options. The correct answer w
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2 name]? Explain using key evidence from the text to support your answer.
+                    "examples": Array [
+                      "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2 name]? Explain using key evidence from the text to support your answer.
 **NOTE:** This stem can only be used with two informational passages.
 
 -   What central idea from [title text \\\\#2] is made clear by the description of [provide idea/event] in [title text \\\\#1 name]? Explain using key evidence from [title text \\\\#1] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2041,7 +2089,9 @@ Short text items must require students to cite specific textual evidence to supp
                     "taskName": "Task Model 5",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2286,7 +2336,8 @@ Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s) or line(s) from text, with *targeted word/phrase* underlined]
@@ -2298,6 +2349,7 @@ Now read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s) or line(s) from text, with *targeted word/phrase* underlined]
 Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/“targeted phrase” text \\\\#2] as it is used in **both** texts? 
 **NOTE:** This stem is only used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2317,7 +2369,8 @@ The **answer choices** will present four options of similar structure using voca
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [directly quoted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -2329,6 +2382,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [directly quoted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [words/phrases] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts? Select **[two/three]** answers.
 **NOTE:** This stem is only used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2346,7 +2400,8 @@ The **answer choices** will present five or six options of similar structure usi
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s)/line(s) from text, with *targeted word/phrase* underlined]
@@ -2358,6 +2413,7 @@ Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/
 Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\\\#2] that means the same thing as [*targeted word*/“targeted phrase”].
 [excerpted selectable text \\\\#2] 
 **NOTE:** This stem is only used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2555,7 +2611,8 @@ Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what d
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -2576,6 +2633,7 @@ Based on the [line/sentence] from [title text \\\\#2], what does the [word/phras
 Now read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined].
 Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2593,7 +2651,8 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -2614,6 +2673,7 @@ Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what d
 Now read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
 Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]? Select [**two/three**] answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2866,7 +2926,8 @@ Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -2878,6 +2939,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts?
 **NOTE:** This stem is only used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2897,7 +2959,8 @@ Rationales should state the justification for the type of plausible **distractor
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -2909,6 +2972,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [words/phrases] **best** match the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts? Select **[two/three]** answers.
 **NOTE:** This stem is only used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -2926,7 +2990,8 @@ The **answer choices** will present five or six options of similar structure usi
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -2938,6 +3003,7 @@ Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/
 Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\\\#2 ] that means the same thing as [*targeted word*/“targeted phrase”].
 [Provide excerpted selectable text \\\\#2]
 **NOTE:** This stem is only used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3167,7 +3233,8 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 Refer to Smarter Balanced Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/paragraph(s)/section(s)] from [title text \\\\#2].
 [Provide excerpt from text]
@@ -3180,6 +3247,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Which [sentence(s)/paragraph(s)/section(s)] from [title text \\\\#1] **best** support(s) your answer in Part A?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3203,7 +3271,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
+                    "examples": Array [
+                      "-   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
 [Provide excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [provide key individual/event/or idea is introduced/illustrated/elaborated OR author’s purpose/relevance of evidence/elaboration to support claims, concepts, and ideas/etc.] in [text \\\\#1 name]? Explain using key evidence from [title text \\\\#1/both texts] to support your answer.
 
@@ -3218,6 +3287,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [the author/the speaker/the narrator/or provide individual’s name]’s [thoughts/beliefs] about [provide individual’s name/provide information about individual/idea/event] in [title text \\\\#1]? Explain using key evidence from [title text \\\\#1/both texts] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3235,7 +3305,8 @@ Short text items require students to cite specific textual evidence to support i
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
 [Provide excerpt from text]
@@ -3248,6 +3319,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Click on the [sentence(s)/section(s)/paragraph(s)] from [text \\\\#1 name] that **best** support(s) your answer in Part A.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3591,7 +3663,8 @@ How does that information help the reader understand [provide individuals/events
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affect **both** texts?
+                    "examples": Array [
+                      "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affect **both** texts?
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] is [similar/different] in **both** texts?
 
@@ -3618,6 +3691,7 @@ How does that information help the reader understand [provide individuals/events
 -   How does [provide author’s name]’s [point of view/purpose] in [title text \\\\#1] differ from [provide author’s name]’s [point of view/purpose] in [title text \\\\#2]?
 
 -   How does the development of the author’s [point of view/purpose] in [title text \\\\#1] [compare/contrast] to the development of the author’s [point of view/purpose] in [title text \\\\#2]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3635,7 +3709,8 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts? Select [**two**/**three]** options.
+                    "examples": Array [
+                      "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts? Select [**two**/**three]** options.
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] is [similar/different] in **both** texts? Select [**two**/**three]** options.
 
@@ -3662,6 +3737,7 @@ How does that information help the reader understand [provide individuals/events
 -   How does [provide author’s name]’s [point of view/purpose] in [title text \\\\#1] differ from [provide author’s name]’s [point of view/purpose] in [title text \\\\#2]? Select [**two**/**three]** options.
 
 -   How does the development of the author’s [point of view/purpose] in [title text \\\\#1] [compare/contrast] to the development of the author’s [point of view/purpose] in [title text \\\\#2]? Select [**two**/**three]** options.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3679,7 +3755,8 @@ The **answer choices** will present five or six options of similar structure. Of
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts?
 
@@ -3718,6 +3795,7 @@ How does that information help the reader understand [provide individuals/events
 -   Which [pair/set] of sentences from the texts **best** support your answer in part A?
 
 -   Which [pair/set] of sentences from the texts **best** shows the [comparison/connection/relationship/etc.] made in part A?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3743,7 +3821,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts?
 
@@ -3790,6 +3869,7 @@ How does that information help the reader understand [provide individuals/events
 [insert selectable text title text \\\\#1]
 [insert selectable text title text \\\\#2]
 **NOTE:** This stem can only be used with two **informational** passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3965,9 +4045,11 @@ Select the statement that **best** explains why the author chose to include this
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
+                    "examples": Array [
+                      "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -3983,9 +4065,11 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   The author used [provide structure/format/feature/etc.] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select **[two or three]** answers.
+                    "examples": Array [
+                      "-   The author used [provide structure/format/feature/etc.] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select **[two or three]** answers.
 
 -   How might have the information in [[title text \\\\#2] affected the way [title text \\\\#1] is written? Select **[two or three]** answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -4174,7 +4258,8 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -4195,6 +4280,7 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Now read the sentence(s)/paragraph(s)] [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined].
 Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -4212,7 +4298,8 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -4233,6 +4320,7 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Now read the [sentence(s) paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
 Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]? Select **[two/three]** options.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -4411,9 +4499,11 @@ Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] that 
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
+                    "examples": Array [
+                      "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence/line] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -4428,9 +4518,11 @@ The **answer choices** will present four options. Options that are paraphrased w
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
+                    "examples": Array [
+                      "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [details/sentences/lines] from [title text \\\\#1] **best** support the same [inference/conclusion]? Select **[two/three]** answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -4445,7 +4537,8 @@ The **answer choices** will present **five or six** options. Options that are pa
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
+                    "examples": Array [
+                      "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
 [excerpted selectable text]
 **NOTE:** This stem can only be used with two **literary** passages.
 
@@ -4454,6 +4547,7 @@ The **answer choices** will present **five or six** options. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]?
 [excerpted selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -4610,9 +4704,11 @@ Select the statements that **best** explain why the author chose to include [thi
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
+                    "examples": Array [
+                      "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -4628,9 +4724,11 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select [**two/three**] answers.
+                    "examples": Array [
+                      "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select [**two/three**] answers.
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written? Select [**two/three**] answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5024,7 +5122,8 @@ Click on the statement that **best** describes how that information helps the re
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
+                    "examples": Array [
+                      "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
 
 -   How does [provide character’s name]’s point of view in [title text \\\\#1] differ from [provide character’s name]’s point of view in [title text \\\\#2]?
 
@@ -5045,6 +5144,7 @@ How does that information help the reader understand the [provide conflict/point
 -   Which statement **best** describes how the use of [dialogue/character’s actions/characters’ interactions/etc.] affects [provide the characters/events] in **both** texts?
 
 -   How do the authors of both texts develop the idea that [provide targeted idea]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5062,7 +5162,8 @@ Rationales should state the justification for the type of plausible **distractor
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]? Select [**two/three**] answers.
+                    "examples": Array [
+                      "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]? Select [**two/three**] answers.
 
 -   How does [provide character’s name]’s point of view in [title text \\\\#1] differ from [provide character’s name]’s point of view in [title text \\\\#2]? Select [**two/three**] answers.
 
@@ -5081,6 +5182,7 @@ How does that information help the reader understand the [provide conflict/point
 -   Which statements are **most** accurate about the [provide character actions/interactions/relationships/etc.] in **both** [insert names of texts]? Select [**two/three**] answers.
 
 -   Which statements **best** describe how the use of [dialogue/character’s actions/characters’ interactions/etc.] affects [provide the characters/events] in **both** texts? Select [**two/three**] answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5098,7 +5200,8 @@ The **answer choices** will present **five** or **six** options of similar struc
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
 
@@ -5129,6 +5232,7 @@ How does that information help the reader understand the [provide conflict/point
 
 -   Which [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from the text **best** [show(s)/support(s)] the [comparison/connection/relationship] made in part A?
 [insert selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5154,7 +5258,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Click on the statement that **best** describes how [provide character’s name(s)] in [title text \\\\#1] resembles [provide character’s name] in [title text \\\\#2]?
 
@@ -5183,6 +5288,7 @@ Click on the statement that **best** describes how that information helps the re
 
 -   Click on the [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from [title of text] that **best** [show(s)/support(s)] the [comparison/connection/relationship] made in part A.
 [insert selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5405,7 +5511,8 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
@@ -5418,6 +5525,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Which [sentence(s)/line(s)/set of lines/paragraph(s)] from [text \\\\#1 name] **best** support(s) your answer in part A?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5441,7 +5549,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
+                    "examples": Array [
+                      "-   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [provide character’s name/setting/event/theme/topic/etc.] in [title text \\\\#1]? Explain using key details from [title text \\\\#1/both texts] to support your answer.
 
@@ -5456,6 +5565,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [the author/the speaker/the narrator/or provide character’s name]’s [thoughts/beliefs] about [provide character’s name/provide information about character/idea/event] in [title text \\\\#1]? Explain using key details from [title text \\\\#1/both texts] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5473,7 +5583,8 @@ Short text items require students to cite specific textual evidence to support i
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
@@ -5486,6 +5597,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Click on the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#1] that **best** support(s) your answer in part A.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5683,10 +5795,12 @@ NOTE: This stem can only be used with two literary passages.",
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
+                    "examples": Array [
+                      "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two literary passages.
 
 -   What [theme/central idea] from [title text \\\\#1] is made clear by the description of [provide idea/event/character/etc.] in [title text \\\\#2]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5702,7 +5816,9 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5718,7 +5834,9 @@ The **answer choices** will present five or six options of similar structure. Of
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5736,10 +5854,12 @@ The **answer choices** will be selectable lines, sentences, paragraphs, sections
                     "taskName": "Task Model 4",
                   },
                   Object {
-                    "examples": "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]? Explain using key details from both passages to support your answer.
+                    "examples": Array [
+                      "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]? Explain using key details from both passages to support your answer.
 **NOTE:** This stem can only be used with two literary passages.
 
 -   What [theme/central idea] from [title text \\\\#1] is made clear by the description of [provide idea/event/character/etc.] in [title text \\\\#2]? Explain using key details from [title text\\\\#1] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -5754,7 +5874,8 @@ Examples will reflect common student responses.",
                     "taskName": "Task Model 5",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two literary passages.
@@ -5767,6 +5888,7 @@ Examples will reflect common student responses.",
 
 -   Which [sentences/lines/paragraphs] from [title text \\\\#1] and [title text \\\\#2] name best support your answer in part A?
 NOTE: This stem can only be used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -5943,9 +6065,11 @@ Click the [detail/sentence/set of sentences/paragraph] that **best** supports th
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   Which [evidence/detail/sentence] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on the two passages] is true of **both** texts? **NOTE:** This stem is only used with two informational passages.
+                    "examples": Array [
+                      "-   Which [evidence/detail/sentence] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on the two passages] is true of **both** texts? **NOTE:** This stem is only used with two informational passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [evidence/detail/sentence] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -5960,10 +6084,12 @@ The **answer choices** will present four options. Options that are paraphrased w
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two or three]** answers.
+                    "examples": Array [
+                      "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two or three]** answers.
 **NOTE:** This stem can only be used with two informational passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence] from [title text \\\\#1] best supports that [provide inference or conclusion]? Select **[two or three]** answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -5978,7 +6104,8 @@ The **answer choices** will present **five or six options**. Options that are pa
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#2] that also supports [provide inference or conclusion].
+                    "examples": Array [
+                      "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#2] that also supports [provide inference or conclusion].
 [Provide excerpted selectable text]
 **NOTE:** This stem can only be used with two **informational** passages.
 
@@ -5987,6 +6114,7 @@ The **answer choices** will present **five or six options**. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]? 
 [Provide excerpted selectable text]",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -6187,10 +6315,12 @@ A [key event/idea/detail] is missing from the summary. Click on the [sentence/pa
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
+                    "examples": Array [
+                      "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two informational passages.
 
 -   What central idea from [title text \\\\#1] is made clear by the description of [provide idea/event] in [title text \\\\#2]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6206,7 +6336,9 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6222,7 +6354,8 @@ The **answer choices** will present five or six options of similar structure. Of
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
 NOTE: This stem can only be used with two informational passages.
@@ -6235,6 +6368,7 @@ NOTE: This stem can only be used with two informational passages.
 
 -   Which [sentences/details] from [title text \\\\#1] and [title text \\\\#2] best [support/are an example of] your answer in part A?
 **NOTE:** This stem can only be used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                     ],
@@ -6257,10 +6391,12 @@ The **answer choices of PART B** will present four options. The correct answer w
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2 name]? Explain using key evidence from the text to support your answer.
+                    "examples": Array [
+                      "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2 name]? Explain using key evidence from the text to support your answer.
 **NOTE:** This stem can only be used with two informational passages.
 
 -   What central idea from [title text \\\\#2] is made clear by the description of [provide idea/event] in [title text \\\\#1 name]? Explain using key evidence from [title text \\\\#1] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6276,7 +6412,9 @@ Short text items must require students to cite specific textual evidence to supp
                     "taskName": "Task Model 5",
                   },
                   Object {
-                    "examples": "NA",
+                    "examples": Array [
+                      "NA",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6521,7 +6659,8 @@ Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s) or line(s) from text, with *targeted word/phrase* underlined]
@@ -6533,6 +6672,7 @@ Now read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s) or line(s) from text, with *targeted word/phrase* underlined]
 Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/“targeted phrase” text \\\\#2] as it is used in **both** texts? 
 **NOTE:** This stem is only used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6552,7 +6692,8 @@ The **answer choices** will present four options of similar structure using voca
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [directly quoted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -6564,6 +6705,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [directly quoted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [words/phrases] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts? Select **[two/three]** answers.
 **NOTE:** This stem is only used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6581,7 +6723,8 @@ The **answer choices** will present five or six options of similar structure usi
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s)/line(s) from text, with *targeted word/phrase* underlined]
@@ -6593,6 +6736,7 @@ Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/
 Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\\\#2] that means the same thing as [*targeted word*/“targeted phrase”].
 [excerpted selectable text \\\\#2] 
 **NOTE:** This stem is only used with two literary passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6790,7 +6934,8 @@ Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what d
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -6811,6 +6956,7 @@ Based on the [line/sentence] from [title text \\\\#2], what does the [word/phras
 Now read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined].
 Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -6828,7 +6974,8 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -6849,6 +6996,7 @@ Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what d
 Now read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
 Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]? Select [**two/three**] answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7101,7 +7249,8 @@ Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -7113,6 +7262,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts?
 **NOTE:** This stem is only used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7132,7 +7282,8 @@ Rationales should state the justification for the type of plausible **distractor
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -7144,6 +7295,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [words/phrases] **best** match the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts? Select **[two/three]** answers.
 **NOTE:** This stem is only used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7161,7 +7313,8 @@ The **answer choices** will present five or six options of similar structure usi
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -7173,6 +7326,7 @@ Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/
 Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\\\#2 ] that means the same thing as [*targeted word*/“targeted phrase”].
 [Provide excerpted selectable text \\\\#2]
 **NOTE:** This stem is only used with two informational passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7402,7 +7556,8 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 Refer to Smarter Balanced Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/paragraph(s)/section(s)] from [title text \\\\#2].
 [Provide excerpt from text]
@@ -7415,6 +7570,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Which [sentence(s)/paragraph(s)/section(s)] from [title text \\\\#1] **best** support(s) your answer in Part A?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7438,7 +7594,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
+                    "examples": Array [
+                      "-   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
 [Provide excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [provide key individual/event/or idea is introduced/illustrated/elaborated OR author’s purpose/relevance of evidence/elaboration to support claims, concepts, and ideas/etc.] in [text \\\\#1 name]? Explain using key evidence from [title text \\\\#1/both texts] to support your answer.
 
@@ -7453,6 +7610,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [the author/the speaker/the narrator/or provide individual’s name]’s [thoughts/beliefs] about [provide individual’s name/provide information about individual/idea/event] in [title text \\\\#1]? Explain using key evidence from [title text \\\\#1/both texts] to support your answer.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7470,7 +7628,8 @@ Short text items require students to cite specific textual evidence to support i
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
 [Provide excerpt from text]
@@ -7483,6 +7642,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Click on the [sentence(s)/section(s)/paragraph(s)] from [text \\\\#1 name] that **best** support(s) your answer in Part A.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7826,7 +7986,8 @@ How does that information help the reader understand [provide individuals/events
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affect **both** texts?
+                    "examples": Array [
+                      "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affect **both** texts?
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] is [similar/different] in **both** texts?
 
@@ -7853,6 +8014,7 @@ How does that information help the reader understand [provide individuals/events
 -   How does [provide author’s name]’s [point of view/purpose] in [title text \\\\#1] differ from [provide author’s name]’s [point of view/purpose] in [title text \\\\#2]?
 
 -   How does the development of the author’s [point of view/purpose] in [title text \\\\#1] [compare/contrast] to the development of the author’s [point of view/purpose] in [title text \\\\#2]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7870,7 +8032,8 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts? Select [**two**/**three]** options.
+                    "examples": Array [
+                      "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts? Select [**two**/**three]** options.
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] is [similar/different] in **both** texts? Select [**two**/**three]** options.
 
@@ -7897,6 +8060,7 @@ How does that information help the reader understand [provide individuals/events
 -   How does [provide author’s name]’s [point of view/purpose] in [title text \\\\#1] differ from [provide author’s name]’s [point of view/purpose] in [title text \\\\#2]? Select [**two**/**three]** options.
 
 -   How does the development of the author’s [point of view/purpose] in [title text \\\\#1] [compare/contrast] to the development of the author’s [point of view/purpose] in [title text \\\\#2]? Select [**two**/**three]** options.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7914,7 +8078,8 @@ The **answer choices** will present five or six options of similar structure. Of
                     "taskName": "Task Model 2",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts?
 
@@ -7953,6 +8118,7 @@ How does that information help the reader understand [provide individuals/events
 -   Which [pair/set] of sentences from the texts **best** support your answer in part A?
 
 -   Which [pair/set] of sentences from the texts **best** shows the [comparison/connection/relationship/etc.] made in part A?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -7978,7 +8144,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                     "taskName": "Task Model 3",
                   },
                   Object {
-                    "examples": "**PART A:**
+                    "examples": Array [
+                      "**PART A:**
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts?
 
@@ -8025,6 +8192,7 @@ How does that information help the reader understand [provide individuals/events
 [insert selectable text title text \\\\#1]
 [insert selectable text title text \\\\#2]
 **NOTE:** This stem can only be used with two **informational** passages.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -8200,9 +8368,11 @@ Select the statement that **best** explains why the author chose to include this
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
+                    "examples": Array [
+                      "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -8218,9 +8388,11 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "-   The author used [provide structure/format/feature/etc.] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select **[two or three]** answers.
+                    "examples": Array [
+                      "-   The author used [provide structure/format/feature/etc.] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select **[two or three]** answers.
 
 -   How might have the information in [[title text \\\\#2] affected the way [title text \\\\#1] is written? Select **[two or three]** answers.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -8409,7 +8581,8 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
                 "taskModels": Array [
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -8430,6 +8603,7 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Now read the sentence(s)/paragraph(s)] [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined].
 Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]?",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -8447,7 +8621,8 @@ The **answer choices** will present four options of similar structure. The corre
                     "taskName": "Task Model 1",
                   },
                   Object {
-                    "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                    "examples": Array [
+                      "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -8468,6 +8643,7 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Now read the [sentence(s) paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
 Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]? Select **[two/three]** options.",
+                    ],
                     "relatedEvidence": Array [
                       "Evidence Required 1",
                       "Evidence Required 2",
@@ -8663,9 +8839,11 @@ Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] that 
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
+                "examples": Array [
+                  "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence/line] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -8680,9 +8858,11 @@ The **answer choices** will present four options. Options that are paraphrased w
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
+                "examples": Array [
+                  "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [details/sentences/lines] from [title text \\\\#1] **best** support the same [inference/conclusion]? Select **[two/three]** answers.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -8697,7 +8877,8 @@ The **answer choices** will present **five or six** options. Options that are pa
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
+                "examples": Array [
+                  "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
 [excerpted selectable text]
 **NOTE:** This stem can only be used with two **literary** passages.
 
@@ -8706,6 +8887,7 @@ The **answer choices** will present **five or six** options. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]?
 [excerpted selectable text]",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -8862,9 +9044,11 @@ Select the statements that **best** explain why the author chose to include [thi
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
+                "examples": Array [
+                  "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -8880,9 +9064,11 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select [**two/three**] answers.
+                "examples": Array [
+                  "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select [**two/three**] answers.
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written? Select [**two/three**] answers.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9276,7 +9462,8 @@ Click on the statement that **best** describes how that information helps the re
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
+                "examples": Array [
+                  "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
 
 -   How does [provide character’s name]’s point of view in [title text \\\\#1] differ from [provide character’s name]’s point of view in [title text \\\\#2]?
 
@@ -9297,6 +9484,7 @@ How does that information help the reader understand the [provide conflict/point
 -   Which statement **best** describes how the use of [dialogue/character’s actions/characters’ interactions/etc.] affects [provide the characters/events] in **both** texts?
 
 -   How do the authors of both texts develop the idea that [provide targeted idea]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9314,7 +9502,8 @@ Rationales should state the justification for the type of plausible **distractor
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]? Select [**two/three**] answers.
+                "examples": Array [
+                  "-   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]? Select [**two/three**] answers.
 
 -   How does [provide character’s name]’s point of view in [title text \\\\#1] differ from [provide character’s name]’s point of view in [title text \\\\#2]? Select [**two/three**] answers.
 
@@ -9333,6 +9522,7 @@ How does that information help the reader understand the [provide conflict/point
 -   Which statements are **most** accurate about the [provide character actions/interactions/relationships/etc.] in **both** [insert names of texts]? Select [**two/three**] answers.
 
 -   Which statements **best** describe how the use of [dialogue/character’s actions/characters’ interactions/etc.] affects [provide the characters/events] in **both** texts? Select [**two/three**] answers.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9350,7 +9540,8 @@ The **answer choices** will present **five** or **six** options of similar struc
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   How do(es) the development(s) of [provide character’s name(s)] in [title text \\\\#1] resemble(s) [provide character’s name] in [title text \\\\#2]?
 
@@ -9381,6 +9572,7 @@ How does that information help the reader understand the [provide conflict/point
 
 -   Which [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from the text **best** [show(s)/support(s)] the [comparison/connection/relationship] made in part A?
 [insert selectable text]",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9406,7 +9598,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                 "taskName": "Task Model 3",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Click on the statement that **best** describes how [provide character’s name(s)] in [title text \\\\#1] resembles [provide character’s name] in [title text \\\\#2]?
 
@@ -9435,6 +9628,7 @@ Click on the statement that **best** describes how that information helps the re
 
 -   Click on the [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from [title of text] that **best** [show(s)/support(s)] the [comparison/connection/relationship] made in part A.
 [insert selectable text]",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9657,7 +9851,8 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
             "taskModels": Array [
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Read the [sentence(s)/line(s)/set(s) of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
@@ -9670,6 +9865,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Which [sentence(s)/line(s)/set of lines/paragraph(s)] from [text \\\\#1 name] **best** support(s) your answer in part A?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9693,7 +9889,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
+                "examples": Array [
+                  "-   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [provide character’s name/setting/event/theme/topic/etc.] in [title text \\\\#1]? Explain using key details from [title text \\\\#1/both texts] to support your answer.
 
@@ -9708,6 +9905,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [the author/the speaker/the narrator/or provide character’s name]’s [thoughts/beliefs] about [provide character’s name/provide information about character/idea/event] in [title text \\\\#1]? Explain using key details from [title text \\\\#1/both texts] to support your answer.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9725,7 +9923,8 @@ Short text items require students to cite specific textual evidence to support i
                 "taskName": "Task Model 3",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
@@ -9738,6 +9937,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Click on the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#1] that **best** support(s) your answer in part A.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9935,10 +10135,12 @@ NOTE: This stem can only be used with two literary passages.",
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
+                "examples": Array [
+                  "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two literary passages.
 
 -   What [theme/central idea] from [title text \\\\#1] is made clear by the description of [provide idea/event/character/etc.] in [title text \\\\#2]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9954,7 +10156,9 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "NA",
+                "examples": Array [
+                  "NA",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9970,7 +10174,9 @@ The **answer choices** will present five or six options of similar structure. Of
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "NA",
+                "examples": Array [
+                  "NA",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -9988,10 +10194,12 @@ The **answer choices** will be selectable lines, sentences, paragraphs, sections
                 "taskName": "Task Model 4",
               },
               Object {
-                "examples": "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]? Explain using key details from both passages to support your answer.
+                "examples": Array [
+                  "-   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]? Explain using key details from both passages to support your answer.
 **NOTE:** This stem can only be used with two literary passages.
 
 -   What [theme/central idea] from [title text \\\\#1] is made clear by the description of [provide idea/event/character/etc.] in [title text \\\\#2]? Explain using key details from [title text\\\\#1] to support your answer.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10006,7 +10214,8 @@ Examples will reflect common student responses.",
                 "taskName": "Task Model 5",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   What [theme/central idea] can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two literary passages.
@@ -10019,6 +10228,7 @@ Examples will reflect common student responses.",
 
 -   Which [sentences/lines/paragraphs] from [title text \\\\#1] and [title text \\\\#2] name best support your answer in part A?
 NOTE: This stem can only be used with two literary passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -10195,9 +10405,11 @@ Click the [detail/sentence/set of sentences/paragraph] that **best** supports th
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   Which [evidence/detail/sentence] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on the two passages] is true of **both** texts? **NOTE:** This stem is only used with two informational passages.
+                "examples": Array [
+                  "-   Which [evidence/detail/sentence] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on the two passages] is true of **both** texts? **NOTE:** This stem is only used with two informational passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [evidence/detail/sentence] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -10212,10 +10424,12 @@ The **answer choices** will present four options. Options that are paraphrased w
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two or three]** answers.
+                "examples": Array [
+                  "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two or three]** answers.
 **NOTE:** This stem can only be used with two informational passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence] from [title text \\\\#1] best supports that [provide inference or conclusion]? Select **[two or three]** answers.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -10230,7 +10444,8 @@ The **answer choices** will present **five or six options**. Options that are pa
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#2] that also supports [provide inference or conclusion].
+                "examples": Array [
+                  "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences] in the paragraph from [title text \\\\#2] that also supports [provide inference or conclusion].
 [Provide excerpted selectable text]
 **NOTE:** This stem can only be used with two **informational** passages.
 
@@ -10239,6 +10454,7 @@ The **answer choices** will present **five or six options**. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]? 
 [Provide excerpted selectable text]",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -10439,10 +10655,12 @@ A [key event/idea/detail] is missing from the summary. Click on the [sentence/pa
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
+                "examples": Array [
+                  "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
 **NOTE:** This stem can only be used with two informational passages.
 
 -   What central idea from [title text \\\\#1] is made clear by the description of [provide idea/event] in [title text \\\\#2]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10458,7 +10676,9 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "NA",
+                "examples": Array [
+                  "NA",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10474,7 +10694,8 @@ The **answer choices** will present five or six options of similar structure. Of
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2]?
 NOTE: This stem can only be used with two informational passages.
@@ -10487,6 +10708,7 @@ NOTE: This stem can only be used with two informational passages.
 
 -   Which [sentences/details] from [title text \\\\#1] and [title text \\\\#2] best [support/are an example of] your answer in part A?
 **NOTE:** This stem can only be used with two informational passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                 ],
@@ -10509,10 +10731,12 @@ The **answer choices of PART B** will present four options. The correct answer w
                 "taskName": "Task Model 3",
               },
               Object {
-                "examples": "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2 name]? Explain using key evidence from the text to support your answer.
+                "examples": Array [
+                  "-   What central idea can be found in both [title text \\\\#1] and [title text \\\\#2 name]? Explain using key evidence from the text to support your answer.
 **NOTE:** This stem can only be used with two informational passages.
 
 -   What central idea from [title text \\\\#2] is made clear by the description of [provide idea/event] in [title text \\\\#1 name]? Explain using key evidence from [title text \\\\#1] to support your answer.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10528,7 +10752,9 @@ Short text items must require students to cite specific textual evidence to supp
                 "taskName": "Task Model 5",
               },
               Object {
-                "examples": "NA",
+                "examples": Array [
+                  "NA",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10773,7 +10999,8 @@ Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text.",
             "taskModels": Array [
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s) or line(s) from text, with *targeted word/phrase* underlined]
@@ -10785,6 +11012,7 @@ Now read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s) or line(s) from text, with *targeted word/phrase* underlined]
 Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/“targeted phrase” text \\\\#2] as it is used in **both** texts? 
 **NOTE:** This stem is only used with two literary passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10804,7 +11032,8 @@ The **answer choices** will present four options of similar structure using voca
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [directly quoted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -10816,6 +11045,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [directly quoted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [words/phrases] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts? Select **[two/three]** answers.
 **NOTE:** This stem is only used with two literary passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -10833,7 +11063,8 @@ The **answer choices** will present five or six options of similar structure usi
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)] from [title text \\\\#2].
 [directly quoted sentence(s)/line(s) from text, with *targeted word/phrase* underlined]
@@ -10845,6 +11076,7 @@ Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/
 Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\\\#2] that means the same thing as [*targeted word*/“targeted phrase”].
 [excerpted selectable text \\\\#2] 
 **NOTE:** This stem is only used with two literary passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11042,7 +11274,8 @@ Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what d
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
             "taskModels": Array [
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -11063,6 +11296,7 @@ Based on the [line/sentence] from [title text \\\\#2], what does the [word/phras
 Now read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined].
 Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11080,7 +11314,8 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -11101,6 +11336,7 @@ Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what d
 Now read the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/line(s)/paragraph(s) from text, with targeted word or phrase underlined]
 Based on the [sentence(s)/line(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]? Select [**two/three**] answers.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11353,7 +11589,8 @@ Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text.",
             "taskModels": Array [
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -11365,6 +11602,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [word/phrase] **best** matches the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts?
 **NOTE:** This stem is only used with two informational passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11384,7 +11622,8 @@ Rationales should state the justification for the type of plausible **distractor
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -11396,6 +11635,7 @@ Now read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
 Which [words/phrases] **best** match the meaning of [*targeted word*/“targeted phrase” text \\\\#1] and [*targeted word*/”targeted phrase” text \\\\#2] as they are used in **both** texts? Select **[two/three]** answers.
 **NOTE:** This stem is only used with two informational passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11413,7 +11653,8 @@ The **answer choices** will present five or six options of similar structure usi
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the sentence(s) from [title text \\\\#2].
 [Provide directly excerpted sentence(s) from text, with *targeted word/phrase* underlined]
@@ -11425,6 +11666,7 @@ Click on the *underlined* [word/phrase] in the [sentence(s)/set(s) of sentences/
 Click on the *underlined* [word/phrase] in the [sentences/paragraph] from [title text \\\\#2 ] that means the same thing as [*targeted word*/“targeted phrase”].
 [Provide excerpted selectable text \\\\#2]
 **NOTE:** This stem is only used with two informational passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11654,7 +11896,8 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 Refer to Smarter Balanced Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
             "taskModels": Array [
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Read the [sentence(s)/paragraph(s)/section(s)] from [title text \\\\#2].
 [Provide excerpt from text]
@@ -11667,6 +11910,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Which [sentence(s)/paragraph(s)/section(s)] from [title text \\\\#1] **best** support(s) your answer in Part A?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11690,7 +11934,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
+                "examples": Array [
+                  "-   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
 [Provide excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [provide key individual/event/or idea is introduced/illustrated/elaborated OR author’s purpose/relevance of evidence/elaboration to support claims, concepts, and ideas/etc.] in [text \\\\#1 name]? Explain using key evidence from [title text \\\\#1/both texts] to support your answer.
 
@@ -11705,6 +11950,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 -   Read the [sentence(s)/line(s)/set of lines/paragraph(s)] from [title text \\\\#2].
 [excerpt from text]
 Based on this information, [what inference can be made/what can a reader infer] about [the author/the speaker/the narrator/or provide individual’s name]’s [thoughts/beliefs] about [provide individual’s name/provide information about individual/idea/event] in [title text \\\\#1]? Explain using key evidence from [title text \\\\#1/both texts] to support your answer.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -11722,7 +11968,8 @@ Short text items require students to cite specific textual evidence to support i
                 "taskName": "Task Model 3",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Read the [sentence(s)/section(s)/paragraph(s)] from [title text \\\\#2].
 [Provide excerpt from text]
@@ -11735,6 +11982,7 @@ Based on this information, [what conclusion can be drawn/what can a reader concl
 **PART B:**
 
 -   Click on the [sentence(s)/section(s)/paragraph(s)] from [text \\\\#1 name] that **best** support(s) your answer in Part A.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12078,7 +12326,8 @@ How does that information help the reader understand [provide individuals/events
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affect **both** texts?
+                "examples": Array [
+                  "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affect **both** texts?
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] is [similar/different] in **both** texts?
 
@@ -12105,6 +12354,7 @@ How does that information help the reader understand [provide individuals/events
 -   How does [provide author’s name]’s [point of view/purpose] in [title text \\\\#1] differ from [provide author’s name]’s [point of view/purpose] in [title text \\\\#2]?
 
 -   How does the development of the author’s [point of view/purpose] in [title text \\\\#1] [compare/contrast] to the development of the author’s [point of view/purpose] in [title text \\\\#2]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12122,7 +12372,8 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts? Select [**two**/**three]** options.
+                "examples": Array [
+                  "-   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts? Select [**two**/**three]** options.
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] is [similar/different] in **both** texts? Select [**two**/**three]** options.
 
@@ -12149,6 +12400,7 @@ How does that information help the reader understand [provide individuals/events
 -   How does [provide author’s name]’s [point of view/purpose] in [title text \\\\#1] differ from [provide author’s name]’s [point of view/purpose] in [title text \\\\#2]? Select [**two**/**three]** options.
 
 -   How does the development of the author’s [point of view/purpose] in [title text \\\\#1] [compare/contrast] to the development of the author’s [point of view/purpose] in [title text \\\\#2]? Select [**two**/**three]** options.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12166,7 +12418,8 @@ The **answer choices** will present five or six options of similar structure. Of
                 "taskName": "Task Model 2",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts?
 
@@ -12205,6 +12458,7 @@ How does that information help the reader understand [provide individuals/events
 -   Which [pair/set] of sentences from the texts **best** support your answer in part A?
 
 -   Which [pair/set] of sentences from the texts **best** shows the [comparison/connection/relationship/etc.] made in part A?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12230,7 +12484,8 @@ The **answer choices of PART B** will present four options of a line or lines ta
                 "taskName": "Task Model 3",
               },
               Object {
-                "examples": "**PART A:**
+                "examples": Array [
+                  "**PART A:**
 
 -   Which statement **best** describes how [provide individuals/events/ideas/etc.] affects **both** texts?
 
@@ -12277,6 +12532,7 @@ How does that information help the reader understand [provide individuals/events
 [insert selectable text title text \\\\#1]
 [insert selectable text title text \\\\#2]
 **NOTE:** This stem can only be used with two **informational** passages.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12452,9 +12708,11 @@ Select the statement that **best** explains why the author chose to include this
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on informational text types.",
             "taskModels": Array [
               Object {
-                "examples": "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
+                "examples": Array [
+                  "-   The author used [provide passage structure/format/feature] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]?
 
 -   How might have the information in [title text \\\\#2] affected the way [title text \\\\#1] was written?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12470,9 +12728,11 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "-   The author used [provide structure/format/feature/etc.] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select **[two or three]** answers.
+                "examples": Array [
+                  "-   The author used [provide structure/format/feature/etc.] in [title text \\\\#2] to [provide purpose]. What does that tell the reader about [provide element affected by structure] in [title text \\\\#1]? Select **[two or three]** answers.
 
 -   How might have the information in [[title text \\\\#2] affected the way [title text \\\\#1] is written? Select **[two or three]** answers.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12661,7 +12921,8 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Refer to Smarter Balanced Assessment Consortium: English Language Arts & Literacy Computer Adaptive Test (CAT) and Performance Task (PT) Stimulus Specifications for more information on literary text types.",
             "taskModels": Array [
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -12682,6 +12943,7 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Now read the sentence(s)/paragraph(s)] [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined].
 Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]?",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12699,7 +12961,8 @@ The **answer choices** will present four options of similar structure. The corre
                 "taskName": "Task Model 1",
               },
               Object {
-                "examples": "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
+                "examples": Array [
+                  "*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*
 
 -   Read the [sentence(s)/paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
@@ -12720,6 +12983,7 @@ Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the 
 Now read the [sentence(s) paragraph(s)] from [title text \\\\#1].
 [Provide directly quoted sentence(s)/paragraph(s) from text, with targeted word or phrase underlined]
 Based on the [sentence(s)/paragraph(s)] from [title text \\\\#2], what does the author mean by the [word/phrase] [*targeted word*/“targeted phrase”]? Select **[two/three]** options.",
+                ],
                 "relatedEvidence": Array [
                   "Evidence Required 1",
                   "Evidence Required 2",
@@ -12748,9 +13012,11 @@ The **answer choices** will present five or six options. Options that are paraph
     taskModels={
       Array [
         Object {
-          "examples": "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
+          "examples": Array [
+            "-   Which [detail/sentence/line] from [title text \\\\#1] **best** shows that [provide inference or conclusion based on both passages] is true of **both** texts? **NOTE:** This stem is only used with two **literary** passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [detail/sentence/line] from [title text \\\\#1] **best** supports the same [inference/conclusion]?",
+          ],
           "relatedEvidence": Array [
             "Evidence Required 1",
           ],
@@ -12765,9 +13031,11 @@ The **answer choices** will present four options. Options that are paraphrased w
           "taskName": "Task Model 1",
         },
         Object {
-          "examples": "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
+          "examples": Array [
+            "-   Which [details/sentences/lines] from [title text \\\\#1] **best** show that [provide inference or conclusion based on both passages] is true of **both** texts? Select **[two/three]** answers. **NOTE:** This stem can only be used with two literary passages.
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Which [details/sentences/lines] from [title text \\\\#1] **best** support the same [inference/conclusion]? Select **[two/three]** answers.",
+          ],
           "relatedEvidence": Array [
             "Evidence Required 1",
           ],
@@ -12782,7 +13050,8 @@ The **answer choices** will present **five or six** options. Options that are pa
           "taskName": "Task Model 2",
         },
         Object {
-          "examples": "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
+          "examples": Array [
+            "-   Both [title text \\\\#1] and [title text \\\\#2] show [provide inference or conclusion based on both passages]. First, click the [detail/sentence/set of sentences/line in the paragraph] from [title text \\\\#1] that **best** supports [inference or conclusion]. Next, click on the [detail/sentence/set of sentences/line] in the paragraph from [title text \\\\#2] that also supports [inference or conclusion].
 [excerpted selectable text]
 **NOTE:** This stem can only be used with two **literary** passages.
 
@@ -12791,6 +13060,7 @@ The **answer choices** will present **five or six** options. Options that are pa
 
 -   Based on the information in [title text \\\\#2], [provide inference or conclusion based on text \\\\#2]. Click **[one/two]** [details/sentences/sets of sentences/lines/paragraphs] from [title text \\\\#1] that **best** support the same [inference/conclusion]?
 [excerpted selectable text]",
+          ],
           "relatedEvidence": Array [
             "Evidence Required 1",
           ],
