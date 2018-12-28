@@ -1,6 +1,6 @@
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 import React, { Fragment } from 'react';
-import { performanceOptions } from '../../models/filter';
+
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { FilterContainer } from '../FilterContainer';
 import {
@@ -43,13 +43,14 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
     const newParams = paramsFromMobileFilter(cleanParams, selectedOptions, code);
     onUpdate(newParams);
   };
-  const clearPTFilter = () => {
-    onUpdateDesktop(FilterType.Performance, performanceOptions[0]);
-  };
+
+  // const clearPTFilter = () => {
+  //   onUpdateDesktop(FilterType.Performance, performanceOptions[0]);
+  // };
+
   const toggleProps: ToggleBtnProps = {
     toggled: false,
-    filter: filterPT,
-    unFilter: clearPTFilter
+    filter: filterPT
   };
 
   const reset = () => {
