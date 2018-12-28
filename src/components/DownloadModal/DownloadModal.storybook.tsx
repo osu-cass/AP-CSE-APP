@@ -7,4 +7,4 @@ import { ClaimMe } from '../PDFLink/Document/mocks/testData';
 
 storiesOf('DownloadModal DontTest', module)
   .addDecorator(centered)
-  .add('Download Task Model Multi-Select', () => <DownloadModal claim={ClaimMe} isOpen={true} />);
+  .add('Open', () => <DownloadModal claim={ClaimMe} isOpen={true} />);
