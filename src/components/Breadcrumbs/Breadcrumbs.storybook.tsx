@@ -6,10 +6,7 @@ import { BreadcrumbLink, BreadcrumbLinkProps } from '../BreadcrumbLink/Breadcrum
 import { Breadcrumbs, BreadcrumbsProps } from './index';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
 import { Colors } from '../../constants/style';
-import {
-  BreadcrumbDropDownProps,
-  BreadcrumbDropDown
-} from '../BreadcrumbDropDown/BreadCrumbDropDown';
+import { BreadcrumbDropDownProps, BreadcrumbDropDown } from '../BreadcrumbDropDown';
 
 const subjectLinkMock: BreadcrumbLinkProps = {
   link: 'ela',
@@ -30,9 +27,17 @@ const background = {
   backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
 };
 
-storiesOf('Breadcrumbs component', module)
+storiesOf('Breadcrumbs', module)
   .addDecorator(story => <BrowserRouter>{story()}</BrowserRouter>)
-  .add('Renders a breadcrumb with subject data', () => (
+  .add('Default', () => (
+    <Breadcrumbs
+      subject={emptyMock.subject}
+      grades={emptyMock.grades}
+      claim={emptyMock.claim}
+      target={emptyMock.target}
+    />
+  ))
+  .add('Subject only', () => (
     <div style={background}>
       <ul>
         <BreadcrumbLink
@@ -43,15 +48,7 @@ storiesOf('Breadcrumbs component', module)
       </ul>
     </div>
   ))
-  .add('Renders Breadcrumbs without Data', () => (
-    <Breadcrumbs
-      subject={emptyMock.subject}
-      grades={emptyMock.grades}
-      claim={emptyMock.claim}
-      target={emptyMock.target}
-    />
-  ))
-  .add('Renders Breadcrumbs with all data', () => (
+  .add('Subject, grade, and claim', () => (
     <Breadcrumbs
       subject={allDataMock.subject}
       grades={allDataMock.grades}

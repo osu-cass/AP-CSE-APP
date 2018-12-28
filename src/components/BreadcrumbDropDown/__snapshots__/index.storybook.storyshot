@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Breadcrumb Drop Down Menu Renders with list 1`] = `
+exports[`Storyshots Breadcrumbs/Drop Down With targets 1`] = `
 <div
   style={
     Object {
@@ -121,7 +121,7 @@ exports[`Storyshots Breadcrumb Drop Down Menu Renders with list 1`] = `
 </div>
 `;
 
-exports[`Storyshots Breadcrumb Drop Down Menu Renders with no list 1`] = `
+exports[`Storyshots Breadcrumbs/Drop Down Without targets 1`] = `
 <div
   style={
     Object {

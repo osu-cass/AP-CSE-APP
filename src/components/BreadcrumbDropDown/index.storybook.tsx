@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { BrowserRouter } from 'react-router-dom';
-import { BreadcrumbDropDownProps, BreadcrumbDropDown } from './BreadCrumbDropDown';
+import { BreadcrumbDropDownProps, BreadcrumbDropDown } from '.';
 import { Colors } from '../../constants/style';
 
 const background = {
@@ -30,14 +30,14 @@ const breadcrumbDropDownProps: BreadcrumbDropDownProps = {
   ]
 };
 
-storiesOf('Breadcrumb Drop Down Menu', module)
+storiesOf('Breadcrumbs/Drop Down', module)
   .addDecorator(story => <BrowserRouter>{story()}</BrowserRouter>)
-  .add('Renders with no list', () => (
+  .add('Without targets', () => (
     <div style={background}>
       <BreadcrumbDropDown targets={[]} currentTarget={breadcrumbDropDownProps.currentTarget} />
     </div>
   ))
-  .add('Renders with list', () => (
+  .add('With targets', () => (
     <div style={background}>
       <BreadcrumbDropDown
         targets={breadcrumbDropDownProps.targets}
