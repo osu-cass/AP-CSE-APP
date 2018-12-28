@@ -34,20 +34,6 @@ function stemSection(stem: IStem[]): ContentSection[] {
   return sections;
 }
 
-// tslint:disable: no-non-null-assertion
-function handleFractions(taskModels: ITaskModel[]) {
-  const rex = /\$\\frac{(\w+)}{(\w+)}\$/g;
-  const rexMin = /{(\w+)}{(\w+)}/;
-  taskModels.forEach(tm => {
-    if (tm.taskDesc && tm.taskDesc.match(rex)) {
-      tm.taskDesc.match(rex)!.forEach(m => {
-        tm.taskDesc = tm.taskDesc!.replace(m, `${m.match(rexMin)![1]}/${m.match(rexMin)![2]}`);
-      });
-    }
-    // tslint:enable: no-non-null-assertion
-  });
-}
-
 function taskModelSections(
   taskModels: ITaskModel[],
   stem?: IStem[],
