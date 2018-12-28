@@ -8,6 +8,7 @@ export interface CSEFilterOptions {
   subjects: SearchBaseModel[];
   claims?: SearchBaseModel[];
   targets?: SearchBaseModel[];
+  filter?: string;
 }
 
 export interface CSEFilterParams {

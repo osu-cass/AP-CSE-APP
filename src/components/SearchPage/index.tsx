@@ -142,7 +142,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
           options={options}
           params={params}
           onUpdate={this.onFilterChanged}
-          expanded={anyParams(this.props.paramsFromUrl)}
+          expanded={anyParams(this.state.params)}
           filterPT={this.togglePerformanceTask}
         />
       </ErrorBoundary>
