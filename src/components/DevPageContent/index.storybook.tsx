@@ -11,12 +11,12 @@ import {
   DevContentSpec
 } from '.';
 
-storiesOf('Development Page Components DontTest', module)
+storiesOf('Development Page Content DontTest', module)
   .add('Overview', () => <DevOverview />)
-  .add('DevTestBlueprint', () => <DevTestBlueprint />)
-  .add('DevInterimBlueprint', () => <DevInterimBlueprint />)
-  .add('DevItemSpecOverview', () => <DevItemSpecOverview />)
-  .add('DevAccForItems', () => <DevAccForItems />)
-  .add('DevAddtlItemSpec', () => <DevAddtlItemSpec />)
-  .add('DevFullItemSpec', () => <DevFullItemSpec />)
-  .add('DevContentSpec', () => <DevContentSpec />);
+  .add('Test Blueprint', () => <DevTestBlueprint />)
+  .add('Interim Blueprint', () => <DevInterimBlueprint />)
+  .add('Item Spec Overview', () => <DevItemSpecOverview />)
+  .add('Accessibility For Items', () => <DevAccForItems />)
+  .add('Additional Item Spec', () => <DevAddtlItemSpec />)
+  .add('Full Item Spec', () => <DevFullItemSpec />)
+  .add('Content Spec', () => <DevContentSpec />);
