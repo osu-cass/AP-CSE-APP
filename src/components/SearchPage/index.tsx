@@ -143,18 +143,18 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
           params={params}
           onUpdate={this.onFilterChanged}
           expanded={anyParams(this.props.paramsFromUrl)}
-          filterPT={this.togglePerformaceTask}
+          filterPT={this.togglePerformanceTask}
         />
       </ErrorBoundary>
     );
   }
 
-  togglePerformaceTask = () => {
-    const { results } = this.state;
-    this.setState(() => ({
-      results: this.filterPerformanceTasks(results as IClaim[]),
+  togglePerformanceTask = async () => {
+    const { params } = this.state;
+    this.setState({
       pt: !this.state.pt
-    }));
+    });
+    await this.onFilterChanged(params);
   };
 
   filterPerformanceTasks = (claims: IClaim[]): IClaim[] => {
