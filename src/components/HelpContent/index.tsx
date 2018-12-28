@@ -105,7 +105,7 @@ export const HelpContentSpec: React.SFC = () => (
       <ul>
         <li>
           <a
-            href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-mathematics-content-specifications"
+            href="https://www.smarterbalancedlibrary.org/sbac-share?key=27eebc6f15044787d9a1171ebee1de26"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -114,7 +114,7 @@ export const HelpContentSpec: React.SFC = () => (
         </li>
         <li>
           <a
-            href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-elaliteracy-content-specifications"
+            href="https://www.smarterbalancedlibrary.org/sbac-share?key=7d5c0d0d92128e7b80be654209f31451"
             target="_blank"
             rel="noopener noreferrer"
           >

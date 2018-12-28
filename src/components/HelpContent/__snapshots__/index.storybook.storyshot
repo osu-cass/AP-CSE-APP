@@ -148,7 +148,7 @@ exports[`Storyshots Help Content content spec 1`] = `
       <ul>
         <li>
           <a
-            href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-mathematics-content-specifications"
+            href="https://www.smarterbalancedlibrary.org/sbac-share?key=27eebc6f15044787d9a1171ebee1de26"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -157,7 +157,7 @@ exports[`Storyshots Help Content content spec 1`] = `
         </li>
         <li>
           <a
-            href="https://www.smarterbalancedlibrary.org/content/understanding-smarter-balanced-elaliteracy-content-specifications"
+            href="https://www.smarterbalancedlibrary.org/sbac-share?key=7d5c0d0d92128e7b80be654209f31451"
             rel="noopener noreferrer"
             target="_blank"
           >

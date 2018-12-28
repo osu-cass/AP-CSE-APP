@@ -2,7 +2,6 @@ import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { ResourceLinkProps, ResourceLink } from '../../components/ResourceLink';
 import { Title } from '../../components/GenericPage/Title';
-import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const scoreimg: string = require('../../assets/images/score-guide.png') as string;
@@ -60,16 +59,9 @@ const ResourcesPageComponent: React.SFC = () => (
         {linkProps.map((props: ResourceLinkProps, idx: number) => (
           <ResourceLink key={idx} {...props} />
         ))}
-        <div className="resource-page-mobile-padding" />
       </div>
     </div>
     <style jsx>{`
-      @media (max-width: ${MobileBreakSize.maxWidth}px) {
-        .resource-page-mobile-padding {
-          height: 200px;
-          width: 100px;
-        }
-      }
       .content {
         display: flex;
         flex-direction: column;
