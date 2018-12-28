@@ -8,9 +8,6 @@ const toggleProps: ToggleBtnProps = {
   toggled: false,
   filter: () => {
     return;
-  },
-  unFilter: () => {
-    return;
   }
 };
 storiesOf('Toggle Button', module)
