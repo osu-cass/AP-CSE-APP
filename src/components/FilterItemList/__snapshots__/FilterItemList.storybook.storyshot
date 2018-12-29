@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots FilterItemList component FilterItemList 1`] = `
+exports[`Storyshots Filter Item List default 1`] = `
 <div
   style={
     Object {

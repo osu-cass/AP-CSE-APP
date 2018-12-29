@@ -5,7 +5,7 @@ import { FilterItem } from '.';
 import { filterItems } from '../SearchPage/__mocks__';
 import { RouterDecorator } from '../../__decorators__';
 
-storiesOf('FilterItem component', module)
+storiesOf('Filter Item', module)
   .addDecorator(RouterDecorator)
   .addDecorator(centered)
-  .add('FilterItem', () => <FilterItem {...filterItems[0]} />);
+  .add('default', () => <FilterItem {...filterItems[0]} />);

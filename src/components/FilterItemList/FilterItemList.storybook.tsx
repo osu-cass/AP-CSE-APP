@@ -5,10 +5,10 @@ import { FilterItemList } from '.';
 import { searchResults } from '../SearchPage/__mocks__/SearchResults';
 import { RouterDecorator } from '../../__decorators__';
 
-storiesOf('FilterItemList component', module)
+storiesOf('Filter Item List', module)
   .addDecorator(centered)
   .addDecorator(RouterDecorator)
-  .add('FilterItemList', () => (
+  .add('default', () => (
     <FilterItemList
       claims={searchResults}
       getTargetLink={(shortCode: string): string => '/target'}
