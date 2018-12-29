@@ -20,7 +20,7 @@ const onSubjectUpdate = (code: FilterType, data?: FilterOptionModel) => {
   console.log('Subject Chnaged', JSON.stringify(data));
 };
 
-storiesOf('Mobile Filter', module)
+storiesOf('Filter/Mobile', module)
   .addDecorator(centered)
   .add('default', () => (
     <MobileFilter

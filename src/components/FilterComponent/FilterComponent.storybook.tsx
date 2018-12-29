@@ -10,7 +10,7 @@ const callback = (filter: CSEFilterParams) => {
   console.log('New filter params:', JSON.stringify(filter));
 };
 
-storiesOf('Filter Component', module)
+storiesOf('Filter', module)
   .addDecorator(centered)
   .add('default', () => (
     <FilterComponent

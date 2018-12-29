@@ -16,7 +16,7 @@ export const reset = () => {
   console.log('Reset Pressed');
 };
 
-storiesOf('Desktop Filter', module)
+storiesOf('Filter/Desktop', module)
   .addDecorator(centered)
   .add('default', () => <DesktopFilter filters={filterModelGS} onUpdate={callback} reset={reset} />)
   .add('Subject, Grade and Claim', () => (

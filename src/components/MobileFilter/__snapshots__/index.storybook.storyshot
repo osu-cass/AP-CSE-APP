@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Mobile Filter default 1`] = `
+exports[`Storyshots Filter/Mobile default 1`] = `
 <div
   style={
     Object {
@@ -205,7 +205,7 @@ exports[`Storyshots Mobile Filter default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Mobile Filter with claims 1`] = `
+exports[`Storyshots Filter/Mobile with claims 1`] = `
 <div
   style={
     Object {
@@ -447,7 +447,7 @@ exports[`Storyshots Mobile Filter with claims 1`] = `
 </div>
 `;
 
-exports[`Storyshots Mobile Filter with targets 1`] = `
+exports[`Storyshots Filter/Mobile with targets 1`] = `
 <div
   style={
     Object {
