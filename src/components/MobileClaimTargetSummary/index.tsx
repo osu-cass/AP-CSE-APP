@@ -4,11 +4,11 @@ import { IDomain } from '../../models/claim';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
 /**
- * interface for TargetClaim
+ * interface for ClaimTargetSummary
  * @export
- * @interface TargetClaimProps
+ * @interface ClaimTargetSummaryProps
  */
-export interface TargetClaimProps {
+export interface ClaimTargetSummaryProps {
   claimTitle?: string;
   claimDesc?: string;
   targetTitle?: string;
@@ -18,18 +18,18 @@ export interface TargetClaimProps {
  * Renders a TitleBar that shows a title, a description, a download button.
  * The description and the download button are optional although the title is always shown
  * @export
- * @function TargetClaimSec
+ * @function ClaimTargetSummary
  * @param {string | undefined} claimTitle
  * @param {string | undefined} claimDesc
  * @param {string | undefined} targetTitle
  * @param {string | undefined} targetDesc
  */
-export const TargetClaimSec: React.SFC<TargetClaimProps> = ({
+export const ClaimTargetSummary: React.SFC<ClaimTargetSummaryProps> = ({
   claimTitle,
   claimDesc,
   targetTitle,
   targetDesc
-}: TargetClaimProps) => (
+}: ClaimTargetSummaryProps) => (
   <div className="target-claim-container">
     <div className="claim-section">
       {claimTitle && <span className="title">{claimTitle}: </span>}
@@ -58,4 +58,4 @@ export const TargetClaimSec: React.SFC<TargetClaimProps> = ({
     `}</style>
   </div>
 );
-export const MobileTargetClaimWrapped = mediaQueryWrapper(TargetClaimSec, MobileBreakSize);
+export const MobileClaimTargetSummary = mediaQueryWrapper(ClaimTargetSummary, MobileBreakSize);

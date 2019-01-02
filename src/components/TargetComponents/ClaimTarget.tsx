@@ -1,11 +1,11 @@
 import React from 'react';
 import { IClaim } from '../../models/claim';
-import { MobileTargetClaimWrapped, TargetClaimProps } from '../MobileClaimTargetSec';
+import { MobileClaimTargetSummary, ClaimTargetSummaryProps } from '../MobileClaimTargetSummary';
 
 export interface ClaimTargetProps {
   claim: IClaim;
 }
-export const parseMobileData = (claim: IClaim): TargetClaimProps => {
+export const parseMobileData = (claim: IClaim): ClaimTargetSummaryProps => {
   const codeSegments: string[] = claim.target[0].shortCode.split('.');
   const targetTitle: string = `Target ${codeSegments[codeSegments.length - 1].slice(1)}`;
   const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
@@ -20,6 +20,6 @@ export const parseMobileData = (claim: IClaim): TargetClaimProps => {
 
 export const ClaimTarget: React.SFC<ClaimTargetProps> = ({ claim }) => (
   <div>
-    <MobileTargetClaimWrapped {...parseMobileData(claim)} />
+    <MobileClaimTargetSummary {...parseMobileData(claim)} />
   </div>
 );
