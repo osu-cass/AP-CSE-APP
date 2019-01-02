@@ -13,10 +13,6 @@ const linkMock: LinkButtonProps = {
   icon: fileIcon
 };
 
-storiesOf('LinkButton component', module)
+storiesOf('LinkButton', module)
   .addDecorator(centered)
-  .add('Renders a link button', () => (
-    <div>
-      <LinkButton {...linkMock} />
-    </div>
-  ));
+  .add('Renders a link button', () => <LinkButton {...linkMock} />);
