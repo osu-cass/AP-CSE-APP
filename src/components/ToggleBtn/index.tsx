@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Colors } from '../../constants/style';
 import css from 'styled-jsx/css';
+
+import { Colors } from '../../constants/style';
 
 const globalToggleStyle = css`
   .toggle-container {
@@ -36,8 +37,7 @@ const svgProps = {
 const rect = <rect x="1" y="8" width="40" height="20" rx="10" ry="10" />;
 export interface ToggleBtnProps {
   toggled: Boolean;
-  filter?: () => void;
-  unFilter: () => void;
+  filter: () => void;
 }
 export interface ToggleBtnState {
   isToggled: Boolean;
@@ -70,6 +70,7 @@ export class ToggleBtn extends Component<ToggleBtnProps, ToggleBtnState> {
       </style>
     </div>
   );
+
   PtToggleNo = (
     <div className="toggle-container">
       <span>Show Performance Tasks only?</span>
@@ -85,15 +86,10 @@ export class ToggleBtn extends Component<ToggleBtnProps, ToggleBtnState> {
   );
 
   toggle = () => {
-    if (this.props.filter) {
-      if (!this.state.isToggled) {
-        this.props.filter();
-      } else {
-        this.props.unFilter();
-      }
-    }
     this.setState({ isToggled: !this.state.isToggled });
+    this.props.filter();
   };
+
   render() {
     return (
       <div onClick={this.toggle} role="Button">

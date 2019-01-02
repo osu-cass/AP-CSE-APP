@@ -10,6 +10,7 @@ const callback = (filter: CSEFilterParams) => {
   console.log('New filter params:', JSON.stringify(filter));
 };
 
+// tslint:disable:no-empty
 storiesOf('Filter', module)
   .addDecorator(centered)
   .add('default', () => (
@@ -18,6 +19,7 @@ storiesOf('Filter', module)
       options={filterOptionsGS}
       onUpdate={callback}
       expanded={true}
+      filterPT={() => {}}
     />
   ))
   .add('Subject, Grade and Claim', () => (
@@ -26,6 +28,7 @@ storiesOf('Filter', module)
       options={filterOptionsGSC}
       onUpdate={callback}
       expanded={true}
+      filterPT={() => {}}
     />
   ))
   .add('Subject, Grade, Claim and Target', () => (
@@ -34,5 +37,6 @@ storiesOf('Filter', module)
       options={filterOptionsGSCT}
       onUpdate={callback}
       expanded={true}
+      filterPT={() => {}}
     />
   ));

@@ -109,8 +109,9 @@ export function sanitizeParams(
   const subject = subjectOption ? params.subject : undefined;
   const claim = find(options.claims, params.claim);
   const target = find(options.targets, params.target);
+  const filter = params.filter;
 
-  return { grades, subject, claim, target };
+  return { grades, subject, claim, target, filter };
 }
 
 function find(toSearch?: SearchBaseModel[], toFind?: string): string | undefined {
