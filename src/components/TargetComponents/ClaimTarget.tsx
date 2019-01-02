@@ -1,9 +1,6 @@
 import React from 'react';
 import { IClaim } from '../../models/claim';
-import {
-  MobileTargetClaimWrapped,
-  TargetClaimProps
-} from '../MobileClaimTargetSec/mobileTAndCDesc';
+import { MobileTargetClaimWrapped, TargetClaimProps } from '../MobileClaimTargetSec';
 
 export interface ClaimTargetProps {
   claim: IClaim;

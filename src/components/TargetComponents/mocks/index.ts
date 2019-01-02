@@ -3,7 +3,7 @@ import { ItemProps } from '../../../components/ContentNav/Item';
 import { TitleBarProps } from '../../../components/TitleBar';
 import { MobileTitleBarProps } from '../../../components/TitleBar/mobileTitleBar';
 import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
-import { TargetClaimProps } from '../../MobileClaimTargetSec/mobileTAndCDesc';
+import { TargetClaimProps } from '../../MobileClaimTargetSec';
 import { IClaim } from '../../../models/claim';
 import { ITargetParams } from '../../../clients/target';
 import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';

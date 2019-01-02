@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { TargetClaimSec, TargetClaimProps } from './mobileTAndCDesc';
+import { TargetClaimSec, TargetClaimProps } from '.';
 
 const claimOnlyMock: TargetClaimProps = {
   claimTitle: 'Claim 1',
