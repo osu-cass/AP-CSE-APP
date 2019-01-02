@@ -40,25 +40,22 @@ export const TargetClaimSec: React.SFC<TargetClaimProps> = ({
       {targetDesc && <span className="desc">{targetDesc}</span>}
     </div>
     <style jsx>{`
-        .target-claim-container {
-          font-family: ${Styles.sbSans};
-          padding: 0;
-          width: '100%',
-          font-size:1.2em;
-          color: black;
-          text-align:left;
-          margin-top:-15px;
-        }
+      .target-claim-container {
+        font-family: ${Styles.sbSans};
+        padding: 0;
+        width: 100%;
+        font-size: 1.2em;
+        color: black;
+      }
 
-        .target-section{
-          marigin-top: 10px;
-          padding: 5px;
-        }
-        .claim-section{
-          padding:5px;
-        }
-
-      `}</style>
+      .target-section {
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .claim-section {
+        padding: 5px;
+      }
+    `}</style>
   </div>
 );
 export const MobileTargetClaimWrapped = mediaQueryWrapper(TargetClaimSec, MobileBreakSize);
