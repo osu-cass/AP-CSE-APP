@@ -1,12 +1,13 @@
+import { parse } from 'query-string';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { parse } from 'query-string';
-import { CSESearchQuery } from '../../models/filter';
-import { SearchPage } from '../../components/SearchPage';
+
 import { FilterClient } from '../../clients/filter';
 import { SearchClient } from '../../clients/search';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
+import { SearchPage } from '../../components/SearchPage';
+import { CSESearchQuery } from '../../models/filter';
 
 const SearchPageComponent: React.SFC<RouteComponentProps> = ({ location, history }) => {
   const query: CSESearchQuery = parse(location.search);

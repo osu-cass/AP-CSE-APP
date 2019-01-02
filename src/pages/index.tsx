@@ -1,16 +1,16 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import { FooterWrapped } from '../components/Footer';
 import { NavBar } from '../components/NavBar';
-import { MobileNavBarWrapped, MobileNavBar } from '../components/NavBar/mobile';
-import { TargetPage } from './Target';
-import { SearchPageRoute } from './Search';
+import { MobileNavBarWrapped } from '../components/NavBar/mobile';
+import { mediaQueries } from '../constants/style';
+import { DevelopmentPage } from './Development';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
 import { ResourcesPage } from './Resources';
-import { DevelopmentPage } from './Development';
-import { TargetClient } from '../clients/target';
-import { FooterWrapped } from '../components/Footer';
-import { mediaQueries } from '../constants/style';
+import { SearchPageRoute } from './Search';
+import { TargetPage } from './Target';
 
 export const App: React.SFC = () => {
   return (
@@ -23,6 +23,7 @@ export const App: React.SFC = () => {
           <Route exact path="/" component={HomePage} />
           <Route path="/target/:targetShortCode" component={TargetPage} />
           <Route path="/search" component={SearchPageRoute} />
+          <Route path="/explore" component={SearchPageRoute} />
           <Route path="/resources" component={ResourcesPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />

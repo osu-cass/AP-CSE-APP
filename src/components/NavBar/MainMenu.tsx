@@ -1,7 +1,8 @@
 import React from 'react';
-import { Colors, Styles, iconStyle, mediaQueries } from '../../constants/style';
-import { Home, Search, Eye, Grid } from 'react-feather';
+import { Eye, Grid, Home, Search } from 'react-feather';
 import { Link } from 'react-router-dom';
+
+import { Colors, iconStyle, mediaQueries, Styles } from '../../constants/style';
 
 export interface MenuItemProps {
   name: string;
@@ -49,7 +50,7 @@ export const MainMenu: React.SFC = () => {
           <Search {...iconStyle} />
         </MenuItem>
       </Link>
-      <Link className="nav-item" to="/search?filter=open" style={noUnderline}>
+      <Link className="nav-item" to="/explore?filter=open" style={noUnderline}>
         <MenuItem name="Explore">
           <Eye {...iconStyle} />
         </MenuItem>
