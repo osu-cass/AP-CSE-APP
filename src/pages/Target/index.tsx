@@ -1,15 +1,19 @@
-import { SearchBaseModel } from '@osu-cass/sb-components';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
+import { SearchBaseModel } from '@osu-cass/sb-components';
+
+import { IClaim } from '../../models/claim';
 import { FilterClient } from '../../clients/filter';
 import { TargetClient } from '../../clients/target';
-import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { ErrorMessage, Message } from '../../components/Message';
-import { ClaimTarget } from '../../components/TargetComponents/ClaimTarget';
-import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
-import { TargetTitleBar } from '../../components/TargetComponents/title';
-import { IClaim } from '../../models/claim';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
+import { TargetTitleBar } from '../../components/TargetComponents/title';
+import { genericLayout } from '../../components/GenericPage/GenericLayout';
+import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
+import {
+  parseClaimSummaryData,
+  MobileClaimTargetSummary
+} from '../../components/MobileClaimTargetSummary';
 
 export interface TargetMatchParams {
   targetShortCode?: string;
@@ -84,7 +88,7 @@ export class TargetPage extends React.Component<TargetPageProps, TargetPageState
       <TargetTitleBar claim={this.state.result} targetList={this.state.targetList} />,
       TargetDetail,
       'Target',
-      <ClaimTarget claim={this.state.result} />
+      <MobileClaimTargetSummary {...parseClaimSummaryData(this.state.result)} />
     );
 
     return <Page target={this.state.result.target[0]} />;

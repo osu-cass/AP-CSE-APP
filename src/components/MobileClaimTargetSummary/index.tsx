@@ -1,6 +1,6 @@
 import React from 'react';
 import { Styles, Colors } from '../../constants/style';
-import { IDomain } from '../../models/claim';
+import { IClaim } from '../../models/claim';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
 
 /**
@@ -14,6 +14,20 @@ export interface ClaimTargetSummaryProps {
   targetTitle?: string;
   targetDesc?: string;
 }
+
+export const parseClaimSummaryData = (claim: IClaim): ClaimTargetSummaryProps => {
+  const codeSegments: string[] = claim.target[0].shortCode.split('.');
+  const targetTitle: string = `Target ${codeSegments[codeSegments.length - 1].slice(1)}`;
+  const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
+
+  return {
+    claimTitle,
+    targetTitle,
+    claimDesc: claim.description,
+    targetDesc: claim.target[0].description
+  };
+};
+
 /**
  * Renders a TitleBar that shows a title, a description, a download button.
  * The description and the download button are optional although the title is always shown
