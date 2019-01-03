@@ -2,7 +2,6 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
 import { parseBreadCrumbData, parseTitleBarData, parseTitleBarMobileData } from './title';
-import { parseMobileData } from './ClaimTarget';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 import { TargetDetail, TargetDetailProps } from './TargetDetail';
 import {
@@ -12,7 +11,6 @@ import {
   parsedRegularItemMock,
   parsedItemWithSubsMock,
   parsedNavPropsMock,
-  parsedCLaimTargetdataMock,
   parsedMobileTitleBarDataMock
 } from './mocks';
 import { ITarget } from '../../models/target';
@@ -49,11 +47,5 @@ describe('Target Page', () => {
     const parsedMobileTitleBarData = parseTitleBarMobileData(ELAG3ClaimMock);
 
     expect(parsedMobileTitleBarData).toEqual(parsedMobileTitleBarDataMock);
-  });
-
-  it('parses target claim data for mobile', () => {
-    const parsedMobileData = parseMobileData(ELAG3ClaimMock);
-
-    expect(parsedMobileData).toEqual(parsedCLaimTargetdataMock);
   });
 });

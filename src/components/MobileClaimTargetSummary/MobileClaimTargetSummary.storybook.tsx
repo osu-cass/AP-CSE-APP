@@ -4,34 +4,34 @@ import { ClaimTargetSummary, ClaimTargetSummaryProps } from '.';
 
 const claimOnlyMock: ClaimTargetSummaryProps = {
   claimTitle: 'Claim 1',
-  claimDesc: 'This describes the CLaim'
+  claimDesc: 'This describes the Claim'
 };
 const allDataMock: ClaimTargetSummaryProps = {
   ...claimOnlyMock,
   targetTitle: 'Target 1',
-  targetDesc: 'this describes the Target'
+  targetDesc: 'This describes the Target'
 };
 
 storiesOf('ClaimTargetSummary', module)
-  .add('Header only', () => (
-    <div>
-      <ClaimTargetSummary claimTitle={claimOnlyMock.claimTitle} />
-    </div>
+  .add('All information', () => (
+    <ClaimTargetSummary
+      claimTitle={allDataMock.claimTitle}
+      claimDesc={allDataMock.claimDesc}
+      targetTitle={allDataMock.targetTitle}
+      targetDesc={allDataMock.targetDesc}
+    />
   ))
-
-  .add('Claim title only', () => (
-    <div>
-      <ClaimTargetSummary
-        claimTitle={claimOnlyMock.claimTitle}
-        targetTitle={claimOnlyMock.targetTitle}
-      />
-    </div>
+  .add('Claim title only', () => <ClaimTargetSummary claimTitle={claimOnlyMock.claimTitle} />)
+  .add('Claim title and description only', () => (
+    <ClaimTargetSummary claimTitle={claimOnlyMock.claimTitle} claimDesc={claimOnlyMock.claimDesc} />
   ))
-  .add('Claim and Target titles', () => (
-    <div>
-      <ClaimTargetSummary
-        claimTitle={allDataMock.claimTitle}
-        targetTitle={allDataMock.targetTitle}
-      />
-    </div>
+  .add('Claim title and Target title only', () => (
+    <ClaimTargetSummary claimTitle={allDataMock.claimTitle} targetTitle={allDataMock.targetTitle} />
+  ))
+  .add('Claim title with Target title and description', () => (
+    <ClaimTargetSummary
+      claimTitle={allDataMock.claimTitle}
+      targetTitle={allDataMock.targetTitle}
+      targetDesc={allDataMock.targetDesc}
+    />
   ));
