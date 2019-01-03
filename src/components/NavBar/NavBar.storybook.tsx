@@ -1,13 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { NavBar } from '.';
+
+import { NavBar, MobileNavBar } from '.';
 import { RouterDecorator } from '../../__decorators__/';
-import { MobileNavBar } from './mobile';
+import { HeaderLogo, MenuItem, MainMenu } from './primitives';
 
 storiesOf('NavBar', module)
   .addDecorator(RouterDecorator)
-  .add('Default', () => <NavBar />);
+  .add('Desktop', () => <NavBar />)
+  .add('Mobile', () => <MobileNavBar />);
 
-storiesOf('NavBar/Mobile', module)
+storiesOf('NavBar/Primitives', module)
   .addDecorator(RouterDecorator)
-  .add('Default', () => <MobileNavBar />);
+  .add('Header Logo', () => <HeaderLogo />)
+  .add('Menu Item', () => <MenuItem name="Menu Item" />)
+  .add('Main Menu', () => <MainMenu />);

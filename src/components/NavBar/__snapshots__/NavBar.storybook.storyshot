@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots NavBar NavBar 1`] = `
+exports[`Storyshots NavBar Desktop 1`] = `
 <div
   style={
     Object {
@@ -223,7 +223,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar/Mobile Default 1`] = `
+exports[`Storyshots NavBar Mobile 1`] = `
 <div
   style={
     Object {
@@ -409,5 +409,351 @@ exports[`Storyshots NavBar/Mobile Default 1`] = `
     
     </style>
   </nav>
+</div>
+`;
+
+exports[`Storyshots NavBar/Primitives Header Logo 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <a
+    href="https://www.smarterbalanced.org/"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      alt="Smarter Balanced logo"
+      className="sb-logo"
+      src="test-file-stub"
+    />
+    <style
+      jsx={true}
+    >
+      
+      .sb-logo {
+        width: 128px;
+        padding: 3px 20px 3px 3px;
+      }
+
+      @media (max-width: 950px) {
+        .sb-logo {
+          width: 100px;
+        }
+      }
+    
+    </style>
+  </a>
+</div>
+`;
+
+exports[`Storyshots NavBar/Primitives Main Menu 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="main-menu"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={35}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={35}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+          />
+          <polyline
+            points="9 22 9 12 15 12 15 22"
+          />
+        </svg>
+        <p>
+          Home
+        </p>
+        <style
+          jsx={true}
+        >
+          
+      p {
+        color: #63666A;
+        margin-left: 5px;
+      }
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      @media (max-width: 950px) {
+        p {
+          display: none;
+        }
+      }
+    
+        </style>
+      </div>
+    </a>
+    <a
+      href="/search"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={35}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={35}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+          <line
+            x1="21"
+            x2="16.65"
+            y1="21"
+            y2="16.65"
+          />
+        </svg>
+        <p>
+          Search
+        </p>
+        <style
+          jsx={true}
+        >
+          
+      p {
+        color: #63666A;
+        margin-left: 5px;
+      }
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      @media (max-width: 950px) {
+        p {
+          display: none;
+        }
+      }
+    
+        </style>
+      </div>
+    </a>
+    <a
+      href="/explore?filter=open"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={35}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={35}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="3"
+          />
+        </svg>
+        <p>
+          Explore
+        </p>
+        <style
+          jsx={true}
+        >
+          
+      p {
+        color: #63666A;
+        margin-left: 5px;
+      }
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      @media (max-width: 950px) {
+        p {
+          display: none;
+        }
+      }
+    
+        </style>
+      </div>
+    </a>
+    <a
+      href="/resources"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div>
+        <svg
+          fill="none"
+          height={35}
+          stroke="#63666A"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={35}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="7"
+            width="7"
+            x="3"
+            y="3"
+          />
+          <rect
+            height="7"
+            width="7"
+            x="14"
+            y="3"
+          />
+          <rect
+            height="7"
+            width="7"
+            x="14"
+            y="14"
+          />
+          <rect
+            height="7"
+            width="7"
+            x="3"
+            y="14"
+          />
+        </svg>
+        <p>
+          Resources
+        </p>
+        <style
+          jsx={true}
+        >
+          
+      p {
+        color: #63666A;
+        margin-left: 5px;
+      }
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      @media (max-width: 950px) {
+        p {
+          display: none;
+        }
+      }
+    
+        </style>
+      </div>
+    </a>
+    <style
+      jsx={true}
+    >
+      
+        .main-menu {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+      
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots NavBar/Primitives Menu Item 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <p>
+      Menu Item
+    </p>
+    <style
+      jsx={true}
+    >
+      
+      p {
+        color: #63666A;
+        margin-left: 5px;
+      }
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      @media (max-width: 950px) {
+        p {
+          display: none;
+        }
+      }
+    
+    </style>
+  </div>
 </div>
 `;

@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import { FooterWrapped } from '../components/Footer';
-import { NavBar } from '../components/NavBar';
-import { MobileNavBarWrapped } from '../components/NavBar/mobile';
+import { NavBar, MobileNavBarWrapped } from '../components/NavBar';
 import { mediaQueries } from '../constants/style';
 import { DevelopmentPage } from './Development';
 import { HelpPage } from './Help';

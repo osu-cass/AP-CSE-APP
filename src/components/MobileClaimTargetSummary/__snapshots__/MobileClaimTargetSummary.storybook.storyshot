@@ -45,11 +45,10 @@ exports[`Storyshots ClaimTargetSummary All information 1`] = `
       jsx={true}
     >
       
-      .target-claim-container {
+      .claim-target-container {
         font-family: PT Sans Caption;
         padding: 0;
         width: 100%;
-        font-size: 1.2em;
         color: black;
       }
 
@@ -101,11 +100,10 @@ exports[`Storyshots ClaimTargetSummary Claim title and Target title only 1`] = `
       jsx={true}
     >
       
-      .target-claim-container {
+      .claim-target-container {
         font-family: PT Sans Caption;
         padding: 0;
         width: 100%;
-        font-size: 1.2em;
         color: black;
       }
 
@@ -155,11 +153,10 @@ exports[`Storyshots ClaimTargetSummary Claim title and description only 1`] = `
       jsx={true}
     >
       
-      .target-claim-container {
+      .claim-target-container {
         font-family: PT Sans Caption;
         padding: 0;
         width: 100%;
-        font-size: 1.2em;
         color: black;
       }
 
@@ -204,11 +201,10 @@ exports[`Storyshots ClaimTargetSummary Claim title only 1`] = `
       jsx={true}
     >
       
-      .target-claim-container {
+      .claim-target-container {
         font-family: PT Sans Caption;
         padding: 0;
         width: 100%;
-        font-size: 1.2em;
         color: black;
       }
 
@@ -265,11 +261,10 @@ exports[`Storyshots ClaimTargetSummary Claim title with Target title and descrip
       jsx={true}
     >
       
-      .target-claim-container {
+      .claim-target-container {
         font-family: PT Sans Caption;
         padding: 0;
         width: 100%;
-        font-size: 1.2em;
         color: black;
       }
 
