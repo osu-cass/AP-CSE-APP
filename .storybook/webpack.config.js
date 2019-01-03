@@ -10,10 +10,20 @@ module.exports = (storybookBaseConfig, configType, config) => {
 
   config.module.rules.push({
     test: /\.ttf/,
-    loader: 'file-loader',
+    loader: 'file-loader'
   });
 
   config.module.rules.push(
+    {
+      test: /\.storybook\.tsx?$/,
+      loaders: [
+        {
+          loader: require.resolve('@storybook/addon-storysource/loader'),
+          options: { parser: 'typescript' }
+        }
+      ],
+      enforce: 'pre'
+    },
     {
       test: /\.[jt]sx?/,
       exclude: /node_modules/,
