@@ -1,10 +1,16 @@
 import React from 'react';
 import { Colors, Styles, blueGradientBgImg } from '../../constants/style/index';
+
+export enum ToggleClassname {
+  Checked = 'checked',
+  Unchecked = 'unchecked'
+}
+
 export interface TaskButtonProps {
   taskName: string;
   id: string;
   toggled: boolean;
-  cName: string;
+  cName: ToggleClassname;
   toggleParent: (taskName: string) => void;
 }
 
