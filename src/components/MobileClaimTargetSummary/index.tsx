@@ -54,7 +54,7 @@ export const ClaimTargetSummary: React.SFC<ClaimTargetSummaryProps> = ({
       {targetDesc && <span className="desc">{targetDesc}</span>}
     </div>
     <style jsx>{`
-      .target-claim-container {
+      .claim-target-container {
         font-family: ${Styles.sbSans};
         padding: 0;
         width: 100%;
