@@ -29,14 +29,9 @@ const style = {
   fontFamily: `${Styles.sbSans}`
 };
 
-storiesOf('Resource Link component', module)
+storiesOf('Resource Link', module)
   .addDecorator(centered)
-  .add('Renders a Resource Link Button', () => (
-    <div style={style}>
-      <ResourceLinkBtn text={linkButtonMock.text} url={linkButtonMock.url} />
-    </div>
-  ))
-  .add('Renders a Resource Link with all data', () => (
+  .add('Complete example', () => (
     <div style={style}>
       <ResourceLink
         title={resourceLinkProps.title}
@@ -44,5 +39,10 @@ storiesOf('Resource Link component', module)
         desc={resourceLinkProps.desc}
         linkBtnProps={resourceLinkProps.linkBtnProps}
       />
+    </div>
+  ))
+  .add('Link button only', () => (
+    <div style={style}>
+      <ResourceLinkBtn text={linkButtonMock.text} url={linkButtonMock.url} />
     </div>
   ));
