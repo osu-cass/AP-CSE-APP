@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: './src/index.tsx',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: isDev ? 'source-map' : 'none',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.[hash].js',
@@ -21,8 +21,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?)|(js)$/,
+        test: /\.(tsx?)|(js)|(es.js)$/,
         exclude: /node_modules/,
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules', '@fortawesome', 'free-solid-svg-icons')],
         loader: 'babel-loader'
       },
       {

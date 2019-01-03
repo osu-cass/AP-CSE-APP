@@ -1,10 +1,14 @@
 {
-  "presets": ["@babel/preset-env", "@babel/typescript", "@babel/react"],
+  "presets": [["@babel/preset-env", {
+    "useBuiltIns": "usage",
+    "debug":true
+  }], "@babel/typescript", "@babel/react"],
   "plugins": [
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-shorthand-properties",
     "styled-jsx/babel"
   ],
   "env": {
