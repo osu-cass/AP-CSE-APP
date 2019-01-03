@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { AdditionalMaterials, AdditionalMaterialsProps } from './';
+import { AdditionalMaterials, AdditionalMaterialsProps } from '.';
 
 storiesOf('Additional Materials', module)
   .add('default', () => <AdditionalMaterials target="M.G8.C3.TD" />)

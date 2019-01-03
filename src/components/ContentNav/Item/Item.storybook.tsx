@@ -4,7 +4,7 @@ import centered from '@storybook/addon-centered';
 
 import { Item } from '.';
 import { SubItem } from '../SubItem';
-import { subItemMock } from '../mocks';
+import { subItemMock } from '../__mocks__';
 
 storiesOf('ContentNav/Item/Active', module)
   .addDecorator(centered)

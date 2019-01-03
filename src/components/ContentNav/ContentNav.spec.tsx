@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import { ContentNav } from './index';
 import { Item, Chevron, ItemProps } from './Item';
 import { SubItem } from './SubItem';
-import { itemMock } from './mocks';
+import { itemMock } from './__mocks__';
 
 interface TestParams {
   firstItemActive: boolean;

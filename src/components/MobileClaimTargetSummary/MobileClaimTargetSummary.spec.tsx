@@ -1,5 +1,5 @@
 import { parseClaimSummaryData } from '.';
-import { parsedClaimTargetSummaryMock } from './mocks';
+import { parsedClaimTargetSummaryMock } from './__mocks__';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 
 describe('Claim summary parser', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { RouterDecorator } from '../../__decorators__';
 import centered from '@storybook/addon-centered';
-import { targetMock } from './mocks';
+import { targetMock } from './__mocks__';
 import { TargetDetail } from './TargetDetail';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 

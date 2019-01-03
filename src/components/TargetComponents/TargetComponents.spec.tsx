@@ -12,7 +12,7 @@ import {
   parsedItemWithSubsMock,
   parsedNavPropsMock,
   parsedMobileTitleBarDataMock
-} from './mocks';
+} from './__mocks__';
 import { ITarget } from '../../models/target';
 import { ELAG3TargetMock } from '../../../mock_api_data/E.G3.PT';
 import { itemPageClient } from '@osu-cass/sb-components';
