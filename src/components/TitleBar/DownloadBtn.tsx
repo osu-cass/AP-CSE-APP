@@ -5,7 +5,7 @@ import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Colors } from '../../constants/style';
 import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
 import { IClaim } from '../../models/claim';
-import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize } from '../MediaQueryWrapper';
 
 /**
  * interface for DownloadBtn

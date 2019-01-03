@@ -1,7 +1,7 @@
 import React from 'react';
 import { Styles, Colors } from '../../constants/style';
 import { IClaim } from '../../models/claim';
-import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 /**
  * interface for ClaimTargetSummary

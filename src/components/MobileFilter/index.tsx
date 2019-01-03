@@ -3,7 +3,7 @@ import { MobileFilterProps, CSEAdvancedFilterModels } from '../FilterProps';
 import { MobileAdvancedFilter } from '../MobileAdvancedFilter';
 import { Message } from '../Message';
 import { FilterOptionModel, AdvancedFilter, FilterType } from '@osu-cass/sb-components';
-import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 import { globalFilterStyle } from '../DesktopFilter';
 
 // tslint:disable

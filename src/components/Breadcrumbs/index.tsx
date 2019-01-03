@@ -7,7 +7,7 @@ import { Styles, Colors } from '../../constants/style';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
 import { SearchBaseModel } from '@osu-cass/sb-components';
-import { DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { DesktopBreakSize } from '../MediaQueryWrapper';
 import MediaQuery from 'react-responsive';
 
 /**

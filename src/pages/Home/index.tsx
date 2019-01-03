@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { Title } from '../../components/GenericPage/Title';
 import { Colors } from '../../constants/style';
-import { MobileBreakSize } from '../../components/MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize } from '../../components/MediaQueryWrapper';
 
 const importedLogo = homeLogo as string;
 

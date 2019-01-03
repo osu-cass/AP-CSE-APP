@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
 import { Colors } from '../../constants/style';
-import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize } from '../MediaQueryWrapper';
 export interface ResourceLinkProps {
   title: string;
   imgUrl: string;

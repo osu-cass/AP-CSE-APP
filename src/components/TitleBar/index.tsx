@@ -2,7 +2,7 @@ import React from 'react';
 import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { Styles, Colors } from '../../constants/style';
 import { IDomain } from '../../models/claim';
-import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 /**
  * interface for TitleBar

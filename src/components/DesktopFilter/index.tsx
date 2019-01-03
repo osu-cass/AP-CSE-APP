@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import css from 'styled-jsx/css';
 import { blueGradient, Colors, Styles } from '../../constants/style';
 import { CSEAdvancedFilterModels, FilterProps } from '../FilterProps';
-import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 import { Message } from '../Message';
 
 export const globalFilterStyle = css`

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Home, Search, Eye, Grid } from 'react-feather';
 import { Colors, mobileIconStyle } from '../../constants/style';
-import { MobileBreakSize, mediaQueryWrapper } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 const noUnderline: React.CSSProperties = {
   textDecoration: 'none',
