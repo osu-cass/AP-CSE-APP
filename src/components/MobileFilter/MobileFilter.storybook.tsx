@@ -2,7 +2,7 @@ import React from 'react';
 import { MobileFilter } from '.';
 import { storiesOf, addDecorator } from '@storybook/react';
 import centered from '@storybook/addon-centered';
-import { filterModelGS, filterModelGSC, filterModelCSCT } from './mocks';
+import { filterModelGS, filterModelGSC, filterModelCSCT } from './__mocks__';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
 
 const callback = (newFilter: string[], code: FilterType) => {

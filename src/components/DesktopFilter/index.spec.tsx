@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { DesktopFilter } from '.';
-import { filterModelGS, filterModelGSC, filterModelCSCT } from '../MobileFilter/mocks';
+import { filterModelGS, filterModelGSC, filterModelCSCT } from '../MobileFilter/__mocks__';
 
 describe('DesktopFitler', () => {
   it('calls reset callback on reset button clicked', () => {
