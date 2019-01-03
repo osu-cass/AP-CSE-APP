@@ -58,7 +58,6 @@ export const ClaimTargetSummary: React.SFC<ClaimTargetSummaryProps> = ({
         font-family: ${Styles.sbSans};
         padding: 0;
         width: 100%;
-        font-size: 1.2em;
         color: black;
       }
 
