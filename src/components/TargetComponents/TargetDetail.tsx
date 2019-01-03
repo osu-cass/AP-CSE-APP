@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContentSection, GenericContentPage } from '../GenericContentPage';
 import { ITarget, ITaskModel, IStem } from '../../models/target';
-import { parseContent, parseExamples } from '../MainContent/parseUtils';
+import { parseContent, parseExamples } from './parseUtils';
 import { Standards } from './Standards';
 import { Evidence } from './Evidence';
 import { OrderedList } from './Lists';

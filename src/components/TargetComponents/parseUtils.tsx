@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Passage } from './Components';
 import { ITaskModel } from '../../models/target';
 
 const splitByNewLine = (text: string | undefined) => {

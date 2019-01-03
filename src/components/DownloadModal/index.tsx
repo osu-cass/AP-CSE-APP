@@ -9,7 +9,7 @@ import { ClaimMe } from '../PDFLink/Document/mocks/testData';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
 import { createDocument } from '../PDFLink/Document';
-import { parseExamples } from '../MainContent/parseUtils';
+import { parseExamples } from '../TargetComponents/parseUtils';
 
 /**
  * Properties for DownloadModal

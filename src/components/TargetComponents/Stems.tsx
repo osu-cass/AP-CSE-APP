@@ -1,7 +1,7 @@
 import React from 'react';
 import { IStem } from '../../models/target';
 import { UnorderedList } from './Lists';
-import { parseContent } from '../MainContent/parseUtils';
+import { parseContent } from './parseUtils';
 
 export interface StemsProps {
   stemType: string;
