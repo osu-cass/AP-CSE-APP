@@ -22,7 +22,7 @@ const elaDocumentPartial: DocumentProps = {
   taskModels: ELAG3ClaimMock.target[0].taskModels.filter((t, i) => i % 2 === 0)
 };
 
-storiesOf('PDFLink/Document DontTest', module)
+storiesOf('PDFLink DontTest/Document', module)
   .add('ELA Document', () => (
     <PDFViewer style={iframeStyle}>{createDocument(elaDocumentFull)}</PDFViewer>
   ))
