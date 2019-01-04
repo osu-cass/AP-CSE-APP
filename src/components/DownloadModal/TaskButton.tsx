@@ -1,5 +1,6 @@
 import React from 'react';
-import { Colors, Styles, blueGradientBgImg } from '../../constants/style/index';
+
+import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
 
 export enum ToggleClassname {
   Checked = 'checked',

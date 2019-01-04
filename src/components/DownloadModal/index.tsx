@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
+import React, { Component } from 'react';
+
+import { IClaim } from '../../models/claim';
+import { createDocument } from '../PDFLink/Document';
+import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
+import { DocumentProps } from '../PDFLink/Document/DocumentModels';
 import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
 import { TaskButton, TaskButtonProps, ToggleClassname } from './TaskButton';
-import { IClaim } from '../../models/claim';
-import { DocumentProps } from '../PDFLink/Document/DocumentModels';
-import { ClaimMe } from '../PDFLink/Document/mocks/testData';
-import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
-import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
-import { createDocument } from '../PDFLink/Document';
-import { parseExamples } from '../TargetComponents/parseUtils';
 
 /**
  * Properties for DownloadModal

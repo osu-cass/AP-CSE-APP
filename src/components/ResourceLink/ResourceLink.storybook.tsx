@@ -2,10 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 
-import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
-import { ResourceLink, ResourceLinkProps } from './index';
-
 import { Styles } from '../../constants/style';
+import { ResourceLink, ResourceLinkProps } from '.';
+import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const image: string = require('../../assets/images/smarter-balanced.png') as string;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Loader, RotateCw } from 'react-feather';
+
+import { Loader } from 'react-feather';
 
 export const Loading = () => (
   <div className="loading-container">

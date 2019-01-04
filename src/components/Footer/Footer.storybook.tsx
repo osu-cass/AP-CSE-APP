@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { RouterDecorator } from '../../__decorators__';
+
 import { Footer } from '.';
+import { RouterDecorator } from '../../__decorators__';
 
 storiesOf('Footer', module)
   .addDecorator(RouterDecorator)

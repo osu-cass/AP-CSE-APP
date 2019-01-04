@@ -1,7 +1,7 @@
 import React from 'react';
-import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
+
 import { Styles, Colors } from '../../constants/style';
-import { IDomain } from '../../models/claim';
+import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 /**

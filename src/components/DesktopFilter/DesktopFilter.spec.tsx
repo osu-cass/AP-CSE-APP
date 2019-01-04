@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+
 import { DesktopFilter } from '.';
 import { filterModelGS, filterModelGSC, filterModelCSCT } from '../MobileFilter/__mocks__';
 

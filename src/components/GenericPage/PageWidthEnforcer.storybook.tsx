@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+
 import { PageWidthEnforcer } from './PageWidthEnforcer';
 
 storiesOf('Page Width Enforcer', module)

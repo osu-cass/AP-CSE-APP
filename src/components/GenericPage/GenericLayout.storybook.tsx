@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+
 import { genericLayout } from './GenericLayout';
 import { RouterDecorator } from '../../__decorators__';
 

@@ -1,9 +1,10 @@
 import React from 'react';
-import { MobileFilter } from '.';
-import { storiesOf, addDecorator } from '@storybook/react';
 import centered from '@storybook/addon-centered';
-import { filterModelGS, filterModelGSC, filterModelCSCT } from './__mocks__';
+import { storiesOf } from '@storybook/react';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
+
+import { MobileFilter } from '.';
+import { filterModelGS, filterModelGSC, filterModelCSCT } from './__mocks__';
 
 const callback = (newFilter: string[], code: FilterType) => {
   // tslint:disable-next-line:no-console

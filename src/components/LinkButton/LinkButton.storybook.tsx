@@ -1,9 +1,10 @@
 import React from 'react';
-import { Colors } from '../../constants/style';
+import { FileText } from 'react-feather';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
+
+import { Colors } from '../../constants/style';
 import { LinkButton, LinkButtonProps } from '.';
-import { FileText } from 'react-feather';
 
 const fileIcon = <FileText {...{ size: 40, color: Colors.sbWhite }} />;
 

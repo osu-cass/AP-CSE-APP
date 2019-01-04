@@ -1,10 +1,9 @@
 import React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { mount, ReactWrapper } from 'enzyme';
 
+import { Chevron } from './Item';
 import { ContentNav } from './index';
-import { Item, Chevron, ItemProps } from './Item';
-import { SubItem } from './SubItem';
 import { itemMock } from './__mocks__';
 
 interface TestParams {

@@ -1,9 +1,10 @@
 import React from 'react';
-import centered from '@storybook/addon-centered';
 import { storiesOf } from '@storybook/react';
+import centered from '@storybook/addon-centered';
+
 import { FilterComponent } from '.';
-import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 import { CSEFilterParams } from '../../models/filter';
+import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 
 const callback = (filter: CSEFilterParams) => {
   // tslint:disable-next-line:no-console

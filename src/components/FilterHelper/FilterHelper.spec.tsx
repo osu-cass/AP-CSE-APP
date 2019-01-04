@@ -1,11 +1,12 @@
-import { createFilters, sanitizeParams, paramsFromFilter } from '.';
-import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 import {
   FilterType,
   AdvancedFilterCategoryModel,
   FilterOptionModel
 } from '@osu-cass/sb-components';
+
 import { CSEFilterParams } from '../../models/filter';
+import { createFilters, sanitizeParams, paramsFromFilter } from '.';
+import { filterOptionsGS, filterOptionsGSC, filterOptionsGSCT } from './__mocks__';
 
 // tslint:disable:no-non-null-assertion
 

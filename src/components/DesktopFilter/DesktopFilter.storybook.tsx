@@ -1,10 +1,10 @@
 import React from 'react';
-import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
-import { DesktopFilter } from '.';
-import { filterModelGS, filterModelGSC, filterModelCSCT } from '../MobileFilter/__mocks__';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
+
+import { DesktopFilter } from '.';
+import { filterModelGS, filterModelGSC, filterModelCSCT } from '../MobileFilter/__mocks__';
 
 export const callback = (Code: FilterType, newFilter?: FilterOptionModel) => {
   // tslint:disable-next-line:no-console

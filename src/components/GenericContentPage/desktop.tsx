@@ -1,9 +1,9 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+
+import { GenericContentProps } from '.';
 import { ContentNav } from '../ContentNav';
 import { ItemProps } from '../ContentNav/Item';
-import { mediaQueries } from '../../constants/style';
-import { GenericContentProps } from '.';
 
 export interface HeaderProps {
   text: string;

@@ -1,11 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered';
-import { PDFViewer, PDFDownloadLinkProps } from '@react-pdf/renderer';
-import { PDFLink, DownloadIcon, PDFDownloadLinkRenderProps } from '.';
-import { DocumentProps } from './Document/DocumentModels';
-import { ClaimMe } from './Document/mocks/testData';
+
 import { createDocument } from './Document';
+import { ClaimMe } from './Document/mocks/testData';
+import { DocumentProps } from './Document/DocumentModels';
+import { PDFLink, DownloadIcon, PDFDownloadLinkRenderProps } from '.';
+
 const mockProps: DocumentProps = {
   claim: ClaimMe,
   taskModels: [],

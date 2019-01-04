@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
+import { HelpCircle, Home, Search, Eye, Grid } from 'react-feather';
+
 import {
   Colors,
   Styles,
@@ -11,7 +13,6 @@ import {
 } from '../../constants/style';
 import { SearchBar } from '../SearchBar';
 import { HeaderLogo, MainMenu } from './primitives';
-import { HelpCircle, Home, Search, Eye, Grid } from 'react-feather';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 export const NavBar: React.SFC = () => {

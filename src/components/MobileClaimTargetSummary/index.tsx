@@ -1,6 +1,7 @@
 import React from 'react';
-import { Styles, Colors } from '../../constants/style';
+
 import { IClaim } from '../../models/claim';
+import { Styles } from '../../constants/style';
 import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 /**

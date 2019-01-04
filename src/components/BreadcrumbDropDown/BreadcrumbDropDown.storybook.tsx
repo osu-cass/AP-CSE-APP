@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
 import { BrowserRouter } from 'react-router-dom';
-import { BreadcrumbDropDownProps, BreadcrumbDropDown } from '.';
+
 import { Colors } from '../../constants/style';
+import { BreadcrumbDropDownProps, BreadcrumbDropDown } from '.';
 
 const background = {
   backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`

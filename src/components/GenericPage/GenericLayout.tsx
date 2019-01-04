@@ -1,8 +1,7 @@
 import React from 'react';
-import { PageWidthEnforcer } from './PageWidthEnforcer';
-import homeLogo from '../../assets/images/home-page.jpg';
-import { SubHeader } from '../MainContent/Components';
+
 import { MobileBreakSize } from '../MediaQueryWrapper';
+import { PageWidthEnforcer } from './PageWidthEnforcer';
 
 export const genericLayout = <T extends object>(
   title: React.ReactNode,

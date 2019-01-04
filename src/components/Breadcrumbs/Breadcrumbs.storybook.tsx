@@ -3,9 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { BrowserRouter } from 'react-router-dom';
 import { Breadcrumbs, BreadcrumbsProps } from './index';
-import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
-import { Colors } from '../../constants/style';
-import { BreadcrumbDropDownProps, BreadcrumbDropDown } from '../BreadcrumbDropDown';
+import { ClaimType, SubjectType } from './BreadcrumbModel';
 
 const emptyMock: BreadcrumbsProps = {};
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Search, Eye, Grid } from 'react-feather';
+
 import { Styles, mediaQueries, Colors, iconStyle } from '../../constants/style';
 
 /*tslint:disable: no-require-imports no-var-requires */

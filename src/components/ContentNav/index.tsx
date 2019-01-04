@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Item, ItemProps } from './Item';
 import { SubItem, SubItemProps } from './SubItem';
-import { ItemSearch } from '@osu-cass/sb-components';
 
 /**
  * Properties for ContentNav

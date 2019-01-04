@@ -1,4 +1,5 @@
 import { IClaim } from '../../models/claim';
+
 const { API_ENDPOINT } = process.env;
 
 export interface ITargetParams {

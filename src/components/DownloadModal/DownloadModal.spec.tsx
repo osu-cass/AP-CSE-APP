@@ -1,12 +1,9 @@
 import React from 'react';
+import toJson from 'enzyme-to-json';
 import { mount, ReactWrapper, shallow } from 'enzyme';
 
-import { DownloadModal } from './index';
+import { DownloadModal } from '.';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
-import { PDFDownloadLink } from '@react-pdf/renderer';
-import toJson from 'enzyme-to-json';
-
-const taskModelMock = ['Task Model 1'];
 
 describe('DownloadModal', () => {
   let downloadModal: ReactWrapper;

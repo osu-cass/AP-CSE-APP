@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
-import { TitleBar, TitleBarProps } from './index';
+
+import { TitleBar, TitleBarProps } from '.';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
+import { DownloadBtn, DownloadBtnProps } from './DownloadBtn';
 
 const downloadBtnMock: DownloadBtnProps = {
   claim: ELAG3ClaimMock
