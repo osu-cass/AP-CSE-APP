@@ -15,7 +15,7 @@ module.exports = (storybookBaseConfig, configType, config) => {
 
   config.module.rules.push(
     {
-      test: /\.storybook\.tsx?$/,
+      test: /\.story\.tsx?$/,
       loaders: [
         {
           loader: require.resolve('@storybook/addon-storysource/loader'),

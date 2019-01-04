@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { NavBar, MobileNavBar } from '.';
-import { RouterDecorator } from '../../__decorators__/';
+import { RouterDecorator } from '../../__decorators__';
 import { HeaderLogo, MenuItem, MainMenu } from './primitives';
 
 storiesOf('NavBar', module)

@@ -73,7 +73,7 @@
     ],
     "collectCoverageFrom": [
       "src/components/**/*.tsx",
-      "!**/*.storybook.skip.tsx"
+      "!**/*.story.skip.tsx"
     ]
   },
   "release": {
