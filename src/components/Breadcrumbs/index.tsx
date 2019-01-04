@@ -1,7 +1,7 @@
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
+import { BreadcrumbLink } from '../BreadcrumbLink';
 import { BreadcrumbDropDown } from '../BreadcrumbDropDown';
 import { Styles, Colors } from '../../constants/style';
 import { CSEFilterParams, CSESearchQuery } from '../../models/filter';

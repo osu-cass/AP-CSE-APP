@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { BreadcrumbLink, ListLink } from '../BreadcrumbLink/BreadcrumbLink';
-import { ChevronUp, ChevronDown, AlignCenter } from 'react-feather';
-import { Colors } from '../../constants/style';
+import { ChevronUp, ChevronDown } from 'react-feather';
 import { SearchBaseModel } from '@osu-cass/sb-components';
+
+import { ListLink } from '../BreadcrumbLink';
+import { Colors } from '../../constants/style';
 
 export interface BreadcrumbDropDownProps {
   currentTarget: SearchBaseModel;

@@ -2,17 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { BrowserRouter } from 'react-router-dom';
-import { BreadcrumbLink, BreadcrumbLinkProps } from '../BreadcrumbLink/BreadcrumbLink';
 import { Breadcrumbs, BreadcrumbsProps } from './index';
 import { ClaimType, GradeType, SubjectType } from './BreadcrumbModel';
 import { Colors } from '../../constants/style';
 import { BreadcrumbDropDownProps, BreadcrumbDropDown } from '../BreadcrumbDropDown';
-
-const subjectLinkMock: BreadcrumbLinkProps = {
-  link: 'ela',
-  value: SubjectType['English Language Arts'],
-  label: 'Subject'
-};
 
 const emptyMock: BreadcrumbsProps = {};
 
@@ -21,10 +14,6 @@ const allDataMock: BreadcrumbsProps = {
   grades: ['8'],
   claim: ClaimType['C4'],
   target: 'Target 1 and stuff and things this could be really long'
-};
-
-const background = {
-  backgroundImage: `linear-gradient(90deg, ${Colors.sbBlue}, ${Colors.sbBlueLighter})`
 };
 
 storiesOf('Breadcrumbs', module)
@@ -36,17 +25,6 @@ storiesOf('Breadcrumbs', module)
       claim={emptyMock.claim}
       target={emptyMock.target}
     />
-  ))
-  .add('Subject only', () => (
-    <div style={background}>
-      <ul>
-        <BreadcrumbLink
-          link={subjectLinkMock.link}
-          value={subjectLinkMock.value}
-          label={subjectLinkMock.label}
-        />
-      </ul>
-    </div>
   ))
   .add('Subject, grade, and claim', () => (
     <Breadcrumbs
