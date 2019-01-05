@@ -1,17 +1,12 @@
 import React from 'react';
-import { IClaim } from '../../models/claim';
-import { BreadcrumbsProps, Breadcrumbs, buildSearchUrl } from '../../components/Breadcrumbs';
-import { TitleBarProps, TitleBar, TitleBarWrapped } from '../../components/TitleBar';
-import {
-  MobileTitleBarWrapped,
-  MobileTitleBarProps
-} from '../../components/TitleBar/mobileTitleBar';
-import { DownloadBtnProps } from '../../components/TitleBar/DownloadBtn';
-import { blueGradient } from '../../constants/style';
-
-import { Z_ASCII } from 'zlib';
-import { ClaimType } from '../Breadcrumbs/BreadcrumbModel';
 import { SearchBaseModel } from '@osu-cass/sb-components';
+
+import { IClaim } from '../../../models/claim';
+import { blueGradient } from '../../../constants/style';
+import { DownloadBtnProps } from '../../TitleBar/DownloadBtn';
+import { TitleBarProps, TitleBarWrapped } from '../../TitleBar';
+import { BreadcrumbsProps, Breadcrumbs, buildSearchUrl } from '../../Breadcrumbs';
+import { MobileTitleBarWrapped, MobileTitleBarProps } from '../../TitleBar/mobileTitleBar';
 
 export interface TargetTitleBarProps {
   claim: IClaim;

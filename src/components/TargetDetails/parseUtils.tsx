@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-import { ITaskModel } from '../../models/target';
+import React from 'react';
 
 const splitByNewLine = (text: string | undefined) => {
   if (text) {

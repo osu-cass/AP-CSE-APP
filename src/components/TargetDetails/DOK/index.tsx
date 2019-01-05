@@ -1,5 +1,6 @@
 import React from 'react';
-import { IDOK } from '../../models/target';
+
+import { IDOK } from '../../../models/target';
 
 export interface DOKProps {
   dok: IDOK[];

@@ -1,6 +1,7 @@
 import React from 'react';
-import { IStandards } from '../../models/target';
-import { parseContent } from './parseUtils';
+
+import { parseContent } from '../parseUtils';
+import { IStandards } from '../../../models/target';
 
 const shortenStandardCode = (code: string) => {
   const parts = code.split('.');

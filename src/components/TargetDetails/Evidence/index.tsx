@@ -1,7 +1,8 @@
 import React from 'react';
-import { IEvidence } from '../../models/target';
-import { OrderedList } from './Lists';
-import { parseContent } from './parseUtils';
+
+import { OrderedList } from '../Lists';
+import { parseContent } from '../parseUtils';
+import { IEvidence } from '../../../models/target';
 
 export interface EvidenceProps {
   evidence: IEvidence[];

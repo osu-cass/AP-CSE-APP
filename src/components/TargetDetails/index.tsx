@@ -1,14 +1,15 @@
 import React from 'react';
-import { ContentSection, GenericContentPage } from '../GenericContentPage';
-import { ITarget, ITaskModel, IStem } from '../../models/target';
-import { parseContent, parseExamples } from './parseUtils';
-import { Standards } from './Standards';
-import { Evidence } from './Evidence';
-import { OrderedList } from './Lists';
-import { Stems } from './Stems';
-import { AdditionalMaterials } from '../AdditionalMaterials';
+
 import { DOK } from './DOK';
+import { Stems } from './Stems';
+import { OrderedList } from './Lists';
+import { Evidence } from './Evidence';
+import { Standards } from './Standards';
+import { parseContent } from './parseUtils';
+import { AdditionalMaterials } from '../AdditionalMaterials';
 import { ExamplesProps, Examples } from '../TaskModelExample';
+import { ITarget, ITaskModel, IStem } from '../../models/target';
+import { ContentSection, GenericContentPage } from '../GenericContentPage';
 
 export interface TargetDetailProps {
   target: ITarget;

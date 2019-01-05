@@ -1,21 +1,15 @@
 import React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import { parseBreadCrumbData, parseTitleBarData, parseTitleBarMobileData } from './title';
-import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
-import { TargetDetail, TargetDetailProps } from './TargetDetail';
+import { mount, ReactWrapper } from 'enzyme';
+
 import {
-  parsedSubItemMock,
   parsedTitleBarDataMock,
   parsedBreadCrumbDataMock,
-  parsedRegularItemMock,
-  parsedItemWithSubsMock,
-  parsedNavPropsMock,
   parsedMobileTitleBarDataMock
-} from './__mocks__';
-import { ITarget } from '../../models/target';
-import { ELAG3TargetMock } from '../../../mock_api_data/E.G3.PT';
-import { itemPageClient } from '@osu-cass/sb-components';
+} from '../__mocks__';
+import { TargetDetail } from '..';
+import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
+import { parseBreadCrumbData, parseTitleBarData, parseTitleBarMobileData } from '.';
 
 describe('Target Page', () => {
   let targetPage: ReactWrapper;

@@ -5,11 +5,11 @@ import { SearchBaseModel } from '@osu-cass/sb-components';
 import { IClaim } from '../../models/claim';
 import { FilterClient } from '../../clients/filter';
 import { TargetClient } from '../../clients/target';
+import { TargetDetail } from '../../components/TargetDetails';
 import { ErrorMessage, Message } from '../../components/Message';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
-import { TargetTitleBar } from '../../components/TargetComponents/title';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
-import { TargetDetail } from '../../components/TargetComponents/TargetDetail';
+import { TargetTitleBar } from '../../components/TargetDetails/TargetTitleBar';
 import {
   parseClaimSummaryData,
   MobileClaimTargetSummary

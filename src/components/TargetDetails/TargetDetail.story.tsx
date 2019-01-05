@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { RouterDecorator } from '../../__decorators__';
 import centered from '@storybook/addon-centered';
 import { targetMock } from './__mocks__';
-import { TargetDetail } from './TargetDetail';
+import { TargetDetail } from '.';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 
 storiesOf('Target Page', module)
