@@ -6,6 +6,7 @@ import { BreadcrumbsProps } from '../../../components/Breadcrumbs';
 import { IClaim } from '../../../models/claim';
 import { ITargetParams } from '../../../clients/target';
 import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
+import { ITable } from '../Table';
 
 export const mockTargetClient = {
   // tslint:disable-next-line:no-empty
@@ -224,4 +225,14 @@ export const targetMock: ITarget = {
   stem: [],
   taskModels: [],
   rubrics: []
+};
+
+export const tableMock: ITable = {
+  Headers: [' ', ' Source #1: [title] ', ' Source #2: [title] ', ' Both ', ' Neither '],
+  DataRows: [
+    [' [idea/opinion] ', ' ', ' ', ' ', ' '],
+    [' [idea/opinion] ', ' ', ' ', ' ', ' '],
+    [' [idea/opinion] ', ' ', ' ', ' ', ' '],
+    ['']
+  ]
 };
