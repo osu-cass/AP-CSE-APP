@@ -82,7 +82,7 @@ function taskModelSections(
   });
 }
 
-function stiminfoandTargetComplexity(target: ITarget){
+function stimInfoAndTargetComplexity(target: ITarget){
   let subsections: ContentSection[] = [];
   if (target.stimInfo){
     subsections.push({
@@ -107,7 +107,7 @@ function stiminfoandTargetComplexity(target: ITarget){
   return subsections;
 }
 
-export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
+function setUpTargetSections(target: ITarget){
   let sections: ContentSection[] = [];
   if (target.clarification) {
     sections.push({
@@ -124,15 +124,12 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   }
 
   if (target.stimInfo || target.dualText || target.complexity) {
-  
-      
     sections.push({
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
-    let subsects: ContentSection [] = stiminfoandTargetComplexity(target);
-    
-     sections[sections.length-1].subsections=subsects;
+    const subsects: ContentSection [] = stimInfoAndTargetComplexity(target);
+    sections[sections.length-1].subsections=subsects;
   }
 
   
@@ -150,7 +147,11 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
       jsx: <Evidence evidence={target.evidence} />
     });
   }
-
+  return sections;  
+}
+export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
+  let sections: ContentSection[] = [];
+  sections= setUpTargetSections(target);
   // add task model sections
   sections = sections.concat(taskModelSections(target.taskModels, target.stem));
   sections.push({
