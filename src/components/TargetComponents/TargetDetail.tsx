@@ -104,7 +104,7 @@ function setUpTargetSections(target: ITarget, sections: ContentSection[]){
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
-    let subsects: ContentSection []= [];
+    const subsects: ContentSection []= [];
     fillValidSection(target.stimInfo, subsects, 'Passage');
     fillValidSection(target.dualText, subsects, 'Dual Text');
     fillValidSection(target.complexity, subsects, 'Text Complexity');
