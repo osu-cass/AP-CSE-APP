@@ -89,31 +89,28 @@ function fillValidSection(section: string, sections: ContentSection[], title: st
       jsx: parseContent(section)
     });
   }
-  return sections;
 }
-function setUpTargetSections(target: ITarget){
-  let sections: ContentSection[] = [];
-  sections=fillValidSection(target.clarification, sections, 'Clarification')
+
+function setUpTargetSections(target: ITarget, sections: ContentSection[]){
+  fillValidSection(target.clarification, sections, 'Clarification')
   if (target.standards) {
     sections.push({
       title: 'Standards',
       jsx: <Standards standards={target.standards} />
     });
   }
-
   if (target.stimInfo || target.dualText || target.complexity) {
     sections.push({
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
     let subsects: ContentSection []= [];
-    subsects=fillValidSection(target.stimInfo, subsects, 'Passage');
-    subsects=fillValidSection(target.dualText, subsects, 'Dual Text');
-    subsects=fillValidSection(target.complexity, subsects, 'Text Complexity');
+    fillValidSection(target.stimInfo, subsects, 'Passage');
+    fillValidSection(target.dualText, subsects, 'Dual Text');
+    fillValidSection(target.complexity, subsects, 'Text Complexity');
     sections[sections.length-1].subsections=subsects;
   }
-
-  sections=fillValidSection(target.accessibility, sections, 'Accessibility Concerns')
+  fillValidSection(target.accessibility, sections, 'Accessibility Concerns')
 
   // evidence required
   if (target.evidence) {
@@ -121,12 +118,11 @@ function setUpTargetSections(target: ITarget){
       title: 'Evidence Required',
       jsx: <Evidence evidence={target.evidence} />
     });
-  }
-  return sections;  
+  } 
 }
 export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   let sections: ContentSection[] = [];
-  sections= setUpTargetSections(target);
+  setUpTargetSections(target, sections);
   // add task model sections
   sections = sections.concat(taskModelSections(target.taskModels, target.stem));
   sections.push({
