@@ -232,7 +232,6 @@ export const tableMock: ITable = {
   DataRows: [
     [' [idea/opinion] ', ' ', ' ', ' ', ' '],
     [' [idea/opinion] ', ' ', ' ', ' ', ' '],
-    [' [idea/opinion] ', ' ', ' ', ' ', ' '],
-    ['']
+    [' [idea/opinion] ', ' ', ' ', ' ', ' ']
   ]
 };
