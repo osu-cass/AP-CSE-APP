@@ -1,9 +1,10 @@
-import { CSEFilterOptions, CSEFilterParams } from '../../models//filter';
 import {
   AdvancedFilterCategoryModel,
   FilterType,
   FilterOptionModel
 } from '@osu-cass/sb-components';
+
+import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 
 export interface FilterComponentProps {
   options: CSEFilterOptions;

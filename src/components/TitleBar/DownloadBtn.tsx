@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { DownloadCloud } from 'react-feather';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
-import { Colors } from '../../constants/style';
-import { DownloadModal, DownloadModalProps } from '../DownloadModal/index';
+
 import { IClaim } from '../../models/claim';
-import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { Colors } from '../../constants/style';
+import { MobileBreakSize } from '../MediaQueryWrapper';
+import { DownloadModal, DownloadModalProps } from '../DownloadModal';
 
 /**
  * interface for DownloadBtn

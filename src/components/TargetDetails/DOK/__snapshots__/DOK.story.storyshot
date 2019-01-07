@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TargetDetails/DOK Multiple DOK 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <p>
+    DOK one
+  </p>
+  <p>
+    DOK two
+  </p>
+  <p>
+    DOK three
+  </p>
+</div>
+`;
+
+exports[`Storyshots TargetDetails/DOK One DOK 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <p>
+    DOK one
+  </p>
+</div>
+`;

@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import React from 'react';
+
+import { mediaQueryWrapper, DesktopBreakSize } from '../MediaQueryWrapper';
 
 export const Footer: React.SFC = () => {
   return (

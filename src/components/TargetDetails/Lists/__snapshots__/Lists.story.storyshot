@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TargetDetails/Lists OrderedList 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <ol>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots TargetDetails/Lists UnorderedList 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <ul>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+    <li>
+      <div>
+        Item
+      </div>
+    </li>
+  </ul>
+</div>
+`;

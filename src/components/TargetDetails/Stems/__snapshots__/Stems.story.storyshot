@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TargetDetails/Stems Multiple Stems 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <ul>
+    <li>
+      <span>
+        Stem Description Two
+        <br />
+      </span>
+    </li>
+    <li>
+      <span>
+        Stem Description Three
+        <br />
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots TargetDetails/Stems One Stem 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <ul>
+    <li>
+      <span>
+        Stem Description One
+        <br />
+      </span>
+    </li>
+  </ul>
+</div>
+`;

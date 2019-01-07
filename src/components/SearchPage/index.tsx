@@ -1,17 +1,17 @@
-import { ErrorBoundary, FilterType } from '@osu-cass/sb-components';
+import React from 'react';
 import { History } from 'history';
 import { stringify } from 'query-string';
-import React from 'react';
+import { ErrorBoundary, FilterType } from '@osu-cass/sb-components';
 
+import { SearchBar } from '../SearchBar';
+import { IClaim } from '../../models/claim';
+import { Styles } from '../../constants/style';
+import { ErrorMessage, Message } from '../Message';
+import { FilterItemList } from '../FilterItemList';
 import { IFilterClient } from '../../clients/filter';
 import { ISearchClient } from '../../clients/search';
-import { Styles } from '../../constants/style';
-import { IClaim } from '../../models/claim';
-import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { FilterComponent } from '../FilterComponent';
-import { FilterItemList } from '../FilterItemList';
-import { ErrorMessage, Message } from '../Message';
-import { SearchBar } from '../SearchBar';
+import { CSEFilterOptions, CSEFilterParams, CSESearchQuery } from '../../models/filter';
 
 export interface SearchPageProps {
   paramsFromUrl: CSESearchQuery;

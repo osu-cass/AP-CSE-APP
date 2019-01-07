@@ -1,7 +1,6 @@
 import { IClaim } from '../../models/claim';
-import { ITargetParams } from '../target';
-import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
-import { SearchBaseModel } from '@osu-cass/sb-components';
+import { CSESearchQuery } from '../../models/filter';
+
 const { API_ENDPOINT } = process.env;
 
 export interface ISearchClient {

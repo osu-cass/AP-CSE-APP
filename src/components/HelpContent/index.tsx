@@ -1,4 +1,5 @@
 import React from 'react';
+
 const linkStyle = (
   <style jsx>{`
     a {
@@ -11,6 +12,7 @@ const linkStyle = (
     }
   `}</style>
 );
+
 export const HelpClaims: React.SFC = () => (
   <ul>
     <li>

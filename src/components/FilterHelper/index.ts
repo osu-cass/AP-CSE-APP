@@ -4,6 +4,7 @@ import {
   FilterOptionModel,
   SearchBaseModel
 } from '@osu-cass/sb-components';
+
 import { CSEAdvancedFilterModels } from '../FilterProps';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 

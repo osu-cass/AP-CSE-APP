@@ -1,6 +1,7 @@
 import React from 'react';
-import { SizeBreaks } from '../../constants/style';
 import MediaQuery from 'react-responsive';
+
+import { SizeBreaks } from '../../constants/style';
 import { MobileGenericContentPage } from './mobile';
 import { DesktopGenericContentPage } from './desktop';
 

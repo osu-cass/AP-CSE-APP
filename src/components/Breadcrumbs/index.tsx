@@ -1,14 +1,15 @@
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
-import { BreadcrumbDropDown } from '../BreadcrumbDropDown/BreadCrumbDropDown';
-import { Styles, Colors } from '../../constants/style';
-import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
-import { SearchBaseModel } from '@osu-cass/sb-components';
-import { DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
 import MediaQuery from 'react-responsive';
+import { SearchBaseModel } from '@osu-cass/sb-components';
+
+import { BreadcrumbLink } from '../BreadcrumbLink';
+import { Styles, Colors } from '../../constants/style';
+import { DesktopBreakSize } from '../MediaQueryWrapper';
+import { BreadcrumbDropDown } from '../BreadcrumbDropDown';
+import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 
 /**
  * Properties for Breadcrumbs

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'react-feather';
+
 import { blueGradient, blueGradientDarker, Colors } from '../../constants/style';
 
 export interface ResourceLinkBtnProps {

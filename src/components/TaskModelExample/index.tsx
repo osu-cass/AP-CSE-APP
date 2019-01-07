@@ -1,5 +1,6 @@
 import React from 'react';
-import { parseExamples } from '../MainContent/parseUtils';
+
+import { parseExamples } from '../TargetDetails/parseUtils';
 
 export interface Example {
   label: string;

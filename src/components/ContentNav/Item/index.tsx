@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
-import { Colors, Styles } from '../../../constants/style';
+import React from 'react';
 import { ChevronDown, ChevronUp } from 'react-feather';
+
 import { SubItemProps } from '../SubItem';
-import { Link } from 'react-scroll';
+import { Colors, Styles } from '../../../constants/style';
 import { scrollPageTo, renderLink } from '../../../utilities/scroller';
 
 /**

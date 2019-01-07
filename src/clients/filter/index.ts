@@ -1,4 +1,5 @@
 import { FilterType, SearchBaseModel } from '@osu-cass/sb-components';
+
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 
 const { API_ENDPOINT } = process.env;

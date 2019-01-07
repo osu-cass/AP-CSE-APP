@@ -1,0 +1,727 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Filter/Mobile default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="mobileFilter"
+      >
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English Language Arts
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Mathematics
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <b>
+            Grade
+          </b>
+          <select
+            multiple={true}
+            onChange={[Function]}
+          >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="elm"
+            >
+              Elementry
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="mid"
+            >
+              Middle School
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="hs"
+            >
+              High School
+            </option>
+          </select>
+          <style
+            jsx={true}
+          >
+            
+        .container {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        select {
+          padding: 5px;
+          border: 2px solid #63666A;
+          text-align: center;
+          background-color: #eee;
+        }
+      
+          </style>
+        </div>
+        <div
+          className="message"
+        >
+          Please Select a Grade and Subject
+          <style
+            jsx={true}
+          >
+            
+      .message {
+        margin: 20px 0;
+        text-align: center;
+      }
+    
+          </style>
+        </div>
+        <div
+          className="message"
+        >
+          Please Select a Claim.
+          <style
+            jsx={true}
+          >
+            
+      .message {
+        margin: 20px 0;
+        text-align: center;
+      }
+    
+          </style>
+        </div>
+        <div
+          className="reset-container"
+        >
+          <button
+            className="btn"
+            onClick={[Function]}
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .mobileFilter {
+          flex-direction: column;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filter/Mobile with claims 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="mobileFilter"
+      >
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English Language Arts
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Mathematics
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <b>
+            Grade
+          </b>
+          <select
+            multiple={true}
+            onChange={[Function]}
+          >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="elm"
+            >
+              Elementry
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="mid"
+            >
+              Middle School
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="hs"
+            >
+              High School
+            </option>
+          </select>
+          <style
+            jsx={true}
+          >
+            
+        .container {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        select {
+          padding: 5px;
+          border: 2px solid #63666A;
+          text-align: center;
+          background-color: #eee;
+        }
+      
+          </style>
+        </div>
+        <div
+          className="container"
+        >
+          <b>
+            Claim
+          </b>
+          <select
+            multiple={false}
+            onChange={[Function]}
+          >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="c1"
+            >
+              Claim 1
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="c2"
+            >
+              Claim 2
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="c3"
+            >
+              Claim 3
+            </option>
+          </select>
+          <style
+            jsx={true}
+          >
+            
+        .container {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        select {
+          padding: 5px;
+          border: 2px solid #63666A;
+          text-align: center;
+          background-color: #eee;
+        }
+      
+          </style>
+        </div>
+        <div
+          className="message"
+        >
+          Please Select a Claim.
+          <style
+            jsx={true}
+          >
+            
+      .message {
+        margin: 20px 0;
+        text-align: center;
+      }
+    
+          </style>
+        </div>
+        <div
+          className="reset-container"
+        >
+          <button
+            className="btn"
+            onClick={[Function]}
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .mobileFilter {
+          flex-direction: column;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filter/Mobile with targets 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="mobileFilter"
+      >
+        <div
+          className="filter-selection"
+          id="subject-filter"
+        >
+          <div
+            className="filter-container-header"
+          >
+            <label>
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
+              >
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="nested-btn-group btn-group-sm toggle-group vertical"
+            data-toggle="buttons"
+          >
+            <div
+              className="btn-group filter-btn-group"
+            >
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                English Language Arts
+              </button>
+              <button
+                className="btn btn-primary active"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                Mathematics
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <b>
+            Grade
+          </b>
+          <select
+            multiple={true}
+            onChange={[Function]}
+          >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="elm"
+            >
+              Elementry
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="mid"
+            >
+              Middle School
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="hs"
+            >
+              High School
+            </option>
+          </select>
+          <style
+            jsx={true}
+          >
+            
+        .container {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        select {
+          padding: 5px;
+          border: 2px solid #63666A;
+          text-align: center;
+          background-color: #eee;
+        }
+      
+          </style>
+        </div>
+        <div
+          className="container"
+        >
+          <b>
+            Claim
+          </b>
+          <select
+            multiple={false}
+            onChange={[Function]}
+          >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="c1"
+            >
+              Claim 1
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="c2"
+            >
+              Claim 2
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="c3"
+            >
+              Claim 3
+            </option>
+          </select>
+          <style
+            jsx={true}
+          >
+            
+        .container {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        select {
+          padding: 5px;
+          border: 2px solid #63666A;
+          text-align: center;
+          background-color: #eee;
+        }
+      
+          </style>
+        </div>
+        <div
+          className="container"
+        >
+          <b>
+            Target
+          </b>
+          <select
+            multiple={false}
+            onChange={[Function]}
+          >
+            <option
+              aria-selected={false}
+              selected={false}
+              value="t1"
+            >
+              Target 1
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="T2"
+            >
+              Target 2
+            </option>
+            <option
+              aria-selected={false}
+              selected={false}
+              value="T3"
+            >
+              Target 3
+            </option>
+          </select>
+          <style
+            jsx={true}
+          >
+            
+        .container {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        select {
+          padding: 5px;
+          border: 2px solid #63666A;
+          text-align: center;
+          background-color: #eee;
+        }
+      
+          </style>
+        </div>
+        <div
+          className="reset-container"
+        >
+          <button
+            className="btn"
+            onClick={[Function]}
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+        .mobileFilter {
+          flex-direction: column;
+        }
+
+        .reset-container {
+          text-align: right;
+        }
+      
+      </style>
+      <style
+        global={true}
+        jsx={true}
+      >
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;

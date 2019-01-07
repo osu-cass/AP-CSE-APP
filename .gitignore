@@ -5,6 +5,7 @@ coverage
 reports
 settings.json
 .cache
+.DS_Store
 
 # IntelliJ Idea	
 .idea/

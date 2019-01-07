@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ClaimTargetSummary All information 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="target-claim-container"
+  >
+    <div
+      className="claim-section"
+    >
+      <span
+        className="title"
+      >
+        Claim 1
+        : 
+      </span>
+      <span
+        className="desc"
+      >
+        This describes the Claim
+      </span>
+    </div>
+    <div
+      className="target-section"
+    >
+      <span
+        className="title"
+      >
+        Target 1
+        : 
+      </span>
+      <span
+        className="desc"
+      >
+        This describes the Target
+      </span>
+    </div>
+    <style
+      jsx={true}
+    >
+      
+      .claim-target-container {
+        font-family: PT Sans Caption;
+        padding: 0;
+        width: 100%;
+        color: black;
+      }
+
+      .target-section {
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .claim-section {
+        padding: 5px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ClaimTargetSummary Claim title and Target title only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="target-claim-container"
+  >
+    <div
+      className="claim-section"
+    >
+      <span
+        className="title"
+      >
+        Claim 1
+        : 
+      </span>
+    </div>
+    <div
+      className="target-section"
+    >
+      <span
+        className="title"
+      >
+        Target 1
+        : 
+      </span>
+    </div>
+    <style
+      jsx={true}
+    >
+      
+      .claim-target-container {
+        font-family: PT Sans Caption;
+        padding: 0;
+        width: 100%;
+        color: black;
+      }
+
+      .target-section {
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .claim-section {
+        padding: 5px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ClaimTargetSummary Claim title and description only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="target-claim-container"
+  >
+    <div
+      className="claim-section"
+    >
+      <span
+        className="title"
+      >
+        Claim 1
+        : 
+      </span>
+      <span
+        className="desc"
+      >
+        This describes the Claim
+      </span>
+    </div>
+    <div
+      className="target-section"
+    />
+    <style
+      jsx={true}
+    >
+      
+      .claim-target-container {
+        font-family: PT Sans Caption;
+        padding: 0;
+        width: 100%;
+        color: black;
+      }
+
+      .target-section {
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .claim-section {
+        padding: 5px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ClaimTargetSummary Claim title only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="target-claim-container"
+  >
+    <div
+      className="claim-section"
+    >
+      <span
+        className="title"
+      >
+        Claim 1
+        : 
+      </span>
+    </div>
+    <div
+      className="target-section"
+    />
+    <style
+      jsx={true}
+    >
+      
+      .claim-target-container {
+        font-family: PT Sans Caption;
+        padding: 0;
+        width: 100%;
+        color: black;
+      }
+
+      .target-section {
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .claim-section {
+        padding: 5px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ClaimTargetSummary Claim title with Target title and description 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    className="target-claim-container"
+  >
+    <div
+      className="claim-section"
+    >
+      <span
+        className="title"
+      >
+        Claim 1
+        : 
+      </span>
+    </div>
+    <div
+      className="target-section"
+    >
+      <span
+        className="title"
+      >
+        Target 1
+        : 
+      </span>
+      <span
+        className="desc"
+      >
+        This describes the Target
+      </span>
+    </div>
+    <style
+      jsx={true}
+    >
+      
+      .claim-target-container {
+        font-family: PT Sans Caption;
+        padding: 0;
+        width: 100%;
+        color: black;
+      }
+
+      .target-section {
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .claim-section {
+        padding: 5px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Styles } from '../../constants/style';
 
 export interface PageWidthEnforcerProps {
