@@ -82,6 +82,31 @@ function taskModelSections(
   });
 }
 
+function stiminfoandTargetComplexity(target: ITarget){
+  let subsections: ContentSection[] = [];
+  if (target.stimInfo){
+    subsections.push({
+            title: 'Passage',
+            jsx: parseContent(target.stimInfo)
+       });
+    }
+
+    if (target.complexity){
+      subsections.push({
+        title: 'Text Complexity',
+        jsx: parseContent(target.complexity)
+      });
+     }
+
+     if (target.dualText){
+      subsections.push({
+        title: 'Dual Text',
+        jsx: parseContent(target.dualText)
+      });
+     }
+  return subsections;
+}
+
 export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   let sections: ContentSection[] = [];
   if (target.clarification) {
@@ -99,33 +124,14 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   }
 
   if (target.stimInfo || target.dualText || target.complexity) {
-  let subsects: ContentSection [] = [];
-    
+  
+      
     sections.push({
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
+    let subsects: ContentSection [] = stiminfoandTargetComplexity(target);
     
-    if (target.stimInfo){
-    subsects.push({
-            title: 'Passage',
-            jsx: parseContent(target.stimInfo)
-       });
-    }
-
-    if (target.complexity){
-      subsects.push({
-        title: 'Text Complexity',
-        jsx: parseContent(target.complexity)
-      });
-     }
-
-     if (target.dualText){
-      subsects.push({
-        title: 'Dual Text',
-        jsx: parseContent(target.dualText)
-      });
-     }
      sections[sections.length-1].subsections=subsects;
   }
 
