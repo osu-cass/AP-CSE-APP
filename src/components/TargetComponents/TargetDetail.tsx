@@ -82,40 +82,18 @@ function taskModelSections(
   });
 }
 
-function stimInfoAndTargetComplexity(target: ITarget){
-  let subsections: ContentSection[] = [];
-  if (target.stimInfo){
-    subsections.push({
-            title: 'Passage',
-            jsx: parseContent(target.stimInfo)
-       });
-    }
-
-    if (target.complexity){
-      subsections.push({
-        title: 'Text Complexity',
-        jsx: parseContent(target.complexity)
-      });
-     }
-
-     if (target.dualText){
-      subsections.push({
-        title: 'Dual Text',
-        jsx: parseContent(target.dualText)
-      });
-     }
-  return subsections;
-}
-
-function setUpTargetSections(target: ITarget){
-  let sections: ContentSection[] = [];
-  if (target.clarification) {
-    sections.push({
-      title: 'Clarification',
-      jsx: parseContent(target.clarification)
+function fillValidSection(section: string, sections: ContentSection[], title: string){
+  if(section){
+   sections.push({
+      title: title,
+      jsx: parseContent(section)
     });
   }
-
+  return sections;
+}
+function setUpTargetSections(target: ITarget){
+  let sections: ContentSection[] = [];
+  sections=fillValidSection(target.clarification, sections, 'Clarification')
   if (target.standards) {
     sections.push({
       title: 'Standards',
@@ -128,17 +106,14 @@ function setUpTargetSections(target: ITarget){
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
-    const subsects: ContentSection [] = stimInfoAndTargetComplexity(target);
+    let subsects: ContentSection []= [];
+    subsects=fillValidSection(target.stimInfo, subsects, 'Passage');
+    subsects=fillValidSection(target.dualText, subsects, 'Dual Text');
+    subsects=fillValidSection(target.complexity, subsects, 'Text Complexity');
     sections[sections.length-1].subsections=subsects;
   }
 
-  
-  if (target.accessibility) {
-    sections.push({
-      title: 'Accessibility Concerns',
-      jsx: parseContent(target.accessibility)
-    });
-  }
+  sections=fillValidSection(target.accessibility, sections, 'Accessibility Concerns')
 
   // evidence required
   if (target.evidence) {
