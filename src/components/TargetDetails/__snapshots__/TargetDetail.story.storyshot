@@ -1,5 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Target Page Render a table in the content of target page 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <table
+        className="content-table"
+      >
+        <thead>
+          <tr>
+            <th>
+               
+            </th>
+            <th>
+               Source #1: [title] 
+            </th>
+            <th>
+               Source #2: [title] 
+            </th>
+            <th>
+               Both 
+            </th>
+            <th>
+               Neither 
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+               [idea/opinion] 
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+          </tr>
+          <tr>
+            <td>
+               [idea/opinion] 
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+          </tr>
+          <tr>
+            <td>
+               [idea/opinion] 
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <style
+        jsx={true}
+      >
+        
+        .content-table {
+          border-collapse: collapse;
+        }
+        .content-table th {
+          font-weight: normal;
+        }
+        .content-table,
+        th,
+        td {
+          border: 1px solid black;
+        }
+      
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Target Page Renders a nothing 1`] = `
 <div
   style={
