@@ -26,10 +26,10 @@ const styles: TaskStyles = StyleSheet.create({
     padding: 5,
     paddingRight: 8,
     paddingTop: 10,
-    borderTop: '1px solid black',
-    borderRight: '2px solid black',
-    borderBottom: '1px solid black',
-    borderLeft: '2px solid black',
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderBottom: '1pt solid black',
+    borderLeft: '2pt solid black',
     fontSize: 12,
     textAlign: 'right'
   },
@@ -41,21 +41,21 @@ const styles: TaskStyles = StyleSheet.create({
     padding: 10,
     paddingLeft: 8,
     paddingTop: 10,
-    borderTop: '1px solid black',
-    borderBottom: '1px solid black',
-    borderRight: '2px solid black',
+    borderTop: '1pt solid black',
+    borderBottom: '1pt solid black',
+    borderRight: '2pt solid black',
     fontSize: 12
   },
   item: {
     display: 'flex',
-    padding: '3px',
+    padding: '3pt',
     margin: 3
   },
   desc: {
     margin: 5
   },
   code: {
-    color: 'red'
+    textDecoration: 'bold'
   },
   flexContent: {
     display: 'flex',
@@ -70,7 +70,7 @@ const styles: TaskStyles = StyleSheet.create({
     margin: 5
   },
   border: {
-    border: '1px solid red'
+    border: '1pt solid red'
   }
 }) as TaskStyles;
 
@@ -90,7 +90,7 @@ export const TaskModelChild: React.SFC<ITaskModel> = ({
       <OneColumnLayout center={true} text={'Task Models'} />
       <View wrap style={styles.flexRow}>
         <View style={styles.flexColumnLeft}>
-          <Text>{taskName}</Text>
+          <Text style={styles.code}>{taskName}</Text>
         </View>
         <View style={styles.flexColumnRight}>
           <View style={styles.flexContent}>

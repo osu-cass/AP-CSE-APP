@@ -7,8 +7,8 @@ import { DocumentProps } from './DocumentModels';
 import ELAG3ClaimMock from '../../../../mock_api_data/E.G3.C1';
 
 const iframeStyle = {
-  width: 'calc(100vw - 20px)',
-  height: 'calc(100vh - 20px)'
+  width: 'calc(100vw - 20pt)',
+  height: 'calc(100vh - 20pt)'
 };
 
 const elaDocumentFull: DocumentProps = {

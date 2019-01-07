@@ -10,13 +10,14 @@ interface OneColumnStyles {
 // tslint:disable-next-line:no-any no-unsafe-any
 const styles: OneColumnStyles = StyleSheet.create({
   flexSingleRow: {
-    borderTop: '1px solid black',
-    borderRight: '2px solid black',
-    borderLeft: '2px solid black',
-    borderBottom: '1px solid black',
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderLeft: '2pt solid black',
+    borderBottom: '1pt solid black',
     fontSize: 12,
-    padding: '5px',
-    width: '100%'
+    padding: '5pt',
+    width: '100%',
+    marginBottom: '-1pt'
   }
 });
 
