@@ -98,22 +98,38 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
     });
   }
 
-  if (target.stimInfo) {
+  if (target.stimInfo || target.dualText || target.complexity) {
+  let subsects: ContentSection [] = [];
+    
     sections.push({
       title: 'Stimuli/Text Complexity',
-      jsx: undefined,
-      subsections: [
-        {
-          title: 'Passage',
-          jsx: parseContent(target.stimInfo)
-        },
-        {
-          title: 'Text Complexity',
-          jsx: parseContent(target.dualText)
-        }
-      ]
+      jsx: undefined
     });
+    
+    if (target.stimInfo){
+    subsects.push({
+            title: 'Passage',
+            jsx: parseContent(target.stimInfo)
+       });
+    }
+
+    if (target.complexity){
+      subsects.push({
+        title: 'Text Complexity',
+        jsx: parseContent(target.complexity)
+      });
+     }
+
+     if (target.dualText){
+      subsects.push({
+        title: 'Dual Text',
+        jsx: parseContent(target.dualText)
+      });
+     }
+     sections[sections.length-1].subsections=subsects;
   }
+
+  
   if (target.accessibility) {
     sections.push({
       title: 'Accessibility Concerns',
