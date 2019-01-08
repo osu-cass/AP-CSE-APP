@@ -109,7 +109,7 @@ export class FilterClient implements IFilterClient {
   }
 
   private async updateClaims(params: CSEFilterParams): Promise<SearchBaseModel[] | undefined> {
-    if (params.subject && params.grades) {
+    if (params.subject && params.grades && params.grades.length) {
       const result = await this.getClaimOptions(params.subject, params.grades);
 
       return result.claimNumbers;
@@ -119,7 +119,7 @@ export class FilterClient implements IFilterClient {
   }
 
   private async updateTargets(params: CSEFilterParams): Promise<SearchBaseModel[] | undefined> {
-    if (params.grades && params.subject && params.claim) {
+    if (params.grades && params.grades.length && params.subject && params.claim) {
       const result = await this.getTargetOptions(params.subject, params.grades, params.claim);
 
       return result.targetShortCodes;

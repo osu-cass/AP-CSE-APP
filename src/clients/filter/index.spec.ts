@@ -44,16 +44,32 @@ describe('FilterClient.getFilterOptions', () => {
     expect(options).toEqual(expected);
   });
 
-  it('existing options', async () => {
+  it('keeps grade and subject when grade changed', async () => {
     const params: CSEFilterParams = {
       grades: ['g1', 'g2']
     };
 
+    // ensures we don't reload grades or subjects when grade changes
     const existing: CSEFilterOptions = {
       grades: [...foGradeSubject.grades, { code: 'g3', label: 'three' }],
       subjects: [...foGradeSubject.subject, { code: 's3', label: 'science' }]
     };
     const options = await client.getFilterOptions(params, FilterType.Grade, existing);
+    expect(options).toEqual(existing);
+  });
+
+  it('keeps grade and subject when subject changed', async () => {
+    const params: CSEFilterParams = {
+      grades: [],
+      subject: 's1'
+    };
+
+    // ensures we don't reload grades or subjects when grade changes
+    const existing: CSEFilterOptions = {
+      grades: [...foGradeSubject.grades, { code: 'g3', label: 'three' }],
+      subjects: [...foGradeSubject.subject, { code: 's3', label: 'science' }]
+    };
+    const options = await client.getFilterOptions(params, FilterType.Subject, existing);
     expect(options).toEqual(existing);
   });
 
@@ -75,6 +91,29 @@ describe('FilterClient.getFilterOptions', () => {
       claims: foClaim.claimNumbers
     };
     const options = await client.getFilterOptions(params, FilterType.Subject, existing);
+    expect(options).toEqual(expected);
+  });
+
+  it('claim changed', async () => {
+    const params: CSEFilterParams = {
+      grades: ['g1', 'g2'],
+      subject: 's1',
+      claim: 'c1'
+    };
+
+    const existing: CSEFilterOptions = {
+      grades: foGradeSubject.grades,
+      subjects: foGradeSubject.subject,
+      claims: foClaim.claimNumbers
+    };
+
+    const expected: CSEFilterOptions = {
+      grades: foGradeSubject.grades,
+      subjects: foGradeSubject.subject,
+      claims: foClaim.claimNumbers,
+      targets: foTarget.targetShortCodes
+    };
+    const options = await client.getFilterOptions(params, FilterType.Claim, existing);
     expect(options).toEqual(expected);
   });
 });
