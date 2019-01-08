@@ -27,7 +27,7 @@ describe('FilterClient.getFilterOptions', () => {
     window.fetch = fetchMockGenerator({
       'http://localhost:3000/api/filter': foGradeSubject,
       'http://localhost:3000/api/filter?subject=s1&grades=g1,g2': foClaim,
-      'http://localhost:3000/api/filter?subject=s2&grades=g1,g2&claimNumber=c1': foTarget
+      'http://localhost:3000/api/filter?subject=s1&grades=g1,g2&claimNumber=c1': foTarget
     });
   });
 
@@ -51,9 +51,30 @@ describe('FilterClient.getFilterOptions', () => {
 
     const existing: CSEFilterOptions = {
       grades: [...foGradeSubject.grades, { code: 'g3', label: 'three' }],
-      subjects: [...foGradeSubject.grades, { code: 's3', label: 'science' }]
+      subjects: [...foGradeSubject.subject, { code: 's3', label: 'science' }]
     };
     const options = await client.getFilterOptions(params, FilterType.Grade, existing);
     expect(options).toEqual(existing);
+  });
+
+  it('subject changed', async () => {
+    const params: CSEFilterParams = {
+      grades: ['g1', 'g2'],
+      subject: 's1'
+    };
+
+    const existing: CSEFilterOptions = {
+      grades: foGradeSubject.grades,
+      subjects: foGradeSubject.subject,
+      claims: [{ code: 'c3', label: 'three' }]
+    };
+
+    const expected: CSEFilterOptions = {
+      grades: foGradeSubject.grades,
+      subjects: foGradeSubject.subject,
+      claims: foClaim.claimNumbers
+    };
+    const options = await client.getFilterOptions(params, FilterType.Subject, existing);
+    expect(options).toEqual(expected);
   });
 });

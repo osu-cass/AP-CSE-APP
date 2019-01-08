@@ -89,7 +89,7 @@ export class FilterClient implements IFilterClient {
 
       if (change === FilterType.Subject || change === FilterType.Grade) {
         newOptions.claims = await this.updateClaims(params);
-        newOptions.targets = undefined;
+        newOptions.targets = await this.updateTargets(params);
       }
       if (change === FilterType.Claim) {
         newOptions.targets = await this.updateTargets(params);
@@ -119,7 +119,7 @@ export class FilterClient implements IFilterClient {
   }
 
   private async updateTargets(params: CSEFilterParams): Promise<SearchBaseModel[] | undefined> {
-    if (params.subject && params.claim) {
+    if (params.grades && params.subject && params.claim) {
       const result = await this.getTargetOptions(params.subject, params.grades, params.claim);
 
       return result.targetShortCodes;
