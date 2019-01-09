@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TargetDetails/Standards Multiple Standards 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <p>
+    <strong>
+      S-3a
+    </strong>
+     
+    <span>
+      Mock standard
+      <br />
+    </span>
+  </p>
+  <p>
+    <strong>
+      S-3b
+    </strong>
+     
+    <span>
+      Mock standard
+      <br />
+    </span>
+  </p>
+  <p>
+    <strong>
+      S-3c
+    </strong>
+     
+    <span>
+      Mock standard
+      <br />
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Storyshots TargetDetails/Standards One Standard 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <p>
+    <strong>
+      S-3a
+    </strong>
+     
+    <span>
+      Mock standard
+      <br />
+    </span>
+  </p>
+</div>
+`;

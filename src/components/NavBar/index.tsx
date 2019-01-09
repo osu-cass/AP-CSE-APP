@@ -1,11 +1,20 @@
 import React from 'react';
-import { Colors, Styles, iconStyle, mediaQueries, SizeBreaks } from '../../constants/style';
-import { MainMenu } from './MainMenu';
-import { SearchBar } from '../SearchBar';
-import { HelpCircle, Menu } from 'react-feather';
-import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
+import { HelpCircle, Home, Search, Eye, Grid } from 'react-feather';
+
+import {
+  Colors,
+  Styles,
+  iconStyle,
+  mediaQueries,
+  mobileIconStyle,
+  SizeBreaks
+} from '../../constants/style';
 import css from 'styled-jsx/css';
+import { SearchBar } from '../SearchBar';
+import { HeaderLogo, MainMenu } from './primitives';
+import { MobileBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const sbLogo = require('@sbac/sbac-ui-kit/src/images/SmarterBalanced-Logo.png') as string;
@@ -28,24 +37,6 @@ const globalStyles = css`
     margin-bottom: 8px;
   }
 `;
-
-export const HeaderLogo: React.SFC = () => (
-  <a href="https://www.smarterbalanced.org/" target="_blank" rel="noopener noreferrer">
-    <img alt="Smarter Balanced logo" src={sbLogo} className="sb-logo" />
-    <style jsx>{`
-      .sb-logo {
-        width: 128px;
-        padding: 3px ${Styles.paddingUnit} 3px 3px;
-      }
-
-      @media ${mediaQueries.tabletAndMobile} {
-        .sb-logo {
-          width: 100px;
-        }
-      }
-    `}</style>
-  </a>
-);
 
 export const NavBar: React.SFC = () => {
   const linkStyle: React.CSSProperties = {
@@ -132,3 +123,57 @@ export const NavBar: React.SFC = () => {
     </header>
   );
 };
+
+const noUnderline: React.CSSProperties = {
+  textDecoration: 'none',
+  color: Colors.sbGray
+};
+
+export const MobileNavBar: React.SFC = () => (
+  <nav>
+    <Link to="/" style={noUnderline}>
+      <div>
+        <Home {...mobileIconStyle} />
+        Home
+      </div>
+    </Link>
+    <Link to="/search" style={noUnderline}>
+      <div>
+        <Search {...mobileIconStyle} />
+        Search
+      </div>
+    </Link>
+    <Link to="/search" style={noUnderline}>
+      <div>
+        <Eye {...mobileIconStyle} />
+        Explore
+      </div>
+    </Link>
+    <Link to="/resources" style={noUnderline}>
+      <div>
+        <Grid {...mobileIconStyle} />
+        Resources
+      </div>
+    </Link>
+    <style jsx>{`
+      nav {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 40px;
+        background-color: ${Colors.sbGrayLighter};
+        width: 100vw;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.75em;
+        padding: 3px;
+      }
+    `}</style>
+  </nav>
+);
+export const MobileNavBarWrapped = mediaQueryWrapper(MobileNavBar, MobileBreakSize);

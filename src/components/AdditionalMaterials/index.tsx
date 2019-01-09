@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import { HelpCircle } from 'react-feather';
 import css from 'styled-jsx/css';
+import React, { Fragment } from 'react';
+
 import { Colors } from '../../constants/style';
 import { digitalLibraryLinks } from '../../constants/links';
 

@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
-import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
-import { TaskButton, TaskButtonProps } from './TaskButton';
+import React, { Component } from 'react';
+
 import { IClaim } from '../../models/claim';
-import { DocumentProps } from '../PDFLink/Document/DocumentModels';
-import { ClaimMe } from '../PDFLink/Document/mocks/testData';
-import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
-import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
 import { createDocument } from '../PDFLink/Document';
-import { parseExamples } from '../MainContent/parseUtils';
+import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
+import { DocumentProps } from '../PDFLink/Document/DocumentModels';
+import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
+import { TaskButton, TaskButtonProps, ToggleClassname } from './TaskButton';
 
 /**
  * Properties for DownloadModal
@@ -157,9 +154,12 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
    */
   toggleSelection(taskButtons: TaskButtonProps[], toggledButton: TaskButtonProps, idx: number) {
     taskButtons[0].toggled = false;
-    taskButtons[0].cName = 'unchecked';
+    taskButtons[0].cName = ToggleClassname.Unchecked;
     toggledButton.toggled = !toggledButton.toggled;
-    toggledButton.cName = toggledButton.cName === 'unchecked' ? 'checked' : 'unchecked';
+    toggledButton.cName =
+      toggledButton.cName === ToggleClassname.Unchecked
+        ? ToggleClassname.Checked
+        : ToggleClassname.Unchecked;
     taskButtons[idx] = toggledButton;
     let togglecount = 0;
     taskButtons.forEach(task => {
@@ -167,7 +167,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     });
     if (togglecount === 0) {
       taskButtons[0].toggled = true;
-      taskButtons[0].cName = 'checked';
+      taskButtons[0].cName = ToggleClassname.Checked;
     }
     this.setState({ taskButtonProps: taskButtons, selectedList: [] });
   }
@@ -192,10 +192,10 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   toggleEntireTarget(taskButtons: TaskButtonProps[]) {
     taskButtons.forEach(task => {
       task.toggled = false;
-      task.cName = 'unchecked';
+      task.cName = ToggleClassname.Unchecked;
     });
     taskButtons[0].toggled = true;
-    taskButtons[0].cName = 'checked';
+    taskButtons[0].cName = ToggleClassname.Checked;
     this.setState({ taskButtonProps: taskButtons, selectedList: [] });
   }
   /**
@@ -227,7 +227,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   generateTaskButtons(taskArray: TaskButtonProps[], task: string) {
     taskArray.push({
       toggled: false,
-      cName: 'unchecked',
+      cName: ToggleClassname.Unchecked,
       id: task.replace(' ', '-').toLowerCase(),
       taskName: task,
       toggleParent: this.toggleButton
@@ -240,14 +240,14 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   generateDefaultButtons(taskArray: TaskButtonProps[]) {
     taskArray.push({
       toggled: true,
-      cName: 'checked',
+      cName: ToggleClassname.Checked,
       id: 'entire-target',
       taskName: 'Entire Target',
       toggleParent: this.toggleButton
     });
     const overview = {
       toggled: false,
-      cName: 'unchecked',
+      cName: ToggleClassname.Unchecked,
       id: 'overview',
       key: 'overview',
       taskName: 'Overview',

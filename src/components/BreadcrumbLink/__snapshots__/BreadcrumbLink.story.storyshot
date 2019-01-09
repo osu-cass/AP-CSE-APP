@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Breadcrumbs/Breadcrumb Link Subject link 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundImage": "linear-gradient(90deg, #006298, #0085AD)",
+      }
+    }
+  >
+    <ul>
+      <li>
+        <a
+          href="/ela"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "20px",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <span
+            aria-label="Subject"
+          >
+            ELA
+          </span>
+        </a>
+        <style
+          jsx={true}
+        >
+          
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+      }
+      li:before {
+        content: '';
+        height: 32px;
+        width: 32px;
+        right: 20px;
+        border-top: 1px solid #66a1c1;
+        border-right: 1px solid #66a1c1;
+        transform: rotate(45deg);
+      }
+    
+        </style>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

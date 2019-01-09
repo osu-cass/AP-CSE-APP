@@ -19,7 +19,7 @@ addDecorator(checkA11y);
 addDecorator(fontDecorator);
 
 function loadStories() {
-  const req = require.context('../src', true, /\.storybook\.tsx$/);
+  const req = require.context('../src', true, /\.story\.tsx$/);
 
   req.keys().forEach(file => req(file));
   // You can require as many stories as you need.

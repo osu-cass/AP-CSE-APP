@@ -1,10 +1,11 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { render, PDFLink, DownloadIcon, PDFDownloadLinkRenderProps } from './';
+import { mount, shallow } from 'enzyme';
+
+import { createDocument } from './Document';
 import { ClaimMe } from './Document/mocks/testData';
 import { DocumentProps } from './Document/DocumentModels';
-import { createDocument } from './Document';
+import { render, PDFLink, DownloadIcon, PDFDownloadLinkRenderProps } from './';
 
 const mockProps: DocumentProps = {
   claim: ClaimMe,

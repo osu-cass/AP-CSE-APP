@@ -6,3 +6,11 @@ plugins:
         - FIXME
         - TODO
         - TO DO
+exclude_patterns:
+  - '**/*.story.tsx'
+  - '**/__mocks__/'
+  - '**/__snapshots__/'
+  - '**/*.spec.ts'
+  - '**/*.spec.tsx'
+  - '/mock_api_data/'
+  - '**/*.d.ts'

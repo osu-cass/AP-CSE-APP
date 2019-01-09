@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TargetDetails/Evidence Multiple Evidences 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <ol>
+    <li>
+      <span>
+        Evidence description
+        <br />
+      </span>
+    </li>
+    <li>
+      <span>
+        Evidence description
+        <br />
+      </span>
+    </li>
+    <li>
+      <span>
+        Evidence description
+        <br />
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots TargetDetails/Evidence One Evidence 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <ol>
+    <li>
+      <span>
+        Evidence description
+        <br />
+      </span>
+    </li>
+  </ol>
+</div>
+`;

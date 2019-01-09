@@ -1,9 +1,37 @@
 import React from 'react';
-import { Section, MainHeader, SubHeader } from '..//MainContent/Components';
+import { Element } from 'react-scroll';
+
+import { GenericContentProps } from '.';
 import { ContentNav } from '../ContentNav';
 import { ItemProps } from '../ContentNav/Item';
-import { mediaQueries } from '../../constants/style';
-import { GenericContentProps } from '.';
+
+export interface HeaderProps {
+  text: string;
+}
+export interface SectionProps {
+  name: string;
+}
+export const Section: React.SFC<SectionProps> = ({ name, children }) => (
+  <Element name={name}>
+    <div>{children}</div>
+    <style jsx>{`
+      div {
+        padding-left: 0.5em;
+      }
+    `}</style>
+  </Element>
+);
+
+export const MainHeader = ({ text }: HeaderProps) => (
+  <header>
+    <h2>{text}</h2>
+  </header>
+);
+export const SubHeader = ({ text }: HeaderProps) => (
+  <header>
+    <h3>{text}</h3>
+  </header>
+);
 
 export const DesktopGenericContentPage: React.SFC<GenericContentProps> = ({
   contentSections,

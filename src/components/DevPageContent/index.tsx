@@ -1,8 +1,9 @@
 import React from 'react';
+import css from 'styled-jsx/css';
+import { FileText } from 'react-feather';
+
 import { LinkButton } from '../LinkButton';
 import { Styles, Colors } from '../../constants/style';
-import { FileText } from 'react-feather';
-import css from 'styled-jsx/css';
 
 const fileIcon = <FileText size={40} color={Colors.sbWhite} />;
 
