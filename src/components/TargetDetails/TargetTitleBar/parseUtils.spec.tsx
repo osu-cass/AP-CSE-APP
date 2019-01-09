@@ -20,5 +20,6 @@ describe('ParseUtils', () => {
       expect(array.length).toBe(9);
       expect(single.length).toBe(3);
     }
+    expect(parseExamples('')).toBe(undefined);
   });
 });
