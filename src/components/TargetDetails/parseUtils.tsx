@@ -118,13 +118,27 @@ export const parseContent = (text: string | undefined) => {
   });
 };
 
-export const parseExamples = (example: string) => {
-  const lines = splitByNewLine(example);
+export const parseExamples = (example: string | string[]) => {
+  let lines: string[] | undefined = [];
+  if (typeof example === 'object') {
+    example.forEach(e => {
+      const splits = splitByNewLine(e);
+      if (splits) {
+        splits.forEach(s => {
+          if (lines) {
+            lines.push(s);
+          }
+        });
+      }
+    });
+  } else {
+    lines = splitByNewLine(example);
+  }
   let content;
   if (lines) {
     content = lines.map(parseContent);
   } else {
-    content = parseContent(example);
+    content = parseContent(example as string);
   }
 
   return content;
