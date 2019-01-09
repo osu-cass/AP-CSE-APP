@@ -1,12 +1,16 @@
 {
-  "presets": [["@babel/preset-env", {
-    "useBuiltIns": "usage",
-    "debug":true
-  }], "@babel/typescript", "@babel/react"],
+  "presets": [
+    ["@babel/preset-env", {
+    "useBuiltIns": "usage"
+  }], "@babel/preset-typescript", [
+    "@babel/preset-react", {
+    "useBuiltIns": true,
+  }]],
   "plugins": [
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-arrow-functions",
     "@babel/plugin-transform-runtime",
     "@babel/plugin-transform-shorthand-properties",
     "styled-jsx/babel"

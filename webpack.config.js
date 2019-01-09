@@ -3,12 +3,15 @@ const webpack = require('webpack');
 const AutoDllPlugin = require('autodll-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: isDev ? 'development' : 'production',
-  entry: './src/index.tsx',
+  entry: ['babel-polyfill', './src/index.tsx'],
   devtool: isDev ? 'source-map' : 'none',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -21,17 +24,30 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?)|(js)|(es.js)$/,
-        exclude: /node_modules/,
-        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules', '@fortawesome', 'free-solid-svg-icons')],
+        test: /\.(tsx?)|(js?)$/,
+        include: [
+          path.resolve(__dirname, 'src'), 
+          path.resolve(__dirname, 'node_modules', 'query-string')],
         loader: 'babel-loader'
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader']
+        use: isDev
+          ? ["style-loader", "css-loader"]
+          : ExtractTextPlugin.extract({
+              use: "css-loader?minimize"
+            })
       },
       {
-        test: /\.(png|jpg|jpeg|woff2?|ttf)$/,
+        test: /\.less$/,
+        use: isDev
+          ? ["style-loader", "css-loader", "less-loader"]
+          : ExtractTextPlugin.extract({
+              use: ["css-loader?minimize", "less-loader"]
+            })
+      },
+      {
+        test: /\.(ttf|eot|png|svg|jpg|jpeg|woff2?|ttf)(\?.*$|$)/,
         use: {
           loader: 'file-loader',
           options: {
