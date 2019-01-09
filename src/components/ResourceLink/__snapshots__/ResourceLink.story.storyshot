@@ -172,7 +172,7 @@ exports[`Storyshots Resource Link Complete example 1`] = `
         font-size: 1em;
         height: 80px;
       }
-      @media (max-width: 500px) {
+      @media (max-width: 800px) {
         .desc {
           height: auto;
         }

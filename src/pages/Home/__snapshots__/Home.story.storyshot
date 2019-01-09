@@ -198,7 +198,7 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
         background-repeat: no-repeat;
         height: 100%;
       }
-      @media (max-width: 500px) {
+      @media (max-width: 800px) {
         :global(.home-image){
           background-image: none;
           background-color:white;
@@ -256,7 +256,7 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
           -webkit-overflow-scrolling: touch;
           flex-grow: 1;
         }
-        @media (max-width: 500px) {
+        @media (max-width: 800px) {
           .mobile-padding {
             height: 200px;
             width: 100px;
