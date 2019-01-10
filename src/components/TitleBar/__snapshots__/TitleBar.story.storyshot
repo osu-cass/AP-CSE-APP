@@ -93,7 +93,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
             flex-direction: column;
             color: White;
           }
-          @media (max-width: 500px) {
+          @media (max-width: 800px) {
             .download-label {
               display: none;
             }
@@ -282,7 +282,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
             flex-direction: column;
             color: White;
           }
-          @media (max-width: 500px) {
+          @media (max-width: 800px) {
             .download-label {
               display: none;
             }
@@ -526,7 +526,7 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
             flex-direction: column;
             color: White;
           }
-          @media (max-width: 500px) {
+          @media (max-width: 800px) {
             .download-label {
               display: none;
             }
