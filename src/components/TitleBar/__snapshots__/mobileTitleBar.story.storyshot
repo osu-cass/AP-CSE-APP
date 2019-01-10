@@ -80,7 +80,7 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with a claim o
             flex-direction: column;
             color: White;
           }
-          @media (max-width: 500px) {
+          @media (max-width: 800px) {
             .download-label {
               display: none;
             }
@@ -226,7 +226,7 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with all data 
             flex-direction: column;
             color: White;
           }
-          @media (max-width: 500px) {
+          @media (max-width: 800px) {
             .download-label {
               display: none;
             }
@@ -418,7 +418,7 @@ exports[`Storyshots Mobile TitleBar component Renders a download button 1`] = `
             flex-direction: column;
             color: White;
           }
-          @media (max-width: 500px) {
+          @media (max-width: 800px) {
             .download-label {
               display: none;
             }
