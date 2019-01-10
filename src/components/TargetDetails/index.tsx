@@ -83,44 +83,35 @@ function taskModelSections(
   });
 }
 
-export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
-  let sections: ContentSection[] = [];
-  if (target.clarification) {
-    sections.push({
-      title: 'Clarification',
-      jsx: parseContent(target.clarification)
+function fillValidSection(section: string, sections: ContentSection[], title: string){
+  if(section){
+   sections.push({
+      title: title,
+      jsx: parseContent(section)
     });
   }
+}
 
+function setUpTargetSections(target: ITarget, sections: ContentSection[]){
+  fillValidSection(target.clarification, sections, 'Clarification')
   if (target.standards) {
     sections.push({
       title: 'Standards',
       jsx: <Standards standards={target.standards} />
     });
   }
-
-  if (target.stimInfo) {
+  if (target.stimInfo || target.dualText || target.complexity) {
     sections.push({
       title: 'Stimuli/Text Complexity',
-      jsx: undefined,
-      subsections: [
-        {
-          title: 'Passage',
-          jsx: parseContent(target.stimInfo)
-        },
-        {
-          title: 'Text Complexity',
-          jsx: parseContent(target.dualText)
-        }
-      ]
+      jsx: undefined
     });
+    const subsects: ContentSection []= [];
+    fillValidSection(target.stimInfo, subsects, 'Passage');
+    fillValidSection(target.dualText, subsects, 'Dual Text');
+    fillValidSection(target.complexity, subsects, 'Text Complexity');
+    sections[sections.length-1].subsections=subsects;
   }
-  if (target.accessibility) {
-    sections.push({
-      title: 'Accessibility Concerns',
-      jsx: parseContent(target.accessibility)
-    });
-  }
+  fillValidSection(target.accessibility, sections, 'Accessibility Concerns')
 
   // evidence required
   if (target.evidence) {
@@ -128,8 +119,11 @@ export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
       title: 'Evidence Required',
       jsx: <Evidence evidence={target.evidence} />
     });
-  }
-
+  } 
+}
+export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
+  let sections: ContentSection[] = [];
+  setUpTargetSections(target, sections);
   // add task model sections
   sections = sections.concat(taskModelSections(target.taskModels, target.stem));
   sections.push({
