@@ -3,7 +3,7 @@ import { FilterType } from '@osu-cass/sb-components';
 import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
 import { foGradeSubject, foClaim, foTarget } from './__mocks__';
 
-const fetchMockGenerator = (result: { [url: string]: object }) =>
+export const fetchMockGenerator = (result: { [url: string]: object }) =>
   jest.fn().mockImplementation((req: string) => {
     const data = result[req];
 
