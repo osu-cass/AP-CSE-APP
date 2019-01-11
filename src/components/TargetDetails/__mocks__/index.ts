@@ -228,7 +228,7 @@ export const targetMock: ITarget = {
 };
 
 export const tableMock: ITable = {
-  Headers: [' ', ' Source #1: [title] ', ' Source #2: [title] ', ' Both ', ' Neither '],
+  HeaderRow: [' ', ' Source #1: [title] ', ' Source #2: [title] ', ' Both ', ' Neither '],
   DataRows: [
     [' [idea/opinion] ', ' ', ' ', ' ', ' '],
     [' [idea/opinion] ', ' ', ' ', ' ', ' '],

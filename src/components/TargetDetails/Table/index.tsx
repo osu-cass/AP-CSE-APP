@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface ITable {
-  Headers: string[];
+  HeaderRow: string[];
   DataRows: string[][];
 }
 
@@ -15,8 +15,8 @@ export const Table: React.SFC<TableProps> = ({ table }) => {
       <table className="content-table">
         <thead>
           <tr>
-            {table.Headers.map((e, i) => (
-              <th key={i}>{e}</th>
+            {table.HeaderRow.map((col, i) => (
+              <th key={i}>{col}</th>
             ))}
           </tr>
         </thead>
