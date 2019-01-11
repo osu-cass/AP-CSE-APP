@@ -96,9 +96,15 @@ const HomePageComponent = () => (
           background-color:white;
         }
         .passage{
-          max-width:70vw;
+          max-width:97vw;
           padding:3px;
         }
+        .passage-content {
+          width: 87vw;
+         }
+         .single-button{
+           width:87vw;
+         }
         .content{
           margin-top:10px;
         }
