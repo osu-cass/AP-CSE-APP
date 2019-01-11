@@ -111,7 +111,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       }
       if (isActive) {
         content = item.contentKey;
-        expanded = !item.expanded;
+        expanded = true;
       }
 
       return { ...item, expanded, subItems: newSubItems, active: isActive };
