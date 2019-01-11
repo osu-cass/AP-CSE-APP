@@ -29,7 +29,7 @@ const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
 
 function replaceFractions(text: string): string {
   let newContent = text;
-  const fractionPattern = /\$\\frac{(\w+)}{(\w+)}\$/g;
+  const fractionPattern = /\$.*\\frac{(\w+)}{(\w+)}\$/g;
   const match = text.match(fractionPattern);
 
   if (match) {
@@ -89,7 +89,7 @@ const parseDoubleAsterisks = (text: string, underlined: boolean) => {
 // I'm assuming you've already checked if this line of the
 // content is an image prior to this function call
 export const parseImageTags = (text: string): JSX.Element => {
-  const urlPattern = /\!\[\]\((.*)\)/;
+  const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
   const url = match && match[1];
 
@@ -108,7 +108,7 @@ export const parseContent = (text: string | undefined) => {
 
   return lines.map((line, index) => {
     let content;
-    if (line.startsWith('![](') && line.endsWith(')')) {
+    if (line.startsWith('![') && line.endsWith(')')) {
       content = parseImageTags(line);
     } else {
       content = parseDoubleAsterisks(line, underlined);
