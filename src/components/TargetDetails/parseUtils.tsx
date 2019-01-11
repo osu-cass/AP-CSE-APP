@@ -58,119 +58,7 @@ const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   return parsedText;
 };
 
-// remove the last elem each row in data stack since it has one more column
-const sanitizeDataStack = (dataStack: string[], columnCount: number) => {
-  const columnCountWithEmpty: number = columnCount + 1;
-  let rowCount = Math.floor(dataStack.length / columnCountWithEmpty);
-
-  const newDataArray: string[] = [];
-  for (let i = 0; dataStack.length; i++) {
-    const data = dataStack.pop();
-    if (i % columnCountWithEmpty === 0 && rowCount > 0) {
-      rowCount--;
-      continue;
-    }
-    if (data !== undefined) {
-      newDataArray.push(data);
-    }
-  }
-
-  // reverse array since it is a stack
-  return newDataArray.reverse();
-};
-
-const getTableStacks = (text: string) => {
-  const tableStacks: { headerStack: string[]; cleanDataStack: string[] }[] = [];
-  let headerStack: string[] = [];
-  let dataStack: string[] = [];
-  let columnCount: number = 0;
-  let tableFound: Boolean = false;
-  const parts = text.split('|');
-
-  for (let i = parts.length; i--; ) {
-    const dashs = parts[i].match(/\-+/);
-
-    if (dashs && dashs[0] && dashs[0].length === parts[i].length) {
-      if (!tableFound) {
-        tableFound = true;
-      }
-      columnCount++;
-      continue;
-    }
-
-    if (tableFound) {
-      headerStack.push(parts[i]);
-
-      if (columnCount === 1) {
-        const cleanDataStack: string[] = sanitizeDataStack(dataStack, headerStack.length);
-        tableStacks.push({ headerStack, cleanDataStack });
-        headerStack = [];
-        dataStack = [];
-
-        columnCount = 0;
-        tableFound = false;
-        continue;
-      }
-      columnCount--;
-    } else {
-      dataStack.push(parts[i]);
-    }
-  }
-
-  return tableStacks;
-};
-
-const renderTable = (tableStack: { headerStack: string[]; cleanDataStack: string[] }) => {
-  const table: ITable = { Headers: [], DataRows: [] };
-  table.Headers = tableStack.headerStack.reverse();
-
-  let curColCount: number = 0;
-  let curRowIndex: number = 0;
-  let curRowData: string[] = [];
-  // if the last row doesn't match the number of columns, render it out of the table
-  while (tableStack.cleanDataStack.length !== 0) {
-    // NOTE: Argument of type 'string | undefined' is not assignable to parameter of type 'string'
-    curRowData.push(tableStack.cleanDataStack.pop());
-    curColCount++;
-
-    if (curColCount === tableStack.headerStack.length) {
-      table.DataRows.push(curRowData);
-
-      curColCount = 0;
-      curRowIndex++;
-      curRowData = [];
-    }
-  }
-
-  let elementJsx = <Table table={table} />;
-
-  // NOTE: Operator '+=' cannot be applied to types 'Element' and 'Element[]'
-  elementJsx += curRowData.map((col, index) => {
-    return <React.Fragment key={index}>{col}</React.Fragment>;
-  });
-
-  return elementJsx;
-};
-
-export const parseTable = (text: string) => {
-  const parts = text.split(/(\|.+\|)/s);
-
-  if (parts.length === 1) return parts[0]; // no table syntax found
-
-  return parts.map((part, index) => {
-    if (index === 1) {
-      // array[1] is the table syntax
-      const tableStacks: { headerStack: string[]; cleanDataStack: string[] }[] = getTableStacks(
-        part
-      );
-      tableStacks.map((tableStack, index) => {
-        return renderTable(tableStack);
-      });
-    }
-
-    return <React.Fragment key={index}>{part}</React.Fragment>;
-  });
-};
+const grepTablesRegex = /(\|.+\|)/s;
 
 const parseSingleAsterisk = (text: string, underlined: boolean) => {
   const parts = text.split('*');
@@ -211,11 +99,71 @@ export const parseImageTags = (text: string): JSX.Element => {
   return <img src={url || ''} role="presentation" alt="" />;
 };
 
-export const parseContent = (text: string | undefined) => {
-  // NOTE: this function should be refactored in order to parse tables
-  // NOTE: Argument of type 'string | undefined' is not assignable to parameter of type 'string'
-  const parsedTextWithTables = parseTable(text);
+const parseColumns = (dataRow: string) => {
+  const sanitizedDataRow = dataRow.match(/\|(.+)\|/);
 
+  // index 1 is the data grepped
+  // from '| | data 1 | data 2 |' to ' | data 1 | data 2 '
+  if (sanitizedDataRow && sanitizedDataRow[1]) {
+    return sanitizedDataRow[1].split('|');
+  }
+
+  // NOTE: this will happen as an exception.
+  return dataRow.split('|');
+};
+
+const parseTable = (headerRow: string, dataRows: string[]) => {
+  const iTable: ITable = {
+    HeaderRow: parseColumns(headerRow),
+    DataRows: []
+  };
+
+  while (dataRows.length !== 0) {
+    const dataRow = dataRows.pop();
+    if (dataRows) {
+      iTable.DataRows.push(parseColumns(dataRow));
+    }
+  }
+
+  return iTable;
+};
+
+const parseTables = (text: string) => {
+  const tablesWithStringsJSX: JSX.Element[] = [];
+  const dataRows: string[] = [];
+
+  const lines = splitByNewLine(text);
+
+  if (!lines) return;
+  const underlined = isUnderlined(lines[0]);
+
+  let key = lines.length;
+  while (lines.length > 0) {
+    const line = lines.pop();
+    const matchedTableRow = line.match(/\|.*\|/); // ex) '| | data 1 | data 2 |'
+    if (matchedTableRow) {
+      const matchedTableHeaderDataDivider = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
+      if (matchedTableHeaderDataDivider) {
+        const headerRow = lines.pop();
+        tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
+        continue;
+      }
+
+      dataRows.push(line);
+      continue;
+    }
+
+    tablesWithStringsJSX.push(
+      <NewLine key={key}>{parseDoubleAsterisks(line, underlined)}</NewLine>
+    );
+    key--;
+  }
+
+  // Since parsing tables logic approached from bottom to top, the result JSX should be reversed.
+  return tablesWithStringsJSX.reverse();
+};
+
+const parseNoneTableContent = (text: string | undefined) => {
   const lines = splitByNewLine(text);
 
   if (!lines) return;
@@ -235,6 +183,30 @@ export const parseContent = (text: string | undefined) => {
 
     return <NewLine key={index}>{content}</NewLine>;
   });
+};
+
+
+const parseTableContent = (text: string | undefined) => {
+  const parts = text.split(grepTablesRegex);
+
+  return parts.map(part => {
+    const tableMatched = part.match(grepTablesRegex);
+    if (tableMatched) {
+      return parseTables(part);
+    }
+
+    return parseNoneTableContent(part);
+  });
+};
+
+export const parseContent = (text: string | undefined) => {
+  const foundTables = text.match(grepTablesRegex);
+
+  if (foundTables) {
+    return parseTableContent(text);
+  }
+
+  return parseNoneTableContent(text);
 };
 
 export const parseExamples = (example: string | string[]) => {
