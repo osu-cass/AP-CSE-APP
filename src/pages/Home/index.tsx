@@ -91,7 +91,7 @@ const HomePageComponent = () => (
     <div className="passage">
       <h1 className="passage-title">Welcome!</h1>
       <div className="passage-content">
-        The Content Spec Explorer is a tool for educators to learn about the design and content of
+        The Content Specification Explorer is a tool for educators to learn about the design and content of
         the Smarter Balanced assessments. <br />
         <br />
         Choose “Navigate to a Target” to find item specifications, linking the claims and assessment
