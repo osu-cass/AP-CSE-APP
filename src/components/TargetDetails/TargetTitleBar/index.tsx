@@ -31,11 +31,12 @@ export const parseBreadCrumbData = (
   claim: IClaim,
   targetList?: SearchBaseModel[]
 ): BreadcrumbsProps => {
+  const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
   return {
     targetList,
     subject: claim.subject,
     grades: claim.grades,
-    claim: claim.claimNumber,
+    claim: claimTitle,
     target: claim.target[0].title
   };
 };
@@ -45,8 +46,9 @@ export const parseDownloadBtnProps = (claim: IClaim): DownloadBtnProps => {
   };
 };
 export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
+  const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
   return {
-    claimTitle: claim.claimNumber,
+    claimTitle,
     claimDesc: claim.description,
     downloadBtnProps: { claim },
     targetTitle: claim.target[0].title,
