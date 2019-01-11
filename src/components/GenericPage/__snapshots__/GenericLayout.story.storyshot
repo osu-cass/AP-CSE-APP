@@ -71,7 +71,7 @@ exports[`Storyshots Generic Layout default 1`] = `
           -webkit-overflow-scrolling: touch;
           flex-grow: 1;
         }
-        @media (max-width: 500px) {
+        @media (max-width: 800px) {
           .mobile-padding {
             height: 200px;
             width: 100px;
