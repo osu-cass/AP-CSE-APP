@@ -32,6 +32,7 @@ export const parseBreadCrumbData = (
   targetList?: SearchBaseModel[]
 ): BreadcrumbsProps => {
   const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
+  
   return {
     targetList,
     subject: claim.subject,
@@ -49,6 +50,7 @@ export const parseTitleBarData = (claim: IClaim): TitleBarProps => {
   const codeSegments: string[] = claim.target[0].shortCode.split('.');
   const targetTitle: string = `Target ${codeSegments[codeSegments.length - 1].slice(1)}`;
   const claimTitle: string = `Claim ${claim.claimNumber.slice(1)}`;
+  
   return {
     claimTitle,
     targetTitle,
