@@ -122,7 +122,7 @@ export const parseExamples = (example: string | string[]) => {
   let lines: string[] | undefined = [];
   if (typeof example === 'string') {
     lines = splitByNewLine(example);
-  } else {
+  } else if (Array.isArray(example)) {
     example.forEach(e => {
       const splits = splitByNewLine(e);
       if (splits && lines) {
