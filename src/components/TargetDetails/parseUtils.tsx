@@ -120,26 +120,16 @@ export const parseContent = (text: string | undefined) => {
 
 export const parseExamples = (example: string | string[]) => {
   let lines: string[] | undefined = [];
-  if (typeof example === 'object') {
+  if (typeof example === 'string') {
+    lines = splitByNewLine(example);
+  } else {
     example.forEach(e => {
       const splits = splitByNewLine(e);
-      if (splits) {
-        splits.forEach(s => {
-          if (lines) {
-            lines.push(s);
-          }
-        });
+      if (splits && lines) {
+        lines = lines.concat(splits);
       }
     });
-  } else {
-    lines = splitByNewLine(example);
-  }
-  let content;
-  if (lines) {
-    content = lines.map(parseContent);
-  } else {
-    content = parseContent(example as string);
   }
 
-  return content;
+  return lines ? lines.map(parseContent) : parseContent(example as string);
 };
