@@ -83,17 +83,17 @@ function taskModelSections(
   });
 }
 
-function fillValidSection(section: string, sections: ContentSection[], title: string){
-  if(section){
+function fillValidSection(section: string, sections: ContentSection[], title: string) {
+  if(section) {
    sections.push({
-      title: title,
+      title,
       jsx: parseContent(section)
     });
   }
 }
 
-function setUpTargetSections(target: ITarget, sections: ContentSection[]){
-  fillValidSection(target.clarification, sections, 'Clarification')
+function setUpTargetSections(target: ITarget, sections: ContentSection[]) {
+  fillValidSection(target.clarification, sections, 'Clarification');
   if (target.standards) {
     sections.push({
       title: 'Standards',
@@ -111,7 +111,7 @@ function setUpTargetSections(target: ITarget, sections: ContentSection[]){
     fillValidSection(target.complexity, subsects, 'Text Complexity');
     sections[sections.length-1].subsections=subsects;
   }
-  fillValidSection(target.accessibility, sections, 'Accessibility Guidelines')
+  fillValidSection(target.accessibility, sections, 'Accessibility Guidelines');
 
   // evidence required
   if (target.evidence) {
@@ -119,7 +119,7 @@ function setUpTargetSections(target: ITarget, sections: ContentSection[]){
       title: 'Evidence Required',
       jsx: <Evidence evidence={target.evidence} />
     });
-  } 
+  }
 }
 export const TargetDetail: React.SFC<TargetDetailProps> = ({ target }) => {
   let sections: ContentSection[] = [];

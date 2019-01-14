@@ -4,7 +4,7 @@ import { CSEFilterParams, CSEFilterOptions } from '../../models/filter';
 import { foGradeSubject, foClaim, foTarget } from './__mocks__';
 
 export const fetchMockGenerator = (result: { [url: string]: object }) =>
-  jest.fn().mockImplementation((req: string) => {
+  jest.fn().mockImplementation(async (req: string) => {
     const data = result[req];
 
     return new Promise(resolve => {
