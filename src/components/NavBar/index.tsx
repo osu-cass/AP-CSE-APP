@@ -143,7 +143,7 @@ export const MobileNavBar: React.SFC = () => (
         Search
       </div>
     </Link>
-    <Link to="/search" style={noUnderline}>
+    <Link to="/explore?filter=open" style={noUnderline}>
       <div>
         <Eye {...mobileIconStyle} />
         Explore
