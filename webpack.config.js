@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: isDev ? 'development' : 'production',
-  entry: ['babel-polyfill', './src/index.tsx'],
+  entry: ['./src/index.tsx'],
   devtool: isDev ? 'source-map' : 'none',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -26,8 +26,11 @@ module.exports = {
       {
         test: /\.(tsx?)|(js?)$/,
         include: [
-          path.resolve(__dirname, 'src'), 
-          path.resolve(__dirname, 'node_modules', 'query-string')],
+          path.resolve(__dirname, 'src'),
+          // path.resolve(__dirname, 'node_modules', 'query-string'),
+          // path.resolve(__dirname, 'node_modules', 'strict-uri-encode'),
+          // path.resolve(__dirname, 'node_modules', 'setimmediate')
+        ],
         loader: 'babel-loader'
       },
       {

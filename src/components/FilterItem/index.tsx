@@ -19,6 +19,7 @@ function gradesToEnglish(grades: string[]) {
 
   return `${prefix} ${grades.join(', ')}`;
 }
+
 export const boldSearchText = (targetBodyText: string) => {
   const urlParams = new URLSearchParams(window.location.search);
   // tslint:disable-next-line : no-backbone-get-set-outside-model
