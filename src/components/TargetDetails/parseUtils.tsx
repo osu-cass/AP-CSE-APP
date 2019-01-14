@@ -130,46 +130,54 @@ const parseTable = (headerRow: string | undefined, dataRows: string[]) => {
   return iTable;
 };
 
-const parseTables = (text: string) => {
+const renderTable = (
+  lines: string[],
+  line: string,
+  dataRows: string[],
+  tablesWithStringsJSX: JSX.Element[]
+) => {
+  const matchedTableHeaderDataDivider = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
+  if (matchedTableHeaderDataDivider) {
+    const headerRow = lines.pop();
+    tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
+  } else {
+    dataRows.push(line);
+  }
+};
+
+const renderTablesWithLines = (lines: string[], underlined: boolean) => {
   const tablesWithStringsJSX: JSX.Element[] = [];
   const dataRows: string[] = [];
 
+  while (lines.length > 0) {
+    const line = lines.pop();
+    if (line) {
+      const matchedTableRow = line.match(/\|.*\|/); // ex) '| | data 1 | data 2 |'
+      if (matchedTableRow) {
+        renderTable(lines, line, dataRows, tablesWithStringsJSX);
+      } else {
+        tablesWithStringsJSX.push(<NewLine>{parseDoubleAsterisks(line, underlined)}</NewLine>);
+      }
+    } else {
+      tablesWithStringsJSX.push(<NewLine>{line}</NewLine>);
+    }
+  }
+
+  // Since parsing tables logic approached from bottom to top, the result JSX should be reversed.
+  return tablesWithStringsJSX.reverse();
+};
+
+const parseTables = (text: string) => {
   const lines = splitByNewLine(text);
 
   if (!lines) return;
   const underlined = isUnderlined(lines[0]);
 
-  let key = lines.length;
-  while (lines.length > 0) {
-    const line = lines.pop();
-
-    if (!line) {
-      tablesWithStringsJSX.push(<NewLine key={key}>{line}</NewLine>);
-      key--;
-      continue;
-    }
-
-    const matchedTableRow = line.match(/\|.*\|/); // ex) '| | data 1 | data 2 |'
-    if (matchedTableRow) {
-      const matchedTableHeaderDataDivider = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
-      if (matchedTableHeaderDataDivider) {
-        const headerRow = lines.pop();
-        tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
-        continue;
-      }
-
-      dataRows.push(line);
-      continue;
-    }
-
-    tablesWithStringsJSX.push(
-      <NewLine key={key}>{parseDoubleAsterisks(line, underlined)}</NewLine>
-    );
-    key--;
+  if (underlined) {
+    lines.splice(0, 2);
   }
 
-  // Since parsing tables logic approached from bottom to top, the result JSX should be reversed.
-  return tablesWithStringsJSX.reverse();
+  return renderTablesWithLines(lines, underlined);
 };
 
 const parseNoneTableContent = (text: string) => {
