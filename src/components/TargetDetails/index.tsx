@@ -111,7 +111,7 @@ function setUpTargetSections(target: ITarget, sections: ContentSection[]){
     fillValidSection(target.complexity, subsects, 'Text Complexity');
     sections[sections.length-1].subsections=subsects;
   }
-  fillValidSection(target.accessibility, sections, 'Accessibility Concerns')
+  fillValidSection(target.accessibility, sections, 'Accessibility Guidelines')
 
   // evidence required
   if (target.evidence) {

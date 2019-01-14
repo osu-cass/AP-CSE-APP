@@ -17,31 +17,13 @@ const sortStandards = (a: IStandards, b: IStandards) => {
   return 0;
 };
 
-const colorStandardCode = (code: string) => {
-  const found = code.match('^.*[0-9]$');
-  if (found) {
-    return (
-      <span>
-        {code}
-        <style jsx>{`
-          span {
-            color: #e00;
-          }
-        `}</style>
-      </span>
-    );
-  }
-
-  return code;
-};
-
 export interface StandardsProps {
   standards: IStandards[];
 }
 
 export const Standards: React.SFC<StandardsProps> = ({ standards }) => {
   const standardsJsx = standards.sort(sortStandards).map((standard, index) => {
-    const code = colorStandardCode(shortenStandardCode(standard.stdCode));
+    const code = shortenStandardCode(standard.stdCode);
     const desc = parseContent(standard.stdDesc);
 
     return (

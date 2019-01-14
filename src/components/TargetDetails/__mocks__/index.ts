@@ -160,19 +160,19 @@ export const parsedNavPropsMock: ItemProps[] = [
 export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   subject: 'English Language Arts',
   grades: ['6'],
-  claim: 'C1',
+  claim: 'Claim 1',
   target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
   targetList: undefined
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
-  claimTitle: 'C1',
+  claimTitle: 'Claim 1',
   claimDesc:
     'Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.',
   downloadBtnProps: {
     claim: ELAG3ClaimMock
   },
-  targetTitle: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
+  targetTitle: 'Target 1',
   targetDesc: 'placeholder'
 };
 export const parsedMobileTitleBarDataMock: MobileTitleBarProps = {
