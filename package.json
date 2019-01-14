@@ -120,6 +120,7 @@
     "styled-jsx": "^2.2.7",
     "typeface-pt-sans-caption": "0.0.54",
     "typeface-pt-serif": "0.0.54",
+    "url-search-params-polyfill": "^5.0.0",
     "whatwg-fetch": "^3.0.0",
     "yoga-layout": "github:naminho/yoga-layout-windows"
   },
