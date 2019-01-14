@@ -58,8 +58,6 @@ const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   return parsedText;
 };
 
-const grepTablesRegex = /(\|.+\|)/s;
-
 const parseSingleAsterisk = (text: string, underlined: boolean) => {
   const parts = text.split('*');
 
@@ -112,15 +110,19 @@ const parseColumns = (dataRow: string) => {
   return dataRow.split('|');
 };
 
-const parseTable = (headerRow: string, dataRows: string[]) => {
+const parseTable = (headerRow: string | undefined, dataRows: string[]) => {
   const iTable: ITable = {
-    HeaderRow: parseColumns(headerRow),
+    HeaderRow: [],
     DataRows: []
   };
 
+  if (headerRow) {
+    iTable.HeaderRow = parseColumns(headerRow);
+  }
+
   while (dataRows.length !== 0) {
     const dataRow = dataRows.pop();
-    if (dataRows) {
+    if (dataRow) {
       iTable.DataRows.push(parseColumns(dataRow));
     }
   }
@@ -140,6 +142,13 @@ const parseTables = (text: string) => {
   let key = lines.length;
   while (lines.length > 0) {
     const line = lines.pop();
+
+    if (!line) {
+      tablesWithStringsJSX.push(<NewLine key={key}>{line}</NewLine>);
+      key--;
+      continue;
+    }
+
     const matchedTableRow = line.match(/\|.*\|/); // ex) '| | data 1 | data 2 |'
     if (matchedTableRow) {
       const matchedTableHeaderDataDivider = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
@@ -163,7 +172,7 @@ const parseTables = (text: string) => {
   return tablesWithStringsJSX.reverse();
 };
 
-const parseNoneTableContent = (text: string | undefined) => {
+const parseNoneTableContent = (text: string) => {
   const lines = splitByNewLine(text);
 
   if (!lines) return;
@@ -185,8 +194,9 @@ const parseNoneTableContent = (text: string | undefined) => {
   });
 };
 
+const grepTablesRegex = /(\|.+\|)/s;
 
-const parseTableContent = (text: string | undefined) => {
+const parseTableContent = (text: string) => {
   const parts = text.split(grepTablesRegex);
 
   return parts.map(part => {
@@ -199,9 +209,8 @@ const parseTableContent = (text: string | undefined) => {
   });
 };
 
-export const parseContent = (text: string | undefined) => {
+export const parseContent = (text: string) => {
   const foundTables = text.match(grepTablesRegex);
-
   if (foundTables) {
     return parseTableContent(text);
   }
