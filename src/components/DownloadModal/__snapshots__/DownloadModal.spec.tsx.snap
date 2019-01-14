@@ -176,7 +176,9 @@ exports[`DownloadModal Renders Correctly 1`] = `
       <div
         id="pdf-page-count"
       >
-        This PDF will be X pages
+        This PDF will be 
+        0
+         pages
       </div>
       <div
         id="confirm-back-btn-container"

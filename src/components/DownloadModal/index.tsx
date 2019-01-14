@@ -32,6 +32,7 @@ export interface DownloadModalState {
   submitDownloadProps: DocumentProps;
   submitDownload: boolean;
   isDisabled: boolean;
+  pageCount: number;
 }
 
 const customStyles = {
@@ -69,7 +70,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         renderOverview: false,
         renderEntireTarget: false
       },
-      submitDownload: false
+      submitDownload: false,
+      pageCount: 0
     };
   }
   /**
@@ -354,9 +356,14 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
 
     return result;
   };
+
+  setPageCount = (totalPages: number) => {
+    this.setState({ pageCount: totalPages });
+  };
+
   confirmSelection() {
     const pdfDownLoadProps: PDFDownloadLinkRenderProps = {
-      document: createDocument({ ...this.state.submitDownloadProps }),
+      document: createDocument({ ...this.state.submitDownloadProps }, this.setPageCount),
       fileName: `${this.state.submitDownloadProps.claim.target[0].title}.pdf`
     };
 
@@ -366,8 +373,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         <div id="selections-list">
           <ul>{this.renderSelectionsList()}</ul>
         </div>
-        <div id="pdf-page-count">This PDF will be X pages</div>
         {this.state.submitDownload ? <PDFLink {...pdfDownLoadProps} /> : ''}
+        <div id="pdf-page-count">This PDF will be {this.state.pageCount} pages</div>
         <div id="confirm-back-btn-container">
           <button type="button" id="back-btn" onClick={this.handleBackButton}>
             Back

@@ -63,12 +63,10 @@ const renderTaskModels = (
   return taskModelComponent;
 };
 
-export function createDocument({
-  claim,
-  taskModels,
-  renderOverview,
-  renderEntireTarget
-}: DocumentProps): JSX.Element {
+export function createDocument(
+  { claim, taskModels, renderOverview, renderEntireTarget }: DocumentProps,
+  setPageCount: (num: number) => void
+): JSX.Element {
   const renderedTaskModels = renderTaskModels(
     { claim, taskModels: taskModels ? taskModels : [] },
     renderEntireTarget
@@ -84,7 +82,11 @@ export function createDocument({
         </View>
         <Text
           style={styles.pageNumber}
-          render={({ pageNumber, totalPages }: PageMeta) => `${pageNumber} / ${totalPages}`}
+          render={({ pageNumber, totalPages }: PageMeta) => {
+            setPageCount(totalPages !== undefined ? totalPages : 0);
+
+            return `${pageNumber} / ${totalPages}`;
+          }}
           fixed
         />
       </Page>
