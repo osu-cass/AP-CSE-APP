@@ -21,18 +21,18 @@ export const styles: DocumentStyles = StyleSheet.create({
     color: 'black'
   },
   numberContainer: {
-    height: '25px',
+    height: '25pt',
     position: 'relative'
   },
   flexImage: {
     display: 'flex',
     alignItems: 'right',
-    paddingRight: '20px'
+    paddingRight: '20pt'
   },
   header: {
     fontSize: 12
   },
   border: {
-    border: '1px solid red'
+    border: '1pt solid red'
   }
 }) as DocumentStyles;

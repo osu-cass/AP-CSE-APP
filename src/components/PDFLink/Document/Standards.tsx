@@ -22,10 +22,10 @@ const styles: StandardsStyles = StyleSheet.create({
     padding: 5,
     paddingRight: 8,
     paddingTop: 10,
-    borderTop: '1px solid black',
-    borderRight: '2px solid black',
-    borderBottom: '1px solid black',
-    borderLeft: '2px solid black',
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderBottom: '1pt solid black',
+    borderLeft: '2pt solid black',
     fontSize: 12,
     textAlign: 'right'
   },
@@ -37,14 +37,14 @@ const styles: StandardsStyles = StyleSheet.create({
     padding: 10,
     paddingLeft: 8,
     paddingTop: 10,
-    borderTop: '1px solid black',
-    borderBottom: '1px solid black',
-    borderRight: '2px solid black',
+    borderTop: '1pt solid black',
+    borderBottom: '1pt solid black',
+    borderRight: '2pt solid black',
     fontSize: 12
   },
   item: {
     display: 'flex',
-    padding: '3px',
+    padding: '3pt',
     margin: 3
   },
   desc: {
