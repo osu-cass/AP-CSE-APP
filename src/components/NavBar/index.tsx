@@ -46,7 +46,7 @@ export const NavBar: React.SFC = () => {
   };
 
   const handleRedirect = (search: string) => {
-    window.location.assign(`/search?search=${search}`);
+    window.location.assign(`/explore?search=${search}`);
   };
 
   return (
@@ -137,13 +137,7 @@ export const MobileNavBar: React.SFC = () => (
         Home
       </div>
     </Link>
-    <Link to="/search" style={noUnderline}>
-      <div>
-        <Search {...mobileIconStyle} />
-        Search
-      </div>
-    </Link>
-    <Link to="/search" style={noUnderline}>
+    <Link to="/explore?filter=open" style={noUnderline}>
       <div>
         <Eye {...mobileIconStyle} />
         Explore

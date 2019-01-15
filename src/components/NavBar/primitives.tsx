@@ -66,11 +66,6 @@ export const MainMenu: React.SFC = () => {
           <Home {...iconStyle} />
         </MenuItem>
       </Link>
-      <Link className="nav-item" to="/search" style={noUnderline}>
-        <MenuItem name="Search">
-          <Search {...iconStyle} />
-        </MenuItem>
-      </Link>
       <Link className="nav-item" to="/explore?filter=open" style={noUnderline}>
         <MenuItem name="Explore">
           <Eye {...iconStyle} />
