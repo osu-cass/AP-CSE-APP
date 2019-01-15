@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { PDFViewer } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
 import { ClaimMe } from './mocks/testData';
 import { createDocument } from '.';
 import { DocumentProps } from './DocumentModels';
@@ -24,17 +24,17 @@ const elaDocumentPartial: DocumentProps = {
 
 storiesOf('PDFLink DontTest/Document', module)
   .add('ELA Document', () => (
-    <PDFViewer style={iframeStyle}>{createDocument(elaDocumentFull)}</PDFViewer>
+    <ReactPDF.PDFViewer>{createDocument(elaDocumentFull)}</ReactPDF.PDFViewer>
   ))
   .add('ELA document partial', () => (
-    <PDFViewer style={iframeStyle}>{createDocument(elaDocumentPartial)}</PDFViewer>
+    <ReactPDF.PDFViewer>{createDocument(elaDocumentPartial)}</ReactPDF.PDFViewer>
   ))
   .add('Renders with Test data', () => (
-    <PDFViewer style={iframeStyle}>
+    <ReactPDF.PDFViewer>
       {createDocument({
         claim: ClaimMe,
         taskModels: ClaimMe.target[0].taskModels,
         renderEntireTarget: true
       })}
-    </PDFViewer>
+    </ReactPDF.PDFViewer>
   ));

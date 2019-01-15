@@ -72,7 +72,7 @@ export interface DOKProps {
 
 export const DOK = ({ content }: DOKProps) => {
   return (
-    <View minPresenceAhead={100} wrap={false} style={styles.flexRow}>
+    <View wrap={false} style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
         <Text style={styles.bold}>Depth Of Knowledge</Text>
       </View>

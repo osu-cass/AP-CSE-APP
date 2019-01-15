@@ -18,7 +18,8 @@ const styles: OneColumnStyles = StyleSheet.create({
     padding: '5pt',
     width: '100%',
     marginBottom: '-1pt'
-  }
+  },
+  flexColumn: {}
 });
 
 export interface OneColumnLayoutProps {
