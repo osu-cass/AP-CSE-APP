@@ -8,8 +8,7 @@ const splitByNewLine = (text: string | undefined) => {
 };
 
 const isUnderlined = (line: string) => {
-  return (
-    line ===
+  return line.includes(
     '*(**Note**: In this automated version of the item specification, underlined text appears in italics.)*'
   );
 };
@@ -130,31 +129,23 @@ const parseTable = (headerRow: string | undefined, dataRows: string[]) => {
   return iTable;
 };
 
-const renderTable = (
-  lines: string[],
-  line: string,
-  dataRows: string[],
-  tablesWithStringsJSX: JSX.Element[]
-) => {
-  const matchedTableHeaderDataDivider = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
-  if (matchedTableHeaderDataDivider) {
-    const headerRow = lines.pop();
-    tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
-  } else {
-    dataRows.push(line);
-  }
-};
-
-const renderTablesWithLines = (lines: string[], underlined: boolean) => {
+const parseTables = (lines: string[], underlined: boolean) => {
   const tablesWithStringsJSX: JSX.Element[] = [];
   const dataRows: string[] = [];
 
-  while (lines.length > 0) {
-    const line = lines.pop();
-    if (line) {
-      const matchedTableRow = line.match(/\|.*\|/); // ex) '| | data 1 | data 2 |'
-      if (matchedTableRow) {
-        renderTable(lines, line, dataRows, tablesWithStringsJSX);
+  for (let index = lines.length - 1; index >= 0; index--) {
+    const line = lines[index];
+    if (line !== '') {
+      const tableRow = line.match(/\|.*\|/);
+      if (tableRow) {
+        const headerDelimiter = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
+        if (headerDelimiter) {
+          const headerRow = lines[index - 1];
+          tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
+          index--;
+        } else {
+          dataRows.push(line);
+        }
       } else {
         tablesWithStringsJSX.push(<NewLine>{parseDoubleAsterisks(line, underlined)}</NewLine>);
       }
@@ -165,19 +156,6 @@ const renderTablesWithLines = (lines: string[], underlined: boolean) => {
 
   // Since parsing tables logic approached from bottom to top, the result JSX should be reversed.
   return tablesWithStringsJSX.reverse();
-};
-
-const parseTables = (text: string) => {
-  const lines = splitByNewLine(text);
-
-  if (!lines) return;
-  const underlined = isUnderlined(lines[0]);
-
-  if (underlined) {
-    lines.splice(0, 2);
-  }
-
-  return renderTablesWithLines(lines, underlined);
 };
 
 const parseNoneTableContent = (text: string) => {
@@ -205,12 +183,21 @@ const parseNoneTableContent = (text: string) => {
 const grepTablesRegex = /(\|.+\|)/s;
 
 const parseTableContent = (text: string) => {
+  let underlined: boolean = false;
+  // 2. Capture first and last pipes, returning all of the table content.
   const parts = text.split(grepTablesRegex);
 
-  return parts.map(part => {
-    const tableMatched = part.match(grepTablesRegex);
-    if (tableMatched) {
-      return parseTables(part);
+  return parts.map((part, index) => {
+    if (index === 0) {
+      underlined = isUnderlined(part);
+    }
+
+    const containsTables = part.match(grepTablesRegex);
+    if (containsTables) {
+      const lines = splitByNewLine(part);
+      if (!lines) return;
+
+      return parseTables(lines, underlined);
     }
 
     return parseNoneTableContent(part);
@@ -218,8 +205,9 @@ const parseTableContent = (text: string) => {
 };
 
 export const parseContent = (text: string) => {
-  const foundTables = text.match(grepTablesRegex);
-  if (foundTables) {
+  // 1. Check if the content contains tables, and then call the correct parsing function.
+  const containsTables = text.match(grepTablesRegex);
+  if (containsTables) {
     return parseTableContent(text);
   }
 
