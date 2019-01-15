@@ -29,10 +29,10 @@ const styles: DOKStyles = StyleSheet.create({
     padding: 5,
     paddingTop: 15,
     paddingRight: 8,
-    borderTop: '1px solid black',
-    borderRight: '2px solid black',
-    borderBottom: '1px solid black',
-    borderLeft: '2px solid black',
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderBottom: '1pt solid black',
+    borderLeft: '2pt solid black',
     fontSize: 12,
     textAlign: 'right',
     maxHeight: '100%'
@@ -44,9 +44,9 @@ const styles: DOKStyles = StyleSheet.create({
     width: '75%',
     padding: 5,
     paddingLeft: 8,
-    borderTop: '1px solid black',
-    borderBottom: '1px solid black',
-    borderRight: '2px solid black',
+    borderTop: '1pt solid black',
+    borderBottom: '1pt solid black',
+    borderRight: '2pt solid black',
     fontSize: 12,
     maxHeight: '100%'
   },
@@ -72,7 +72,7 @@ export interface DOKProps {
 
 export const DOK = ({ content }: DOKProps) => {
   return (
-    <View minPresenceAhead={100} wrap={false} style={styles.flexRow}>
+    <View wrap={false} style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
         <Text style={styles.bold}>Depth Of Knowledge</Text>
       </View>

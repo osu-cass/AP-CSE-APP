@@ -54,6 +54,7 @@ export const ResourceLink = ({ title, imgUrl, desc, linkBtnProps }: ResourceLink
         text-align: justify;
         font-size: 1em;
         height: 80px;
+        margin-bottom: 20px;
       }
       @media (max-width: ${MobileBreakSize.maxWidth}px) {
         .desc {
