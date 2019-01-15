@@ -171,6 +171,7 @@ exports[`Storyshots Resource Link Complete example 1`] = `
         text-align: justify;
         font-size: 1em;
         height: 80px;
+        margin-bottom: 20px;
       }
       @media (max-width: 800px) {
         .desc {
