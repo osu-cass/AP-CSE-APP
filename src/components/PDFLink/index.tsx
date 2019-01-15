@@ -1,6 +1,6 @@
 import React from 'react';
 import { Download } from 'react-feather';
-import { PDFDownloadLink, Document } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
 
 import { Loading } from '../Loading';
 
@@ -37,9 +37,9 @@ export const render = ({ loading }: LoadingProps) => (loading ? <Loading /> : <D
 export const PDFLink = ({ document, fileName }: PDFDownloadLinkRenderProps) => {
   return (
     <div>
-      <PDFDownloadLink document={document} filename={fileName}>
+      <ReactPDF.PDFDownloadLink document={document} fileName={fileName}>
         {render}
-      </PDFDownloadLink>
+      </ReactPDF.PDFDownloadLink>
     </div>
   );
 };
