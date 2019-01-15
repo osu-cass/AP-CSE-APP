@@ -8,6 +8,9 @@ import {
 import { CSEAdvancedFilterModels } from '../FilterProps';
 import { CSEFilterOptions, CSEFilterParams } from '../../models/filter';
 
+/**
+ * Create `AdvancedFilterCategoryModel`s from given options and params
+ */
 export function createFilters(
   options: CSEFilterOptions,
   params: CSEFilterParams
@@ -20,6 +23,9 @@ export function createFilters(
   };
 }
 
+/**
+ * Builds grade `AdvancedFilterCategoryModel` with display options customized for this app
+ */
 function createGradeFilter(
   allGrades: SearchBaseModel[],
   params: CSEFilterParams
@@ -39,6 +45,9 @@ function createGradeFilter(
   };
 }
 
+/**
+ * Builds subject `AdvancedFilterCategoryModel` with display options customized for this app
+ */
 function createSubjectFilter(
   allSubjects: SearchBaseModel[],
   params: CSEFilterParams
@@ -58,6 +67,9 @@ function createSubjectFilter(
   };
 }
 
+/**
+ * Builds claim `AdvancedFilterCategoryModel` with display options customized for this app
+ */
 function createClaimFilter(
   allClaims: SearchBaseModel[],
   params: CSEFilterParams
@@ -77,6 +89,9 @@ function createClaimFilter(
   };
 }
 
+/**
+ * Builds target `AdvancedFilterCategoryModel` with display options customized for this app
+ */
 function createTargetFilter(
   allTargets: SearchBaseModel[],
   params: CSEFilterParams
@@ -96,6 +111,9 @@ function createTargetFilter(
   };
 }
 
+/**
+ * Remove any `params` that aren't in the `options` any more
+ */
 export function sanitizeParams(
   params: CSEFilterParams,
   options: CSEFilterOptions
@@ -108,14 +126,17 @@ export function sanitizeParams(
   // remove subject if not in filter options
   const subjectOption = options.subjects.find(s => s.code === params.subject);
   const subject = subjectOption ? params.subject : undefined;
-  const claim = find(options.claims, params.claim);
-  const target = find(options.targets, params.target);
+  const claim = ensureExists(options.claims, params.claim);
+  const target = ensureExists(options.targets, params.target);
   const filter = params.filter;
 
   return { grades, subject, claim, target, filter };
 }
 
-function find(toSearch?: SearchBaseModel[], toFind?: string): string | undefined {
+/**
+ * Ensure that `toFind` exists in `toSearch` array. If either are `undefined`, the result will be `undefined`
+ */
+function ensureExists(toSearch?: SearchBaseModel[], toFind?: string): string | undefined {
   let found: string | undefined;
   if (toSearch && toFind) {
     const option = toSearch.find(c => c.code === toFind);
@@ -125,6 +146,13 @@ function find(toSearch?: SearchBaseModel[], toFind?: string): string | undefined
   return found;
 }
 
+/**
+ * Update `CSEFilterParams` based on the changes returned from the `DesktopFilter.onUpdate`
+ * callback. Returns new `CSEFilterParams`.
+ * @param currentParams The old params object
+ * @param changeType What filter is being changed? Should only
+ * @param change
+ */
 export function paramsFromFilter(
   currentParams: CSEFilterParams,
   changeType: FilterType,
@@ -141,6 +169,10 @@ export function paramsFromFilter(
   return paramsFromFilterNoChange(currentParams, changeType);
 }
 
+/**
+ * Handles specific case where the change is undefined, meaning that given
+ * `FilterType` gets cleared
+ */
 function paramsFromFilterNoChange(
   currentParams: CSEFilterParams,
   changeType: FilterType
@@ -166,6 +198,10 @@ function paramsFromFilterNoChange(
   return newParams;
 }
 
+/**
+ * Handles specific case where the changed filter is marked `isSelected`, meaning the new
+ * `CSEFilterParams` state should have the given `FilterType` unselected.
+ */
 function paramsFromFilterChangeSelected(
   currentParams: CSEFilterParams,
   changeType: FilterType,
@@ -177,6 +213,7 @@ function paramsFromFilterChangeSelected(
   switch (changeType) {
     case FilterType.Grade:
       if (newParams.grades.includes(change.key)) {
+        // remove the given grade key from `CSEFilterParams.grades` if it exists
         newParams.grades = newParams.grades.filter(g => g !== change.key);
       }
       break;
@@ -195,6 +232,10 @@ function paramsFromFilterChangeSelected(
   return newParams;
 }
 
+/**
+ * Handles specific case where the changed filter `isSelected` is marked `false`, meaning the new
+ * `CSEFilterParams` state should have the given `FilterType` selected.
+ */
 function paramsFromFilterChangeNotSelected(
   currentParams: CSEFilterParams,
   changeType: FilterType,
@@ -206,6 +247,7 @@ function paramsFromFilterChangeNotSelected(
   switch (changeType) {
     case FilterType.Grade:
       if (!newParams.grades.includes(change.key)) {
+        // add the given grade key to `CSEFilterParams.grades` if it isn't there already
         newParams.grades = [...newParams.grades, change.key];
       }
       break;
@@ -224,6 +266,9 @@ function paramsFromFilterChangeNotSelected(
   return newParams;
 }
 
+/**
+ *
+ */
 export function paramsFromMobileFilter(
   currentParams: CSEFilterParams,
   change: string[],

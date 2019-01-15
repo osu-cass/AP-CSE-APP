@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
     padding: 5,
     paddingLeft: 8,
     paddingTop: 5,
-    borderTop: '1px solid black',
-    borderBottom: '1px solid black',
-    borderRight: '2px solid black',
+    borderTop: '1pt solid black',
+    borderBottom: '1pt solid black',
+    borderRight: '2pt solid black',
     fontSize: 12
   },
   flexColumnLeft: {
@@ -31,28 +31,28 @@ const styles = StyleSheet.create({
     width: '20%',
     padding: 2,
     paddingRight: 8,
-    borderTop: '1px solid black',
-    borderRight: '2px solid black',
-    borderBottom: '1px solid black',
-    borderLeft: '2px solid black',
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderBottom: '1pt solid black',
+    borderLeft: '2pt solid black',
     fontSize: 12,
     textAlign: 'right'
   },
   bulletHeader: {
-    padding: '2px',
+    padding: '2pt',
     display: 'flex',
-    border: '1px solid pink'
+    border: '1pt solid pink'
   },
   flexRow: {
     flexDirection: 'row'
   },
   rightcolumn: {
-    border: '2px solid blue'
+    border: '2pt solid blue'
   },
   textbox: {
     width: '100%',
     display: 'flex',
-    padding: '2px',
+    padding: '2pt',
     position: 'static'
   },
   header: {
