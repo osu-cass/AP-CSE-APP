@@ -176,7 +176,9 @@ exports[`DownloadModal Renders Correctly 1`] = `
       <div
         id="pdf-page-count"
       >
-        This PDF will be X pages
+        This PDF will be 
+        0
+         pages
       </div>
       <div
         id="confirm-back-btn-container"
@@ -189,6 +191,7 @@ exports[`DownloadModal Renders Correctly 1`] = `
           Back
         </button>
         <button
+          disabled={false}
           id="confirm-btn"
           onClick={[Function]}
           type="button"
@@ -210,6 +213,7 @@ exports[`DownloadModal Renders Correctly 1`] = `
             text-align: center;
             text-align: -webkit-center;
             border: solid;
+            cursor: pointer;
             line-height: 30px;
             border-color: #63666A;
             border-radius: 4px;
@@ -252,6 +256,11 @@ exports[`DownloadModal Renders Correctly 1`] = `
             margin-top: 10px;
             display: inline-block;
             color: #ebebeb;
+          }
+          #confirm-back-btn-container button :disabled {
+            background-image: none;
+            background-color: #63666A;
+            cursor: default;
           }
         
       </style>
