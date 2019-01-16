@@ -31,8 +31,7 @@ export const Footer: React.SFC = () => {
           background-color: #ebebeb;
           display: flex;
           flex-flow: row wrap;
-          height: 1px;
-          min-height: 50px;
+          height: 50px;
           align-content: center;
           align-items: center;
           justify-content: center;
