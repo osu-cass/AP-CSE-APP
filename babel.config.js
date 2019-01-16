@@ -24,5 +24,10 @@ const plugins = [
 
 module.exports = {
     presets,
-    plugins
+    plugins,
+    env: {
+        test: {
+            plugins: ['require-context-hook']
+        }
+    }
 }

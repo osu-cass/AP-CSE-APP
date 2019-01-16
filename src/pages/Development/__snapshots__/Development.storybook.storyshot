@@ -103,6 +103,10 @@ exports[`Storyshots Development Page Default 1`] = `
           width: 100%;
         }
 
+        #titleContainer {
+          flex-shrink: 0;
+        }
+
         .content {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;

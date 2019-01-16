@@ -696,6 +696,10 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
           width: 100%;
         }
 
+        #titleContainer {
+          flex-shrink: 0;
+        }
+
         .content {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
