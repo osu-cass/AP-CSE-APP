@@ -31,6 +31,8 @@ export interface DownloadModalState {
   selectedList: string[];
   submitDownloadProps: DocumentProps;
   submitDownload: boolean;
+  isDisabled: boolean;
+  pageCount: number;
 }
 
 const customStyles = {
@@ -56,6 +58,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   constructor(props: DownloadModalProps) {
     super(props);
     this.state = {
+      isDisabled: false,
       showModal: props.isOpen,
       showHide: 'hidden',
       showMultiSelect: '',
@@ -67,7 +70,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         renderOverview: false,
         renderEntireTarget: false
       },
-      submitDownload: false
+      submitDownload: false,
+      pageCount: 0
     };
   }
   /**
@@ -87,7 +91,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         renderEntireTarget: this.state.selectedList.includes('Entire Target')
       },
       // showModal: false,
-      submitDownload: true
+      submitDownload: true,
+      isDisabled: true
     });
     // if (this.props.closeFromParent !== undefined) {
     //   this.props.closeFromParent();
@@ -127,7 +132,9 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     this.setState({
       showMultiSelect: '',
       showHide: 'hidden',
-      selectedList: []
+      selectedList: [],
+      isDisabled: false,
+      submitDownload: false
     });
   };
 
@@ -349,9 +356,14 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
 
     return result;
   };
+
+  setPageCount = (totalPages: number) => {
+    this.setState({ pageCount: totalPages });
+  };
+
   confirmSelection() {
     const pdfDownLoadProps: PDFDownloadLinkRenderProps = {
-      document: createDocument({ ...this.state.submitDownloadProps }),
+      document: createDocument({ ...this.state.submitDownloadProps }, this.setPageCount),
       fileName: `${this.state.submitDownloadProps.claim.target[0].title}.pdf`
     };
 
@@ -361,13 +373,18 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         <div id="selections-list">
           <ul>{this.renderSelectionsList()}</ul>
         </div>
-        <div id="pdf-page-count">This PDF will be X pages</div>
         {this.state.submitDownload ? <PDFLink {...pdfDownLoadProps} /> : ''}
+        <div id="pdf-page-count">This PDF will be {this.state.pageCount} pages</div>
         <div id="confirm-back-btn-container">
           <button type="button" id="back-btn" onClick={this.handleBackButton}>
             Back
           </button>
-          <button type="button" id="confirm-btn" onClick={this.handleConfirm}>
+          <button
+            type="button"
+            id="confirm-btn"
+            onClick={this.handleConfirm}
+            disabled={this.state.isDisabled}
+          >
             Confirm
           </button>
         </div>
@@ -382,6 +399,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
             text-align: center;
             text-align: -webkit-center;
             border: solid;
+            cursor: pointer;
             line-height: 30px;
             border-color: ${Colors.sbGray};
             border-radius: 4px;
@@ -424,6 +442,11 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
             margin-top: 10px;
             display: inline-block;
             color: ${Colors.sbGrayLighter};
+          }
+          #confirm-back-btn-container button :disabled {
+            background-image: none;
+            background-color: ${Colors.sbGray};
+            cursor: default;
           }
         `}</style>
       </div>
