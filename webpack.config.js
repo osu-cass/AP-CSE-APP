@@ -58,6 +58,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new MiniCssExtractPlugin(),
     new webpack.EnvironmentPlugin({
       API_ENDPOINT: 'http://localhost:3000'
     }),
