@@ -14,10 +14,14 @@ const isUnderlined = (line: string) => {
 };
 
 export const NewLine: React.SFC = ({ children }) => (
-  <span>
+  <p>
     {children}
-    <br />
-  </span>
+    <style jsx>{`
+      p {
+        margin-top: 1em;
+      }
+    `}</style>
+  </p>
 );
 
 const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
@@ -169,6 +173,8 @@ const parseNoneTableContent = (text: string) => {
   }
 
   return lines.map((line, index) => {
+    if (!line.trim()) return;
+
     let content;
     if (line.startsWith('![') && line.endsWith(')')) {
       content = parseImageTags(line);
