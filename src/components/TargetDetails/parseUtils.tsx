@@ -26,7 +26,7 @@ export const NewLine: React.SFC = ({ children }) => (
 
 const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
 
-const removeBackSlash = (text: string) => text.replace(/(\\)([_<>])/g, '$2');
+const removeBackSlash = (text: string) => text.replace(/(\\)([_<>#])/g, '$2');
 
 const replacer = (match: string, code: string) => String.fromCharCode(Number(code));
 const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
