@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const AutoDllPlugin = require('autodll-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 
 // const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
@@ -25,29 +26,20 @@ module.exports = {
     rules: [
       {
         test: /\.(tsx?)|(js?)$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-          // path.resolve(__dirname, 'node_modules', 'query-string'),
-          // path.resolve(__dirname, 'node_modules', 'strict-uri-encode'),
-          // path.resolve(__dirname, 'node_modules', 'setimmediate')
-        ],
+        include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader'
       },
       {
         test: /\.css$/,
-        use: isDev
-          ? ["style-loader", "css-loader"]
-          : ExtractTextPlugin.extract({
-              use: "css-loader?minimize"
-            })
-      },
-      {
-        test: /\.less$/,
-        use: isDev
-          ? ["style-loader", "css-loader", "less-loader"]
-          : ExtractTextPlugin.extract({
-              use: ["css-loader?minimize", "less-loader"]
-            })
+        use: [
+          isDev ? "style-loader" : {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: `/assets/`
+            }
+          },
+          "css-loader"
+        ]
       },
       {
         test: /\.(ttf|eot|png|svg|jpg|jpeg|woff2?|ttf)(\?.*$|$)/,
