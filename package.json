@@ -40,8 +40,7 @@
   },
   "jest": {
     "setupFiles": [
-      "./.storybook/jestSetup.js",
-      "./.jest/register-context.js"
+      "./.storybook/jestSetup.js"
     ],
     "moduleFileExtensions": [
       "ts",
