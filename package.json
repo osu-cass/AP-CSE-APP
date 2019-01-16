@@ -4,7 +4,7 @@
   "description": "React frontend for AP Content Specification Explorer",
   "main": "index.js",
   "scripts": {
-    "build": "npm run webpack && npm run webpack-vendor",
+    "build": "npm run webpack",
     "test": "jest --coverage",
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-dev-server",
