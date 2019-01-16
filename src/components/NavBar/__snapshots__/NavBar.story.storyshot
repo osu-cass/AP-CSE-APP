@@ -313,7 +313,7 @@ exports[`Storyshots NavBar Mobile 1`] = `
       </div>
     </a>
     <a
-      href="/search"
+      href="/explore?filter=open"
       onClick={[Function]}
       style={
         Object {
