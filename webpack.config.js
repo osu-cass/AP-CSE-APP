@@ -33,10 +33,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           isDev ? "style-loader" : {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: `/assets/`
-            }
+            loader: MiniCssExtractPlugin.loader
           },
           "css-loader"
         ]
