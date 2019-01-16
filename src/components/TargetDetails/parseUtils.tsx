@@ -24,7 +24,7 @@ export const NewLine: React.SFC = ({ children }) => (
   </p>
 );
 
-const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
+const removeDashWithSpaces = (text: string) => text.replace(/^-[ ]*/, '');
 
 const removeBackSlash = (text: string) => text.replace(/(\\)([_<>#])/g, '$2');
 
@@ -51,7 +51,7 @@ function replaceFractions(text: string): string {
   return newContent;
 }
 
-const parsers = [replaceDashWithDot, removeBackSlash, replaceCharRef, replaceFractions];
+const parsers = [removeDashWithSpaces, removeBackSlash, replaceCharRef, replaceFractions];
 const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   let parsedText: string = text;
   parsers.forEach((parser: (text: string) => string) => {
@@ -88,6 +88,18 @@ const parseDoubleAsterisks = (text: string, underlined: boolean) => {
 
     return <React.Fragment key={index}>{parsedLine}</React.Fragment>;
   });
+};
+
+const parseUnorderedList = (text: string, underlined: boolean) => {
+  if (text.startsWith('- ')) {
+    return (
+      <ul>
+        <li>{parseDoubleAsterisks(text, underlined)}</li>
+      </ul>
+    );
+  }
+
+  return parseDoubleAsterisks(text, underlined);
 };
 
 // I'm assuming you've already checked if this line of the
@@ -139,22 +151,20 @@ const parseTables = (lines: string[], underlined: boolean) => {
 
   for (let index = lines.length - 1; index >= 0; index--) {
     const line = lines[index];
-    if (line !== '') {
-      const tableRow = line.match(/\|.*\|/);
-      if (tableRow) {
-        const headerDelimiter = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
-        if (headerDelimiter) {
-          const headerRow = lines[index - 1];
-          tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
-          index--;
-        } else {
-          dataRows.push(line);
-        }
+    if (!line.trim()) continue;
+
+    const tableRow = line.match(/\|.*\|/);
+    if (tableRow) {
+      const headerDelimiter = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
+      if (headerDelimiter) {
+        const headerRow = lines[index - 1];
+        tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
+        index--;
       } else {
-        tablesWithStringsJSX.push(<NewLine>{parseDoubleAsterisks(line, underlined)}</NewLine>);
+        dataRows.push(line);
       }
     } else {
-      tablesWithStringsJSX.push(<NewLine>{line}</NewLine>);
+      tablesWithStringsJSX.push(<NewLine>{parseUnorderedList(line, underlined)}</NewLine>);
     }
   }
 
@@ -179,7 +189,7 @@ const parseNoneTableContent = (text: string) => {
     if (line.startsWith('![') && line.endsWith(')')) {
       content = parseImageTags(line);
     } else {
-      content = parseDoubleAsterisks(line, underlined);
+      content = parseUnorderedList(line, underlined);
     }
 
     return <NewLine key={index}>{content}</NewLine>;
