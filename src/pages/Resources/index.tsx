@@ -2,27 +2,20 @@ import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { ResourceLinkProps, ResourceLink } from '../../components/ResourceLink';
 import { Title } from '../../components/GenericPage/Title';
-import {
-  ResourceLinkBtn,
-  ResourceLinkBtnProps
-} from '../../components/ResourceLink/ResourceLinkBtn';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const scoreimg: string = require('../../assets/images/score-guide.png') as string;
+const Practiceimg: string = require('../../assets/images/practice-tests.png') as string;
 const sampleItemsImg: string = require('../../assets/images/sample-items.png') as string;
 const digitalLibraryImg: string = require('../../assets/images/digital-library.png') as string;
-const practiceProps: ResourceLinkBtnProps = {
-  text: 'Visit Practice Tests Page',
-  url: 'http://www.smarterbalanced.org/assessments/samples/'
-};
+
 const linkProps: ResourceLinkProps[] = [
   {
-    title: 'Scoring Guides',
+    title: 'Score Guides',
     imgUrl: scoreimg,
-    desc:
-      'Practice Test Scoring Guides for grades 3-12 in Math and English Language Arts. Use the same testing software as students to see what they encounter during testing! Try out an English language arts or math test to learn how the test works, what’s expected of students and what kind of questions are included on them.',
+    desc: 'Practice Test Scoring Guides for grades 3-12 in Math and English Language Arts.',
     linkBtnProps: {
-      text: 'Visit Scoring Guides Page',
+      text: 'Visit Score Guides Page',
       url:
         'http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3'
     }
@@ -35,6 +28,16 @@ const linkProps: ResourceLinkProps[] = [
     linkBtnProps: {
       text: 'Visit Digital Library',
       url: 'https://sbdigitallibrary.org/'
+    }
+  },
+  {
+    title: 'Practice Tests',
+    imgUrl: Practiceimg,
+    desc:
+      'Use the same testing software as students to see what they encounter during testing! Try out an English language arts or math test to learn how the test works, what’s expected of students and what kind of questions are included on them.',
+    linkBtnProps: {
+      text: 'Visit Practice Tests Page',
+      url: 'http://www.smarterbalanced.org/assessments/samples/'
     }
   },
   {
@@ -54,10 +57,7 @@ const ResourcesPageComponent: React.SFC = () => (
     <div className="content">
       <div className="resource">
         {linkProps.map((props: ResourceLinkProps, idx: number) => (
-          <div className="links">
-            <ResourceLink key={idx} {...props} />
-            {idx === 0 ? <ResourceLinkBtn {...practiceProps} /> : ''}
-          </div>
+          <ResourceLink key={idx} {...props} />
         ))}
       </div>
     </div>
@@ -73,13 +73,8 @@ const ResourcesPageComponent: React.SFC = () => (
         flex-wrap: wrap;
         justify-content: space-between;
       }
-      .links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
     `}</style>
   </React.Fragment>
 );
 
-export const ResourcesPage = genericLayout(<Title>Resources</Title>, ResourcesPageComponent);
+export const ResourcesPage = genericLayout(<Title>My Resources</Title>, ResourcesPageComponent);
