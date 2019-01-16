@@ -37,10 +37,18 @@ exports[`Storyshots Task Model examples default 1`] = `
           </strong>
         </p>
         <p>
-          <span>
+          <p>
             stuff and things and stuff
-            <br />
-          </span>
+            <style
+              jsx={true}
+            >
+              
+      p {
+        margin-top: 1em;
+      }
+    
+            </style>
+          </p>
         </p>
       </div>
       <div>
@@ -50,10 +58,18 @@ exports[`Storyshots Task Model examples default 1`] = `
           </strong>
         </p>
         <p>
-          <span>
+          <p>
             stuff and things and stuff
-            <br />
-          </span>
+            <style
+              jsx={true}
+            >
+              
+      p {
+        margin-top: 1em;
+      }
+    
+            </style>
+          </p>
         </p>
       </div>
       <div>
@@ -63,10 +79,18 @@ exports[`Storyshots Task Model examples default 1`] = `
           </strong>
         </p>
         <p>
-          <span>
+          <p>
             stuff and things and stuff
-            <br />
-          </span>
+            <style
+              jsx={true}
+            >
+              
+      p {
+        margin-top: 1em;
+      }
+    
+            </style>
+          </p>
         </p>
       </div>
     </div>
@@ -111,14 +135,22 @@ exports[`Storyshots Task Model examples renders a picture 1`] = `
           </strong>
         </p>
         <p>
-          <span>
+          <p>
             <img
               alt=""
               role="presentation"
               src="https://images.smarterbalanced.org/content/Documents/Item%20Specs/Math_Item_Specs/Claim1_mathematics_Gr3_specs/media_G3_Math_1F_NF/image007.jpg"
             />
-            <br />
-          </span>
+            <style
+              jsx={true}
+            >
+              
+      p {
+        margin-top: 1em;
+      }
+    
+            </style>
+          </p>
         </p>
       </div>
     </div>
@@ -163,10 +195,18 @@ exports[`Storyshots Task Model examples renders formula 1`] = `
           </strong>
         </p>
         <p>
-          <span>
+          <p>
             1/2
-            <br />
-          </span>
+            <style
+              jsx={true}
+            >
+              
+      p {
+        margin-top: 1em;
+      }
+    
+            </style>
+          </p>
         </p>
       </div>
     </div>

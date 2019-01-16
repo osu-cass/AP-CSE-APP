@@ -13,30 +13,54 @@ exports[`Storyshots TargetDetails/Standards Multiple Standards 1`] = `
       S-3a
     </strong>
      
-    <span>
+    <p>
       Mock standard
-      <br />
-    </span>
+      <style
+        jsx={true}
+      >
+        
+      p {
+        margin-top: 1em;
+      }
+    
+      </style>
+    </p>
   </p>
   <p>
     <strong>
       S-3b
     </strong>
      
-    <span>
+    <p>
       Mock standard
-      <br />
-    </span>
+      <style
+        jsx={true}
+      >
+        
+      p {
+        margin-top: 1em;
+      }
+    
+      </style>
+    </p>
   </p>
   <p>
     <strong>
       S-3c
     </strong>
      
-    <span>
+    <p>
       Mock standard
-      <br />
-    </span>
+      <style
+        jsx={true}
+      >
+        
+      p {
+        margin-top: 1em;
+      }
+    
+      </style>
+    </p>
   </p>
 </div>
 `;
@@ -54,10 +78,18 @@ exports[`Storyshots TargetDetails/Standards One Standard 1`] = `
       S-3a
     </strong>
      
-    <span>
+    <p>
       Mock standard
-      <br />
-    </span>
+      <style
+        jsx={true}
+      >
+        
+      p {
+        margin-top: 1em;
+      }
+    
+      </style>
+    </p>
   </p>
 </div>
 `;
