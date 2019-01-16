@@ -22,10 +22,10 @@ const styles: ClarificationStyles = StyleSheet.create({
     padding: 2,
     paddingTop: 15,
     paddingRight: 8,
-    borderTop: '1px solid black',
-    borderRight: '2px solid black',
-    borderBottom: '1px solid black',
-    borderLeft: '2px solid black',
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderBottom: '1pt solid black',
+    borderLeft: '2pt solid black',
     fontSize: 12,
     textAlign: 'right'
   },
@@ -36,9 +36,9 @@ const styles: ClarificationStyles = StyleSheet.create({
     paddingRight: 5,
     paddingLeft: 8,
     paddingTop: 5,
-    borderTop: '1px solid black',
-    borderBottom: '1px solid black',
-    borderRight: '2px solid black',
+    borderTop: '1pt solid black',
+    borderBottom: '1pt solid black',
+    borderRight: '2pt solid black',
     fontSize: 12
   },
   flexContent: {

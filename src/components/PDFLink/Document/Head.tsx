@@ -20,11 +20,11 @@ const styles: HeadStyles = StyleSheet.create({
   },
   headerText: {
     minWidth: '80%',
-    marginBottom: '10px'
+    marginBottom: '10pt'
   },
   logo: {
     width: '20%',
-    marginBottom: '10px'
+    marginBottom: '10pt'
   },
   image: {}
 }) as HeadStyles;
