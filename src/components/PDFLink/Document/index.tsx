@@ -16,8 +16,6 @@ import { styles } from './styles';
 import { TaskModelComponent } from './TaskModelComponent';
 import { render } from 'enzyme';
 
-const array: string[] = ['Task Model 1', 'Task Model 2'];
-
 const Description = ({ claim }: OverviewProps) => (
   <View wrap>
     {claim.description && <OneColumnLayout center={false} text={claim.description} />}
@@ -65,7 +63,7 @@ const renderTaskModels = (
 
 export function createDocument(
   { claim, taskModels, renderOverview, renderEntireTarget }: DocumentProps,
-  setPageCount: (num: number) => void
+  setPageCount?: (num: number) => void
 ): JSX.Element {
   const renderedTaskModels = renderTaskModels(
     { claim, taskModels: taskModels ? taskModels : [] },
@@ -83,7 +81,9 @@ export function createDocument(
         <Text
           style={styles.pageNumber}
           render={({ pageNumber, totalPages }: PageMeta) => {
-            setPageCount(totalPages !== undefined ? totalPages : 0);
+            if (setPageCount) {
+              setPageCount(totalPages !== undefined ? totalPages : 0);
+            }
 
             return `${pageNumber} / ${totalPages}`;
           }}
