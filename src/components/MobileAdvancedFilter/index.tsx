@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  AdvancedFilterProps,
-  AdvancedFilterCategoryModel,
-  FilterOptionModel,
-  FilterType
-} from '@osu-cass/sb-components';
+import { AdvancedFilterCategoryModel, FilterType } from '@osu-cass/sb-components';
+
 import { Colors } from '../../constants/style';
 
 export interface MobileFilterProps extends AdvancedFilterCategoryModel {

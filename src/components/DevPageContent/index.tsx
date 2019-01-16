@@ -1,8 +1,9 @@
 import React from 'react';
+import css from 'styled-jsx/css';
+import { FileText } from 'react-feather';
+
 import { LinkButton } from '../LinkButton';
 import { Styles, Colors } from '../../constants/style';
-import { FileText } from 'react-feather';
-import css from 'styled-jsx/css';
 
 const fileIcon = <FileText size={40} color={Colors.sbWhite} />;
 
@@ -41,7 +42,7 @@ export const DevTestBlueprint: React.SFC = () => (
       The Smarter Balanced summative test blueprints describe the content of the English language
       arts/literacy and math summative assessments for grades 3-8 and high school - and how that
       content will be assessed. Developed with broad input from member states, partners, and
-      stakeholders, the summative test blueprints reflect the depot and breadth of the performance
+      stakeholders, the summative test blueprints reflect the depth and breadth of the performance
       expectations of the Common Core State Standards. Smarter Balanced Governing Members adopted
       the preliminary test blueprints in 2012 and the summative test blueprints reflect refinements
       and revisions after the analysis of the Pilot and Field Tests. The test blueprints include
@@ -51,12 +52,12 @@ export const DevTestBlueprint: React.SFC = () => (
     </p>
     <div className="row">
       <LinkButton
-        text="ELA/Literacy Blueprint"
+        text="ELA/Literacy Blueprints"
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/elaliteracy-summative-assessment-blueprint.pdf"
       />
       <LinkButton
-        text="Mathematics Blueprint"
+        text="Mathematics Blueprints"
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/mathematics-summative-assessment-blueprint.pdf"
       />
@@ -64,11 +65,6 @@ export const DevTestBlueprint: React.SFC = () => (
         text="Estimated Testing Times"
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/estimated-testing-times.pdf"
-      />
-      <LinkButton
-        text="Enhanced CAT Blueprints"
-        icon={fileIcon}
-        url="https://portal.smarterbalanced.org/library/en/2018-19-enhanced-cat-blueprints-eft-pt.pdf"
       />
     </div>
     <style jsx>{rowStyle}</style>
@@ -91,12 +87,12 @@ export const DevInterimBlueprint: React.SFC = () => (
       <h4>Interim Assessment Block (IAB) Blueprints</h4>
       <div className="row">
         <LinkButton
-          text="ELA/Literacy IAB Blueprint"
+          text="ELA/Literacy IAB Blueprints"
           icon={fileIcon}
           url="https://portal.smarterbalanced.org/library/en/english-language-artsliteracy-interim-assessment-blocks-fixed-form-blueprint.pdf"
         />
         <LinkButton
-          text="Mathematics IAB Blueprint"
+          text="Mathematics IAB Blueprints"
           icon={fileIcon}
           url="https://portal.smarterbalanced.org/library/en/math-interim-assessment-blocks-blueprint.pdf"
         />
@@ -106,12 +102,12 @@ export const DevInterimBlueprint: React.SFC = () => (
       <h4>Interim Comprehensive Assessment (ICA) Blueprints</h4>
       <div className="row">
         <LinkButton
-          text="ELA/Literacy ICA Blueprint"
+          text="ELA/Literacy ICA Blueprints"
           icon={fileIcon}
           url="https://portal.smarterbalanced.org/library/en/ela-literacy-interim-comprehensive-assessment-blueprint.pdf"
         />
         <LinkButton
-          text="Mathematics ICA Blueprint"
+          text="Mathematics ICA Blueprints"
           icon={fileIcon}
           url="https://portal.smarterbalanced.org/library/en/mathematics-interim-comprehensive-assessment-blueprint.pdf"
         />
@@ -141,18 +137,6 @@ export const DevItemSpecOverview: React.SFC = () => (
       as well as an assignment or problem situation.
     </p>
     <h4>CAT Item Specifications Overview</h4>
-    <p>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-      laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-      beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-      odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-      Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-      sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-      voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
-      qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-      fugiat quo voluptas nulla pariatur?
-    </p>
     <div className="row">
       <LinkButton
         text="Performance Tasks Specifications"
@@ -180,7 +164,7 @@ export const DevAccForItems: React.SFC = () => (
         url="https://portal.smarterbalanced.org/library/en/general-accessibility-guidelines.pdf"
       />
       <LinkButton
-        text="Accessibility for ELLs"
+        text="Accessibility for ELs"
         icon={fileIcon}
         url="https://portal.smarterbalanced.org/library/en/guidelines-for-accessibility-for-english-language-learners.pdf"
       />
@@ -295,7 +279,7 @@ export const DevAddtlItemSpec: React.SFC = () => (
     </div>
     <h4>Elaborations for ELA Full Writes</h4>
     <div className="row">
-      <LinkButton text="Informational/ Explanitory" icon={fileIcon} url="" />
+      <LinkButton text="Informational/Explanatory" icon={fileIcon} url="" />
       <LinkButton
         text="Argumentative"
         icon={fileIcon}
@@ -326,7 +310,7 @@ export const DevContentSpec: React.SFC = () => (
       math to ensure that the assessments cover the range of knowledge and skills in the Common Core
       State Standards. The content specifications serve as the basis for the Smarter Balanced system
       of summative and interim assessments and formative assessment support for teachers. Dr. Linda
-      Darling-Hammond, former Smarter Balanced Senior Research Advisor and Charles E. Ducommun
+      Darling-Hammond, former Smarter Balanced Senior Research Advisor, and Charles E. Ducommun,
       Professor of Education Emeritus at Stanford University, led the development of the content
       specifications in collaboration with experts in the field. The Smarter Balanced Technical
       Advisory Committee, Consortium work groups, and the lead authors of the Common Core State

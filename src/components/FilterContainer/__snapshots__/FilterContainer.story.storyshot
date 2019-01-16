@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Filter/Container default 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="header"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+          />
+        </svg>
+         Filter 
+        <span
+          className="chevron"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="6 9 12 15 18 9"
+            />
+          </svg>
+        </span>
+      </h2>
+      <style
+        jsx={true}
+      >
+        
+          .filter-container {
+            background-color: #eee;
+            border-bottom: 1px solid #63666A;
+            padding: 20px;
+          }
+          .chevron {
+            color: gray;
+            display: flex;
+            align-items: center;
+          }
+          h2 {
+            font-weight: normal;
+            margin: 0;
+            border-bottom: 1px solid #63666A;
+            display: flex;
+            align-items: center;
+          }
+          .header {
+            cursor: pointer;
+          }
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filter/Container expanded 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="header"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+          />
+        </svg>
+         Filter 
+        <span
+          className="chevron"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="18 15 12 9 6 15"
+            />
+          </svg>
+        </span>
+      </h2>
+      <div
+        className="filter-container"
+      >
+        Filter goes here
+      </div>
+      <style
+        jsx={true}
+      >
+        
+          .filter-container {
+            background-color: #eee;
+            border-bottom: 1px solid #63666A;
+            padding: 20px;
+          }
+          .chevron {
+            color: gray;
+            display: flex;
+            align-items: center;
+          }
+          h2 {
+            font-weight: normal;
+            margin: 0;
+            border-bottom: 1px solid #63666A;
+            display: flex;
+            align-items: center;
+          }
+          .header {
+            cursor: pointer;
+          }
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;

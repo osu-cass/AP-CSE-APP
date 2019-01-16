@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      className="title-container"
+    >
+      <div
+        className="item-spec"
+      >
+        Item 
+        <br />
+        Specification
+      </div>
+      <ul>
+        <li
+          className="title"
+        >
+          <span>
+            Claim 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+          </span>
+        </li>
+      </ul>
+      <div
+        className="download"
+      >
+        <div
+          id="download-btn-container"
+        >
+          <div />
+          <a
+            aria-label="Download"
+            id="download-btn"
+            onClick={[Function]}
+            role="button"
+          >
+            <i
+              className="fa fa-cloud-download cloud"
+            />
+          </a>
+          <div
+            className="download-label"
+          >
+            Download
+          </div>
+          <style
+            jsx={true}
+          >
+            
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+          @media (max-width: 800px) {
+            .download-label {
+              display: none;
+            }
+            a {
+              fontsize: 1em;
+            }
+          }
+        
+          </style>
+        </div>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .title-container {
+        display: flex;
+        font-family: PT Sans Caption;
+        padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        list-style-type: none;
+        max-width: 85%;
+        flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      div ul li {
+        width: 100%;
+      }
+      .title {
+        width: 20%;
+        min-width: 50px;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+      }
+      .item-spec{
+        font-size:24px;
+        margin-left:10vw;
+        margin-right:25px;
+        color:white;
+        flex-grow:1;
+        font-weight:bold;
+      }
+      .desc {
+        width: 75%;
+        min-width: 50px;
+        padding-bottom: 15px;
+        color: #ebebeb;
+        font-size: 12px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        margin-left:25px;
+        margin-right:20vw;
+        flex-grow:1;
+
+      }
+    
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      className="title-container"
+    >
+      <div
+        className="item-spec"
+      >
+        Item 
+        <br />
+        Specification
+      </div>
+      <ul>
+        <li
+          className="title"
+        >
+          <span>
+            Claim 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Students can read closely and analytically to comprehend a range of increasingly complex literary and informational texts.
+          </span>
+        </li>
+        <li
+          className="title"
+        >
+          <span>
+            Target 1
+          </span>
+        </li>
+        <li
+          className="desc"
+        >
+          <span>
+            Given an inference or conclusion, use explicit details and implicit information from the text to support the inference or conclusion provided.
+          </span>
+        </li>
+      </ul>
+      <div
+        className="download"
+      >
+        <div
+          id="download-btn-container"
+        >
+          <div />
+          <a
+            aria-label="Download"
+            id="download-btn"
+            onClick={[Function]}
+            role="button"
+          >
+            <i
+              className="fa fa-cloud-download cloud"
+            />
+          </a>
+          <div
+            className="download-label"
+          >
+            Download
+          </div>
+          <style
+            jsx={true}
+          >
+            
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+          @media (max-width: 800px) {
+            .download-label {
+              display: none;
+            }
+            a {
+              fontsize: 1em;
+            }
+          }
+        
+          </style>
+        </div>
+      </div>
+      <style
+        jsx={true}
+      >
+        
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .title-container {
+        display: flex;
+        font-family: PT Sans Caption;
+        padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        list-style-type: none;
+        max-width: 85%;
+        flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      div ul li {
+        width: 100%;
+      }
+      .title {
+        width: 20%;
+        min-width: 50px;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+      }
+      .item-spec{
+        font-size:24px;
+        margin-left:10vw;
+        margin-right:25px;
+        color:white;
+        flex-grow:1;
+        font-weight:bold;
+      }
+      .desc {
+        width: 75%;
+        min-width: 50px;
+        padding-bottom: 15px;
+        color: #ebebeb;
+        font-size: 12px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        margin-left:25px;
+        margin-right:20vw;
+        flex-grow:1;
+
+      }
+    
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      className="title-container"
+    >
+      <div
+        className="item-spec"
+      >
+        Item 
+        <br />
+        Specification
+      </div>
+      <ul>
+        <li
+          className="title"
+        >
+          <span>
+            Claim 1
+          </span>
+        </li>
+      </ul>
+      <style
+        jsx={true}
+      >
+        
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .title-container {
+        display: flex;
+        font-family: PT Sans Caption;
+        padding: 0.7em 0;
+        backgroundImage: linear-gradient(90deg, #006298, #0085AD)
+        width: '100%',
+        flexBasis: '100%'
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        list-style-type: none;
+        max-width: 85%;
+        flex-grow:1;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      div ul li {
+        width: 100%;
+      }
+      .title {
+        width: 20%;
+        min-width: 50px;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+      }
+      .item-spec{
+        font-size:24px;
+        margin-left:10vw;
+        margin-right:25px;
+        color:white;
+        flex-grow:1;
+        font-weight:bold;
+      }
+      .desc {
+        width: 75%;
+        min-width: 50px;
+        padding-bottom: 15px;
+        color: #ebebeb;
+        font-size: 12px;
+        font-weight: 100;
+        text-align: left;
+      }
+      .download {
+        margin-left:25px;
+        margin-right:20vw;
+        flex-grow:1;
+
+      }
+    
+      </style>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TitleBar component Renders a download button 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div>
+    <div
+      id="download-btn-container"
+    >
+      <div />
+      <a
+        aria-label="Download"
+        id="download-btn"
+        onClick={[Function]}
+        role="button"
+      >
+        <i
+          className="fa fa-cloud-download cloud"
+        />
+      </a>
+      <div
+        className="download-label"
+      >
+        Download
+      </div>
+      <style
+        jsx={true}
+      >
+        
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+          }
+          .download-label {
+            font-size: 15px;
+          }
+          #download-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: White;
+          }
+          @media (max-width: 800px) {
+            .download-label {
+              display: none;
+            }
+            a {
+              fontsize: 1em;
+            }
+          }
+        
+      </style>
+    </div>
+  </div>
+</div>
+`;

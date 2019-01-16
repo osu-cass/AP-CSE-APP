@@ -1,4 +1,5 @@
 import React from 'react';
+
 const linkStyle = (
   <style jsx>{`
     a {
@@ -11,6 +12,7 @@ const linkStyle = (
     }
   `}</style>
 );
+
 export const HelpClaims: React.SFC = () => (
   <ul>
     <li>
@@ -221,7 +223,7 @@ export const HelpFaq: React.SFC = () => (
       assessments (interim and summative) for grades 3–8 and high school—and how that content will
       be assessed.
     </p>
-    <h3>What kinds of questions will the students encounter on the SB?</h3>
+    <h3>What kinds of questions will the student encounter on the Smarter Balanced Assessment?</h3>
     <p>
       There are 12 different technology-enhanced item types used by Smarter Balanced. Definitions of
       each item type and sample of each item type can be found on the{' '}

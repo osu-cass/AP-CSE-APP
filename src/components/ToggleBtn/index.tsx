@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import css from 'styled-jsx/css';
+import React, { Component } from 'react';
 
 import { Colors } from '../../constants/style';
 

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
-import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
-import { BreadcrumbDropDown } from '../BreadcrumbDropDown/BreadCrumbDropDown';
-import { Styles, Colors } from '../../constants/style';
-import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 import { stringify } from 'query-string';
-import { SearchBaseModel } from '@osu-cass/sb-components';
-import { DesktopBreakSize } from '../MediaQuery/MediaQueryWrapper';
 import MediaQuery from 'react-responsive';
+import { SearchBaseModel } from '@osu-cass/sb-components';
+
+import { BreadcrumbLink } from '../BreadcrumbLink';
+import { Styles, Colors } from '../../constants/style';
+import { DesktopBreakSize } from '../MediaQueryWrapper';
+import { BreadcrumbDropDown } from '../BreadcrumbDropDown';
+import { CSEFilterParams, CSESearchQuery } from '../../models/filter';
 
 /**
  * Properties for Breadcrumbs
@@ -23,6 +24,9 @@ export interface BreadcrumbsProps {
   targetList?: SearchBaseModel[];
 }
 
+const isHS = (a: string) => {
+  return parseInt(a, 10) >= 9 && parseInt(a, 10) <= 12 ? true : false;
+};
 /**
  *
  * @param subject
@@ -35,6 +39,7 @@ export function buildSearchUrl(subject?: string, grades?: string[], claim?: stri
     claim,
     grades: grades ? grades : []
   };
+  filterParams.grades = isHS(filterParams.grades[0]) ? ['9,10,11,12'] : filterParams.grades;
   const query: CSESearchQuery = {
     ...filterParams
   };
@@ -81,7 +86,7 @@ export const Breadcrumbs = ({ subject, grades, claim, target, targetList }: Brea
           {subject && grades && (
             <BreadcrumbLink
               link={buildSearchUrl(subject, grades)}
-              value={grades[0] === 'HS' ? 'High School' : `Grade ${grades[0]}`}
+              value={grades[0] === 'HS' || isHS(grades[0]) ? 'High School' : `Grade ${grades[0]}`}
               label="Grade"
             />
           )}

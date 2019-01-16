@@ -1,7 +1,8 @@
 import React from 'react';
-import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
+
 import { Colors } from '../../constants/style';
-import { MobileBreakSize } from '../MediaQuery/MediaQueryWrapper';
+import { MobileBreakSize } from '../MediaQueryWrapper';
+import { ResourceLinkBtn, ResourceLinkBtnProps } from './ResourceLinkBtn';
 export interface ResourceLinkProps {
   title: string;
   imgUrl: string;
@@ -53,6 +54,7 @@ export const ResourceLink = ({ title, imgUrl, desc, linkBtnProps }: ResourceLink
         text-align: justify;
         font-size: 1em;
         height: 80px;
+        margin-bottom: 20px;
       }
       @media (max-width: ${MobileBreakSize.maxWidth}px) {
         .desc {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { GenericContentProps } from '.';
 import { Accordion } from '../Accordion';
 

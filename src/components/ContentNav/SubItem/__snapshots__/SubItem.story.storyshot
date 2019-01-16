@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ContentNav/SubItem SubItem 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <li
+        className=""
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <p>
+          Task Descriptions
+        </p>
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+        }
+        p {
+          margin: 5px 2em 5px 1em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+        </style>
+      </li>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ContentNav/SubItem SubItem Active 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <li
+        className="active"
+        onClick={[Function]}
+        role="menuitem"
+      >
+        <p>
+          Task Descriptions
+        </p>
+        <style
+          jsx={true}
+        >
+          
+        * {
+          font-family: PT Serif;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          color: #63666A;
+          font-size: 14px;
+        }
+        p {
+          margin: 5px 2em 5px 1em;
+        }
+        .active {
+          color: #006298;
+        }
+      
+        </style>
+      </li>
+    </div>
+  </div>
+</div>
+`;

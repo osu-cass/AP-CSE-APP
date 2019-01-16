@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Item, ItemProps } from './Item';
 import { SubItem, SubItemProps } from './SubItem';
-import { ItemSearch } from '@osu-cass/sb-components';
 
 /**
  * Properties for ContentNav
@@ -112,7 +111,7 @@ export class ContentNav extends Component<ContentNavProps, ContentNavState> {
       }
       if (isActive) {
         content = item.contentKey;
-        expanded = !item.expanded;
+        expanded = true;
       }
 
       return { ...item, expanded, subItems: newSubItems, active: isActive };

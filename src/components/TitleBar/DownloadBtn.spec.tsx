@@ -1,10 +1,9 @@
 import React from 'react';
-import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 
 import { DownloadBtn } from './DownloadBtn';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 
-const taskModelMock = ['Task Model 1', 'Task Model 2'];
 const mockModal = {
   claim: ELAG3ClaimMock,
   isOpen: true
