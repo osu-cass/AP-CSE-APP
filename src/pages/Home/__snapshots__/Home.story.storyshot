@@ -123,7 +123,7 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                     <button
                       className="single-button"
                     >
-                      Navigate to a Target
+                      Explore Content Specifications
                     </button>
                   </a>
                   <a

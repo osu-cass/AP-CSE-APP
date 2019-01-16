@@ -8,7 +8,7 @@ import css from 'styled-jsx/css';
 import { MobileBreakSize } from '../../components/MediaQueryWrapper';
 
 const importedLogo = homeLogo as string;
-const homestyle= css` .content {
+const homestyle = css` .content {
   display: flex;
   flex-direction: row;
   font-family: PT Serif;
@@ -91,8 +91,8 @@ const HomePageComponent = () => (
     <div className="passage">
       <h1 className="passage-title">Welcome!</h1>
       <div className="passage-content">
-        The Content Specification Explorer is a tool for educators to learn about the design and content of
-        the Smarter Balanced assessments. <br />
+        The Content Specification Explorer is a tool for educators to learn about the design and
+        content of the Smarter Balanced assessments. <br />
         <br />
         Choose “Navigate to a Target” to find item specifications, linking the claims and assessment
         targets to the content standards. <br />
@@ -102,16 +102,14 @@ const HomePageComponent = () => (
       </div>
       <div className="buttons">
         <Link to="/explore?filter=open">
-          <button className="single-button">Navigate to a Target</button>
+          <button className="single-button">Explore Content Specifications</button>
         </Link>
         <Link to="/development">
           <button className="single-button">Learn About Test Development</button>
         </Link>
       </div>
     </div>
-    <style jsx>
-    {homestyle}
-    </style>
+    <style jsx>{homestyle}</style>
   </div>
 );
 // cSpell:enable
