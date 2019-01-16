@@ -10,8 +10,6 @@
     "dev": "webpack-dev-server",
     "webpack": "webpack --config webpack.config.js --env.dev",
     "webpack:prod": "webpack --config webpack.config.js --env.prod ",
-    "webpack-vendor": "webpack --config webpack.config.vendor.js --env.dev",
-    "webpack-vendor:prod": "webpack --config webpack.config.vendor.js --env.prod",
     "build-prod": "webpack --mode production",
     "prod": "webpack-dev-server --mode production",
     "storybook": "start-storybook -p 9001 -c .storybook",
