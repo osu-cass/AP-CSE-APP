@@ -8,7 +8,8 @@ import css from 'styled-jsx/css';
 import { MobileBreakSize } from '../../components/MediaQueryWrapper';
 
 const importedLogo = homeLogo as string;
-const homestyle= css` .content {
+const homestyle = css`
+.content {
   display: flex;
   flex-direction: row;
   font-family: PT Serif;
@@ -25,6 +26,7 @@ const homestyle= css` .content {
   padding: 20px;
   padding-left: 25px;
   padding-right: 25px;
+  width: 330px;
   padding-bottom: 50px;
   background-color: #fff;
 }
@@ -33,14 +35,13 @@ const homestyle= css` .content {
   font-weight: bold;
 }
 .passage-content {
-  width: 330px;
   padding-bottom: 15px;
-  border-bottom: 1px solid black;
 }
 .buttons {
   display: flex;
   flex-direction: column;
 }
+
 .single-button {
   margin-top: 20px;
   background-image: linear-gradient(to right, ${Colors.sbBlue} 70%, #177c9e);
@@ -64,6 +65,7 @@ const homestyle= css` .content {
   background-repeat: no-repeat;
   height: 100%;
 }
+
 @media (max-width: ${MobileBreakSize.maxWidth}px) {
   :global(.home-image){
     background-image: none;
@@ -76,11 +78,11 @@ const homestyle= css` .content {
   .passage-content {
     width: 87vw;
    }
-   .single-button{
-     width:87vw;
+   .single-button {
+     width: 87vw;
    }
-  .content{
-    margin-top:10px;
+  .content {
+    margin-top: 10px;
   }
 }
 `;
@@ -89,29 +91,27 @@ const HomePageComponent = () => (
   <div className="content">
     <div className="element-wrapper" />
     <div className="passage">
-      <h1 className="passage-title">Welcome!</h1>
+      <h1 className="passage-title">Welcome, Educators!</h1>
       <div className="passage-content">
-        The Content Specification Explorer is a tool for educators to learn about the design and content of
-        the Smarter Balanced assessments. <br />
-        <br />
-        Choose “Navigate to a Target” to find item specifications, linking the claims and assessment
-        targets to the content standards. <br />
-        <br />
-        Choose “Learn About Test Development” to find information explaining interim and summative
-        assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
+        How do Smarter Balanced tests assess the range of knowledge and skills important for college
+        and career readiness? Use this site to learn how test items connect to academic standards.
       </div>
       <div className="buttons">
         <Link to="/explore?filter=open">
-          <button className="single-button">Navigate to a Target</button>
+          <button className="single-button">Explore Content Specifications</button>
         </Link>
+        <p>
+          Find item specifications that link claims and assessment targets to the content standards.
+        </p>
         <Link to="/development">
           <button className="single-button">Learn About Test Development</button>
         </Link>
+        <p>
+          Access assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
+        </p>
       </div>
     </div>
-    <style jsx>
-    {homestyle}
-    </style>
+    <style jsx>{homestyle}</style>
   </div>
 );
 // cSpell:enable
