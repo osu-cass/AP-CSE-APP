@@ -276,43 +276,6 @@ exports[`Storyshots NavBar Mobile 1`] = `
       </div>
     </a>
     <a
-      href="/search"
-      onClick={[Function]}
-      style={
-        Object {
-          "color": "#63666A",
-          "textDecoration": "none",
-        }
-      }
-    >
-      <div>
-        <svg
-          fill="none"
-          height={25}
-          stroke="#63666A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width={25}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-        Search
-      </div>
-    </a>
-    <a
       href="/explore?filter=open"
       onClick={[Function]}
       style={
@@ -503,67 +466,6 @@ exports[`Storyshots NavBar/Primitives Main Menu 1`] = `
         </svg>
         <p>
           Home
-        </p>
-        <style
-          jsx={true}
-        >
-          
-      p {
-        color: #63666A;
-        margin-left: 5px;
-      }
-      div {
-        align-items: center;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 20px;
-      }
-
-      @media (max-width: 950px) {
-        p {
-          display: none;
-        }
-      }
-    
-        </style>
-      </div>
-    </a>
-    <a
-      className="nav-item"
-      href="/search"
-      onClick={[Function]}
-      style={
-        Object {
-          "textDecoration": "none",
-        }
-      }
-    >
-      <div>
-        <svg
-          fill="none"
-          height={35}
-          stroke="#63666A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width={35}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-        <p>
-          Search
         </p>
         <style
           jsx={true}
