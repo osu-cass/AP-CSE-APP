@@ -80,6 +80,7 @@ export const MainMenu: React.SFC = () => {
         .main-menu {
           display: flex;
           flex-wrap: nowrap;
+          font-weight:bold;
         }
       `}</style>
     </div>
