@@ -13,5 +13,4 @@ storiesOf('Target Page', module)
   .addDecorator(centered)
   .add('Renders a target', () => <TargetDetail target={ELAG3ClaimMock.target[0]} />)
   .add('Renders a nothing', () => <TargetDetail target={targetMock} />)
-  .add('Render a table in the content of target page', () => <Table table={tableMock} />)
   .add('Render a target with tables', () => <TargetDetail target={ELAG3C2T4Mock.target[0]} />);
