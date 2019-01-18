@@ -112,6 +112,7 @@ export const Item: React.SFC<ItemProps> = ({
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -125,7 +126,6 @@ export const Item: React.SFC<ItemProps> = ({
         }
         .active {
           color: ${Colors.sbBlue};
-          font-weight: bold;
         }
       `}</style>
     </li>
