@@ -13,7 +13,7 @@ const ELAG3C2T4Mock: IClaim = {
     'taskModels': [{
       'taskName': 'Task Model 1',
       'taskDesc': 'NA',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus\r\n\r\n**Stems:**\r\n-   Source \\#1 discusses &#60topic&#62 . Explain how the information in Source \\#2 adds to the reader’s understanding of &#60topic&#62 . Give **two** [details/examples] from Source \\#2 to support your explanation.\r\n\r\n-   The sources discuss &#60topic&#62 . Explain what the sources say about &#60topic&#62 . Use **one** detail from each source to support your explanation. For each detail, include the source title or number.',
@@ -23,7 +23,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 2',
       'taskDesc': 'The student will locate sentences that present supporting information for the source quote given in the stem.\r\n\r\nThe **delimited text** should be an excerpt from one of the sources. There should be six sentences that are delimited; however, regardless of the number of answer options and correct responses, the correct responses must equal less than half of the total answer options.\r\n\r\nThe **correct answer choice(s)** should be sentences that clearly provide supporting information for the quote given in the stem. If there are too many defensible options (check every possibility) do not use this item type, use multiple-choice.\r\n\r\n**Distractors** are the delimited sentences that should reflect common student errors. Plausible distractors for this model might include: 1) a sentence that is on topic but does not present supporting information for the source quote found in the stem and/or 2) a sentence that contains the same wording as the source quote given in the stem but does not present supporting information.\r\n\r\n**Rationales** should state the justification for why the plausible distractor is incorrect. Provide rationales for all distractors in the delimited text.',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** G3.T2. Excerpt from one of the Sources \r\n\r\n**Stems:**\r\n-   Source \\#1 says &#60quote&#62 . Click on [**one**/**two**] sentence(s) in Source \\#2 below that **best** [supports/support] this [idea/detail].\r\n\r\n**Clarifications:** The stem should appear above the text not after it.',
@@ -33,7 +33,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 3',
       'taskDesc': 'NA',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus \r\n\r\n**Stems:**\r\n-   Source \\#1 includes an illustration. Explain how this illustration would be helpful if it were added to Source \\#2. Give **two** [details/examples] from Source \\#2 to support your explanation.\r\n\r\n-   Both sources discuss &#60topic&#62 . What does Source \\#1 explain about &#60topic&#62  that Source \\#2 does not? Explain why that information is helpful for the reader. Give **two** [details/examples] from Source \\#1 to support your explanation.',
@@ -43,7 +43,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 4',
       'taskDesc': 'The student will locate sentences from a source presented in the performance task that provide different information from/supporting information to the information presented in another source from the performance task.\r\n\r\nThe **answer choices** should be six sentences from a source presented in the performance task; however, regardless of the number of answer options and correct responses, the correct responses must equal less than half of the total answer options.\r\n\r\nTo avoid clueing, the topic that is stated in the stem should either not use the explicit wording of the answer choices, or contain a balance of wording across the answer choices. To avoid outliers, be sure that the answer choices are about the same length, staggered evenly, or that a balance of length is used (i.e., three short, three long). Order the choices from shortest to longest.\r\n\r\nThe **correct answer choices** should be sentences that clearly provide differing information from/supporting information to the information given about the topic from the source mentioned in the stem.\r\n\r\n**Distractors** are the sentences that should reflect common student errors. Plausible distractors for this model might include: 1) sentences that are on topic but do not provide differing information from/supporting information to the information presented in the source that is mentioned in the stem and/or 2) sentences that are interesting facts but do not provide differing information from/supporting information to the information presented in the source that is mentioned in the stem.\r\n\r\n**Rationales** should state the justification for why the plausible distractor is incorrect.',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus \r\n\r\n**Stems:**\r\n-   Source \\#1 gives information about &#60topic&#62 . Choose **two** [facts/ideas/details] from Source \\#2 that give **different** information about &#60topic&#62 .\r\n\r\n-   Choose **two** [details/ideas] that explain what **both** Source \\#1 and Source \\#2 say about &#60topic&#62 .\r\n\r\n-   Source \\#1 says &#60quote&#62 . Click on **two** details from Source \\#2 that give **different** information about &#60topic of quote&#62 .',
@@ -53,7 +53,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 5',
       'taskDesc': 'NA',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus \r\n\r\n**Stems:**\r\n-   Which source has **more** helpful information in understanding &#60idea/process&#62? Explain why this source has **more** helpful information in understanding &#60idea/process&#62. Support your explanation with **two** [details/examples] from the source.\r\n\r\n-   Which source has **more** useful information about &#60topic&#62 ? Explain why this source has **more** useful information about &#60topic&#62 . Support your explanation with **two** [details/examples] from the source.',
@@ -63,7 +63,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 6',
       'taskDesc': 'The test taker will locate the source that provides the most useful information.\r\n\r\nThe **answer choices** should be source titles, numbers, and descriptions of the sources that are provided in the performance task. To avoid clueing, be sure that the answer choices do not contain wording from the topic mentioned in the stem, or contain a balance of wording across the options. To avoid outliers, be sure that the answer choices are about the same length, staggered evenly, or that a balance of length is used (i.e., two short, two long). Order the choices from shortest to longest.\r\n\r\nThe **correct answer choice** should be one source that is correct and provides the most useful information on the topic mentioned in the stem.\r\n\r\nDistractors are the sentences that should reflect common student errors. Plausible distractors for this model might include: 1) information from the source that is inaccurate and/or 2) source that contains opinion or speculation and/or 3) information from the source that is not useful for the topic.\r\n\r\n**Rationales** should state the justification for why the plausible distractor is incorrect.',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['None'],
       'stem': {
         'stemDesc': '**Lead-in**: No lead-in\r\n\r\n**Stimulus**: No additional stimulus \r\n\r\n**Stem**:\r\n- Which source has more useful information about &#60topic&#62? Choose one answer that gives the source number and correctly explains why this is the more useful source.',
@@ -73,7 +73,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 7',
       'taskDesc': 'NA',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus \r\n\r\n**Stem:**\r\n-  Source #1 has an illustration. What information from the illustration is the most useful in understanding the &#60process/idea&#62 in Source #2? Explain why this information is the most useful in understanding  &#60process/idea&#62. Support your explanation with two [details/examples] from Source #2.',
@@ -83,7 +83,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 8',
       'taskDesc': 'The student will locate sentences that support an illustration presented in one of the sources provided in the performance task.\r\n\r\nThe **delimited text** should be an excerpt from one of the sources provided in the performance task. There should be six sentences that are delimited; however, regardless of the number of answer options and correct responses, the correct responses must equal less than half of the total answer options.\r\n\r\n The **correct answer choice(s)** should be sentences that clearly support the illustration that is mentioned in the stem. If there are too many defensible options (check every possibility) do not use this item type, use multiple-choice.\r\n \r\n**Distractors** are the delimited sentences that should reflect common student errors. Plausible distractors for this model might include: 1) a sentence that is on topic, but does not support the illustration and/or 2) a sentence that contains interesting information, but does not support the illustration.\r\n\r\n**Rationales** should state the justification for why the plausible distractor is incorrect. Provide rationales for all distractors in the delimited text.',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** G3.T3. Excerpt from one of the Sources \r\n\r\n**Stem**:\r\n-\tSource #2 has an illustration. Click on the **two** details in the sentences from Source #1 below that are **best** explained by the illustration in Source #2.\r\n\r\n**Clarifications**: The stem should appear above the excerpt, not after it.',
@@ -93,7 +93,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 9',
       'taskDesc': 'NA',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus \r\n\r\n**Stems:**\r\n- Explain [why/how] &#60idea/opinion&#62. Give two [reasons/details/examples], one [reason/detail/example] from Source #1 and one [reason/detail/example] from Source #2 to support your explanation. For each [reason/detail/example], include the source title or number.\r\n\r\n- Explain what would happen if &#60possible effect from cause discussed in sources&#62. Give two [details/examples], one [detail/example] from Source #1 and one [detail/example] from Source #2, to support your explanation. For each [detail/example], include the source title or number.\r\n\r\n-\tEach source explains &#60topic/information&#62. Explain why this [topic/information] is important. Give two examples, one example from Source #1 and one example from Source #2, to support your answer. For each example, include the source title or number.',
@@ -103,7 +103,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 10',
       'taskDesc': 'The student will match ideas/opinions to a source number and title.\r\n\r\nTo avoid clueing, do not use the same wording in the idea/opinion as is used in the sources. The student should not be able to match the idea/opinion to the source that supports it by simply matching the wording used.\r\n\r\nThe **correct answer choices** should fit clearly into one category listed on the table. \r\n\r\n**Rationales** should state the justification for why the plausible distractor is incorrect.',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['None'],
       'stem': {
         'stemDesc': '**Lead-in:** No lead-in\r\n\r\n**Stimulus:** No additional stimulus \r\n\r\n**Stems:**\r\n\r\n-   Click on the boxes to match each source with the [idea/opinion] that it supports. Some [ideas/opinions] may have more than one source selected.\r\n\r\n   **Example of Formatting:**\r\n\r\n|   | Source #1: [title] |  Source #2: [title] |\r\n|---|--------|--------|\r\n| [idea/opinion] _____________   |  |   |\r\n| [idea/opinion] _____________   |  |   |\r\n $~$ \r\n\r\n \r\n-   Look at the [ideas/opinions] in the table. Decide if the information in Source \\#1, Source \\#2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].\r\n\r\n**Example of Formatting:**\r\n\r\n\r\n\r\n|  |  Source #1: [title] |  Source #2: [title] |  Both  |  Neither  | \r\n|------------------|---|---|---|---|\r\n| [idea/opinion] |   |   |   |   |  \r\n| [idea/opinion] |   |   |   |   |  \r\n| [idea/opinion] |   |   |   |   |  \r\n$~$\r\n\r\n**Clarifications:** Matching tables should have no more than three correct answers at this grade level. If there are too many defensible options (check every possibility) do not use this item type, use multiple-choice.',
@@ -113,7 +113,7 @@ const ELAG3C2T4Mock: IClaim = {
     }, {
       'taskName': 'Task Model 11',
       'taskDesc': '**Informational Writing:**\r\n\r\nCreate an informational writing assignment that flows naturally from the research scenario given in the Student Directions (see “Task Description” above). An informational assignment must provide the following information:\r\n\r\n-\tA purpose for writing\r\n-\tA description of the audience\r\n-\tA clear direction to write a main idea supported by details from the sources',
-      'stimulus': null,
+      'stimulus': undefined,
       'examples': ['NA'],
       'stem': { 'stemDesc': 'NA', 'shortStem': 'Appropriate Stems' },
       'relatedEvidence': []

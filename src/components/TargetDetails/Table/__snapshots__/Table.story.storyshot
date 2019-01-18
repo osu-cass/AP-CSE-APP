@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TargetDetails/Table Render a table in the content of target page 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <table
+    className="content-table"
+  >
+    <thead>
+      <tr>
+        <th>
+           
+        </th>
+        <th>
+           Source #1: [title] 
+        </th>
+        <th>
+           Source #2: [title] 
+        </th>
+        <th>
+           Both 
+        </th>
+        <th>
+           Neither 
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+           [idea/opinion] 
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           [idea/opinion] 
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           [idea/opinion] 
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+        <td>
+           
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <style
+    jsx={true}
+  >
+    
+        .content-table {
+          border-collapse: collapse;
+        }
+        .content-table th {
+          font-weight: normal;
+        }
+        .content-table,
+        th,
+        td {
+          border: 1px solid black;
+        }
+      
+  </style>
+</div>
+`;
