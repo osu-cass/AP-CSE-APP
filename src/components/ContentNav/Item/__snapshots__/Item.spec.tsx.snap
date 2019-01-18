@@ -75,6 +75,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -88,7 +89,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -145,6 +145,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -158,7 +159,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
           </style>,
@@ -282,6 +282,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -295,7 +296,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
           </style>,
@@ -331,6 +331,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -344,7 +345,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       ",
             "jsx": true,
@@ -380,6 +380,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -393,7 +394,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       ",
           ],
@@ -464,6 +464,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -477,7 +478,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
           </style>
@@ -534,6 +534,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -547,7 +548,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
             </style>,
@@ -671,6 +671,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -684,7 +685,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
             </style>,
@@ -720,6 +720,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -733,7 +734,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       ",
               "jsx": true,
@@ -769,6 +769,7 @@ ReactWrapper {
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -782,7 +783,6 @@ ReactWrapper {
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       ",
             ],

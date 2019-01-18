@@ -81,6 +81,7 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -94,7 +95,6 @@ exports[`Storyshots ContentNav/Item/Active Active 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -185,12 +185,13 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -231,6 +232,7 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -244,7 +246,6 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -335,12 +336,13 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -363,12 +365,13 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -409,6 +412,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -422,7 +426,6 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -513,12 +516,13 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -541,12 +545,13 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -587,6 +592,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -600,7 +606,6 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -691,6 +696,7 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -704,7 +710,6 @@ exports[`Storyshots ContentNav/Item/Inactive Default 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -795,12 +800,13 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -841,6 +847,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -854,7 +861,6 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
@@ -945,12 +951,13 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
         }
         li {
           display: flex;
-          align-items: center;
-          color: #63666A;
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: 14px;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: #006298;
@@ -991,6 +998,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           align-items: center;
           justify-content: space-between;
           margin: 0.5em 0;
+          font-weight: bold;
         }
         .chevron {
           display: flex;
@@ -1004,7 +1012,6 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
         }
         .active {
           color: #006298;
-          font-weight: bold;
         }
       
         </style>
