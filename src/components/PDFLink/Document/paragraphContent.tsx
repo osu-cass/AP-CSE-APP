@@ -13,7 +13,8 @@ interface ParagraphStyles {
 
 const styles: ParagraphStyles = StyleSheet.create({
   flexRow: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginBottom: '-2pt'
   },
   flexColumnLeft: {
     display: 'flex',
@@ -68,7 +69,7 @@ export const ParagraphContent = ({ content, title }: TargetProps): JSX.Element =
   ));
 
   return (
-    <View wrap style={styles.flexRow}>
+    <View minPresenceAhead={5} wrap style={styles.flexRow}>
       <View wrap style={styles.flexColumnLeft}>
         <Text wrap>{title}</Text>
       </View>
