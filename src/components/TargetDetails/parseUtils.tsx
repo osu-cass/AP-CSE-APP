@@ -125,7 +125,7 @@ const parseColumns = (dataRow: string) => {
   return dataRow.split('|');
 };
 
-const parseTable = (headerRow: string | undefined, dataRows: string[]) => {
+const parseTableFromRows = (headerRow: string | undefined, dataRows: string[]) => {
   const iTable: ITable = {
     HeaderRow: [],
     DataRows: []
@@ -158,7 +158,7 @@ const parseTables = (lines: string[], underlined: boolean) => {
       const headerDelimiter = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
       if (headerDelimiter) {
         const headerRow = lines[index - 1];
-        tablesWithStringsJSX.push(<Table table={parseTable(headerRow, dataRows)} />);
+        tablesWithStringsJSX.push(<Table table={parseTableFromRows(headerRow, dataRows)} />);
         index--;
       } else {
         dataRows.push(line);
