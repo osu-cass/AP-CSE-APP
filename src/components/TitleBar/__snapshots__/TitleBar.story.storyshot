@@ -158,7 +158,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 12px;
+        font-size: 1.0em;
         font-weight: 100;
         text-align: left;
       }
@@ -347,7 +347,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 12px;
+        font-size: 1.0em;
         font-weight: 100;
         text-align: left;
       }
@@ -445,7 +445,7 @@ exports[`Storyshots TitleBar component Renders a Title Bar with header only 1`] 
         min-width: 50px;
         padding-bottom: 15px;
         color: #ebebeb;
-        font-size: 12px;
+        font-size: 1.0em;
         font-weight: 100;
         text-align: left;
       }

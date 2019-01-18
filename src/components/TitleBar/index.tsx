@@ -117,7 +117,7 @@ export const TitleBar: React.SFC<TitleBarProps> = ({
         min-width: 50px;
         padding-bottom: 15px;
         color: ${Colors.sbGrayLighter};
-        font-size: 12px;
+        font-size: 1.0em;
         font-weight: 100;
         text-align: left;
       }
