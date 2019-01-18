@@ -10,6 +10,7 @@ import { HomePage } from './Home';
 import { ResourcesPage } from './Resources';
 import { SearchPageRoute } from './Search';
 import { TargetPage } from './Target';
+import { viewer } from '../components/PDFLink';
 
 export const App: React.SFC = () => {
   return (
@@ -25,6 +26,7 @@ export const App: React.SFC = () => {
           <Route path="/resources" component={ResourcesPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
+          <Route path="/pdf-dev" component={viewer} />
           <FooterWrapped />
           <MobileNavBarWrapped />
         </div>

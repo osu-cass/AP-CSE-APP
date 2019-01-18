@@ -3,6 +3,16 @@ import { Download } from 'react-feather';
 import ReactPDF from '@react-pdf/renderer';
 
 import { Loading } from '../Loading';
+import { IClaim } from '../../models/claim';
+import { createDocument } from './Document';
+import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
+import { DocumentProps } from './Document/DocumentModels';
+
+export const elaDocumentFull: DocumentProps = {
+  claim: ELAG3ClaimMock,
+  taskModels: ELAG3ClaimMock.target[0].taskModels,
+  renderEntireTarget: true
+};
 
 export interface PDFDownloadLinkRenderProps {
   document: JSX.Element;
@@ -11,6 +21,10 @@ export interface PDFDownloadLinkRenderProps {
 
 interface LoadingProps {
   loading: boolean;
+}
+
+export interface ViewerProps {
+  claim: IClaim;
 }
 
 export const DownloadIcon = () => (
@@ -43,3 +57,12 @@ export const PDFLink = ({ document, fileName }: PDFDownloadLinkRenderProps) => {
     </div>
   );
 };
+
+const pdfStyle = {
+  height: '85%',
+  width: '1000px'
+};
+
+export const viewer = ({ claim }: ViewerProps) => (
+  <ReactPDF.PDFViewer style={pdfStyle}>{createDocument(elaDocumentFull)}</ReactPDF.PDFViewer>
+);
