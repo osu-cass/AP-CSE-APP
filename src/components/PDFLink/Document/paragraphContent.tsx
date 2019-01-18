@@ -44,7 +44,8 @@ const styles: ParagraphStyles = StyleSheet.create({
   description: {
     maxHeight: '100%',
     padding: 5,
-    margin: 5
+    margin: 5,
+    fontFamily: 'PTSansCaption'
   }
 }) as ParagraphStyles;
 
