@@ -55,7 +55,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -72,7 +71,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -125,7 +124,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -142,7 +140,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -262,7 +260,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -279,7 +276,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -311,7 +308,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -328,7 +324,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -360,7 +356,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -377,7 +372,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -444,7 +439,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -461,7 +455,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -514,7 +508,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -531,7 +524,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -651,7 +644,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -668,7 +660,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -700,7 +692,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -717,7 +708,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
@@ -749,7 +740,6 @@ ReactWrapper {
           display: flex;
           flex-direction: column;
           font-size: 14px;
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -766,7 +756,7 @@ ReactWrapper {
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
