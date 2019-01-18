@@ -128,6 +128,40 @@ exports[`Storyshots Target Page Render a table in the content of target page 1`]
 </div>
 `;
 
+exports[`Storyshots Target Page Render a target with tables 1`] = `
+<div
+  style={
+    Object {
+      "fontFamily": "PT Sans Caption",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "display": "flex",
+        "left": 0,
+        "overflow": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "auto",
+          "maxHeight": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Target Page Renders a nothing 1`] = `
 <div
   style={
