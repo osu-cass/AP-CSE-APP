@@ -77,7 +77,10 @@ module.exports = {
         ]
       }
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({      
+      filename: isDev ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDev ? '[id].css' : '[id].[hash].css'
+      }),
     new HtmlWebpackPlugin({
       inject: true,
       template: 'src/index.html'
