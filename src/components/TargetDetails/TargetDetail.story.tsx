@@ -5,6 +5,7 @@ import centered from '@storybook/addon-centered';
 import { targetMock, tableMock } from './__mocks__';
 import { TargetDetail } from '.';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
+import ELAG3C2T4Mock from '../../../mock_api_data/E.G3.PT';
 import { Table } from './Table';
 
 storiesOf('Target Page', module)
@@ -12,4 +13,5 @@ storiesOf('Target Page', module)
   .addDecorator(centered)
   .add('Renders a target', () => <TargetDetail target={ELAG3ClaimMock.target[0]} />)
   .add('Renders a nothing', () => <TargetDetail target={targetMock} />)
-  .add('Render a table in the content of target page', () => <Table table={tableMock} />);
+  .add('Render a table in the content of target page', () => <Table table={tableMock} />)
+  .add('Render a target with tables', () => <TargetDetail target={ELAG3C2T4Mock.target[0]} />);
