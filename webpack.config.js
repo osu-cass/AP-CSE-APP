@@ -57,6 +57,10 @@ module.exports = {
     }
   },
   plugins: [
+    new MiniCssExtractPlugin({      
+      filename: isDev ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDev ? '[id].css' : '[id].[hash].css'
+      }),
     new CleanWebpackPlugin(['dist']),
     new webpack.EnvironmentPlugin({
       API_ENDPOINT: 'http://localhost:3000'
@@ -77,10 +81,6 @@ module.exports = {
         ]
       }
     }),
-    new MiniCssExtractPlugin({      
-      filename: isDev ? '[name].css' : '[name].[hash].css',
-      chunkFilename: isDev ? '[id].css' : '[id].[hash].css'
-      }),
     new HtmlWebpackPlugin({
       inject: true,
       template: 'src/index.html'
