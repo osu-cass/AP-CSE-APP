@@ -226,12 +226,3 @@ export const targetMock: ITarget = {
   taskModels: [],
   rubrics: []
 };
-
-export const tableMock: ITable = {
-  HeaderRow: [' ', ' Source #1: [title] ', ' Source #2: [title] ', ' Both ', ' Neither '],
-  DataRows: [
-    [' [idea/opinion] ', ' ', ' ', ' ', ' '],
-    [' [idea/opinion] ', ' ', ' ', ' ', ' '],
-    [' [idea/opinion] ', ' ', ' ', ' ', ' ']
-  ]
-};
