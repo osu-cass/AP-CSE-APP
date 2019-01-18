@@ -92,7 +92,6 @@ export const Item: React.SFC<ItemProps> = ({
           display: flex;
           flex-direction: column;
           font-size: ${Styles.font};
-          text-indent: 0.25em;
           z-index: 0;
           cursor: pointer;
         }
@@ -109,7 +108,7 @@ export const Item: React.SFC<ItemProps> = ({
         .item-content {
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: left;
           justify-content: space-between;
           margin: 0.5em 0;
           font-weight: bold;
