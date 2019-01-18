@@ -1,11 +1,8 @@
 import React from 'react';
-// import '../../../../node_modules/typeface-pt-serif/index.css';
-import { Document, Page, Text, View } from '@react-pdf/renderer';
+import { Document, Page, Text, View, Font } from '@react-pdf/renderer';
 // import { Colors, Styles } from '../../../constants';
 import { Head } from './Head';
 import { OneColumnLayout } from './OneColumnLayout';
-import { ClaimMe } from './mocks/testData';
-import { IClaim } from '../../../models/claim';
 import { StringContent } from './StringContent';
 import { Standards } from './Standards';
 import { DOK } from './DOK';
@@ -15,8 +12,12 @@ import { OverviewProps, PageMeta, DocumentProps, TaskModelComponentProps } from 
 import { styles } from './styles';
 import { TaskModelComponent } from './TaskModelComponent';
 import { render } from 'enzyme';
+// import PTSansCaption from '../../../assets/fonts/PT_Sans-Caption-Web-Bold.ttf';
 
-const array: string[] = ['Task Model 1', 'Task Model 2'];
+// console.log(`${window.location.origin}/${PTSansCaption}`)
+// console.log(`${window.location.origin}`)
+
+// Font.register(`${window.location.origin}/${PTSansCaption}`, { family: 'PTSansCaption'});
 
 const Description = ({ claim }: OverviewProps) => (
   <View wrap>
