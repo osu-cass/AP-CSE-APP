@@ -18,6 +18,12 @@ export const globalFilterStyle = css`
     font-weight: bold;
   }
 
+  div#claim-filter div button {
+    text-align: left;
+  }
+  div#target-filter div button {
+    text-align: left;
+  }
   .btn {
     border: 1px solid ${Colors.sbGray};
     border-radius: 3px;

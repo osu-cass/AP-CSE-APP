@@ -100,18 +100,12 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                 <h1
                   className="passage-title"
                 >
-                  Welcome!
+                  Welcome, Educators!
                 </h1>
                 <div
                   className="passage-content"
                 >
-                  The Content Specification Explorer is a tool for educators to learn about the design and content of the Smarter Balanced assessments. 
-                  <br />
-                  <br />
-                  Choose “Navigate to a Target” to find item specifications, linking the claims and assessment targets to the content standards. 
-                  <br />
-                  <br />
-                  Choose “Learn About Test Development” to find information explaining interim and summative assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
+                  How do Smarter Balanced tests assess the range of knowledge and skills important for college and career readiness? Use this site to learn how test items connect to academic standards.
                 </div>
                 <div
                   className="buttons"
@@ -123,9 +117,12 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                     <button
                       className="single-button"
                     >
-                      Navigate to a Target
+                      Explore Content Specifications
                     </button>
                   </a>
+                  <p>
+                    Find item specifications that link claims and assessment targets to the content standards.
+                  </p>
                   <a
                     href="/development"
                     onClick={[Function]}
@@ -136,6 +133,9 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
                       Learn About Test Development
                     </button>
                   </a>
+                  <p>
+                    Access assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
+                  </p>
                 </div>
               </div>
               <style
