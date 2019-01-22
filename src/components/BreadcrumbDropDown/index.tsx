@@ -45,6 +45,12 @@ export class BreadcrumbDropDown extends Component<
     this.setState({ expanded });
   };
 
+  handleEnterPress = (e: React.KeyboardEvent<HTMLLIElement>) => {
+    if (e.key === 'Enter') {
+      this.onClick();
+    }
+  };
+
   render() {
     const { currentTarget, targets } = this.props;
     const { expanded } = this.state;
@@ -59,7 +65,7 @@ export class BreadcrumbDropDown extends Component<
     return (
       <div className="root">
         <div className="breadCrumbBar">
-          <li onClick={this.onClick} role="Menu">
+          <li onClick={this.onClick} role="Menu" tabIndex={0} onKeyPress={this.handleEnterPress}>
             <div className="targetContainer" style={style}>
               <div className="targetLabel">{currentTarget.label}</div>
               {showChevron && chevron}
