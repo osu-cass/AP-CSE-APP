@@ -6,15 +6,19 @@ import { TaskModel } from './TaskModel';
 import { TaskModelComponentProps, PageMeta } from './DocumentModels';
 import { styles } from './styles';
 
-export const TaskModelComponent: React.SFC<TaskModelComponentProps> = ({ claim, taskModels }) => {
+export const TaskModelComponent: React.SFC<TaskModelComponentProps> = ({
+  claim,
+  taskModels,
+  stems
+}) => {
   const taskModelsJSX: JSX.Element[] = [];
-  taskModels.forEach((element: ITaskModel, idx: number) =>
+  taskModels.forEach((taskModel: ITaskModel, idx: number) =>
     taskModelsJSX.push(
       <Page key={`${idx}`} style={styles.page}>
-        <View key={`${idx} - ${element.taskName}`} style={styles.flexContainer} wrap>
-          <Head key={`${element.taskName} - ${idx}`} text={claim.title} />
+        <View key={`${idx} - ${taskModel.taskName}`} style={styles.flexContainer} wrap>
+          <Head key={`${taskModel.taskName} - ${idx}`} text={claim.title} />
           <View key={`${idx}-${idx}`} wrap>
-            <TaskModel key={`${idx}-${idx}-${idx}`} content={element} />
+            <TaskModel taskModel={taskModel} stems={stems} key={`${idx}-${idx}-${idx}`} />
           </View>
         </View>
         <Text

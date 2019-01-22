@@ -84,8 +84,8 @@ function taskModelSections(
 }
 
 function fillValidSection(section: string, sections: ContentSection[], title: string) {
-  if(section) {
-   sections.push({
+  if (section) {
+    sections.push({
       title,
       jsx: parseContent(section)
     });
@@ -105,11 +105,11 @@ function setUpTargetSections(target: ITarget, sections: ContentSection[]) {
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
-    const subsects: ContentSection []= [];
+    const subsects: ContentSection[] = [];
     fillValidSection(target.stimInfo, subsects, 'Passage');
     fillValidSection(target.dualText, subsects, 'Dual Text');
     fillValidSection(target.complexity, subsects, 'Text Complexity');
-    sections[sections.length-1].subsections=subsects;
+    sections[sections.length - 1].subsections = subsects;
   }
   fillValidSection(target.accessibility, sections, 'Accessibility Guidelines');
 

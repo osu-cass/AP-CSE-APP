@@ -1,5 +1,5 @@
 import { IClaim } from '../../../models/claim';
-import { ITaskModel } from '../../../models/target';
+import { ITaskModel, IStem } from '../../../models/target';
 
 export interface DocumentStyles {
   page: object;
@@ -14,6 +14,7 @@ export interface DocumentStyles {
 export interface TaskModelComponentProps {
   claim: IClaim;
   taskModels: ITaskModel[];
+  stems?: IStem[];
 }
 
 export interface DocumentProps {

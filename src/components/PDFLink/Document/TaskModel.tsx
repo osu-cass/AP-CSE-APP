@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPDF, { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import { IStandards, ITaskModel } from '../../../models/target';
+import { IStandards, ITaskModel, IStem } from '../../../models/target';
 import { OneColumnLayout } from './OneColumnLayout';
 
 interface TaskStyles {
@@ -79,7 +79,8 @@ const styles: TaskStyles = StyleSheet.create({
 }) as TaskStyles;
 
 export interface TaskModelProps {
-  content: ITaskModel;
+  taskModel: ITaskModel;
+  stems?: IStem[];
 }
 
 const renderNumberedList = (header: string, list: string[]) => (
@@ -92,6 +93,17 @@ const renderNumberedList = (header: string, list: string[]) => (
         </View>
       );
     })}
+  </View>
+);
+
+const renderStems = (title: string, stem: IStem[]) => (
+  <View>
+    <Text style={styles.header}>{title}</Text>
+    {stem.map((s, i) => (
+      <View style={styles.description}>
+        <Text key={`${s.stemDesc}-${i}}`}>• {s.stemDesc}</Text>
+      </View>
+    ))}
   </View>
 );
 
@@ -118,13 +130,12 @@ const renderSection = (headerName: string, content: string) => (
   </View>
 );
 
-export const TaskModelChild: React.SFC<ITaskModel> = ({
-  taskName,
-  stimulus,
-  taskDesc,
-  examples,
-  relatedEvidence
-}: ITaskModel) => {
+export const TaskModel: React.SFC<TaskModelProps> = ({ taskModel, stems }: TaskModelProps) => {
+  const { taskName, taskDesc, stimulus, relatedEvidence, examples } = taskModel;
+  const dualStems =
+    stems && stems.filter(s => s.shortStem === 'Appropriate Stems for Dual-Text Stimuli');
+  const appropriateStems = stems && stems.filter(s => s.shortStem === 'Appropriate Stems');
+
   return (
     <View>
       <OneColumnLayout center={true} text={'Task Models'} />
@@ -137,6 +148,12 @@ export const TaskModelChild: React.SFC<ITaskModel> = ({
             {taskDesc && renderSection('Task Description', taskDesc)}
             {stimulus && renderSection('Stimulus', stimulus)}
             {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
+            {appropriateStems &&
+              appropriateStems.length > 0 &&
+              renderStems('Appropriate Stems', appropriateStems)}
+            {dualStems &&
+              dualStems.length > 0 &&
+              renderStems('Appropriate Stems for Dual-Text Stimuli', dualStems)}
             {examples &&
               examples.length > 0 &&
               examples[0] !== 'NA' &&
@@ -144,14 +161,6 @@ export const TaskModelChild: React.SFC<ITaskModel> = ({
           </View>
         </View>
       </View>
-    </View>
-  );
-};
-
-export const TaskModel = ({ content }: TaskModelProps) => {
-  return (
-    <View>
-      <TaskModelChild {...content} />
     </View>
   );
 };
