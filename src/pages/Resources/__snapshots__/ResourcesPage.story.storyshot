@@ -82,31 +82,61 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
                   className="title"
                 >
                   <span>
-                    Scoring Guides
+                    Resources for Educators
                   </span>
                 </div>
                 <div
                   className="linkImg"
                 >
                   <a
-                    href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+                    href="http://www.smarterbalanced.org/educators"
                     target="__Blank"
                   >
                     <img
-                      alt="Scoring Guides"
+                      alt="Resources for Educators"
                       src="test-file-stub"
                     />
                   </a>
                 </div>
                 <div
+                  className="subHeading"
+                >
+                  To learn more about the resources developed by Smarter Balance for Educators, which include:
+                </div>
+                <ul
                   className="desc"
                 >
-                  Practice Test Scoring Guides for grades 3-12 in Math and English Language Arts. Use the same testing software as students to see what they encounter during testing! Try out an English language arts or math test to learn how the test works, what’s expected of students and what kind of questions are included on them.
-                </div>
-                <div>
+                  <li>
+                     
+                    Interim Assessments
+                  </li>
+                  <li>
+                     
+                    The Digital Library
+                  </li>
+                  <li>
+                     
+                    Sample Test Items
+                  </li>
+                  <li>
+                     
+                    Practice and Training Tests
+                  </li>
+                  <li>
+                     
+                    Scoring Guides and Annotated Anchors
+                  </li>
+                  <li>
+                     
+                    And more
+                  </li>
+                </ul>
+                <div
+                  className="button"
+                >
                   <a
                     aria-label="Link"
-                    href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
+                    href="http://www.smarterbalanced.org/educators"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -114,7 +144,7 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
                       className="container"
                     >
                       <span>
-                        Visit Scoring Guides Page
+                        Visit Educators Page
                       </span>
                       <svg
                         fill="none"
@@ -188,27 +218,34 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
       }
       .container {
         text-align: center;
-        max-width: 450px;
+        max-width: 900px;
       }
       .title span {
         color: #0085AD;
-        font-size: 25px;
+        font-size: 40px;
         font-weight: 500;
+        padding-bottom: 5px;
       }
       .linkImg {
         padding: 0;
+        height: 450px;
         border: 1px solid;
-        height: 220px;
       }
       .linkImg img {
         width: 100%;
         height: 100%;
       }
+      .subHeading {
+        text-align: justify;
+        font-size: 1.2em;
+      }
       .desc {
         text-align: justify;
-        font-size: 1em;
-        height: 80px;
+        font-size: 1.2em;
+        height: 110px;
+        padding-left: 20px;
         margin-bottom: 20px;
+        margin-top: 10;
       }
       @media (max-width: 800px) {
         .desc {
@@ -218,372 +255,6 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
     
                 </style>
               </div>
-              <a
-                aria-label="Link"
-                href="http://www.smarterbalanced.org/assessments/samples/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <div
-                  className="container"
-                >
-                  <span>
-                    Visit Practice Tests Page
-                  </span>
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="5"
-                      x2="19"
-                      y1="12"
-                      y2="12"
-                    />
-                    <polyline
-                      points="12 5 19 12 12 19"
-                    />
-                  </svg>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: #ebebeb;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      .container {
-        display: inline-flex;
-        min-height: 35px;
-        border-radius: 5px;
-        background-image: linear-gradient(90deg, #006298, #0085AD);
-        align-items: center;
-        justify-content: center;
-        width: 230px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .container:hover {
-        background: linear-gradient(90deg, #004266, #006298);
-      }
-      a div span {
-        padding-right: 10px;
-        font-size: 1.1em;
-      }
-    
-                </style>
-              </a>
-            </div>
-            <div
-              className="links"
-            >
-              <div
-                className="container"
-              >
-                <div
-                  className="title"
-                >
-                  <span>
-                    Digital Library
-                  </span>
-                </div>
-                <div
-                  className="linkImg"
-                >
-                  <a
-                    href="https://sbdigitallibrary.org/"
-                    target="__Blank"
-                  >
-                    <img
-                      alt="Digital Library"
-                      src="test-file-stub"
-                    />
-                  </a>
-                </div>
-                <div
-                  className="desc"
-                >
-                  The Digital Library contains classroom activities, lessons, and professional development resources to help you enhance instruction and support learning.
-                </div>
-                <div>
-                  <a
-                    aria-label="Link"
-                    href="https://sbdigitallibrary.org/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div
-                      className="container"
-                    >
-                      <span>
-                        Visit Digital Library
-                      </span>
-                      <svg
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <line
-                          x1="5"
-                          x2="19"
-                          y1="12"
-                          y2="12"
-                        />
-                        <polyline
-                          points="12 5 19 12 12 19"
-                        />
-                      </svg>
-                    </div>
-                    <style
-                      jsx={true}
-                    >
-                      
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: #ebebeb;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      .container {
-        display: inline-flex;
-        min-height: 35px;
-        border-radius: 5px;
-        background-image: linear-gradient(90deg, #006298, #0085AD);
-        align-items: center;
-        justify-content: center;
-        width: 230px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .container:hover {
-        background: linear-gradient(90deg, #004266, #006298);
-      }
-      a div span {
-        padding-right: 10px;
-        font-size: 1.1em;
-      }
-    
-                    </style>
-                  </a>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      div {
-        padding: 4px;
-      }
-      .container {
-        text-align: center;
-        max-width: 450px;
-      }
-      .title span {
-        color: #0085AD;
-        font-size: 25px;
-        font-weight: 500;
-      }
-      .linkImg {
-        padding: 0;
-        border: 1px solid;
-        height: 220px;
-      }
-      .linkImg img {
-        width: 100%;
-        height: 100%;
-      }
-      .desc {
-        text-align: justify;
-        font-size: 1em;
-        height: 80px;
-        margin-bottom: 20px;
-      }
-      @media (max-width: 800px) {
-        .desc {
-          height: auto;
-        }
-      }
-    
-                </style>
-              </div>
-              
-            </div>
-            <div
-              className="links"
-            >
-              <div
-                className="container"
-              >
-                <div
-                  className="title"
-                >
-                  <span>
-                    Sample Items
-                  </span>
-                </div>
-                <div
-                  className="linkImg"
-                >
-                  <a
-                    href="http://sampleitems.smarterbalanced.org/"
-                    target="__Blank"
-                  >
-                    <img
-                      alt="Sample Items"
-                      src="test-file-stub"
-                    />
-                  </a>
-                </div>
-                <div
-                  className="desc"
-                >
-                  This site provides examples of test questions used on Smarter Balanced assessments in English language arts / literacy and math. Teachers, parents, students, administrators, and policymakers can experience these test items just as students encounter them.
-                </div>
-                <div>
-                  <a
-                    aria-label="Link"
-                    href="http://sampleitems.smarterbalanced.org/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div
-                      className="container"
-                    >
-                      <span>
-                        Visit Sample Items Website
-                      </span>
-                      <svg
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <line
-                          x1="5"
-                          x2="19"
-                          y1="12"
-                          y2="12"
-                        />
-                        <polyline
-                          points="12 5 19 12 12 19"
-                        />
-                      </svg>
-                    </div>
-                    <style
-                      jsx={true}
-                    >
-                      
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: #ebebeb;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      .container {
-        display: inline-flex;
-        min-height: 35px;
-        border-radius: 5px;
-        background-image: linear-gradient(90deg, #006298, #0085AD);
-        align-items: center;
-        justify-content: center;
-        width: 230px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .container:hover {
-        background: linear-gradient(90deg, #004266, #006298);
-      }
-      a div span {
-        padding-right: 10px;
-        font-size: 1.1em;
-      }
-    
-                    </style>
-                  </a>
-                </div>
-                <style
-                  jsx={true}
-                >
-                  
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      div {
-        padding: 4px;
-      }
-      .container {
-        text-align: center;
-        max-width: 450px;
-      }
-      .title span {
-        color: #0085AD;
-        font-size: 25px;
-        font-weight: 500;
-      }
-      .linkImg {
-        padding: 0;
-        border: 1px solid;
-        height: 220px;
-      }
-      .linkImg img {
-        width: 100%;
-        height: 100%;
-      }
-      .desc {
-        text-align: justify;
-        font-size: 1em;
-        height: 80px;
-        margin-bottom: 20px;
-      }
-      @media (max-width: 800px) {
-        .desc {
-          height: auto;
-        }
-      }
-    
-                </style>
-              </div>
-              
             </div>
           </div>
         </div>
