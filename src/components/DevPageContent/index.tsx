@@ -72,7 +72,7 @@ export const DevTestBlueprint: React.SFC = () => (
 );
 
 export const DevInterimBlueprint: React.SFC = () => (
-  <div className="row">
+  <div className="column">
     <div className="right-margin">
       <h4>Interim Assessments Overview</h4>
       <div className="row">
