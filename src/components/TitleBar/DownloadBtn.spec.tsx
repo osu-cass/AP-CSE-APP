@@ -19,6 +19,11 @@ describe('DownloadModal', () => {
     expect(downloadBtn.state('modal')).toEqual(mockModal);
   });
 
+  it('Opens the modal when pressing enter key', () => {
+    downloadBtn.find('#download-btn').simulate('keypress', { key: 'Enter' });
+    expect(downloadBtn.state('modal')).toEqual(mockModal);
+  });
+
   it('closes the modal on esc', () => {
     downloadBtn.find('#download-btn').simulate('keyDown', {
       keyCode: 27

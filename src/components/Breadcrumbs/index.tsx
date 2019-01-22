@@ -22,6 +22,8 @@ export interface BreadcrumbsProps {
   claim?: string;
   target?: string;
   targetList?: SearchBaseModel[];
+  targetShortCode?: string;
+  claimId?: string;
 }
 
 const isHS = (a: string) => {
@@ -45,7 +47,7 @@ export function buildSearchUrl(subject?: string, grades?: string[], claim?: stri
   };
   const queryString = stringify(query);
 
-  return `/search?${queryString}`;
+  return `/explore?filter=open&${queryString}`;
 }
 
 const background = {
@@ -61,12 +63,10 @@ const background = {
  * @param {ClaimType | undefined} claim
  * @param {string | undefined} target
  */
-export const Breadcrumbs = ({ subject, grades, claim, target, targetList }: BreadcrumbsProps) => {
+export const Breadcrumbs = ({ subject, grades, claim, target, targetList, targetShortCode, claimId }: BreadcrumbsProps) => {
   let currentTarget: SearchBaseModel | undefined;
-  if (target && targetList) {
-    currentTarget = targetList.find(
-      t => t.code === window.location.pathname.replace('/target/', '')
-    );
+  if (targetShortCode && targetList) {
+    currentTarget = targetList.find(t => t.code === targetShortCode);
   }
 
   return (
@@ -93,7 +93,7 @@ export const Breadcrumbs = ({ subject, grades, claim, target, targetList }: Brea
           <MediaQuery {...DesktopBreakSize}>
             {subject && grades && claim && (
               <BreadcrumbLink
-                link={buildSearchUrl(subject, grades, claim)}
+                link={buildSearchUrl(subject, grades, claimId)}
                 value={claim}
                 label="Claim"
               />
