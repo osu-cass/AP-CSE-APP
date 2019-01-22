@@ -14,14 +14,12 @@ const isUnderlined = (line: string) => {
 };
 
 export const NewLine: React.SFC = ({ children }) => (
-  <p>
+  // NOTE: this <span> shouldn't be <p> because `children` can be block element: <div> or <ui>
+  //      Block element cannot appear as a descendant of <p>
+  <span>
     {children}
-    <style jsx>{`
-      p {
-        margin-top: 1em;
-      }
-    `}</style>
-  </p>
+    <br />
+  </span>
 );
 
 const removeDashWithSpaces = (text: string) => text.replace(/^-[ ]*/, '');
