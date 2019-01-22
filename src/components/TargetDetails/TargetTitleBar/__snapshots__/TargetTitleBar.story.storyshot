@@ -46,7 +46,7 @@ exports[`Storyshots TargetDetails/TargetTitleBar Default 1`] = `
           </li>
           <li>
             <a
-              href="/search?subject=English%20Language%20Arts"
+              href="/explore?filter=open&subject=English%20Language%20Arts"
               onClick={[Function]}
               style={
                 Object {
@@ -90,7 +90,7 @@ exports[`Storyshots TargetDetails/TargetTitleBar Default 1`] = `
           </li>
           <li>
             <a
-              href="/search?grades=6&subject=English%20Language%20Arts"
+              href="/explore?filter=open&grades=6&subject=English%20Language%20Arts"
               onClick={[Function]}
               style={
                 Object {
