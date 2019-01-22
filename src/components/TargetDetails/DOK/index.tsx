@@ -7,7 +7,7 @@ export interface DOKProps {
 }
 
 export const DOK: React.SFC<DOKProps> = ({ dok }) => {
-  const dokJsx = dok.map(d => <p>{d.dokDesc}</p>);
+  const dokJsx = dok.map((d, i) => <p key={i}>{d.dokDesc}</p>);
 
   return <React.Fragment>{dokJsx}</React.Fragment>;
 };

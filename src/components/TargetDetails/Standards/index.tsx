@@ -27,9 +27,14 @@ export const Standards: React.SFC<StandardsProps> = ({ standards }) => {
     const desc = parseContent(standard.stdDesc);
 
     return (
-      <p key={index}>
+      <div key={index}>
         <strong>{code}</strong> {desc}
-      </p>
+        <style jsx>{`
+          div {
+            margin-top: 1em;
+          }
+        `}</style>
+      </div>
     );
   });
 
