@@ -31,67 +31,64 @@ exports[`Storyshots Task Model examples default 1`] = `
       }
     >
       <div>
-        <p>
+        <h4>
           <strong>
             Example 1:
           </strong>
-        </p>
-        <p>
-          <p>
-            stuff and things and stuff
-            <style
-              jsx={true}
-            >
-              
-      p {
-        margin-top: 1em;
-      }
-    
-            </style>
-          </p>
-        </p>
+        </h4>
+        <span>
+          stuff and things and stuff
+          <br />
+        </span>
+        <style
+          jsx={true}
+        >
+          
+              div {
+                margin-top: 1em;
+              }
+            
+        </style>
       </div>
       <div>
-        <p>
+        <h4>
           <strong>
             Example 2:
           </strong>
-        </p>
-        <p>
-          <p>
-            stuff and things and stuff
-            <style
-              jsx={true}
-            >
-              
-      p {
-        margin-top: 1em;
-      }
-    
-            </style>
-          </p>
-        </p>
+        </h4>
+        <span>
+          stuff and things and stuff
+          <br />
+        </span>
+        <style
+          jsx={true}
+        >
+          
+              div {
+                margin-top: 1em;
+              }
+            
+        </style>
       </div>
       <div>
-        <p>
+        <h4>
           <strong>
             Example 3:
           </strong>
-        </p>
-        <p>
-          <p>
-            stuff and things and stuff
-            <style
-              jsx={true}
-            >
-              
-      p {
-        margin-top: 1em;
-      }
-    
-            </style>
-          </p>
-        </p>
+        </h4>
+        <span>
+          stuff and things and stuff
+          <br />
+        </span>
+        <style
+          jsx={true}
+        >
+          
+              div {
+                margin-top: 1em;
+              }
+            
+        </style>
       </div>
     </div>
   </div>
@@ -129,29 +126,28 @@ exports[`Storyshots Task Model examples renders a picture 1`] = `
       }
     >
       <div>
-        <p>
+        <h4>
           <strong>
             Picture:
           </strong>
-        </p>
-        <p>
-          <p>
-            <img
-              alt=""
-              role="presentation"
-              src="https://images.smarterbalanced.org/content/Documents/Item%20Specs/Math_Item_Specs/Claim1_mathematics_Gr3_specs/media_G3_Math_1F_NF/image007.jpg"
-            />
-            <style
-              jsx={true}
-            >
-              
-      p {
-        margin-top: 1em;
-      }
-    
-            </style>
-          </p>
-        </p>
+        </h4>
+        <span>
+          <img
+            alt=""
+            role="presentation"
+            src="https://images.smarterbalanced.org/content/Documents/Item%20Specs/Math_Item_Specs/Claim1_mathematics_Gr3_specs/media_G3_Math_1F_NF/image007.jpg"
+          />
+          <br />
+        </span>
+        <style
+          jsx={true}
+        >
+          
+              div {
+                margin-top: 1em;
+              }
+            
+        </style>
       </div>
     </div>
   </div>
@@ -189,25 +185,24 @@ exports[`Storyshots Task Model examples renders formula 1`] = `
       }
     >
       <div>
-        <p>
+        <h4>
           <strong>
             Example 1:
           </strong>
-        </p>
-        <p>
-          <p>
-            1/2
-            <style
-              jsx={true}
-            >
-              
-      p {
-        margin-top: 1em;
-      }
-    
-            </style>
-          </p>
-        </p>
+        </h4>
+        <span>
+          1/2
+          <br />
+        </span>
+        <style
+          jsx={true}
+        >
+          
+              div {
+                margin-top: 1em;
+              }
+            
+        </style>
       </div>
     </div>
   </div>

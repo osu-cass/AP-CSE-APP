@@ -8,60 +8,63 @@ exports[`Storyshots TargetDetails/Standards Multiple Standards 1`] = `
     }
   }
 >
-  <p>
+  <div>
     <strong>
       S-3a
     </strong>
      
-    <p>
+    <span>
       Mock standard
-      <style
-        jsx={true}
-      >
+      <br />
+    </span>
+    <style
+      jsx={true}
+    >
+      
+          div {
+            margin-top: 1em;
+          }
         
-      p {
-        margin-top: 1em;
-      }
-    
-      </style>
-    </p>
-  </p>
-  <p>
+    </style>
+  </div>
+  <div>
     <strong>
       S-3b
     </strong>
      
-    <p>
+    <span>
       Mock standard
-      <style
-        jsx={true}
-      >
+      <br />
+    </span>
+    <style
+      jsx={true}
+    >
+      
+          div {
+            margin-top: 1em;
+          }
         
-      p {
-        margin-top: 1em;
-      }
-    
-      </style>
-    </p>
-  </p>
-  <p>
+    </style>
+  </div>
+  <div>
     <strong>
       S-3c
     </strong>
      
-    <p>
+    <span>
       Mock standard
-      <style
-        jsx={true}
-      >
+      <br />
+    </span>
+    <style
+      jsx={true}
+    >
+      
+          div {
+            margin-top: 1em;
+          }
         
-      p {
-        margin-top: 1em;
-      }
-    
-      </style>
-    </p>
-  </p>
+    </style>
+  </div>
 </div>
 `;
 
@@ -73,23 +76,24 @@ exports[`Storyshots TargetDetails/Standards One Standard 1`] = `
     }
   }
 >
-  <p>
+  <div>
     <strong>
       S-3a
     </strong>
      
-    <p>
+    <span>
       Mock standard
-      <style
-        jsx={true}
-      >
+      <br />
+    </span>
+    <style
+      jsx={true}
+    >
+      
+          div {
+            margin-top: 1em;
+          }
         
-      p {
-        margin-top: 1em;
-      }
-    
-      </style>
-    </p>
-  </p>
+    </style>
+  </div>
 </div>
 `;
