@@ -35,11 +35,17 @@ function stemSection(stem: IStem[]): ContentSection[] {
   return sections;
 }
 
+export const SortTaskModels = (a: ITaskModel, b: ITaskModel) =>
+  parseInt(a.taskName.replace('Task Model ', ''), 10) -
+  parseInt(b.taskName.replace('Task Model ', ''), 10);
+
 function taskModelSections(
   taskModels: ITaskModel[],
   stem?: IStem[],
   isMath?: boolean
 ): ContentSection[] {
+  taskModels.sort(SortTaskModels);
+
   return taskModels.map((tm, i) => {
     let subsections: ContentSection[] = [];
 
@@ -84,8 +90,8 @@ function taskModelSections(
 }
 
 function fillValidSection(section: string, sections: ContentSection[], title: string) {
-  if(section) {
-   sections.push({
+  if (section) {
+    sections.push({
       title,
       jsx: parseContent(section)
     });
@@ -105,11 +111,11 @@ function setUpTargetSections(target: ITarget, sections: ContentSection[]) {
       title: 'Stimuli/Text Complexity',
       jsx: undefined
     });
-    const subsects: ContentSection []= [];
+    const subsects: ContentSection[] = [];
     fillValidSection(target.stimInfo, subsects, 'Passage');
     fillValidSection(target.dualText, subsects, 'Dual Text');
     fillValidSection(target.complexity, subsects, 'Text Complexity');
-    sections[sections.length-1].subsections=subsects;
+    sections[sections.length - 1].subsections = subsects;
   }
   fillValidSection(target.accessibility, sections, 'Accessibility Guidelines');
 
