@@ -162,7 +162,9 @@ export const parsedBreadCrumbDataMock: BreadcrumbsProps = {
   grades: ['6'],
   claim: 'Claim 1',
   target: 'English Language Arts Specification: Grade 6 Claim 1 Target 1',
-  targetList: undefined
+  targetList: undefined,
+  targetShortCode: 'E.G6.C1RL.T1',
+  claimId: 'C1'
 };
 
 export const parsedTitleBarDataMock: TitleBarProps = {
@@ -177,7 +179,7 @@ export const parsedTitleBarDataMock: TitleBarProps = {
 };
 export const parsedMobileTitleBarDataMock: MobileTitleBarProps = {
   claimTitle: 'Claim 1',
-  claimUrl: '/search?claim=C1&grades=6&subject=English%20Language%20Arts',
+  claimUrl: '/explore?filter=open&claim=C1&grades=6&subject=English%20Language%20Arts',
   targetTitle: 'Target 1',
   downloadBtnProps: {
     claim: ELAG3ClaimMock

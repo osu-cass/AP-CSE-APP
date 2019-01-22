@@ -38,7 +38,9 @@ export const parseBreadCrumbData = (
     subject: claim.subject,
     grades: claim.grades,
     claim: claimTitle,
-    target: claim.target[0].title
+    target: claim.target[0].title,
+    targetShortCode: claim.target[0].shortCode,
+    claimId: claim.claimNumber
   };
 };
 export const parseDownloadBtnProps = (claim: IClaim): DownloadBtnProps => {
