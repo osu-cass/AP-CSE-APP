@@ -65,7 +65,13 @@ export class BreadcrumbDropDown extends Component<
     return (
       <div className="root">
         <div className="breadCrumbBar">
-          <li onClick={this.onClick} role="Menu" tabIndex={0} onKeyPress={this.handleEnterPress}>
+          <li
+            id="breadcrumb-dropdown"
+            onClick={this.onClick}
+            role="Menu"
+            tabIndex={0}
+            onKeyPress={this.handleEnterPress}
+          >
             <div className="targetContainer" style={style}>
               <div className="targetLabel">{currentTarget.label}</div>
               {showChevron && chevron}
