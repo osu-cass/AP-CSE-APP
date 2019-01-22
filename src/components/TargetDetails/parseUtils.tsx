@@ -158,13 +158,17 @@ const parseTables = (lines: string[], underlined: boolean) => {
       const headerDelimiter = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
       if (headerDelimiter) {
         const headerRow = lines[index - 1];
-        tablesWithStringsJSX.push(<Table table={parseTableFromRows(headerRow, dataRows)} />);
+        tablesWithStringsJSX.push(
+          <Table key={index} table={parseTableFromRows(headerRow, dataRows)} />
+        );
         index--;
       } else {
         dataRows.push(line);
       }
     } else {
-      tablesWithStringsJSX.push(<NewLine>{parseUnorderedList(line, underlined)}</NewLine>);
+      tablesWithStringsJSX.push(
+        <NewLine key={index}>{parseUnorderedList(line, underlined)}</NewLine>
+      );
     }
   }
 
