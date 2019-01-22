@@ -13,6 +13,7 @@ interface TaskStyles {
   description: object;
   flexContent: object;
   border: object;
+  header: object;
 }
 
 const styles: TaskStyles = StyleSheet.create({
@@ -71,12 +72,51 @@ const styles: TaskStyles = StyleSheet.create({
   },
   border: {
     border: '1pt solid red'
+  },
+  header: {
+    fontFamily: 'PTSansCaptionBold'
   }
 }) as TaskStyles;
 
 export interface TaskModelProps {
   content: ITaskModel;
 }
+
+const renderNumberedList = (header: string, list: string[]) => (
+  <View>
+    <Text style={styles.header}>{header}</Text>
+    {list.map((item, index) => {
+      return (
+        <View>
+          <Text style={styles.description}>{`${index + 1}. ${item}`}</Text>
+        </View>
+      );
+    })}
+  </View>
+);
+
+const renderExamples = (headerName: string, content: string[]) => {
+  const sections = content.map((item, index) => (
+    <View>
+      <Text style={styles.header}>{`${headerName} ${index + 1}`}</Text>
+      <Text style={styles.description}>{item}</Text>
+    </View>
+  ));
+
+  return (
+    <View>
+      <Text style={styles.header}>{headerName}</Text>
+      {sections}
+    </View>
+  );
+};
+
+const renderSection = (headerName: string, content: string) => (
+  <View>
+    <Text style={styles.header}>{headerName}</Text>
+    <Text style={styles.description}>{content}</Text>
+  </View>
+);
 
 export const TaskModelChild: React.SFC<ITaskModel> = ({
   taskName,
@@ -94,9 +134,13 @@ export const TaskModelChild: React.SFC<ITaskModel> = ({
         </View>
         <View style={styles.flexColumnRight}>
           <View style={styles.flexContent}>
-            {taskDesc && <Text style={styles.description}>{taskDesc}</Text>}
-            {stimulus && <Text style={styles.description}>{stimulus}</Text>}
-            {examples && <Text style={styles.description}>{examples}</Text>}
+            {taskDesc && renderSection('Task Description', taskDesc)}
+            {stimulus && renderSection('Stimulus', stimulus)}
+            {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
+            {examples &&
+              examples.length > 0 &&
+              examples[0] !== 'NA' &&
+              renderExamples('Examples', examples)}
           </View>
         </View>
       </View>

@@ -63,6 +63,12 @@ const pdfStyle = {
   width: '1000px'
 };
 
-export const viewer = ({ claim }: ViewerProps) => (
-  <ReactPDF.PDFViewer style={pdfStyle}>{createDocument(elaDocumentFull)}</ReactPDF.PDFViewer>
-);
+export const viewer = ({ claim }: ViewerProps) => {
+  const documentProps: DocumentProps = {
+    claim,
+    taskModels: claim.target[0].taskModels,
+    renderEntireTarget: true
+  };
+
+  return <ReactPDF.PDFViewer style={pdfStyle}>{createDocument(documentProps)}</ReactPDF.PDFViewer>;
+};

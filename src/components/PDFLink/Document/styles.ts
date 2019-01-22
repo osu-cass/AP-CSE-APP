@@ -6,7 +6,8 @@ export const styles: DocumentStyles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 10,
     paddingBottom: 60,
-    paddingTop: 30
+    paddingTop: 30,
+    fontFamily: 'PTSansCaption'
   },
   flexContainer: {
     display: 'flex'
@@ -18,7 +19,8 @@ export const styles: DocumentStyles = StyleSheet.create({
     left: 0,
     right: 0,
     textAlign: 'center',
-    color: 'black'
+    color: 'black',
+    fontFamily: 'PTSansCaption'
   },
   numberContainer: {
     height: '25pt',

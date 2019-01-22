@@ -15,8 +15,10 @@ import { OverviewProps, PageMeta, DocumentProps, TaskModelComponentProps } from 
 import { styles } from './styles';
 import { TaskModelComponent } from './TaskModelComponent';
 import { render } from 'enzyme';
-import PTSansCaption from '../../../assets/fonts/PT_Sans-Caption-Web-Bold.ttf';
+import PTSansCaptionBold from '../../../assets/fonts/PT_Sans-Caption-Web-Bold.ttf';
+import PTSansCaption from '../../../assets/fonts/PT_Sans-Caption-Web-Regular.ttf';
 
+Font.register(`${window.location.origin}/${PTSansCaptionBold}`, { family: 'PTSansCaptionBold' });
 Font.register(`${window.location.origin}/${PTSansCaption}`, { family: 'PTSansCaption' });
 
 const Description = ({ claim }: OverviewProps) => (
@@ -27,6 +29,10 @@ const Description = ({ claim }: OverviewProps) => (
     )}
   </View>
 );
+
+const documentStyles = {
+  fontFamily: 'PTSansCaption'
+};
 
 const Overview = ({ claim }: OverviewProps) => {
   const target = claim.target[0];
