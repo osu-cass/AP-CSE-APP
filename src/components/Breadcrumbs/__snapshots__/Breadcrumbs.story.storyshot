@@ -134,7 +134,7 @@ exports[`Storyshots Breadcrumbs Subject, grade, and claim 1`] = `
         </li>
         <li>
           <a
-            href="/search?subject=ELA"
+            href="/explore?filter=open&subject=ELA"
             onClick={[Function]}
             style={
               Object {
@@ -178,7 +178,7 @@ exports[`Storyshots Breadcrumbs Subject, grade, and claim 1`] = `
         </li>
         <li>
           <a
-            href="/search?grades=8&subject=ELA"
+            href="/explore?filter=open&grades=8&subject=ELA"
             onClick={[Function]}
             style={
               Object {

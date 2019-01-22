@@ -46,7 +46,9 @@ exports[`Storyshots TitleBar component Renders a Title Bar with a claim only 1`]
             aria-label="Download"
             id="download-btn"
             onClick={[Function]}
+            onKeyPress={[Function]}
             role="button"
+            tabIndex={0}
           >
             <svg
               aria-hidden="true"
@@ -235,7 +237,9 @@ exports[`Storyshots TitleBar component Renders a Title Bar with all data 1`] = `
             aria-label="Download"
             id="download-btn"
             onClick={[Function]}
+            onKeyPress={[Function]}
             role="button"
+            tabIndex={0}
           >
             <svg
               aria-hidden="true"
@@ -479,7 +483,9 @@ exports[`Storyshots TitleBar component Renders a download button 1`] = `
         aria-label="Download"
         id="download-btn"
         onClick={[Function]}
+        onKeyPress={[Function]}
         role="button"
+        tabIndex={0}
       >
         <svg
           aria-hidden="true"
