@@ -4,14 +4,11 @@
   "description": "React frontend for AP Content Specification Explorer",
   "main": "index.js",
   "scripts": {
-    "build": "npm run webpack",
+    "build": "webpack",
     "test": "jest --coverage",
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-dev-server",
-    "webpack": "webpack --config webpack.config.js --env.dev",
-    "webpack:prod": "webpack --config webpack.config.js --env.prod ",
-    "build-prod": "webpack --mode production",
-    "prod": "webpack-dev-server --mode production",
+    "prod": "webpack --env.prod ",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o public/storybook",
     "format": "prettier --single-quote --print-width 100 --write src/**/*.{ts,tsx,js,json}",
@@ -118,8 +115,7 @@
     "typeface-pt-sans-caption": "0.0.54",
     "typeface-pt-serif": "0.0.54",
     "url-search-params-polyfill": "^5.0.0",
-    "whatwg-fetch": "^3.0.0",
-    "yoga-layout": "github:naminho/yoga-layout-windows"
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
