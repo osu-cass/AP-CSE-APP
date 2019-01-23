@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env.prod",
+    "now-build": "npm run build",
     "test": "jest --coverage",
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-dev-server",
