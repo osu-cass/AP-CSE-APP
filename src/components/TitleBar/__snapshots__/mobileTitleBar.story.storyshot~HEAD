@@ -33,9 +33,7 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with a claim o
               aria-label="Download"
               id="download-btn"
               onClick={[Function]}
-              onKeyPress={[Function]}
               role="button"
-              tabIndex={0}
             >
               <i
                 className="fa fa-cloud-download cloud"
@@ -168,9 +166,7 @@ exports[`Storyshots Mobile TitleBar component Renders a Title Bar with all data 
               aria-label="Download"
               id="download-btn"
               onClick={[Function]}
-              onKeyPress={[Function]}
               role="button"
-              tabIndex={0}
             >
               <i
                 className="fa fa-cloud-download cloud"
@@ -349,9 +345,7 @@ exports[`Storyshots Mobile TitleBar component Renders a download button 1`] = `
         aria-label="Download"
         id="download-btn"
         onClick={[Function]}
-        onKeyPress={[Function]}
         role="button"
-        tabIndex={0}
       >
         <i
           className="fa fa-cloud-download cloud"

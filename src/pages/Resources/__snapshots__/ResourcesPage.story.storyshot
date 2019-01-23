@@ -21,7 +21,7 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
           className="page-content width-enforcer"
         >
           <h1>
-            Resources
+            My Resources
           </h1>
           <style
             jsx={true}
@@ -185,7 +185,7 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
       }
       .container {
         display: inline-flex;
-        min-height: 35px;
+        height: 35px;
         border-radius: 5px;
         background-image: linear-gradient(90deg, #006298, #0085AD);
         align-items: center;
@@ -269,14 +269,10 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
       }
       .resource {
         height: 620px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-      }
-      .links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
     
         </style>
@@ -315,6 +311,10 @@ exports[`Storyshots Resources Page Render the Resources page 1`] = `
           top: 50px;
           bottom: 50px;
           width: 100%;
+        }
+
+        #titleContainer {
+          flex-shrink: 0;
         }
 
         .content {

@@ -63,7 +63,15 @@ const background = {
  * @param {ClaimType | undefined} claim
  * @param {string | undefined} target
  */
-export const Breadcrumbs = ({ subject, grades, claim, target, targetList, targetShortCode, claimId }: BreadcrumbsProps) => {
+export const Breadcrumbs = ({
+  subject,
+  grades,
+  claim,
+  target,
+  targetList,
+  targetShortCode,
+  claimId
+}: BreadcrumbsProps) => {
   let currentTarget: SearchBaseModel | undefined;
   if (targetShortCode && targetList) {
     currentTarget = targetList.find(t => t.code === targetShortCode);
