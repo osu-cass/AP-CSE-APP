@@ -85,12 +85,12 @@ export const Stimuli = ({ stemInfo, dualText, complexity }: StimuliProps): JSX.E
   return (
     <View style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
-        <Text>{'Stimuli/Text Complexity'}</Text>
+        <Text>{'Stimuli/\nText Complexity'}</Text>
       </View>
       <View style={styles.flexColumnRight}>
         {renderSection('Passage', stemInfo)}
         {dualText && renderSection('Dual Text', dualText)}
-        {complexity && renderSection('TextComplexity', complexity)}
+        {complexity && renderSection('Text Complexity', complexity)}
       </View>
     </View>
   );

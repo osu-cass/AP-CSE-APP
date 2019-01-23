@@ -11,24 +11,23 @@ export const TaskModelComponent: React.SFC<TaskModelComponentProps> = ({
   taskModels,
   stems
 }) => {
-  const taskModelsJSX: JSX.Element[] = [];
-  taskModels.forEach((taskModel: ITaskModel, idx: number) =>
-    taskModelsJSX.push(
-      <Page key={`${idx}`} style={styles.page}>
-        <View key={`${idx} - ${taskModel.taskName}`} style={styles.flexContainer} wrap>
-          <Head key={`${taskModel.taskName} - ${idx}`} text={claim.title} />
-          <View key={`${idx}-${idx}`} wrap>
-            <TaskModel taskModel={taskModel} stems={stems} key={`${idx}-${idx}-${idx}`} />
+  return (
+    <View>
+      {taskModels.map((taskModel: ITaskModel, idx: number) => (
+        <Page key={`${idx}`} style={styles.page}>
+          <View key={`${idx} - ${taskModel.taskName}`} style={styles.flexContainer} wrap>
+            <Head key={`${taskModel.taskName} - ${idx}`} text={claim.title} />
+            <View key={`${idx}-${idx}`} wrap>
+              <TaskModel taskModel={taskModel} stems={stems} key={`${idx}-${idx}-${idx}`} />
+            </View>
           </View>
-        </View>
-        <Text
-          style={styles.pageNumber}
-          render={({ pageNumber, totalPages }: PageMeta) => `${pageNumber} / ${totalPages}`}
-          fixed
-        />
-      </Page>
-    )
+          <Text
+            style={styles.pageNumber}
+            render={({ pageNumber, totalPages }: PageMeta) => `${pageNumber} / ${totalPages}`}
+            fixed
+          />
+        </Page>
+      ))}
+    </View>
   );
-
-  return <Fragment>{taskModelsJSX}</Fragment>;
 };

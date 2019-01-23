@@ -87,11 +87,7 @@ const renderNumberedList = (header: string, list: string[]) => (
   <View>
     <Text style={styles.header}>{header}</Text>
     {list.map((item, index) => {
-      return (
-        <View>
-          <Text style={styles.description}>{`${index + 1}. ${item}`}</Text>
-        </View>
-      );
+      return <Text style={styles.description}>{`${index + 1}. ${item}`}</Text>;
     })}
   </View>
 );
@@ -100,9 +96,7 @@ const renderStems = (title: string, stem: IStem[]) => (
   <View>
     <Text style={styles.header}>{title}</Text>
     {stem.map((s, i) => (
-      <View style={styles.description}>
-        <Text key={`${s.stemDesc}-${i}}`}>• {s.stemDesc}</Text>
-      </View>
+      <Text key={`${s.stemDesc}-${i}`}>{`• ${s.stemDesc}`}</Text>
     ))}
   </View>
 );
@@ -130,7 +124,7 @@ const renderSection = (headerName: string, content: string) => (
   </View>
 );
 
-export const TaskModel: React.SFC<TaskModelProps> = ({ taskModel, stems }: TaskModelProps) => {
+export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
   const { taskName, taskDesc, stimulus, relatedEvidence, examples } = taskModel;
   const dualStems =
     stems && stems.filter(s => s.shortStem === 'Appropriate Stems for Dual-Text Stimuli');
@@ -148,9 +142,7 @@ export const TaskModel: React.SFC<TaskModelProps> = ({ taskModel, stems }: TaskM
             {taskDesc && renderSection('Task Description', taskDesc)}
             {stimulus && renderSection('Stimulus', stimulus)}
             {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-            {appropriateStems &&
-              appropriateStems.length > 0 &&
-              renderStems('Appropriate Stems', appropriateStems)}
+            {dualStems && dualStems.length > 0 && renderStems('Appropriate Stems', dualStems)}
             {dualStems &&
               dualStems.length > 0 &&
               renderStems('Appropriate Stems for Dual-Text Stimuli', dualStems)}

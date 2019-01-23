@@ -15,6 +15,8 @@ import { TaskModelComponent } from './TaskModelComponent';
 import PTSansCaptionBold from '../../../assets/fonts/PT_Sans-Caption-Web-Bold.ttf';
 import PTSansCaption from '../../../assets/fonts/PT_Sans-Caption-Web-Regular.ttf';
 import { Stimuli } from './StimuliTextComplexity';
+import { IClaim } from '../../../models/claim';
+import { ITaskModel } from '../../../models/target';
 
 Font.register(`${window.location.origin}/${PTSansCaptionBold}`, { family: 'PTSansCaptionBold' });
 Font.register(`${window.location.origin}/${PTSansCaption}`, { family: 'PTSansCaption' });
@@ -62,7 +64,8 @@ const Overview = ({ claim }: OverviewProps) => {
 };
 
 const renderTaskModels = (
-  { taskModels, claim }: TaskModelComponentProps,
+  claim: IClaim,
+  taskModels: ITaskModel[],
   renderEntireTarget?: boolean
 ): JSX.Element | undefined => {
   let taskModelComponent: JSX.Element | undefined;
@@ -88,7 +91,8 @@ export function createDocument(
   setPageCount?: (num: number) => void
 ): JSX.Element {
   const renderedTaskModels = renderTaskModels(
-    { claim, taskModels: taskModels ? taskModels : [] },
+    claim,
+    taskModels ? taskModels : [],
     renderEntireTarget
   );
 
@@ -111,8 +115,8 @@ export function createDocument(
           }}
           fixed
         />
+        {renderedTaskModels}
       </Page>
-      {renderedTaskModels}
     </Document>
   );
 }

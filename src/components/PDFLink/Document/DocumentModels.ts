@@ -14,7 +14,7 @@ export interface DocumentStyles {
 export interface TaskModelComponentProps {
   claim: IClaim;
   taskModels: ITaskModel[];
-  stems?: IStem[];
+  stems: IStem[] | undefined;
 }
 
 export interface DocumentProps {
