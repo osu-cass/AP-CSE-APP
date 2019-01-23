@@ -8,10 +8,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
-module.exports = ({prod}) => ({
-  mode: prod ? 'production' : 'development',
+module.exports = (env) => ({
+  mode: env.prod ? 'production' : 'development',
   entry: ['./src/index.tsx'],
-  devtool: prod ? 'none' : 'source-map',
+  devtool: env.prod ? 'none' : 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.[hash].js',
@@ -30,7 +30,7 @@ module.exports = ({prod}) => ({
       {
         test: /\.css$/,
         use: [
-          prod ? {
+          env.prod ? {
             loader: MiniCssExtractPlugin.loader
           } : "style-loader",
           "css-loader"
