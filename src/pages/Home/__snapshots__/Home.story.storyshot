@@ -91,52 +91,57 @@ exports[`Storyshots HomeContent component HomeContent 1`] = `
             <div
               className="content"
             >
-              <div
-                className="element-wrapper"
-              />
-              <div
-                className="passage"
+              <h2
+                className="passage-title"
               >
-                <h1
-                  className="passage-title"
+                Welcome, Educators!
+              </h2>
+              <p>
+                How do Smarter Balanced tests assess the range of knowledge and skills important for college and career readiness? Use this site to learn how test items connect to academic standards.
+              </p>
+              <div
+                className="button-container"
+              >
+                <a
+                  href="/explore?filter=open"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "textDecoration": "none",
+                    }
+                  }
                 >
-                  Welcome, Educators!
-                </h1>
-                <div
-                  className="passage-content"
-                >
-                  How do Smarter Balanced tests assess the range of knowledge and skills important for college and career readiness? Use this site to learn how test items connect to academic standards.
-                </div>
-                <div
-                  className="buttons"
-                >
-                  <a
-                    href="/explore?filter=open"
-                    onClick={[Function]}
+                  <div
+                    className="single-button"
                   >
-                    <button
-                      className="single-button"
-                    >
-                      Explore Content Specifications
-                    </button>
-                  </a>
-                  <p>
-                    Find item specifications that link claims and assessment targets to the content standards.
-                  </p>
-                  <a
-                    href="/development"
-                    onClick={[Function]}
+                    Explore Content Specifications
+                  </div>
+                </a>
+                <p>
+                  Find item specifications that link claims and assessment targets to the content standards.
+                </p>
+              </div>
+              <div
+                className="button-container"
+              >
+                <a
+                  href="/development"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "textDecoration": "none",
+                    }
+                  }
+                >
+                  <div
+                    className="single-button"
                   >
-                    <button
-                      className="single-button"
-                    >
-                      Learn About Test Development
-                    </button>
-                  </a>
-                  <p>
-                    Access assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
-                  </p>
-                </div>
+                    Learn About Test Development
+                  </div>
+                </a>
+                <p>
+                  Access assessment blueprints, accessibility guidelines, scoring rubrics, and much more.
+                </p>
               </div>
               <style
                 jsx={true}

@@ -62,11 +62,21 @@ exports[`Storyshots Resource Link Complete example 1`] = `
             </a>
           </div>
           <div
+            className="subHeading"
+          >
+            Lorem ipsum
+          </div>
+          <ul
             className="desc"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          </div>
-          <div>
+            <li>
+               
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            </li>
+          </ul>
+          <div
+            className="button"
+          >
             <a
               aria-label="Link"
               href="http://www.smarterbalanced.org/assessments/practice-and-training-tests/resources-and-documentation/#tab-3"
@@ -151,27 +161,34 @@ exports[`Storyshots Resource Link Complete example 1`] = `
       }
       .container {
         text-align: center;
-        max-width: 450px;
+        max-width: 900px;
       }
       .title span {
         color: #0085AD;
-        font-size: 25px;
+        font-size: 40px;
         font-weight: 500;
+        padding-bottom: 5px;
       }
       .linkImg {
         padding: 0;
+        height: 450px;
         border: 1px solid;
-        height: 220px;
       }
       .linkImg img {
         width: 100%;
         height: 100%;
       }
+      .subHeading {
+        text-align: justify;
+        font-size: 1.2em;
+      }
       .desc {
         text-align: justify;
-        font-size: 1em;
-        height: 80px;
+        font-size: 1.2em;
+        height: 110px;
+        padding-left: 20px;
         margin-bottom: 20px;
+        margin-top: 10;
       }
       @media (max-width: 800px) {
         .desc {

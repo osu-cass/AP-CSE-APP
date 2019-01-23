@@ -36,16 +36,31 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
       }
     };
   }
+
   showHideModal = () => {
     const curModal = this.state.modal;
     curModal.isOpen = !this.state.modal.isOpen;
     this.setState({ modal: curModal });
   };
+
+  handleEnterPress = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+    if (e.key === 'Enter') {
+      this.showHideModal();
+    }
+  };
+
   render() {
     return (
       <div id="download-btn-container">
         <DownloadModal {...this.state.modal} closeFromParent={this.showHideModal} />
-        <a aria-label="Download" role="button" onClick={this.showHideModal} id="download-btn">
+        <a
+          aria-label="Download"
+          role="button"
+          onClick={this.showHideModal}
+          id="download-btn"
+          tabIndex={0}
+          onKeyPress={this.handleEnterPress}
+        >
           {/* tslint:disable-next-line:no-unsafe-any */}
           <i className="fa fa-cloud-download cloud" />
         </a>
