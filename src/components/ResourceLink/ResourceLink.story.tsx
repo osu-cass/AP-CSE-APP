@@ -18,8 +18,10 @@ const linkButtonMock: ResourceLinkBtnProps = {
 const resourceLinkProps: ResourceLinkProps = {
   title: 'Score Guides',
   imgUrl: image,
-  desc:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+  subHeading: 'Lorem ipsum',
+  desc: [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'
+  ],
   linkBtnProps: linkButtonMock
 };
 
@@ -32,12 +34,7 @@ storiesOf('Resource Link', module)
   .addDecorator(centered)
   .add('Complete example', () => (
     <div style={style}>
-      <ResourceLink
-        title={resourceLinkProps.title}
-        imgUrl={resourceLinkProps.imgUrl}
-        desc={resourceLinkProps.desc}
-        linkBtnProps={resourceLinkProps.linkBtnProps}
-      />
+      <ResourceLink {...resourceLinkProps} />
     </div>
   ))
   .add('Link button only', () => (

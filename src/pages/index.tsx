@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import { FooterWrapped } from '../components/Footer';
 import { NavBar, MobileNavBarWrapped } from '../components/NavBar';
-import { mediaQueries } from '../constants/style';
+import { mediaQueries, Colors } from '../constants/style';
 import { DevelopmentPage } from './Development';
 import { HelpPage } from './Help';
 import { HomePage } from './Home';
@@ -18,6 +18,9 @@ export const App: React.SFC = () => {
       <BrowserRouter>
         <div className="full-page">
           <div className="nav-bar">
+            <a className="skip-main" href="#main">
+              Skip to main content
+            </a>
             <NavBar />
           </div>
           <Route exact path="/" component={HomePage} />
@@ -50,6 +53,34 @@ export const App: React.SFC = () => {
         .nav-bar {
           position: fixed;
           width: 100%;
+        }
+
+        a.skip-main {
+          left: -999px;
+          position: absolute;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          z-index: -999;
+        }
+
+        a.skip-main:focus,
+        a.skip-main:active {
+          color: ${Colors.sbWhite};
+          background-color: ${Colors.sbBlue};
+          left: auto;
+          top: auto;
+          width: 15%;
+          height: auto;
+          overflow: auto;
+          margin: 5px 40%;
+          padding: 5px;
+          border-radius: 15px;
+          border: 4px solid ${Colors.sbBlueDarker};
+          text-align: center;
+          font-size: 1.2em;
+          z-index: 999;
         }
 
         @media ${mediaQueries.mobile} {

@@ -35,17 +35,11 @@ function stemSection(stem: IStem[]): ContentSection[] {
   return sections;
 }
 
-export const SortTaskModels = (a: ITaskModel, b: ITaskModel) =>
-  parseInt(a.taskName.replace('Task Model ', ''), 10) -
-  parseInt(b.taskName.replace('Task Model ', ''), 10);
-
 function taskModelSections(
   taskModels: ITaskModel[],
   stem?: IStem[],
   isMath?: boolean
 ): ContentSection[] {
-  taskModels.sort(SortTaskModels);
-
   return taskModels.map((tm, i) => {
     let subsections: ContentSection[] = [];
 
