@@ -4,6 +4,11 @@
   "public": true,
   "alias": ["ap-cse-app.now.sh"],
   "builds": [{ "src": "./package.json", "use": "@now/static-build" }],
+  "build": {
+    "env": {
+      "API_ENDPOINT": "https://cse-api.cass.oregonstate.edu"
+    }
+  },
   "routes": [
     { "src": "^/assets/(.*)", "dest": "/assets/$1" },
     { "src": "^/vendor.js", "dest": "/vendor.js" },
