@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { IClaim } from '../../models/claim';
 import { Colors } from '../../constants/style';
@@ -64,7 +62,7 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
           onKeyPress={this.handleEnterPress}
         >
           {/* tslint:disable-next-line:no-unsafe-any */}
-          <FontAwesomeIcon className="cloud" icon={faCloudDownloadAlt} />
+          <i className="fa fa-cloud-download cloud" />
         </a>
         <div className="download-label">Download</div>
         <style jsx>{`

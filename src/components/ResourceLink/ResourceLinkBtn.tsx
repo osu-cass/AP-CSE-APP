@@ -28,7 +28,7 @@ export const ResourceLinkBtn = ({ text, url }: ResourceLinkBtnProps) => (
       }
       .container {
         display: inline-flex;
-        min-height: 35px;
+        height: 35px;
         border-radius: 5px;
         background-image: ${blueGradient};
         align-items: center;

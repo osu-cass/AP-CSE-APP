@@ -1,16 +1,19 @@
 {
+  "version": 2,
+  "name": "ap-cse-app",
   "public": true,
-  "type": "static",
   "alias": ["ap-cse-app.now.sh"],
-  "env": {
-    "NOW_ENV": "true"
+  "builds": [{ "src": "./package.json", "use": "@now/static-build" }],
+  "build": {
+    "env": {
+      "API_ENDPOINT": "https://cse-api.cass.oregonstate.edu"
+    }
   },
-  "static": {
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "routes": [
+    { "src": "^/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "^/vendor.js", "dest": "/vendor.js" },
+    { "src": "^/main.(.*).css", "dest": "/main.$1.css" },
+    { "src": "^/app.bundle.(.*).js", "dest": "/app.bundle.$1.js" },
+    { "src": "^/(.*)", "dest": "/index.html" }
+  ]
 }

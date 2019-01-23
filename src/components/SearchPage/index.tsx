@@ -89,7 +89,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     const options = await this.props.filterClient.getFilterOptions(params);
     let results: IClaim[] | Error | undefined;
     if (anyParams(params, search)) {
-      results = await this.props.searchClient.search({search, ...params});
+      results = await this.props.searchClient.search({ search, ...params });
     }
     this.setState({ options, results });
   }

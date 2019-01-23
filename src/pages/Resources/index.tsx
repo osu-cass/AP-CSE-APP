@@ -2,10 +2,6 @@ import React from 'react';
 import { genericLayout } from '../../components/GenericPage/GenericLayout';
 import { ResourceLinkProps, ResourceLink } from '../../components/ResourceLink';
 import { Title } from '../../components/GenericPage/Title';
-import {
-  ResourceLinkBtn,
-  ResourceLinkBtnProps
-} from '../../components/ResourceLink/ResourceLinkBtn';
 
 /*tslint:disable: no-require-imports no-var-requires */
 const educatorimg: string = require('../../assets/images/educator-page.png') as string;
@@ -50,17 +46,13 @@ const ResourcesPageComponent: React.SFC = () => (
       }
       .resource {
         height: 620px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-      }
-      .links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
     `}</style>
   </React.Fragment>
 );
 
-export const ResourcesPage = genericLayout(<Title>Resources</Title>, ResourcesPageComponent);
+export const ResourcesPage = genericLayout(<Title>My Resources</Title>, ResourcesPageComponent);
