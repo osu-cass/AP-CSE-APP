@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { FilterOptionModel, FilterType } from '@osu-cass/sb-components';
-
 import {
   createFilters,
   paramsFromFilter,
@@ -13,6 +12,7 @@ import { MobileFilterWrapped } from '../MobileFilter';
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { ToggleBtn, ToggleBtnProps } from '../ToggleBtn';
 import { CSEAdvancedFilterModels, FilterComponentProps } from '../FilterProps';
+const loadDing = require('../../assets/sounds/loadDing.mp3');
 
 export const FilterComponent: React.SFC<FilterComponentProps> = ({
   options,
@@ -33,9 +33,11 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
     }
   };
   sortFilters();
-
+  
   const onUpdateDesktop = (filterType: FilterType, data?: FilterOptionModel) => {
     const newParams = paramsFromFilter(cleanParams, filterType, data);
+    const audio = new Audio(loadDing);
+    audio.play();
     onUpdate(newParams);
   };
 
@@ -57,7 +59,6 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
     onUpdate({ grades: [], subject: undefined, claim: undefined, target: undefined });
     toggleProps.toggled = false;
   };
-
   const ptFilter = (
     <div id="pt-filter">
       <ToggleBtn {...toggleProps} />

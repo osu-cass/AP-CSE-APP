@@ -26,6 +26,13 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        query: {
+          name: 'assets/sounds/[name].[mp3]'
+        }
+      },
+      {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader']
       },
