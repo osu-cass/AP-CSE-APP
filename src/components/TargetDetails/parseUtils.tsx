@@ -1,7 +1,7 @@
 import React from 'react';
 import { ITable, Table } from './Table';
 
-const splitByNewLine = (text: string | undefined) => {
+export const splitByNewLine = (text: string | undefined) => {
   if (text) {
     return text.split('\r\n');
   }
@@ -110,7 +110,7 @@ export const parseImageTags = (text: string): JSX.Element => {
   return <img src={url || ''} role="presentation" alt="" />;
 };
 
-const parseColumns = (dataRow: string) => {
+export const parseColumns = (dataRow: string) => {
   const sanitizedDataRow = dataRow.match(/\|(.+)\|/);
 
   // index 1 is the data grepped
@@ -123,7 +123,7 @@ const parseColumns = (dataRow: string) => {
   return dataRow.split('|');
 };
 
-const parseTableFromRows = (headerRow: string | undefined, dataRows: string[]) => {
+export const parseTableFromRows = (headerRow: string | undefined, dataRows: string[]) => {
   const iTable: ITable = {
     HeaderRow: [],
     DataRows: []
@@ -143,7 +143,7 @@ const parseTableFromRows = (headerRow: string | undefined, dataRows: string[]) =
   return iTable;
 };
 
-const parseTables = (lines: string[], underlined: boolean) => {
+export const parseTables = (lines: string[], underlined: boolean) => {
   const tablesWithStringsJSX: JSX.Element[] = [];
   const dataRows: string[] = [];
 
