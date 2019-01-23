@@ -1,6 +1,6 @@
 {
   "public": true,
-  "type": "docker",
+  "type": "static",
   "alias": ["ap-cse-app.now.sh"],
   "env": {
     "NOW_ENV": "true",
