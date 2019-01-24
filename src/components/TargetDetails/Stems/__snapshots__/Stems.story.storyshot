@@ -10,16 +10,32 @@ exports[`Storyshots TargetDetails/Stems Multiple Stems 1`] = `
 >
   <ul>
     <li>
-      <span>
+      <div>
         Stem Description Two
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
     <li>
-      <span>
+      <div>
         Stem Description Three
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
   </ul>
 </div>
@@ -35,10 +51,18 @@ exports[`Storyshots TargetDetails/Stems One Stem 1`] = `
 >
   <ul>
     <li>
-      <span>
+      <div>
         Stem Description One
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
   </ul>
 </div>
