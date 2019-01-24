@@ -96,7 +96,7 @@ const renderStems = (title: string, stem: IStem[]) => (
   <View>
     <Text style={styles.header}>{title}</Text>
     {stem.map((s, i) => (
-      <Text key={`${s.stemDesc}-${i}`}>{`• ${s.stemDesc}`}</Text>
+      <Text key={i}>• {s.stemDesc}</Text>
     ))}
   </View>
 );
@@ -142,7 +142,9 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
             {taskDesc && renderSection('Task Description', taskDesc)}
             {stimulus && renderSection('Stimulus', stimulus)}
             {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-            {appropriateStems && appropriateStems.length > 0 && renderStems('Appropriate Stems', appropriateStems)}
+            {appropriateStems &&
+              appropriateStems.length > 0 &&
+              renderStems('Appropriate Stems', appropriateStems)}
             {dualStems &&
               dualStems.length > 0 &&
               renderStems('Appropriate Stems for Dual-Text Stimuli', dualStems)}
