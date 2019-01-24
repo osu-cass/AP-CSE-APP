@@ -5,7 +5,7 @@ import {
   parseTableFromRows,
   parseColumns,
   parseTables,
-  splitByNewLine
+  parseContent
 } from './parseUtils';
 import { ITable, Table } from './Table';
 
@@ -19,7 +19,7 @@ const mockExamples = [
   'NA'
 ];
 
-const contentWithTablesMock: string =
+const multipleTablesMock: string =
   '|   | Source #1: [title] |  Source #2: [title] |\r\n|---|--------|--------|\r\n| [idea/opinion] _____________   |  |   |\r\n| [idea/opinion] _____________   |  |   |\r\n $~$ \r\n\r\n \r\n-   Look at the [ideas/opinions] in the table. Decide if the information in Source \\#1, Source \\#2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].\r\n\r\n**Example of Formatting:**\r\n\r\n\r\n\r\n|  |  Source #1: [title] |  Source #2: [title] |  Both  |  Neither  | \r\n|------------------|---|---|---|---|\r\n| [idea/opinion] |   |   |   |   |  \r\n| [idea/opinion] |   |   |   |   |  \r\n| [idea/opinion] |   |   |   |   |';
 
 const table1Mock: string =
@@ -37,18 +37,8 @@ const parsedTable1Mock: ITable = {
   ]
 };
 
-const parsedMiddleStringsMock: string[] = [
-  ' $~$ ',
-  '',
-  ' ',
-  '-   Look at the [ideas/opinions] in the table. Decide if the information in Source \\#1, Source \\#2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].',
-  '',
-  '**Example of Formatting:**',
-  '',
-  '',
-  '',
-  ''
-];
+const stringBtwTwoTablesMock: string =
+  ' $~$ \r\n\r\n \r\n-   Look at the [ideas/opinions] in the table. Decide if the information in Source \\#1, Source \\#2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].\r\n\r\n**Example of Formatting:**\r\n\r\n\r\n\r\n';
 
 const parsedTable2Mock: ITable = {
   HeaderRow: ['  ', '  Source #1: [title] ', '  Source #2: [title] ', '  Both  ', '  Neither  '],
@@ -71,7 +61,8 @@ describe('ParseUtils', () => {
       expect(array.length).toBe(9);
       expect(single.length).toBe(3);
     }
-    expect(parseExamples('')).toBe(undefined);
+    const emptyElement: JSX.Element[] = [];
+    expect(parseExamples('')).toEqual(emptyElement);
   });
 
   it('parses a string into columns as an array of string', () => {
@@ -86,15 +77,36 @@ describe('ParseUtils', () => {
   });
 
   it('parses string with a table', () => {
-    const lines = splitByNewLine(table1Mock);
-    if (!lines) return;
-
-    expect(lines.length).toBe(4);
-
-    const parsedTableJSX: JSX.Element[] = parseTables(lines, false);
-    const renderedTableJSX: JSX.Element[] = [<Table key="1" table={parsedTable1Mock} />];
-    // const renderedTableJSX: JSX.Element[] = [];
-    // renderedTableJSX.push(<Table key="1" table={parsedTable1Mock}/>);
+    const parsedTableJSX: JSX.Element[] = parseTables(table1Mock, false);
+    const renderedTableJSX: JSX.Element[] = [];
+    // NOTE: `key="1"` in <Table> is necessary to pass this test
+    // Expected key value is 1 with the given mock
+    renderedTableJSX.push(<Table key="1" table={parsedTable1Mock} />);
     expect(parsedTableJSX).toEqual(renderedTableJSX);
+  });
+
+  it('parse string with multiple tables', () => {
+    // const parsedTablesMockJSX: JSX.Element[] = [];
+    const parsedContent: JSX.Element[] = parseContent(multipleTablesMock);
+    // if (parsedContent) {
+    //   parsedContent.forEach((elem: JSX.Element) => {
+    //     parsedTablesMockJSX.push(elem);
+    //   });
+    // }
+
+    // const renderedTablesJSX: JSX.Element[] = [];
+    // renderedTablesJSX.push(<Table key="1" table={parsedTable1Mock}/>);
+    // const parsedStrings: JSX.Element[] = parseContent(stringBtwTwoTablesMock);
+    // if (parsedStrings) {
+    //   parsedStrings.forEach((elem: JSX.Element) => {
+    //     renderedTablesJSX.push(elem);
+    //   });
+    // }
+    // renderedTablesJSX.push(<Table key="1" table={parsedTable2Mock}/>);
+
+    // expect(parsedTablesMockJSX).toEqual(renderedTablesJSX);
+    expect(parsedContent).toMatchSnapshot();
+    // expect(renderedTablesJSX).toMatchSnapshot('2');
+    // expect(parsedTablesMockJSX).toMatchInlineSnapshot();
   });
 });

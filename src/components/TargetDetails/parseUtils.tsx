@@ -145,9 +145,12 @@ export const parseTableFromRows = (headerRow: string | undefined, dataRows: stri
   return iTable;
 };
 
-export const parseTables = (lines: string[], underlined: boolean) => {
+export const parseTables = (text: string, underlined: boolean) => {
   const tablesWithStringsJSX: JSX.Element[] = [];
   const dataRows: string[] = [];
+
+  const lines = splitByNewLine(text);
+  if (!lines) return tablesWithStringsJSX;
 
   for (let index = lines.length - 1; index >= 0; index--) {
     const line = lines[index];
@@ -176,62 +179,62 @@ export const parseTables = (lines: string[], underlined: boolean) => {
   return tablesWithStringsJSX.reverse();
 };
 
-const parseNoneTableContent = (text: string) => {
-  const lines = splitByNewLine(text);
+const parseNoneTableContent = (text: string, underlined: boolean) => {
+  const noneTableContentJSX: JSX.Element[] = [];
 
-  if (!lines) return;
-  const underlined = isUnderlined(lines[0]);
+  const lines = splitByNewLine(text);
+  if (!lines) return noneTableContentJSX;
 
   if (underlined) {
     lines.splice(0, 2);
   }
 
-  return lines.map((line, index) => {
-    if (!line.trim()) return;
+  lines
+    .filter(line => line.trim() !== '')
+    .forEach((line, index) => {
+      let content;
+      if (line.startsWith('![') && line.endsWith(')')) {
+        content = parseImageTags(line);
+      } else {
+        content = parseUnorderedList(line, underlined);
+      }
 
-    let content;
-    if (line.startsWith('![') && line.endsWith(')')) {
-      content = parseImageTags(line);
-    } else {
-      content = parseUnorderedList(line, underlined);
-    }
+      noneTableContentJSX.push(<NewLine key={index}>{content}</NewLine>);
+    });
 
-    return <NewLine key={index}>{content}</NewLine>;
-  });
+  return noneTableContentJSX;
 };
 
 const grepTablesRegex = /(\|.+\|)/s;
 
-const parseTableContent = (text: string) => {
-  let underlined: boolean = false;
+const parseTableContent = (text: string, underlined: boolean) => {
   // 2. Capture first and last pipes, returning all of the table content.
   const parts = text.split(grepTablesRegex);
 
-  return parts.map((part, index) => {
-    if (index === 0) {
-      underlined = isUnderlined(part);
-    }
+  let parsedTableContentJSX: JSX.Element[] = [];
 
+  parts.forEach(part => {
     const containsTables = part.match(grepTablesRegex);
     if (containsTables) {
-      const lines = splitByNewLine(part);
-      if (!lines) return;
-
-      return parseTables(lines, underlined);
+      parsedTableContentJSX = parsedTableContentJSX.concat(parseTables(part, underlined));
+    } else {
+      parsedTableContentJSX = parsedTableContentJSX.concat(parseNoneTableContent(part, underlined));
     }
-
-    return parseNoneTableContent(part);
   });
+
+  return parsedTableContentJSX;
 };
 
 export const parseContent = (text: string) => {
+  const underlined: boolean = isUnderlined(text);
+
   // 1. Check if the content contains tables, and then call the correct parsing function.
   const containsTables = text.match(grepTablesRegex);
   if (containsTables) {
-    return parseTableContent(text);
+    return parseTableContent(text, underlined);
   }
 
-  return parseNoneTableContent(text);
+  return parseNoneTableContent(text, underlined);
 };
 
 export const parseExamples = (example: string | string[]) => {
