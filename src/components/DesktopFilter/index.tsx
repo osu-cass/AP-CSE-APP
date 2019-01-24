@@ -7,7 +7,6 @@ import { blueGradient, Colors, Styles } from '../../constants/style';
 import { CSEAdvancedFilterModels, FilterProps } from '../FilterProps';
 import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
 import { Play } from 'react-feather';
-const loadDing = require('../../assets/sounds/pop.mp3');
 
 export const globalFilterStyle = css`
   .filter-selection {
@@ -108,13 +107,9 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
 
     return content;
   };
-  function playSound (){
-    const audio = new Audio(loadDing);
-    audio.play();
-  }
   return (
     <Fragment>
-      <div className="filter">
+      <div className="filter" aria-live="polite">
         <AdvancedFilter
           key={gradeFilter.label}
           {...gradeFilter}
@@ -132,8 +127,8 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         {renderClaimFilter()}
         {renderTargetFilter()}
       </div>
-      <div className="reset-container" onClick={playSound}>
-        <button className="btn" onClick={reset}>
+      <div className="reset-container">
+        <button role="button" className="btn" onClick={reset}>
           Reset
         </button>
       </div>

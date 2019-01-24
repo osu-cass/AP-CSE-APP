@@ -12,7 +12,7 @@ import { MobileFilterWrapped } from '../MobileFilter';
 import { DesktopFilterWrapped } from '../DesktopFilter';
 import { ToggleBtn, ToggleBtnProps } from '../ToggleBtn';
 import { CSEAdvancedFilterModels, FilterComponentProps } from '../FilterProps';
-const loadDing = require('../../assets/sounds/loadDing.mp3');
+
 
 export const FilterComponent: React.SFC<FilterComponentProps> = ({
   options,
@@ -36,8 +36,6 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
   
   const onUpdateDesktop = (filterType: FilterType, data?: FilterOptionModel) => {
     const newParams = paramsFromFilter(cleanParams, filterType, data);
-    const audio = new Audio(loadDing);
-    audio.play();
     onUpdate(newParams);
   };
 

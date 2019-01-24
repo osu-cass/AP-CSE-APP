@@ -207,7 +207,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     return (
       <ErrorBoundary fallbackUI={errorJsx}>
         {this.renderNarrowText(results)}
+        <div aria-live="polite">
         <FilterItemList claims={results} getTargetLink={placeholder} />
+        </div>
       </ErrorBoundary>
     );
   }
@@ -218,7 +220,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         <SearchBar onSearch={this.onSearch} initialText={this.props.paramsFromUrl.search} />
         <div className="content-container">
           {this.renderFilter()}
+          <div>
           {this.renderResults()}
+          </div>
         </div>
         <style jsx>{`
           .content-container {
