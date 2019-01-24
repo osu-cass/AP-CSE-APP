@@ -26,7 +26,7 @@ module.exports = (env) => {
     rules: [
       {
         test: /\.(tsx?)|(js?)$/,
-        include: [path.resolve(__dirname, 'src')],
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'mock_api_data')],
         loader: 'babel-loader'
       },
       {
