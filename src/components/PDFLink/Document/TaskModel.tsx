@@ -142,7 +142,7 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
             {taskDesc && renderSection('Task Description', taskDesc)}
             {stimulus && renderSection('Stimulus', stimulus)}
             {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-            {dualStems && dualStems.length > 0 && renderStems('Appropriate Stems', dualStems)}
+            {appropriateStems && appropriateStems.length > 0 && renderStems('Appropriate Stems', appropriateStems)}
             {dualStems &&
               dualStems.length > 0 &&
               renderStems('Appropriate Stems for Dual-Text Stimuli', dualStems)}
