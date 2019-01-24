@@ -431,6 +431,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -462,6 +463,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -493,6 +495,7 @@ exports[`Storyshots ContentNav Default 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;

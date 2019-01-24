@@ -188,6 +188,7 @@ exports[`Storyshots ContentNav/Item/Active Expandable 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -338,6 +339,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -367,6 +369,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -517,6 +520,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -546,6 +550,7 @@ exports[`Storyshots ContentNav/Item/Active Expanded with active SubItem 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -799,6 +804,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expandable 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
@@ -949,6 +955,7 @@ exports[`Storyshots ContentNav/Item/Inactive Expanded 1`] = `
           text-align:left;
           color: black;
           font-size: 14px;
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
