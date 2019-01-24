@@ -31,6 +31,7 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
       }
     >
       <div
+        aria-live="polite"
         className="filter"
       >
         <div
@@ -284,6 +285,7 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
         <button
           className="btn"
           onClick={[Function]}
+          role="button"
         >
           Reset
         </button>
@@ -344,6 +346,7 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
       }
     >
       <div
+        aria-live="polite"
         className="filter"
       >
         <div
@@ -549,6 +552,7 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
         <button
           className="btn"
           onClick={[Function]}
+          role="button"
         >
           Reset
         </button>
@@ -609,6 +613,7 @@ exports[`Storyshots Filter/Desktop default 1`] = `
       }
     >
       <div
+        aria-live="polite"
         className="filter"
       >
         <div
@@ -751,6 +756,7 @@ exports[`Storyshots Filter/Desktop default 1`] = `
         <button
           className="btn"
           onClick={[Function]}
+          role="button"
         >
           Reset
         </button>
