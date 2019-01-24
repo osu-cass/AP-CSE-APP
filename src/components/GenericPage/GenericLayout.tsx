@@ -33,6 +33,10 @@ export const genericLayout = <T extends object>(
           width: 100%;
         }
 
+        #titleContainer {
+          flex-shrink: 0;
+        }
+
         .content {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;

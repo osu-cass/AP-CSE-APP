@@ -3,13 +3,17 @@ const webpack = require('webpack');
 const AutoDllPlugin = require('autodll-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const isDev = process.env.NODE_ENV !== 'production';
 
-module.exports = {
-  mode: isDev ? 'development' : 'production',
-  entry: './src/index.tsx',
-  devtool: 'cheap-module-eval-source-map',
+// const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+
+module.exports = (env) => {
+  let prod = (env && env === "prod") ? true : false;
+  return {
+  mode: prod ? 'production' : 'development',
+  entry: ['./src/index.tsx'],
+  devtool: prod ? 'none' : 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.[hash].js',
@@ -21,8 +25,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?)|(js)$/,
-        exclude: /node_modules/,
+        test: /\.(tsx?)|(js?)$/,
+        include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader'
       },
       {
@@ -34,10 +38,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader']
+        use: [
+          prod ? {
+            loader: MiniCssExtractPlugin.loader
+          } : "style-loader",
+          "css-loader"
+        ]
       },
       {
-        test: /\.(png|jpg|jpeg|woff2?|ttf)$/,
+        test: /\.(ttf|eot|png|svg|jpg|jpeg|woff2?|ttf)(\?.*$|$)/,
         use: {
           loader: 'file-loader',
           options: {
@@ -55,6 +64,10 @@ module.exports = {
     }
   },
   plugins: [
+    new MiniCssExtractPlugin({      
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
+      }),
     new CleanWebpackPlugin(['dist']),
     new webpack.EnvironmentPlugin({
       API_ENDPOINT: 'http://localhost:3000'
@@ -80,4 +93,5 @@ module.exports = {
       template: 'src/index.html'
     })
   ]
+}
 };

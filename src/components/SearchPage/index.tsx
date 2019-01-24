@@ -28,8 +28,12 @@ export interface SearchPageState {
   pt: boolean;
 }
 
-function anyParams(urlParams: CSESearchQuery): boolean {
+function shouldShowFilter(urlParams: CSESearchQuery): boolean {
   return urlParams.filter ? true : false;
+}
+
+function anyParams(params: CSEFilterParams, search: string) {
+  return search || params.grades.length || params.claim || params.subject || params.target;
 }
 
 function unwrapError<T>(data?: T | Error): T | undefined {
@@ -81,9 +85,13 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
   }
 
   async componentDidMount() {
-    const { filter, ...filterParams } = this.state.params;
-    const options = await this.props.filterClient.getFilterOptions(filterParams);
-    this.setState({ options });
+    const { params, search } = this.state;
+    const options = await this.props.filterClient.getFilterOptions(params);
+    let results: IClaim[] | Error | undefined;
+    if (anyParams(params, search)) {
+      results = await this.props.searchClient.search({ search, ...params });
+    }
+    this.setState({ options, results });
   }
 
   private updateQuery(search: string, params: CSEFilterParams) {
@@ -142,7 +150,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
           options={options}
           params={params}
           onUpdate={this.onFilterChanged}
-          expanded={anyParams(this.state.params)}
+          expanded={shouldShowFilter(this.state.params)}
           filterPT={this.togglePerformanceTask}
         />
       </ErrorBoundary>
