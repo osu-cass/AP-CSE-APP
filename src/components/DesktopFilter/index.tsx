@@ -107,6 +107,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
 
     return content;
   };
+
   return (
     <Fragment>
       <div className="filter" aria-live="polite">

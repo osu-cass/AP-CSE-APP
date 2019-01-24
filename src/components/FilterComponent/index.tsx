@@ -33,7 +33,7 @@ export const FilterComponent: React.SFC<FilterComponentProps> = ({
     }
   };
   sortFilters();
-  
+
   const onUpdateDesktop = (filterType: FilterType, data?: FilterOptionModel) => {
     const newParams = paramsFromFilter(cleanParams, filterType, data);
     onUpdate(newParams);
