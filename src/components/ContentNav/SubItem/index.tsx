@@ -55,6 +55,7 @@ export const SubItem: React.SFC<SubItemProps> = ({
           text-align:left;
           color: black;
           font-size: ${Styles.font};
+          font-weight: bold;
         }
         p {
           margin-left: 1.6em;
