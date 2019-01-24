@@ -10,22 +10,46 @@ exports[`Storyshots TargetDetails/Evidence Multiple Evidences 1`] = `
 >
   <ol>
     <li>
-      <span>
+      <div>
         Evidence description
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
     <li>
-      <span>
+      <div>
         Evidence description
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
     <li>
-      <span>
+      <div>
         Evidence description
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
   </ol>
 </div>
@@ -41,10 +65,18 @@ exports[`Storyshots TargetDetails/Evidence One Evidence 1`] = `
 >
   <ol>
     <li>
-      <span>
+      <div>
         Evidence description
-        <br />
-      </span>
+        <style
+          jsx={true}
+        >
+          
+      div {
+        margin-top: 1em;
+      }
+    
+        </style>
+      </div>
     </li>
   </ol>
 </div>
