@@ -7,16 +7,21 @@ export interface DocumentStyles {
   numberContainer: object;
   flexImage: object;
   header: object;
+  headerText: object;
+  headerElement: object;
+  logo: object;
   border: object;
   flexRow: object;
   flexColumnLeft: object;
   flexColumnRight: object;
+  flexSingleRow: object;
   item: object;
   desc: object;
   code: object;
   description: object;
   flexContent: object;
   bold: object;
+  contentBox: object;
 }
 
 export const styles: DocumentStyles = StyleSheet.create({
@@ -86,6 +91,16 @@ export const styles: DocumentStyles = StyleSheet.create({
     fontSize: 12,
     marginRight: 4
   },
+  flexSingleRow: {
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderLeft: '2pt solid black',
+    borderBottom: '1pt solid black',
+    fontSize: 12,
+    padding: '5pt',
+    width: '100%',
+    marginBottom: '-1pt'
+  },
   item: {
     display: 'flex',
     padding: '3pt',
@@ -106,10 +121,29 @@ export const styles: DocumentStyles = StyleSheet.create({
   description: {
     display: 'flex',
     maxHeight: '100%',
-    paddingBottom: 3,
-    margin: 5
+    padding: 5,
+    margin: 5,
+    fontFamily: 'PTSansCaption'
   },
   bold: {
     fontFamily: 'PTSansCaptionBold'
+  },
+  contentBox: {
+    justifyContent: 'space-around'
+  },
+  headerElement: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    fontSize: 12
+  },
+  headerText: {
+    minWidth: '80%',
+    marginBottom: '10pt'
+  },
+  logo: {
+    width: '20%',
+    marginBottom: '10pt'
   }
 }) as DocumentStyles;
