@@ -113,7 +113,9 @@ export function createDocument(
           }}
           fixed
         />
-        {renderedTaskModels}
+        <View style={styles.flexContainer} wrap>
+          {renderedTaskModels}
+        </View>
       </Page>
     </Document>
   );

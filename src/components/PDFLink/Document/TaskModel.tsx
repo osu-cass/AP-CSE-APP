@@ -25,7 +25,7 @@ const processNewLine = (text: string[]): JSX.Element => {
 
 const renderNumberedList = (header: string, list: string[]) => (
   <View>
-    <Text style={styles.header}>{header}</Text>
+    <Text style={styles.bold}>{header}</Text>
     {list.map((item, index) => {
       return <Text style={styles.description}>{`${index + 1}. ${item}`}</Text>;
     })}
@@ -34,7 +34,7 @@ const renderNumberedList = (header: string, list: string[]) => (
 
 const renderStems = (title: string, stems: JSX.Element) => (
   <View>
-    <Text style={styles.header}>{title}</Text>
+    <Text style={styles.bold}>{title}</Text>
     {stems}
   </View>
 );
@@ -42,14 +42,14 @@ const renderStems = (title: string, stems: JSX.Element) => (
 const renderExamples = (headerName: string, content: string[]) => {
   const sections = content.map((item, index) => (
     <View>
-      <Text style={styles.header}>{`${headerName} ${index + 1}`}</Text>
+      <Text style={styles.bold}>{`${headerName} ${index + 1}`}</Text>
       <Text style={styles.description}>{item}</Text>
     </View>
   ));
 
   return (
     <View>
-      <Text style={styles.header}>{headerName}</Text>
+      <Text style={styles.bold}>{headerName}</Text>
       {sections}
     </View>
   );
@@ -57,7 +57,7 @@ const renderExamples = (headerName: string, content: string[]) => {
 
 const renderSection = (headerName: string, content: string) => (
   <View>
-    <Text style={styles.header}>{headerName}</Text>
+    <Text style={styles.bold}>{headerName}</Text>
     <Text style={styles.description}>{content}</Text>
   </View>
 );
@@ -83,18 +83,16 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
           <Text style={styles.code}>{taskName}</Text>
         </View>
         <View style={styles.flexColumnRight}>
-          <View style={styles.flexContent}>
-            {taskDesc && renderSection('Task Description', taskDesc)}
-            {stimulus && renderSection('Stimulus', stimulus)}
-            {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-            {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
-            {dualStemsElement &&
-              renderStems('Appropriate Stems for Dual-Text Stimuli', dualStemsElement)}
-            {examples &&
-              examples.length > 0 &&
-              examples[0] !== 'NA' &&
-              renderExamples('Examples', examples)}
-          </View>
+          {taskDesc && renderSection('Task Description', taskDesc)}
+          {stimulus && renderSection('Stimulus', stimulus)}
+          {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
+          {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
+          {dualStemsElement &&
+            renderStems('Appropriate Stems for Dual-Text Stimuli', dualStemsElement)}
+          {examples &&
+            examples.length > 0 &&
+            examples[0] !== 'NA' &&
+            renderExamples('Examples', examples)}
         </View>
       </View>
     </View>

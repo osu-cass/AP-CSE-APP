@@ -84,7 +84,7 @@ export const styles: DocumentStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    width: '70%',
+    width: '75%',
     padding: 10,
     paddingLeft: 8,
     paddingTop: 10,
@@ -118,6 +118,7 @@ export const styles: DocumentStyles = StyleSheet.create({
   flexContent: {
     display: 'flex',
     maxHeight: '100%',
+    maxWidth: '100%',
     paddingBottom: 3,
     margin: 5
   },
