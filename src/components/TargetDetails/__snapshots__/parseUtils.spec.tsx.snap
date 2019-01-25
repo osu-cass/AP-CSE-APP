@@ -26,39 +26,21 @@ Array [
     }
   />,
   <Unknown>
-    <React.Fragment>
-      <React.Fragment>
-         $~$ 
-      </React.Fragment>
-    </React.Fragment>
+     $~$ 
   </Unknown>,
   <Unknown>
     <ul>
       <li>
-        <React.Fragment>
-          <React.Fragment>
-            Look at the [ideas/opinions] in the table. Decide if the information in Source #1, Source #2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].
-          </React.Fragment>
-        </React.Fragment>
+        Look at the [ideas/opinions] in the table. Decide if the information in Source #1, Source #2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].
       </li>
     </ul>
   </Unknown>,
   <Unknown>
-    <React.Fragment>
-      <React.Fragment>
-        
-      </React.Fragment>
-    </React.Fragment>
+    
     <strong>
-      <React.Fragment>
-        Example of Formatting:
-      </React.Fragment>
+      Example of Formatting:
     </strong>
-    <React.Fragment>
-      <React.Fragment>
-        
-      </React.Fragment>
-    </React.Fragment>
+    
   </Unknown>,
   <Unknown
     table={

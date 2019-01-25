@@ -37,20 +37,6 @@ const parsedTable1Mock: ITable = {
   ]
 };
 
-const stringBtwTwoTablesMock: string =
-  ' $~$ \r\n\r\n \r\n-   Look at the [ideas/opinions] in the table. Decide if the information in Source \\#1, Source \\#2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].\r\n\r\n**Example of Formatting:**\r\n\r\n\r\n\r\n';
-
-const parsedTable2Mock: ITable = {
-  HeaderRow: ['  ', '  Source #1: [title] ', '  Source #2: [title] ', '  Both  ', '  Neither  '],
-  DataRows: [
-    [' [idea/opinion] ', '   ', '   ', '   ', '   '],
-    [' [idea/opinion] ', '   ', '   ', '   ', '   '],
-    [' [idea/opinion] ', '   ', '   ', '   ', '   ']
-  ]
-};
-
-const parsedTablesJSXMock: JSX.Element[] = [];
-
 describe('ParseUtils', () => {
   it('handles string vs string array parsing', () => {
     const array = parseExamples(mockExamples);
@@ -61,7 +47,7 @@ describe('ParseUtils', () => {
       expect(array.length).toBe(9);
       expect(single.length).toBe(3);
     }
-    const emptyElement: JSX.Element[] = [];
+    const emptyElement: React.ReactNode[] = [];
     expect(parseExamples('')).toEqual(emptyElement);
   });
 
@@ -77,8 +63,8 @@ describe('ParseUtils', () => {
   });
 
   it('parses string with a table', () => {
-    const parsedTableJSX: JSX.Element[] = parseTables(table1Mock, false);
-    const renderedTableJSX: JSX.Element[] = [];
+    const parsedTableJSX: React.ReactNode[] = parseTables(table1Mock, false);
+    const renderedTableJSX: React.ReactNode[] = [];
     // NOTE: `key="1"` in <Table> is necessary to pass this test
     // Expected key value is 1 with the given mock
     renderedTableJSX.push(<Table key="1" table={parsedTable1Mock} />);
@@ -86,27 +72,7 @@ describe('ParseUtils', () => {
   });
 
   it('parse string with multiple tables', () => {
-    // const parsedTablesMockJSX: JSX.Element[] = [];
-    const parsedContent: JSX.Element[] = parseContent(multipleTablesMock);
-    // if (parsedContent) {
-    //   parsedContent.forEach((elem: JSX.Element) => {
-    //     parsedTablesMockJSX.push(elem);
-    //   });
-    // }
-
-    // const renderedTablesJSX: JSX.Element[] = [];
-    // renderedTablesJSX.push(<Table key="1" table={parsedTable1Mock}/>);
-    // const parsedStrings: JSX.Element[] = parseContent(stringBtwTwoTablesMock);
-    // if (parsedStrings) {
-    //   parsedStrings.forEach((elem: JSX.Element) => {
-    //     renderedTablesJSX.push(elem);
-    //   });
-    // }
-    // renderedTablesJSX.push(<Table key="1" table={parsedTable2Mock}/>);
-
-    // expect(parsedTablesMockJSX).toEqual(renderedTablesJSX);
+    const parsedContent: React.ReactNode[] = parseContent(multipleTablesMock);
     expect(parsedContent).toMatchSnapshot();
-    // expect(renderedTablesJSX).toMatchSnapshot('2');
-    // expect(parsedTablesMockJSX).toMatchInlineSnapshot();
   });
 });

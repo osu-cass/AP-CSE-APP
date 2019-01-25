@@ -65,15 +65,17 @@ const parseSingleAsterisk = (text: string, underlined: boolean) => {
   const parts = text.split('*');
 
   return parts.map((part, index) => {
+    let content: React.ReactNode | string;
+
     const parsedText: string = applyParsers(parsers, part);
 
     if (index % 2 === 1) {
-      if (underlined) return <u key={index}>{parsedText}</u>;
-
-      return <i key={index}>{parsedText}</i>;
+      content = underlined ? <u key={index}>{parsedText}</u> : <i key={index}>{parsedText}</i>;
+    } else {
+      content = parsedText;
     }
 
-    return <React.Fragment key={index}>{parsedText}</React.Fragment>;
+    return content;
   });
 };
 
@@ -82,11 +84,8 @@ const parseDoubleAsterisks = (text: string, underlined: boolean) => {
 
   return parts.map((part, index) => {
     const parsedLine = parseSingleAsterisk(part, underlined);
-    if (index % 2 === 1) {
-      return <strong key={index}>{parsedLine}</strong>;
-    }
 
-    return <React.Fragment key={index}>{parsedLine}</React.Fragment>;
+    return index % 2 === 1 ? <strong key={index}>{parsedLine}</strong> : parsedLine;
   });
 };
 
@@ -104,7 +103,7 @@ const parseUnorderedList = (text: string, underlined: boolean) => {
 
 // I'm assuming you've already checked if this line of the
 // content is an image prior to this function call
-export const parseImageTags = (text: string): JSX.Element => {
+export const parseImageTags = (text: string): React.ReactNode => {
   const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
   const url = match && match[1];
@@ -145,12 +144,9 @@ export const parseTableFromRows = (headerRow: string | undefined, dataRows: stri
   return iTable;
 };
 
-export const parseTables = (text: string, underlined: boolean) => {
-  const tablesWithStringsJSX: JSX.Element[] = [];
+const parseTablesFromLines = (lines: string[], underlined: boolean) => {
+  const tablesWithStringsJSX: React.ReactNode[] = [];
   const dataRows: string[] = [];
-
-  const lines = splitByNewLine(text);
-  if (!lines) return tablesWithStringsJSX;
 
   for (let index = lines.length - 1; index >= 0; index--) {
     const line = lines[index];
@@ -179,28 +175,39 @@ export const parseTables = (text: string, underlined: boolean) => {
   return tablesWithStringsJSX.reverse();
 };
 
-const parseNoneTableContent = (text: string, underlined: boolean) => {
-  const noneTableContentJSX: JSX.Element[] = [];
+export const parseTables = (text: string, underlined: boolean) => {
+  let tablesWithStringsJSX: React.ReactNode[] = [];
 
   const lines = splitByNewLine(text);
-  if (!lines) return noneTableContentJSX;
-
-  if (underlined) {
-    lines.splice(0, 2);
+  if (lines) {
+    tablesWithStringsJSX = parseTablesFromLines(lines, underlined);
   }
 
-  lines
-    .filter(line => line.trim() !== '')
-    .forEach((line, index) => {
-      let content;
-      if (line.startsWith('![') && line.endsWith(')')) {
-        content = parseImageTags(line);
-      } else {
-        content = parseUnorderedList(line, underlined);
-      }
+  return tablesWithStringsJSX;
+};
 
-      noneTableContentJSX.push(<NewLine key={index}>{content}</NewLine>);
-    });
+const parseNoneTableContent = (text: string, underlined: boolean) => {
+  const noneTableContentJSX: React.ReactNode[] = [];
+
+  const lines = splitByNewLine(text);
+  if (lines) {
+    if (underlined) {
+      lines.splice(0, 2);
+    }
+
+    lines
+      .filter(line => line.trim() !== '')
+      .forEach((line, index) => {
+        let content;
+        if (line.startsWith('![') && line.endsWith(')')) {
+          content = parseImageTags(line);
+        } else {
+          content = parseUnorderedList(line, underlined);
+        }
+
+        noneTableContentJSX.push(<NewLine key={index}>{content}</NewLine>);
+      });
+  }
 
   return noneTableContentJSX;
 };
@@ -211,7 +218,7 @@ const parseTableContent = (text: string, underlined: boolean) => {
   // 2. Capture first and last pipes, returning all of the table content.
   const parts = text.split(grepTablesRegex);
 
-  let parsedTableContentJSX: JSX.Element[] = [];
+  let parsedTableContentJSX: React.ReactNode[] = [];
 
   parts.forEach(part => {
     const containsTables = part.match(grepTablesRegex);
