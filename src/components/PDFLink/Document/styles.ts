@@ -22,6 +22,9 @@ export interface DocumentStyles {
   flexContent: object;
   bold: object;
   contentBox: object;
+  bulletHeader: object;
+  bulletpoint: object;
+  rightcolumn: object;
 }
 
 export const styles: DocumentStyles = StyleSheet.create({
@@ -145,5 +148,17 @@ export const styles: DocumentStyles = StyleSheet.create({
   logo: {
     width: '20%',
     marginBottom: '10pt'
+  },
+  bulletHeader: {
+    padding: '2pt',
+    display: 'flex',
+    border: '1pt solid pink'
+  },
+  rightcolumn: {
+    border: '2pt solid blue'
+  },
+  bulletpoint: {
+    width: '100%',
+    display: 'flex'
   }
 }) as DocumentStyles;
