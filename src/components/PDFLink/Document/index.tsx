@@ -1,12 +1,8 @@
 import React from 'react';
-// import '../../../../node_modules/typeface-pt-serif/index.css';
-import { Document, Page, Text, View } from '@react-pdf/renderer';
-// import { Colors, Styles } from '../../../constants';
+import { Document, Page, Text, View, Font } from '@react-pdf/renderer';
 import { Head } from './Head';
 import { OneColumnLayout } from './OneColumnLayout';
-import { ClaimMe } from './mocks/testData';
-import { IClaim } from '../../../models/claim';
-import { StringContent } from './StringContent';
+import { StringContent, ItemRow } from './StringContent';
 import { Standards } from './Standards';
 import { DOK } from './DOK';
 import { ParagraphContent } from './paragraphContent';
@@ -14,7 +10,14 @@ import { Evidence } from './Evidence';
 import { OverviewProps, PageMeta, DocumentProps, TaskModelComponentProps } from './DocumentModels';
 import { styles } from './styles';
 import { TaskModelComponent } from './TaskModelComponent';
-import { render } from 'enzyme';
+import PTSansCaptionBold from '../../../assets/fonts/PT_Sans-Caption-Web-Bold.ttf';
+import PTSansCaption from '../../../assets/fonts/PT_Sans-Caption-Web-Regular.ttf';
+import { Stimuli } from './StimuliTextComplexity';
+import { IClaim } from '../../../models/claim';
+import { ITaskModel } from '../../../models/target';
+
+Font.register(`${window.location.origin}/${PTSansCaptionBold}`, { family: 'PTSansCaptionBold' });
+Font.register(`${window.location.origin}/${PTSansCaption}`, { family: 'PTSansCaption' });
 
 const Description = ({ claim }: OverviewProps) => (
   <View wrap>
@@ -25,9 +28,22 @@ const Description = ({ claim }: OverviewProps) => (
   </View>
 );
 
+const documentStyles = {
+  fontFamily: 'PTSansCaption'
+};
+
 const Overview = ({ claim }: OverviewProps) => {
   const target = claim.target[0];
-  const { vocab, clarification, standards, stimInfo, accessibility, evidence } = target;
+  const {
+    vocab,
+    clarification,
+    standards,
+    stimInfo,
+    dualText,
+    complexity,
+    accessibility,
+    evidence
+  } = target;
   const dok = target.DOK;
 
   return (
@@ -36,7 +52,7 @@ const Overview = ({ claim }: OverviewProps) => {
       {clarification && <StringContent title={'Clarifications'} content={clarification} />}
       {standards && <Standards content={standards} />}
       {dok && <DOK content={dok} />}
-      {stimInfo && <StringContent title={'Stimuli'} content={stimInfo} />}
+      {<Stimuli stemInfo={stimInfo} dualText={dualText} complexity={complexity} />}
       {accessibility && (
         <ParagraphContent title={'Accessibility Concerns'} content={accessibility} />
       )}
@@ -46,16 +62,23 @@ const Overview = ({ claim }: OverviewProps) => {
 };
 
 const renderTaskModels = (
-  { taskModels, claim }: TaskModelComponentProps,
+  claim: IClaim,
+  taskModels: ITaskModel[],
   renderEntireTarget?: boolean
 ): JSX.Element | undefined => {
   let taskModelComponent: JSX.Element | undefined;
   if (renderEntireTarget) {
     taskModelComponent = (
-      <TaskModelComponent claim={claim} taskModels={claim.target[0].taskModels} />
+      <TaskModelComponent
+        claim={claim}
+        taskModels={claim.target[0].taskModels}
+        stems={claim.target[0].stem}
+      />
     );
   } else if (taskModels.length > 0) {
-    taskModelComponent = <TaskModelComponent claim={claim} taskModels={taskModels} />;
+    taskModelComponent = (
+      <TaskModelComponent claim={claim} taskModels={taskModels} stems={claim.target[0].stem} />
+    );
   }
 
   return taskModelComponent;
@@ -66,7 +89,8 @@ export function createDocument(
   setPageCount?: (num: number) => void
 ): JSX.Element {
   const renderedTaskModels = renderTaskModels(
-    { claim, taskModels: taskModels ? taskModels : [] },
+    claim,
+    taskModels ? taskModels : [],
     renderEntireTarget
   );
 
@@ -89,8 +113,10 @@ export function createDocument(
           }}
           fixed
         />
+        <View style={styles.flexContainer} wrap>
+          {renderedTaskModels}
+        </View>
       </Page>
-      {renderedTaskModels}
     </Document>
   );
 }

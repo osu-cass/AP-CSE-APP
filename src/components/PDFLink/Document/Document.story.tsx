@@ -11,7 +11,7 @@ const iframeStyle = {
   height: 'calc(100vh - 20pt)'
 };
 
-const elaDocumentFull: DocumentProps = {
+export const elaDocumentFull: DocumentProps = {
   claim: ELAG3ClaimMock,
   taskModels: ELAG3ClaimMock.target[0].taskModels,
   renderEntireTarget: true
