@@ -1,19 +1,10 @@
 import { IClaim } from '../../../models/claim';
-import { ITaskModel } from '../../../models/target';
-
-export interface DocumentStyles {
-  page: object;
-  flexContainer: object;
-  pageNumber: object;
-  numberContainer: object;
-  flexImage: object;
-  header: object;
-  border: object;
-}
+import { ITaskModel, IStem } from '../../../models/target';
 
 export interface TaskModelComponentProps {
   claim: IClaim;
   taskModels: ITaskModel[];
+  stems: IStem[] | undefined;
 }
 
 export interface DocumentProps {

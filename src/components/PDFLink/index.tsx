@@ -3,6 +3,9 @@ import { Download } from 'react-feather';
 import ReactPDF from '@react-pdf/renderer';
 
 import { Loading } from '../Loading';
+import { IClaim } from '../../models/claim';
+import { createDocument } from './Document';
+import { DocumentProps } from './Document/DocumentModels';
 
 export interface PDFDownloadLinkRenderProps {
   document: JSX.Element;
@@ -11,6 +14,10 @@ export interface PDFDownloadLinkRenderProps {
 
 interface LoadingProps {
   loading: boolean;
+}
+
+export interface ViewerProps {
+  claim: IClaim;
 }
 
 export const DownloadIcon = () => (
@@ -42,4 +49,19 @@ export const PDFLink = ({ document, fileName }: PDFDownloadLinkRenderProps) => {
       </ReactPDF.PDFDownloadLink>
     </div>
   );
+};
+
+const pdfStyle = {
+  height: '85%',
+  width: '1000px'
+};
+
+export const viewer = ({ claim }: ViewerProps) => {
+  const documentProps: DocumentProps = {
+    claim,
+    taskModels: claim.target[0].taskModels,
+    renderEntireTarget: true
+  };
+
+  return <ReactPDF.PDFViewer style={pdfStyle}>{createDocument(documentProps)}</ReactPDF.PDFViewer>;
 };

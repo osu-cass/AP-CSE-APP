@@ -9,6 +9,7 @@
     "test": "jest --coverage",
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-dev-server",
+    "prod": "webpack-dev-server --env prod",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o public/storybook",
     "format": "prettier --single-quote --print-width 100 --write src/**/*.{ts,tsx,js,json}",
