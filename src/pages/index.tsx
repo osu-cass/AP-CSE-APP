@@ -10,6 +10,7 @@ import { HomePage } from './Home';
 import { ResourcesPage } from './Resources';
 import { SearchPageRoute } from './Search';
 import { TargetPage } from './Target';
+import { PdfDevPage } from './pdf-dev/pdf-dev';
 
 export const App: React.SFC = () => {
   return (
@@ -22,14 +23,13 @@ export const App: React.SFC = () => {
             </a>
             <NavBar />
           </div>
-          <div id="main">
-            <Route exact path="/" component={HomePage} />
-            <Route path="/target/:targetShortCode" component={TargetPage} />
-            <Route path="/explore" component={SearchPageRoute} />
-            <Route path="/resources" component={ResourcesPage} />
-            <Route path="/development" component={DevelopmentPage} />
-            <Route path="/help" component={HelpPage} />
-          </div>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/target/:targetShortCode" component={TargetPage} />
+          <Route path="/explore" component={SearchPageRoute} />
+          <Route path="/resources" component={ResourcesPage} />
+          <Route path="/development" component={DevelopmentPage} />
+          <Route path="/help" component={HelpPage} />
+          <Route path="/pdf-dev/:targetShortCode" component={PdfDevPage} />
           <FooterWrapped />
           <MobileNavBarWrapped />
         </div>

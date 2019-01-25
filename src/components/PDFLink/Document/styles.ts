@@ -1,12 +1,39 @@
 import { StyleSheet } from '@react-pdf/renderer';
-import { DocumentStyles } from './DocumentModels';
+
+export interface DocumentStyles {
+  page: object;
+  flexContainer: object;
+  pageNumber: object;
+  numberContainer: object;
+  flexImage: object;
+  header: object;
+  headerText: object;
+  headerElement: object;
+  logo: object;
+  border: object;
+  flexRow: object;
+  flexColumnLeft: object;
+  flexColumnRight: object;
+  flexSingleRow: object;
+  item: object;
+  desc: object;
+  code: object;
+  description: object;
+  flexContent: object;
+  bold: object;
+  contentBox: object;
+  bulletHeader: object;
+  bulletpoint: object;
+  rightcolumn: object;
+}
 
 export const styles: DocumentStyles = StyleSheet.create({
   page: {
     backgroundColor: 'white',
     padding: 10,
     paddingBottom: 60,
-    paddingTop: 30
+    paddingTop: 30,
+    fontFamily: 'PTSansCaption'
   },
   flexContainer: {
     display: 'flex'
@@ -18,7 +45,8 @@ export const styles: DocumentStyles = StyleSheet.create({
     left: 0,
     right: 0,
     textAlign: 'center',
-    color: 'black'
+    color: 'black',
+    fontFamily: 'PTSansCaption'
   },
   numberContainer: {
     height: '25pt',
@@ -34,5 +62,104 @@ export const styles: DocumentStyles = StyleSheet.create({
   },
   border: {
     border: '1pt solid red'
+  },
+  flexRow: {
+    flexDirection: 'row',
+    maxHeight: '100%'
+  },
+  flexColumnLeft: {
+    display: 'flex',
+    width: '25%',
+    padding: 5,
+    paddingRight: 8,
+    paddingTop: 10,
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderBottom: '1pt solid black',
+    borderLeft: '2pt solid black',
+    fontSize: 12,
+    textAlign: 'right'
+  },
+  flexColumnRight: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    width: '75%',
+    padding: 10,
+    paddingLeft: 8,
+    paddingTop: 10,
+    borderTop: '1pt solid black',
+    borderBottom: '1pt solid black',
+    borderRight: '2pt solid black',
+    fontSize: 12,
+    marginRight: 4
+  },
+  flexSingleRow: {
+    borderTop: '1pt solid black',
+    borderRight: '2pt solid black',
+    borderLeft: '2pt solid black',
+    borderBottom: '1pt solid black',
+    fontSize: 12,
+    padding: '5pt',
+    width: '100%',
+    marginBottom: '-1pt'
+  },
+  item: {
+    display: 'flex',
+    padding: '3pt',
+    margin: 3
+  },
+  desc: {
+    margin: 5
+  },
+  code: {
+    textDecoration: 'bold'
+  },
+  flexContent: {
+    display: 'flex',
+    maxHeight: '100%',
+    maxWidth: '100%',
+    paddingBottom: 3,
+    margin: 5
+  },
+  description: {
+    display: 'flex',
+    maxHeight: '100%',
+    padding: 5,
+    margin: 5,
+    fontFamily: 'PTSansCaption'
+  },
+  bold: {
+    fontFamily: 'PTSansCaptionBold'
+  },
+  contentBox: {
+    justifyContent: 'space-around'
+  },
+  headerElement: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    fontSize: 12
+  },
+  headerText: {
+    minWidth: '80%',
+    marginBottom: '10pt'
+  },
+  logo: {
+    width: '20%',
+    marginBottom: '10pt'
+  },
+  bulletHeader: {
+    padding: '2pt',
+    display: 'flex',
+    border: '1pt solid pink'
+  },
+  rightcolumn: {
+    border: '2pt solid blue'
+  },
+  bulletpoint: {
+    width: '100%',
+    display: 'flex'
   }
 }) as DocumentStyles;
