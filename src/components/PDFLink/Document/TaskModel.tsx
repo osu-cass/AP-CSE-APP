@@ -83,6 +83,12 @@ export interface TaskModelProps {
   stems?: IStem[];
 }
 
+const removeCarriageReturn = (text: string[]): string[] => {
+  return text.map(s => {
+    return s.replace('\r\n', '');
+  });
+};
+
 const renderNumberedList = (header: string, list: string[]) => (
   <View>
     <Text style={styles.header}>{header}</Text>
@@ -92,11 +98,11 @@ const renderNumberedList = (header: string, list: string[]) => (
   </View>
 );
 
-const renderStems = (title: string, stem: IStem[]) => (
+const renderStems = (title: string, stem: string[]) => (
   <View>
     <Text style={styles.header}>{title}</Text>
     {stem.map((s, i) => (
-      <Text key={i}>• {s.stemDesc}</Text>
+      <Text key={i}>• {s}</Text>
     ))}
   </View>
 );
@@ -127,8 +133,14 @@ const renderSection = (headerName: string, content: string) => (
 export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
   const { taskName, taskDesc, stimulus, relatedEvidence, examples } = taskModel;
   const dualStems =
-    stems && stems.filter(s => s.shortStem === 'Appropriate Stems for Dual-Text Stimuli');
-  const appropriateStems = stems && stems.filter(s => s.shortStem === 'Appropriate Stems');
+    stems && stems.filter(s => s.shortStem === 'Appropriate Stems for Dual-Text Stimuli').map(s => (s.stemDesc));
+  const appropriateStems = stems && stems.filter(s => s.shortStem === 'Appropriate Stems').map(s => (s.stemDesc));
+  if(appropriateStems) {
+    const value = appropriateStems[0];
+    for(var i = 0; i < value.length; i++){
+      console.log(value[i], value.charCodeAt(i));
+    }
+  }
 
   return (
     <View>
@@ -142,12 +154,12 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
             {taskDesc && renderSection('Task Description', taskDesc)}
             {stimulus && renderSection('Stimulus', stimulus)}
             {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-            {appropriateStems &&
+            {/* {appropriateStems &&
               appropriateStems.length > 0 &&
-              renderStems('Appropriate Stems', appropriateStems)}
+              renderStems('Appropriate Stems', removeCarriageReturn(appropriateStems))} */}
             {dualStems &&
               dualStems.length > 0 &&
-              renderStems('Appropriate Stems for Dual-Text Stimuli', dualStems)}
+              renderStems('Appropriate Stems for Dual-Text Stimuli', removeCarriageReturn(dualStems))}
             {examples &&
               examples.length > 0 &&
               examples[0] !== 'NA' &&
