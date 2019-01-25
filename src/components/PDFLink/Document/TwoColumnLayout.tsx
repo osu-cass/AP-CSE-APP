@@ -1,41 +1,6 @@
 import React from 'react';
-// import '../../../../node_modules/typeface-pt-serif/index.css';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
-// import { Colors, Styles } from '../../../constants';
-// import { element } from 'prop-types';
-
-interface TwoColumnLayoutStyles {
-  flexRow: object;
-  flexColumnLeft: object;
-  flexColumnRight: object;
-}
-
-const styles = StyleSheet.create({
-  flexRow: {
-    flexDirection: 'row'
-  },
-  flexColumnLeft: {
-    width: '20%',
-    padding: 2,
-    paddingRight: 8,
-    borderTop: '1pt solid black',
-    borderRight: '2pt solid black',
-    borderBottom: '1pt solid black',
-    borderLeft: '2pt solid black',
-    fontSize: 12,
-    textAlign: 'right'
-  },
-  flexColumnRight: {
-    width: '80%',
-    padding: 5,
-    paddingLeft: 8,
-    paddingTop: 5,
-    borderTop: '1pt solid black',
-    borderBottom: '1pt solid black',
-    borderRight: '2pt solid black',
-    fontSize: 12
-  }
-}) as TwoColumnLayoutStyles;
+import { styles } from './styles';
 
 export interface ItemRow {
   title: string;

@@ -1,7 +1,5 @@
 import React from 'react';
-// import '../../../../node_modules/typeface-pt-serif/index.css';
 import { Document, Page, Text, View, Font } from '@react-pdf/renderer';
-// import { Colors, Styles } from '../../../constants';
 import { Head } from './Head';
 import { OneColumnLayout } from './OneColumnLayout';
 import { StringContent, ItemRow } from './StringContent';

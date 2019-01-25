@@ -1,82 +1,8 @@
 import React from 'react';
 import ReactPDF, { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import { IStandards, ITaskModel, IStem } from '../../../models/target';
+import { ITaskModel, IStem } from '../../../models/target';
 import { OneColumnLayout } from './OneColumnLayout';
-
-interface TaskStyles {
-  flexRow: object;
-  flexColumnLeft: object;
-  flexColumnRight: object;
-  item: object;
-  desc: object;
-  code: object;
-  description: object;
-  flexContent: object;
-  border: object;
-  header: object;
-}
-
-const styles: TaskStyles = StyleSheet.create({
-  flexRow: {
-    flexDirection: 'row',
-    maxHeight: '100%'
-  },
-  flexColumnLeft: {
-    display: 'flex',
-    width: '25%',
-    padding: 5,
-    paddingRight: 8,
-    paddingTop: 10,
-    borderTop: '1pt solid black',
-    borderRight: '2pt solid black',
-    borderBottom: '1pt solid black',
-    borderLeft: '2pt solid black',
-    fontSize: 12,
-    textAlign: 'right'
-  },
-  flexColumnRight: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    width: '75%',
-    padding: 10,
-    paddingLeft: 8,
-    paddingTop: 10,
-    borderTop: '1pt solid black',
-    borderBottom: '1pt solid black',
-    borderRight: '2pt solid black',
-    fontSize: 12
-  },
-  item: {
-    display: 'flex',
-    padding: '3pt',
-    margin: 3
-  },
-  desc: {
-    margin: 5
-  },
-  code: {
-    textDecoration: 'bold'
-  },
-  flexContent: {
-    display: 'flex',
-    maxHeight: '100%',
-    paddingBottom: 3,
-    margin: 5
-  },
-  description: {
-    display: 'flex',
-    maxHeight: '100%',
-    paddingBottom: 3,
-    margin: 5
-  },
-  border: {
-    border: '1pt solid red'
-  },
-  header: {
-    fontFamily: 'PTSansCaptionBold'
-  }
-}) as TaskStyles;
+import { styles } from './styles';
 
 export interface TaskModelProps {
   taskModel: ITaskModel;
@@ -89,6 +15,14 @@ const removeCarriageReturn = (text: string[]): string[] => {
   });
 };
 
+const processNewLine = (text: string[]): JSX.Element => {
+  return (
+    <View style={styles.description}>
+      {text.map(s => s.split('\r\n').map(s => <Text>{s}</Text>))}
+    </View>
+  );
+};
+
 const renderNumberedList = (header: string, list: string[]) => (
   <View>
     <Text style={styles.header}>{header}</Text>
@@ -98,12 +32,10 @@ const renderNumberedList = (header: string, list: string[]) => (
   </View>
 );
 
-const renderStems = (title: string, stem: string[]) => (
+const renderStems = (title: string, stems: JSX.Element) => (
   <View>
     <Text style={styles.header}>{title}</Text>
-    {stem.map((s, i) => (
-      <Text key={i}>• {s}</Text>
-    ))}
+    {stems}
   </View>
 );
 
@@ -133,14 +65,15 @@ const renderSection = (headerName: string, content: string) => (
 export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
   const { taskName, taskDesc, stimulus, relatedEvidence, examples } = taskModel;
   const dualStems =
-    stems && stems.filter(s => s.shortStem === 'Appropriate Stems for Dual-Text Stimuli').map(s => (s.stemDesc));
-  const appropriateStems = stems && stems.filter(s => s.shortStem === 'Appropriate Stems').map(s => (s.stemDesc));
-  if(appropriateStems) {
-    const value = appropriateStems[0];
-    for(var i = 0; i < value.length; i++){
-      console.log(value[i], value.charCodeAt(i));
-    }
-  }
+    stems &&
+    stems
+      .filter(s => s.shortStem === 'Appropriate Stems for Dual-Text Stimuli')
+      .map(s => s.stemDesc);
+  const appropriateStems =
+    stems && stems.filter(s => s.shortStem === 'Appropriate Stems').map(s => s.stemDesc);
+  const appropriateStemsElement =
+    appropriateStems && appropriateStems.length > 0 && processNewLine(appropriateStems);
+  const dualStemsElement = dualStems && dualStems.length && processNewLine(dualStems);
 
   return (
     <View>
@@ -154,12 +87,9 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
             {taskDesc && renderSection('Task Description', taskDesc)}
             {stimulus && renderSection('Stimulus', stimulus)}
             {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-            {/* {appropriateStems &&
-              appropriateStems.length > 0 &&
-              renderStems('Appropriate Stems', removeCarriageReturn(appropriateStems))} */}
-            {dualStems &&
-              dualStems.length > 0 &&
-              renderStems('Appropriate Stems for Dual-Text Stimuli', removeCarriageReturn(dualStems))}
+            {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
+            {dualStemsElement &&
+              renderStems('Appropriate Stems for Dual-Text Stimuli', dualStemsElement)}
             {examples &&
               examples.length > 0 &&
               examples[0] !== 'NA' &&

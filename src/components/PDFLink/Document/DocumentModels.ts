@@ -1,16 +1,6 @@
 import { IClaim } from '../../../models/claim';
 import { ITaskModel, IStem } from '../../../models/target';
 
-export interface DocumentStyles {
-  page: object;
-  flexContainer: object;
-  pageNumber: object;
-  numberContainer: object;
-  flexImage: object;
-  header: object;
-  border: object;
-}
-
 export interface TaskModelComponentProps {
   claim: IClaim;
   taskModels: ITaskModel[];
