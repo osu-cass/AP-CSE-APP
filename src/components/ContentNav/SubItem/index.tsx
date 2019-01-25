@@ -51,12 +51,14 @@ export const SubItem: React.SFC<SubItemProps> = ({
         }
         li {
           display: flex;
-          align-items: center;
-          color: ${Colors.sbGray};
+          align-items: left;
+          text-align:left;
+          color: black;
           font-size: ${Styles.font};
+          font-weight: bold;
         }
         p {
-          margin: 5px 2em 5px 1em;
+          margin-left: 1.6em;
         }
         .active {
           color: ${Colors.sbBlue};
