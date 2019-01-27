@@ -101,6 +101,7 @@ export function createDocument(
         <View style={styles.flexContainer} wrap>
           <Description claim={claim} />
           {(renderOverview || renderEntireTarget) && <Overview claim={claim} />}
+          {renderedTaskModels}
         </View>
         <Text
           style={styles.pageNumber}
@@ -113,9 +114,6 @@ export function createDocument(
           }}
           fixed
         />
-        <View style={styles.flexContainer} wrap>
-          {renderedTaskModels}
-        </View>
       </Page>
     </Document>
   );

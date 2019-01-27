@@ -9,12 +9,6 @@ export interface TaskModelProps {
   stems?: IStem[];
 }
 
-const removeCarriageReturn = (text: string[]): string[] => {
-  return text.map(s => {
-    return s.replace('\r\n', '');
-  });
-};
-
 const processNewLine = (text: string[]): JSX.Element => {
   return (
     <View style={styles.description}>
@@ -77,7 +71,6 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
 
   return (
     <View>
-      <OneColumnLayout center={true} text={'Task Models'} />
       <View wrap style={styles.flexRow}>
         <View style={styles.flexColumnLeft}>
           <Text style={styles.code}>{taskName}</Text>
