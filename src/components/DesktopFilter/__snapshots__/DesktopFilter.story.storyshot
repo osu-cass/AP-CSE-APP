@@ -41,12 +41,25 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Grade
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -57,34 +70,28 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="Elementry"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Elementry
               </button>
               <button
-                aria-checked={false}
-                aria-label="High School"
-                className="btn btn-primary "
-                disabled={false}
-                onClick={[Function]}
-                role="switch"
-              >
-                High School
-              </button>
-              <button
-                aria-checked={true}
-                aria-label="Middle School"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
               </button>
             </div>
           </div>
@@ -97,12 +104,25 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Subject
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -113,22 +133,18 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="English Language Arts"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 English Language Arts
               </button>
               <button
-                aria-checked={true}
-                aria-label="Mathematics"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Mathematics
               </button>
@@ -143,12 +159,25 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Claim
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Claim
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -159,32 +188,26 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="Claim 1"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Claim 1
               </button>
               <button
-                aria-checked={true}
-                aria-label="Claim 2"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Claim 2
               </button>
               <button
-                aria-checked={false}
-                aria-label="Claim 3"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Claim 3
               </button>
@@ -199,12 +222,25 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Target
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Target
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -215,32 +251,26 @@ exports[`Storyshots Filter/Desktop Subject grade and target 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="Target 1"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Target 1
               </button>
               <button
-                aria-checked={true}
-                aria-label="Target 2"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Target 2
               </button>
               <button
-                aria-checked={false}
-                aria-label="Target 3"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Target 3
               </button>
@@ -324,12 +354,25 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Grade
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -340,34 +383,28 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="Elementry"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Elementry
               </button>
               <button
-                aria-checked={false}
-                aria-label="High School"
-                className="btn btn-primary "
-                disabled={false}
-                onClick={[Function]}
-                role="switch"
-              >
-                High School
-              </button>
-              <button
-                aria-checked={true}
-                aria-label="Middle School"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
               </button>
             </div>
           </div>
@@ -380,12 +417,25 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Subject
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -396,22 +446,18 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="English Language Arts"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 English Language Arts
               </button>
               <button
-                aria-checked={true}
-                aria-label="Mathematics"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Mathematics
               </button>
@@ -426,12 +472,25 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Claim
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Claim
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -442,32 +501,26 @@ exports[`Storyshots Filter/Desktop Subject, Grade and Claim 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="Claim 1"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Claim 1
               </button>
               <button
-                aria-checked={true}
-                aria-label="Claim 2"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Claim 2
               </button>
               <button
-                aria-checked={false}
-                aria-label="Claim 3"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Claim 3
               </button>
@@ -566,12 +619,25 @@ exports[`Storyshots Filter/Desktop default 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Grade
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Grade
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -582,34 +648,28 @@ exports[`Storyshots Filter/Desktop default 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="Elementry"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Elementry
               </button>
               <button
-                aria-checked={false}
-                aria-label="High School"
-                className="btn btn-primary "
-                disabled={false}
-                onClick={[Function]}
-                role="switch"
-              >
-                High School
-              </button>
-              <button
-                aria-checked={true}
-                aria-label="Middle School"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Middle School
+              </button>
+              <button
+                className="btn btn-primary "
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+              >
+                High School
               </button>
             </div>
           </div>
@@ -622,12 +682,25 @@ exports[`Storyshots Filter/Desktop default 1`] = `
             className="filter-container-header"
           >
             <label>
-              <span
-                className="tooltip-label"
-                info-label="true"
+              <div
+                className="tool-tip-links"
+                tabIndex={0}
               >
-                Subject
-              </span>
+                <span
+                  className="tool-tip-hoverable"
+                >
+                  <span
+                    className="tooltip-label"
+                    info-label="true"
+                  >
+                    Subject
+                  </span>
+                   
+                </span>
+                <div
+                  className="tool-tip-details"
+                />
+              </div>
             </label>
           </div>
           <div
@@ -638,22 +711,18 @@ exports[`Storyshots Filter/Desktop default 1`] = `
               className="btn-group filter-btn-group"
             >
               <button
-                aria-checked={false}
-                aria-label="English Language Arts"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 English Language Arts
               </button>
               <button
-                aria-checked={true}
-                aria-label="Mathematics"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="switch"
+                role="button"
               >
                 Mathematics
               </button>
