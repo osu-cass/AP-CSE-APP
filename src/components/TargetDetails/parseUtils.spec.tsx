@@ -65,9 +65,10 @@ describe('ParseUtils', () => {
   it('parses string with a table', () => {
     const parsedTableJSX: React.ReactNode[] = parseTables(table1Mock, false);
     const renderedTableJSX: React.ReactNode[] = [];
-    // NOTE: `key="1"` in <Table> is necessary to pass this test
-    // Expected key value is 1 with the given mock
-    renderedTableJSX.push(<Table key="1" table={parsedTable1Mock} />);
+    // NOTE: `key` in <Table> is necessary to pass this test
+    // The key for the table should be the index of header row
+    const expectedKey = parsedTable1Mock.DataRows.length + 1;
+    renderedTableJSX.push(<Table key={expectedKey} table={parsedTable1Mock} />);
     expect(parsedTableJSX).toEqual(renderedTableJSX);
   });
 
