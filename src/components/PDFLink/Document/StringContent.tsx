@@ -2,6 +2,7 @@ import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface ItemRow {
   title: string;
@@ -16,7 +17,7 @@ export interface TargetProps {
 export const StringContent = ({ content, title }: TargetProps): JSX.Element => {
   const contentArray = content.split('\r\n\r\n').map((element: string, idx: number) => (
     <View key={`${idx}`} style={styles.flexContent}>
-      <Text style={styles.description}>{element}</Text>
+      {parsePdfContent(element)}
     </View>
   ));
 

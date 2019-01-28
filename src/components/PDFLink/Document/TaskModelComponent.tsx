@@ -5,6 +5,7 @@ import { ITaskModel } from '../../../models/target';
 import { TaskModel } from './TaskModel';
 import { TaskModelComponentProps, PageMeta } from './DocumentModels';
 import { styles } from './styles';
+import { OneColumnLayout } from './OneColumnLayout';
 
 export const TaskModelComponent: React.SFC<TaskModelComponentProps> = ({
   claim,
@@ -12,21 +13,12 @@ export const TaskModelComponent: React.SFC<TaskModelComponentProps> = ({
   stems
 }) => {
   return (
-    <View>
+    <View style={styles.flexContainer}>
+      <OneColumnLayout center={true} text={'Task Models'} />
       {taskModels.map((taskModel: ITaskModel, idx: number) => (
-        <Page key={`${idx}`} style={styles.page}>
-          <View key={`${idx} - ${taskModel.taskName}`} style={styles.flexContainer} wrap>
-            <Head key={`${taskModel.taskName} - ${idx}`} text={claim.title} />
-            <View key={`${idx}-${idx}`} wrap>
-              <TaskModel taskModel={taskModel} stems={stems} key={`${idx}-${idx}-${idx}`} />
-            </View>
-          </View>
-          <Text
-            style={styles.pageNumber}
-            render={({ pageNumber, totalPages }: PageMeta) => `${pageNumber} / ${totalPages}`}
-            fixed
-          />
-        </Page>
+        <View key={`${idx}-${idx}`}>
+          <TaskModel taskModel={taskModel} stems={stems} key={`${idx}-${idx}-${idx}`} />
+        </View>
       ))}
     </View>
   );
