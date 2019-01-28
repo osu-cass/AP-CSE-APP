@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env prod",
+    "now-build": "npm run build",
     "test": "jest --coverage",
     "test-ci": "jest --coverage --runInBand",
     "dev": "webpack-dev-server",
+    "prod": "webpack-dev-server --env prod",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o public/storybook",
     "format": "prettier --single-quote --print-width 100 --write src/**/*.{ts,tsx,js,json}",
@@ -84,8 +86,6 @@
     ]
   },
   "dependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-arrow-functions": "^7.2.0",
     "@babel/polyfill": "^7.2.5",
     "@babel/runtime": "^7.1.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.9",
@@ -122,6 +122,7 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/plugin-transform-shorthand-properties": "^7.2.0",
     "@babel/preset-env": "^7.1.5",
