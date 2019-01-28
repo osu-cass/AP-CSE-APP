@@ -17,10 +17,18 @@ const applyParsers = (parser: ((text: string) => string)[], text: string) => {
   return parsedText;
 };
 
-const splitByNewLine = (text: string | undefined): string[] | undefined => {
+const splitByNewLine = (text: string | string[] | undefined): string[] | undefined => {
+  let splitText: string[] | undefined;
   if (text) {
-    return text.split('\r\n');
+    if (typeof text === 'string') {
+      splitText = text.split('\r\n');
+    } else if (text instanceof Array) {
+      splitText = [];
+      text.map(t => t.split('\r\n').map(s => splitText && splitText.push(s)));
+    }
   }
+
+  return splitText;
 };
 
 const parseDoubleAsterisk = (text: string): JSX.Element => {
@@ -64,7 +72,7 @@ export const parsePdfContent = (
         let content;
         if (line.startsWith('![') && line.endsWith(')')) {
           content = parseImageTags(line);
-        } else {
+        } else if (line !== 'NA' && line !== '<br>') {
           content = parseDoubleAsterisk(line);
         }
 
