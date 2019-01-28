@@ -50,6 +50,9 @@ module.exports = (env) => {
       }
     ]
   },
+  node:{
+    fs: "empty"
+  },
   devServer: {
     port: 8080,
     historyApiFallback: {
@@ -63,7 +66,7 @@ module.exports = (env) => {
       }),
     new CleanWebpackPlugin(['dist']),
     new webpack.EnvironmentPlugin({
-      API_ENDPOINT: 'http://localhost:3000'
+      API_ENDPOINT: 'https://cse-api.cass.oregonstate.edu'
     }),
     new AutoDllPlugin({
       inject: true,

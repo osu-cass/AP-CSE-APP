@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, Image, View } from '@react-pdf/renderer';
 import { styles } from './styles';
+import { image2base64 } from 'image-to-base64';
+
 
 const replaceDashWithDot = (text: string): string => text.replace('- ', '• ');
 
@@ -48,12 +50,16 @@ const parseDoubleAsterisk = (text: string): JSX.Element => {
   );
 };
 
-const parseImageTags = (text: string): JSX.Element => {
+const parseImageTags = async (text: string): JSX.Element => {
+
   const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
   const url = match && match[1];
 
-  return <Image src={url || ''} />;
+  const response = await image2base64(url);
+
+
+  return <Image src={response || ''} />;
 };
 
 export const parsePdfContent = (
