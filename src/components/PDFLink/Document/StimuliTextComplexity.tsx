@@ -30,7 +30,7 @@ export const Stimuli = ({ stemInfo, dualText, complexity }: StimuliProps): JSX.E
       <View style={styles.flexColumnRight}>
         {renderSection('Passage', stemInfo)}
         {dualText && renderSection('Dual Text', dualText)}
-        {complexity && renderSection('Text Complexity', complexity)}
+        {complexity && complexity !== 'NA' && renderSection('Text Complexity', complexity)}
       </View>
     </View>
   );

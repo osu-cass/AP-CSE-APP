@@ -77,7 +77,7 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
         </View>
         <View style={styles.flexColumnRight}>
           {taskDesc && renderSection('Task Description', taskDesc)}
-          {stimulus && renderSection('Stimulus', stimulus)}
+          {stimulus && stimulus !== 'NA' && renderSection('Stimulus', stimulus)}
           {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
           {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
           {dualStemsElement &&
