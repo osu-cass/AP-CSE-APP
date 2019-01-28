@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { IDOK } from '../../../models/target';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface DOKProps {
   content: IDOK[];
@@ -18,7 +19,7 @@ export const DOK = ({ content }: DOKProps) => {
           return (
             <View style={styles.item} key={`${element.dokCode} - ${element.dokDesc}`}>
               <Text style={styles.bold}>{`${element.dokCode} ${element.dokShort}: `}</Text>
-              <Text style={styles.description}> {element.dokDesc}</Text>
+              {parsePdfContent(element.dokDesc, styles.description)}
             </View>
           );
         })}

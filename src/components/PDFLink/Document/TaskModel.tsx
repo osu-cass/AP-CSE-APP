@@ -3,31 +3,31 @@ import ReactPDF, { Document, Page, Text, View, StyleSheet, Image } from '@react-
 import { ITaskModel, IStem } from '../../../models/target';
 import { OneColumnLayout } from './OneColumnLayout';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
+import { Styles } from '../../../constants/style';
 
 export interface TaskModelProps {
   taskModel: ITaskModel;
   stems?: IStem[];
 }
 
-const removeCarriageReturn = (text: string[]): string[] => {
-  return text.map(s => {
-    return s.replace('\r\n', '');
-  });
-};
-
-const processNewLine = (text: string[]): JSX.Element => {
-  return (
-    <View style={styles.description}>
-      {text.map(s => s.split('\r\n').map(s => <Text>{s}</Text>))}
-    </View>
-  );
-};
+// tslint:disable:no-unnecessary-callback-wrapper
+const processLines = (text: string[]): JSX.Element => (
+  <View style={styles.description}>{text.map(s => parsePdfContent(s))}</View>
+);
 
 const renderNumberedList = (header: string, list: string[]) => (
   <View>
     <Text style={styles.bold}>{header}</Text>
     {list.map((item, index) => {
-      return <Text style={styles.description}>{`${index + 1}. ${item}`}</Text>;
+      return (
+        <View>
+          <Text style={styles.description}>
+            {`${index + 1}. `}
+            {parsePdfContent(item)}
+          </Text>
+        </View>
+      );
     })}
   </View>
 );
@@ -43,7 +43,7 @@ const renderExamples = (headerName: string, content: string[]) => {
   const sections = content.map((item, index) => (
     <View>
       <Text style={styles.bold}>{`${headerName} ${index + 1}`}</Text>
-      <Text style={styles.description}>{item}</Text>
+      {parsePdfContent(item, styles.description)}
     </View>
   ));
 
@@ -58,7 +58,7 @@ const renderExamples = (headerName: string, content: string[]) => {
 const renderSection = (headerName: string, content: string) => (
   <View>
     <Text style={styles.bold}>{headerName}</Text>
-    <Text style={styles.description}>{content}</Text>
+    {parsePdfContent(content, styles.description)}
   </View>
 );
 
@@ -72,19 +72,18 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
   const appropriateStems =
     stems && stems.filter(s => s.shortStem === 'Appropriate Stems').map(s => s.stemDesc);
   const appropriateStemsElement =
-    appropriateStems && appropriateStems.length > 0 && processNewLine(appropriateStems);
-  const dualStemsElement = dualStems && dualStems.length && processNewLine(dualStems);
+    appropriateStems && appropriateStems.length > 0 && processLines(appropriateStems);
+  const dualStemsElement = dualStems && dualStems.length > 0 && processLines(dualStems);
 
   return (
     <View>
-      <OneColumnLayout center={true} text={'Task Models'} />
       <View wrap style={styles.flexRow}>
         <View style={styles.flexColumnLeft}>
           <Text style={styles.code}>{taskName}</Text>
         </View>
         <View style={styles.flexColumnRight}>
           {taskDesc && renderSection('Task Description', taskDesc)}
-          {stimulus && renderSection('Stimulus', stimulus)}
+          {stimulus && stimulus !== 'NA' && renderSection('Stimulus', stimulus)}
           {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
           {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
           {dualStemsElement &&

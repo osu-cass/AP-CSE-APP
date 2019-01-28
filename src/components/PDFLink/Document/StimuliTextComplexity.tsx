@@ -2,6 +2,7 @@ import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface ItemRow {
   title: string;
@@ -14,23 +15,25 @@ export interface StimuliProps {
   complexity?: string;
 }
 
-const renderSection = (title: string, section: string) => (
-  <View style={styles.item} key={`${title} - ${title}}`}>
-    <Text style={styles.header}>{title}</Text>
-    <Text style={styles.description}>{section}</Text>
-  </View>
-);
+const renderSection = (title: string, section: string) => {
+  return (
+    <View style={styles.item} key={`${title} - ${title}}`}>
+      <Text style={styles.bold}>{title}</Text>
+      {parsePdfContent(section, styles.description)}
+    </View>
+  );
+};
 
 export const Stimuli = ({ stemInfo, dualText, complexity }: StimuliProps): JSX.Element => {
   return (
     <View style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
-        <Text>{'Stimuli/\nText Complexity'}</Text>
+        <Text style={styles.bold}>{'Stimuli/\nText Complexity'}</Text>
       </View>
       <View style={styles.flexColumnRight}>
         {renderSection('Passage', stemInfo)}
         {dualText && renderSection('Dual Text', dualText)}
-        {complexity && renderSection('Text Complexity', complexity)}
+        {complexity && complexity !== 'NA' && renderSection('Text Complexity', complexity)}
       </View>
     </View>
   );

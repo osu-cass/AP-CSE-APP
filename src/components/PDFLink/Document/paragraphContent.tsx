@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactPDF, { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface ItemRow {
   title: string;
@@ -16,7 +17,7 @@ export const ParagraphContent = ({ content, title }: TargetProps): JSX.Element =
   content.split('\r\n\r\n').map((element: string, idx: number) => (
     <View wrap key={`${idx}`} style={styles.flexContent}>
       <Text style={styles.description} wrap>
-        {element}
+        {parsePdfContent(element)}
       </Text>
     </View>
   ));
