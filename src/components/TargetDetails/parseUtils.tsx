@@ -144,32 +144,38 @@ export const parseTableFromRows = (headerRow: string | undefined, dataRows: stri
   return iTable;
 };
 
+const tableRowRegex = /\|.*\|/; // ex) '| data 1 | data 2 | data 3 |'
+const headerDelimiterRegex = /\|\-([\|\-]*)\-\|/; // ex) '|--|---|---|'
+
 const parseTablesFromLines = (lines: string[], underlined: boolean) => {
   const tablesWithStringsJSX: React.ReactNode[] = [];
+  let foundHeaderRow: boolean = false;
   const dataRows: string[] = [];
 
-  for (let index = lines.length - 1; index >= 0; index--) {
-    const line = lines[index];
-    if (!line.trim()) continue;
+  lines
+    .filter(line => line.trim() !== '')
+    .reverse()
+    .forEach((line: string, index) => {
+      if (line.match(tableRowRegex)) {
+        if (foundHeaderRow) {
+          tablesWithStringsJSX.push(
+            <Table key={index} table={parseTableFromRows(line, dataRows)} />
+          );
 
-    const tableRow = line.match(/\|.*\|/);
-    if (tableRow) {
-      const headerDelimiter = line.match(/\|\-([\|\-]*)\-\|/); // ex) '|--|---|---|'
-      if (headerDelimiter) {
-        const headerRow = lines[index - 1];
-        tablesWithStringsJSX.push(
-          <Table key={index} table={parseTableFromRows(headerRow, dataRows)} />
-        );
-        index--;
+          foundHeaderRow = false;
+        } else {
+          if (line.match(headerDelimiterRegex)) {
+            foundHeaderRow = true; // because next line of delimiter is the header row
+          } else {
+            dataRows.push(line);
+          }
+        }
       } else {
-        dataRows.push(line);
+        tablesWithStringsJSX.push(
+          <NewLine key={index}>{parseUnorderedList(line, underlined)}</NewLine>
+        );
       }
-    } else {
-      tablesWithStringsJSX.push(
-        <NewLine key={index}>{parseUnorderedList(line, underlined)}</NewLine>
-      );
-    }
-  }
+    });
 
   // Since parsing tables logic approached from bottom to top, the result JSX should be reversed.
   return tablesWithStringsJSX.reverse();
