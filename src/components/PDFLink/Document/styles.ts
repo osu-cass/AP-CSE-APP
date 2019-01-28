@@ -140,10 +140,16 @@ export const styles: DocumentStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    fontSize: 12
+    justifyContent: 'flex-end',
+    width: '100%',
+    fontSize: 12,
+    textAlign: 'left'
   },
   headerText: {
+    left: 0,
+    position: 'absolute',
+    alignSelf: 'flex-start',
+    textAlign: 'left',
     minWidth: '80%',
     marginBottom: '10pt'
   },

@@ -110,17 +110,10 @@ export function createDocument(
     renderEntireTarget
   );
 
-  const targetSplit = claim.target[0].title.split(' ');
-  const targetText =
-    (targetSplit &&
-      targetSplit.length > 0 &&
-      `${targetSplit[targetSplit.length - 2]} ${targetSplit[targetSplit.length - 1]}`) ||
-    '';
-
   return (
     <Document>
       <Page wrap style={styles.page}>
-        <Head text={`${claim.title} ${targetText}`} />
+        <Head text={claim.target[0].title} />
         <View style={styles.flexContainer} wrap>
           <Description claim={claim} />
           {(renderOverview || renderEntireTarget) && <Overview claim={claim} />}

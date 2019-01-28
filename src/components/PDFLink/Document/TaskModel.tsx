@@ -73,7 +73,7 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
     stems && stems.filter(s => s.shortStem === 'Appropriate Stems').map(s => s.stemDesc);
   const appropriateStemsElement =
     appropriateStems && appropriateStems.length > 0 && processLines(appropriateStems);
-  const dualStemsElement = dualStems && dualStems.length && processLines(dualStems);
+  const dualStemsElement = dualStems && dualStems.length > 0 && processLines(dualStems);
 
   return (
     <View>
