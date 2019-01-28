@@ -188,7 +188,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
             <i>Use filter to narrow search results</i>
             <style jsx>{`
               #narrow-results {
-                color: #ff0000;
+                color: #cc0000;
               }
             `}</style>
           </div>
@@ -216,7 +216,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
       <ErrorBoundary fallbackUI={errorJsx}>
         {this.renderNarrowText(results)}
         <div aria-live="polite">
-        <FilterItemList claims={results} getTargetLink={placeholder} />
+          <FilterItemList claims={results} getTargetLink={placeholder} />
         </div>
       </ErrorBoundary>
     );
@@ -228,9 +228,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         <SearchBar onSearch={this.onSearch} initialText={this.props.paramsFromUrl.search} />
         <div className="content-container">
           {this.renderFilter()}
-          <div>
-          {this.renderResults()}
-          </div>
+          <div>{this.renderResults()}</div>
         </div>
         <style jsx>{`
           .content-container {
