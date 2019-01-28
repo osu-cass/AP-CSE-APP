@@ -26,7 +26,7 @@ const Description = ({ claim }: OverviewProps) => {
       claimSplit.length > 0 &&
       `${claimSplit[claimSplit.length - 2]} ${claimSplit[claimSplit.length - 1]}`) ||
     '';
-  const targetSplit = claim.target[0].title.split(' ');
+  const targetSplit = claim.target && claim.target[0] && claim.target[0].title.split(' ');
   const targetText =
     (targetSplit &&
       targetSplit.length > 0 &&
