@@ -76,6 +76,8 @@ export const TaskButton = (props: TaskButtonProps): JSX.Element => {
       `}</style>
       <button
         type="button"
+        role="switch"
+        aria-checked={props.toggled}
         id={`${props.id}-btn`}
         onClick={() => {
           props.toggleParent(props.taskName);

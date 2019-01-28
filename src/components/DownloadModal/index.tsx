@@ -1,12 +1,11 @@
-import ReactModal from 'react-modal';
-import React, { Component } from 'react';
-
+import React, { Component, CSSProperties } from 'react';
 import { IClaim } from '../../models/claim';
 import { createDocument } from '../PDFLink/Document';
 import { PDFLink, PDFDownloadLinkRenderProps } from '../PDFLink';
 import { DocumentProps } from '../PDFLink/Document/DocumentModels';
 import { Colors, Styles, blueGradientBgImg } from '../../constants/style';
 import { TaskButton, TaskButtonProps, ToggleClassname } from './TaskButton';
+import AriaModal from 'react-aria-modal';
 
 /**
  * Properties for DownloadModal
@@ -16,7 +15,7 @@ import { TaskButton, TaskButtonProps, ToggleClassname } from './TaskButton';
 export interface DownloadModalProps {
   claim: IClaim;
   isOpen: boolean;
-  closeFromParent?: () => void;
+  closeFromParent: () => void;
 }
 /**
  * State for DownloadModal
@@ -35,18 +34,7 @@ export interface DownloadModalState {
   pageCount: number;
 }
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
-  }
-};
 // tslint:disable-next-line:no-unsafe-any
-if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('body');
 
 /**
  * Renders a Modal window to download a document's targets
@@ -267,7 +255,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
   };
   modalForm(taskButtons: TaskButtonProps[]): JSX.Element {
     return (
-      <form className={this.state.showMultiSelect}>
+      <form className={this.state.showMultiSelect} id="modal-form">
         <div id="title-container">Download PDF</div>
         <div id="entire-target-btn-container">
           {<TaskButton {...this.state.taskButtonProps[0]} />}
@@ -343,7 +331,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     const result: JSX.Element[] = [];
     this.state.selectedList.forEach(task => {
       result.push(
-        <li key={task}>
+        <li key={task} aria-label={task}>
           <style jsx>{`
             li {
               margin-bottom: 10px;
@@ -369,8 +357,10 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
 
     return (
       <div id="confirm-selections" className={this.state.showHide}>
-        <div id="selections-title">Selected Sections</div>
-        <div id="selections-list">
+        <div id="selections-title" tabIndex={0}>
+          Selected Sections
+        </div>
+        <div id="selections-list" tabIndex={0}>
           <ul>{this.renderSelectionsList()}</ul>
         </div>
         {this.state.submitDownload ? <PDFLink {...pdfDownLoadProps} /> : ''}
@@ -452,23 +442,33 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
       </div>
     );
   }
+
+  setAppElement = () => {
+    return document.getElementById('body') as HTMLElement;
+  };
+  closing = () => {
+    this.props.closeFromParent();
+  };
   render() {
     const taskButtons = this.state.taskButtonProps.slice(1);
 
     return (
       <div>
         {/* tslint:disable-next-line:no-unsafe-any */}
-        <ReactModal
-          isOpen={this.props.isOpen}
-          onRequestClose={this.props.closeFromParent}
-          contentLabel="Download PDF"
-          style={customStyles}
+        <AriaModal
+          titleText="Download PDF"
+          mounted={this.props.isOpen}
+          onExit={this.closing}
+          getApplicationNode={this.setAppElement}
+          underlayClickExits={true}
+          verticallyCenter={true}
+          dialogStyle={{ backgroundColor: '#FFF', borderRadius: '5px', padding: '20px' }}
         >
           {this.modalForm(taskButtons)}
           {/* tslint:disable-next-line:no-unsafe-any */}
           {this.confirmSelection()}
           {/* tslint:disable-next-line:no-unsafe-any */}
-        </ReactModal>
+        </AriaModal>
       </div>
     );
   }
