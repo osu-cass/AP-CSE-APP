@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { ITarget, IEvidence } from '../../../models/target';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface ItemRow {
   title: string;
@@ -24,7 +25,10 @@ export const Evidence = ({ content, title }: TargetProps): JSX.Element => {
         {content.map((element: IEvidence, index: number) => {
           return (
             <View style={styles.item} key={`${element.evTitle} - ${element.evDesc}`}>
-              <Text style={styles.description}>{`${index + 1}: ${element.evDesc}`}</Text>
+              <Text style={styles.description}>
+                {`${index + 1}: `}
+                {parsePdfContent(element.evDesc)}
+              </Text>
             </View>
           );
         })}

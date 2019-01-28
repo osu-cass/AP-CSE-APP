@@ -19,15 +19,31 @@ import { ITaskModel } from '../../../models/target';
 Font.register(`${window.location.origin}/${PTSansCaptionBold}`, { family: 'PTSansCaptionBold' });
 Font.register(`${window.location.origin}/${PTSansCaption}`, { family: 'PTSansCaption' });
 
-const Description = ({ claim }: OverviewProps) => (
-  <View wrap>
-    {claim.description && <OneColumnLayout center={false} text={claim.description} />}
-    {claim.target[0].description && (
-      <OneColumnLayout center={false} text={claim.target[0].description} />
-    )}
-  </View>
-);
+const Description = ({ claim }: OverviewProps) => {
+  const claimSplit = claim.title.split(' ');
+  const claimText =
+    (claimSplit &&
+      claimSplit.length > 0 &&
+      `${claimSplit[claimSplit.length - 2]} ${claimSplit[claimSplit.length - 1]}`) ||
+    '';
+  const targetSplit = claim.target && claim.target[0] && claim.target[0].title.split(' ');
+  const targetText =
+    (targetSplit &&
+      targetSplit.length > 0 &&
+      `${targetSplit[targetSplit.length - 2]} ${targetSplit[targetSplit.length - 1]}`) ||
+    '';
 
+  return (
+    <View wrap>
+      {claim.description && (
+        <OneColumnLayout center={false} text={`${claimText}: ${claim.description}`} />
+      )}
+      {claim.target[0].description && (
+        <OneColumnLayout center={false} text={`${targetText}: ${claim.target[0].description}`} />
+      )}
+    </View>
+  );
+};
 const documentStyles = {
   fontFamily: 'PTSansCaption'
 };
@@ -48,7 +64,7 @@ const Overview = ({ claim }: OverviewProps) => {
 
   return (
     <View wrap>
-      {vocab && <OneColumnLayout center={false} text={vocab} />}
+      {vocab && vocab !== 'NA' && <OneColumnLayout center={false} text={vocab} />}
       {clarification && <StringContent title={'Clarifications'} content={clarification} />}
       {standards && <Standards content={standards} />}
       {dok && <DOK content={dok} />}
@@ -97,10 +113,11 @@ export function createDocument(
   return (
     <Document>
       <Page wrap style={styles.page}>
-        <Head text={claim.title} />
+        <Head text={claim.target[0].title} />
         <View style={styles.flexContainer} wrap>
           <Description claim={claim} />
           {(renderOverview || renderEntireTarget) && <Overview claim={claim} />}
+          {renderedTaskModels}
         </View>
         <Text
           style={styles.pageNumber}
@@ -113,9 +130,6 @@ export function createDocument(
           }}
           fixed
         />
-        <View style={styles.flexContainer} wrap>
-          {renderedTaskModels}
-        </View>
       </Page>
     </Document>
   );
