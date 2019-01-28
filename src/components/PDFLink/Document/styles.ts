@@ -78,7 +78,8 @@ export const styles: DocumentStyles = StyleSheet.create({
     borderBottom: '1pt solid black',
     borderLeft: '2pt solid black',
     fontSize: 12,
-    textAlign: 'right'
+    textAlign: 'right',
+    fontFamily: 'PTSansCaptionBold'
   },
   flexColumnRight: {
     display: 'flex',

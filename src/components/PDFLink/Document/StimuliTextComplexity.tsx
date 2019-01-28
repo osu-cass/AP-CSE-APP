@@ -16,7 +16,7 @@ export interface StimuliProps {
 
 const renderSection = (title: string, section: string) => (
   <View style={styles.item} key={`${title} - ${title}}`}>
-    <Text style={styles.header}>{title}</Text>
+    <Text style={styles.bold}>{title}</Text>
     <Text style={styles.description}>{section}</Text>
   </View>
 );
@@ -25,7 +25,7 @@ export const Stimuli = ({ stemInfo, dualText, complexity }: StimuliProps): JSX.E
   return (
     <View style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
-        <Text>{'Stimuli/\nText Complexity'}</Text>
+        <Text style={styles.bold}>{'Stimuli/\nText Complexity'}</Text>
       </View>
       <View style={styles.flexColumnRight}>
         {renderSection('Passage', stemInfo)}

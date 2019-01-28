@@ -11,7 +11,7 @@ export const Standards = ({ content }: TargetProps) => {
   return (
     <View wrap style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
-        <Text>Standards</Text>
+        <Text style={styles.bold}>Standards</Text>
       </View>
       <View style={styles.flexColumnRight}>
         {content.map((element: IStandards) => {
@@ -27,7 +27,10 @@ export const Standards = ({ content }: TargetProps) => {
 
           return (
             <View wrap={false} style={styles.item} key={`${element.stdCode} - ${element.stdDesc}`}>
-              <Text key={`${element.stdDesc}-1`}>{`${standardShortCode}: `}</Text>
+              <Text
+                style={styles.bold}
+                key={`${element.stdDesc}-1`}
+              >{`${standardShortCode}: `}</Text>
               <Text key={`${element.stdCode}-2`} style={styles.desc}>
                 {element.stdDesc}
               </Text>
