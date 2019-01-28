@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from '@react-pdf/renderer';
 import { IStandards } from '../../../models/target';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface TargetProps {
   content: IStandards[];
@@ -31,9 +32,7 @@ export const Standards = ({ content }: TargetProps) => {
                 style={styles.bold}
                 key={`${element.stdDesc}-1`}
               >{`${standardShortCode}: `}</Text>
-              <Text key={`${element.stdCode}-2`} style={styles.desc}>
-                {element.stdDesc}
-              </Text>
+              {parsePdfContent(element.stdDesc, styles.description)}
             </View>
           );
         })}

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, Image } from '@react-pdf/renderer';
+import { Text, Image, View } from '@react-pdf/renderer';
 import { styles } from './styles';
 
-const replaceDashWithDot = (text: string) => text.replace('-   ', '• ');
+const replaceDashWithDot = (text: string): string => text.replace('- ', '• ');
 
-const removeBackSlash = (text: string) => text.replace(/(\\)([_<>])/g, '$2');
+const removeBackSlash = (text: string): string => text.replace(/(\\)([_<>])/g, '');
 
 const parsers = [removeBackSlash, replaceDashWithDot];
 
@@ -17,30 +17,30 @@ const applyParsers = (parser: ((text: string) => string)[], text: string) => {
   return parsedText;
 };
 
-const splitByNewLine = (text: string | undefined) => {
+const splitByNewLine = (text: string | undefined): string[] | undefined => {
   if (text) {
     return text.split('\r\n');
   }
 };
 
-const removeCR = (text: string) => {
-  return <Text />;
-};
-
-const parseDoubleAsterisk = (text: string) => {
+const parseDoubleAsterisk = (text: string): JSX.Element => {
   const parts = text.split('**');
 
-  return parts.map((part, index) => {
-    const parsedText: string = applyParsers(parsers, part);
-    if (index % 2 === 1) {
-      return <Text style={styles.bold}>{part}</Text>;
-    }
+  return (
+    <View>
+      {parts.map((part, index) => {
+        const parsedText: string = applyParsers(parsers, part);
+        if (index % 2 === 1) {
+          return <Text style={styles.bold}>{parsedText}</Text>;
+        }
 
-    return <Text>{part}</Text>;
-  });
+        return <Text>{parsedText}</Text>;
+      })}
+    </View>
+  );
 };
 
-const parseImageTags = (text: string) => {
+const parseImageTags = (text: string): JSX.Element => {
   const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
   const url = match && match[1];
@@ -48,21 +48,33 @@ const parseImageTags = (text: string) => {
   return <Image src={url || ''} />;
 };
 
-const parseContent = (text: string | undefined) => {
+export const parsePdfContent = (
+  text: string | undefined,
+  style?: object
+): JSX.Element | undefined => {
   const lines = splitByNewLine(text);
 
   if (!lines) {
     return;
   }
 
-  return lines.map((line, index) => {
-    let content;
-    if (line.startsWith('![') && line.endsWith(')')) {
-      content = parseImageTags(line);
-    } else {
-      content = parseDoubleAsterisk(line);
-    }
+  return (
+    <View>
+      {lines.map((line, index) => {
+        let content;
+        if (line.startsWith('![') && line.endsWith(')')) {
+          content = parseImageTags(line);
+        } else {
+          content = parseDoubleAsterisk(line);
+        }
 
-    return <Text>{`${content}\n`}</Text>;
-  });
+        return (
+          <Text style={style}>
+            {content}
+            {'\n'}
+          </Text>
+        );
+      })}
+    </View>
+  );
 };

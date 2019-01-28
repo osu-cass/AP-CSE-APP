@@ -2,6 +2,7 @@ import React from 'react';
 // import '../../../../node_modules/typeface-pt-serif/index.css';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface ItemRow {
   title: string;
@@ -14,12 +15,14 @@ export interface StimuliProps {
   complexity?: string;
 }
 
-const renderSection = (title: string, section: string) => (
-  <View style={styles.item} key={`${title} - ${title}}`}>
-    <Text style={styles.bold}>{title}</Text>
-    <Text style={styles.description}>{section}</Text>
-  </View>
-);
+const renderSection = (title: string, section: string) => {
+  return (
+    <View style={styles.item} key={`${title} - ${title}}`}>
+      <Text style={styles.bold}>{title}</Text>
+      {parsePdfContent(section, styles.description)}
+    </View>
+  );
+};
 
 export const Stimuli = ({ stemInfo, dualText, complexity }: StimuliProps): JSX.Element => {
   return (

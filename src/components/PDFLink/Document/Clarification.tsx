@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { ITarget } from '../../../models/target';
 import { styles } from './styles';
+import { parsePdfContent } from './utils';
 
 export interface ItemRow {
   title: string;
@@ -19,9 +20,7 @@ export const Clarification = ({ content }: TargetProps) => (
       <View style={styles.flexColumnLeft}>
         <Text>Clarifications</Text>
       </View>
-      <View style={styles.flexColumnRight}>
-        <Text>{content.clarification}</Text>
-      </View>
+      <View style={styles.flexColumnRight}>{parsePdfContent(content.clarification)}</View>
     </View>
   </>
 );
