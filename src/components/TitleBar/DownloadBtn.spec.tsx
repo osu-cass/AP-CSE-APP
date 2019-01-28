@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-
+import { DownloadModal } from '../DownloadModal';
 import { DownloadBtn } from './DownloadBtn';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
 
 const mockModal = {
   claim: ELAG3ClaimMock,
-  isOpen: true
+  isOpen: true,
+  closeFromParent: jest.fn
 };
 describe('DownloadModal', () => {
   // tslint:disable: no-any no-unsafe-any
@@ -16,12 +17,14 @@ describe('DownloadModal', () => {
   });
   it('Opens the modal when clicking the download button', () => {
     downloadBtn.find('#download-btn').simulate('click');
-    expect(downloadBtn.state('modal')).toEqual(mockModal);
+    const modal = downloadBtn.find('DownloadModal');
+    expect(modal.prop('isOpen')).toEqual(true);
   });
 
   it('Opens the modal when pressing enter key', () => {
     downloadBtn.find('#download-btn').simulate('keypress', { key: 'Enter' });
-    expect(downloadBtn.state('modal')).toEqual(mockModal);
+    const modal = downloadBtn.find('DownloadModal');
+    expect(modal.prop('isOpen')).toEqual(true);
   });
 
   it('closes the modal on esc', () => {
@@ -29,6 +32,7 @@ describe('DownloadModal', () => {
       keyCode: 27
     });
     mockModal.isOpen = false;
-    expect(downloadBtn.state('modal')).toEqual(mockModal);
+    const modal = downloadBtn.find('DownloadModal');
+    expect(modal.prop('isOpen')).toEqual(false);
   });
 });

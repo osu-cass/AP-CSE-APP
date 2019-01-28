@@ -4,11 +4,13 @@ import { mount, ReactWrapper, shallow } from 'enzyme';
 
 import { DownloadModal } from '.';
 import ELAG3ClaimMock from '../../../mock_api_data/E.G3.C1';
-
+const parentFunc = jest.fn();
 describe('DownloadModal', () => {
   let downloadModal: ReactWrapper;
   beforeEach(() => {
-    downloadModal = mount(<DownloadModal isOpen={true} claim={ELAG3ClaimMock} />);
+    downloadModal = mount(
+      <DownloadModal isOpen={true} claim={ELAG3ClaimMock} closeFromParent={parentFunc} />
+    );
   });
   afterEach(() => {
     downloadModal.unmount();
@@ -57,7 +59,9 @@ describe('DownloadModal', () => {
   });
 
   it('Renders Correctly', () => {
-    const component = shallow(<DownloadModal isOpen={true} claim={ELAG3ClaimMock} />);
+    const component = shallow(
+      <DownloadModal isOpen={true} claim={ELAG3ClaimMock} closeFromParent={parentFunc} />
+    );
 
     expect(toJson(component)).toMatchSnapshot();
   });
