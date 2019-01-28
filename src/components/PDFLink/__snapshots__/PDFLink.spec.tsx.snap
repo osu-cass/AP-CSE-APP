@@ -75,7 +75,7 @@ exports[`PDFLink component matches snapshot 1`] = `
           wrap={true}
         >
           <Unknown
-            text="English Language Arts Performance Task Specification: Grade 3 Informational Writing Informational Writing"
+            text="English Language Arts Performance Task Specification: Grade 3 Informational Writing"
           />
           <VIEW
             style={
