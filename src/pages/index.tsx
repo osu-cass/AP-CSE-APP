@@ -13,11 +13,12 @@ import { TargetPage } from './Target';
 import { PdfDevPage } from './pdf-dev/pdf-dev';
 
 export const App: React.SFC = () => {
+  // tslint:disable:react-a11y-tabindex-no-positive
   return (
     <React.Fragment>
       <BrowserRouter>
         <div className="full-page">
-          <div className="nav-bar">
+          <div className="nav-bar" tabIndex={1} aria-label="Skip to main content" role="button">
             <a className="skip-main" href="#main">
               Skip to main content
             </a>

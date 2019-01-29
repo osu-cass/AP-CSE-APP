@@ -32,7 +32,8 @@ export class DownloadBtn extends Component<DownloadBtnProps, DownloadBtnState> {
     this.state = {
       modal: {
         claim: props.claim,
-        isOpen: false
+        isOpen: false,
+        closeFromParent: this.showHideModal
       }
     };
   }

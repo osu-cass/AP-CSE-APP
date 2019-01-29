@@ -14,15 +14,20 @@ export interface ExamplesProps {
 export const Examples: React.SFC<ExamplesProps> = ({ examples }: ExamplesProps) => {
   return (
     <React.Fragment>
-      {examples.map(e => {
+      {examples.map((e, i) => {
         const parsedContent = parseExamples(e.content);
 
         return (
-          <div>
-            <p>
+          <div key={i}>
+            <h4>
               <strong>{`${e.label}:`}</strong>
-            </p>
-            <p>{parsedContent}</p>
+            </h4>
+            {parsedContent}
+            <style jsx>{`
+              div {
+                margin-top: 1em;
+              }
+            `}</style>
           </div>
         );
       })}

@@ -95,14 +95,14 @@ exports[`Storyshots Filter Subject, Grade and Claim 1`] = `
                 height="36"
                 stroke="none"
                 viewBox="0 0 36 36"
-                width="46"
+                width="66"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
                   height="20"
                   rx="10"
                   ry="10"
-                  width="40"
+                  width="50"
                   x="1"
                   y="8"
                 />
@@ -254,14 +254,14 @@ exports[`Storyshots Filter Subject, Grade, Claim and Target 1`] = `
                 height="36"
                 stroke="none"
                 viewBox="0 0 36 36"
-                width="46"
+                width="66"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
                   height="20"
                   rx="10"
                   ry="10"
-                  width="40"
+                  width="50"
                   x="1"
                   y="8"
                 />
@@ -413,14 +413,14 @@ exports[`Storyshots Filter default 1`] = `
                 height="36"
                 stroke="none"
                 viewBox="0 0 36 36"
-                width="46"
+                width="66"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
                   height="20"
                   rx="10"
                   ry="10"
-                  width="40"
+                  width="50"
                   x="1"
                   y="8"
                 />

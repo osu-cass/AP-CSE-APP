@@ -13,28 +13,28 @@ const globalToggleStyle = css`
     cursor: pointer;
     margin-left: 10px;
     font-size: 30px;
-    color: #b3b3b3;
+    color: #939393;
   }
   .inner-text {
-    font-size: 0.8em;
+    font-size: 1em;
     color: ${Colors.sbWhite};
   }
   .inner-text.no {
-    margin-left: -20px;
+    margin-left: -25px;
   }
   .inner-text.yes {
-    margin-left: -39px;
+    margin-left: -45px;
   }
 `;
 const svgProps = {
   xmlns: 'http://www.w3.org/2000/svg',
-  width: '46',
+  width: '66',
   height: '36',
   viewBox: '0 0 36 36',
   stroke: 'none',
   className: 'pt-toggle'
 };
-const rect = <rect x="1" y="8" width="40" height="20" rx="10" ry="10" />;
+const rect = <rect x="1" y="8" width="50" height="20" rx="10" ry="10" />;
 export interface ToggleBtnProps {
   toggled: Boolean;
   filter: () => void;
@@ -62,7 +62,7 @@ export class ToggleBtn extends Component<ToggleBtnProps, ToggleBtnState> {
       <span>Show Performance Tasks only?</span>
       <svg {...svgProps} fill={Colors.sbBlueLighter}>
         {rect}
-        <circle cx="30" cy="18" r="8" fill="white" />
+        <circle cx="40" cy="18" r="8" fill="white" />
       </svg>
       <span className="inner-text yes">Yes</span>
       <style jsx global>

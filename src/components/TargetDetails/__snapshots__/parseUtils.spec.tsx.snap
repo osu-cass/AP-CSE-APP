@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParseUtils parse string with multiple tables 1`] = `
+Array [
+  <Unknown
+    table={
+      Object {
+        "DataRows": Array [
+          Array [
+            " [idea/opinion] _____________   ",
+            "  ",
+            "   ",
+          ],
+          Array [
+            " [idea/opinion] _____________   ",
+            "  ",
+            "   ",
+          ],
+        ],
+        "HeaderRow": Array [
+          "   ",
+          " Source #1: [title] ",
+          "  Source #2: [title] ",
+        ],
+      }
+    }
+  />,
+  <Unknown>
+      
+  </Unknown>,
+  <Unknown>
+    <ul>
+      <li>
+        Look at the [ideas/opinions] in the table. Decide if the information in Source #1, Source #2, both sources, or neither source supports each [idea/opinion]. Click on the box to match the source that supports each [idea/opinion]. There will be only one box selected for each [idea/opinion].
+      </li>
+    </ul>
+  </Unknown>,
+  <Unknown>
+    
+    <strong>
+      Example of Formatting:
+    </strong>
+    
+  </Unknown>,
+  <Unknown
+    table={
+      Object {
+        "DataRows": Array [
+          Array [
+            " [idea/opinion] ",
+            "   ",
+            "   ",
+            "   ",
+            "   ",
+          ],
+          Array [
+            " [idea/opinion] ",
+            "   ",
+            "   ",
+            "   ",
+            "   ",
+          ],
+          Array [
+            " [idea/opinion] ",
+            "   ",
+            "   ",
+            "   ",
+            "   ",
+          ],
+        ],
+        "HeaderRow": Array [
+          "  ",
+          "  Source #1: [title] ",
+          "  Source #2: [title] ",
+          "  Both  ",
+          "  Neither  ",
+        ],
+      }
+    }
+  />,
+]
+`;

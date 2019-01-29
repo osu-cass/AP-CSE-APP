@@ -41,47 +41,38 @@ exports[`Storyshots Filter/Mobile default 1`] = `
             className="filter-container-header"
           >
             <label>
-              <div
-                className="tool-tip-links"
-                tabIndex={0}
+              <span
+                className="tooltip-label"
+                info-label="true"
               >
-                <span
-                  className="tool-tip-hoverable"
-                >
-                  <span
-                    className="tooltip-label"
-                    info-label="true"
-                  >
-                    Subject
-                  </span>
-                   
-                </span>
-                <div
-                  className="tool-tip-details"
-                />
-              </div>
+                Subject
+              </span>
             </label>
           </div>
           <div
-            className="nested-btn-group btn-group-sm toggle-group vertical"
+            className=" btn-group-sm toggle-group horizontal"
             data-toggle="buttons"
           >
             <div
               className="btn-group filter-btn-group"
             >
               <button
+                aria-checked={false}
+                aria-label="English Language Arts"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="button"
+                role="switch"
               >
                 English Language Arts
               </button>
               <button
+                aria-checked={true}
+                aria-label="Mathematics"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="button"
+                role="switch"
               >
                 Mathematics
               </button>
@@ -106,18 +97,18 @@ exports[`Storyshots Filter/Mobile default 1`] = `
               Elementry
             </option>
             <option
-              aria-selected={true}
-              selected={true}
-              value="mid"
-            >
-              Middle School
-            </option>
-            <option
               aria-selected={false}
               selected={false}
               value="hs"
             >
               High School
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="mid"
+            >
+              Middle School
             </option>
           </select>
           <style
@@ -246,47 +237,38 @@ exports[`Storyshots Filter/Mobile with claims 1`] = `
             className="filter-container-header"
           >
             <label>
-              <div
-                className="tool-tip-links"
-                tabIndex={0}
+              <span
+                className="tooltip-label"
+                info-label="true"
               >
-                <span
-                  className="tool-tip-hoverable"
-                >
-                  <span
-                    className="tooltip-label"
-                    info-label="true"
-                  >
-                    Subject
-                  </span>
-                   
-                </span>
-                <div
-                  className="tool-tip-details"
-                />
-              </div>
+                Subject
+              </span>
             </label>
           </div>
           <div
-            className="nested-btn-group btn-group-sm toggle-group vertical"
+            className=" btn-group-sm toggle-group horizontal"
             data-toggle="buttons"
           >
             <div
               className="btn-group filter-btn-group"
             >
               <button
+                aria-checked={false}
+                aria-label="English Language Arts"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="button"
+                role="switch"
               >
                 English Language Arts
               </button>
               <button
+                aria-checked={true}
+                aria-label="Mathematics"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="button"
+                role="switch"
               >
                 Mathematics
               </button>
@@ -311,18 +293,18 @@ exports[`Storyshots Filter/Mobile with claims 1`] = `
               Elementry
             </option>
             <option
-              aria-selected={true}
-              selected={true}
-              value="mid"
-            >
-              Middle School
-            </option>
-            <option
               aria-selected={false}
               selected={false}
               value="hs"
             >
               High School
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="mid"
+            >
+              Middle School
             </option>
           </select>
           <style
@@ -488,47 +470,38 @@ exports[`Storyshots Filter/Mobile with targets 1`] = `
             className="filter-container-header"
           >
             <label>
-              <div
-                className="tool-tip-links"
-                tabIndex={0}
+              <span
+                className="tooltip-label"
+                info-label="true"
               >
-                <span
-                  className="tool-tip-hoverable"
-                >
-                  <span
-                    className="tooltip-label"
-                    info-label="true"
-                  >
-                    Subject
-                  </span>
-                   
-                </span>
-                <div
-                  className="tool-tip-details"
-                />
-              </div>
+                Subject
+              </span>
             </label>
           </div>
           <div
-            className="nested-btn-group btn-group-sm toggle-group vertical"
+            className=" btn-group-sm toggle-group horizontal"
             data-toggle="buttons"
           >
             <div
               className="btn-group filter-btn-group"
             >
               <button
+                aria-checked={false}
+                aria-label="English Language Arts"
                 className="btn btn-primary "
                 disabled={false}
                 onClick={[Function]}
-                role="button"
+                role="switch"
               >
                 English Language Arts
               </button>
               <button
+                aria-checked={true}
+                aria-label="Mathematics"
                 className="btn btn-primary active"
                 disabled={false}
                 onClick={[Function]}
-                role="button"
+                role="switch"
               >
                 Mathematics
               </button>
@@ -553,18 +526,18 @@ exports[`Storyshots Filter/Mobile with targets 1`] = `
               Elementry
             </option>
             <option
-              aria-selected={true}
-              selected={true}
-              value="mid"
-            >
-              Middle School
-            </option>
-            <option
               aria-selected={false}
               selected={false}
               value="hs"
             >
               High School
+            </option>
+            <option
+              aria-selected={true}
+              selected={true}
+              value="mid"
+            >
+              Middle School
             </option>
           </select>
           <style

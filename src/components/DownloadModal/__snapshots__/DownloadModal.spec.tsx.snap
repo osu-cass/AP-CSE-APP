@@ -2,34 +2,24 @@
 
 exports[`DownloadModal Renders Correctly 1`] = `
 <div>
-  <Modal
-    ariaHideApp={true}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="Download PDF"
-    isOpen={true}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={true}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <Displaced
+    dialogStyle={
       Object {
-        "content": Object {
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "right": "auto",
-          "top": "50%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "backgroundColor": "#FFF",
+        "borderRadius": "5px",
+        "padding": "20px",
       }
     }
+    getApplicationNode={[Function]}
+    mounted={true}
+    onExit={[Function]}
+    titleText="Download PDF"
+    underlayClickExits={true}
+    verticallyCenter={true}
   >
     <form
       className=""
+      id="modal-form"
     >
       <div
         id="title-container"
@@ -165,20 +155,15 @@ exports[`DownloadModal Renders Correctly 1`] = `
     >
       <div
         id="selections-title"
+        tabIndex={0}
       >
         Selected Sections
       </div>
       <div
         id="selections-list"
+        tabIndex={0}
       >
         <ul />
-      </div>
-      <div
-        id="pdf-page-count"
-      >
-        This PDF will be 
-        0
-         pages
       </div>
       <div
         id="confirm-back-btn-container"
@@ -265,6 +250,6 @@ exports[`DownloadModal Renders Correctly 1`] = `
         
       </style>
     </div>
-  </Modal>
+  </Displaced>
 </div>
 `;
