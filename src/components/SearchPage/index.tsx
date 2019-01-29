@@ -190,7 +190,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
             <i>Use filter to narrow search results</i>
             <style jsx>{`
               #narrow-results {
-                color: #ff0000;
+                color: #cc0000;
               }
             `}</style>
           </div>
