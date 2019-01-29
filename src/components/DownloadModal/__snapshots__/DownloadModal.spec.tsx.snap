@@ -166,13 +166,6 @@ exports[`DownloadModal Renders Correctly 1`] = `
         <ul />
       </div>
       <div
-        id="pdf-page-count"
-      >
-        This PDF will be 
-        0
-         pages
-      </div>
-      <div
         id="confirm-back-btn-container"
       >
         <button

@@ -29,9 +29,9 @@ export interface DownloadModalState {
   taskButtonProps: TaskButtonProps[];
   selectedList: string[];
   submitDownloadProps: DocumentProps;
+  downLoadContinued: boolean;
   submitDownload: boolean;
   isDisabled: boolean;
-  pageCount: number;
 }
 
 // tslint:disable-next-line:no-unsafe-any
@@ -59,7 +59,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         renderEntireTarget: false
       },
       submitDownload: false,
-      pageCount: 0
+      downLoadContinued: false
     };
   }
   /**
@@ -78,13 +78,9 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         renderOverview: this.state.selectedList.includes('Overview'),
         renderEntireTarget: this.state.selectedList.includes('Entire Target')
       },
-      // showModal: false,
       submitDownload: true,
       isDisabled: true
     });
-    // if (this.props.closeFromParent !== undefined) {
-    //   this.props.closeFromParent();
-    // }
   };
 
   /**
@@ -99,7 +95,8 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     this.setState({
       showMultiSelect: 'hidden',
       showHide: '',
-      selectedList: selectList
+      selectedList: selectList,
+      downLoadContinued: true
     });
   };
 
@@ -345,13 +342,9 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
     return result;
   };
 
-  setPageCount = (totalPages: number) => {
-    this.setState({ pageCount: totalPages });
-  };
-
   confirmSelection() {
     const pdfDownLoadProps: PDFDownloadLinkRenderProps = {
-      document: createDocument({ ...this.state.submitDownloadProps }, this.setPageCount),
+      document: createDocument({ ...this.state.submitDownloadProps }),
       fileName: `${this.state.submitDownloadProps.claim.target[0].title}.pdf`
     };
 
@@ -363,8 +356,7 @@ export class DownloadModal extends Component<DownloadModalProps, DownloadModalSt
         <div id="selections-list" tabIndex={0}>
           <ul>{this.renderSelectionsList()}</ul>
         </div>
-        {this.state.submitDownload ? <PDFLink {...pdfDownLoadProps} /> : ''}
-        <div id="pdf-page-count">This PDF will be {this.state.pageCount} pages</div>
+        {this.state.submitDownload && <PDFLink {...pdfDownLoadProps} />}
         <div id="confirm-back-btn-container">
           <button type="button" id="back-btn" onClick={this.handleBackButton}>
             Back
