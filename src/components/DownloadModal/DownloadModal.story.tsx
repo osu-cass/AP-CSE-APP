@@ -13,7 +13,7 @@ const toggleParent = (task: string): void => {
 
 storiesOf('DownloadModal DontTest', module)
   .addDecorator(centered)
-  .add('Open', () => <DownloadModal claim={ClaimMe} isOpen={true} />);
+  .add('Open', () => <DownloadModal claim={ClaimMe} isOpen={true} closeFromParent={jest.fn()} />);
 
 storiesOf('DownloadModal DontTest/Task Button', module)
   .addDecorator(centered)
