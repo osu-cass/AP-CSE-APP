@@ -6,6 +6,7 @@ import { Message } from '../Message';
 import { blueGradient, Colors, Styles } from '../../constants/style';
 import { CSEAdvancedFilterModels, FilterProps } from '../FilterProps';
 import { DesktopBreakSize, mediaQueryWrapper } from '../MediaQueryWrapper';
+import { Play } from 'react-feather';
 
 export const globalFilterStyle = css`
   .filter-selection {
@@ -109,7 +110,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
 
   return (
     <Fragment>
-      <div className="filter">
+      <div className="filter" aria-live="polite">
         <AdvancedFilter
           key={gradeFilter.label}
           {...gradeFilter}
@@ -128,7 +129,7 @@ export const DesktopFilter: React.SFC<FilterProps> = ({ filters, onUpdate, reset
         {renderTargetFilter()}
       </div>
       <div className="reset-container">
-        <button className="btn" onClick={reset}>
+        <button role="button" className="btn" onClick={reset}>
           Reset
         </button>
       </div>

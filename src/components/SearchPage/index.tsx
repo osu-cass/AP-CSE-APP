@@ -103,24 +103,26 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     this.props.history.replace({ search: queryString });
   }
 
-  onFilterChanged = async (newFilter: CSEFilterParams) => {
-    const { params, search } = this.state;
-    // tslint:disable-next-line:prefer-const
-    let [options, results] = await Promise.all([
-      this.props.filterClient.getFilterOptions(
-        newFilter,
-        compareParams(params, newFilter),
-        unwrapError(this.state.options)
-      ),
-      this.props.searchClient.search({ search, ...newFilter })
-    ]);
-
+  updateSearch = async (filter: CSEFilterParams) => {
+    let results = await this.props.searchClient.search({ search: this.state.search, ...filter });
     if (this.state.pt) {
       results = this.filterPerformanceTasks(results as IClaim[]);
     }
 
+    this.setState({ results });
+  };
+
+  onFilterChanged = async (newFilter: CSEFilterParams) => {
+    const { params, search } = this.state;
+    // tslint:disable-next-line:prefer-const
+    let options = await this.props.filterClient.getFilterOptions(
+      newFilter,
+      compareParams(params, newFilter),
+      unwrapError(this.state.options)
+    );
+
     this.updateQuery(search, newFilter);
-    this.setState({ options, results, params: newFilter });
+    this.setState({ options, params: newFilter }, async () => this.updateSearch(newFilter));
   };
 
   onSearch = async (search: string) => {
@@ -188,7 +190,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
             <i>Use filter to narrow search results</i>
             <style jsx>{`
               #narrow-results {
-                color: #ff0000;
+                color: #cc0000;
               }
             `}</style>
           </div>
@@ -215,7 +217,9 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
     return (
       <ErrorBoundary fallbackUI={errorJsx}>
         {this.renderNarrowText(results)}
-        <FilterItemList claims={results} getTargetLink={placeholder} />
+        <div aria-live="polite">
+          <FilterItemList claims={results} getTargetLink={placeholder} />
+        </div>
       </ErrorBoundary>
     );
   }
@@ -226,7 +230,7 @@ export class SearchPage extends React.Component<SearchPageProps, SearchPageState
         <SearchBar onSearch={this.onSearch} initialText={this.props.paramsFromUrl.search} />
         <div className="content-container">
           {this.renderFilter()}
-          {this.renderResults()}
+          <div>{this.renderResults()}</div>
         </div>
         <style jsx>{`
           .content-container {
