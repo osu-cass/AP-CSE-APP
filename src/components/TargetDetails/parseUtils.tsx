@@ -28,6 +28,8 @@ const removeDashWithSpaces = (text: string) => text.replace(/^-[ ]*/, '');
 
 const removeBackSlash = (text: string) => text.replace(/(\\)([_<>#])/g, '$2');
 
+const removeDollarTildaDollar = (text: string) => text.replace(/\$~\$/, '');
+
 const replacer = (match: string, code: string) => String.fromCharCode(Number(code));
 const replaceCharRef = (text: string) => text.replace(/&#(\d*)/g, replacer);
 
@@ -51,7 +53,13 @@ function replaceFractions(text: string): string {
   return newContent;
 }
 
-const parsers = [removeDashWithSpaces, removeBackSlash, replaceCharRef, replaceFractions];
+const parsers = [
+  removeDashWithSpaces,
+  removeBackSlash,
+  removeDollarTildaDollar,
+  replaceCharRef,
+  replaceFractions
+];
 const applyParsers = (parsers: ((text: string) => string)[], text: string) => {
   let parsedText: string = text;
   parsers.forEach((parser: (text: string) => string) => {
