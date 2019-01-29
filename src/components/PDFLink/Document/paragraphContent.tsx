@@ -14,10 +14,10 @@ export interface TargetProps {
 }
 
 export const ParagraphContent = ({ content, title }: TargetProps): JSX.Element => {
-  content.split('\r\n\r\n').map((element: string, idx: number) => (
+  content.split('\r\n\r\n').map(async (element: string, idx: number) => (
     <View wrap key={`${idx}`} style={styles.flexContent}>
       <Text style={styles.description} wrap>
-        {parsePdfContent(element)}
+        {await parsePdfContent(element)}
       </Text>
     </View>
   ));

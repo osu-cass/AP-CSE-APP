@@ -1,8 +1,7 @@
 import React from 'react';
 import { Text, Image, View } from '@react-pdf/renderer';
 import { styles } from './styles';
-import { image2base64 } from 'image-to-base64';
-
+import image2base64 from 'image-to-base64';
 
 const replaceDashWithDot = (text: string): string => text.replace('- ', '• ');
 
@@ -50,45 +49,43 @@ const parseDoubleAsterisk = (text: string): JSX.Element => {
   );
 };
 
-const parseImageTags = async (text: string): JSX.Element => {
-
+const parseImageTags = async (text: string): Promise<JSX.Element> => {
   const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
-  const url = match && match[1];
+  const url = (match && match[1]) || '';
 
   const response = await image2base64(url);
 
-
-  return <Image src={response || ''} />;
+  return <Image src={response} />;
 };
 
-export const parsePdfContent = (
+export const parsePdfContent = async (
   text: string | undefined,
   style?: object
-): JSX.Element | undefined => {
+): Promise<JSX.Element | undefined> => {
   const lines = splitByNewLine(text);
 
   if (!lines) {
     return;
   }
 
-  return (
-    <View>
-      {lines.map((line, index) => {
-        let content;
-        if (line.startsWith('![') && line.endsWith(')')) {
-          content = parseImageTags(line);
-        } else if (line !== 'NA' && line !== '<br>') {
-          content = parseDoubleAsterisk(line);
-        }
+  const promises = lines.map(async (line, index) => {
+    let content: JSX.Element | undefined;
+    if (line.startsWith('![') && line.endsWith(')')) {
+      content = await parseImageTags(line);
+    } else if (line !== 'NA' && line !== '<br>') {
+      content = parseDoubleAsterisk(line);
+    }
 
-        return (
-          <Text style={style}>
-            {content}
-            {'\n'}
-          </Text>
-        );
-      })}
-    </View>
-  );
+    return (
+      <Text style={style}>
+        {content}
+        {'\n'}
+      </Text>
+    );
+  });
+
+  const views = await Promise.all(promises);
+
+  return <View>{views}</View>;
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from '@react-pdf/renderer';
+import { View } from '@react-pdf/renderer';
 import { styles } from './styles';
 import { parsePdfContent } from './utils';
 
@@ -8,9 +8,9 @@ export interface OneColumnLayoutProps {
   center: boolean;
 }
 
-export const OneColumnLayout = ({ text, center }: OneColumnLayoutProps) => {
+export const OneColumnLayout = async ({ text, center }: OneColumnLayoutProps) => {
   const layout = center ? { textAlign: 'center', ...styles.flexSingleRow } : styles.flexSingleRow;
-  const content = parsePdfContent(text);
+  const content = await parsePdfContent(text);
 
   return <View style={layout}>{content}</View>;
 };

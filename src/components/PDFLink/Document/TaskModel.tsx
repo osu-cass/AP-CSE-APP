@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactPDF, { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
+import { Text, View } from '@react-pdf/renderer';
 import { ITaskModel, IStem } from '../../../models/target';
-import { OneColumnLayout } from './OneColumnLayout';
 import { styles } from './styles';
 import { parsePdfContent } from './utils';
-import { Styles } from '../../../constants/style';
 
 export interface TaskModelProps {
   taskModel: ITaskModel;
