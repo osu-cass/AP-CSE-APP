@@ -30,6 +30,13 @@ module.exports = (env) => {
         loader: 'babel-loader'
       },
       {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        query: {
+          name: 'assets/sounds/[name].[mp3]'
+        }
+      },
+      {
         test: /\.css$/,
         use: [
           prod ? {

@@ -106,20 +106,22 @@ exports[`Storyshots Search Page default 1`] = `
     
       </style>
     </div>
-    <div
-      className="message"
-    >
-      Enter a query to see matching targets.
-      <style
-        jsx={true}
+    <div>
+      <div
+        className="message"
       >
-        
+        Enter a query to see matching targets.
+        <style
+          jsx={true}
+        >
+          
       .message {
         margin: 20px 0;
         text-align: center;
       }
     
-      </style>
+        </style>
+      </div>
     </div>
   </div>
   <style
@@ -240,20 +242,22 @@ exports[`Storyshots Search Page error 1`] = `
     
       </style>
     </div>
-    <div
-      className="message"
-    >
-      Enter a query to see matching targets.
-      <style
-        jsx={true}
+    <div>
+      <div
+        className="message"
       >
-        
+        Enter a query to see matching targets.
+        <style
+          jsx={true}
+        >
+          
       .message {
         margin: 20px 0;
         text-align: center;
       }
     
-      </style>
+        </style>
+      </div>
     </div>
   </div>
   <style
