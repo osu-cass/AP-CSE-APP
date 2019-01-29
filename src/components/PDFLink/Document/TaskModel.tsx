@@ -10,25 +10,33 @@ export interface TaskModelProps {
 }
 
 // tslint:disable:no-unnecessary-callback-wrapper
-const processLines = (text: string[]): JSX.Element => (
-  <View style={styles.description}>{text.map(s => parsePdfContent(s))}</View>
-);
+const processLines = async (text: string[]): Promise<JSX.Element> => {
+  const linePromises = text.map(s => parsePdfContent(s));
+  const lines = await Promise.all(linePromises);
 
-const renderNumberedList = (header: string, list: string[]) => (
-  <View>
-    <Text style={styles.bold}>{header}</Text>
-    {list.map((item, index) => {
-      return (
-        <View>
-          <Text style={styles.description}>
-            {`${index + 1}. `}
-            {parsePdfContent(item)}
-          </Text>
-        </View>
-      );
-    })}
-  </View>
-);
+  return <View style={styles.description}>{lines}</View>;
+};
+
+const renderNumberedList = async (header: string, list: string[]) => {
+  const itemPromises = list.map(async (item, index) => {
+    return (
+      <View>
+        <Text style={styles.description}>
+          {`${index + 1}. `}
+          {await parsePdfContent(item)}
+        </Text>
+      </View>
+    );
+  });
+  const items = await Promise.all(itemPromises);
+
+  return (
+    <View>
+      <Text style={styles.bold}>{header}</Text>
+      {items}
+    </View>
+  );
+};
 
 const renderStems = (title: string, stems: JSX.Element) => (
   <View>
@@ -37,13 +45,14 @@ const renderStems = (title: string, stems: JSX.Element) => (
   </View>
 );
 
-const renderExamples = (headerName: string, content: string[]) => {
-  const sections = content.map((item, index) => (
+const renderExamples = async (headerName: string, content: string[]) => {
+  const sectionPromises = content.map(async (item, index) => (
     <View>
       <Text style={styles.bold}>{`${headerName} ${index + 1}`}</Text>
-      {parsePdfContent(item, styles.description)}
+      {await parsePdfContent(item, styles.description)}
     </View>
   ));
+  const sections = await Promise.all(sectionPromises);
 
   return (
     <View>
@@ -53,14 +62,14 @@ const renderExamples = (headerName: string, content: string[]) => {
   );
 };
 
-const renderSection = (headerName: string, content: string) => (
+const renderSection = async (headerName: string, content: string) => (
   <View>
     <Text style={styles.bold}>{headerName}</Text>
-    {parsePdfContent(content, styles.description)}
+    {await parsePdfContent(content, styles.description)}
   </View>
 );
 
-export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
+export const TaskModel = async ({ taskModel, stems }: TaskModelProps) => {
   const { taskName, taskDesc, stimulus, relatedEvidence, examples } = taskModel;
   const dualStems =
     stems &&
@@ -70,8 +79,8 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
   const appropriateStems =
     stems && stems.filter(s => s.shortStem === 'Appropriate Stems').map(s => s.stemDesc);
   const appropriateStemsElement =
-    appropriateStems && appropriateStems.length > 0 && processLines(appropriateStems);
-  const dualStemsElement = dualStems && dualStems.length > 0 && processLines(dualStems);
+    appropriateStems && appropriateStems.length > 0 && (await processLines(appropriateStems));
+  const dualStemsElement = dualStems && dualStems.length > 0 && (await processLines(dualStems));
 
   return (
     <View>
@@ -80,8 +89,8 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
           <Text style={styles.code}>{taskName}</Text>
         </View>
         <View style={styles.flexColumnRight}>
-          {taskDesc && renderSection('Task Description', taskDesc)}
-          {stimulus && stimulus !== 'NA' && renderSection('Stimulus', stimulus)}
+          {taskDesc && (await renderSection('Task Description', taskDesc))}
+          {stimulus && stimulus !== 'NA' && (await renderSection('Stimulus', stimulus))}
           {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
           {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
           {dualStemsElement &&
@@ -89,7 +98,7 @@ export const TaskModel = ({ taskModel, stems }: TaskModelProps) => {
           {examples &&
             examples.length > 0 &&
             examples[0] !== 'NA' &&
-            renderExamples('Examples', examples)}
+            (await renderExamples('Examples', examples))}
         </View>
       </View>
     </View>

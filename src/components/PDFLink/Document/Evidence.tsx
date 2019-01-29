@@ -27,7 +27,7 @@ export const Evidence = async ({ content, title }: TargetProps): Promise<JSX.Ele
     );
   });
 
-  const evidenceJsx = Promise.all(evidencePromises);
+  const evidenceJsx = await Promise.all(evidencePromises);
 
   return (
     <View style={styles.flexRow}>

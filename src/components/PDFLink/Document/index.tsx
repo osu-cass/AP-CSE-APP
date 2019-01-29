@@ -69,7 +69,7 @@ const Overview = async ({ claim }: OverviewProps) => {
       {clarification && <StringContent title={'Clarifications'} content={clarification} />}
       {standards && (await Standards({ content: standards }))}
       {dok && (await DOK({ content: dok }))}
-      {<Stimuli stemInfo={stimInfo} dualText={dualText} complexity={complexity} />}
+      {await Stimuli({ dualText, complexity, stemInfo: stimInfo })}
       {accessibility && (
         <ParagraphContent title={'Accessibility Concerns'} content={accessibility} />
       )}

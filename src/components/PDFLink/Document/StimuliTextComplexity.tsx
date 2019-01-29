@@ -15,25 +15,25 @@ export interface StimuliProps {
   complexity?: string;
 }
 
-const renderSection = (title: string, section: string) => {
+const renderSection = async (title: string, section: string) => {
   return (
     <View style={styles.item} key={`${title} - ${title}}`}>
       <Text style={styles.bold}>{title}</Text>
-      {parsePdfContent(section, styles.description)}
+      {await parsePdfContent(section, styles.description)}
     </View>
   );
 };
 
-export const Stimuli = ({ stemInfo, dualText, complexity }: StimuliProps): JSX.Element => {
+export const Stimuli = async ({ stemInfo, dualText, complexity }: StimuliProps): Promise<JSX.Element> => {
   return (
     <View style={styles.flexRow}>
       <View style={styles.flexColumnLeft}>
         <Text style={styles.bold}>{'Stimuli/\nText Complexity'}</Text>
       </View>
       <View style={styles.flexColumnRight}>
-        {renderSection('Passage', stemInfo)}
-        {dualText && renderSection('Dual Text', dualText)}
-        {complexity && complexity !== 'NA' && renderSection('Text Complexity', complexity)}
+        {await renderSection('Passage', stemInfo)}
+        {dualText && (await renderSection('Dual Text', dualText))}
+        {complexity && complexity !== 'NA' && (await renderSection('Text Complexity', complexity))}
       </View>
     </View>
   );

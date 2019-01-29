@@ -18,7 +18,7 @@ export const DOK = async ({ content }: DOKProps) => {
     );
   });
 
-  const dokElements = Promise.all(promises);
+  const dokElements = await Promise.all(promises);
 
   return (
     <View wrap={false} style={styles.flexRow}>

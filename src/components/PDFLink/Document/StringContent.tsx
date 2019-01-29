@@ -14,12 +14,16 @@ export interface TargetProps {
   content: string;
 }
 
-export const StringContent = ({ content, title }: TargetProps): JSX.Element => {
-  const contentArray = content.split('\r\n\r\n').map((element: string, idx: number) => (
-    <View key={`${idx}`} style={styles.flexContent}>
-      {parsePdfContent(element)}
-    </View>
-  ));
+export const StringContent = async ({ content, title }: TargetProps): Promise<JSX.Element> => {
+  const contentPromiseArray = content
+    .split('\r\n\r\n')
+    .map(async (element: string, idx: number) => (
+      <View key={`${idx}`} style={styles.flexContent}>
+        {await parsePdfContent(element)}
+      </View>
+    ));
+
+  const contentArray = await Promise.all(contentPromiseArray);
 
   return (
     <View style={styles.flexRow}>

@@ -3,13 +3,15 @@ import { Text, Image, View } from '@react-pdf/renderer';
 import { styles } from './styles';
 import image2base64 from 'image-to-base64';
 
-const replaceDashWithDot = (text: string): string => text.replace('- ', '• ');
+type ParseFn = (text: string) => string;
 
-const removeBackSlash = (text: string): string => text.replace(/(\\)([_<>])/g, '');
+const replaceDashWithDot: ParseFn = text=> text.replace('- ', '• ');
+
+const removeBackSlash: ParseFn = text => text.replace(/(\\)([_<>])/g, '');
 
 const parsers = [removeBackSlash, replaceDashWithDot];
 
-const applyParsers = (parser: ((text: string) => string)[], text: string) => {
+const applyParsers = (parsers: ParseFn[], text: string) => {
   let parsedText: string = text;
   parsers.forEach((parser: (text: string) => string) => {
     parsedText = parser(parsedText);
@@ -49,7 +51,7 @@ const parseDoubleAsterisk = (text: string): JSX.Element => {
   );
 };
 
-const parseImageTags = async (text: string): Promise<JSX.Element> => {
+const parseImageTag = async (text: string): Promise<JSX.Element> => {
   const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
   const url = (match && match[1]) || '';
@@ -69,10 +71,10 @@ export const parsePdfContent = async (
     return;
   }
 
-  const promises = lines.map(async (line, index) => {
+  const promises = lines.map(async (line) => {
     let content: JSX.Element | undefined;
     if (line.startsWith('![') && line.endsWith(')')) {
-      content = await parseImageTags(line);
+      content = await parseImageTag(line);
     } else if (line !== 'NA' && line !== '<br>') {
       content = parseDoubleAsterisk(line);
     }
