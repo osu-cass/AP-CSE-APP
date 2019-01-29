@@ -749,31 +749,6 @@ The **correct answer choice(s)** should be sentences that clearly provide suppor
                 }
               }
             />
-          </VIEW>
-          <TEXT
-            fixed={true}
-            render={[Function]}
-            style={
-              Object {
-                "bottom": 30,
-                "color": "black",
-                "fontFamily": "PTSansCaption",
-                "fontSize": 12,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "textAlign": "center",
-              }
-            }
-          />
-          <VIEW
-            style={
-              Object {
-                "display": "flex",
-              }
-            }
-            wrap={true}
-          >
             <Unknown
               claim={
                 Object {
@@ -1292,6 +1267,22 @@ The **correct answer choice(s)** should be sentences that clearly provide suppor
               }
             />
           </VIEW>
+          <TEXT
+            fixed={true}
+            render={[Function]}
+            style={
+              Object {
+                "bottom": 30,
+                "color": "black",
+                "fontFamily": "PTSansCaption",
+                "fontSize": 12,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "textAlign": "center",
+              }
+            }
+          />
         </PAGE>
       </DOCUMENT>
     }

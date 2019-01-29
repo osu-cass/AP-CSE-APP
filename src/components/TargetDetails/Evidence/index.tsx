@@ -9,7 +9,9 @@ export interface EvidenceProps {
 }
 
 export const Evidence: React.SFC<EvidenceProps> = ({ evidence }) => {
-  const evidenceJsx = evidence.map(e => parseContent(e.evDesc));
+  const evidenceJsx = evidence.map((e, i) => (
+    <React.Fragment key={i}>{parseContent(e.evDesc)}</React.Fragment>
+  ));
 
   return <OrderedList elements={evidenceJsx} />;
 };
