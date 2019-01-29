@@ -13,14 +13,15 @@ export interface TargetProps {
   content: string;
 }
 
-export const ParagraphContent = ({ content, title }: TargetProps): JSX.Element => {
-  content.split('\r\n\r\n').map(async (element: string, idx: number) => (
+export const ParagraphContent = async ({ content, title }: TargetProps): Promise<JSX.Element> => {
+  const contentPromises = content.split('\r\n\r\n').map(async (element: string, idx: number) => (
     <View wrap key={`${idx}`} style={styles.flexContent}>
       <Text style={styles.description} wrap>
         {await parsePdfContent(element)}
       </Text>
     </View>
   ));
+  const contentJsx = await Promise.all(contentPromises);
 
   return (
     <View wrap style={styles.flexRow}>
@@ -28,7 +29,7 @@ export const ParagraphContent = ({ content, title }: TargetProps): JSX.Element =
         <Text wrap>{title}</Text>
       </View>
       <View wrap style={styles.flexColumnRight}>
-        <Text style={styles.description}>{content}</Text>
+        <Text style={styles.description}>{contentJsx}</Text>
       </View>
     </View>
   );

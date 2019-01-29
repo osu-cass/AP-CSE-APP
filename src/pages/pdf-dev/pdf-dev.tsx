@@ -4,6 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import { TargetClient } from '../../clients/target';
 import { Message, ErrorMessage } from '../../components/Message';
 import { viewer } from '../../components/PDFLink';
+import { PromiseWrapper } from '../../components/PromiseWrapper';
 
 export interface PdfMatchParams {
   targetShortCode?: string;
@@ -58,6 +59,6 @@ export class PdfDevPage extends Component<PdfDevProps, PdfDevState> {
       return <ErrorMessage>Error Loading Target</ErrorMessage>;
     }
 
-    return viewer({ claim: this.state.claim });
+    return <PromiseWrapper>{viewer({ claim: this.state.claim })}</PromiseWrapper>;
   }
 }

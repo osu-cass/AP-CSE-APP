@@ -66,13 +66,12 @@ const Overview = async ({ claim }: OverviewProps) => {
   return (
     <View wrap>
       {vocab && vocab !== 'NA' && (await OneColumnLayout({ center: false, text: vocab }))}
-      {clarification && <StringContent title={'Clarifications'} content={clarification} />}
+      {clarification && (await StringContent({ title: 'Clarifications', content: clarification }))}
       {standards && (await Standards({ content: standards }))}
       {dok && (await DOK({ content: dok }))}
       {await Stimuli({ dualText, complexity, stemInfo: stimInfo })}
-      {accessibility && (
-        <ParagraphContent title={'Accessibility Concerns'} content={accessibility} />
-      )}
+      {accessibility &&
+        (await ParagraphContent({ content: accessibility, title: 'Accessibility Concerns' }))}
       {evidence && (await Evidence({ title: 'Evidence Required', content: evidence }))}
     </View>
   );

@@ -56,12 +56,14 @@ const pdfStyle = {
   width: '1000px'
 };
 
-export const viewer = ({ claim }: ViewerProps) => {
+export const viewer = async ({ claim }: ViewerProps) => {
   const documentProps: DocumentProps = {
     claim,
     taskModels: claim.target[0].taskModels,
     renderEntireTarget: true
   };
 
-  return <ReactPDF.PDFViewer style={pdfStyle}>{createDocument(documentProps)}</ReactPDF.PDFViewer>;
+  return (
+    <ReactPDF.PDFViewer style={pdfStyle}>{await createDocument(documentProps)}</ReactPDF.PDFViewer>
+  );
 };

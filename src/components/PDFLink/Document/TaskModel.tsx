@@ -11,7 +11,7 @@ export interface TaskModelProps {
 
 // tslint:disable:no-unnecessary-callback-wrapper
 const processLines = async (text: string[]): Promise<JSX.Element> => {
-  const linePromises = text.map(s => parsePdfContent(s));
+  const linePromises = text.map(async s => parsePdfContent(s));
   const lines = await Promise.all(linePromises);
 
   return <View style={styles.description}>{lines}</View>;
