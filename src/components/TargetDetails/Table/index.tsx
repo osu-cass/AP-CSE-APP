@@ -1,4 +1,5 @@
 import React from 'react';
+import { parseUnorderedList } from '../parseUtils';
 
 export interface ITable {
   HeaderRow: string[];
@@ -10,13 +11,16 @@ export interface TableProps {
 }
 
 export const Table: React.SFC<TableProps> = ({ table }) => {
+  // Regard single asterisk in columns of tables should be bold and no underlined.
+  const underlined: boolean = false;
+
   return (
     <React.Fragment>
       <table className="content-table">
         <thead>
           <tr>
             {table.HeaderRow.map((col, i) => (
-              <th key={i}>{col}</th>
+              <th key={i}>{parseUnorderedList(col, underlined)}</th>
             ))}
           </tr>
         </thead>
@@ -24,7 +28,7 @@ export const Table: React.SFC<TableProps> = ({ table }) => {
           {table.DataRows.map((row, i) => (
             <tr key={i}>
               {row.map((col, i) => (
-                <td key={i}>{col}</td>
+                <td key={i}>{parseUnorderedList(col, underlined)}</td>
               ))}
             </tr>
           ))}
