@@ -109,14 +109,16 @@ export async function createDocument(
     taskModels ? taskModels : [],
     renderEntireTarget
   );
+  const overviewJsx = await Overview({claim});
+  const descriptionJsx = await Description({claim});
 
   return (
     <Document>
       <Page wrap style={styles.page}>
         <Head text={claim.target[0].title} />
         <View style={styles.flexContainer} wrap>
-          {await Description({ claim })}
-          {(renderOverview || renderEntireTarget) && (await Overview({ claim }))}
+          {descriptionJsx}
+          {(renderOverview || renderEntireTarget) && overviewJsx}
           {renderedTaskModels}
         </View>
         <Text

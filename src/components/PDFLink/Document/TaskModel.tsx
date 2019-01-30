@@ -91,10 +91,10 @@ export const TaskModel = async ({ taskModel, stems }: TaskModelProps) => {
         <View style={styles.flexColumnRight}>
           {taskDesc && (await renderSection('Task Description', taskDesc))}
           {stimulus && stimulus !== 'NA' && (await renderSection('Stimulus', stimulus))}
-          {relatedEvidence && renderNumberedList('Related Evidence', relatedEvidence)}
-          {appropriateStemsElement && renderStems('Appropriate Stems', appropriateStemsElement)}
+          {relatedEvidence && (await renderNumberedList('Related Evidence', relatedEvidence))}
+          {appropriateStemsElement && (await renderStems('Appropriate Stems', appropriateStemsElement))}
           {dualStemsElement &&
-            renderStems('Appropriate Stems for Dual-Text Stimuli', dualStemsElement)}
+            (await renderStems('Appropriate Stems for Dual-Text Stimuli', dualStemsElement))}
           {examples &&
             examples.length > 0 &&
             examples[0] !== 'NA' &&

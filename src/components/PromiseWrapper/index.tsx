@@ -9,6 +9,14 @@ export interface PromiseWrapperState {
   children?: React.ReactNode;
 }
 
+
+/**
+ * Component for wrapping promises.
+ *
+ * @export
+ * @class PromiseWrapper
+ * @extends {React.Component<PromiseWrapper, PromiseWrapperState>}
+ */
 export class PromiseWrapper extends React.Component<PromiseWrapperProps, PromiseWrapperState> {
   constructor(props: PromiseWrapperProps) {
     super(props);

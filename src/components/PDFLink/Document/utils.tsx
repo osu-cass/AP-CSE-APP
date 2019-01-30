@@ -2,6 +2,9 @@ import React from 'react';
 import { Text, Image, View } from '@react-pdf/renderer';
 import { styles } from './styles';
 import image2base64 from 'image-to-base64';
+import { ImageClient } from '../../../clients/image';
+
+const imageClient = new ImageClient();
 
 type ParseFn = (text: string) => string;
 
@@ -56,9 +59,17 @@ const parseImageTag = async (text: string): Promise<JSX.Element> => {
   const match = text.match(urlPattern);
   const url = (match && match[1]) || '';
 
-  const response = await image2base64(url);
+  const image = await imageClient.getImage({url});
+  let result: JSX.Element;
 
-  return <Image src={response} />;
+  if(image.image) {
+    console.log(image.image);
+    result = <Image debug src={`data:image/jpeg;base64,${image.image}`}/>;
+  } else {
+    result = <Text>{image.error}</Text>;
+  }
+
+  return result;
 };
 
 export const parsePdfContent = async (

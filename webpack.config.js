@@ -73,7 +73,7 @@ module.exports = (env) => {
       }),
     new CleanWebpackPlugin(['dist']),
     new webpack.EnvironmentPlugin({
-      API_ENDPOINT: 'https://cse-api.cass.oregonstate.edu'
+      API_ENDPOINT: 'http://localhost:3000'
     }),
     new AutoDllPlugin({
       inject: true,
