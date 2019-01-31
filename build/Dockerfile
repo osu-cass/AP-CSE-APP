@@ -1,12 +1,12 @@
 FROM node as build-env
 
 WORKDIR /app
-
+ARG API=https://cse-api.cass.oregonstate.edu
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 
-ENV API_ENDPOINT https://cse-api.cass.oregonstate.edu
+ENV API_ENDPOINT ${API}
 ENV NODE_ENV production
 RUN npm run build
 
