@@ -9,7 +9,7 @@ const linkProps: ResourceLinkProps = {
   title: 'Resources for Educators',
   imgUrl: educatorimg,
   subHeading:
-    'To learn more about the resources developed by Smarter Balance for Educators, which include:',
+    'To learn more about the resources developed by Smarter Balanced for Educators, which include:',
   desc: [
     'Interim Assessments',
     'The Digital Library',

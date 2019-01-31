@@ -53,3 +53,19 @@ npm run dev
 ```
 
 Once again, any code changes should automatically be loaded without needing to refresh.
+
+## Deployment
+To package this app for deployment you will need to build a docker image. You can do this by running the following command in the root directory of this project.
+```
+docker build -t osucass/content-specification-explorer-app:<some-tag> --build-arg API=<endpoint here> -f build/Dockerfile .
+```
+
+You can verify that your build is working correctly by running:
+```
+docker run -p 8000:80 osucass/content-specification-explorer-app:<some-tag>
+
+You can push this image to docker hub using:
+```
+docker push osucass/content-specification-explorer-app:<some-tag>
+```
+
