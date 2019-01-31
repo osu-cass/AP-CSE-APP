@@ -97,7 +97,7 @@ const parseDoubleAsterisks = (text: string, underlined: boolean) => {
   });
 };
 
-const parseUnorderedList = (text: string, underlined: boolean) => {
+export const parseUnorderedList = (text: string, underlined: boolean) => {
   if (text.startsWith('- ')) {
     return (
       <ul>
