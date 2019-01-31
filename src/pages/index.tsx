@@ -10,7 +10,6 @@ import { HomePage } from './Home';
 import { ResourcesPage } from './Resources';
 import { SearchPageRoute } from './Search';
 import { TargetPage } from './Target';
-import { PdfDevPage } from './pdf-dev/pdf-dev';
 
 export const App: React.SFC = () => {
   // tslint:disable:react-a11y-tabindex-no-positive
@@ -30,7 +29,6 @@ export const App: React.SFC = () => {
           <Route path="/resources" component={ResourcesPage} />
           <Route path="/development" component={DevelopmentPage} />
           <Route path="/help" component={HelpPage} />
-          <Route path="/pdf-dev/:targetShortCode" component={PdfDevPage} />
           <FooterWrapped />
           <MobileNavBarWrapped />
         </div>

@@ -59,7 +59,7 @@ exports[`PDFLink component DownloadIcon component matches snapshot 1`] = `
 
 exports[`PDFLink component matches snapshot 1`] = `
 <div>
-  <Component
+  <PDFDownloadLink
     document={
       <DOCUMENT>
         <PAGE
@@ -1289,7 +1289,7 @@ The **correct answer choice(s)** should be sentences that clearly provide suppor
     fileName="testFile"
   >
     <Component />
-  </Component>
+  </PDFDownloadLink>
 </div>
 `;
 

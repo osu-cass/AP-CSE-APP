@@ -2,6 +2,8 @@ import React from 'react';
 import { Text, Image, View } from '@react-pdf/renderer';
 import { styles } from './styles';
 
+const { API_ENDPOINT } = process.env;
+
 const replaceDashWithDot = (text: string): string => text.replace('- ', '• ');
 
 const removeBackSlash = (text: string): string => text.replace(/(\\)([_<>])/g, '');
@@ -52,8 +54,16 @@ const parseImageTags = (text: string): JSX.Element => {
   const urlPattern = /\!\[.*\]\((.*)\)/;
   const match = text.match(urlPattern);
   const url = match && match[1];
+  const serverUrl = API_ENDPOINT || 'http://localhost:3000';
 
-  return <Image src={url || ''} />;
+  let content: JSX.Element = <Text>Image Could Not Be Loaded</Text>;
+  if (url) {
+    const imagePath = url.split('.org')[1];
+    const proxyUrl = `${API_ENDPOINT}/proxy${imagePath}`;
+    content = <Image style={styles.flexImage} src={proxyUrl} />;
+  }
+
+  return content;
 };
 
 export const parsePdfContent = (
@@ -73,15 +83,15 @@ export const parsePdfContent = (
         if (line.startsWith('![') && line.endsWith(')')) {
           content = parseImageTags(line);
         } else if (line !== 'NA' && line !== '<br>') {
-          content = parseDoubleAsterisk(line);
+          content = (
+            <Text style={style}>
+              {parseDoubleAsterisk(line)}
+              {'\n'}
+            </Text>
+          );
         }
 
-        return (
-          <Text style={style}>
-            {content}
-            {'\n'}
-          </Text>
-        );
+        return <View style={style}>{content}</View>;
       })}
     </View>
   );
